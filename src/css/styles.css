@@ -15,7 +15,9 @@ body {
     font-family: var(--font-family);
 }
 h1,h2,h3,h4,h5,h6 {
+    @apply font-normal;
     font-family: var(--title-font-family);
+    
 }
 
 

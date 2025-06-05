@@ -7,7 +7,7 @@ title: "Vendors • monday.com marketplace apps"
 <div class="max-w-7xl mx-auto">
 
 
-  <h1 class="text-4xl font-bold mb-8">Vendors</h1>
+  <h1 class="text-4xl  mb-8">Vendors</h1>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -20,7 +20,7 @@ title: "Vendors • monday.com marketplace apps"
             {% if vendor.logo_url %}
               <img src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-24 h-24 rounded-lg mr-6">
             {% endif %}
-            <h2 class="text-xl font-semibold mb-2">{{ vendor.name }}</h2>
+            <h2 class="text-xl font-semibold my-2">{{ vendor.name }}</h2>
             {% if vendor.website %}
               <p class="text-gray-600 text-sm mb-4">
                   {{ vendor.website | replace("https://", "") | replace("http://", "") }}

@@ -117,7 +117,7 @@ title: Home
 ---
 
 {% block content %}
-<h1 class="text-4xl font-bold text-blue-600 mb-6">Welcome to 11ty + Tailwind!</h1>
+<h1 class="text-4xl  text-blue-600 mb-6">Welcome to 11ty + Tailwind!</h1>
 <p class="text-lg text-gray-700">This is a starter template with Eleventy and Tailwind CSS.</p>
 {% endblock %}
 EOF
