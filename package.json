@@ -1,0 +1,23 @@
+{
+  "name": "eleventy-tailwind-starter",
+  "version": "1.0.0",
+  "description": "A starter project for Eleventy with Tailwind CSS",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "NODE_ENV=production eleventy",
+    "watch": "eleventy --watch",
+    "dev": "eleventy --serve",
+    "build:css": "tailwindcss -i ./src/css/styles.css -o ./src/css/tailwind.css --minify",
+    "build:all": "npm run build:css && npm run build"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0",
+    "tailwindcss": "^3.0.0"
+  }
+}

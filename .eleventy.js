@@ -1,0 +1,46 @@
+const postcss = require('postcss');
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
+
+module.exports = function(eleventyConfig) {
+  // Add custom filter to find app by ID
+  eleventyConfig.addFilter("findAppById", function(apps, id) {
+    return apps.find(app => app.id === parseInt(id));
+  });
+
+  // Process CSS with PostCSS
+  eleventyConfig.addTemplateFormats("css");
+  eleventyConfig.addExtension("css", {
+    outputFileExtension: "css",
+    compile: async function(inputContent) {
+      return async () => {
+        let output = await postcss([
+          tailwindcss,
+          autoprefixer
+        ]).process(inputContent);
+        return output.css;
+      };
+    }
+  });
+
+  // Copy static assets
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/js");
+
+  // Watch for changes in these folders
+  eleventyConfig.addWatchTarget("src/css");
+  eleventyConfig.addWatchTarget("src/js");
+
+  return {
+    dir: {
+      input: "src",
+      output: "_site",
+      includes: "_includes",
+      layouts: "_includes/layouts"
+    },
+    templateFormats: ["njk", "md", "html"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk"
+  };
+};
