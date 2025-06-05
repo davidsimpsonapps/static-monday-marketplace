@@ -6,3 +6,8 @@
 .add-to-monday {
     max-width: 180px;
 }
+
+pre {
+    @apply border rounded p-4;
+    overflow: auto;
+}
