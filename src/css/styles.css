@@ -34,3 +34,7 @@ pre {
     @apply border rounded p-4;
     overflow: auto;
 }
+
+span[title] svg {
+    @apply inline-block;
+}
