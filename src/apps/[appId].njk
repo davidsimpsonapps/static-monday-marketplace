@@ -6,9 +6,11 @@ pagination:
   alias: app
   addAllPagesToCollections: true
 permalink: /apps/{{ app.id }}/
+title: "{{ app.name }}"
 ---
 
 {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
+
 
 
 <div class="max-w-7xl mx-auto">
@@ -46,7 +48,7 @@ permalink: /apps/{{ app.id }}/
                 Last updated: {{ app.app_live_version.updated_at | formatDate }}
               </p>
             {% endif %}
-            
+
             {% if app.pricing_data %}
               <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mb-4">
                 {{ app.pricing_data }}
@@ -74,27 +76,37 @@ permalink: /apps/{{ app.id }}/
       </div>
     </div>
 
-    <div class="border-t border-gray-200">
-      <div class="p-8">
-        <h2 class="text-2xl font-semibold mb-4">Description</h2>
-        <div class="prose max-w-none">
-          {{ app.description | safe }}
-        </div>
-      </div>
-    </div>
+
+
 
     {% if app.gallery_assets and app.gallery_assets.length > 0 %}
       <div class="border-t border-gray-200">
         <div class="p-8">
-          <h2 class="text-2xl font-semibold mb-4">Gallery</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {% for asset in app.gallery_assets %}
-              <img src="{{ asset }}" alt="Gallery image" class="rounded-lg shadow-md">
+              {% if asset.type == 'image' %}
+                <img src="{{ asset.url }}" alt="Gallery image" class="rounded-lg shadow-md">
+              {% elseif asset.type == 'video' %}
+                <video controls class="rounded-lg shadow-md">
+                  <source src="{{ asset.url}}" />
+                </video>
+              {% endif %}
             {% endfor %}
           </div>
         </div>
       </div>
     {% endif %}
+
+
+
+    <div class="border-t border-gray-200">
+      <div class="p-8">
+        <h2 class="text-2xl font-semibold mb-4">{{ app.short_description }}</h2>
+        <div class="prose max-w-none">
+          {{ app.description | safe }}
+        </div>
+      </div>
+    </div>
 
     {% if app.support_contact %}
       <div class="border-t border-gray-200">
@@ -120,5 +132,14 @@ permalink: /apps/{{ app.id }}/
         </div>
       </div>
     {% endif %}
+
+<!-- Debug output -->
+<pre class="bg-gray-100 p-4 mb-4 text-sm">
+App data: {{ app | stringify }}
+</pre>
+
   </div>
 </div> 
+
+
+
