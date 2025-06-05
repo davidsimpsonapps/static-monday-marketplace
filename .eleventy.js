@@ -8,6 +8,11 @@ module.exports = function(eleventyConfig) {
     return apps.find(app => app.id === parseInt(id));
   });
 
+  // Add custom filter to find vendor by ID
+  eleventyConfig.addFilter("findVendorById", function(vendors, id) {
+    return vendors.find(vendor => vendor.id === parseInt(id));
+  });
+
   // Process CSS with PostCSS
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
