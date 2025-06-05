@@ -13,7 +13,7 @@ Here's a demo of the initial site:
 
 View the live site here: 
 
-https://static-monday-marketplace.david-9e8.workers.dev/
+https://static-monday-marketplace.pages.dev/
 
 It was initially built using 11ty and cursor in under an hour.
 
