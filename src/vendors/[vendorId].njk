@@ -1,0 +1,69 @@
+---
+layout: base.njk
+pagination:
+  data: vendors
+  size: 1
+  alias: vendor
+  addAllPagesToCollections: true
+permalink: /vendors/{{ vendor.id }}/
+---
+
+<div class="max-w-7xl mx-auto">
+  <a href="/" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8">
+    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+    </svg>
+    Back to Apps
+  </a>
+
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+    <div class="p-8">
+      <div class="flex items-start">
+        {% if vendor.logo_url %}
+          <img src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-24 h-24 rounded-lg mr-6">
+        {% endif %}
+        <div>
+          <h1 class="text-3xl font-bold mb-2">{{ vendor.name }}</h1>
+          {% if vendor.website %}
+            <p class="mb-4">
+              <a href="{{ vendor.website }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
+                {{ vendor.website }}
+              </a>
+            </p>
+          {% endif %}
+          {% if vendor.email %}
+            <p class="text-gray-600">
+              Contact: <a href="mailto:{{ vendor.email }}" class="text-blue-600 hover:text-blue-800">{{ vendor.email }}</a>
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-semibold mb-6">Apps by {{ vendor.name }}</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for app in marketplace %}
+      {% if app.marketplace_developer_id == vendor.id %}
+        <a 
+          href="/apps/{{ app.id }}/" 
+          class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
+        >
+          <div class="p-6">
+            {% if app.logo_url %}
+              <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="w-16 h-16 mb-4 rounded-lg">
+            {% endif %}
+            <h2 class="text-xl font-semibold mb-1">{{ app.name }}</h2>
+            <p class="text-gray-600 mb-4">{{ app.short_description }}</p>
+            {% if app.pricing_data %}
+              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                {{ app.pricing_data }}
+              </span>
+            {% endif %}
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div> 

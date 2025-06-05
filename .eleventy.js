@@ -13,6 +13,18 @@ module.exports = function(eleventyConfig) {
     return vendors.find(vendor => vendor.id === parseInt(id));
   });
 
+  // Create a collection of app pages
+  eleventyConfig.addCollection("appPages", function(collection) {
+    const apps = collection.getAll()[0].data.marketplace;
+    return apps.map(app => ({
+      url: `/apps/${app.id}/`,
+      data: {
+        appId: app.id,
+        app: app
+      }
+    }));
+  });
+
   // Process CSS with PostCSS
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
