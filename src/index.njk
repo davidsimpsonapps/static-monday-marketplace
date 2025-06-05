@@ -52,6 +52,16 @@ title: home
           </p>
           <p class="text-gray-600 mb-4">{{ app.short_description }}</p>
 
+
+          {% set rating = ratings | findRatingById(app.app_id) %}
+          {% if rating %}
+            <div class="flex items-center mt-1 text-gray-400">
+              <span class="text-yellow-500 ">★</span>
+              <span class="ml-1">{{ rating.rating }}</span>
+              <span class=" ml-1">({{ rating.count }})</span>
+            </div>
+          {% endif %}
+
           {% if installs %}
             <p class="text-gray-600 text-sm mb-4">
               Installs: {{ installs | findInstallsById(app.app_id) | numberFormat }}

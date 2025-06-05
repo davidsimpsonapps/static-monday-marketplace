@@ -100,6 +100,12 @@ module.exports = function(eleventyConfig) {
     return JSON.stringify(value, null, 2);
   });
 
+  // Add custom filter to find ratings by app ID
+  eleventyConfig.addFilter("findRatingById", function(ratings, appId) {
+    if (!ratings) return null;
+    return ratings.find(rating => rating.app_id === parseInt(appId));
+  });
+
   // Process CSS with PostCSS
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
