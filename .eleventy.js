@@ -106,6 +106,22 @@ module.exports = function(eleventyConfig) {
     return ratings.find(rating => rating.app_id === parseInt(appId));
   });
 
+  // Add custom filter to get compliance questions by type
+  eleventyConfig.addFilter("getComplianceQuestionsByType", function(complianceQuestions, type) {
+    if (!complianceQuestions || !complianceQuestions.byType) return [];
+    return complianceQuestions.byType[type] || [];
+  });
+
+  // Add custom filter to concatenate arrays
+  eleventyConfig.addFilter("concat", function(array, value) {
+    return array.concat(value);
+  });
+
+  // Add custom filter function
+  eleventyConfig.addFilter("filter", function(array, callback) {
+    return array.filter(callback);
+  });
+
   // Process CSS with PostCSS
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {

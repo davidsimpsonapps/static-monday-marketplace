@@ -15,16 +15,16 @@ title: "{{ app.name }}"
 
 <div class="max-w-7xl mx-auto">
 
-
   <div class="bg-white rounded-lg shadow-lg overflow-hidden">
     <div class="p-8">
       <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
         <div class="flex items-start">
           {% if app.logo_url %}
-            <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="w-24 h-24 rounded-lg mr-6">
+            <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" 
+              class="w-12 h-12 rounded-lg mr-6">
           {% endif %}
           <div>
-            <h1 class="text-3xl  mb-2">{{ app.name }}</h1>
+            <h1 class="text-xl font-semibold mb-2">{{ app.name }}</h1>
             {% if vendor %}
               <p class="mb-4">
                 <a href="/vendors/{{ vendor.id }}/" class="text-blue-600 hover:text-blue-800">
@@ -85,28 +85,35 @@ title: "{{ app.name }}"
             {% endif %}
           </div>
         </div>
-        <div class="flex-shrink-0 md:self-start">
-          <a target="_blank" rel="nofollow" href="https://auth.monday.com/oauth2/authorize?client_id={{app.app_client_id}}&response_type=install"> 
-            <img class="add-to-monday hover:scale-110 duration-500 ease-in-out transform" alt="Add to monday.com" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/Tal/4b5d9548-0598-436e-a5b6-9bc5f29ee1d9_Group12441.png" />
-          </a>
+        <div class="flex-shrink-0 lg:self-start">
+          <div class="mb-2">
+            <a href="https://auth.monday.com/marketplace/listing/{{ app.id }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+              </svg>
+              View on Marketplace
+            </a>
+          </div>
+          <div>
+            <a target="_blank" rel="nofollow" href="https://auth.monday.com/oauth2/authorize?client_id={{app.app_client_id}}&response_type=install"> 
+              <img class="add-to-monday hover:scale-110 duration-500 ease-in-out transform" alt="Add to monday.com" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/Tal/4b5d9548-0598-436e-a5b6-9bc5f29ee1d9_Group12441.png" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-
-
-
     {% if app.gallery_assets and app.gallery_assets.length > 0 %}
       <div class="border-t border-gray-200">
         <div class="p-8">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {% for asset in app.gallery_assets %}
-              {% if asset.type == 'image' %}
-                <img src="{{ asset.url }}" alt="Gallery image" class="rounded-lg shadow-md">
-              {% elseif asset.type == 'video' %}
+              {% if asset.type == 'video' %}
                 <video controls class="rounded-lg shadow-md">
                   <source src="{{ asset.url}}" />
                 </video>
+              {% else %}
+                <img src="{{ asset.url }}" alt="Gallery image" class="rounded-lg shadow-md">
               {% endif %}
             {% endfor %}
           </div>
@@ -150,6 +157,76 @@ title: "{{ app.name }}"
       </div>
     {% endif %}
 
+
+
+    {% if complianceQuestions and complianceQuestions.all.length > 0 %}
+      <div class="border-t border-gray-200">
+        <div class="p-8">
+          <h2 class="text-2xl font-semibold mb-6">Compliance & Security</h2>
+
+          {% if app.compliance_answers and app.compliance_answers | length > 0 %}
+
+            {% for type in ['Security', 'Compliance', 'Data', 'Privacy'] %}
+              {% set typeQuestions = [] %}
+              {% for question in complianceQuestions.all %}
+                {% if question.type == type %}
+                  {% set typeQuestions = typeQuestions | concat([question]) %}
+                {% endif %}
+              {% endfor %}
+              
+              {% if typeQuestions.length > 0 %}
+                <div class="mb-8">
+                  <h3 class="text-xl font-medium mb-4">{{ type }}</h3>
+                  <div class="space-y-4">
+                    {% for question in typeQuestions %}
+                      <div class="bg-gray-50 rounded-lg p-4">
+                        <div class="flex flex-col w-full">
+                          <div class="flex justify-between items-start">
+                            <div class="flex-1">
+                              <p class="font-medium mb-2">{{ question.question }}</p>
+                            </div>
+                            {% if app.compliance_answers %}
+                              {% set answer = null %}
+                              {% for ans in app.compliance_answers %}
+                                {% if ans.questionId === question.id %}
+                                  {% set answer = ans %}
+                                {% endif %}
+                              {% endfor %}
+                              {% if answer %}
+                                <div class="ml-4 flex items-center">
+                                  {% if answer.shortAnswer === true %}
+                                    <span class="text-green-600 font-medium">Yes</span>
+                                  {% elseif answer.shortAnswer === false %}
+                                    <span class="text-red-600 font-medium">No</span>
+                                  {% else %}
+                                    <span class="text-gray-600">{{ answer.answer }}</span>
+                                  {% endif %}
+                                </div>
+                              {% else %}
+                                <div class="ml-4 text-gray-400">Not answered</div>
+                              {% endif %}
+                            {% else %}
+                              <div class="ml-4 text-gray-400">Not answered</div>
+                            {% endif %}
+                          </div>
+                          {% if answer and answer.detailedAnswer %}
+                            <div class="mt-2 text-gray-600">{{ answer.detailedAnswer }}</div>
+                          {% endif %}
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+
+          {% else %}
+            <p>The app developer did not provide the security and compliance information for this app.</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
     <!-- Debug output -->
     <div class="border-t border-gray-200">
       <div class="p-8">
@@ -159,7 +236,6 @@ title: "{{ app.name }}"
         <pre id="debugOutput" class="bg-gray-100 p-4 mb-4 text-sm hidden">{{ app | stringify }}</pre>
       </div>
     </div>
-
   </div>
 </div>
 

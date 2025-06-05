@@ -9,7 +9,7 @@
     "dev": "eleventy --serve",
     "build:css": "tailwindcss -i ./src/css/styles.css -o ./src/css/tailwind.css --minify",
     "build:all": "npm run build:css && npm run build",
-    "deploy": "npm run build:all && wrangler pages publish _site"
+    "deploy": "npm run build && wrangler pages publish _site"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0",

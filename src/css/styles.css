@@ -44,3 +44,10 @@ pre {
 span[title] svg {
     @apply inline-block;
 }
+
+
+ /* Hide empty paragraphs that only contain a line break */
+ p:empty,
+ p:only-child:has(br:only-child) {
+   display: none;
+ }
