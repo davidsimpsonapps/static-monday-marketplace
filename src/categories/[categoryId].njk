@@ -43,7 +43,11 @@ permalink: "categories/{{ category.id }}/"
     
           <!--<p class="text-gray-600 mb-4">App IDs: {{ app.id }} • {{app.app_id}}</p>-->
           {% if installs %}
-            <p class="text-gray-600 mb-4">Installs: {{ installs | findInstallsById(app.app_id) | numberFormat }}</p>
+            <p class="text-gray-600 text-sm mb-4">
+              Installs: {{ installs | findInstallsById(app.app_id) | numberFormat }}
+              •
+              Updated: {{ app.app_live_version.updated_at | formatDate }}
+            </p>
           {% endif %}
             
           <div class="flex flex-wrap gap-2">
