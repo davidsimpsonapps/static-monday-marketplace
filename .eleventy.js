@@ -62,6 +62,31 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // Add custom filter to sort arrays by property
+  eleventyConfig.addFilter("sortBy", function(array, property) {
+    return array.sort((a, b) => {
+      if (a[property] < b[property]) return -1;
+      if (a[property] > b[property]) return 1;
+      return 0;
+    });
+  });
+
+  // Add custom filter to filter apps by vendor
+  eleventyConfig.addFilter("filterByVendor", function(apps, vendorId) {
+    return apps.filter(app => app.marketplace_developer_id === parseInt(vendorId));
+  });
+
+  // Add custom filter to sort vendors by app count
+  eleventyConfig.addFilter("sortVendorsByAppCount", function(vendors, marketplace) {
+    return vendors
+      .map(vendor => {
+        const appCount = marketplace.filter(app => app.marketplace_developer_id === parseInt(vendor.id)).length;
+        return { ...vendor, appCount };
+      })
+      .filter(vendor => vendor.appCount > 0)
+      .sort((a, b) => b.appCount - a.appCount);
+  });
+
   // Create a collection of app pages
   eleventyConfig.addCollection("appPages", function(collection) {
     return collection.getAll()[0].data.marketplace.map(app => ({

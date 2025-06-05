@@ -4,9 +4,9 @@ title: home
 ---
 
 <div class="max-w-7xl mx-auto">
-  <h1 class="text-4xl font-bold pb-2">monday.com marketplace apps</h1>
+  <h1 class="text-4xl font-bold py-6">All apps</h1>
 
-  <p class="py-8">An unofficial listing of <a target="_blank" href="https://monday.com/marketplace/">monday.com/marketplace</a></p>
+
   
   <div class="mb-8">
     <input 
@@ -33,7 +33,12 @@ title: home
             <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="w-16 h-16 mb-4 rounded-lg">
           {% endif %}
           <h2 class="text-xl font-semibold mb-1">{{ app.name }}</h2>
-          <p class="text-sm text-gray-500 mb-2">By {{ vendor.name if vendor else "Unknown Vendor" }}</p>
+          <p class="text-sm text-gray-500 mb-2">
+            By {{ vendor.name if vendor else "Unknown Vendor" }}
+            {% if app.badges_data.security === true %}
+              <span title="Security badge">✅</span>
+            {% endif %}
+          </p>
           <p class="text-gray-600 mb-4">{{ app.short_description }}</p>
 
           {% if installs %}

@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+
+nav a {
+    @apply text-blue-700 hover:text-blue-900 px-2 py-1 hover:underline;
+}
+
+
 .add-to-monday {
     max-width: 180px;
 }

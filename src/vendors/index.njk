@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: "Vendors • monday.com marketplace apps"
+---
+
+
+<div class="max-w-7xl mx-auto">
+
+
+  <h1 class="text-4xl font-bold mb-8">Vendors</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+
+    {% for vendor in vendors | sortVendorsByAppCount(marketplace) %}
+      <div>
+        <a href="/vendors/{{ vendor.id }}/" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <div class="p-6">
+            {% if vendor.logo_url %}
+              <img src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-24 h-24 rounded-lg mr-6">
+            {% endif %}
+            <h2 class="text-xl font-semibold mb-2">{{ vendor.name }}</h2>
+            {% if vendor.website %}
+              <p class="text-gray-600 text-sm mb-4">
+                  {{ vendor.website | replace("https://", "") | replace("http://", "") }}
+                
+              </p>
+            {% endif %}
+            <p class="text-sm text-gray-500">
+              {{ vendor.appCount }} app{% if vendor.appCount != 1 %}s{% endif %}
+            </p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+
+
+    
+  </div>
+</div> 
