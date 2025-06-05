@@ -21,8 +21,9 @@ The  key features behind the site
 
 - static html with almost no js
 - load stupidly fast
+- use responsive web design
 - be seo optimised
-- show what can be achieved in a short period of time
+- show what can be achieved in a very short period of time
 
 This thing can be changed and updated, but for now it's provided as is.
 
