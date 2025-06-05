@@ -1,0 +1,19 @@
+# Build output
+_site/
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo 
