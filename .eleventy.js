@@ -30,6 +30,17 @@ module.exports = function(eleventyConfig) {
     return num.toLocaleString();
   });
 
+  // Add custom filter to format dates
+  eleventyConfig.addFilter("formatDate", function(dateString) {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  });
+
   // Add custom filter to filter apps by category
   eleventyConfig.addFilter("filterByCategory", function(apps, categoryId) {
     if (!Array.isArray(apps)) return [];
