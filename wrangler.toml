@@ -1,0 +1,6 @@
+name = "static-monday-marketplace"
+compatibility_date = "2024-03-01"
+main = "_site"  # Your Eleventy output directory
+
+[pages]
+bucket = "./_site"  # Same as above
