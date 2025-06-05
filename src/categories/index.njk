@@ -1,0 +1,48 @@
+---
+layout: base.njk
+---
+
+<div class="max-w-7xl mx-auto">
+  <a href="/" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8">
+    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+    </svg>
+    Back to Apps
+  </a>
+
+  <h1 class="text-4xl font-bold mb-8">App Categories</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for category in categories %}
+      <a 
+        href="/categories/{{ category.id }}/" 
+        class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden"
+      >
+        <div class="p-6" style="background-color: {{ category.backgroundColor or '#ECEFF8' }}; color: {{ category.textColor or '#323338' }}">
+          <div class="flex items-start">
+            {% if category.logoUrl %}
+              <img src="{{ category.logoUrl }}" alt="{{ category.name }} logo" class="w-16 h-16 mr-4">
+            {% endif %}
+            <div>
+              <h2 class="text-xl font-semibold mb-2">{{ category.name }}</h2>
+              {% if category.content %}
+                <p class="text-sm">{{ category.content }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="p-4 border-t border-gray-100">
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-600">
+              {% set appCount = marketplace | filterByCategory(category.id) | length %}
+              {{ appCount }} app{% if appCount != 1 %}s{% endif %}
+            </span>
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div> 

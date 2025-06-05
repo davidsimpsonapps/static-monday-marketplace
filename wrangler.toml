@@ -4,3 +4,4 @@ main = "_site"  # Your Eleventy output directory
 
 [pages]
 bucket = "./_site"  # Same as above
+pages_build_output_dir = "./site"

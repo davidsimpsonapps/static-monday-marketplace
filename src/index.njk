@@ -35,11 +35,18 @@ title: Monday.com Marketplace Apps
           <h2 class="text-xl font-semibold mb-1">{{ app.name }}</h2>
           <p class="text-sm text-gray-500 mb-2">By {{ vendor.name if vendor else "Unknown Vendor" }}</p>
           <p class="text-gray-600 mb-4">{{ app.short_description }}</p>
-          {% if app.pricing_data %}
-            <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-              {{ app.pricing_data }}
-            </span>
-          {% endif %}
+
+            {% if installs %}
+              <p class="text-gray-600 text-sm mb-4">Installs: {{ installs | findInstallsById(app.app_id) | numberFormat }}</p>
+            {% endif %}
+
+            <p>
+            {% if app.pricing_data %}
+                <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                {{ app.pricing_data }}
+                </span>
+            {% endif %}
+          </p>
         </div>
       </a>
     {% endfor %}
