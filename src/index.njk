@@ -17,18 +17,21 @@ title: Monday.com Marketplace Apps
   
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {% for app in marketplace %}
+      {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
       <a 
-        href="/apps/{{ app.id }}" 
+        href="/apps/{{ app.id }}/" 
         class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
         data-app-id="{{ app.id }}"
         data-app-name="{{ app.name | lower }}"
         data-app-description="{{ app.short_description | lower }}"
+        data-vendor-name="{{ vendor.name | lower if vendor else '' }}"
       >
         <div class="p-6">
           {% if app.logo_url %}
             <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="w-16 h-16 mb-4 rounded-lg">
           {% endif %}
-          <h2 class="text-xl font-semibold mb-2">{{ app.name }}</h2>
+          <h2 class="text-xl font-semibold mb-1">{{ app.name }}</h2>
+          <p class="text-sm text-gray-500 mb-2">By {{ vendor.name if vendor else "Unknown Vendor" }}</p>
           <p class="text-gray-600 mb-4">{{ app.short_description }}</p>
           {% if app.pricing_data %}
             <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
@@ -49,8 +52,11 @@ title: Monday.com Marketplace Apps
     appCards.forEach(card => {
       const appName = card.dataset.appName;
       const appDescription = card.dataset.appDescription;
+      const vendorName = card.dataset.vendorName;
       
-      if (appName.includes(searchText) || appDescription.includes(searchText)) {
+      if (appName.includes(searchText) || 
+          appDescription.includes(searchText) || 
+          vendorName.includes(searchText)) {
         card.style.display = 'block';
       } else {
         card.style.display = 'none';
