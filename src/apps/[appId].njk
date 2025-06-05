@@ -10,6 +10,7 @@ permalink: /apps/{{ app.id }}/
 
 {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
 
+
 <div class="max-w-7xl mx-auto">
   <a href="/" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8">
     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -20,26 +21,33 @@ permalink: /apps/{{ app.id }}/
 
   <div class="bg-white rounded-lg shadow-lg overflow-hidden">
     <div class="p-8">
-      <div class="flex items-start">
-        {% if app.logo_url %}
-          <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="w-24 h-24 rounded-lg mr-6">
-        {% endif %}
-        <div>
-          <h1 class="text-3xl font-bold mb-2">{{ app.name }}</h1>
-          {% if vendor %}
-            <p class="mb-4">
-              <a href="/vendors/{{ vendor.id }}/" class="text-blue-600 hover:text-blue-800">
-                {{ vendor.name }}
-              </a>
-            </p>
-          {% else %}
-            <p class="mb-4 text-gray-600">Unknown Vendor</p>
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+        <div class="flex items-start">
+          {% if app.logo_url %}
+            <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="w-24 h-24 rounded-lg mr-6">
           {% endif %}
-          {% if app.pricing_data %}
-            <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mb-4">
-              {{ app.pricing_data }}
-            </span>
-          {% endif %}
+          <div>
+            <h1 class="text-3xl font-bold mb-2">{{ app.name }}</h1>
+            {% if vendor %}
+              <p class="mb-4">
+                <a href="/vendors/{{ vendor.id }}/" class="text-blue-600 hover:text-blue-800">
+                  {{ vendor.name }}
+                </a>
+              </p>
+            {% else %}
+              <p class="mb-4 text-gray-600">Unknown Vendor</p>
+            {% endif %}
+            {% if app.pricing_data %}
+              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mb-4">
+                {{ app.pricing_data }}
+              </span>
+            {% endif %}
+          </div>
+        </div>
+        <div class="flex-shrink-0 md:self-start">
+          <a target="_blank" rel="nofollow" href="https://auth.monday.com/oauth2/authorize?client_id={{app.app_client_id}}&response_type=install"> 
+            <img class="add-to-monday hover:scale-110 duration-500 ease-in-out transform" alt="Add to monday.com" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/Tal/4b5d9548-0598-436e-a5b6-9bc5f29ee1d9_Group12441.png" />
+          </a>
         </div>
       </div>
     </div>
