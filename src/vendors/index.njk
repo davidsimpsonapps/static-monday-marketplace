@@ -13,7 +13,7 @@ title: Vendors
 
 
 
-    {% for vendor in vendors | sortVendorsByAppCount(marketplace) %}
+    {% for vendor in vendors | sortVendorsByInstalls %}
       <div>
         <a href="/vendors/{{ vendor.id }}/" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
           <div class="p-6">
@@ -42,6 +42,8 @@ title: Vendors
             </p>
             <p class="text-sm text-gray-500">
               {{ vendor.appCount }} app{% if vendor.appCount != 1 %}s{% endif %}
+              •
+              {{ vendor.installs }} install{% if vendor.installs != 1 %}s{% endif %}
             </p>
           </div>
         </a>
