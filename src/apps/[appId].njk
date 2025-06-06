@@ -6,7 +6,8 @@ pagination:
   alias: app
   addAllPagesToCollections: true
 permalink: /apps/{{ app.id }}/
-title: "{{ app.name }}"
+eleventyComputed:
+  title: "{{app.name}}"
 ---
 
 {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
