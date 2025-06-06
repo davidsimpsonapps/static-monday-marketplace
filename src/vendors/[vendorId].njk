@@ -6,6 +6,8 @@ pagination:
   alias: vendor
   addAllPagesToCollections: true
 permalink: /vendors/{{ vendor.id }}/
+eleventyComputed:
+  title: "{{vendor.name}}"
 ---
 
 <div class="max-w-7xl mx-auto">
