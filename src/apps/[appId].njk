@@ -27,7 +27,7 @@ title: "{{ app.name }}"
             <h1 class="text-xl font-semibold mb-2">{{ app.name }}</h1>
             {% if vendor %}
               <p class="mb-4">
-                <a href="/vendors/{{ vendor.id }}/" class="text-blue-600 hover:text-blue-800">
+                <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" class="text-blue-600 hover:text-blue-800">
                   {{ vendor.name }}
                 </a>
 

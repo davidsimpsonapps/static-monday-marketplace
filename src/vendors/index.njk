@@ -15,7 +15,7 @@ title: Vendors
 
     {% for vendor in vendors | sortVendorsByInstalls %}
       <div>
-        <a href="/vendors/{{ vendor.id }}/" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
           <div class="p-6">
             {% if vendor.logo_url %}
               <img src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-24 h-24 rounded-lg mr-6">
