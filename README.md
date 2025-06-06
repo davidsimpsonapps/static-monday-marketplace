@@ -25,6 +25,12 @@ The  key features behind the site
 - be seo optimised
 - show what can be achieved in a very short period of time
 
+**Update:** Reviews really slow down the site build, so uncomment the following at the top of `/_data/reviews.js` for quicker development:
+
+```
+//   return {};
+```
+
 This thing can be changed and updated, but for now it's provided as is.
 
 This site is not affiliated with monday.com in any way. 
