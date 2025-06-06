@@ -50,14 +50,6 @@ permalink: "categories/{{ category.id }}/"
             <p class="text-gray-600 text-sm mb-4">
               Installs: {{ installs | findInstallsById(app.app_id) | numberFormat }}
               {% set rating = ratings | findRatingById(app.app_id) %}
-              {% if rating %}
-                •
-                <span class="flex items-center inline">
-                  <span class="text-yellow-500">★</span>
-                  <span class="ml-1">{{ rating.rating }}</span>
-                  <span class="text-gray-400 ml-1">({{ rating.count }})</span>
-                </span>
-              {% endif %}
               •
               Updated: {{ app.app_live_version.updated_at | formatDate }}
             </p>
