@@ -87,6 +87,11 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => b.appCount - a.appCount);
   });
 
+  // Add custom filter to get app count for a vendor
+  eleventyConfig.addFilter("getVendorAppCount", function(vendor, marketplace) {
+    return marketplace.filter(app => app.marketplace_developer_id === parseInt(vendor.id)).length;
+  });
+
   // Add custom filter to sort vendors by install count
   eleventyConfig.addFilter("sortVendorsByInstalls", function(vendors) {
     return vendors

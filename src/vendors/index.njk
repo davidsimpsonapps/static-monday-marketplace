@@ -41,7 +41,7 @@ title: Vendors
               {% endif %}
             </p>
             <p class="text-sm text-gray-500">
-              {{ vendor.appCount }} app{% if vendor.appCount != 1 %}s{% endif %}
+              {{ vendor | getVendorAppCount(marketplace) }} app{% if vendor.appCount != 1 %}s{% endif %}
               •
               {{ vendor.installs }} install{% if vendor.installs != 1 %}s{% endif %}
             </p>
