@@ -71,6 +71,11 @@ title: "{{ app.name }}"
                 {{ app.pricing_data }}
               </span>
             {% endif %}
+            {% if app.acquisition_source %}
+              <span class="opacity-30 inline-block bg-gray-100 text-blue-800 px-3 py-1 rounded-full text-sm mb-4">
+                {{ app.acquisition_source }}
+              </span>
+            {% endif %}
             {% if app.marketplace_category_ids and app.marketplace_category_ids.length > 0 %}
               <div class="flex flex-wrap gap-2 mb-4">
                 {% for categoryId in app.marketplace_category_ids %}
