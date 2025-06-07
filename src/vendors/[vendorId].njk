@@ -10,6 +10,8 @@ eleventyComputed:
   title: "{{vendor.name}}"
 ---
 
+{% from "partials/app-card.njk" import appCard %}
+
 <div class="max-w-7xl mx-auto">
 
 
@@ -33,19 +35,38 @@ eleventyComputed:
               <span title="Platinum"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
             {% endif %}
             {% if vendor.website %}
+              <a href="{{ vendor.website }}" target="_blank" rel="nofollow noreferer noopener">
                 {{ vendor.website | replace("https://", "") | replace("http://", "") }}
+              </a>
             {% endif %}
           </p>
 
        
           {% if vendor.email %}
             <p class="text-gray-600">
-              Contact: <a href="mailto:{{ vendor.email }}" class="text-blue-600 hover:text-blue-800">{{ vendor.email }}</a>
+              Contact: 
+              <a href="mailto:{{ vendor.email }}" class="text-blue-600 hover:text-blue-800">{{ vendor.email }}</a>
             </p>
           {% endif %}
 
+            
+
+          
+            <p class="text-gray-600 text-sm mb-4">
+              {% set rating = vendor.ratings %}
+              {% if rating %}
+                <span>
+                  <span class="text-yellow-500">★</span>
+                  <span class="ml-1">{{ rating.rating }}</span>
+                  <span class="ml-1">({{ rating.count }})</span>
+                </span>
+              {% endif %}
+              •
+              Installs: {{ vendor.installs  }}
+            </p>
+          
           <!-- Debug output -->
-          <div class="pt-8">
+          <div>
             <button onclick="toggleDebug()" class="text-sm text-gray-500 hover:text-gray-700 mb-2">
               View vendor data JSON
             </button>
@@ -59,52 +80,17 @@ eleventyComputed:
 
   <h2 class="text-2xl font-semibold mb-6">Apps by {{ vendor.name }}</h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {% for app in marketplace %}
-      {% if app.marketplace_developer_id == vendor.id %}
-        <a 
-          href="/apps/{{ app.id }}/" 
-          class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
-        >
-          <div class="p-6">
-            {% if app.logo_url %}
-              <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="w-16 h-16 mb-4 rounded-lg">
-            {% endif %}
-            <h2 class="text-xl font-semibold mb-1">{{ app.name }}</h2>
-            <p class="text-gray-600 mb-4">{{ app.short_description }}</p>
-          
-            {% set rating = ratings | findRatingById(app.app_id) %}
-            {% if rating %}
-              <div class="flex items-center mt-1 text-gray-400">
-                <span class="text-yellow-500 ">★</span>
-                <span class="ml-1">{{ rating.rating }}</span>
-                <span class=" ml-1">({{ rating.count }})</span>
-              </div>
-            {% endif %}
-
-            {% if installs %}
-              <p class="text-gray-600 text-sm mb-4">
-                Installs: {{ installs | findInstallsById(app.app_id) | numberFormat }}
-                •
-                Updated: {{ app.app_live_version.updated_at | formatDate }}
-              </p>
-            {% endif %}
-
-            {% if app.pricing_data %}
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-                {{ app.pricing_data }}
-              </span>
-            {% endif %}
-          </div>
-        </a>
-      {% endif %}
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {% for app in marketplace | filterByVendor(vendor.id) | sortByInstalls %}
+      {% set appRatings = ratings | default([]) %}
+      {{ appCard(app, appRatings, vendors, installs) }}
     {% endfor %}
   </div>
 </div> 
-
 <script>
 function toggleDebug() {
   const debugOutput = document.getElementById('debugOutput');
   debugOutput.classList.toggle('hidden');
 }
 </script> 
+

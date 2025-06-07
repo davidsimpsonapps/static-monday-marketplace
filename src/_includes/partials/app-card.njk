@@ -1,0 +1,65 @@
+{% macro appCard(app, ratings, vendors, installs) %}
+    {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
+
+      <a 
+        href="/apps/{{ app.id }}/" 
+        class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
+        data-app-id="{{ app.id }}"
+        data-app-name="{{ app.name | lower }}"
+        data-app-description="{{ app.short_description | lower }}"
+        data-vendor-name="{{ vendor.name | lower if vendor else '' }}"
+      >
+        <div class="p-6">
+          {% if app.logo_url %}
+            <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="w-16 h-16 mb-4 rounded-lg">
+          {% endif %}
+          <h2 class="text-xl font-semibold mb-1">{{ app.name }}</h2>
+          <p class="text-sm text-gray-500 mb-2">
+            By {{ vendor.name if vendor else "Unknown Vendor" }}
+            {% if app.badges_data.security === true %}
+              <span title="Security badge">✅</span>
+            {% endif %}
+
+            {% if vendor.partners_program === 1 %}
+              <span title="Bronze"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+            {% elseif vendor.partners_program === 2 %}
+              <span title="Silver"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="gray"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+            {% elseif vendor.partners_program === 3 %}
+              <span title="Gold"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#FFCB00"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+            {% elseif vendor.partners_program === 4 %}
+              <span title="Platinum"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+            {% endif %}
+
+          </p>
+          <p class="text-gray-600 mb-4">{{ app.short_description }}</p>
+
+          {% if ratings %}
+            {% set rating = ratings | findRatingById(app.app_id) %}
+            {% if rating %}
+              <div class="flex items-center mt-1 text-gray-400">
+                <span class="text-yellow-500">★</span>
+                <span class="ml-1">{{ rating.rating }}</span>
+                <span class="ml-1">({{ rating.count }})</span>
+              </div>
+            {% endif %}
+          {% endif %}
+
+          {% if installs %}
+            <p class="text-gray-600 text-sm mb-4">
+              Installs: {{ installs | findInstallsById(app.app_id) | numberFormat }}
+              •
+              Updated: {{ app.app_live_version.updated_at | formatDate }}
+            </p>
+          {% endif %}
+
+          <p>
+            {% if app.pricing_data %}
+                <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                {{ app.pricing_data }}
+                </span>
+            {% endif %}
+          </p>
+        </div>
+      </a>
+
+{% endmacro %}      
