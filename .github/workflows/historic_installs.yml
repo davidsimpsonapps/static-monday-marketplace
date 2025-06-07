@@ -3,7 +3,6 @@ name: Historic App Install Data Update
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs at 00:00 UTC every day
-    # - cron: '0 0 * * 0'  # Runs at 00:00 UTC every Sunday
   workflow_dispatch:      # Allows manual triggering
 
 jobs:
@@ -15,39 +14,46 @@ jobs:
 
       - name: Fetch latest install data
         run: |
-          curl "https://monday-apps-ms.monday.com/apps_ms/public/app_analytics/app_installs" > new_installs.json
+          curl -s "https://monday-apps-ms.monday.com/apps_ms/public/app_analytics/app_installs" > new_installs.json
+          # Validate JSON is not empty
+          if [ ! -s new_installs.json ]; then
+            echo "Error: Received empty response from API"
+            exit 1
+          fi
 
-      - name: Process and merge data (using jq)
+      - name: Process and merge data
         run: |
+          mkdir -p src/_data/json/installs/apps
           current_date=$(date +'%Y-%m-%d')
 
-          # Process each app's data
+          # Process each app's data with robust error handling
           jq -r 'to_entries[] | {appId: .key, count: .value}' new_installs.json | while read -r line; do
             appId=$(echo "$line" | jq -r '.appId')
             count=$(echo "$line" | jq -r '.count')
 
+            # Check if values exist
+            if [ -z "$appId" ] || [ -z "$count" ]; then
+              echo "Skipping invalid entry: $line"
+              continue
+            fi
+
+            output_file="src/_data/json/installs/apps/${appId}.json"
+
             # Create or update the JSON file
-            if [ -f "data/${appId}.json" ]; then
-              # Merge with existing data
+            if [ -f "$output_file" ]; then
               jq \
                 --arg date "$current_date" \
                 --argjson count "$count" \
                 '
-                  .installHistory |= (
+                  (.installHistory // []) |= (
                     if any(.date == $date) then
-                      map(if .date == $date then
-                        .count = $count  # Overwrite if same date
-                      else . end)
+                      map(if .date == $date then .count = $count else . end)
                     else
-                      . + [{
-                        date: $date,
-                        count: $count
-                      }]
+                      . + [{date: $date, count: $count}]
                     end
                   )
-                ' "data/${appId}.json" > "tmp.json" && mv "tmp.json" "src/_data/json/installs/apps/${appId}.json"
+                ' "$output_file" > "tmp.json" && mv "tmp.json" "$output_file"
             else
-              # Create new file
               jq -n \
                 --arg appId "$appId" \
                 --arg date "$current_date" \
@@ -58,7 +64,7 @@ jobs:
                     date: $date,
                     count: $count
                   }]
-                }' > "data/${appId}.json"
+                }' > "$output_file"
             fi
           done
 
@@ -66,6 +72,6 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add data/
-          git commit -m "Weekly app install data update - $(date +'%Y-%m-%d')"
+          git add src/_data/json/installs/apps/
+          git commit -m "Daily app install data update - $(date +'%Y-%m-%d')"
           git push
