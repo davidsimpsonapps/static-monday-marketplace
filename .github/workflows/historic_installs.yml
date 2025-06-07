@@ -1,4 +1,4 @@
-name: Weekly App Install Data Update
+name: Historic App Install Data Update
 
 on:
   schedule:
