@@ -2,9 +2,10 @@ name: Deploy to Cloudflare Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   schedule:
     - cron: '0 1 * * *' # Runs at 1:00 AM UTC every day
+  workflow_dispatch:      # Allows manual runs
 
 jobs:
   deploy:
