@@ -19,7 +19,6 @@ jobs:
 
       - name: Process and merge data (using jq)
         run: |
-          mkdir -p data
           current_date=$(date +'%Y-%m-%d')
 
           # Process each app's data
