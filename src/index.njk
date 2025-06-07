@@ -13,7 +13,7 @@ title: monday.com marketplace apps
   {% include "partials/search.njk" %}
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {% for app in marketplace | sortByInstalls  %}
+    {% for app in marketplace | sortByCreatedAt %}
       {{ appCard(app, ratings, vendors, installs) }}
     {% endfor %}
   </div>

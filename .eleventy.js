@@ -62,6 +62,15 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // Add custom filter to sort apps by creation date
+  eleventyConfig.addFilter("sortByCreatedAt", function(apps) {
+    return apps.sort((a, b) => {
+      const aDate = new Date(a.created_at);
+      const bDate = new Date(b.created_at);
+      return bDate - aDate;
+    });
+  });
+
   // Add custom filter to sort arrays by property
   eleventyConfig.addFilter("sortBy", function(array, property) {
     return array.sort((a, b) => {
