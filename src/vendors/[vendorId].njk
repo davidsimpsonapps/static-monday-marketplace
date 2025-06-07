@@ -67,6 +67,8 @@ eleventyComputed:
               {% endif %}
               •
               Installs: {{ vendor.installs  }}
+              •
+                Vendor since: {{ vendor.created_at | formatDate }}
             </p>
           
           <!-- Debug output -->

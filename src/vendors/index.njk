@@ -61,6 +61,10 @@ title: Vendors
               {{ vendor | getVendorAppCount(marketplace) }} app{% if vendor.appCount != 1 %}s{% endif %}
               •
               {{ vendor.installs }} install{% if vendor.installs != 1 %}s{% endif %}
+
+
+              •
+                <span class="whitespace-nowrap">Since: {{ vendor.created_at | formatDate }}</span>
             </p>
           </div>
         </a>
