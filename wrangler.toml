@@ -2,4 +2,4 @@ name = "static-monday-marketplace"
 compatibility_date = "2024-03-01"
 
 [pages]
-pages_build_output_dir = "./site"
+pages_build_output_dir = "./_site"
