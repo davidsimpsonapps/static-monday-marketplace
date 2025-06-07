@@ -20,12 +20,12 @@ jobs:
       - name: Process and store data
         run: |
           # Create target directory if it doesn't exist
-          mkdir -p src/_data/json/installs
+          mkdir -p src/_data/json/installs/apps
           current_date=$(date +'%Y-%m-%d')
 
           # Process each app entry
           jq -r 'to_entries[] | "\(.key) \(.value)"' installs.json | while read appId count; do
-            output_file="src/_data/json/installs/${appId}.json"
+            output_file="src/_data/json/installs/apps/${appId}.json"
 
             if [ -f "$output_file" ]; then
               # Update existing file (append new entry)
@@ -54,6 +54,6 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add src/_data/json/installs/
+          git add src/_data/json/installs/apps/
           git commit -m "Auto-update install data - $(date +'%Y-%m-%d')"
           git push
