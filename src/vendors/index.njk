@@ -22,7 +22,7 @@ title: Vendors
           class="card block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
           <div class="p-6">
             {% if vendor.logo_url %}
-              <img src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-24 h-24 rounded-lg mr-6">
+              <img src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-16 h-16 mb-4 rounded-lg">
             {% endif %}
             <h2 class="text-xl font-semibold mt-4 mb-2">{{ vendor.name }}</h2>
             
@@ -60,7 +60,7 @@ title: Vendors
             <p class="text-sm text-gray-500">
               {{ vendor | getVendorAppCount(marketplace) }} app{% if vendor.appCount != 1 %}s{% endif %}
               •
-              {{ vendor.installs }} install{% if vendor.installs != 1 %}s{% endif %}
+              {{ vendor.installs | numberFormat }} install{% if vendor.installs != 1 %}s{% endif %}
 
 
               •

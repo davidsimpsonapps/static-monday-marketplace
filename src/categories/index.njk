@@ -14,9 +14,9 @@ title: Categories
     {% for category in categories %}
       <a 
         href="/categories/{{ category.id }}/" 
-        class="card block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden"
+        class="card block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden flex flex-col h-full"
       >
-        <div class="p-6" style="background-color: {{ category.backgroundColor or '#ECEFF8' }}; color: {{ category.textColor or '#323338' }}">
+        <div class="p-6 flex-grow" style="background-color: {{ category.backgroundColor or '#ECEFF8' }}; color: {{ category.textColor or '#323338' }}">
           <div class="flex items-start">
             {% if category.logoUrl %}
               <img src="{{ category.logoUrl }}" alt="{{ category.name }} logo" class="w-16 h-16 mr-4">

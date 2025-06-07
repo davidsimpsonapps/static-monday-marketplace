@@ -63,7 +63,7 @@ eleventyComputed:
             {% endif %}
             {% if installs %}
               <p class="text-gray-600 text-sm mb-4">
-                Installs: {{ installs | findInstallsById(app.app_id) | numberFormat }}
+                 <a href="#installs" title="See installation history">Installs</a>: {{ installs | findInstallsById(app.app_id) | numberFormat }}
                 •
                 Created: {{ app.created_at | formatDate }}
                 •
@@ -238,15 +238,15 @@ eleventyComputed:
 
     <!-- Reviews Section -->
     <div class="border-t border-gray-200">
-      <div class="px-4 py-5 sm:px-6">
+      <div class="p-8 ">
         <h3 id="reviews" class="text-lg leading-6 font-medium text-gray-900">Reviews</h3>
       </div>
-      <div class="border-t border-gray-200">
+      
         {% set appReviews = reviews[app.app_id] %}
         {% if appReviews and appReviews.length > 0 %}
-          <div class="divide-y divide-gray-200">
+          
             {% for review in appReviews %}
-              <div class="p-4">
+              <div class="mx-8 py-4 border-t border-gray-200">
                 <div class="flex items-center mb-2">
                   <div class="flex items-center">
                     {% for i in range(1, 6) %}
@@ -262,11 +262,13 @@ eleventyComputed:
                     {% endfor %}
                   </div>
                   <span class="ml-2 text-sm text-gray-500">
-                    <b>{{review.reviewerNameInitials}}:</b>  {{ review.commentedAt | formatDate }}
-                  
+                    {{ review.commentedAt | formatDate }}
                   </span>
                 </div>
-                <p class="text-gray-700">{{ review.comment }}</p>
+                <p class="text-gray-700">
+                  <b>{{review.reviewerNameInitials}}:</b>  
+                  {{ review.comment }}
+                </p>
                 {% if review.developerReply %}
                   <div class="mt-2 pl-4 border-l-2 border-gray-200">
                     <p class="text-sm text-gray-500">Developer response:</p>
@@ -275,20 +277,20 @@ eleventyComputed:
                 {% endif %}
               </div>
             {% endfor %}
-          </div>
+          
         {% else %}
-          <div class="px-4 py-5 sm:px-6">
+          <div class="mx-8 py-4">
             <p class="text-gray-500">No reviews yet.</p>
           </div>
         {% endif %}
-      </div>
+      
     </div>
 
 
     <!-- Install history since 2025-06-07 -->
     <div class="border-t border-gray-200">
       <div class="p-8">
-        <h2 class="text-2xl font-semibold mb-4">Installation history</h2>
+        <h2 id="installs" class="text-2xl font-semibold mb-4">Installation history</h2>
         <p class="text-xs text-gray-600">June 7, 2025 onwards only.</p>
         <div class="chart-container h-64">
           <canvas id="installChart"></canvas>
