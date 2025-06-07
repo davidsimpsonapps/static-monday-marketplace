@@ -24,7 +24,7 @@ title: Vendors
             {% if vendor.logo_url %}
               <img src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-24 h-24 rounded-lg mr-6">
             {% endif %}
-            <h2 class="text-xl font-semibold my-2">{{ vendor.name }}</h2>
+            <h2 class="text-xl font-semibold mt-4 mb-2">{{ vendor.name }}</h2>
             
       
 
@@ -44,6 +44,19 @@ title: Vendors
                   {{ vendor.website | replace("https://", "") | replace("http://", "") }}
               {% endif %}
             </p>
+
+            <div class="ext-gray-500">
+              {% if vendor.ratings %}
+                <span>
+                  <span class="text-yellow-500">★</span>
+                  <span class="ml-1">{{ vendor.ratings.rating }}</span>
+                  <span class="ml-1">({{ vendor.ratings.count }})</span>
+                </span>
+              {% else %}
+                No rating found
+              {% endif %}
+            </div>
+
             <p class="text-sm text-gray-500">
               {{ vendor | getVendorAppCount(marketplace) }} app{% if vendor.appCount != 1 %}s{% endif %}
               •
