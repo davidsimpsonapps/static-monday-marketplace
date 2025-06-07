@@ -18,6 +18,7 @@ eleventyComputed:
 
   <h1 class="text-xl md:text-3xl  mb-8">{{ category.name }}</h1>
 
+  {% include "partials/search.njk" %}
   
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {% for app in marketplace | filterByCategory(category.id) | sortByInstalls %}

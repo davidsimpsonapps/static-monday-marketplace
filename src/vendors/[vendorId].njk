@@ -38,6 +38,8 @@ eleventyComputed:
               <a href="{{ vendor.website }}" target="_blank" rel="nofollow noreferer noopener">
                 {{ vendor.website | replace("https://", "") | replace("http://", "") }}
               </a>
+            {% else %}
+              No website found
             {% endif %}
           </p>
 
@@ -60,6 +62,8 @@ eleventyComputed:
                   <span class="ml-1">{{ rating.rating }}</span>
                   <span class="ml-1">({{ rating.count }})</span>
                 </span>
+              {% else %}
+                No rating found
               {% endif %}
               •
               Installs: {{ vendor.installs  }}
@@ -79,6 +83,9 @@ eleventyComputed:
   </div>
 
   <h2 class="text-2xl font-semibold mb-6">Apps by {{ vendor.name }}</h2>
+
+  {% include "partials/search.njk" %}
+
 
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {% for app in marketplace | filterByVendor(vendor.id) | sortByInstalls %}

@@ -3,11 +3,7 @@
 
       <a 
         href="/apps/{{ app.id }}/" 
-        class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
-        data-app-id="{{ app.id }}"
-        data-app-name="{{ app.name | lower }}"
-        data-app-description="{{ app.short_description | lower }}"
-        data-vendor-name="{{ vendor.name | lower if vendor else '' }}"
+        class="card block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
       >
         <div class="p-6">
           {% if app.logo_url %}

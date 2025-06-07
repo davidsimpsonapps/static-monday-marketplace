@@ -9,6 +9,8 @@ title: monday.com marketplace apps
 
 
   <h1 class="text-xl md:text-3xl  mb-8">All apps</h1>
+  
+  {% include "partials/search.njk" %}
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {% for app in marketplace | sortByInstalls  %}
@@ -16,24 +18,3 @@ title: monday.com marketplace apps
     {% endfor %}
   </div>
 </div>
-
-<script>
-  document.getElementById('app-search').addEventListener('input', function(e) {
-    const searchText = e.target.value.toLowerCase();
-    const appCards = document.querySelectorAll('[data-app-id]');
-    
-    appCards.forEach(card => {
-      const appName = card.dataset.appName;
-      const appDescription = card.dataset.appDescription;
-      const vendorName = card.dataset.vendorName;
-      
-      if (appName.includes(searchText) || 
-          appDescription.includes(searchText) || 
-          vendorName.includes(searchText)) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  });
-</script>

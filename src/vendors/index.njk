@@ -9,13 +9,17 @@ title: Vendors
 
   <h1 class="text-xl md:text-3xl  mb-8">Vendors</h1>
 
+
+  {% include "partials/search.njk" %}
+
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
 
 
     {% for vendor in vendors | sortVendorsByInstalls %}
-      <div>
-        <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+      
+        <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" 
+          class="card block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
           <div class="p-6">
             {% if vendor.logo_url %}
               <img src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-24 h-24 rounded-lg mr-6">
@@ -47,7 +51,7 @@ title: Vendors
             </p>
           </div>
         </a>
-      </div>
+      
     {% endfor %}
 
 
