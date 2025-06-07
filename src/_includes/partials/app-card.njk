@@ -2,7 +2,7 @@
     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
 
       <a 
-        href="/apps/{{ app.id }}/" 
+        href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" 
         class="card block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
       >
         <div class="p-6">
