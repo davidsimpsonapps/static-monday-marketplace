@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 module.exports = async function() {
 
-  return {};
+  // return {};
   try {
     // Get all apps from the marketplace data
     const response = await fetch('https://cdn.monday.com/public_marketplace_apps');
