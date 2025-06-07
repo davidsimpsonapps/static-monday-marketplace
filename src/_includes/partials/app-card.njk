@@ -42,9 +42,9 @@
 
           {% if installs %}
             <p class="text-gray-600 text-sm mb-4">
-              Installs: {{ installs | findInstallsById(app.app_id) | numberFormat }}
-              •
-              Updated: {{ app.app_live_version.updated_at | formatDate }}
+              {{ installs | findInstallsById(app.app_id) | numberFormat }} installs
+              <!-- • Created: {{ app.created_at | formatDate }} -->
+              • Updated {{ app.updated_at | formatDate }}
             </p>
           {% endif %}
 
