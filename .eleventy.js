@@ -41,6 +41,10 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("removeAquisitionSource", function(apps, source) {
+    return apps.filter(app => app.acquisition_source !== source);
+  });
+
 
   eleventyConfig.addFilter("hostFromUrl", function(url) {
     try {

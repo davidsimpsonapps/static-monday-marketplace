@@ -34,7 +34,7 @@ title: monday.com marketplace apps
     {{ appCard(easymails, ratings, vendors, installs) }}
 
 
-    {% for app in marketplace | sortByCreatedAt %}
+    {% for app in marketplace | removeAquisitionSource('monday') | sortByCreatedAt %}
       {{ appCard(app, ratings, vendors, installs) }}
     {% endfor %}
   </div>
