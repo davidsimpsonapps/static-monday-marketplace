@@ -49,7 +49,7 @@ title: Vendors
               {% endif %}
 
               {% if vendor.website %}
-                  {{ vendor.website | replace("https://", "") | replace("http://", "") }}
+                  {{ vendor.website | hostFromUrl }}
               {% endif %}
             </p>
 

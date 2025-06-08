@@ -41,6 +41,16 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+
+  eleventyConfig.addFilter("hostFromUrl", function(url) {
+    try {
+      const urlObj = new URL(url);
+      return urlObj.host;
+    } catch (error) {
+      return url;
+    }
+  });
+
   // Add custom filter to filter apps by category
   eleventyConfig.addFilter("filterByCategory", function(apps, categoryId) {
     if (!Array.isArray(apps)) return [];
