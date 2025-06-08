@@ -14,12 +14,6 @@
 body {
     font-family: var(--font-family);
 }
-.header-wrapper {
-    @apply sticky top-0 shadow-md bg-white z-[100];
-}
-.header-wrapper[data-hostname="localhost"] {
-    @apply bg-sky-100;
-}
 
 h1,h2,h3,h4,h5,h6 {
     @apply font-normal;
@@ -46,9 +40,6 @@ nav a+a {
 }
 
 
-.add-to-monday {
-    max-width: 180px;
-}
 
 pre {
     @apply border rounded p-4;
@@ -70,4 +61,22 @@ span[title] svg {
 @media (max-width:500px){
     .github-corner:hover .octo-arm{animation:none}
     .github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}
+}
+
+
+
+.header-wrapper {
+    @apply sticky top-0 shadow-md bg-white z-[100];
+}
+.header-wrapper[data-hostname="localhost"] {
+    @apply bg-sky-100;
+}
+
+
+.add-to-monday {
+    max-width: 180px;
+}
+
+.card {
+    @apply overflow-hidden;
 }
