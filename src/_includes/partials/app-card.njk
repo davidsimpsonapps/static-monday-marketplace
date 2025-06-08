@@ -54,6 +54,12 @@
                 • Updated {{ app.app_live_version.updated_at | formatDate }}
               </div>
             {% endif %}
+
+            {% if app | isHostedOnMonday %}
+              <span title="App & logs hosted by monday.com" class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs sm:text-sm">
+                Hosted by monday.com
+              </span>
+            {% endif %}
             {% if app.pricing_data %}
               <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs md:text-sm">
                 {{ app.pricing_data }}

@@ -143,6 +143,21 @@ module.exports = function(eleventyConfig) {
     return array.filter(callback);
   });
 
+  // Add isHostedOnMonday filter
+  eleventyConfig.addFilter("isHostedOnMonday", function(app) {
+    if (!app.compliance_answers) return false;
+    
+    const dataHostedOnMonday = Object.values(app.compliance_answers).some(answer => 
+      answer.dataHostingProvider === 'monday'
+    );
+
+    const logHostedOnMonday = Object.values(app.compliance_answers).some(answer => 
+      answer.logHostingProvider === 'monday'
+    );
+
+    return dataHostedOnMonday && logHostedOnMonday;
+  });
+
   // Process CSS with PostCSS
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
