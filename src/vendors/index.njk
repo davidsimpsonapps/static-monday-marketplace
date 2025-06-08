@@ -6,8 +6,16 @@ title: Vendors
 
 <div class="max-w-7xl mx-auto">
 
-
-  <h1 class="text-xl md:text-3xl  mb-8">Vendors</h1>
+  <div class="flex gap-3  mb-8">
+    <h1 class="text-xl md:text-3xl">
+      Vendors
+    </h1>
+    <span class="sm:my-2">
+      <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
+        {{ vendors.length }}
+      </span>
+    </span>
+  </div>
 
 
   {% include "partials/search.njk" %}
