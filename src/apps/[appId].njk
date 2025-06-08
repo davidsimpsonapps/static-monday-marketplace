@@ -14,10 +14,10 @@ eleventyComputed:
 
 
 
-<div class="max-w-7xl mx-auto">
+<div class="max-w-7xl -mx-4 -my-8 sm:mx-auto sm:my-0">
 
-  <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-    <div class="p-8">
+  <div class="bg-white sm:rounded-lg shadow-lg overflow-hidden">
+    <div class="p-4 py-8 sm:p-8">
       <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
 
@@ -65,20 +65,19 @@ eleventyComputed:
             {% set rating = ratings | findRatingById(app.app_id) %}
             {% if rating %}
               <a href="#reviews" title="See reviews">
-                <div class="flex items-center mt-1 text-gray-400">
+                <div class="flex items-center mt-1 text-gray-400  text-sm">
                   <span class="text-yellow-500 ">★</span>
                   <span class="ml-1">{{ rating.rating }}</span>
                   <span class=" ml-1">({{ rating.count }})</span>
-              </div>
+                </div>
               </a>
             {% endif %}
             {% if installs %}
-              <p class="text-gray-600 text-sm mb-4">
+              <p class="text-gray-600 text-sm mb-2 sm:mb-4">
                  <a href="#installs" title="See installation history">Installs</a>: {{ installs | findInstallsById(app.app_id) | numberFormat }}
+                <span class="hidden sm:inline">• Created: {{ app.created_at | formatDate }}</span>
                 •
-                Created: {{ app.created_at | formatDate }}
-                •
-                Updated: {{ app.updated_at | formatDate }}
+                Updated: {{ app.app_live_version.updated_at | formatDate }}
               </p>
             {% endif %}
 
