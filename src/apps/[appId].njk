@@ -74,10 +74,11 @@ eleventyComputed:
             {% endif %}
             {% if installs %}
               <p class="text-gray-600 text-sm mb-2 sm:mb-4">
-                 <a href="#installs" title="See installation history"> {{ installs | findInstallsById(app.app_id) | numberFormat }} installs</a>
-                <span class="hidden sm:inline">• Launched: {{ app.created_at | formatDate }}</span>
-                •
-                Updated: {{ app.app_live_version.updated_at | formatDate }}
+                <a href="#installs" title="See installation history"
+                  >{{ installs | findInstallsById(app.app_id) | numberFormat }} installs</a>, 
+                since {{ app.created_at | formatDate }}.
+
+                <span class="whitespace-nowrap">Updated {{ app.app_live_version.updated_at | formatDate }}.</span>
               </p>
             {% endif %}
 

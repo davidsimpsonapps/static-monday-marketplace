@@ -46,10 +46,7 @@ eleventyComputed:
             {% if vendor.email %}
               <a href="mailto:{{ vendor.email }}" class="text-blue-600 hover:text-blue-800">Support</a>
             {% endif %}
-           <span class="hidden sm:inline">
-            •
-            Since {{ vendor.created_at | formatDate }}
-          </span>
+        
          </p>
 
           <p class="text-gray-600 text-sm my-1">
@@ -64,7 +61,8 @@ eleventyComputed:
               No rating found
             {% endif %}
             •
-            <a href="#installs">{{ vendor.installs | numberFormat }} installs</a>
+            <a href="#installs">{{ vendor.installs | numberFormat }} installs</a>,
+            since {{ vendor.created_at | formatDate }}
           </p>
 
           <!-- Debug output -->
