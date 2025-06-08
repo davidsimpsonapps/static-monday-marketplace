@@ -36,3 +36,24 @@ This thing can be changed and updated, but for now it's provided as is.
 This site is not affiliated with monday.com in any way. 
 
 Please use [monday.com/marketplace/](https://monday.com/marketplace/) instead.
+
+Testing github actions:
+
+1. Install `act`
+   ```
+   brew install act
+   ```
+1. Basic usage:
+   ```
+   # Dry-run (lists workflows without executing)
+   act -l
+
+   # Run a specific workflow
+   act -W .github/workflows/your_workflow.yml
+   ```
+
+Running a particular job:
+
+```
+act -j update-installs  --container-architecture linux/amd64 -W .github/workflows/historic_installs.yml
+```

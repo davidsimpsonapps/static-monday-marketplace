@@ -12,12 +12,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Fetch install data
+      - name: Fetch app install data
         run: |
           curl -s "https://monday-apps-ms.monday.com/apps_ms/public/app_analytics/app_installs" > installs.json
 
 
-      - name: Process and store data
+      - name: Process and store app data
         run: |
           # Create target directory if it doesn't exist
           mkdir -p src/_data/json/installs/apps
@@ -50,6 +50,45 @@ jobs:
             fi
           done
 
+      - name: Fetch vendor install data
+        run: |
+          curl -s 'https://marketplace-ms.monday.com/marketplace_ms/public/marketplace-developers?includeEnrichment=true' > vendors.json
+      
+      - name: Process and store vendor data
+        run: |
+          # Create target directory if it doesn't exist
+          mkdir -p src/_data/json/installs/vendors
+          current_date=$(date +'%Y-%m-%d')
+
+          # Process each app entry from marketplace_developers array
+          jq -c '.marketplace_developers[] | {id: .id, installs: .installs}' vendors.json | while read -r entry; do
+            vendorId=$(echo "$entry" | jq -r '.id')
+            count=$(echo "$entry" | jq -r '.installs')
+            output_file="src/_data/json/installs/vendors/${vendorId}.json"
+
+            if [ -f "$output_file" ]; then
+              # Update existing file (append new entry)
+              jq \
+                --arg date "$current_date" \
+                --arg count "$count" \
+                '.history += [{"date": $date, "count": $count}]' \
+                "$output_file" > tmp.json && mv tmp.json "$output_file"
+            else
+              # Create new file
+              jq -n \
+                --arg vendorId "$vendorId" \
+                --arg date "$current_date" \
+                --arg count "$count" \
+                '{
+                  vendorId: $vendorId,
+                  history: [{
+                    date: $date,
+                    count: $count
+                  }]
+                }' > "$output_file"
+            fi
+          done
+ 
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
