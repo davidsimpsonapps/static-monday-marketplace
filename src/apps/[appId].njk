@@ -75,7 +75,7 @@ eleventyComputed:
             {% if installs %}
               <p class="text-gray-600 text-sm mb-2 sm:mb-4">
                  <a href="#installs" title="See installation history">Installs</a>: {{ installs | findInstallsById(app.app_id) | numberFormat }}
-                <span class="hidden sm:inline">• Created: {{ app.created_at | formatDate }}</span>
+                <span class="hidden sm:inline">• Launched: {{ app.created_at | formatDate }}</span>
                 •
                 Updated: {{ app.app_live_version.updated_at | formatDate }}
               </p>
