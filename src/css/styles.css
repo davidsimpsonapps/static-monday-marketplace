@@ -66,10 +66,10 @@ span[title] svg {
 
 
 .header-wrapper {
-    @apply sticky top-0 shadow-md bg-white z-[100];
+    @apply sticky top-0 shadow-md backdrop-blur-lg z-[100];
 }
 .header-wrapper[data-hostname="localhost"] {
-    @apply bg-sky-100;
+    @apply bg-sky-100 ;
 }
 
 
