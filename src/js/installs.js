@@ -2,12 +2,14 @@
 let chart = null;
 
 // Load data for a specific app
-async function loadAppData(appId) {
+async function loadAppData(url) {
     try {
-        const response = await fetch(`/_data/json/installs/apps/${appId}.json`);
+        const response = await fetch(url);
         return await response.json();
     } catch (error) {
-        console.error(`Failed to load data for app ${appId}:`, error);
+        console.error(`Failed to load data for url ${url}:`, error);
+        const node = document.querySelector('.chart-container');
+        node.innerText = 'No data found.';
         return null;
     }
 }
@@ -73,10 +75,9 @@ function renderChart(appData) {
 
 // Initialize the chart
 async function initChart() {
-    const appId = document.querySelector('[data-app-id]').getAttribute('data-app-id');
-    const data = await loadAppData(appId);
-    
-    console.log('installs.js', {appId, data});
+    const url = document.querySelector('[data-url]').getAttribute('data-url');
+    const data = await loadAppData(url);
+    // console.log('installs.js', { url, data });
     
     if (data) {
         renderChart(data);

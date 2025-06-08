@@ -80,3 +80,7 @@ span[title] svg {
 .card {
     @apply overflow-hidden;
 }
+
+.chart-container {
+    @apply text-sm italic text-gray-600;
+}

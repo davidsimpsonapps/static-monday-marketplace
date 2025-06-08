@@ -64,7 +64,7 @@ eleventyComputed:
               No rating found
             {% endif %}
             •
-            Installs: {{ vendor.installs | numberFormat }}
+            <a href="#installs">{{ vendor.installs | numberFormat }} installs</a>
           </p>
 
           <!-- Debug output -->
@@ -90,6 +90,22 @@ eleventyComputed:
       {{ appCard(app, appRatings, vendors, installs) }}
     {% endfor %}
   </div>
+
+
+  <!-- Install history since 2025-06-07 -->
+  <div class="my-8 border"></div>
+  <div class="mt-8  block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+    <div class="p-8">
+      <h2 id="installs" class="text-lg sm:text-2xl font-semibold mb-4">Installation history</h2>
+      <p class="text-xs text-gray-600">June 9, 2025 onwards only. Collected sometime after 00:00 UTC daily.</p>
+      <div class="chart-container">
+        <div class="h-64">
+          <canvas id="installChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div> 
 <script>
 function toggleDebug() {
@@ -98,3 +114,5 @@ function toggleDebug() {
 }
 </script> 
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" data-url="/_data/json/installs/vendors/{{ vendor.id }}.json" src="/js/installs.js"></script>

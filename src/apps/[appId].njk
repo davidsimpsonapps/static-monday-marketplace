@@ -74,7 +74,7 @@ eleventyComputed:
             {% endif %}
             {% if installs %}
               <p class="text-gray-600 text-sm mb-2 sm:mb-4">
-                 <a href="#installs" title="See installation history">Installs</a>: {{ installs | findInstallsById(app.app_id) | numberFormat }}
+                 <a href="#installs" title="See installation history"> {{ installs | findInstallsById(app.app_id) | numberFormat }} installs</a>
                 <span class="hidden sm:inline">• Launched: {{ app.created_at | formatDate }}</span>
                 •
                 Updated: {{ app.app_live_version.updated_at | formatDate }}
@@ -310,8 +310,10 @@ eleventyComputed:
       <div class="p-8">
         <h2 id="installs" class="text-lg sm:text-2xl font-semibold mb-4">Installation history</h2>
         <p class="text-xs text-gray-600">June 7, 2025 onwards only. Collected sometime after 00:00 UTC daily.</p>
-        <div class="chart-container h-64">
-          <canvas id="installChart"></canvas>
+        <div class="chart-container">
+          <div class="h-64">
+            <canvas id="installChart"></canvas>
+          </div>
         </div>
       </div>
     </div>
@@ -347,4 +349,4 @@ function toggleDebug() {
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script type="module" data-app-id="{{ app.app_id }}" src="/js/installs.js"></script>
+<script type="module" data-url="/_data/json/installs/apps/{{ app.app_id }}.json" src="/js/installs.js"></script>
