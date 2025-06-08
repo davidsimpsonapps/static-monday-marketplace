@@ -23,3 +23,10 @@ navLinks.forEach(link => {
         link.classList.add('font-bold');
     }
 });
+
+
+const headerNode = document.querySelector('.header-wrapper');
+
+if (headerNode) {
+    headerNode.setAttribute('data-hostname', location.hostname);
+}

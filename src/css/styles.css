@@ -14,6 +14,13 @@
 body {
     font-family: var(--font-family);
 }
+.header-wrapper {
+    @apply sticky top-0 shadow-md bg-white;
+}
+.header-wrapper[data-hostname="localhost"] {
+    @apply bg-sky-100;
+}
+
 h1,h2,h3,h4,h5,h6 {
     @apply font-normal;
     font-family: var(--title-font-family);
