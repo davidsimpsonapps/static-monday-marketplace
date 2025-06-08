@@ -25,12 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const totalsBadge = document.querySelector('[data-total]');
     if (totalsBadge) {
-      if (visbleApps.length !== parseInt(totalsBadge.getAttribute('data-total'))) {
+      if (visbleApps.length < parseInt(totalsBadge.getAttribute('data-total'))) {
         totalsBadge.innerHTML = `${visbleApps.length} / ${totalsBadge.getAttribute('data-total')}`;
       } else {
         totalsBadge.innerHTML = totalsBadge.getAttribute('data-total');
       }
     }
-
   });
 }); 
