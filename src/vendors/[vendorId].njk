@@ -64,7 +64,7 @@ eleventyComputed:
               No rating found
             {% endif %}
             •
-            Installs: {{ vendor.installs }}
+            Installs: {{ vendor.installs | numberFormat }}
           </p>
 
           <!-- Debug output -->

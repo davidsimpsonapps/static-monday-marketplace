@@ -27,7 +27,7 @@ module.exports = function(eleventyConfig) {
 
   // Add custom filter to format numbers with commas
   eleventyConfig.addFilter("numberFormat", function(num) {
-    return num.toLocaleString();
+    return parseInt(num).toLocaleString();
   });
 
   // Add custom filter to format dates
