@@ -77,10 +77,15 @@ eleventyComputed:
             {% endif %}
             {% if installs %}
               <p class="text-gray-600 text-sm mb-2 sm:mb-4">
+     
+                
+                {% set appInstalls =  installs | findInstallsById(app.app_id) %}
                 <a href="#installs" title="See installation history"
-                  >{{ installs | findInstallsById(app.app_id) | numberFormat }} installs</a>, 
+                  >{{ appInstalls | numberFormat }} installs</a>,
                 since {{ app.created_at | formatDate }}.
-
+                &nbsp;
+                <span class="whitespace-nowrap">{{ appInstalls | averageInstallsPerMonth(app.created_at)}} installs/month.</span>
+                &nbsp;
                 <span class="whitespace-nowrap">Updated {{ app.app_live_version.updated_at | formatDate }}.</span>
               </p>
             {% endif %}
