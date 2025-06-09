@@ -7,7 +7,8 @@ pagination:
   addAllPagesToCollections: true
 permalink: /vendors/{{ vendor.id }}/
 eleventyComputed:
-  title: "{{vendor.name}}"
+  title: "{{vendor.name}} • Vendors"
+  canonical: "/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}"
 ---
 
 {% from "partials/app-card.njk" import appCard %}

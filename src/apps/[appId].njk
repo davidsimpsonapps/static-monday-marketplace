@@ -7,7 +7,10 @@ pagination:
   addAllPagesToCollections: true
 permalink: /apps/{{ app.id }}/
 eleventyComputed:
-  title: "{{app.name}}"
+  title: "{{app.name | safe}}"
+  description: "{{app.name | safe}} (app for monday.com). {{app.short_description}}."
+  keywords: "{{app.keywords}},app for monday.com"
+  canonical: "/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}"
 ---
 
 {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}

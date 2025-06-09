@@ -1,4 +1,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ title }} • apps for monday.com</title>
+<title>{{ title }} • Apps for monday.com</title>
 <link href="/css/styles.css" rel="stylesheet">
+
+{% if canonical %}<link rel="canonical" href="https://static-monday-marketplace.pages.dev{{ canonical }}" />{% endif %}
+<meta property="og:title" content="{{ title }} | Apps for monday.com">
+{% if description %}<meta name="description" content="{{ description }}">
+<meta property="og:description" content="{{ description }}">{% endif %}
+{% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
+
+
+    
