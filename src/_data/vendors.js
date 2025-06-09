@@ -4,7 +4,7 @@ module.exports = async function() {
   try {
     const response = await fetch('https://marketplace-ms.monday.com/marketplace_ms/public/marketplace-developers?includeEnrichment=true');
     const data = await response.json();
-    return data.marketplace_developers;
+    return data.marketplace_developers.filter(app => app.id !== 1);;
   } catch (error) {
     console.error('Error fetching marketplace vendors:', error);
     return [];
