@@ -30,6 +30,48 @@ module.exports = function(eleventyConfig) {
     return parseInt(num).toLocaleString();
   });
 
+  // Ratings need formatting as some of the data is dirty
+  eleventyConfig.addFilter("formatRating", function(num) {
+    num = parseFloat(num);
+    return num.toFixed(1) < 5 ? num.toFixed(1) : Math.round(num).toString();
+  });
+
+  // Add 
+  eleventyConfig.addFilter("averageInstallsPerMonth", function(installs, startDate) {
+
+
+      const start = new Date(startDate);
+      const end = new Date();
+      
+      // Validate dates
+      if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+          throw new Error('Invalid date input');
+      }
+      
+      // Ensure `installs` is a number
+      const installsCount = parseInt(installs, 10);
+      if (isNaN(installsCount)) {
+          // throw new Error('Installs must be a number');
+          return 0;
+      }
+      
+      // Calculate total months (inclusive)
+      const months = (end.getFullYear() - start.getFullYear()) * 12 + 
+                     (end.getMonth() - start.getMonth()) + 1;
+      
+      // Avoid division by zero
+      if (months <= 0) {
+          return 0;
+      }
+
+      const monthly = installsCount / months;
+      
+      // Return average installs per month
+      return monthly < 1 ? monthly.toFixed(1) : parseInt(monthly).toLocaleString();
+
+  });
+
+
   // Add custom filter to format dates
   eleventyConfig.addFilter("formatDate", function(dateString) {
     if (!dateString) return '';

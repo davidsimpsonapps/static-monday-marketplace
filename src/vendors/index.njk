@@ -59,7 +59,7 @@ title: Vendors
               {% if vendor.ratings %}
                 <span>
                   <span class="text-yellow-500">★</span>
-                  <span class="ml-1">{{ vendor.ratings.rating }}</span>
+                  <span class="ml-1">{{ vendor.ratings.rating | formatRating }}</span>
                   <span class="ml-1">({{ vendor.ratings.count }})</span>
                 </span>
               {% else %}
@@ -72,8 +72,11 @@ title: Vendors
            
               <div class="mt-2">
 
-                {{ vendor.installs | numberFormat }} installs, 
-                since {{ vendor.created_at | formatDate }}.
+                {% set appInstalls =  vendor.installs %}
+                {{ appInstalls | numberFormat }} installs,
+                since {{ vendor.created_at | formatDate }}.<br>
+                {{ appInstalls | averageInstallsPerMonth(vendor.created_at)}} installs/month.
+
               </div>
 
             </div>

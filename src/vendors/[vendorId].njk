@@ -55,15 +55,18 @@ eleventyComputed:
             {% if rating %}
               <span>
                 <span class="text-yellow-500">★</span>
-                <span class="ml-1">{{ rating.rating }}</span>
+                <span class="ml-1">{{ rating.rating | formatRating }}</span>
                 <span class="ml-1">({{ rating.count }})</span>
               </span>
             {% else %}
               No rating found
             {% endif %}
             •
-            <a href="#installs">{{ vendor.installs | numberFormat }} installs</a>,
+            {% set appInstalls =  vendor.installs  %}
+            <a href="#installs">{{ appInstalls | numberFormat }} installs</a>,
             since {{ vendor.created_at | formatDate }}
+            • 
+            {{ appInstalls | averageInstallsPerMonth(vendor.created_at)}} installs/month.
           </p>
 
           <!-- Debug output -->

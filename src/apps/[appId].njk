@@ -70,7 +70,7 @@ eleventyComputed:
               <a href="#reviews" title="See reviews">
                 <div class="flex items-center mt-1 text-gray-400  text-sm">
                   <span class="text-yellow-500 ">★</span>
-                  <span class="ml-1">{{ rating.rating }}</span>
+                  <span class="ml-1">{{ rating.rating | formatRating }}</span>
                   <span class=" ml-1">({{ rating.count }})</span>
                 </div>
               </a>
