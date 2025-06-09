@@ -1,0 +1,16 @@
+---
+permalink: /sitemap.xml
+layout: null
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in collections.all %}
+      <url>        
+        {% if page.data.canonical %}<loc>{{site.url}}{{ page.data.canonical  }}</loc>{% else %}<loc>{{site.url}}{{ page.url | url }}</loc>{% endif %}
+        <lastmod>{{ "" | currentTimestamp }}</lastmod>
+        <changefreq>daily</changefreq>
+      </url>
+  {% endfor %}
+</urlset>
+

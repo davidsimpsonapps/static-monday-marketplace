@@ -3,6 +3,17 @@ const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 
 module.exports = function(eleventyConfig) {
+
+  // Add currentTimestamp filter for sitemap
+  eleventyConfig.addFilter("currentTimestamp", function() {
+    return new Date().toISOString();
+  });
+
+  // Add dateToISO filter for sitemap
+  eleventyConfig.addFilter("dateToISO", function(date) {
+    return new Date(date).toISOString();
+  });
+
   // Add custom filter to find app by ID
   eleventyConfig.addFilter("findAppById", function(apps, id) {
     return apps.find(app => app.id === parseInt(id));
