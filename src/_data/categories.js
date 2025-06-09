@@ -13,7 +13,13 @@ module.exports = async function() {
       //   category.type === 'standard' && 
       //   category.app_type === 'app'
       // )
-      .filter(category => ![12, 15, 10000017, 10000016, 10000004].includes(category.id));
+      .filter(category => ![
+        12, // Views by monday
+        15, // New apps - not correctly populated
+        10000017, // Recently viewed - always empty
+        10000016, // Favorites - always empty 
+        10000004, // Trending this week - 🤷‍♂️
+      ].includes(category.id));
   } catch (error) {
     console.error('Error fetching categories:', error);
     return [];
