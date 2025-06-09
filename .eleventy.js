@@ -245,13 +245,15 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/_data/json");
+  eleventyConfig.addPassthroughCopy("src/d54ac31dd1524dc1934ba92fe211d1c6.txt");
 
   // Watch for changes in these folders
   eleventyConfig.addWatchTarget("src/css");
   eleventyConfig.addWatchTarget("src/images");
   eleventyConfig.addWatchTarget("src/js");
   eleventyConfig.addWatchTarget("src/_data/json");
-
+  eleventyConfig.addWatchTarget("src/d54ac31dd1524dc1934ba92fe211d1c6.txt");
+  
   return {
     dir: {
       input: "src",
