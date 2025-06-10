@@ -16,12 +16,14 @@ jobs:
         run: |
           curl -s "https://monday-apps-ms.monday.com/apps_ms/public/app_analytics/app_installs" > installs.json
 
-
       - name: Process and store app data
         run: |
-          # Create target directory if it doesn't exist
-          mkdir -p src/_data/json/installs/apps
+          # Create target directories if they don't exist
+          mkdir -p src/_data/json/installs/apps/historical
           current_date=$(date +'%Y-%m-%d')
+
+          # Save historical copy of installs.json
+          cp installs.json "src/_data/json/installs/apps/historical/${current_date}.json"
 
           # Process each app entry
           jq -r 'to_entries[] | "\(.key) \(.value)"' installs.json | while read appId count; do
@@ -56,9 +58,12 @@ jobs:
       
       - name: Process and store vendor data
         run: |
-          # Create target directory if it doesn't exist
-          mkdir -p src/_data/json/installs/vendors
+          # Create target directories if they don't exist
+          mkdir -p src/_data/json/installs/vendors/historical
           current_date=$(date +'%Y-%m-%d')
+
+          # Save historical copy of vendors.json
+          cp vendors.json "src/_data/json/installs/vendors/historical/${current_date}.json"
 
           # Process each app entry from marketplace_developers array
           jq -c '.marketplace_developers[] | {id: .id, installs: .installs}' vendors.json | while read -r entry; do
