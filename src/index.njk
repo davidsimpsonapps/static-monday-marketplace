@@ -5,12 +5,10 @@ title: Home
 
 {% from "partials/app-card.njk" import appCard %}
 
-<div class="max-w-7xl mx-auto">
+<div class="mx-auto">
 
-
-
-  <div class="flex gap-3  mb-8">
-    <h1 class="text-xl md:text-3xl">
+  <div class="flex gap-3 mb-4">
+    <h1 class="text-lg md:text-2xl font-semibold">
       Apps
     </h1>
     <span class="sm:my-2">
@@ -22,7 +20,7 @@ title: Home
   
   {% include "partials/search.njk" %}
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
   
     {% set m365 = marketplace | findAppById('10000076') %}
     {{ appCard(m365, ratings, vendors, installs) }}
