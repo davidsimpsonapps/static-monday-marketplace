@@ -31,7 +31,11 @@ function renderChart(appData) {
             borderColor: 'rgba(54, 162, 235, 1)',
             borderWidth: 2,
             tension: 0.1,
-            pointRadius: 4
+            pointRadius: 0,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: 'rgba(54, 162, 235, 1)',
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 2
         }]
     };
     
@@ -45,6 +49,10 @@ function renderChart(appData) {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            interaction: {
+                intersect: false,
+                mode: 'index'
+            },
             scales: {
                 y: {
                     // beginAtZero: true,
@@ -65,7 +73,7 @@ function renderChart(appData) {
                         text: 'Time'
                     },
                     ticks: {
-                        maxTicksLimit: 8,
+                        maxTicksLimit: 6,
                         maxRotation: 45,
                         minRotation: 45
                     }
@@ -77,6 +85,19 @@ function renderChart(appData) {
                         label: (context) => {
                             return `${context.dataset.label}: ${context.parsed.y.toLocaleString()}`;
                         }
+                    }
+                },
+                crosshair: {
+                    line: {
+                        color: '#666',
+                        width: 1,
+                        dashPattern: [5, 5]
+                    },
+                    sync: {
+                        enabled: true
+                    },
+                    zoom: {
+                        enabled: false
                     }
                 }
             }
