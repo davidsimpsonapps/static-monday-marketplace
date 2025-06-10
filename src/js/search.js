@@ -2,7 +2,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('search');
   if (!searchInput) return;
 
-  searchInput.addEventListener('input', function(e) {
+  // Debounce function
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+
+  // Search function
+  function performSearch(e) {
     const searchText = e.target.value.toLowerCase();
     const appCards = document.querySelectorAll('.card');
     
@@ -25,5 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
         totalsBadge.innerHTML = totalsBadge.getAttribute('data-total');
       }
     }
-  });
+  }
+
+  // Debounced search function
+  const debouncedSearch = debounce(performSearch, 500);
+
+  // Add event listener with debounced search
+  searchInput.addEventListener('input', debouncedSearch);
 }); 
