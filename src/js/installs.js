@@ -51,12 +51,23 @@ function renderChart(appData) {
                     title: {
                         display: true,
                         text: 'No. of installs'
+                    },
+                    ticks: {
+                        maxTicksLimit: 4,
+                        callback: function(value) {
+                            return value.toLocaleString();
+                        }
                     }
                 },
                 x: {
                     title: {
                         display: true,
                         text: 'Time'
+                    },
+                    ticks: {
+                        maxTicksLimit: 8,
+                        maxRotation: 45,
+                        minRotation: 45
                     }
                 }
             },
