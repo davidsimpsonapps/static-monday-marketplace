@@ -1,9 +1,23 @@
 {% macro appCard(app, ratings, vendors, installs) %}
     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
 
+    {% set appInstalls = 0 %}
+    {% set montlyInstalls = 0 %}
+    {% if installs %}
+      {% set appInstalls =  installs | findInstallsById(app.app_id) %}
+      {% set montlyInstalls = appInstalls | averageInstallsPerMonth(app.created_at) %}
+    {% endif %}
+    {% if ratings %}
+      {% set rating = ratings | findRatingById(app.app_id) %}
+    {% endif %}
+
       <a 
         href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" 
         class="card block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100"
+        data-installs="{{ appInstalls }}"
+        data-monthly-installs="{{ montlyInstalls }}"
+        data-release-date="{{ app.created_at }}"
+        {% if ratings %}data-rating="{{ rating.rating }}"{% endif %}
       >
         <div class="p-6 flex flex-col h-full">
           <div>
@@ -36,7 +50,6 @@
 
           <div class="mt-auto">
             {% if ratings %}
-              {% set rating = ratings | findRatingById(app.app_id) %}
               {% if rating %}
                 <div class="flex items-center mt-1 text-gray-400 text-sm">
                   <span class="text-yellow-500">★</span>
@@ -48,10 +61,9 @@
 
             {% if installs %}
               <div class="text-gray-400 text-xs md:text-sm my-2 mb-4">      
-                {% set appInstalls =  installs | findInstallsById(app.app_id) %}
                 {{ appInstalls | numberFormat }} installs,
                 since {{ app.created_at | formatDate }}.<br>
-                <span class="whitespace-nowrap">{{ appInstalls | averageInstallsPerMonth(app.created_at)}} installs/month.</span>
+                <span class="whitespace-nowrap">{{ montlyInstalls }} installs/month.</span>
               </div>
             {% endif %}
 
