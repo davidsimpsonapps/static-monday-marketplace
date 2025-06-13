@@ -14,6 +14,7 @@
       <a 
         href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" 
         class="card block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100"
+        data-alpha="{{ app.name }}"
         data-installs="{{ appInstalls }}"
         data-monthly-installs="{{ montlyInstalls }}"
         data-release-date="{{ app.created_at }}"
@@ -40,6 +41,9 @@
                   <span title="Gold"><span class="hidden">Gold</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#FFCB00"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
                 {% elseif vendor.partners_program === 4 %}
                   <span title="Platinum"><span class="hidden">Platinum</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                {% endif %}
+                {% if app.acquisition_source === "Touch" %}
+                <span class="text-lg p-1" title="Acquisition source: {{ app.acquisition_source }}">🤏</span> 
                 {% endif %}
               </p>
               <p class="text-sm sm:text-md text-gray-600">{{ app.short_description }}</p>

@@ -86,3 +86,17 @@ span[title] svg {
 li.toc-list-item {
     @apply p-2 py-1
 }
+
+
+.sorting {
+    @apply -mt-2 mb-6 text-right;
+}
+.sorting button {
+    @apply bg-gray-100 text-gray-600 px-2 py-1 rounded-md text-sm;
+    &:hover {
+        @apply bg-gray-200;
+    }
+    &.active {
+        @apply bg-gray-200;
+    }
+}
