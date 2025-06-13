@@ -11,6 +11,7 @@
 }
 
 
+
 body {
     font-family: var(--font-family);
 }
@@ -29,6 +30,10 @@ p {
     @apply m-0 p-0;
 }
 
+.prose ul,
+.porse li {
+    @apply m-0;
+}
 a {
     @apply text-blue-700 hover:text-blue-900;
 }
@@ -76,4 +81,8 @@ span[title] svg {
 
 .chart-container {
     @apply text-sm italic text-gray-600;
+}
+
+li.toc-list-item {
+    @apply p-2 py-1
 }

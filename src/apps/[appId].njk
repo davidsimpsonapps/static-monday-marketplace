@@ -15,274 +15,270 @@ eleventyComputed:
 
 {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.css">
 
+<div class="sm:mx-auto sm:my-0 overflow-hidden">
+  <div class="flex flex-col lg:flex-row gap-16">
+    <!-- Main content -->
+    <div class="flex-1">
+      <div class="pb-4">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div class="flex flex-col sm:flex-row sm:items-start gap-6">
 
-<div class="-mx-4 -my-8 sm:mx-auto sm:my-0">
-
-  <div class="bg-white sm:rounded-lg shadow-lg overflow-hidden  border border-gray-100">
-    <div class="p-4 py-8 sm:p-8">
-      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-        <div class="flex flex-col sm:flex-row sm:items-start gap-6">
-
-          {% if app.logo_url %}
-            <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" 
-              class="w-12 h-12 rounded-lg mr4">
-          {% endif %}
-          <div>
-            <h1 class="text-xl font-semibold mb-2">{{ app.name }}</h1>
-            <p class="text-gray-600">
-              {% if vendor %}
-                <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" class="text-blue-600 hover:text-blue-800">
-                  {{ vendor.name }}
-                </a>
-
-                {% if vendor.partners_program === 1 %}
-                  <span title="Bronze"><span class="hidden">Bronze</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
-                {% elseif vendor.partners_program === 2 %}
-                  <span title="Silver"><span class="hidden">Silver</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="gray"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
-                {% elseif vendor.partners_program === 3 %}
-                  <span title="Gold"><span class="hidden">Gold</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#FFCB00"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
-                {% elseif vendor.partners_program === 4 %}
-                  <span title="Platinum"><span class="hidden">Platinum</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
-                {% endif %}
-
-                {% if app.badges_data.security === true %}
-                  <span title="Security badge" class="ml-1"><span class="hidden">Security badge</span><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Security badge</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M8.1268,15.3208 C7.8518,15.4264 7.5482,15.4264 7.2732,15.3208 C2.89097361,13.6386115 -0.00112082558,9.42950309 -3.2566432e-07,4.7355 L-3.2566432e-07,1.1836 C-3.2566432e-07,0.869499083 0.124851208,0.56827897 0.347057232,0.346279265 C0.569263257,0.12427956 0.870599218,-0.000291915351 1.1847,-5.11890647e-07 L14.2153,-5.11890647e-07 C14.8691624,-5.11890647e-07 15.3993929,0.529737875 15.4000031,1.1836 L15.4000031,4.7366 C15.4034867,9.43107638 12.5104796,13.6410756 8.1268,15.3208 L8.1268,15.3208 Z" id="Path" fill="#0F9B63" fill-rule="nonzero"></path><polyline stroke="#FFFFFF" stroke-width="1.925" points="4.1382 6.1237 7.0257 9.0112 11.8382 3.7169"></polyline></g></svg></span>
-                {% endif %}
-
-                {% if vendor and vendor.website %}
-                  •
-                  <a title="Vendor's website" href="{{ vendor.website }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
-                    <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
-                    </svg>
+            {% if app.logo_url %}
+              <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" 
+                class="w-12 h-12 rounded-lg mr4">
+            {% endif %}
+            <div>
+              <h1 class="text-xl font-semibold mb-2 no-tocbot">{{ app.name }}</h1>
+              <p class="text-gray-600">
+                {% if vendor %}
+                  <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" class="text-blue-600 hover:text-blue-800">
+                    {{ vendor.name }}
                   </a>
-                {% endif %}
-              {% else %}
-                Unknown Vendor
-              {% endif %}
-            </p>
-            <!--<p class="text-gray-600 mb-4">App IDs: {{ app.id }} • {{app.app_id}}</p>-->
 
-            {% set rating = ratings | findRatingById(app.app_id) %}
-            {% if rating %}
-              <a href="#reviews" title="See reviews">
-                <div class="flex items-center mt-1 text-gray-400  text-sm">
-                  <span class="text-yellow-500 ">★</span>
-                  <span class="ml-1">{{ rating.rating | formatRating }}</span>
-                  <span class=" ml-1">({{ rating.count }})</span>
-                </div>
-              </a>
-            {% endif %}
-            {% if installs %}
-              <p class="text-gray-600 text-sm mb-2 sm:mb-4">
-     
-                
-                {% set appInstalls =  installs | findInstallsById(app.app_id) %}
-                <a href="#installs" title="See installation history"
-                  >{{ appInstalls | numberFormat }} installs</a>,
-                since {{ app.created_at | formatDate }}.
-                &nbsp;
-                <span class="whitespace-nowrap">{{ appInstalls | averageInstallsPerMonth(app.created_at)}} installs/month.</span>
-                &nbsp;
-                <span class="whitespace-nowrap">Updated {{ app.app_live_version.updated_at | formatDate }}.</span>
-              </p>
-            {% endif %}
+                  {% if vendor.partners_program === 1 %}
+                    <span title="Bronze"><span class="hidden">Bronze</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                  {% elseif vendor.partners_program === 2 %}
+                    <span title="Silver"><span class="hidden">Silver</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="gray"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                  {% elseif vendor.partners_program === 3 %}
+                    <span title="Gold"><span class="hidden">Gold</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#FFCB00"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                  {% elseif vendor.partners_program === 4 %}
+                    <span title="Platinum"><span class="hidden">Platinum</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                  {% endif %}
 
+                  {% if app.badges_data.security === true %}
+                    <span title="Security badge" class="ml-1"><span class="hidden">Security badge</span><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Security badge</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M8.1268,15.3208 C7.8518,15.4264 7.5482,15.4264 7.2732,15.3208 C2.89097361,13.6386115 -0.00112082558,9.42950309 -3.2566432e-07,4.7355 L-3.2566432e-07,1.1836 C-3.2566432e-07,0.869499083 0.124851208,0.56827897 0.347057232,0.346279265 C0.569263257,0.12427956 0.870599218,-0.000291915351 1.1847,-5.11890647e-07 L14.2153,-5.11890647e-07 C14.8691624,-5.11890647e-07 15.3993929,0.529737875 15.4000031,1.1836 L15.4000031,4.7366 C15.4034867,9.43107638 12.5104796,13.6410756 8.1268,15.3208 L8.1268,15.3208 Z" id="Path" fill="#0F9B63" fill-rule="nonzero"></path><polyline stroke="#FFFFFF" stroke-width="1.925" points="4.1382 6.1237 7.0257 9.0112 11.8382 3.7169"></polyline></g></svg></span>
+                  {% endif %}
 
-            {% if app | isHostedOnMonday %}
-              <span title="App & logs hosted by monday.com" class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs sm:text-sm mb-4">
-                Hosted by monday.com
-              </span>
-            {% endif %}
-
-            {% if app.pricing_data %}
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs sm:text-sm mb-4">
-                {{ app.pricing_data }}
-              </span>
-            {% endif %}
-            {% if app.acquisition_source %}
-              <span class="opacity-30 inline-block bg-gray-100 text-blue-800 px-3 py-1 rounded-full text-xs sm:text-sm mb-4">
-                {{ app.acquisition_source }}
-              </span>
-            {% endif %}
-            {% if app.marketplace_category_ids and app.marketplace_category_ids.length > 0 %}
-              <div class="flex flex-wrap gap-2 mb-4">
-                {% for categoryId in app.marketplace_category_ids %}
-                  {% set category = categories | findCategoryById(categoryId) %}
-                  {% if category %}
-                    <a href="/categories/{{ category.id }}/" class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs sm:text-sm  hover:bg-gray-200">
-                      {{ category.name }}
+                  {% if vendor and vendor.website %}
+                    •
+                    <a title="Vendor's website" href="{{ vendor.website }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
+                      <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                      </svg>
                     </a>
                   {% endif %}
-                {% endfor %}
-              </div>
-            {% endif %}
-          </div>
-        </div>
-        <div class="flex-shrink-0 lg:self-start">
-          <div class="mb-2 sm:text-right">
-            <a 
-              href="https://auth.monday.com/marketplace_app_from_anywhere?app_id={{ app.id }}" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-white   bg-blue-600 hover:bg-blue-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-              Sign in to install
-            </a>
-          </div>
+                {% else %}
+                  Unknown Vendor
+                {% endif %}
+              </p>
+              <!--<p class="text-gray-600 mb-4">App IDs: {{ app.id }} • {{app.app_id}}</p>-->
 
-          <div class="mb-2 sm:text-right">
-            <a 
-              href="https://auth.monday.com/marketplace/listing/{{ app.id }}" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
-              </svg>
-              View on Marketplace
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {% if app.gallery_assets and app.gallery_assets.length > 0 %}
-      <div class="border-t border-gray-200">
-        <div class="p-8">
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-            {% for asset in app.gallery_assets %}
-              {% if asset.type == 'video' %}
-                <video controls class="rounded-lg shadow-md">
-                  <source src="{{ asset.url}}" />
-                </video>
-              {% else %}
-                <img src="{{ asset.url }}" alt="Gallery image" class="rounded-lg shadow-md">
+              {% set rating = ratings | findRatingById(app.app_id) %}
+              {% if rating %}
+                <a href="#reviews" title="See reviews">
+                  <div class="flex items-center mt-1 text-gray-400  text-sm">
+                    <span class="text-yellow-500 ">★</span>
+                    <span class="ml-1">{{ rating.rating | formatRating }}</span>
+                    <span class=" ml-1">({{ rating.count }})</span>
+                  </div>
+                </a>
               {% endif %}
-            {% endfor %}
+              {% if installs %}
+                <p class="text-gray-600 text-sm mb-2 sm:mb-4">
+         
+                  
+                  {% set appInstalls =  installs | findInstallsById(app.app_id) %}
+                  <a href="#installs" title="See installation history"
+                    >{{ appInstalls | numberFormat }} installs</a>,
+                  since {{ app.created_at | formatDate }}.
+                  &nbsp;
+                  <span class="whitespace-nowrap">{{ appInstalls | averageInstallsPerMonth(app.created_at)}} installs/month.</span>
+                  &nbsp;
+                  <span class="whitespace-nowrap">Updated {{ app.app_live_version.updated_at | formatDate }}.</span>
+                </p>
+              {% endif %}
+
+
+              {% if app | isHostedOnMonday %}
+                <span title="App & logs hosted by monday.com" class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs sm:text-sm mb-4">
+                  Hosted by monday.com
+                </span>
+              {% endif %}
+
+              {% if app.pricing_data %}
+                <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs sm:text-sm mb-4">
+                  {{ app.pricing_data }}
+                </span>
+              {% endif %}
+              {% if app.acquisition_source %}
+                <span class="opacity-30 inline-block bg-gray-100 text-blue-800 px-3 py-1 rounded-full text-xs sm:text-sm mb-4">
+                  {{ app.acquisition_source }}
+                </span>
+              {% endif %}
+              {% if app.marketplace_category_ids and app.marketplace_category_ids.length > 0 %}
+                <div class="flex flex-wrap gap-2 mb-4">
+                  {% for categoryId in app.marketplace_category_ids %}
+                    {% set category = categories | findCategoryById(categoryId) %}
+                    {% if category %}
+                      <a href="/categories/{{ category.id }}/" class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs sm:text-sm  hover:bg-gray-200">
+                        {{ category.name }}
+                      </a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+          <div class="flex-shrink-0 lg:self-start">
+            <div class="mb-2 sm:text-right">
+              <a 
+                href="https://auth.monday.com/marketplace_app_from_anywhere?app_id={{ app.id }}" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-white   bg-blue-600 hover:bg-blue-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Sign in to install
+              </a>
+            </div>
+
+            <div class="mb-2 sm:text-right">
+              <a 
+                href="https://auth.monday.com/marketplace/listing/{{ app.id }}" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                </svg>
+                View on Marketplace
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    {% endif %}
+
+      {% if app.gallery_assets and app.gallery_assets.length > 0 %}
+        
+          <div class="">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+              {% for asset in app.gallery_assets %}
+                {% if asset.type == 'video' %}
+                  <video controls class="rounded-lg shadow-md">
+                    <source src="{{ asset.url}}" />
+                  </video>
+                {% else %}
+                  <img src="{{ asset.url }}" alt="Gallery image" class="rounded-lg shadow-md">
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        
+      {% endif %}
 
 
 
-    <div class="border-t border-gray-200">
-      <div class="p-8">
+      
+      <div class="py-8">
         <h2 class="text-lg sm:text-2xl font-semibold mb-4">{{ app.short_description }}</h2>
         <div class="prose max-w-none">
           {{ app.description | safe }}
         </div>
       </div>
-    </div>
-
-    {% if app.support_contact %}
-      <div class="border-t border-gray-200">
-        <div class="p-8">
-          <h2 class="text-lg sm:text-2xl font-semibold mb-4">Support</h2>
-          <p class="text-gray-600">
-            Contact: <a href="mailto:{{ app.support_contact }}" class="text-blue-600 hover:text-blue-800">{{ app.support_contact }}</a>
-          </p>
-        </div>
-      </div>
-    {% endif %}
-
+      
+      {% if app.support_contact %}
+        
+          <div class="py-8">
+            <h2 class="text-lg sm:text-2xl font-semibold mb-4">Support</h2>
+            <p class="text-gray-600">
+              Contact: <a href="mailto:{{ app.support_contact }}" class="text-blue-600 hover:text-blue-800">{{ app.support_contact }}</a>
+            </p>
+          </div>
+        
+      {% endif %}
 
 
-    {% if complianceQuestions and complianceQuestions.all.length > 0 %}
-      <div class="border-t border-gray-200">
-        <div class="p-8">
-          <h2 class="text-lg sm:text-2xl font-semibold mb-6">Compliance & Security</h2>
 
-          {% if app.compliance_answers and app.compliance_answers | length > 0 %}
+      {% if complianceQuestions and complianceQuestions.all.length > 0 %}
+          <div class="py-8">
+            <h2 class="text-lg sm:text-2xl font-semibold mb-6">Security & Compliance</h2>
 
-            {% for type in ['Security', 'Compliance', 'Data', 'Privacy'] %}
-              {% set typeQuestions = [] %}
-              {% for question in complianceQuestions.all %}
-                {% if question.type == type %}
-                  {% set typeQuestions = typeQuestions | concat([question]) %}
-                {% endif %}
-              {% endfor %}
-              
-              {% if typeQuestions.length > 0 %}
-                <div class="mb-8">
-                  <h3 class="text-xl font-medium mb-4">{{ type }}</h3>
-                  <div class="space-y-4">
-                    {% for question in typeQuestions %}
-                      <div class="bg-gray-50 rounded-lg p-4">
-                        <div class="flex flex-col w-full">
-                          <div class="flex justify-between items-start">
-                            <div class="flex-1">
-                              <p class="font-medium mb-2">{{ question.question }}</p>
-                            </div>
-                            {% if app.compliance_answers %}
-                              {% set answer = null %}
-                              {% for ans in app.compliance_answers %}
-                                {% if ans.questionId === question.id %}
-                                  {% set answer = ans %}
+            {% if app.compliance_answers and app.compliance_answers | length > 0 %}
+
+              {% for type in ['Security', 'Compliance', 'Data', 'Privacy'] %}
+                {% set typeQuestions = [] %}
+                {% for question in complianceQuestions.all %}
+                  {% if question.type == type %}
+                    {% set typeQuestions = typeQuestions | concat([question]) %}
+                  {% endif %}
+                {% endfor %}
+                
+                {% if typeQuestions.length > 0 %}
+                  <div class="mb-8">
+                    <h3 class="text-xl font-medium mb-4">{{ type }}</h3>
+                    <div class="space-y-4">
+                      {% for question in typeQuestions %}
+                        <div class="bg-gray-50 rounded-lg p-4">
+                          <div class="flex flex-col w-full">
+                            <div class="flex justify-between items-start">
+                              <div class="flex-1">
+                                <p class="font-medium mb-2">{{ question.question }}</p>
+                              </div>
+                              {% if app.compliance_answers %}
+                                {% set answer = null %}
+                                {% for ans in app.compliance_answers %}
+                                  {% if ans.questionId === question.id %}
+                                    {% set answer = ans %}
+                                  {% endif %}
+                                {% endfor %}
+                                {% if answer %}
+                                  <div class="ml-4 mt-2 flex items-center">
+                                    {% if answer.shortAnswer === true %}
+                                        <span class="text-green-600 font-medium">Yes</span>
+                                    {% elseif answer.shortAnswer === false %}
+                                        <span class="text-red-600 font-medium">No</span>
+                                    {% else %}
+                                        <span class="text-gray-600">{{ answer.answer }}</span>
+                                    {% endif %}
+
+                                    {% if answer and answer.logHostingProvider %}
+                                      <div class="text-green-600">
+                                        {{ answer.logHostingProvider }}
+                                      </div>
+                                    {% endif %}
+                                    {% if answer and answer.dataHostingProvider %}
+                                      <div class="text-green-600">
+                                        {{ answer.dataHostingProvider }}
+                                      </div>
+                                    {% endif %}
+                                  </div>
+                                {% else %}
+                                  <div class="ml-4 mt-2 text-gray-400">Not answered</div>
                                 {% endif %}
-                              {% endfor %}
-                              {% if answer %}
-                                <div class="ml-4 mt-2 flex items-center">
-                                  {% if answer.shortAnswer === true %}
-                                      <span class="text-green-600 font-medium">Yes</span>
-                                  {% elseif answer.shortAnswer === false %}
-                                      <span class="text-red-600 font-medium">No</span>
-                                  {% else %}
-                                      <span class="text-gray-600">{{ answer.answer }}</span>
-                                  {% endif %}
-
-                                  {% if answer and answer.logHostingProvider %}
-                                    <div class="text-green-600">
-                                      {{ answer.logHostingProvider }}
-                                    </div>
-                                  {% endif %}
-                                  {% if answer and answer.dataHostingProvider %}
-                                    <div class="text-green-600">
-                                      {{ answer.dataHostingProvider }}
-                                    </div>
-                                  {% endif %}
-                                </div>
                               {% else %}
                                 <div class="ml-4 mt-2 text-gray-400">Not answered</div>
                               {% endif %}
-                            {% else %}
-                              <div class="ml-4 mt-2 text-gray-400">Not answered</div>
+                            </div>
+                            {% if answer and answer.detailedAnswer %}
+                              <div class="mt-2 text-gray-600">
+                                {{ answer.detailedAnswer }}
+                              </div>
                             {% endif %}
                           </div>
-                          {% if answer and answer.detailedAnswer %}
-                            <div class="mt-2 text-gray-600">
-                              {{ answer.detailedAnswer }}
-                            </div>
-                          {% endif %}
                         </div>
-                      </div>
-                    {% endfor %}
+                      {% endfor %}
+                    </div>
                   </div>
-                </div>
-              {% endif %}
-            {% endfor %}
+                {% endif %}
+              {% endfor %}
 
-          {% else %}
-            <p>The app developer did not provide the security and compliance information for this app.</p>
-          {% endif %}
-        </div>
-      </div>
-    {% endif %}
+            {% else %}
+              <p>The app developer did not provide the security and compliance information for this app.</p>
+            {% endif %}
+          </div>
+      {% endif %}
 
 
-    <!-- Reviews Section -->
-    <div class="border-t border-gray-200">
-      <div class="p-8 ">
-        <h3 id="reviews" class="text-lg leading-6 font-medium text-gray-900">Reviews</h3>
-      </div>
+      <!-- Reviews Section -->
+      <div class="py-8">
+        <h2 id="reviews" class="text-lg sm:text-2xl leading-6 font-medium text-gray-900">Reviews</h2>
       
         {% set appReviews = reviews[app.app_id] %}
         {% if appReviews and appReviews.length > 0 %}
           
             {% for review in appReviews %}
-              <div class="mx-8 py-4 border-t border-gray-200">
+              <div class="py-4 border-t border-gray-200">
                 <div class="flex items-center mb-2">
                   <div class="flex items-center">
                     {% for i in range(1, 6) %}
@@ -315,48 +311,85 @@ eleventyComputed:
             {% endfor %}
           
         {% else %}
-          <div class="mx-8 py-4">
+          <div class="py-4">
             <p class="text-gray-500">No reviews yet.</p>
           </div>
         {% endif %}
-      
-    </div>
+      </div>
 
 
-    <!-- Install history since 2025-06-07 -->
-    <div class="border-t border-gray-200">
-      <div class="p-8">
-        <h2 id="installs" class="text-lg sm:text-2xl font-semibold mb-4">Installation history</h2>
-        <p class="text-xs text-gray-600">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
-        <div class="chart-container">
-          <div class="h-96">
-            <canvas id="installChart"></canvas>
+      <!-- Install history since 2025-06-07 -->
+        <div class="py-8">
+          <h2 id="installs" class="text-lg sm:text-2xl font-semibold mb-4">Installation history</h2>
+          <p class="text-xs text-gray-600">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
+          <div class="chart-container">
+            <div class="h-96">
+              <canvas id="installChart"></canvas>
+            </div>
           </div>
         </div>
+
+
+      <!-- Debug output -->
+      <div class="border-t border-gray-200 py-8 text-sm text-gray-500">
+
+          <span class="block md:inline md:float-right pb-2">
+          <span>ID: {{app.id}}</span>
+          •
+          <span>App ID: {{app.app_id}}</span>
+          •
+          <span>Listing updated: {{app.updated_at | formatDate }}</span>
+          </span>
+
+          <button onclick="toggleDebug()" class="text-sm text-gray-500 hover:text-gray-700 mb-2">
+            View app data JSON
+          </button>
+          <pre id="debugOutput" class="bg-gray-100 p-4 mb-4 text-sm hidden">{{ app | stringify }}</pre>
       </div>
+    
     </div>
 
-
-    <!-- Debug output -->
-    <div class="border-t border-gray-200">
-      <div class="p-8 text-sm text-gray-500">
-
-        <span class="block md:inline md:float-right pb-2">
-        <span>ID: {{app.id}}</span>
-        •
-        <span>App ID: {{app.app_id}}</span>
-        •
-        <span>Listing updated: {{app.updated_at | formatDate }}</span>
-        </span>
-
-        <button onclick="toggleDebug()" class="text-sm text-gray-500 hover:text-gray-700 mb-2">
-          View app data JSON
-        </button>
-        <pre id="debugOutput" class="bg-gray-100 p-4 mb-4 text-sm hidden">{{ app | stringify }}</pre>
+    <!-- Table of Contents -->
+    <div class="hidden xl:block xl:w-64 flex-shrink-0">
+      <div class="fixed top-28 _overflow-y-auto py-4">
+        <h3 class="text-lg font-semibold mb-4">Table of Contents</h3>
+        <nav class="js-toc"></nav>
       </div>
     </div>
   </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+<script>
+  // Function to generate a valid ID from text
+  function generateId(text) {
+    return text
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric chars with hyphens
+      .replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
+      .replace(/-+/g, '-'); // Replace multiple hyphens with single hyphen
+  }
+
+  // Add IDs to headings that don't have them
+  document.querySelectorAll('h1:not(.no-tocbot), h2:not(.no-tocbot), h3:not(.no-tocbot)').forEach(heading => {
+    if (!heading.id) {
+      heading.id = generateId(heading.textContent);
+    }
+  });
+
+  tocbot.init({
+    tocSelector: '.js-toc',
+    contentSelector: '.flex-1',
+    headingSelector: 'h1:not(.no-tocbot), h2:not(.no-tocbot), h3:not(.no-tocbot)',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollSmoothDuration: 420,
+    scrollSmoothOffset: -120,
+    headingsOffset: 40,
+    collapseDepth: 0,
+    orderedList: false
+  });
+</script>
 
 <script>
 function toggleDebug() {
