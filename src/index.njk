@@ -21,18 +21,15 @@ title: Home
   {% include "partials/search.njk" %}
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+
+    {% set specialApps = ['10000076', '10000574','10000414' ] %}
+    {% for id in specialApps %}
+      {% set app = marketplace | findAppById(id) %}
+      {{ appCard(app, ratings, vendors, installs) }}
+    {% endfor %}
   
-    {% set m365 = marketplace | findAppById('10000076') %}
-    {{ appCard(m365, ratings, vendors, installs) }}
-
-    {% set portal = marketplace | findAppById('10000574') %}
-    {{ appCard(portal, ratings, vendors, installs) }}
-
-    {% set easymails = marketplace | findAppById('10000414') %}
-    {{ appCard(easymails, ratings, vendors, installs) }}
-
-
-    {% for app in marketplace | removeAquisitionSource('monday') | sortByCreatedAt %}
+    {% for app in marketplace | removeAquisitionSource('monday') | removeAppsByIds(specialApps) | sortByCreatedAt %}
       {{ appCard(app, ratings, vendors, installs) }}
     {% endfor %}
   </div>

@@ -97,7 +97,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("removeAquisitionSource", function(apps, source) {
     return apps.filter(app => app.acquisition_source !== source);
   });
-
+  eleventyConfig.addFilter("removeAppsByIds", function(apps, ids) {
+    return apps.filter(app => !ids.includes(app.id.toString()));
+  });
 
   eleventyConfig.addFilter("hostFromUrl", function(url) {
     try {
