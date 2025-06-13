@@ -89,7 +89,7 @@ li.toc-list-item {
 
 
 .sorting {
-    @apply -mt-2 mb-6 text-right;
+    @apply -mt-2 mb-6 text-right leading-8;
 }
 .sorting button {
     @apply bg-gray-100 text-gray-600 px-2 py-1 rounded-md text-sm;

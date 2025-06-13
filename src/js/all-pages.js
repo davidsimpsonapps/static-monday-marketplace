@@ -33,13 +33,7 @@ const init = () => {
             const sortBy = button.getAttribute('data-sort-by');
             const direction = button.getAttribute('data-direction');
             const dataType = button.getAttribute('data-type');
-
-    
-            // TODO: sort app-cards by the attribute sortBy and direction `ASC` or `DESC`
             const appCards = Array.from(document.querySelectorAll('.card'));
-            
-    
-            console.log('clicked', {sortBy, direction, card: appCards[0]});
 
             appCards.sort((a, b) => {
                 let aValue = a.getAttribute(sortBy);
@@ -81,10 +75,6 @@ const init = () => {
     }
 
 }
-
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', init);
