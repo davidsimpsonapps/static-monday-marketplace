@@ -77,4 +77,28 @@ const init = () => {
 }
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollToTopBtn = document.getElementById("scroll-to-top");
+  
+    // Show/hide button based on scroll position
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.remove("opacity-0", "invisible");
+        scrollToTopBtn.classList.add("opacity-100", "visible");
+      } else {
+        scrollToTopBtn.classList.remove("opacity-100", "visible");
+        scrollToTopBtn.classList.add("opacity-0", "invisible");
+      }
+    });
+  
+    // Smooth scroll to top
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  });
+
+
 document.addEventListener('DOMContentLoaded', init);
