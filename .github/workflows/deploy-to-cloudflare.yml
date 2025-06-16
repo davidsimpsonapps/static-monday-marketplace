@@ -19,6 +19,14 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Cache Eleventy image cache
+        uses: actions/cache@v3
+        with:
+          path: .cache/eleventy-img
+          key: ${{ runner.os }}-eleventy-img-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-eleventy-img-
+
       - name: Install dependencies
         run: npm ci
 

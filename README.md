@@ -24,6 +24,7 @@ The  key features behind the site
 - use responsive web design
 - be seo optimised
 - show what can be achieved in a very short period of time
+- Transforming and hosting optimised images for all apps (images are cached for 1 week, so will only be fetched weekly - any chance to an image ca therefore be up to a week behind the proper marketplace)
 
 **Update:** Reviews really slow down the site build, so uncomment the following at the top of `/_data/reviews.js` for quicker development:
 

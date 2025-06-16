@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f3f4f6"/>
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="48" text-anchor="middle" fill="#6b7280">
+    Image Not Found
+  </text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#9ca3af">
+    404
+  </text>
+</svg> 
