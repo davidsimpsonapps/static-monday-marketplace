@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Show/hide button based on scroll position
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 200) {
         scrollToTopBtn.classList.remove("opacity-0", "invisible");
         scrollToTopBtn.classList.add("opacity-100", "visible");
       } else {
