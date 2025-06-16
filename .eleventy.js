@@ -1,7 +1,7 @@
 const postcss = require('postcss');
 const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
-const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+// const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 
 module.exports = function(eleventyConfig) {
@@ -262,73 +262,73 @@ module.exports = function(eleventyConfig) {
 
   
 
-  // Add image transformation plugin
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    // Process files with the following extensions
-    extensions: "html",
+  // // Add image transformation plugin
+  // eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+  //   // Process files with the following extensions
+  //   extensions: "html",
 
-    // Define the output image formats
-    formats: ["avif", "webp", "jpeg", "png"],
+  //   // Define the output image formats
+  //   formats: ["avif", "webp", "jpeg", "png"],
 
-    // optional, output image widths
-    widths: [320, 570, 880, 1024, 1248, "auto"],
+  //   // optional, output image widths
+  //   widths: [320, 570, 880, 1024, 1248, "auto"],
     
-    // Enable caching
-    cacheOptions: {
-      duration: "1w", // Cache for 1 week
-      directory: ".cache/eleventy-img", // Cache directory
-      removeUrlQueryParams: true, // Remove query parameters from cache key
-    },
+  //   // Enable caching
+  //   cacheOptions: {
+  //     duration: "1w", // Cache for 1 week
+  //     directory: ".cache/eleventy-img", // Cache directory
+  //     removeUrlQueryParams: true, // Remove query parameters from cache key
+  //   },
 
-    // Error handling for missing images
-    // Enhanced error handling
+  //   // Error handling for missing images
+  //   // Enhanced error handling
     
 
-    skipOnMissingImage: true, // ← Skips processing if image is missing (instead of throwing an error)
-    fallbackImage: "src/images/404-image.svg", // Optional fallback
+  //   skipOnMissingImage: true, // ← Skips processing if image is missing (instead of throwing an error)
+  //   fallbackImage: "src/images/404-image.svg", // Optional fallback
 
-    failOnError: false,
+  //   failOnError: false,
 
-    // errorOnMissingImage: false, // This should prevent build failures
-    // skipOnMissingImage: true,   // Skip processing if image is missing
-    // fallbackImage: "src/images/404-image.svg", // Ensure this path is correct
+  //   // errorOnMissingImage: false, // This should prevent build failures
+  //   // skipOnMissingImage: true,   // Skip processing if image is missing
+  //   // fallbackImage: "src/images/404-image.svg", // Ensure this path is correct
   
   
-    // Handle failed image fetches gracefully
-    fetchOptions: {
-      throwHttpErrors: false, // Don't throw on 404/500 responses
-      timeout: 5000, // 5 second timeout
-    },
+  //   // Handle failed image fetches gracefully
+  //   fetchOptions: {
+  //     throwHttpErrors: false, // Don't throw on 404/500 responses
+  //     timeout: 5000, // 5 second timeout
+  //   },
 
-    sharpOptions: {
-      withoutEnlargement: true, // Avoid upscaling
-      jpeg: {
-        quality: 75,
-        progressive: true,
-      },
-      png: {
-        compressionLevel: 9,
-        palette: true,
-      },
-      webp: {
-        quality: 75, // Photos
-        lossless: true, // Graphics
-      },
-      avif: {
-        quality: 50, // Photos
-        lossless: true, // Graphics
-        speed: 5,
-      },
-    },
+  //   sharpOptions: {
+  //     withoutEnlargement: true, // Avoid upscaling
+  //     jpeg: {
+  //       quality: 75,
+  //       progressive: true,
+  //     },
+  //     png: {
+  //       compressionLevel: 9,
+  //       palette: true,
+  //     },
+  //     webp: {
+  //       quality: 75, // Photos
+  //       lossless: true, // Graphics
+  //     },
+  //     avif: {
+  //       quality: 50, // Photos
+  //       lossless: true, // Graphics
+  //       speed: 5,
+  //     },
+  //   },
 
-    // Default attributes for <img> elements
-    defaultAttributes: {
-      loading: "lazy",
-      decoding: "async",
-      class: "lazyload", // Enable lazy loading
-      sizes: "(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 100vw", // Responsive sizes
-    },
-  });
+  //   // Default attributes for <img> elements
+  //   defaultAttributes: {
+  //     loading: "lazy",
+  //     decoding: "async",
+  //     class: "lazyload", // Enable lazy loading
+  //     sizes: "(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 100vw", // Responsive sizes
+  //   },
+  // });
   
   return {
     dir: {
