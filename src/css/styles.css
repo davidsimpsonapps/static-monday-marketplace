@@ -100,3 +100,6 @@ li.toc-list-item {
         @apply bg-gray-200;
     }
 }
+.sorting button.selected {
+    @apply bg-gray-300 text-black; 
+}

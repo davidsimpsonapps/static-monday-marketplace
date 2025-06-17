@@ -62,7 +62,10 @@ const init = () => {
                     }
                 }
             });
-            
+
+            sortingButtons.forEach(button => button.classList.remove('selected'));
+            button.classList.add('selected');
+
             const container = appCards[0].parentNode;
             appCards.forEach(card => container.appendChild(card));
         });
@@ -73,7 +76,6 @@ const init = () => {
     if (headerNode) {
         headerNode.setAttribute('data-hostname', location.hostname);
     }
-
 }
 
 
