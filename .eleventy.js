@@ -2,6 +2,11 @@ const postcss = require('postcss');
 const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 // const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+const htmlmin = require("html-minifier-terser");
+
+const { readdir, readFile, writeFile } = require("fs/promises");
+const { join } = require("path");
+const { minify } = require("terser");
 
 
 module.exports = function(eleventyConfig) {
@@ -332,6 +337,43 @@ module.exports = function(eleventyConfig) {
   //   },
   // });
   
+
+
+
+  // Minify HTML for production
+  eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+    // Only minify HTML files
+    if (outputPath && outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+        keepClosingSlash: true,
+      });
+      return minified;
+    }
+    return content;
+  });
+
+  // Minify JS for production
+  eleventyConfig.on("afterBuild", async () => {
+    const inputDir = "_site/js"; // Files have already been copied here
+    const files = await readdir(inputDir);
+
+    for (const file of files) {
+      if (file.endsWith(".js")) {
+        const filePath = join(inputDir, file);
+
+        const code = await readFile(filePath, "utf-8");
+        const minified = await minify(code);
+        console.log(`[dsapps/minify-js] Minified ./${inputDir}/${file}`);
+
+        await writeFile(filePath, minified.code, "utf-8");
+      }
+    }
+  });  
+
   return {
     dir: {
       input: "src",
