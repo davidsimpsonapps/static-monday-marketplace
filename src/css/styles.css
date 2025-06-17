@@ -16,17 +16,15 @@ body {
     font-family: var(--font-family);
 }
 
-#home {
-    @apply flex items-center gap-2 text-xl font-bold mr-2 text-gray-800;
-}
-#home svg {
-    @apply rounded-sm;
-}
+
 
 h1,h2,h3,h4,h5,h6 {
     @apply font-normal;
     font-family: var(--title-font-family);
-    
+}
+
+h2 {
+    @apply mt-10 mb-4 font-bold;
 }
 
 p {
@@ -62,12 +60,6 @@ span[title] svg {
     @apply inline-block;
 }
 
-.github-corner {
-    @apply z-[20];
-    top: 0;
-    right: 0;
-    position: absolute;
-}
 
 
 .header-wrapper {
@@ -76,7 +68,18 @@ span[title] svg {
 .header-wrapper[data-hostname="localhost"] {
     @apply bg-sky-100 ;
 }
+header {
+    nav {
+        @apply order-2 sm:order-1 mt-2 sm:mt-0 md:text-lg sm:mr-2;
+    }
+    #home {
+        @apply order-1 sm:order-2 flex items-center gap-2 text-xl font-bold text-gray-800;
+    }
+    #home svg {
+        @apply rounded-sm;
+    }
 
+}
 
 .add-to-monday {
     max-width: 180px;

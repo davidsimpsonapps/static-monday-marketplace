@@ -3,34 +3,59 @@ layout: base.njk
 title: About this site
 ---
 
-<div class="mx-auto">
+<div class="max-w-screen-md">
 
   
     <h1 class="text-lg md:text-2xl font-semibold">
         About this site
     </h1>
 
+    <h2>What is this website for?</h2>
+
     <p>
         This site is an unofficial listing of apps from the <a href="https://monday.com/marketplace/" rel="nofollow">monday.com marketplace</a> from <a target="_blank" href="https://www.dsapps.dev/">David Simpson Apps</a>.
-   
     </p>
-    <p>         
-        It is <b>not affiliated with monday.com</b> in any way. If you have any concerns about using this site, please just use
-        <a href="https://monday.com/marketplace/" rel="nofollow">monday.com marketplace</a> instead.
-        
+
+    <p>
+        The monday.com marketplace is mainly built using client-side technologies, so is not currently optimised for SEO. 
+        This site started as a demonstration to show how a static HTML marketplace site can be rapidly developed and deployed.
     </p>
 
     <p>The key features behind the site:</p>
 
     <ul>
-        <li>Static HTML with almost no Javascript</li>
-        <li>It loads stupidly fast</li>
-        <li>It uses responsive web design</li>
-        <li>It is SEO optimised</li>
-        <li>It shows what can be achieved in a very short period of time</li>
-        <li>It has a high Lighthouse score</li>
-        <li>It shows historical installation data for apps and vendors</li>
+        <li>Static HTML with almost no client-side JavaScript</li>
+        <li>Stupidly quick load times</li>
+        <li>Responsive web design</li>
+        <li>SEO optimised</li>
+        <li>A high Lighthouse score</li>
+        <li>Historical installation data for apps and vendors</li>
     </ul>
+
+    <h2>Where do you get the data from?</h2>
+    <p>
+        All data on the site is public. It is automatically fetched from various public endpoints. 
+        The list of all apps on the monday.com marketplace is retrieved from the public REST API of monday.com. 
+        If you are interested in the details, please <a target="_blank" href="https://www.dsapps.dev/contact/">reach out to us</a>.
+    </p>
+
+    <h2>How often are the apps on that list refreshed?</h2>
+    <p>
+        The site is rebuilt at least daily. A GitHub action collects the number of installs for each app and each vendor daily sometime between 00:00 and 03:00, 
+        then the site is rebuilt with the new installation data and data for any new apps.
+    </p>
+
+    <h2>Disclaimer</h2>
+
+    <p>         
+        This site is <b>not affiliated with monday.com</b> in any way. If you have any concerns about using this site, please just use
+        <a target="_blank" href="https://monday.com/marketplace/" rel="nofollow">monday.com marketplace</a> instead.
+    </p>
+    
+
+
+    <h2>Credits</h2>
+    <p>Historical installation data was supplied by Bartosz.</p>
 
 
     <p>                 
