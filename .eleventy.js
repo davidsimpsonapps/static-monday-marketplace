@@ -235,12 +235,14 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
     outputFileExtension: "css",
-    compile: async function(inputContent) {
+    compile: async function(inputContent, inputPath) {
       return async () => {
         let output = await postcss([
           tailwindcss,
           autoprefixer
-        ]).process(inputContent);
+        ]).process(inputContent, {
+          from: inputPath
+        });
         return output.css;
       };
     }
