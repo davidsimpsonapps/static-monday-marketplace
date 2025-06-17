@@ -10,15 +10,26 @@ title: About this site
         About this site
     </h1>
 
+
+    <h2>Disclaimer</h2>
+
+    <p>         
+        This site is <b>not affiliated with monday.com</b> in any way. If you have any concerns about using this site, please just use
+        <a target="_blank" href="https://monday.com/marketplace/" rel="nofollow">monday.com marketplace</a> instead.
+    </p>
+    
+
     <h2>What is this website for?</h2>
 
     <p>
-        This site is an unofficial listing of apps from the <a href="https://monday.com/marketplace/" rel="nofollow">monday.com marketplace</a> from <a target="_blank" href="https://www.dsapps.dev/">David Simpson Apps</a>.
+        This site is an unofficial listing of apps from the <a href="https://monday.com/marketplace/" rel="nofollow">monday.com marketplace</a> 
+        from <a target="_blank" href="https://www.dsapps.dev/">David Simpson Apps</a>.
     </p>
 
     <p>
         The monday.com marketplace is mainly built using client-side technologies, so is not currently optimised for SEO. 
-        This site started as a demonstration to show how a static HTML marketplace site can be rapidly developed and deployed.
+        Additionally, the mobile version is different and does not render vendor pages at all.
+        This site started as a demonstration to show how a responsively designed, static HTML marketplace site can be rapidly developed and deployed.
     </p>
 
     <p>The key features behind the site:</p>
@@ -29,8 +40,12 @@ title: About this site
         <li>Responsive web design</li>
         <li>SEO optimised</li>
         <li>A high Lighthouse score</li>
+        <li>A list of all apps on a single page</li>
+        <li>A list of all vendors on a single page</li>
+        <li>All data for each app rendered in a single page with no data hidden in a tabbed or accordion-based interface</li>
         <li>Historical installation data for apps and vendors</li>
     </ul>
+
 
     <h2>Where do you get the data from?</h2>
     <p>
@@ -39,26 +54,35 @@ title: About this site
         If you are interested in the details, please <a target="_blank" href="https://www.dsapps.dev/contact/">reach out to us</a>.
     </p>
 
-    <h2>How often are the apps on that list refreshed?</h2>
+    <h2>How often is the data on the site refreshed?</h2>
     <p>
         The site is rebuilt at least daily. A GitHub action collects the number of installs for each app and each vendor daily sometime between 00:00 and 03:00, 
         then the site is rebuilt with the new installation data and data for any new apps.
     </p>
 
-    <h2>Disclaimer</h2>
 
-    <p>         
-        This site is <b>not affiliated with monday.com</b> in any way. If you have any concerns about using this site, please just use
-        <a target="_blank" href="https://monday.com/marketplace/" rel="nofollow">monday.com marketplace</a> instead.
+    <h2>Technologies used</h2>
+
+    <p>
+        This site uses 
+        <a target="_blank" href="https://www.11ty.dev/">Eleventy, a simpler static site generator</a> and
+        <a target="_blank" href="https://tailwindcss.com/">tailwindcss</a>.
+        
+        It is built using 
+        <a target="_blank" href="https://github.com/davidsimpsonapps/static-monday-marketplace/actions">GitHub Actions</a>
+        and hosted by 
+        <a target="_blank" href="https://pages.cloudflare.com/">CloudFlare Pages</a>.
     </p>
-    
+
+
+    <p>                 
+        If you're interested in how it is built, the source code is hosted on <a target="_blank" href="https://github.com/davidsimpsonapps/static-monday-marketplace" aria-label="View source on GitHub">GitHub</a>.
+    </p>
+
 
 
     <h2>Credits</h2>
     <p>Historical installation data was supplied by Bartosz.</p>
 
 
-    <p>                 
-        If you're interested in how it is built, the source code is hosted on <a target="_blank" href="https://github.com/davidsimpsonapps/static-monday-marketplace" aria-label="View source on GitHub">GitHub</a>.
-    </p>
 </div>
