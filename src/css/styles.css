@@ -16,6 +16,13 @@ body {
     font-family: var(--font-family);
 }
 
+#home {
+    @apply flex items-center gap-2 text-xl font-bold mr-2 text-gray-800;
+}
+#home svg {
+    @apply rounded-sm;
+}
+
 h1,h2,h3,h4,h5,h6 {
     @apply font-normal;
     font-family: var(--title-font-family);
@@ -64,7 +71,7 @@ span[title] svg {
 
 
 .header-wrapper {
-    @apply sticky top-0 shadow-md backdrop-blur-lg z-[100];
+    @apply sticky top-0 shadow-sm backdrop-blur-lg z-[100];
 }
 .header-wrapper[data-hostname="localhost"] {
     @apply bg-sky-100 ;
@@ -85,6 +92,10 @@ span[title] svg {
 
 li.toc-list-item {
     @apply p-2 py-1
+}
+
+ul {
+    @apply list-disc pl-4;
 }
 
 
