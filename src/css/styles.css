@@ -92,6 +92,9 @@ header {
 .chart-container {
     @apply text-sm italic text-gray-600;
 }
+.chart-container + .chart-container {
+    @apply mt-10;
+}
 
 li.toc-list-item {
     @apply p-2 py-1
