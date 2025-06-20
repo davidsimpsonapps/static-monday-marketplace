@@ -99,6 +99,12 @@ header {
 li.toc-list-item {
     @apply p-2 py-1
 }
+.toc-link::before {
+    max-height: 60px;
+}
+li.toc-list-item .is-active-link::before {
+    @apply bg-blue-500;
+}
 
 ul {
     @apply list-disc pl-4;
