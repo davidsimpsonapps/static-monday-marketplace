@@ -158,14 +158,17 @@ eleventyComputed:
         
           <div class="">
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+              
               {% for asset in app.gallery_assets %}
-                {% if asset.type == 'video' %}
-                  <video controls class="rounded-lg shadow-md">
-                    <source src="{{ asset.url}}" />
-                  </video>
-                {% else %}
-                  <img src="{{ asset.url }}" alt="Gallery image" class="rounded-lg shadow-md">
-                {% endif %}
+                <a data-fslightbox href="{{ asset.url}}">
+                  {% if asset.type == 'video' %}
+                    <video controls class="rounded-lg shadow-md">
+                      <source src="{{ asset.url}}" />
+                    </video>
+                  {% else %}
+                    <img src="{{ asset.url }}" alt="Gallery image" class="rounded-lg shadow-md">
+                  {% endif %}
+                </a>
               {% endfor %}
             </div>
           </div>
@@ -418,3 +421,5 @@ function toggleDebug() {
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="module" data-url="/_data/json/installs/apps/{{ app.app_id }}.json" src="/js/installs.js?_={{ '' | dailyTimestamp }}"></script>
+
+<script src="/js/fslightbox-basic-3.6.1/fslightbox.js"></script>
