@@ -10,7 +10,7 @@ const defaultScales = {
     y: {
         // beginAtZero: true,
         title: {
-            display: true,
+            display: false,
             text: 'No. of installs'
         },
         ticks: {
@@ -150,62 +150,7 @@ function renderWeeklyChart(appData) {
                 pointHoverBorderWidth: 2
             }]
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            interaction: {
-                intersect: false,
-                mode: 'index'
-            },
-            scales: {
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Weekly installs Δ'
-                    },
-                    ticks: {
-                        maxTicksLimit: 4,
-                        callback: function(value) {
-                            return value == null ? '' : value.toLocaleString();
-                        }
-                    }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Time'
-                    },
-                    ticks: {
-                        maxTicksLimit: 6,
-                        maxRotation: 45,
-                        minRotation: 45
-                    }
-                }
-            },
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        label: (context) => {
-                            if (context.parsed.y == null) return 'Not enough data';
-                            return `${context.dataset.label}: ${context.parsed.y.toLocaleString()}`;
-                        }
-                    }
-                },
-                crosshair: {
-                    line: {
-                        color: '#666',
-                        width: 1,
-                        dashPattern: [5, 5]
-                    },
-                    sync: {
-                        enabled: true
-                    },
-                    zoom: {
-                        enabled: false
-                    }
-                }
-            }
-        }
+        options: defaultOptions
     });
 }
 

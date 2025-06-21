@@ -3,7 +3,7 @@
 # Process historical rating data and build per-app history files
 
 # Set the start date
-start_date="2024-12-28"
+start_date="2025-06-21"
 current_date=$(date -u +"%Y-%m-%d")  # Get current date in UTC
 
 # Historical data directory
