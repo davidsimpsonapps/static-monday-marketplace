@@ -114,6 +114,7 @@ ul {
 .sorting {
     @apply -mt-2 mb-6 text-right leading-8;
 }
+.apps-menu a,
 .sorting button {
     @apply bg-gray-100 text-gray-600 px-2 py-1 rounded-md text-sm;
     &:hover {
@@ -123,6 +124,7 @@ ul {
         @apply bg-gray-200;
     }
 }
+.apps-menu a.selected,
 .sorting button.selected {
     @apply bg-gray-300 text-black; 
 }

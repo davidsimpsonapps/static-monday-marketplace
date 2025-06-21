@@ -7,20 +7,26 @@ title: Home
 
 <div class="mx-auto">
 
-  <div class="flex gap-3 mb-2">
-    <h1 class="text-lg md:text-2xl font-semibold">
-      Apps
-    </h1>
-    <span>
-      <span data-total="{{ marketplace.length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
-        {{ marketplace.length }}
+  <div class="flex gap-3 mb-2 items-center justify-between">
+    <div class="flex gap-3 items-center">
+      <h1 class="text-lg md:text-2xl font-semibold">
+        Apps
+      </h1>
+      <span>
+        <span data-total="{{ marketplace.length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
+          {{ marketplace.length }}
+        </span>
       </span>
+    </div>
+    <span class="apps-menu">
+      <a href="/" class="selected">Listings</a>
+      <a href="/installs">Installs</a>
     </span>
   </div>
 
   <p class="py-4">
     This website lists all <a target="_blank" href="https://monday.com/marketplace/">monday.com marketplace</a> 
-    apps in one list. Search for specific apps below.
+    apps on one page. Search for specific apps below.
   </p>
   
   {% include "partials/search.njk" %}
