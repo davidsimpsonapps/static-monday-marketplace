@@ -87,7 +87,7 @@ module.exports = function(eleventyConfig) {
       const monthly = installsCount / months;
       
       // Return average installs per month
-      return monthly < 1 ? monthly.toFixed(1) : parseInt(monthly).toLocaleString();
+      return monthly < 1 ? monthly.toFixed(1) : parseInt(monthly); //.toLocaleString();
 
   });
 

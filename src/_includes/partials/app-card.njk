@@ -71,7 +71,7 @@
               <div class="text-gray-400 text-xs md:text-sm my-2 mb-4">      
                 {{ appInstalls | numberFormat }} installs,
                 since {{ app.created_at | formatDate }}.<br>
-                <span class="whitespace-nowrap">{{ montlyInstalls }} installs/month.</span>
+                <span class="whitespace-nowrap">{{ montlyInstalls | numberFormat }} installs/month.</span>
               </div>
             {% endif %}
 

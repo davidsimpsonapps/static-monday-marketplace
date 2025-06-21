@@ -23,25 +23,31 @@ title: Vendors
 
 
   {% include "partials/search.njk" %}
+  {% include "partials/sorting.njk" %}
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
 
 
     {% for vendor in vendors | sortVendorsByInstalls %}
+        {% set appInstalls =  vendor.installs %}
+        {% set monthlyInstalls = appInstalls | averageInstallsPerMonth(vendor.created_at) %}
       
         <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" 
-          class="card block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
+          class="card block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+          
+          data-alpha="{{ vendor.name | trim }}"
+          data-installs="{{ appInstalls }}"
+          data-monthly-installs="{{ monthlyInstalls }}"
+          data-release-date="{{ vendor.created_at }}"
+          {% if vendor.ratings %}data-rating="{{ vendor.ratings.rating }}"{% endif %}
+          >
           <div class="p-6">
             {% if vendor.logo_url %}
               <img src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg">
             {% endif %}
-            <h2 class="text-xl font-semibold mt-4 mb-2">{{ vendor.name }}</h2>
-            
-      
-
-            
-            <p class="text-gray-600 text-sm mb-4">
+            <h2 class="text-xl font-semibold mt-4 mb-2">
+              {{ vendor.name }}
               {% if vendor.partners_program === 1 %}
                 <span data-toggle="tooltip" title="Bronze Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
               {% elseif vendor.partners_program === 2 %}
@@ -50,14 +56,16 @@ title: Vendors
                 <span data-toggle="tooltip" title="Gold Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#FFCB00"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
               {% elseif vendor.partners_program === 4 %}
                 <span data-toggle="tooltip" title="Platinum Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
-              {% endif %}
-
+              {% endif %}            
+            </h2>
+            
+            
+            <p class="text-gray-600 text-sm mb-4">
               {% if vendor.website %}
                   {{ vendor.website | hostFromUrl }}
               {% endif %}
             </p>
 
-            
 
             <div class="text-sm text-gray-500">
               {% if vendor.ratings %}
@@ -76,10 +84,9 @@ title: Vendors
            
               <div class="mt-2">
 
-                {% set appInstalls =  vendor.installs %}
                 {{ appInstalls | numberFormat }} installs,
                 since {{ vendor.created_at | formatDate }}.<br>
-                {{ appInstalls | averageInstallsPerMonth(vendor.created_at)}} installs/month.
+                {{ monthlyInstalls | numberFormat }} installs/month.
 
               </div>
 

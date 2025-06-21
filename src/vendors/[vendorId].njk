@@ -67,7 +67,7 @@ eleventyComputed:
             <a href="#installs">{{ appInstalls | numberFormat }} installs</a>,
             since {{ vendor.created_at | formatDate }}
             • 
-            {{ appInstalls | averageInstallsPerMonth(vendor.created_at)}} installs/month.
+            {{ appInstalls | averageInstallsPerMonth(vendor.created_at) | numberFormat }} installs/month.
           </p>
 
           <!-- Debug output -->
