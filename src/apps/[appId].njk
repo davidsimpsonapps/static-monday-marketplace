@@ -330,28 +330,46 @@ eleventyComputed:
 
 
       <!-- Install history since 2025-06-07 -->
-        <div class="py-8">
-          <h2 id="installs" class="text-lg sm:text-2xl font-semibold mb-4">Installation history</h2>
-          <p class="text-xs text-gray-600">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
+      <div class="py-8">
+        <h2 id="installs" class="text-lg sm:text-2xl font-semibold mb-4">Installation history</h2>
+        <p class="text-xs text-gray-600">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
+        <div class="chart-container">
+          <div class="h-96">
+            <canvas id="installChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-container">
+          <p class="text-xs text-gray-600">This compares the number of installs on one date with 7 days previously:</p>        
+          <div class="h-96">
+            <canvas id="weeklyInstallChart"></canvas>
+          </div>
+        </div> 
+
+        <div class="chart-container">
+          <p class="text-xs text-gray-600">This compares the number of installs on one date with 30 days previously:</p>
+          <div class="h-96">
+            <canvas id="monthlyInstallChart"></canvas>
+          </div>
+        </div>          
+      </div>
+
+      <!-- Ratings history since 2025-06-07 -->
+      <div class="py-8">
+        <h2 id="ratings" class="text-lg sm:text-2xl font-semibold mb-4">Ratings history</h2>
+
+        <div id="ratings-body">
           <div class="chart-container">
             <div class="h-96">
-              <canvas id="installChart"></canvas>
+              <canvas id="ratingsRatingChart"></canvas>
             </div>
           </div>
-          <div class="chart-container">
-            <p class="text-xs text-gray-600">This compares the number of installs on one date with 7 days previously:</p>        
+          <div class="chart-container">      
             <div class="h-96">
-              <canvas id="weeklyInstallChart"></canvas>
+              <canvas id="ratingsCountChart"></canvas>
             </div>
           </div> 
-
-          <div class="chart-container">
-            <p class="text-xs text-gray-600">This compares the number of installs on one date with 30 days previously:</p>
-            <div class="h-96">
-              <canvas id="monthlyInstallChart"></canvas>
-            </div>
-          </div>          </div>
-
+        </div> 
+      </div>
 
       <!-- Debug output -->
       <div class="border-t border-gray-200 py-8 text-sm text-gray-500">
@@ -423,6 +441,9 @@ function toggleDebug() {
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script type="module" data-url="/_data/json/installs/apps/{{ app.app_id }}.json" src="/js/installs.js?_={{ '' | dailyTimestamp }}"></script>
+<script type="module"
+ data-installs-url="/_data/json/installs/apps/{{ app.app_id }}.json" 
+ data-ratings-url="/_data/json/ratings/apps/{{ app.app_id }}.json" 
+ src="/js/historical-data.js?_={{ '' | dailyTimestamp }}"></script>
 
 <script src="/js/fslightbox-basic-3.6.1/fslightbox.js"></script>

@@ -2,15 +2,78 @@
 let chart = null;
 let weeklyChart = null;
 let monthlyChart = null;
+let ratingsRatingChart = null;
+let ratingsCountChart = null;
+
+
+const defaultScales = {
+    y: {
+        // beginAtZero: true,
+        title: {
+            display: true,
+            text: 'No. of installs'
+        },
+        ticks: {
+            maxTicksLimit: 4,
+            callback: function(value) {
+                return value.toLocaleString();
+            }
+        }
+    },
+    x: {
+        title: {
+            display: true,
+            text: 'Time'
+        },
+        ticks: {
+            maxTicksLimit: 6,
+            maxRotation: 45,
+            minRotation: 45
+        }
+    }
+};
+
+const defaultOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+        intersect: false,
+        mode: 'index'
+    },
+    scales: defaultScales,
+    plugins: {
+        tooltip: {
+            callbacks: {
+                label: (context) => {
+                    if (context.parsed.y == null) return 'Not enough data';
+                    return `${context.dataset.label}: ${context.parsed.y.toLocaleString()}`;
+                }
+            }
+        },
+        crosshair: {
+            line: {
+                color: '#666',
+                width: 1,
+                dashPattern: [5, 5]
+            },
+            sync: {
+                enabled: true
+            },
+            zoom: {
+                enabled: false
+            }
+        }
+    }
+}
 
 // Load data for a specific app
-async function loadAppData(url) {
+async function loadAppData(url, selector) {
     try {
         const response = await fetch(url);
         return await response.json();
     } catch (error) {
         console.error(`Failed to load data for url ${url}:`, error);
-        const node = document.querySelector('.chart-container');
+        const node = document.querySelector(selector);
         node.innerText = 'No data found.';
         return null;
     }
@@ -31,6 +94,7 @@ function renderChart(appData) {
             data: sortedHistory.map(item => parseInt(item.count)),
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
             borderColor: 'rgba(54, 162, 235, 1)',
+
             borderWidth: 2,
             tension: 0.1,
             pointRadius: 0,
@@ -48,62 +112,7 @@ function renderChart(appData) {
     chart = new Chart(ctx, {
         type: 'line',
         data: chartData,
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            interaction: {
-                intersect: false,
-                mode: 'index'
-            },
-            scales: {
-                y: {
-                    // beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'No. of installs'
-                    },
-                    ticks: {
-                        maxTicksLimit: 4,
-                        callback: function(value) {
-                            return value.toLocaleString();
-                        }
-                    }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Time'
-                    },
-                    ticks: {
-                        maxTicksLimit: 6,
-                        maxRotation: 45,
-                        minRotation: 45
-                    }
-                }
-            },
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        label: (context) => {
-                            return `${context.dataset.label}: ${context.parsed.y.toLocaleString()}`;
-                        }
-                    }
-                },
-                crosshair: {
-                    line: {
-                        color: '#666',
-                        width: 1,
-                        dashPattern: [5, 5]
-                    },
-                    sync: {
-                        enabled: true
-                    },
-                    zoom: {
-                        enabled: false
-                    }
-                }
-            }
-        }
+        options: defaultOptions
     });
 }
 
@@ -232,79 +241,105 @@ function renderMonthlyChart(appData) {
                 pointHoverBorderWidth: 2
             }]
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            interaction: {
-                intersect: false,
-                mode: 'index'
-            },
-            scales: {
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Monthly installs Δ'
-                    },
-                    ticks: {
-                        maxTicksLimit: 4,
-                        callback: function(value) {
-                            return value == null ? '' : value.toLocaleString();
-                        }
-                    }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Time'
-                    },
-                    ticks: {
-                        maxTicksLimit: 6,
-                        maxRotation: 45,
-                        minRotation: 45
-                    }
-                }
-            },
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        label: (context) => {
-                            if (context.parsed.y == null) return 'Not enough data';
-                            return `${context.dataset.label}: ${context.parsed.y.toLocaleString()}`;
-                        }
-                    }
-                },
-                crosshair: {
-                    line: {
-                        color: '#666',
-                        width: 1,
-                        dashPattern: [5, 5]
-                    },
-                    sync: {
-                        enabled: true
-                    },
-                    zoom: {
-                        enabled: false
-                    }
-                }
-            }
-        }
+        options: defaultOptions
     });
 }
 
+function renderRatingsChart(ratingsData) {
+    // Only proceed if ratingsData is valid and has a history array
+    if (ratingsData && Array.isArray(ratingsData.history)) {
+        // Sort history by date ascending
+        const sortedRatings = [...ratingsData.history].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+        // Prepare data for average rating chart
+        const ratingLabels = sortedRatings.map(item => item.date);
+        const ratingAverages = sortedRatings.map(item => item.rating ? parseFloat(item.rating) : null);
+        
+
+        // Prepare data for ratings count chart
+        const ratingCounts = sortedRatings.map(item => item.count ? parseInt(item.count) : 0);
+
+        // Render ratings average chart
+        const ratingChartCtx = document.getElementById('ratingsRatingChart').getContext('2d');
+
+
+
+        if (ratingsRatingChart) ratingsRatingChart.destroy();
+    
+        // Create new chart
+        ratingsRatingChart = new Chart(ratingChartCtx, {
+            type: 'line',
+            data: {
+                labels: ratingLabels,
+                datasets: [{
+                    label: 'Average rating',
+                    data: ratingAverages,
+                    backgroundColor: 'rgba(255, 205, 86, 0.2)',
+                    borderColor: 'rgba(255, 205, 86, 1)',
+                    borderWidth: 2,
+                    tension: 0.1,
+                    pointRadius: 0,
+                    pointHoverRadius: 6,
+                    pointHoverBackgroundColor: 'rgba(255, 205, 86, 1)',
+                    pointHoverBorderColor: '#fff',
+                    pointHoverBorderWidth: 2
+                }]
+            },
+            options: defaultOptions
+        });
+
+        // Render ratings count chart
+        const countChartCtx = document.getElementById('ratingsCountChart').getContext('2d');
+        if (ratingsCountChart) ratingsCountChart.destroy();
+    
+        // Create new chart
+        ratingsCountChart = new Chart(countChartCtx, {
+            type: 'line',
+            data: {
+                labels: ratingLabels,
+                datasets: [{
+                    label: 'Number of ratings',
+                    data: ratingCounts,
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 2,
+                    tension: 0.1,
+                    pointRadius: 0,
+                    pointHoverRadius: 6,
+                    pointHoverBackgroundColor: 'rgba(153, 102, 255, 1)',
+                    pointHoverBorderColor: '#fff',
+                    pointHoverBorderWidth: 2
+                }]
+            },
+            options: defaultOptions
+        });
+    }
+}
+
+
 // Initialize the charts
 async function initChart() {
-    const url = document.querySelector('[data-url]').getAttribute('data-url');
-    const data = await loadAppData(url);
-    // console.log('installs.js', { url, data });
-    
-    if (data) {
-        renderChart(data);
-        if (document.getElementById('weeklyInstallChart')) {
-            renderWeeklyChart(data);
+    const url = document.querySelector('[data-installs-url]').getAttribute('data-installs-url');
+    if (url) {
+        const data = await loadAppData(url, '.chart-container:first');
+        // console.log('installs.js', { url, data });
+        
+        if (data) {
+            renderChart(data);
+            if (document.getElementById('weeklyInstallChart')) {
+                renderWeeklyChart(data);
+            }
+            if (document.getElementById('monthlyInstallChart')) {
+                renderMonthlyChart(data);
+            }
         }
-        if (document.getElementById('monthlyInstallChart')) {
-            renderMonthlyChart(data);
-        }
+    }
+
+    const ratingsUrl = document.querySelector('[data-ratings-url]').getAttribute('data-ratings-url');
+    if (ratingsUrl) {
+        const ratingsData = await loadAppData(ratingsUrl, '.chart-container:last');
+        console.log('ratingsData', ratingsData);
+        renderRatingsChart(ratingsData);
     }
 }
 

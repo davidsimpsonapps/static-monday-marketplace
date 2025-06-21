@@ -93,11 +93,54 @@ jobs:
                 }' > "$output_file"
             fi
           done
- 
+
+      - name: Fetch app ratings data
+        run: |
+          curl -s "https://marketplace-ms.monday.com/marketplace_ms/public/analytics/app_ratings" > ratings.json      
+
+      - name: Process and store app ratings data
+        run: |
+          # Create target directories if they don't exist
+          mkdir -p src/_data/json/ratings/apps/historical
+          current_date=$(date +'%Y-%m-%d')
+
+          # Save historical copy of ratings.json
+          cp ratings.json "src/_data/json/ratings/apps/historical/${current_date}.json"
+
+          # Process each app entry
+          jq -r 'to_entries[] | "\(.key) \(.value)"' d.json | while read appId rating count; do
+            output_file="src/_data/json/ratings/apps/${appId}.json"
+
+            if [ -f "$output_file" ]; then
+              # Update existing file (append new entry)
+              jq \
+                --arg date "$current_date" \
+                --arg count "$count" \
+                --arg rating "$rating" \
+                '.history += [{"date": $date, "count": $count, "rating": $rating}]' \
+                "$output_file" > tmp.json && mv tmp.json "$output_file"
+            else
+              # Create new file
+              jq -n \
+                --arg appId "$appId" \
+                --arg date "$current_date" \
+                --arg count "$count" \
+                --arg rating "$rating" \
+                '{
+                  appId: $appId,
+                  history: [{
+                    date: $date,
+                    count: $count,
+                    rating: $rating
+                  }]
+                }' > "$output_file"
+            fi
+          done
+
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add src/_data/json/installs/
+          git add src/_data/json/
           git commit -m "Auto-update install data - $(date +'%Y-%m-%d %H:%M')"
           git push
