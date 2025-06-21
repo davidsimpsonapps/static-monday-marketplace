@@ -11,7 +11,6 @@ const defaultScales = {
         // beginAtZero: true,
         title: {
             display: false,
-            text: 'No. of installs'
         },
         ticks: {
             maxTicksLimit: 4,
@@ -22,8 +21,7 @@ const defaultScales = {
     },
     x: {
         title: {
-            display: true,
-            text: 'Time'
+            display: false,
         },
         ticks: {
             maxTicksLimit: 6,
