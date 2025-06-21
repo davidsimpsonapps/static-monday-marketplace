@@ -18,6 +18,12 @@ const emboldenNavLinks = () => {
         } else if (matchType === 'include') {
             // For include matches, the current path must start with the link path
             isMatch = currentPath.startsWith(linkPath);
+        } else if  (matchType === 'csv') {
+
+            const csv = link.getAttribute('data-csv');
+            const matches = csv.split(',')
+            isMatch = matches.includes(currentPath)
+
         }
         
         if (isMatch) {
