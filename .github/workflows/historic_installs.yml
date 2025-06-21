@@ -52,6 +52,31 @@ jobs:
             fi
           done
 
+          # Create/update the all-app-installs.json file
+          total_count=$(jq '[.[] | tonumber] | add' installs.json)
+          
+          if [ -f "src/_data/json/installs/all-app-installs.json" ]; then
+            # Update existing file
+            jq \
+              --arg date "$current_date" \
+              --argjson count "$total_count" \
+              '.history += [{"date": $date, "count": $count|tostring}]' \
+              "src/_data/json/installs/all-app-installs.json" > tmp.json && \
+              mv tmp.json "src/_data/json/installs/all-app-installs.json"
+          else
+            # Create new file
+            jq -n \
+              --argjson count "$total_count" \
+              --arg date "$current_date" \
+              '{
+                description: "All apps in the marketplace",
+                history: [{
+                  date: $date,
+                  count: $count|tostring
+                }]
+              }' > "src/_data/json/installs/all-app-installs.json"
+          fi
+
       - name: Fetch vendor install data
         run: |
           curl -s 'https://marketplace-ms.monday.com/marketplace_ms/public/marketplace-developers?includeEnrichment=true' > vendors.json
@@ -108,7 +133,7 @@ jobs:
           cp ratings.json "src/_data/json/ratings/apps/historical/${current_date}.json"
 
           # Process each app entry
-          jq -r 'to_entries[] | "\(.key) \(.value)"' d.json | while read appId rating count; do
+          jq -r 'to_entries[] | "\(.key) \(.value.rating) \(.value.count)"' ratings.json | while read appId rating count; do
             output_file="src/_data/json/ratings/apps/${appId}.json"
 
             if [ -f "$output_file" ]; then
