@@ -280,7 +280,7 @@ async function initChart() {
 
     const ratingsUrl = document.querySelector('[data-ratings-url]').getAttribute('data-ratings-url');
     if (ratingsUrl) {
-        const ratingsData = await loadAppData(ratingsUrl, '.chart-container:last');
+        const ratingsData = await loadAppData(ratingsUrl, '#ratings-body');
         console.log('ratingsData', ratingsData);
         renderRatingsChart(ratingsData);
     }
