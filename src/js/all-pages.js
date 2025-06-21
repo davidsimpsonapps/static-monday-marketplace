@@ -1,4 +1,4 @@
-const init = () => {
+const emboldenNavLinks = () => {
     // Get the current URL path
     const currentPath = window.location.pathname;
 
@@ -24,7 +24,9 @@ const init = () => {
             link.classList.add('font-bold');
         }
     });
+}
 
+const cardSorting = () => {
 
     const sortingButtons = document.querySelectorAll('.sorting button');
 
@@ -70,16 +72,11 @@ const init = () => {
             appCards.forEach(card => container.appendChild(card));
         });
     });
-
-    const headerNode = document.querySelector('.header-wrapper');
-
-    if (headerNode) {
-        headerNode.setAttribute('data-hostname', location.hostname);
-    }
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
+
+const scrollToTop = () => {
     const scrollToTopBtn = document.getElementById("scroll-to-top");
   
     // Show/hide button based on scroll position
@@ -100,7 +97,73 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: "smooth",
       });
     });
-  });
+}
 
 
+// document.addEventListener("DOMContentLoaded", () => {
+//     const scrollToTopBtn = document.getElementById("scroll-to-top");
+  
+//     // Show/hide button based on scroll position
+//     window.addEventListener("scroll", () => {
+//       if (window.scrollY > 200) {
+//         scrollToTopBtn.classList.remove("opacity-0", "invisible");
+//         scrollToTopBtn.classList.add("opacity-100", "visible");
+//       } else {
+//         scrollToTopBtn.classList.remove("opacity-100", "visible");
+//         scrollToTopBtn.classList.add("opacity-0", "invisible");
+//       }
+//     });
+  
+//     // Smooth scroll to top
+//     scrollToTopBtn.addEventListener("click", () => {
+//       window.scrollTo({
+//         top: 0,
+//         behavior: "smooth",
+//       });
+//     });
+//   });
+
+
+const tooltips = () => {
+    if (!tippy) {
+        console.log('tippy not found');
+        return;
+    }
+    // Find all elements with data-toggle="tooltip"
+    const tooltipElements = document.querySelectorAll('[data-toggle="tooltip"]');
+
+    // Initialize Tippy for each element
+    tooltipElements.forEach(element => {
+        // console.log('tippy: ', element.getAttribute('title'))
+        tippy(element, {
+            content: element.getAttribute('title'), // Get content from title attribute
+            placement: element.getAttribute('data-placement') || 'bottom', // Default to bottom
+            arrow: true, // Show arrow
+            animation: 'fade', // Smooth fade animation
+            // theme: 'light', // Match Tailwind style
+            onShow(instance) {
+                // console.log('tooltip shown');
+                // Remove title attribute to prevent native tooltip
+                instance.reference.removeAttribute('title');
+            }
+        });
+    });
+}
+
+
+
+ const init = () => {
+
+    cardSorting();
+    emboldenNavLinks();
+    scrollToTop();
+    tooltips();
+
+    const headerNode = document.querySelector('.header-wrapper');
+
+    if (headerNode) {
+        headerNode.setAttribute('data-hostname', location.hostname);
+    }
+
+}
 document.addEventListener('DOMContentLoaded', init);

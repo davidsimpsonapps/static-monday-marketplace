@@ -27,10 +27,17 @@ eleventyComputed:
 
             {% if app.logo_url %}
               <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" 
-                class="w-12 h-12 rounded-lg mr4">
+                class="w-12 h-12 rounded-lg">
+            {% else %}
+              <div class="w-12 h-12 rounded-lg bg-gray-100"></div>
             {% endif %}
             <div>
-              <h1 class="text-xl font-semibold mb-2 no-tocbot">{{ app.name }}</h1>
+              <h1 class="text-xl font-semibold mb-2 no-tocbot">
+                {{ app.name }}
+                {% if app.badges_data.security === true %}
+                  <span data-toggle="tooltip" title="Security badge" class="ml-1"><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Security badge</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M8.1268,15.3208 C7.8518,15.4264 7.5482,15.4264 7.2732,15.3208 C2.89097361,13.6386115 -0.00112082558,9.42950309 -3.2566432e-07,4.7355 L-3.2566432e-07,1.1836 C-3.2566432e-07,0.869499083 0.124851208,0.56827897 0.347057232,0.346279265 C0.569263257,0.12427956 0.870599218,-0.000291915351 1.1847,-5.11890647e-07 L14.2153,-5.11890647e-07 C14.8691624,-5.11890647e-07 15.3993929,0.529737875 15.4000031,1.1836 L15.4000031,4.7366 C15.4034867,9.43107638 12.5104796,13.6410756 8.1268,15.3208 L8.1268,15.3208 Z" id="Path" fill="#0F9B63" fill-rule="nonzero"></path><polyline stroke="#FFFFFF" stroke-width="1.925" points="4.1382 6.1237 7.0257 9.0112 11.8382 3.7169"></polyline></g></svg></span>
+                {% endif %}
+              </h1>
               <p class="text-gray-600">
                 {% if vendor %}
                   <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" class="text-blue-600 hover:text-blue-800">
@@ -38,22 +45,18 @@ eleventyComputed:
                   </a>
 
                   {% if vendor.partners_program === 1 %}
-                    <span title="Bronze"><span class="hidden">Bronze</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                    <span data-toggle="tooltip" title="Bronze Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
                   {% elseif vendor.partners_program === 2 %}
-                    <span title="Silver"><span class="hidden">Silver</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="gray"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                    <span data-toggle="tooltip" title="Silver Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="gray"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
                   {% elseif vendor.partners_program === 3 %}
-                    <span title="Gold"><span class="hidden">Gold</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#FFCB00"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                    <span data-toggle="tooltip" title="Gold Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#FFCB00"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
                   {% elseif vendor.partners_program === 4 %}
-                    <span title="Platinum"><span class="hidden">Platinum</span><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                    <span data-toggle="tooltip" title="Platinum Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
                   {% endif %}
 
-                  {% if app.badges_data.security === true %}
-                    <span title="Security badge" class="ml-1"><span class="hidden">Security badge</span><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Security badge</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M8.1268,15.3208 C7.8518,15.4264 7.5482,15.4264 7.2732,15.3208 C2.89097361,13.6386115 -0.00112082558,9.42950309 -3.2566432e-07,4.7355 L-3.2566432e-07,1.1836 C-3.2566432e-07,0.869499083 0.124851208,0.56827897 0.347057232,0.346279265 C0.569263257,0.12427956 0.870599218,-0.000291915351 1.1847,-5.11890647e-07 L14.2153,-5.11890647e-07 C14.8691624,-5.11890647e-07 15.3993929,0.529737875 15.4000031,1.1836 L15.4000031,4.7366 C15.4034867,9.43107638 12.5104796,13.6410756 8.1268,15.3208 L8.1268,15.3208 Z" id="Path" fill="#0F9B63" fill-rule="nonzero"></path><polyline stroke="#FFFFFF" stroke-width="1.925" points="4.1382 6.1237 7.0257 9.0112 11.8382 3.7169"></polyline></g></svg></span>
-                  {% endif %}
 
                   {% if vendor and vendor.website %}
-                    •
-                    <a title="Vendor's website" href="{{ vendor.website }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
+                    <a title="Vendor's website" href="{{ vendor.website }}" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800 mx-1">
                       <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
                       </svg>
@@ -67,7 +70,7 @@ eleventyComputed:
 
               {% set rating = ratings | findRatingById(app.app_id) %}
               {% if rating %}
-                <a href="#reviews" title="See reviews">
+                <a href="#reviews" data-toggle="tooltip" title="See reviews">
                   <div class="flex items-center mt-1 text-gray-400  text-sm">
                     <span class="text-yellow-500 ">★</span>
                     <span class="ml-1">{{ rating.rating | formatRating }}</span>
@@ -80,7 +83,7 @@ eleventyComputed:
          
                   
                   {% set appInstalls =  installs | findInstallsById(app.app_id) %}
-                  <a href="#installs" title="See installation history"
+                  <a href="#installs" data-toggle="tooltip" title="See installation history"
                     >{{ appInstalls | numberFormat }} installs</a>,
                   since {{ app.created_at | formatDate }}.
                   &nbsp;
@@ -90,29 +93,31 @@ eleventyComputed:
                 </p>
               {% endif %}
 
+              <div class="flex flex-wrap gap-2 mb-2">
+                {% if app | isHostedOnMonday %}
+                  <span title="App & logs hosted by monday.com" class="badge green">
+                    Hosted by monday.com
+                  </span>
+                {% endif %}
 
-              {% if app | isHostedOnMonday %}
-                <span title="App & logs hosted by monday.com" class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs sm:text-sm mb-4">
-                  Hosted by monday.com
-                </span>
-              {% endif %}
+                {% if app.pricing_data %}
+                  <span class="badge blue">
+                    {{ app.pricing_data }}
+                  </span>
+                {% endif %}
+                {% if app.acquisition_source %}
+                  <span class="badge opacity-30">
+                    {{ app.acquisition_source }}
+                  </span>
+                {% endif %}
+              </div>
 
-              {% if app.pricing_data %}
-                <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs sm:text-sm mb-4">
-                  {{ app.pricing_data }}
-                </span>
-              {% endif %}
-              {% if app.acquisition_source %}
-                <span class="opacity-30 inline-block bg-gray-100 text-blue-800 px-3 py-1 rounded-full text-xs sm:text-sm mb-4">
-                  {{ app.acquisition_source }}
-                </span>
-              {% endif %}
               {% if app.marketplace_category_ids and app.marketplace_category_ids.length > 0 %}
                 <div class="flex flex-wrap gap-2 mb-4">
                   {% for categoryId in app.marketplace_category_ids %}
                     {% set category = categories | findCategoryById(categoryId) %}
                     {% if category %}
-                      <a href="/categories/{{ category.id }}/" class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs sm:text-sm  hover:bg-gray-200">
+                      <a href="/categories/{{ category.id }}/" class="badge hover:bg-gray-200">
                         {{ category.name }}
                       </a>
                     {% endif %}
@@ -364,7 +369,7 @@ eleventyComputed:
     <!-- Table of Contents -->
     <div class="hidden xl:block xl:w-64 flex-shrink-0">
       <div class="fixed top-28 _overflow-y-auto py-4">
-        <h3 class="text-lg font-semibold mb-4">Table of Contents</h3>
+        <h3 class="font-xs text-gray-500 font-light tracking-wide mb-4 ">Table of Contents</h3>
         <nav class="js-toc"></nav>
       </div>
     </div>
