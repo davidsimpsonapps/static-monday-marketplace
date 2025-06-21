@@ -27,7 +27,7 @@ eleventyComputed:
 
             {% if app.logo_url %}
               <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" 
-                class="w-12 h-12 rounded-lg">
+                class="w-12 h-12 rounded">
             {% else %}
               <div class="w-12 h-12 rounded-lg bg-gray-100"></div>
             {% endif %}
@@ -169,7 +169,7 @@ eleventyComputed:
                       <source src="{{ asset.url}}" />
                     </video>
                   {% else %}
-                    <img src="{{ asset.url }}" alt="Gallery image" class="rounded-lg shadow-md">
+                    <img src="{{ asset.url }}" alt="Gallery image" class="rounded shadow-md">
                   {% endif %}
                 </a>
               {% endfor %}
