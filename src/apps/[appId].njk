@@ -372,6 +372,33 @@ eleventyComputed:
         </div> 
       </div>
 
+
+
+      <!-- Caetogies history since 2025-06-21 -->
+      <div class="py-8">
+        <h2 id="categories" class="text-lg sm:text-2xl font-semibold mb-4">Categories history</h2>
+
+        <div id="categories-body">
+          <p class="mb-8">Each of the following is a yes/no answer, so the graphs show <em>1 for yes</em>, and <em>0 for no</em>.</p>
+          <h3>In "Featured" category?</h3>
+          <div class="chart-container mb-16">
+            <div class="h-48">
+              <canvas data-category-id="1"></canvas>
+            </div>
+          </div>
+          <h3>In "Editor's choice" category?</h3>
+          <div class="chart-container">
+            <div class="h-48">
+              <canvas data-category-id="14"></canvas>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+
+
+
+
       <!-- Debug output -->
       <div class="border-t border-gray-200 py-8 text-sm text-gray-500">
 
@@ -443,6 +470,7 @@ function toggleDebug() {
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="module"
+ data-categories-url="/_data/json/marketplace/categories/{{ app.app_id }}.json" 
  data-installs-url="/_data/json/installs/apps/{{ app.app_id }}.json" 
  data-ratings-url="/_data/json/ratings/apps/{{ app.app_id }}.json" 
  src="/js/historical-data.js?_={{ '' | dailyTimestamp }}"></script>

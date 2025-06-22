@@ -4,6 +4,8 @@ let weeklyChart = null;
 let monthlyChart = null;
 let ratingsRatingChart = null;
 let ratingsCountChart = null;
+let categoryCharts = [];
+
 
 
 const defaultScales = {
@@ -259,6 +261,66 @@ function renderRatingsChart(ratingsData) {
     }
 }
 
+function renderCategoriesCharts(categoriesData) {
+    const categories = [
+        1, // Featured
+        14, // Editor's choice
+    ]
+
+    categories.forEach((c) => {
+        const history = categoriesData.history.map(i => {
+            return {
+                date: i.date,
+                count: i.marketplace_category_ids.includes(c) ? 1 : 0
+            }
+        })
+
+        const sortedData = history.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+
+        // console.log(`Category ${c} `, sortedData);
+
+        let categoryChart = categoryCharts[c] ?? null;
+        if (categoryChart) categoryChart.destroy();
+
+        const selector = `canvas[data-category-id="${c}"]`;
+        // console.log(selector);
+
+        const chartCtx = document.querySelector(selector).getContext('2d');
+        const labels = sortedData.map(item => item.date)
+        const data = sortedData.map(item => item.count ? parseInt(item.count) : 0)
+        console.log('chart data', {labels,data})
+
+        const options = { ...defaultOptions};
+
+        options.scales.y.min = 0;
+        options.scales.y.max = 1;
+        options.scales.y.ticks.maxTicksLimit = 2
+        
+        // Create new chart
+        categoryChart = new Chart(chartCtx, {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'Is app in this category?',
+                    data,
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 2,
+                    tension: 0.1,
+                    pointRadius: 0,
+                    pointHoverRadius: 6,
+                    pointHoverBackgroundColor: 'rgba(153, 102, 255, 1)',
+                    pointHoverBorderColor: '#fff',
+                    pointHoverBorderWidth: 2
+                }]
+            },
+            options: options
+        });
+    });
+}
+
 
 // Initialize the charts
 async function initChart() {
@@ -281,8 +343,15 @@ async function initChart() {
     const ratingsUrl = document.querySelector('[data-ratings-url]').getAttribute('data-ratings-url');
     if (ratingsUrl) {
         const ratingsData = await loadAppData(ratingsUrl, '#ratings-body');
-        console.log('ratingsData', ratingsData);
-        renderRatingsChart(ratingsData);
+        // console.log('ratingsData', ratingsData);
+        ratingsData && renderRatingsChart(ratingsData);
+    }
+
+    const categoriesUrl = document.querySelector('[data-categories-url]').getAttribute('data-categories-url');
+    if (categoriesUrl) {
+        const categoriesData = await loadAppData(categoriesUrl, '#categories-body');
+        // console.log('categoriesData', categoriesData);
+        categoriesData && renderCategoriesCharts(categoriesData);
     }
 }
 
