@@ -12,6 +12,72 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+
+      - name: Fetch full marketplace data
+        run: |
+          curl -s "https://cdn.monday.com/public_marketplace_apps" > marketplace.json
+
+          - name: Process and store marketplace data
+          run: |
+            # Create target directories
+            mkdir -p src/_data/json/marketplace/historical
+            mkdir -p src/_data/json/marketplace/categories
+            current_date=$(date +'%Y-%m-%d')
+  
+            # Save raw historical copies (unsanitized)
+            cp marketplace.json "src/_data/json/marketplace/historical/${current_date}.json"
+            cp marketplace.json "src/_data/json/marketplace/historical/public_marketplace_apps.json"
+  
+            # Sanitize function for category processing only
+            sanitize_for_categories() {
+              local json_data="$1"
+              echo "$json_data" | jq -c '
+                # Basic JSON validation and cleanup
+                if type == "object" then 
+                  .marketplace_apps |= (map(
+                    select(.app_id? != null) |
+                    del(.description, .short_description, .compliance_answers, .plans)
+                  ))
+                else empty end
+              ' 2>/dev/null || echo '{}'
+            }
+  
+            # Process categories with sanitized data
+            sanitized_data=$(sanitize_for_categories "$(cat marketplace.json)")
+            
+            echo "$sanitized_data" | jq -c '.marketplace_apps[]?' | while read -r app_data; do
+              # Extract required fields
+              app_id=$(echo "$app_data" | jq -r '.app_id')
+              categories=$(echo "$app_data" | jq '.marketplace_category_ids? // []')
+              
+              # Skip if no valid app_id
+              if [ -z "$app_id" ] || [ "$app_id" = "null" ]; then
+                continue
+              fi
+              
+              output_file="src/_data/json/marketplace/categories/${app_id}.json"
+              
+              # Create history entry
+              entry=$(jq -n \
+                --arg date "$current_date" \
+                --argjson cats "$categories" \
+                '{date: $date, marketplace_category_ids: $cats}')
+              
+              # Update or create category file
+              if [ -f "$output_file" ]; then
+                jq --argjson new "$entry" '.history += [$new]' "$output_file" > tmp.json && mv tmp.json "$output_file"
+              else
+                jq -n \
+                  --arg id "$app_id" \
+                  --argjson new "$entry" \
+                  '{
+                    description: "Category history for app \($id)",
+                    history: [$new]
+                  }' > "$output_file"
+              fi
+            done
+
+
       - name: Fetch app install data
         run: |
           curl -s "https://monday-apps-ms.monday.com/apps_ms/public/app_analytics/app_installs" > installs.json
@@ -161,6 +227,24 @@ jobs:
                 }' > "$output_file"
             fi
           done
+
+
+
+      - name: Fetch 'Trending this week'
+        run: |
+          curl -s "https://platform-bigbrain-bridge.monday.com/features_external_public?featureName=trending_this_week&identifierType=custom&identifier=top_apps" > trending_this_week.json
+
+      - name: Process and store 'Trending this week' data
+        run: |
+          # Create target directories if they don't exist
+          mkdir -p src/_data/json/trending/apps/historical
+          current_date=$(date +'%Y-%m-%d')
+
+          # Save historical copy of ratings.json
+          cp trending_this_week.json "src/_data/json/ratings/apps/historical/${current_date}.json"
+
+          # TODO: figure out how to add this to other category stuff
+
 
       - name: Commit and push changes
         run: |
