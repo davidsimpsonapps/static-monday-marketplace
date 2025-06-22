@@ -18,7 +18,7 @@ module.exports = async function() {
         15, // New apps - not correctly populated
         10000017, // Recently viewed - always empty
         10000016, // Favorites - always empty 
-        10000004, // Trending this week - 🤷‍♂️
+        // 10000004, // Trending this week - 🤷‍♂️ Always zero
       ].includes(category.id));
   } catch (error) {
     console.error('Error fetching categories:', error);
