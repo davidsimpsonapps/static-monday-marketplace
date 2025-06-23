@@ -5,6 +5,7 @@ title: About this site
 
 <div>
 
+
     
 
   
@@ -24,6 +25,94 @@ title: About this site
           <a href="/">Listings</a>
           <a href="/installs" class="selected">Installs</a>
         </span>
+    </div>
+
+
+    <h2 class="text-lg sm:text-2xl font-semibold mb-4">Top ranking apps</h2>
+
+
+
+    <div class="top-installs flex flex-col sm:flex-row sm:gap-6">
+        <div class="w-full sm:w-1/3">
+            <h3>
+                Top apps this month
+                <span data-toggle="tooltip" title="Change in installs in the last 30 days">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
+                </span>
+            </h3>
+            {% set thisMonthsApps = marketplace | sortByInstallsDeltaThirtyDays | limit(20) %}
+            <ol>
+                {% for app in thisMonthsApps %}
+                    {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
+                    <li>
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
+                            {{ app.name }}
+                        </a>
+                        {% if app.installsDelta.thirtyDays %}
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 30 days">
+                                {{ app.installsDelta.thirtyDays}}
+                            </span>
+                        {% endif %}
+                        <div class="text-gray-600 text-xs">by {{ vendor.name }}</div>
+                    </li>
+                {% endfor %}
+            </ol>
+
+        </div>
+        <div class="w-full sm:w-1/3">
+            <h3>
+                Top apps this week
+
+                <span data-toggle="tooltip" title="Change in installs in the last 7 days">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
+                </span>
+            </h3>
+
+            {% set thisWeeksApps = marketplace | sortByInstallsDeltaSevenDays | limit(20) %}
+            <ol>
+                {% for app in thisWeeksApps %}
+                    {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
+                    <li>
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
+                            {{ app.name }}
+                        </a>
+                        {% if app.installsDelta.sevenDays %}
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 7 days">
+                                {{ app.installsDelta.sevenDays}}
+                            </span>
+                        {% endif %}
+                        <div class="text-gray-600 text-xs">by {{ vendor.name }}</div>
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="w-full sm:w-1/3">
+            <h3>
+                Trending this week <em>category</em>
+                <span data-toggle="tooltip" title="Data as provided by monday.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
+                </span>
+            </h3>
+        
+            {% set trendingApps = marketplace | filterByCategory(10000004) | sortByInstallsDeltaSevenDays %}
+            <ol>
+                {% for app in trendingApps %}
+                    {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
+                    <li>
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
+                            {{ app.name }}
+                        </a>
+                        {% if app.installsDelta.sevenDays %}
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 7 days">
+                                {{ app.installsDelta.sevenDays}}
+                            </span>
+                        {% endif %}
+                        <div class="text-gray-600 text-xs">by {{ vendor.name }}</div>
+                    </li>
+                {% endfor %}
+            </ol>
+        
+        </div>
     </div>
 
 

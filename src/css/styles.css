@@ -109,6 +109,9 @@ li.toc-list-item .is-active-link::before {
 ul {
     @apply list-disc pl-4;
 }
+ol {
+    @apply list-decimal pl-4;
+}
 
 
 .sorting {
@@ -139,6 +142,29 @@ ul {
     @apply bg-blue-100 text-blue-800
 }
 
-[data-toggle="tooltip"]  * {
-    display: inline!important;
+.top-installs h3 {
+    @apply lg:h-auto sm:h-24 md:h-16 sm:text-xl font-semibold mt-4;
+}
+.top-installs h3, 
+.top-installs li {
+    @apply sm:h-24 md:h-14;
+}
+.top-installs li a {
+    max-width: calc( 100% - 50px );
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @apply whitespace-nowrap inline-block align-top font-semibold;
+}
+
+/* .top-installs > div {
+    @apply bg-gray-100;
+} */
+.top-installs ol {
+    @apply pl-8;
+}
+.top-installs svg {
+    width: 20px;
+    height: 20px;
+    @apply text-blue-400;
+    display: inline-block !important;
 }

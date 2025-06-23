@@ -153,6 +153,35 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+
+  // Add custom filter to sort apps by install count
+  eleventyConfig.addFilter("sortByInstallsDeltaSevenDays", function(apps) {
+    if (!Array.isArray(apps)) return [];
+    
+    return [...apps].sort((a, b) => {
+      // Handle cases where installsDelta or sevenDays might be missing
+      const aInstalls = a.installsDelta?.sevenDays ?? -Infinity;
+      const bInstalls = b.installsDelta?.sevenDays ?? -Infinity;
+      
+      // Sort descending (higher numbers first)
+      return bInstalls - aInstalls;
+    });
+  });
+
+  // Add custom filter to sort apps by install count
+  eleventyConfig.addFilter("sortByInstallsDeltaThirtyDays", function(apps, installs) {
+    if (!Array.isArray(apps)) return [];
+    
+    return [...apps].sort((a, b) => {
+      // Handle cases where installsDelta or sevenDays might be missing
+      const aInstalls = a.installsDelta?.thirtyDays ?? -Infinity;
+      const bInstalls = b.installsDelta?.thirtyDays ?? -Infinity;
+      
+      // Sort descending (higher numbers first)
+      return bInstalls - aInstalls;
+    });
+  });
+
   // Add custom filter to sort arrays by property
   eleventyConfig.addFilter("sortBy", function(array, property) {
     return array.sort((a, b) => {
@@ -224,6 +253,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("filter", function(array, callback) {
     return array.filter(callback);
   });
+ // Add custom filter function
+ eleventyConfig.addFilter("limit", function(array, size) {
+  return array.slice(0, size);
+});  
 
   // Add isHostedOnMonday filter
   eleventyConfig.addFilter("isHostedOnMonday", function(app) {
@@ -344,39 +377,39 @@ module.exports = function(eleventyConfig) {
 
 
 
-  // Minify HTML for production
-  eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
-    // Only minify HTML files
-    if (outputPath && outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
-        removeComments: true,
-        collapseWhitespace: true,
-        minifyCSS: true,
-        minifyJS: true,
-        keepClosingSlash: true,
-      });
-      return minified;
-    }
-    return content;
-  });
+  // // Minify HTML for production
+  // eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+  //   // Only minify HTML files
+  //   if (outputPath && outputPath.endsWith(".html")) {
+  //     let minified = htmlmin.minify(content, {
+  //       removeComments: true,
+  //       collapseWhitespace: true,
+  //       minifyCSS: true,
+  //       minifyJS: true,
+  //       keepClosingSlash: true,
+  //     });
+  //     return minified;
+  //   }
+  //   return content;
+  // });
 
-  // Minify JS for production
-  eleventyConfig.on("afterBuild", async () => {
-    const inputDir = "_site/js"; // Files have already been copied here
-    const files = await readdir(inputDir);
+  // // Minify JS for production
+  // eleventyConfig.on("afterBuild", async () => {
+  //   const inputDir = "_site/js"; // Files have already been copied here
+  //   const files = await readdir(inputDir);
 
-    for (const file of files) {
-      if (file.endsWith(".js")) {
-        const filePath = join(inputDir, file);
+  //   for (const file of files) {
+  //     if (file.endsWith(".js")) {
+  //       const filePath = join(inputDir, file);
 
-        const code = await readFile(filePath, "utf-8");
-        const minified = await minify(code);
-        console.log(`[dsapps/minify-js] Minified ./${inputDir}/${file}`);
+  //       const code = await readFile(filePath, "utf-8");
+  //       const minified = await minify(code);
+  //       console.log(`[dsapps/minify-js] Minified ./${inputDir}/${file}`);
 
-        await writeFile(filePath, minified.code, "utf-8");
-      }
-    }
-  });  
+  //       await writeFile(filePath, minified.code, "utf-8");
+  //     }
+  //   }
+  // });  
 
   return {
     dir: {
