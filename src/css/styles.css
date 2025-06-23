@@ -136,10 +136,13 @@ ol {
     @apply inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs;
 }
 .badge.green {
-    @apply bg-green-100 text-green-800
+    @apply bg-green-100 text-green-800;
 }
 .badge.blue {
-    @apply bg-blue-100 text-blue-800
+    @apply bg-blue-100 text-blue-800;
+}
+.badge.purple {
+    @apply bg-purple-100 text-purple-800;
 }
 
 .top-installs h3 {

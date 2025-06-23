@@ -105,11 +105,17 @@
                   Free app
                 </span>
               {% endif %}
+              {% if app.label %}
+                <span  class="badge purple">
+                  {{ app.label }}
+                </span>
+              {% endif %}
               {% if app.acquisition_source === 'Touch' %}
                 <span data-toggle="tooltip" title="Acquisition source: {{ app.acquisition_source }}" class="badge opacity-30">
                   {{ app.acquisition_source }}
                 </span>
               {% endif %}
+
             </div>
           </div>
         </div>
