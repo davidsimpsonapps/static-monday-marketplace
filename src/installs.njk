@@ -12,9 +12,10 @@ description: "An aggregated history of installations for all apps from the monda
   
     <div class="flex gap-3 mb-2 items-center justify-between">
         <div class="flex gap-3 items-center">
-            <h1 class="text-lg md:text-2xl font-semibold">
+            <span class="h1 text-lg md:text-2xl  font-semibold">
+            
                 Apps
-            </h1>
+            </span>
             <span>
                 <span data-total="{{ marketplace.length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
                 {{ marketplace.length }}
@@ -32,30 +33,30 @@ description: "An aggregated history of installations for all apps from the monda
 
 
     <!-- Install history since 2025-06-07 -->
-    <div class="py-8">
-    <h2 id="installs" class="text-lg sm:text-2xl font-semibold mb-4 mt-0">Installation history</h2>
+    <div>
+        <h1 id="installs" class="text-lg sm:text-2xl font-semibold mt-10 mb-4">Installation history</h1>
+        
+        <p>An aggregated history of installations for all apps from the monday.com marketplace.</p>
 
-    <p>An aggregated history of installations for all apps from the monday.com marketplace.</p>
+        <p class="text-xs text-gray-600">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
+        <div class="chart-container">
+            <div class="h-96">
+            <canvas id="installChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <p class="text-xs text-gray-600">This compares the number of installs on each date with 7 days previously:</p>        
+            <div class="h-96">
+            <canvas id="weeklyInstallChart"></canvas>
+            </div>
+        </div> 
 
-    <p class="text-xs text-gray-600">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
-    <div class="chart-container">
-        <div class="h-96">
-        <canvas id="installChart"></canvas>
-        </div>
-    </div>
-    <div class="chart-container">
-        <p class="text-xs text-gray-600">This compares the number of installs on each date with 7 days previously:</p>        
-        <div class="h-96">
-        <canvas id="weeklyInstallChart"></canvas>
-        </div>
-    </div> 
-
-    <div class="chart-container">
-        <p class="text-xs text-gray-600">This compares the number of installs on each date with 30 days previously:</p>
-        <div class="h-96">
-        <canvas id="monthlyInstallChart"></canvas>
-        </div>
-    </div>          
+        <div class="chart-container">
+            <p class="text-xs text-gray-600">This compares the number of installs on each date with 30 days previously:</p>
+            <div class="h-96">
+            <canvas id="monthlyInstallChart"></canvas>
+            </div>
+        </div>          
     </div>
 
 </div>

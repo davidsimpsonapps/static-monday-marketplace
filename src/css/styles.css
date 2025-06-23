@@ -22,6 +22,9 @@ h1,h2,h3,h4,h5,h6 {
     @apply font-normal;
     font-family: var(--title-font-family);
 }
+.h1,.h2,.h3,.h4,.h5,.h6 {
+    font-family: var(--title-font-family);
+}
 
 h2 {
     @apply mt-10 mb-4 font-bold;
@@ -70,7 +73,7 @@ span[title] svg {
 }
 header {
     nav {
-        @apply order-2 sm:order-1 mt-2 sm:mt-0 md:text-lg sm:mr-2;
+        @apply order-2 sm:order-1 mt-2 sm:mt-0  sm:mr-2;
     }
     #home {
         @apply order-1 sm:order-2 flex items-center gap-2 text-xl font-bold text-gray-800;
@@ -145,15 +148,15 @@ ol {
     @apply bg-purple-100 text-purple-800;
 }
 
-.top-installs h3 {
-    @apply lg:h-auto sm:h-24 md:h-16 sm:text-xl font-semibold mt-4;
+.top-installs h2 {
+    @apply lg:h-auto sm:h-24 md:h-16 font-semibold mt-4;
 }
-.top-installs h3, 
+.top-installs h2, 
 .top-installs li {
-    @apply sm:h-24 md:h-14;
+    @apply sm:h-16 md:h-14;
 }
 .top-installs li a {
-    max-width: calc( 100% - 100px );
+    max-width: calc( 100% - 55px );
     text-overflow: ellipsis;
     overflow: hidden;
     @apply whitespace-nowrap inline-block align-top font-semibold;

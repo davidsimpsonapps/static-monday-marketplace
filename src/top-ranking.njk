@@ -7,9 +7,9 @@ title: Top ranking apps
 
     <div class="flex gap-3 mb-2 items-center justify-between">
         <div class="flex gap-3 items-center">
-            <h1 class="text-lg md:text-2xl font-semibold">
+            <span class="h1 text-lg md:text-2xl font-semibold">
                 Apps
-            </h1>
+            </span>
             <span>
                 <span data-total="{{ marketplace.length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
                 {{ marketplace.length }}
@@ -25,18 +25,18 @@ title: Top ranking apps
     </div>
 
 
-    <h2 class="text-lg sm:text-2xl font-semibold mb-4">Top ranking apps</h2>
+    <h1 class="text-lg sm:text-2xl font-semibold mt-10 mb-4">Top ranking apps</h1>
 
     <p class="text-sm">This data is refreshed daily sometime between 00:00 and 03:00 UTC.</p>
 
-    <div class="top-installs flex flex-col sm:flex-row sm:gap-6">
-        <div class="w-full sm:w-1/3">
-            <h3>
+    <div class="top-installs sm:grid grid-cols-3 gap-2 md:gap-4">
+        <div>
+            <h2>
                 Top apps this month
                 <span data-toggle="tooltip" title="Change in installs in the last 30 days">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
                 </span>
-            </h3>
+            </h2>
             {% set thisMonthsApps = marketplace | sortByInstallsDeltaThirtyDays | limit(50) %}
             <ol>
                 {% for app in thisMonthsApps %}
@@ -56,14 +56,14 @@ title: Top ranking apps
             </ol>
 
         </div>
-        <div class="w-full sm:w-1/3">
-            <h3>
+        <div>
+            <h2>
                 Top apps this week
 
                 <span data-toggle="tooltip" title="Change in installs in the last 7 days">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
                 </span>
-            </h3>
+            </h2>
 
             {% set thisWeeksApps = marketplace | sortByInstallsDeltaSevenDays | limit(50) %}
             <ol>
@@ -83,13 +83,13 @@ title: Top ranking apps
                 {% endfor %}
             </ol>
         </div>
-        <div class="w-full sm:w-1/3">
-            <h3>
+        <div>
+            <h2>
                 Trending this week <em>category</em>
                 <span data-toggle="tooltip" title="Data as provided by monday.com">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
                 </span>
-            </h3>
+            </h2>
         
             {% set trendingApps = marketplace | filterByCategory(10000004) | sortByInstallsDeltaSevenDays %}
             <ol>
