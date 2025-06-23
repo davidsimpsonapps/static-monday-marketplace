@@ -150,7 +150,7 @@ ol {
     @apply sm:h-24 md:h-14;
 }
 .top-installs li a {
-    max-width: calc( 100% - 50px );
+    max-width: calc( 100% - 100px );
     text-overflow: ellipsis;
     overflow: hidden;
     @apply whitespace-nowrap inline-block align-top font-semibold;
@@ -165,8 +165,7 @@ ol {
 .top-installs svg {
     width: 20px;
     height: 20px;
-    @apply text-blue-400;
-    display: inline-block !important;
+    @apply text-blue-600;
 }
 
 [data-toggle] svg {
