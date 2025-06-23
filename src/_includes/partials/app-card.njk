@@ -81,10 +81,10 @@
               <div class="text-gray-400 text-xs md:text-sm my-2 mb-4">
                 &Delta; installs: 
                 
-                  {{ app.installsDelta.sevenDays }} weekly
+                  <span data-toggle="tooltip" title="Change in installs in last 7 days">{{ app.installsDelta.sevenDays }} weekly</span>
                 
                 {% if app.installsDelta.thirtyDays %}
-                  • {{ app.installsDelta.thirtyDays }} monthy
+                  • <span data-toggle="tooltip" title="Change in installs in last 30 days">{{ app.installsDelta.thirtyDays }} monthy</span>
                 {% endif %}
               </div>
             {% endif %}
