@@ -3,7 +3,19 @@
     <button id="sortByAlpha" data-type="string" data-sort-by="data-alpha" data-direction="ASC">Alphabetically</button>
     <button id="sortByOldest" data-type="date" data-sort-by="data-release-date" data-direction="ASC">Oldest</button>
     <button id="sortByNewest" data-type="date" data-sort-by="data-release-date" data-direction="DESC">Newest</button>
-    <button id="sortByMonthlyInstalls" data-type="number" data-sort-by="data-monthly-installs" data-direction="DESC">Monthly installs</button>
+    
+    <button id="sortByMonthlyInstallsDelta7" data-type="number" data-sort-by="data-installs-delta-7d" data-direction="DESC"
+      data-toggle="tooltip" title="Change in installs in last 7 days"
+      >Weekly installs Δ</button>
+    <button id="sortByMonthlyInstallsDelta30" data-type="number" data-sort-by="data-installs-delta-30d" data-direction="DESC"
+      data-toggle="tooltip" title="Change in installs in last 30 days"
+      >Monthly installs Δ</button>
+
+    <button id="sortByMonthlyInstalls" data-type="number" data-sort-by="data-monthly-installs" data-direction="DESC"
+      data-toggle="tooltip" title="Average monthly installs"
+      >
+        Monthly installs</button>
     <button id="sortByTotalInstalls" data-type="number" data-sort-by="data-installs" data-direction="DESC">Total installs</button>
+
     <button id="sortByRating" data-type="number" data-sort-by="data-rating" data-direction="DESC">Rating</button>
   </div>

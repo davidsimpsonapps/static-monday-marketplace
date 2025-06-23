@@ -27,11 +27,8 @@ title: Categories
       >
         <div class="p-6 flex-grow" style="background-color: {{ category.backgroundColor or '#ECEFF8' }}; color: {{ category.textColor or '#323338' }}">
           <div class="flex items-start">
-            {% if category.logoUrl %}
-              <img src="{{ category.logoUrl }}" alt="{{ category.name }} logo" class="w-16 h-16 mr-4">
-            {% endif %}
             <div>
-              <h2 class="text-xl font-semibold mb-2">{{ category.name }}</h2>
+              <h2 class="text-lg font-semibold mt-0 mb-0">{{ category.name }}</h2>
               {% if category.content %}
                 <p class="text-sm">{{ category.content }}</p>
               {% endif %}

@@ -19,6 +19,8 @@
         data-monthly-installs="{{ montlyInstalls }}"
         data-release-date="{{ app.created_at }}"
         {% if ratings %}data-rating="{{ rating.rating }}"{% endif %}
+        {% if app.installsDelta.sevenDays %}data-installs-delta-7d="{{ app.installsDelta.sevenDays }}"{% endif %}
+        {% if app.installsDelta.thirtyDays %}data-installs-delta-30d="{{ app.installsDelta.thirtyDays }}"{% endif %}
       >
         <div class="p-6 flex flex-col h-full">
           <div>
@@ -72,6 +74,18 @@
                 {{ appInstalls | numberFormat }} installs,
                 since {{ app.created_at | formatDate }}.<br>
                 <span class="whitespace-nowrap">{{ montlyInstalls | numberFormat }} installs/month.</span>
+              </div>
+            {% endif %}
+
+            {% if app.installsDelta.sevenDays %}
+              <div class="text-gray-400 text-xs md:text-sm my-2 mb-4">
+                &Delta; installs: 
+                
+                  {{ app.installsDelta.sevenDays }} weekly
+                
+                {% if app.installsDelta.thirtyDays %}
+                  • {{ app.installsDelta.thirtyDays }} monthy
+                {% endif %}
               </div>
             {% endif %}
 
