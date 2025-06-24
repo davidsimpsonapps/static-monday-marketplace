@@ -23,7 +23,7 @@
         {% if app.installsDelta.sevenDays %}data-installs-delta-7d="{{ app.installsDelta.sevenDays }}"{% endif %}
         {% if app.installsDelta.thirtyDays %}data-installs-delta-30d="{{ app.installsDelta.thirtyDays }}"{% endif %}
       >
-        <div class="p-6 flex flex-col h-full">
+        <div class="flex flex-col h-full">
           <div>
             {% if app.logo_url %}
               <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded">

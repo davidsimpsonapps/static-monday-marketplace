@@ -88,10 +88,15 @@ header {
     max-width: 180px;
 }
 
+.card-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5;
+}
+
 .card {
     @apply overflow-hidden;
     @apply block bg-white rounded-lg transition-colors transition-shadow duration-200;
     @apply hover:bg-gray-100;
+    @apply p-4 mb-4;
 }
 .category-card {
     @apply overflow-hidden block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden flex flex-col h-full;

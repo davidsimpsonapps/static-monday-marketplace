@@ -48,7 +48,7 @@ eleventyComputed:
   {% include "partials/search.njk" %}
   {% include "partials/sorting.njk" %}
   
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+  <div class="card-grid">
     {% for app in apps %}
       {{ appCard(app, ratings, vendors, installs) }}
     {% endfor %}

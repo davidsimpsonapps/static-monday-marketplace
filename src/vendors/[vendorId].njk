@@ -99,7 +99,7 @@ eleventyComputed:
       {% include "partials/sorting.njk" %}
 
 
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {% for app in apps %}
           {% set appRatings = ratings | default([]) %}
           {{ appCard(app, appRatings, vendors, installs) }}
