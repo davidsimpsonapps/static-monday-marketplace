@@ -391,12 +391,21 @@ eleventyComputed:
               <canvas data-category-id="1"></canvas>
             </div>
           </div>
+
           <h3>In "Editor's choice" category?</h3>
-          <div class="chart-container">
+          <div class="chart-container mb-16">
             <div class="h-48">
               <canvas data-category-id="14"></canvas>
             </div>
           </div>
+
+          <h3>In "Trending this week" category?</h3>
+          <div id="trending-body" class="chart-container mb-16">
+            <div class="h-48">
+              <canvas id="trendingChart"></canvas>
+            </div>
+          </div>
+
         </div> 
       </div>
 
@@ -478,6 +487,7 @@ function toggleDebug() {
  data-categories-url="/_data/json/marketplace/categories/{{ app.app_id }}.json" 
  data-installs-url="/_data/json/installs/apps/{{ app.app_id }}.json" 
  data-ratings-url="/_data/json/ratings/apps/{{ app.app_id }}.json" 
+ data-trending-url="/_data/json/trending/apps/{{ app.app_id }}.json" 
  src="/js/historical-data.js?_={{ '' | dailyTimestamp }}"></script>
 
 <script src="/js/fslightbox-basic-3.6.1/fslightbox.js"></script>

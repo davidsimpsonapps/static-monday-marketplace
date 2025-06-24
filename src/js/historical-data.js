@@ -5,6 +5,7 @@ let monthlyChart = null;
 let ratingsRatingChart = null;
 let ratingsCountChart = null;
 let categoryCharts = [];
+let trendingChart = null;
 
 
 
@@ -200,17 +201,19 @@ function renderRatingsChart(ratingsData) {
         const ratingLabels = sortedRatings.map(item => item.date);
         const ratingAverages = sortedRatings.map(item => item.rating ? parseFloat(item.rating) : null);
         
-
         // Prepare data for ratings count chart
         const ratingCounts = sortedRatings.map(item => item.count ? parseInt(item.count) : 0);
 
         // Render ratings average chart
         const ratingChartCtx = document.getElementById('ratingsRatingChart').getContext('2d');
 
+        if (ratingsRatingChart) ratingsRatingChart.destroy();    
+        const ratingsOptions = { ...defaultOptions };
 
-
-        if (ratingsRatingChart) ratingsRatingChart.destroy();
-    
+        // ratingsOptions.scales.y.min = 1;
+        // ratingsOptions.scales.y.max = 5;
+        // ratingsOptions.scales.y.ticks.maxTicksLimit = 5
+        
         // Create new chart
         ratingsRatingChart = new Chart(ratingChartCtx, {
             type: 'line',
@@ -230,7 +233,7 @@ function renderRatingsChart(ratingsData) {
                     pointHoverBorderWidth: 2
                 }]
             },
-            options: defaultOptions
+            options: ratingsOptions
         });
 
         // Render ratings count chart
@@ -291,7 +294,7 @@ function renderCategoriesCharts(categoriesData) {
         const data = sortedData.map(item => item.count ? parseInt(item.count) : 0)
         console.log('chart data', {labels,data})
 
-        const options = { ...defaultOptions};
+        const options = { ...defaultOptions };
 
         options.scales.y.min = 0;
         options.scales.y.max = 1;
@@ -318,6 +321,45 @@ function renderCategoriesCharts(categoriesData) {
             },
             options: options
         });
+    });
+}
+
+
+
+// Render the Chart.js graph
+function renderTrendingChart(appData) {
+    const ctx = document.getElementById('trendingChart').getContext('2d');
+    
+    // Sort history by date (newest first)
+    const sortedHistory = [...appData.history].sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+    // Prepare chart data
+    const chartData = {
+        labels: sortedHistory.map(item => item.date),
+        datasets: [{
+            label: `Is "Trending this week"?`,
+            data: sortedHistory.map(item => parseInt(item.count)),
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+
+            borderWidth: 2,
+            tension: 0.1,
+            pointRadius: 0,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: 'rgba(54, 162, 235, 1)',
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 2
+        }]
+    };
+    
+    // Destroy previous chart if exists
+    if (trendingChart) trendingChart.destroy();
+    
+    // Create new chart
+    trendingChart = new Chart(ctx, {
+        type: 'line',
+        data: chartData,
+        options: defaultOptions
     });
 }
 
@@ -352,6 +394,12 @@ async function initChart() {
         const categoriesData = await loadAppData(categoriesUrl, '#categories-body');
         // console.log('categoriesData', categoriesData);
         categoriesData && renderCategoriesCharts(categoriesData);
+    }
+    const trendingUrl =  document.querySelector('[data-trending-url]').getAttribute('data-trending-url');
+    if (trendingUrl) {
+        const trendingData = await loadAppData(trendingUrl, '#trending-body');
+        // console.log('categoriesData', categoriesData);
+        trendingData && renderTrendingChart(trendingData); // #trendingCountChart
     }
 }
 
