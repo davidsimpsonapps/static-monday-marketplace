@@ -173,7 +173,7 @@ module.exports = function(eleventyConfig) {
     if (!Array.isArray(apps)) return [];
     
     return [...apps].sort((a, b) => {
-      // Handle cases where installsDelta or sevenDays might be missing
+      // Handle cases where installsDelta or thirtyDays might be missing
       const aInstalls = a.installsDelta?.thirtyDays ?? -Infinity;
       const bInstalls = b.installsDelta?.thirtyDays ?? -Infinity;
       
@@ -181,6 +181,20 @@ module.exports = function(eleventyConfig) {
       return bInstalls - aInstalls;
     });
   });
+
+  // Add custom filter to sort apps by install count
+  eleventyConfig.addFilter("sortByInstallsDeltaNinetyDays", function(apps, installs) {
+    if (!Array.isArray(apps)) return [];
+    
+    return [...apps].sort((a, b) => {
+      // Handle cases where installsDelta or ninetyDays might be missing
+      const aInstalls = a.installsDelta?.ninetyDays ?? -Infinity;
+      const bInstalls = b.installsDelta?.ninetyDays ?? -Infinity;
+      
+      // Sort descending (higher numbers first)
+      return bInstalls - aInstalls;
+    });
+  });  
 
   // Add custom filter to sort arrays by property
   eleventyConfig.addFilter("sortBy", function(array, property) {

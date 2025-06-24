@@ -27,12 +27,38 @@ title: Top ranking apps
 
     <h1 class="text-lg sm:text-2xl font-semibold mt-10 mb-4">Top ranking apps</h1>
 
-    <p class="text-sm">This data is refreshed daily sometime between 00:00 and 03:00 UTC.</p>
+    <p class="text-sm">Click on an item to highlight it in all lists. This data is refreshed daily sometime between 00:00 and 03:00 UTC.</p>
 
-    <div class="top-installs sm:grid grid-cols-3 gap-2 md:gap-4">
-        <div>
+    <div class="top-installs sm:grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-4">
+        <div data-delta="-90d">
             <h2>
-                Top apps this month
+                Last 90 days
+                <span data-toggle="tooltip" title="Change in installs in the last 90 days">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
+                </span>
+            </h2>
+            {% set apps = marketplace | sortByInstallsDeltaNinetyDays | limit(50) %}
+            <ol>
+                {% for app in apps %}
+                    {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
+                    <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
+                            {{ app.name }}
+                        </a>
+                        {% if app.installsDelta.thirtyDays %}
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 30 days">
+                                {{ app.installsDelta.ninetyDays}}
+                            </span>
+                        {% endif %}
+                        <div class="text-gray-600 text-xs">by {{ vendor.name }}</div>
+                    </li>
+                {% endfor %}
+            </ol>
+
+        </div>
+        <div  data-delta="-30d">
+            <h2>
+                Last 30 days
                 <span data-toggle="tooltip" title="Change in installs in the last 30 days">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
                 </span>
@@ -41,7 +67,7 @@ title: Top ranking apps
             <ol>
                 {% for app in thisMonthsApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
-                    <li>
+                    <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
                         <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
                             {{ app.name }}
                         </a>
@@ -56,9 +82,9 @@ title: Top ranking apps
             </ol>
 
         </div>
-        <div>
+        <div data-delta="-7d">
             <h2>
-                Top apps this week
+                Last 7 days
 
                 <span data-toggle="tooltip" title="Change in installs in the last 7 days">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
@@ -69,7 +95,7 @@ title: Top ranking apps
             <ol>
                 {% for app in thisWeeksApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
-                    <li>
+                    <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
                         <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
                             {{ app.name }}
                         </a>
@@ -95,7 +121,7 @@ title: Top ranking apps
             <ol>
                 {% for app in trendingApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
-                    <li>
+                    <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
                         <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
                             {{ app.name }}
                         </a>
@@ -119,3 +145,32 @@ title: Top ranking apps
     <p><a href="https://youtube.com/watch?v=joh37lrvf-s" title="Althea & Donna - Uptown Top Ranking">More top ranking goodness</a>.</p>
 
 </div>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Select all elements with data-app-id attribute
+  const appElements = document.querySelectorAll('li[data-app-id]');
+  
+  // Add click event listener to each element
+  appElements.forEach(element => {
+    element.addEventListener('click', function() {
+      // Get the data-app-id value of the clicked element
+      const appId = this.getAttribute('data-app-id');
+      
+      // First remove .selected from all elements
+      appElements.forEach(el => {
+        el.classList.remove('selected');
+      });
+      
+      // Then add .selected to all elements with matching data-app-id
+      const matchingElements = document.querySelectorAll(`[data-app-id="${appId}"]`);
+      matchingElements.forEach(el => {
+        el.classList.add('selected');
+      });
+    });
+  });
+});
+</script>
