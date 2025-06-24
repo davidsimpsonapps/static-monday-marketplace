@@ -11,10 +11,11 @@ const { minify } = require("terser");
 
 module.exports = function(eleventyConfig) {
 
-  // Daily cache-busting timestamp filter
-  eleventyConfig.addFilter("dailyTimestamp", function() {
+  // cache-busting timestamp filter e.g. '2025-06-24T21:12'
+  // should be enough so that every build is cachebusted
+  eleventyConfig.addFilter("cacheBusterTimestamp", function() {
     const now = new Date();
-    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    return new Date().toISOString().substring(0,16);
   });
 
   // Add currentTimestamp filter for sitemap

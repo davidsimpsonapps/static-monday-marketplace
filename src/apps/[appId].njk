@@ -496,6 +496,6 @@ function toggleDebug() {
  data-installs-url="/_data/json/installs/apps/{{ app.app_id }}.json" 
  data-ratings-url="/_data/json/ratings/apps/{{ app.app_id }}.json" 
  data-trending-url="/_data/json/trending/apps/{{ app.app_id }}.json" 
- src="/js/historical-data.js?_={{ '' | dailyTimestamp }}"></script>
+ src="/js/historical-data.js?_={{ '' | cacheBusterTimestamp }}"></script>
 
 <script src="/js/fslightbox-basic-3.6.1/fslightbox.js"></script>
