@@ -103,11 +103,17 @@ eleventyComputed:
                   </span>
                 {% endif %}
 
-                {% if app.pricing_data %}
+                
+                {% if app.plans %}
                   <span class="badge blue">
-                    {{ app.pricing_data }}
+                    Paid
+                  </span>
+                {% else %}
+                  <span class="badge green" data-toggle="tooltip" title="No plan found. Could be free or paid elsewhere">
+                    Not paid
                   </span>
                 {% endif %}
+                
                 {% if app.label %}
                   <span  class="badge purple">
                     {{ app.label }}
@@ -414,7 +420,9 @@ eleventyComputed:
 
 
       <!-- Debug output -->
-      <div class="border-t border-gray-200 py-8 text-sm text-gray-500">
+      <div class="py-8 text-sm text-gray-500 w-full">
+
+          <h2>App metadata</h2>
 
           <span class="block md:inline md:float-right pb-2">
           <span>ID: {{app.id}}</span>
@@ -424,10 +432,10 @@ eleventyComputed:
           <span>Listing updated: {{app.updated_at | formatDate }}</span>
           </span>
 
-          <button onclick="toggleDebug()" class="text-sm text-gray-500 hover:text-gray-700 mb-2">
+          <button onclick="toggleDebug()" class="button">
             View app data JSON
           </button>
-          <pre id="debugOutput" class="bg-gray-100 p-4 mb-4 text-sm hidden">{{ app | stringify }}</pre>
+          <pre id="debugOutput" class="bg-gray-100 p-4 mb-4 text-sm hidden max-w-4xl">{{ app | stringify }}</pre>
       </div>
     
     </div>

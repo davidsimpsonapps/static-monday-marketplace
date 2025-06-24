@@ -45,7 +45,10 @@ title: Vendors
           data-installs="{{ appInstalls }}"
           data-monthly-installs="{{ monthlyInstalls }}"
           data-release-date="{{ vendor.created_at }}"
-          {% if vendor.ratings %}data-rating="{{ vendor.ratings.rating }}"{% endif %}
+          {% if vendor.ratings %}
+            data-rating="{{ vendor.ratings.rating }}"
+            data-rating-count="{{ vendor.ratings.count }}"
+          {% endif %}
           >
           <div class="p-6">
             {% if vendor.logo_url %}

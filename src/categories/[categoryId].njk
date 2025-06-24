@@ -17,21 +17,38 @@ eleventyComputed:
 
   {% set apps = marketplace | filterByCategory(category.id) | sortByInstalls %}
 
-  <div class="flex gap-3 mb-4">
-    <h1 class="text-lg md:text-2xl font-semibold">
-      {{ category.name }}
-    </h1>
-    <span>
-      <span data-total="{{ categories.length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
-        {{ apps.length }}
+
+    <div class="flex gap-3 mb-4 items-center justify-between">
+      <div class="flex gap-3 items-center">
+        <h1 class="text-lg md:text-2xl font-semibold">
+          {{ category.name }}
+        </h1>
+        <span>
+          <span data-total="{{ categories.length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
+            {{ apps.length }}
+          </span>
+        </span>
+      </div>
+      <span class="apps-menu">
+        <a 
+        href="http://monday.com/marketplace/category/{{ category.id }}/{{ category.name }}" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+          </svg>
+          View on Marketplace
+        </a>
       </span>
-    </span>
-  </div>  
+  </div>
+
 
   {% include "partials/search.njk" %}
   {% include "partials/sorting.njk" %}
   
-  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {% for app in apps %}
       {{ appCard(app, ratings, vendors, installs) }}
     {% endfor %}

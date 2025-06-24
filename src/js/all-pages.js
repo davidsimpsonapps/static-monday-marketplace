@@ -36,40 +36,50 @@ const cardSorting = () => {
 
     const sortingButtons = document.querySelectorAll('.sorting button');
 
+    const sortCards = (appCards, { sortBy, direction, dataType}) => {
+        appCards.sort((a, b) => {
+            let aValue = a.getAttribute(sortBy);
+            let bValue = b.getAttribute(sortBy);
+
+
+            // TODO cast to number, date or string if dataType is set
+            if (dataType === 'number') {
+                aValue = Number(aValue);
+                bValue = Number(bValue);
+            } else if (dataType === 'date') {
+                aValue = new Date(aValue);
+                bValue = new Date(bValue);
+            }
+            if (dataType === 'string') {
+                if (direction === 'ASC') {
+                    return aValue.localeCompare(bValue); 
+                } else {
+                    return bValue.localeCompare(aValue);
+                }
+            } else {
+                // compare dates, or numbers
+                if (direction === 'ASC') {
+                    return aValue - bValue;
+                } else {
+                    return bValue - aValue;
+                }
+            }
+        });
+    }
+
     sortingButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const sortBy = button.getAttribute('data-sort-by');
+            
+            const sortBy = button.getAttribute('data-sort-by'); // a CSV of sorting
             const direction = button.getAttribute('data-direction');
             const dataType = button.getAttribute('data-type');
             const appCards = Array.from(document.querySelectorAll('.card'));
 
-            appCards.sort((a, b) => {
-                let aValue = a.getAttribute(sortBy);
-                let bValue = b.getAttribute(sortBy);
+            const selectors = sortBy.split(',');
 
-                // TODO cast to number, date or string if dataType is set
-                if (dataType === 'number') {
-                    aValue = Number(aValue);
-                    bValue = Number(bValue);
-                } else if (dataType === 'date') {
-                    aValue = new Date(aValue);
-                    bValue = new Date(bValue);
-                }
-                if (dataType === 'string') {
-                    if (direction === 'ASC') {
-                        return aValue.localeCompare(bValue); 
-                    } else {
-                        return bValue.localeCompare(aValue);
-                    }
-                } else {
-                    // compare dates, or numbers
-                    if (direction === 'ASC') {
-                        return aValue - bValue;
-                    } else {
-                        return bValue - aValue;
-                    }
-                }
-            });
+            for (selector of selectors){
+                sortCards(appCards, { sortBy: selector, direction, dataType});
+            }
 
             sortingButtons.forEach(button => button.classList.remove('selected'));
             button.classList.add('selected');
@@ -78,6 +88,11 @@ const cardSorting = () => {
             appCards.forEach(card => container.appendChild(card));
         });
     });
+
+    if (location.pathname.startsWith('/categories/')) {
+        const sortByRatingButton = document.querySelector('#sortByRating');
+        sortByRatingButton && sortByRatingButton.click();
+    }
 }
 
 

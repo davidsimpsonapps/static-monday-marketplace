@@ -15,7 +15,14 @@
       data-toggle="tooltip" title="Average monthly installs"
       >
         Monthly installs</button>
+
     <button id="sortByTotalInstalls" data-type="number" data-sort-by="data-installs" data-direction="DESC">Total installs</button>
 
-    <button id="sortByRating" data-type="number" data-sort-by="data-rating" data-direction="DESC">Rating</button>
+    <button id="sortByRating" 
+      data-type="number" 
+      data-sort-by="data-installs,data-ratings-count,data-rating" 
+      data-direction="DESC"
+      data-toggle="tooltip" title="Sorted by total installs, then by no. of ratings, finally by the rating score"
+      >Rating</button>
+
   </div>

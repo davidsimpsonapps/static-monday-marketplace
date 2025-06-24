@@ -19,6 +19,7 @@
         data-monthly-installs="{{ montlyInstalls }}"
         data-release-date="{{ app.created_at }}"
         {% if ratings %}data-rating="{{ rating.rating }}"{% endif %}
+        {% if ratings %}data-ratings-count="{{ rating.count }}"{% endif %}
         {% if app.installsDelta.sevenDays %}data-installs-delta-7d="{{ app.installsDelta.sevenDays }}"{% endif %}
         {% if app.installsDelta.thirtyDays %}data-installs-delta-30d="{{ app.installsDelta.thirtyDays }}"{% endif %}
       >
@@ -96,13 +97,15 @@
                   Hosted by monday.com
                 </span>
               {% endif %}
-              {% if app.pricing_data %}
+
+              
+              {% if app.plans %}
                 <span class="badge blue">
-                  {{ app.pricing_data }}
+                  Paid
                 </span>
               {% else %}
-                <span class="badge green">
-                  Free app
+                <span class="badge green" data-toggle="tooltip" title="No plan found. Could be free or paid elsewhere.">
+                  Not paid
                 </span>
               {% endif %}
               {% if app.label %}
