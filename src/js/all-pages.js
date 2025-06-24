@@ -89,10 +89,14 @@ const cardSorting = () => {
         });
     });
 
-    if (location.pathname.startsWith('/categories/')) {
-        const sortByRatingButton = document.querySelector('#sortByRating');
-        sortByRatingButton && sortByRatingButton.click();
-    }
+
+
+    const sortByRatingButton = document.querySelector('#sortByRating');
+    sortByRatingButton && ['/categories/', '/vendors/'].forEach((i) => {
+        if (location.pathname.startsWith(i)) {
+            sortByRatingButton.click();
+        }
+    })
 }
 
 

@@ -18,11 +18,11 @@ title: Home
         </span>
       </span>
     </div>
-      <span class="apps-menu">
-        <a href="/" class="selected">Listings</a>
-        <a href="/top-ranking/">Top ranking</a>
-        <a href="/installs/">Installs</a>
-      </span>
+    <span class="apps-menu">
+      <a href="/" class="selected">Listings</a>
+      <a href="/top-ranking/">Top ranking</a>
+      <a href="/installs/">Installs</a>
+    </span>
   </div>
 
   <p class="py-4">
@@ -33,8 +33,7 @@ title: Home
   {% include "partials/search.njk" %}
   {% include "partials/sorting.njk" %}
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
 
     {% set specialApps = ['10000076', '10000574','10000414' ] %}
     {% for id in specialApps %}

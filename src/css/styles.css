@@ -90,6 +90,11 @@ header {
 
 .card {
     @apply overflow-hidden;
+    @apply block bg-white rounded-lg transition-colors transition-shadow duration-200;
+    @apply hover:bg-gray-100;
+}
+.category-card {
+    @apply overflow-hidden block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden flex flex-col h-full;
 }
 
 .chart-container {

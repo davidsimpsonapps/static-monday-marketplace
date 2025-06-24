@@ -30,7 +30,7 @@ title: Vendors
   {% include "partials/search.njk" %}
   {% include "partials/sorting.njk" %}
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
 
 
 
@@ -39,7 +39,7 @@ title: Vendors
         {% set monthlyInstalls = appInstalls | averageInstallsPerMonth(vendor.created_at) %}
       
         <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" 
-          class="card block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+          class="card"
           
           data-alpha="{{ vendor.name | trim }}"
           data-installs="{{ appInstalls }}"
