@@ -163,10 +163,10 @@ ol {
 }
 .top-installs h2, 
 .top-installs li {
-    @apply sm:h-16 md:h-14;
+    @apply sm:h-20 md:h-16;
 }
 .top-installs li a {
-    max-width: calc( 100% - 55px );
+    max-width: calc( 100% - 65px );
     text-overflow: ellipsis;
     overflow: hidden;
     @apply whitespace-nowrap inline-block align-top font-semibold;

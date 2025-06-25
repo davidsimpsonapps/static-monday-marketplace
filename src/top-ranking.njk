@@ -29,8 +29,36 @@ title: Top ranking apps
 
     <p class="text-sm">Click on an item to highlight it in all lists. This data is refreshed daily sometime between 00:00 and 03:00 UTC.</p>
 
-    <div class="top-installs sm:grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-4">
-        <div data-delta="-90d">
+    <div class="top-installs sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4">
+
+        <div class="order-5">
+            <h2>
+                All time
+                <span data-toggle="tooltip" title="All time installs">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
+                </span>
+            </h2>
+            {% set apps = marketplace | sortByTotalInstalls | limit(50) %}
+            <ol>
+                {% for app in apps %}
+                    {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
+                    <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
+                            {{ app.name }}
+                        </a>
+                        {% if app.installsDelta.totalInstalls %}
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 30 days" data-placement="top">
+                                {{ app.installsDelta.totalInstalls}}
+                            </span>
+                        {% endif %}
+                        <div class="text-gray-600 text-xs">by {{ vendor.name }}</div>
+                    </li>
+                {% endfor %}
+            </ol>
+
+        </div>
+
+        <div class="order-4" data-delta="-90d">
             <h2>
                 Last 90 days
                 <span data-toggle="tooltip" title="Change in installs in the last 90 days">
@@ -42,11 +70,11 @@ title: Top ranking apps
                 {% for app in apps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
-                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.thirtyDays %}
-                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 30 days">
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 30 days" data-placement="top">
                                 {{ app.installsDelta.ninetyDays}}
                             </span>
                         {% endif %}
@@ -56,7 +84,7 @@ title: Top ranking apps
             </ol>
 
         </div>
-        <div  data-delta="-30d">
+        <div class="order-3" data-delta="-30d">
             <h2>
                 Last 30 days
                 <span data-toggle="tooltip" title="Change in installs in the last 30 days">
@@ -68,11 +96,11 @@ title: Top ranking apps
                 {% for app in thisMonthsApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
-                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.thirtyDays %}
-                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 30 days">
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 30 days" data-placement="top">
                                 {{ app.installsDelta.thirtyDays}}
                             </span>
                         {% endif %}
@@ -82,7 +110,7 @@ title: Top ranking apps
             </ol>
 
         </div>
-        <div data-delta="-7d">
+        <div class="order-2" data-delta="-7d">
             <h2>
                 Last 7 days
 
@@ -96,11 +124,11 @@ title: Top ranking apps
                 {% for app in thisWeeksApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
-                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.sevenDays %}
-                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 7 days">
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 7 days" data-placement="top">
                                 {{ app.installsDelta.sevenDays}}
                             </span>
                         {% endif %}
@@ -109,7 +137,7 @@ title: Top ranking apps
                 {% endfor %}
             </ol>
         </div>
-        <div>
+        <div class="order-1">
             <h2>
                 Trending this week <em>category</em>
                 <span data-toggle="tooltip" title="Data as provided by monday.com">
@@ -122,11 +150,11 @@ title: Top ranking apps
                 {% for app in trendingApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
-                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" >
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.sevenDays %}
-                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 7 days">
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 7 days" data-placement="top">
                                 {{ app.installsDelta.sevenDays}}
                             </span>
                         {% endif %}

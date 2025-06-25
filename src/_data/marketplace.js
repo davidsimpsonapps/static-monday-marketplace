@@ -40,6 +40,8 @@ function getInstallsDelta(app, { allInstallsToday, allInstallsSevenDaysAgo, allI
   // const installsOneYearAgo = parseInt(allInstallsOneYearAgo[app.app_id]) ?? null;  
   console.log(app.name, {installsToday, installsSevenDaysAgo, installsThirtyAgo, installsNinetyAgo, /*installsOneYearAgo*/});
 
+  installsDelta.totalInstalls = installsToday;
+
   if (installsToday && installsSevenDaysAgo){
     installsDelta.sevenDays = installsToday - installsSevenDaysAgo;
   }
