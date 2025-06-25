@@ -154,6 +154,20 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  
+  // Add custom filter to sort apps by install count
+  eleventyConfig.addFilter("sortByTotalInstalls", function(apps) {
+    if (!Array.isArray(apps)) return [];
+    
+    return [...apps].sort((a, b) => {
+      // Handle cases where installsDelta or sevenDays might be missing
+      const aInstalls = a.installsDelta?.totalInstalls ?? -Infinity;
+      const bInstalls = b.installsDelta?.totalInstalls ?? -Infinity;
+      
+      // Sort descending (higher numbers first)
+      return bInstalls - aInstalls;
+    });
+  });
 
   // Add custom filter to sort apps by install count
   eleventyConfig.addFilter("sortByInstallsDeltaSevenDays", function(apps) {
