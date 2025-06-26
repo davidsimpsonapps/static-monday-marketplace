@@ -152,7 +152,7 @@ header {
     @apply flex items-center gap-2;
 }
 .item-list.list .list-cols .ratings {
-    @apply w-32;
+    @apply w-24 min-w-24;
 }
 
 .category-card {
