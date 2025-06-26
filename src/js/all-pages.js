@@ -95,7 +95,7 @@ const cardSorting = () => {
             const sortBy = button.getAttribute('data-sort-by'); // a CSV of sorting
             const direction = button.getAttribute('data-direction');
             const dataType = button.getAttribute('data-type');
-            const appCards = Array.from(document.querySelectorAll('.item'));
+            const appCards = Array.from(document.querySelectorAll('.item:not(.list-header)'));
 
             const selectors = sortBy.split(',');
 
