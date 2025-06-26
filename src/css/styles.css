@@ -200,6 +200,7 @@ button.list-format,
     cursor: pointer;
 }
 
+.apps-menu a,
 .sorting .grow button {
     @apply rounded;
 }
