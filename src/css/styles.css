@@ -190,7 +190,7 @@ ol {
 button.list-format,
 .apps-menu a,
 .sorting button {
-    @apply bg-gray-100 text-gray-600 px-2 py-1 rounded-md text-sm;
+    @apply bg-gray-100 text-gray-600 px-2 py-1  text-sm;
     &:hover {
         @apply bg-gray-200;
     }
@@ -199,6 +199,11 @@ button.list-format,
     }
     cursor: pointer;
 }
+
+.sorting .grow button {
+    @apply rounded;
+}
+
 
 button.list-format svg.Icon-module_icon {
     vertical-align: text-bottom;
