@@ -91,6 +91,9 @@ header {
 .item-list.cards {
     @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-y-4;
 }
+.item-list.list {
+    @apply table;
+}
 .item-list.cards .item {
     @apply flex flex-col justify-between h-full;
 }
@@ -103,6 +106,9 @@ header {
     @apply block bg-white rounded-lg transition-colors transition-shadow duration-200;
     @apply p-4 mb-4;
     @apply hover:bg-gray-100;
+}
+.item-list .item.hide-me {
+    display: none!important;
 }
 
 .item.list-header {

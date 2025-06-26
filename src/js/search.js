@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Search function
   function performSearch(e) {
     const searchText = e.target.value.toLowerCase();
-    const allItems = document.querySelectorAll('.item');
+    const allItems = document.querySelectorAll('.item:not(.list-header)');
     
     // not async `allItems.forEach` so we can calculate the total number of visible apps
     for (const item of allItems) {
       if (item.innerText.toLowerCase().includes(searchText)) {
-        item.style.display = 'block';
+        item.classList.remove('hide-me');
       } else {
-        item.style.display = 'none';
+        item.classList.add('hide-me');
       }
     }
 
