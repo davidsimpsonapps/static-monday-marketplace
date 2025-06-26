@@ -56,7 +56,7 @@ const toggleListStyle = () => {
  */
 const cardSorting = () => {
 
-    const sortingButtons = document.querySelectorAll('.sorting button');
+    const sortingButtons = document.querySelectorAll('.sorting .grow button');
 
     const sortCards = (appCards, { sortBy, direction, dataType}) => {
         appCards.sort((a, b) => {
