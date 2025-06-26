@@ -32,6 +32,28 @@ const emboldenNavLinks = () => {
     });
 }
 
+const toggleListStyle = () => {
+    // <button class="list-format" aria-controls=".item-list" data-add-class="table" data-remove-class="cards">table</button>
+    const buttons = document.querySelectorAll('button.list-format');
+    buttons && buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const target = document.querySelector(
+                button.getAttribute('aria-controls')
+            );
+            if (target){
+                target.classList.add(button.getAttribute('data-add-class'));
+                target.classList.remove(button.getAttribute('data-remove-class'));
+
+                buttons.forEach(button => button.classList.remove('selected'));
+                button.classList.add('selected');
+            }
+        });
+    });
+}
+
+/**
+ * Sort the items in an .item-list
+ */
 const cardSorting = () => {
 
     const sortingButtons = document.querySelectorAll('.sorting button');
@@ -73,7 +95,7 @@ const cardSorting = () => {
             const sortBy = button.getAttribute('data-sort-by'); // a CSV of sorting
             const direction = button.getAttribute('data-direction');
             const dataType = button.getAttribute('data-type');
-            const appCards = Array.from(document.querySelectorAll('.card'));
+            const appCards = Array.from(document.querySelectorAll('.item'));
 
             const selectors = sortBy.split(',');
 
@@ -179,6 +201,7 @@ const tooltips = () => {
 
  const init = () => {
 
+    toggleListStyle();
     cardSorting();
     emboldenNavLinks();
     scrollToTop();

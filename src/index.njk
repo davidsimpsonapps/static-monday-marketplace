@@ -33,7 +33,13 @@ title: Home
   {% include "partials/search.njk" %}
   {% include "partials/sorting.njk" %}
 
-  <div class="card-grid">
+
+  <div class="item-list cards">
+    <div class="item card cards-hidden list-header">
+      <div></div>
+      <div>App</div>
+      <div>Vendor</div>
+    </div>
 
     {% set specialApps = ['10000076', '10000574','10000414' ] %}
     {% for id in specialApps %}

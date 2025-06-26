@@ -88,16 +88,73 @@ header {
     max-width: 180px;
 }
 
-.card-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5;
+.item-list.cards {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-y-4;
+}
+.item-list.cards .item {
+    @apply flex flex-col justify-between h-full;
+}
+.item-list.list .item {
+    @apply table w-full;
 }
 
-.card {
+.item {
     @apply overflow-hidden;
     @apply block bg-white rounded-lg transition-colors transition-shadow duration-200;
-    @apply hover:bg-gray-100;
     @apply p-4 mb-4;
+    @apply hover:bg-gray-100;
 }
+
+.item.list-header {
+    @apply text-sm hover:bg-white font-semibold mt-4 border-b-2;
+}
+
+
+
+.item-list.list .item   {
+    @apply table-row gap-2 w-full;   
+} 
+.item-list.list .item > *  {
+    @apply table-cell align-middle p-2;   
+} 
+
+.item-list.cards .item-logo {
+    @apply w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded;
+}
+.item-list.list .item-logo {
+    @apply w-6 h-6 rounded;
+}
+
+.item-list.cards .item-title {
+    @apply text-lg font-semibold mb-1 mt-2;
+}
+.item-list.list .item-title {
+    @apply text-base font-semibold m-0 p-0;
+}
+.item.cards  .description {
+    @apply text-sm text-gray-600;
+}
+.item-list.cards .cards-hidden,
+.item-list.list .list-hidden,
+.item-list.list .description {
+    @apply hidden;
+}
+
+.item-list .item .install-counts {
+    @apply text-gray-400 text-xs;
+}
+
+.item-list.cards .item .install-counts {
+    @apply my-2 mb-4;
+}
+
+.item-list.list .list-cols {
+    @apply flex items-center gap-2;
+}
+.item-list.list .list-cols .ratings {
+    @apply w-32;
+}
+
 .category-card {
     @apply overflow-hidden block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden flex flex-col h-full;
 }
@@ -128,8 +185,9 @@ ol {
 
 
 .sorting {
-    @apply -mt-2 mb-6 text-right leading-8;
+    @apply -mt-2 mb-6 leading-8;
 }
+button.list-format,
 .apps-menu a,
 .sorting button {
     @apply bg-gray-100 text-gray-600 px-2 py-1 rounded-md text-sm;
@@ -139,7 +197,16 @@ ol {
     &.active {
         @apply bg-gray-200;
     }
+    cursor: pointer;
 }
+
+button.list-format svg.Icon-module_icon {
+    vertical-align: text-bottom;
+}
+
+
+
+button.selected,
 .apps-menu a.selected,
 .sorting button.selected {
     @apply bg-gray-300 text-black; 
@@ -203,3 +270,4 @@ ol {
 .button {
     @apply m-1 px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
 }
+

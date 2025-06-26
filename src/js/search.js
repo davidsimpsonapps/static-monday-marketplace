@@ -18,18 +18,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // Search function
   function performSearch(e) {
     const searchText = e.target.value.toLowerCase();
-    const appCards = document.querySelectorAll('.card');
+    const allItems = document.querySelectorAll('.item');
     
-    // not async `appCard.forEach` so we can calculate the total number of visible apps
-    for (const card of appCards) {
-      if (card.innerText.toLowerCase().includes(searchText)) {
-        card.style.display = 'block';
+    // not async `allItems.forEach` so we can calculate the total number of visible apps
+    for (const item of allItems) {
+      if (item.innerText.toLowerCase().includes(searchText)) {
+        item.style.display = 'block';
       } else {
-        card.style.display = 'none';
+        item.style.display = 'none';
       }
     }
 
-    const visbleApps = [...appCards].filter(card => card.style.display === 'block');
+    const visbleApps = [...allItems].filter(card => card.style.display === 'block');
     const totalsBadge = document.querySelector('[data-total]');
     
     if (totalsBadge) {

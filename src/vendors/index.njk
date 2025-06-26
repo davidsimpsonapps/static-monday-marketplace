@@ -39,7 +39,7 @@ title: Vendors
         {% set monthlyInstalls = appInstalls | averageInstallsPerMonth(vendor.created_at) %}
       
         <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" 
-          class="card"
+          class="item card"
           
           data-alpha="{{ vendor.name | trim }}"
           data-installs="{{ appInstalls }}"
