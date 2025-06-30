@@ -123,32 +123,34 @@ eleventyComputed:
       </div>
 
 
-      <!-- Install history since 2025-06-07 -->
       <div class="my-8"></div>
       <div>
+        <h2 id="historical" class="text-lg sm:text-2xl font-semibold mb-4">Historical data</h2>
+        
+        <h3 id="installs" class="text-xl font-medium mb-4">Installation history</h3>
 
-          <h2 id="installs" class="text-lg sm:text-2xl font-semibold mb-4">Installation history</h2>
-          <p class="text-xs text-gray-600">June 9, 2025 onwards only. Collected sometime after 00:00 UTC daily.</p>
-          
-          <div class="chart-container">
-            <div class="h-96">
-              <canvas id="installChart"></canvas>
-            </div>
+        <!-- Install history since 2025-06-07 -->
+        <p class="text-xs text-gray-600">June 9, 2025 onwards only. Collected sometime after 00:00 UTC daily.</p>
+        
+        <div class="chart-container">
+          <div class="h-96">
+            <canvas id="installChart"></canvas>
           </div>
- 
-          <div class="chart-container">
-            <p class="text-xs text-gray-600">This compares the number of installs on each date with 7 days previously:</p>        
-            <div class="h-96">
-              <canvas id="weeklyInstallChart"></canvas>
-            </div>
-          </div> 
+        </div>
 
-          <div class="chart-container">
-            <p class="text-xs text-gray-600">This compares the number of installs on each date with 30 days previously:</p>
-            <div class="h-96">
-              <canvas id="monthlyInstallChart"></canvas>
-            </div>
-          </div>   
+        <div class="chart-container">
+          <p class="text-xs text-gray-600">This compares the number of installs on each date with 7 days previously:</p>        
+          <div class="h-96">
+            <canvas id="weeklyInstallChart"></canvas>
+          </div>
+        </div> 
+
+        <div class="chart-container">
+          <p class="text-xs text-gray-600">This compares the number of installs on each date with 30 days previously:</p>
+          <div class="h-96">
+            <canvas id="monthlyInstallChart"></canvas>
+          </div>
+        </div>   
         
       </div>
     </div>
