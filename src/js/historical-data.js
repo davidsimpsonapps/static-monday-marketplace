@@ -369,7 +369,7 @@ async function initChart() {
     const installsUrlNode = document.querySelector('[data-installs-url]');
     if (installsUrlNode) {
         const installsUrl = installsUrlNode.getAttribute('data-installs-url');
-        if (url) {
+        if (installsUrl) {
             const data = await loadAppData(installsUrl, '.chart-container:first');
             // console.log('installs.js', { installsUrl, data });
             
