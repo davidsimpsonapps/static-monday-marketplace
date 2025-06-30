@@ -33,10 +33,8 @@ title: Top ranking apps
 
         <div class="order-5">
             <h2>
-                All time
-                <span data-toggle="tooltip" title="All time installs">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
-                </span>
+                <span class="mr-1">All time</span>
+
                 <button class="highlight-all-apps-in-list" 
                     aria-controls="allTime" 
                     data-toggle="tooltip" 
@@ -44,6 +42,8 @@ title: Top ranking apps
                     >🔦</button>
                 
             </h2>
+            <p>All time installs.</p>
+
             {% set apps = marketplace | sortByTotalInstalls | limit(20) %}
             <ol id="allTime">
                 {% for app in apps %}
@@ -53,7 +53,7 @@ title: Top ranking apps
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.totalInstalls %}
-                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 30 days" data-placement="top">
+                            <span class="badge text-xs" data-toggle="tooltip" title="Nno. of installs" data-placement="top">
                                 {{ app.installsDelta.totalInstalls}}
                             </span>
                         {% endif %}
@@ -66,16 +66,15 @@ title: Top ranking apps
 
         <div class="order-4" data-delta="-90d">
             <h2>
-                Last 90 days
-                <span data-toggle="tooltip" title="Change in installs in the last 90 days">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
-                </span>
+                <span class="mr-1">Last 90 days</span>
+
                 <button class="highlight-all-apps-in-list" 
                     aria-controls="last90days" 
                     data-toggle="tooltip" 
                     title="Highlight all apps in this list"
                     >🔦</button>
             </h2>
+            <p>Change in no. of installs in the last 90 days.</p>
 
             {% set apps = marketplace | sortByInstallsDeltaNinetyDays | limit(20) %}
             <ol id="last90days">
@@ -86,7 +85,7 @@ title: Top ranking apps
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.thirtyDays %}
-                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 30 days" data-placement="top">
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in no. of installs in the last 30 days" data-placement="top">
                                 {{ app.installsDelta.ninetyDays}}
                             </span>
                         {% endif %}
@@ -98,16 +97,15 @@ title: Top ranking apps
         </div>
         <div class="order-3" data-delta="-30d">
             <h2>
-                Last 30 days
-                <span data-toggle="tooltip" title="Change in installs in the last 30 days">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
-                </span>
+                <span class="mr-1">Last 30 days</span>
+
                 <button class="highlight-all-apps-in-list" 
                     aria-controls="last30days" 
                     data-toggle="tooltip" 
                     title="Highlight all apps in this list"
                     >🔦</button>
             </h2>
+            <p>Change in no. of installs in the last 30 days.</p>
 
             {% set thisMonthsApps = marketplace | sortByInstallsDeltaThirtyDays | limit(20) %}
             <ol id="last30days">
@@ -118,7 +116,7 @@ title: Top ranking apps
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.thirtyDays %}
-                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 30 days" data-placement="top">
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in no. of installs in the last 30 days" data-placement="top">
                                 {{ app.installsDelta.thirtyDays}}
                             </span>
                         {% endif %}
@@ -130,17 +128,15 @@ title: Top ranking apps
         </div>
         <div class="order-2" data-delta="-7d">
             <h2>
-                Last 7 days
+                <span class="mr-1">Last 7 days</span>
 
-                <span data-toggle="tooltip" title="Change in installs in the last 7 days">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
-                </span>
                 <button class="highlight-all-apps-in-list" 
                     aria-controls="last7days" 
                     data-toggle="tooltip" 
                     title="Highlight all apps in this list"
                     >🔦</button>
             </h2>
+            <p>Change in no. of installs in the last 7 days.</p>
 
             {% set thisWeeksApps = marketplace | sortByInstallsDeltaSevenDays | limit(20) %}
             <ol id="last7days">
@@ -151,7 +147,7 @@ title: Top ranking apps
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.sevenDays %}
-                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 7 days" data-placement="top">
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in no. of installs in the last 7 days" data-placement="top">
                                 {{ app.installsDelta.sevenDays}}
                             </span>
                         {% endif %}
@@ -163,16 +159,15 @@ title: Top ranking apps
 
         <div class="order-1">
             <h2>
-                Trending this week <em>category</em>
-                <span data-toggle="tooltip" title="Data as provided by monday.com">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
-                </span>
+                <span class="mr-1">"Trending this week"</span>
+
                 <button class="highlight-all-apps-in-list" 
                     aria-controls="trendingApps" 
                     data-toggle="tooltip" 
                     title="Highlight all apps in this list"
                     >🔦</button>
             </h2>
+            <p>Apps in the "Trending this week" category in the marketplace.</p>
         
             {% set trendingApps = marketplace | filterByCategory(10000004) | sortByInstallsDeltaSevenDays %}
             <ol id="trendingApps">
@@ -183,7 +178,7 @@ title: Top ranking apps
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.sevenDays %}
-                            <span class="badge text-xs" data-toggle="tooltip" title="Change in installs in the last 7 days" data-placement="top">
+                            <span class="badge text-xs" data-toggle="tooltip" title="Change in no. of installs in the last 7 days" data-placement="top">
                                 {{ app.installsDelta.sevenDays}}
                             </span>
                         {% endif %}

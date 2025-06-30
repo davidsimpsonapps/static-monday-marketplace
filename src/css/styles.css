@@ -240,11 +240,14 @@ button.selected,
 }
 
 .top-installs h2 {
-    @apply lg:h-auto sm:h-24 md:h-16 font-semibold mt-4;
+    @apply  font-semibold mt-4;
 }
-.top-installs h2, 
+ 
 .top-installs li {
     @apply sm:h-20 md:h-16;
+}
+.top-installs p {
+    @apply mb-6 text-sm sm:h-12;
 }
 .top-installs li a {
     max-width: calc( 100% - 65px );
