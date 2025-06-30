@@ -366,40 +366,52 @@ function renderTrendingChart(appData) {
 
 // Initialize the charts
 async function initChart() {
-    const url = document.querySelector('[data-installs-url]').getAttribute('data-installs-url');
-    if (url) {
-        const data = await loadAppData(url, '.chart-container:first');
-        // console.log('installs.js', { url, data });
-        
-        if (data) {
-            renderChart(data);
-            if (document.getElementById('weeklyInstallChart')) {
-                renderWeeklyChart(data);
-            }
-            if (document.getElementById('monthlyInstallChart')) {
-                renderMonthlyChart(data);
+    const installsUrlNode = document.querySelector('[data-installs-url]');
+    if (installsUrlNode) {
+        const installsUrl = installsUrlNode.getAttribute('data-installs-url');
+        if (url) {
+            const data = await loadAppData(installsUrl, '.chart-container:first');
+            // console.log('installs.js', { installsUrl, data });
+            
+            if (data) {
+                renderChart(data);
+                if (document.getElementById('weeklyInstallChart')) {
+                    renderWeeklyChart(data);
+                }
+                if (document.getElementById('monthlyInstallChart')) {
+                    renderMonthlyChart(data);
+                }
             }
         }
     }
 
-    const ratingsUrl = document.querySelector('[data-ratings-url]').getAttribute('data-ratings-url');
-    if (ratingsUrl) {
-        const ratingsData = await loadAppData(ratingsUrl, '#ratings-body');
-        // console.log('ratingsData', ratingsData);
-        ratingsData && renderRatingsChart(ratingsData);
+    const ratingsUrlNode = document.querySelector('[data-ratings-url]');
+    if(ratingsUrlNode){
+        const ratingsUrl = ratingsUrlNode.getAttribute('data-ratings-url');
+        if (ratingsUrl) {
+            const ratingsData = await loadAppData(ratingsUrl, '#ratings-body');
+            // console.log('ratingsData', ratingsData);
+            ratingsData && renderRatingsChart(ratingsData);
+        }
     }
 
-    const categoriesUrl = document.querySelector('[data-categories-url]').getAttribute('data-categories-url');
-    if (categoriesUrl) {
-        const categoriesData = await loadAppData(categoriesUrl, '#categories-body');
-        // console.log('categoriesData', categoriesData);
-        categoriesData && renderCategoriesCharts(categoriesData);
+    const categoriesUrlNode = document.querySelector('[data-categories-url]');
+    if (categoriesUrlNode) {
+        const categoriesUrl = categoriesUrlNode.getAttribute('data-categories-url');
+        if (categoriesUrl) {
+            const categoriesData = await loadAppData(categoriesUrl, '#categories-body');
+            // console.log('categoriesData', categoriesData);
+            categoriesData && renderCategoriesCharts(categoriesData);
+        }
     }
-    const trendingUrl =  document.querySelector('[data-trending-url]').getAttribute('data-trending-url');
-    if (trendingUrl) {
-        const trendingData = await loadAppData(trendingUrl, '#trending-body');
-        // console.log('categoriesData', categoriesData);
-        trendingData && renderTrendingChart(trendingData); // #trendingCountChart
+    const trendingUrlNode =  document.querySelector('[data-trending-url]');
+    if (trendingUrlNode) {
+        const trendingUrl = trendingUrlNode.getAttribute('data-trending-url');
+        if (trendingUrl) {
+            const trendingData = await loadAppData(trendingUrl, '#trending-body');
+            // console.log('categoriesData', categoriesData);
+            trendingData && renderTrendingChart(trendingData); // #trendingCountChart
+        }
     }
 }
 
