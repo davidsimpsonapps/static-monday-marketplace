@@ -99,7 +99,23 @@ eleventyComputed:
       {% include "partials/sorting.njk" %}
 
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="vendors item-list cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+
+        <div class="item card cards-hidden list-header">
+          <div></div>
+          <div>App</div>
+          <div>
+            <div class="list-cols">           
+              <div class="ratings">
+                Ratings
+              </div>
+              <div>Installs</div>
+            </div>
+          </div>
+        </div>
+
+
         {% for app in apps %}
           {% set appRatings = ratings | default([]) %}
           {{ appCard(app, appRatings, vendors, installs) }}

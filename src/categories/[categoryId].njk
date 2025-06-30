@@ -48,7 +48,22 @@ eleventyComputed:
   {% include "partials/search.njk" %}
   {% include "partials/sorting.njk" %}
   
-  <div class="item-list">
+  
+  <div class="item-list cards">
+
+    <div class="item card cards-hidden list-header">
+      <div></div>
+      <div>App</div>
+      <div>Vendor</div>
+      <div>
+        <div class="list-cols">           
+          <div class="ratings">
+            Ratings
+          </div>
+          <div>Installs</div>
+        </div>
+      </div>
+    </div>
     {% for app in apps %}
       {{ appCard(app, ratings, vendors, installs) }}
     {% endfor %}

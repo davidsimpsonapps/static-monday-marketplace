@@ -107,9 +107,11 @@ header {
     @apply p-4 mb-4;
     @apply hover:bg-gray-100;
 }
-.item-list .item.hide-me {
+.item-list .item.hide-me,
+.vendors.item-list.list .item .vendors-hide-list {
     display: none!important;
 }
+
 
 .item.list-header {
     @apply text-sm hover:bg-white font-semibold mt-4 border-b-2;
