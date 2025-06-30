@@ -80,7 +80,7 @@
                 {% if installs %}
                   <div class="install-counts">      
                     {{ appInstalls | numberFormat }} installs,
-                    since {{ app.created_at | formatDate }}.<br class="list-hidden">
+                    since {{ app.created_at | formatDate }}.&nbsp; <br class="list-hidden">
                     <span class="whitespace-nowrap">{{ montlyInstalls | numberFormat }} installs/month.</span>
                   </div>
                 {% endif %}
