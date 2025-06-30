@@ -119,7 +119,11 @@ function renderChart(appData) {
 
 // Render the Chart.js graph for weekly install change
 function renderWeeklyChart(appData) {
-    const ctx = document.getElementById('weeklyInstallChart').getContext('2d');
+    const node = document.getElementById('weeklyInstallChart');
+    if (!node) {
+        return
+    }
+    const ctx = node.getContext('2d');
     // Sort history by date (oldest first)
     const sortedHistory = [...appData.history].sort((a, b) => new Date(a.date) - new Date(b.date));
     // Calculate weekly change
@@ -157,7 +161,11 @@ function renderWeeklyChart(appData) {
 
 // Render the Chart.js graph for monthly install change
 function renderMonthlyChart(appData) {
-    const ctx = document.getElementById('monthlyInstallChart').getContext('2d');
+    const node = document.getElementById('monthlyInstallChart');
+    if (!node) {
+        return 
+    }
+    const ctx = node.getContext('2d');
     // Sort history by date (oldest first)
     const sortedHistory = [...appData.history].sort((a, b) => new Date(a.date) - new Date(b.date));
     // Calculate monthly change (difference from 30 days prior)
@@ -286,13 +294,15 @@ function renderCategoriesCharts(categoriesData) {
         let categoryChart = categoryCharts[c] ?? null;
         if (categoryChart) categoryChart.destroy();
 
-        const selector = `canvas[data-category-id="${c}"]`;
-        // console.log(selector);
+        const node = document.querySelector(`canvas[data-category-id="${c}"]`);
+        // console.log(node);
+        if (!node) {
+            return
+        }
 
-        const chartCtx = document.querySelector(selector).getContext('2d');
+        const chartCtx = node.getContext('2d');
         const labels = sortedData.map(item => item.date)
         const data = sortedData.map(item => item.count ? parseInt(item.count) : 0)
-        console.log('chart data', {labels,data})
 
         const options = { ...defaultOptions };
 
@@ -366,21 +376,16 @@ function renderTrendingChart(appData) {
 
 // Initialize the charts
 async function initChart() {
+
     const installsUrlNode = document.querySelector('[data-installs-url]');
     if (installsUrlNode) {
         const installsUrl = installsUrlNode.getAttribute('data-installs-url');
         if (installsUrl) {
-            const data = await loadAppData(installsUrl, '.chart-container:first');
-            // console.log('installs.js', { installsUrl, data });
-            
+            const data = await loadAppData(installsUrl, '.chart-container:first');            
             if (data) {
                 renderChart(data);
-                if (document.getElementById('weeklyInstallChart')) {
-                    renderWeeklyChart(data);
-                }
-                if (document.getElementById('monthlyInstallChart')) {
-                    renderMonthlyChart(data);
-                }
+                renderWeeklyChart(data);
+                renderMonthlyChart(data);            
             }
         }
     }
@@ -390,7 +395,6 @@ async function initChart() {
         const ratingsUrl = ratingsUrlNode.getAttribute('data-ratings-url');
         if (ratingsUrl) {
             const ratingsData = await loadAppData(ratingsUrl, '#ratings-body');
-            // console.log('ratingsData', ratingsData);
             ratingsData && renderRatingsChart(ratingsData);
         }
     }
@@ -400,7 +404,6 @@ async function initChart() {
         const categoriesUrl = categoriesUrlNode.getAttribute('data-categories-url');
         if (categoriesUrl) {
             const categoriesData = await loadAppData(categoriesUrl, '#categories-body');
-            // console.log('categoriesData', categoriesData);
             categoriesData && renderCategoriesCharts(categoriesData);
         }
     }
@@ -409,7 +412,6 @@ async function initChart() {
         const trendingUrl = trendingUrlNode.getAttribute('data-trending-url');
         if (trendingUrl) {
             const trendingData = await loadAppData(trendingUrl, '#trending-body');
-            // console.log('categoriesData', categoriesData);
             trendingData && renderTrendingChart(trendingData); // #trendingCountChart
         }
     }
