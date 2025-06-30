@@ -2,6 +2,7 @@
 layout: base.njk
 title: Top ranking apps
 ---
+{% import "partials/partner-badge.njk" as badges %}
 
 <div>
 
@@ -57,7 +58,10 @@ title: Top ranking apps
                                 {{ app.installsDelta.totalInstalls}}
                             </span>
                         {% endif %}
-                        <div class="text-gray-600 text-xs">by {{ vendor.name }}</div>
+                        <div class="text-gray-600 text-xs">
+                            by {{ vendor.name }}
+                            {{ badges.partnerBadge(vendor.partners_program) }}
+                        </div>
                     </li>
                 {% endfor %}
             </ol>
@@ -89,7 +93,10 @@ title: Top ranking apps
                                 {{ app.installsDelta.ninetyDays}}
                             </span>
                         {% endif %}
-                        <div class="text-gray-600 text-xs">by {{ vendor.name }}</div>
+                        <div class="text-gray-600 text-xs">
+                            by {{ vendor.name }}
+                            {{ badges.partnerBadge(vendor.partners_program) }}
+                        </div>
                     </li>
                 {% endfor %}
             </ol>
@@ -120,7 +127,10 @@ title: Top ranking apps
                                 {{ app.installsDelta.thirtyDays}}
                             </span>
                         {% endif %}
-                        <div class="text-gray-600 text-xs">by {{ vendor.name }}</div>
+                        <div class="text-gray-600 text-xs">
+                            by {{ vendor.name }}
+                            {{ badges.partnerBadge(vendor.partners_program) }}
+                        </div>
                     </li>
                 {% endfor %}
             </ol>
@@ -151,7 +161,11 @@ title: Top ranking apps
                                 {{ app.installsDelta.sevenDays}}
                             </span>
                         {% endif %}
-                        <div class="text-gray-600 text-xs">by {{ vendor.name }}</div>
+                        <div class="text-gray-600 text-xs">
+                            by {{ vendor.name }}
+                            
+                            {{ badges.partnerBadge(vendor.partners_program) }}
+                        </div>
                     </li>
                 {% endfor %}
             </ol>
@@ -182,7 +196,10 @@ title: Top ranking apps
                                 {{ app.installsDelta.sevenDays}}
                             </span>
                         {% endif %}
-                        <div class="text-gray-600 text-xs">by {{ vendor.name }}</div>
+                        <div class="text-gray-600 text-xs">
+                            by {{ vendor.name }}
+                            {{ badges.partnerBadge(vendor.partners_program) }}
+                        </div>
                     </li>
                 {% endfor %}
             </ol>
