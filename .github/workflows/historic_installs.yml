@@ -1,9 +1,9 @@
-name: Historic App Install Data Update
+name: Historic App Data Update 
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
-  workflow_dispatch:      # Allows manual runs
+    - cron: "0 0 * * *" # Runs daily at midnight UTC
+  workflow_dispatch: # Allows manual runs
 
 jobs:
   update-installs:
@@ -11,7 +11,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
 
       - name: Fetch full marketplace data
         run: |
@@ -46,7 +45,7 @@ jobs:
 
           # Process categories with sanitized data
           sanitized_data=$(sanitize_for_categories "$(cat marketplace.json)")
-          
+
           echo "$sanitized_data" | jq -c '.marketplace_apps[]?' | while read -r app_data; do
             # Extract required fields
             app_id=$(echo "$app_data" | jq -r '.app_id')
@@ -78,7 +77,6 @@ jobs:
                 }' > "$output_file"
             fi
           done
-
 
       - name: Fetch app install data
         run: |
@@ -125,7 +123,7 @@ jobs:
 
           # Create/update the all-app-installs.json file
           total_count=$(jq '[.[] | tonumber] | add' installs.json)
-          
+
           if [ -f "src/_data/json/installs/all-app-installs.json" ]; then
             # Update existing file
             jq \
@@ -151,8 +149,8 @@ jobs:
       - name: Fetch vendor install data
         run: |
           curl -s 'https://marketplace-ms.monday.com/marketplace_ms/public/marketplace-developers?includeEnrichment=true' > vendors.json
-      
-      - name: Process and store vendor data
+
+      - name: Process and store vendor install data
         run: |
           # Create target directories if they don't exist
           mkdir -p src/_data/json/installs/vendors/historical
@@ -195,7 +193,7 @@ jobs:
 
       - name: Fetch app ratings data
         run: |
-          curl -s "https://marketplace-ms.monday.com/marketplace_ms/public/analytics/app_ratings" > ratings.json      
+          curl -s "https://marketplace-ms.monday.com/marketplace_ms/public/analytics/app_ratings" > ratings.json
 
       - name: Process and store app ratings data
         run: |
@@ -239,9 +237,7 @@ jobs:
             fi
           done
 
-
-
-      - name: Fetch 'Trending this week'
+      - name: Fetch 'Trending this week' data
         run: |
           curl -s "https://platform-bigbrain-bridge.monday.com/features_external_public?featureName=trending_this_week&identifierType=custom&identifier=top_apps" > trending_this_week.json
 
@@ -257,8 +253,37 @@ jobs:
           # Save the 'current' version of trending_this_week.json
           cp trending_this_week.json "src/_data/json/trending/apps/trending_this_week.json"
 
-          # TODO: figure out how to add this to other category stuff
+          marketplace_file="src/_data/json/marketplace/marketplace.json"
+          historical_file="src/_data/json/trending/apps/historical/${current_date}.json"
 
+          # For each app in marketplace.json, check if its id is in today's trending list
+          jq -c '.marketplace_apps[] | {id: .id, appId: .app_id}' "$marketplace_file" | while read -r app; do
+            id=$(echo "$app" | jq -r '.id')
+            appId=$(echo "$app" | jq -r '.appId')
+            output_file="src/_data/json/trending/apps/${appId}.json"
+
+            # Check if the app is trending today
+            if jq -e --arg id "$id" 'map(tostring) | index($id)' "$historical_file" > /dev/null; then
+              count=1
+            else
+              count=0
+            fi
+
+            # Prepare the new history entry
+            entry=$(jq -n --arg date "$current_date" --argjson count "$count" '{date: $date, count: $count}')
+
+            if [ -f "$output_file" ]; then
+              # Append to existing history
+              jq --argjson entry "$entry" '.history += [$entry]' "$output_file" > tmp.json && mv tmp.json "$output_file"
+            else
+              # Create new file
+              jq -n \
+                --arg id "$id" \
+                --arg appId "$appId" \
+                --argjson entry "$entry" \
+                '{id: $id, appId: $appId, history: [$entry]}' > "$output_file"
+            fi
+          done
 
       - name: Commit and push changes
         run: |

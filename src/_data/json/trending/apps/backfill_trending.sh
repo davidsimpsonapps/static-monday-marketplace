@@ -27,8 +27,6 @@ if [ ! -d "$HISTORICAL_DIR" ]; then
     exit 1
 fi
 
-# Initialize output directory
-mkdir -p "./output/"
 
 # Process each app
 while read -r app_data; do
@@ -81,4 +79,4 @@ done < "$APP_DATA_FILE"
 # Clean up temporary files
 rm "$APP_IDS_FILE" "$APP_DATA_FILE"
 
-echo "Processing complete. All files saved to ./output/"
+echo "Processing complete. All files saved to ./"
