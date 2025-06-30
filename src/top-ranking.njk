@@ -37,9 +37,15 @@ title: Top ranking apps
                 <span data-toggle="tooltip" title="All time installs">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
                 </span>
+                <button class="highlight-all-apps-in-list" 
+                    aria-controls="allTime" 
+                    data-toggle="tooltip" 
+                    title="Highlight all apps in this list"
+                    >🔦</button>
+                
             </h2>
-            {% set apps = marketplace | sortByTotalInstalls | limit(50) %}
-            <ol>
+            {% set apps = marketplace | sortByTotalInstalls | limit(20) %}
+            <ol id="allTime">
                 {% for app in apps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
@@ -64,9 +70,15 @@ title: Top ranking apps
                 <span data-toggle="tooltip" title="Change in installs in the last 90 days">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
                 </span>
+                <button class="highlight-all-apps-in-list" 
+                    aria-controls="last90days" 
+                    data-toggle="tooltip" 
+                    title="Highlight all apps in this list"
+                    >🔦</button>
             </h2>
-            {% set apps = marketplace | sortByInstallsDeltaNinetyDays | limit(50) %}
-            <ol>
+
+            {% set apps = marketplace | sortByInstallsDeltaNinetyDays | limit(20) %}
+            <ol id="last90days">
                 {% for app in apps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
@@ -90,9 +102,15 @@ title: Top ranking apps
                 <span data-toggle="tooltip" title="Change in installs in the last 30 days">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
                 </span>
+                <button class="highlight-all-apps-in-list" 
+                    aria-controls="last30days" 
+                    data-toggle="tooltip" 
+                    title="Highlight all apps in this list"
+                    >🔦</button>
             </h2>
-            {% set thisMonthsApps = marketplace | sortByInstallsDeltaThirtyDays | limit(50) %}
-            <ol>
+
+            {% set thisMonthsApps = marketplace | sortByInstallsDeltaThirtyDays | limit(20) %}
+            <ol id="last30days">
                 {% for app in thisMonthsApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
@@ -117,10 +135,15 @@ title: Top ranking apps
                 <span data-toggle="tooltip" title="Change in installs in the last 7 days">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
                 </span>
+                <button class="highlight-all-apps-in-list" 
+                    aria-controls="last7days" 
+                    data-toggle="tooltip" 
+                    title="Highlight all apps in this list"
+                    >🔦</button>
             </h2>
 
-            {% set thisWeeksApps = marketplace | sortByInstallsDeltaSevenDays | limit(50) %}
-            <ol>
+            {% set thisWeeksApps = marketplace | sortByInstallsDeltaSevenDays | limit(20) %}
+            <ol id="last7days">
                 {% for app in thisWeeksApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
@@ -137,16 +160,22 @@ title: Top ranking apps
                 {% endfor %}
             </ol>
         </div>
+
         <div class="order-1">
             <h2>
                 Trending this week <em>category</em>
                 <span data-toggle="tooltip" title="Data as provided by monday.com">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
                 </span>
+                <button class="highlight-all-apps-in-list" 
+                    aria-controls="trendingApps" 
+                    data-toggle="tooltip" 
+                    title="Highlight all apps in this list"
+                    >🔦</button>
             </h2>
         
             {% set trendingApps = marketplace | filterByCategory(10000004) | sortByInstallsDeltaSevenDays %}
-            <ol>
+            <ol id="trendingApps">
                 {% for app in trendingApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
@@ -200,5 +229,39 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+
+
+  //              <button class="highlight-all-apps-in-list" 
+  //                  aria-controls="trendingApps" 
+  //                  data-toggle="tooltip" 
+  //                  title="Highlight all apps in this list"
+  //                  >🔦</button>
+  
+  const highlightAllAppsInThisList = document.querySelectorAll('button.highlight-all-apps-in-list');
+
+  // Add click event listener to each element
+  highlightAllAppsInThisList.forEach(element => {
+    element.addEventListener('click', function() {
+      // First remove .selected from all elements
+      appElements.forEach(el => {
+        el.classList.remove('selected');
+      });
+      const listId = element.getAttribute('aria-controls');
+      if (listId) {
+        const appsInThisList = document.querySelectorAll(`#${listId} li[data-app-id]`)
+        appsInThisList.forEach(i => {
+          const appId = i.getAttribute('data-app-id');
+       
+          // Then add .selected to all elements with matching data-app-id
+          const matchingElements = document.querySelectorAll(`[data-app-id="${appId}"]`);
+          matchingElements.forEach(el => {
+            el.classList.add('selected');
+          });           
+        })
+      }
+    });
+  });
+    
 });
 </script>
