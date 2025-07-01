@@ -345,25 +345,48 @@ eleventyComputed:
         <h2 id="historical" class="text-lg sm:text-2xl font-semibold mb-4">Historical data</h2>
         
         <h3 id="installs" class="text-xl font-medium mb-4">Installation history</h3>
+
         <p class="text-xs text-gray-600">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
+        
         <div class="chart-container">
+          <h4 id="installsAll" class="font-semibold">No. of installs</h4>
           <div class="h-96">
             <canvas id="installChart"></canvas>
           </div>
         </div>
+        
         <div class="chart-container">
-          <p class="text-xs text-gray-600">This compares the number of installs on each date with 7 days previously:</p>        
+          <h4 id="installs-7d" class="font-semibold">Change in installs in last 7 days</h4>
+          <p class="text-xs text-gray-600">Compares the number of installs on each date with 7 days previously:</p>        
           <div class="h-96">
-            <canvas id="weeklyInstallChart"></canvas>
+            <canvas id="installsChart-7d"></canvas>
           </div>
         </div> 
 
         <div class="chart-container">
-          <p class="text-xs text-gray-600">This compares the number of installs on each date with 30 days previously:</p>
+          <h4 id="installs-30d" class="font-semibold">Change in installs in last 30 days</h4>
+          <p class="text-xs text-gray-600">Compares the number of installs on each date with 30 days previously:</p>
           <div class="h-96">
-            <canvas id="monthlyInstallChart"></canvas>
+            <canvas id="installsChart-30d"></canvas>
           </div>
-        </div>          
+        </div>  
+        
+        <div class="chart-container">
+            <h4 id="installs-30d" class="font-semibold">Change in installs in last 60 days</h4>
+            <p class="text-xs text-gray-600">Compares the number of installs on each date with 60 days previously:</p>
+            <div class="h-96">
+                <canvas id="installsChart-60d"></canvas>
+            </div>
+        </div>   
+
+        <div class="chart-container">
+          <h4 id="installs-90d" class="font-semibold">Change in installs in last 90 days</h4>
+          <p class="text-xs text-gray-600">Compares the number of installs on each date with 30 days previously:</p>
+          <div class="h-96">
+            <canvas id="installsChart-90d"></canvas>
+          </div>
+        </div>   
+
       </div>
 
       <!-- Ratings history since 2025-06-21 -->

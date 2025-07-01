@@ -1,7 +1,6 @@
 // Global chart variable
 let chart = null;
-let weeklyChart = null;
-let monthlyChart = null;
+let deltaCharts = [];
 let ratingsRatingChart = null;
 let ratingsCountChart = null;
 let categoryCharts = [];
@@ -116,52 +115,12 @@ function renderChart(appData) {
         options: defaultOptions
     });
 }
-
-// Render the Chart.js graph for weekly install change
-function renderWeeklyChart(appData) {
-    const node = document.getElementById('weeklyInstallChart');
-    if (!node) {
-        return
-    }
-    const ctx = node.getContext('2d');
-    // Sort history by date (oldest first)
-    const sortedHistory = [...appData.history].sort((a, b) => new Date(a.date) - new Date(b.date));
-    // Calculate weekly change
-    const weeklyChange = sortedHistory.map((item, idx, arr) => {
-        if (idx < 7) return null; // Not enough data for first 7 days
-        const current = parseInt(item.count);
-        const prev = parseInt(arr[idx - 7].count);
-        return current - prev;
-    });
-    // Only show weekly change where we have data
-    const labels = sortedHistory.map(item => item.date);
-    // Destroy previous chart if exists
-    if (weeklyChart) weeklyChart.destroy();
-    weeklyChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Weekly installs Δ',
-                data: weeklyChange,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 2,
-                tension: 0.1,
-                pointRadius: 0,
-                pointHoverRadius: 6,
-                pointHoverBackgroundColor: 'rgba(255, 99, 132, 1)',
-                pointHoverBorderColor: '#fff',
-                pointHoverBorderWidth: 2
-            }]
-        },
-        options: defaultOptions
-    });
-}
-
 // Render the Chart.js graph for monthly install change
-function renderMonthlyChart(appData) {
-    const node = document.getElementById('monthlyInstallChart');
+// Assumes: 
+// `<canvas id="installsChart-${days}d"></canvas>`
+
+function renderChartByDeltaInDays(appData, days) {
+    const node = document.getElementById(`installsChart-${days}d`);
     if (!node) {
         return 
     }
@@ -169,21 +128,24 @@ function renderMonthlyChart(appData) {
     // Sort history by date (oldest first)
     const sortedHistory = [...appData.history].sort((a, b) => new Date(a.date) - new Date(b.date));
     // Calculate monthly change (difference from 30 days prior)
-    const monthlyChange = sortedHistory.map((item, idx, arr) => {
-        if (idx < 30) return null; // Not enough data for first 30 days
+    const change = sortedHistory.map((item, idx, arr) => {
+        if (idx < days) return null; // Not enough data for first 30 days
         const current = parseInt(item.count);
-        const prev = parseInt(arr[idx - 30].count);
+        const prev = parseInt(arr[idx - days].count);
         return current - prev;
     });
     const labels = sortedHistory.map(item => item.date);
-    if (monthlyChart) monthlyChart.destroy();
-    monthlyChart = new Chart(ctx, {
+
+    if (deltaCharts[`${days}d`]) {
+        deltaCharts[`${days}d`].destroy();
+    }
+    deltaCharts[`${days}d`] = new Chart(ctx, {
         type: 'line',
         data: {
             labels: labels,
             datasets: [{
-                label: 'Monthly installs Δ',
-                data: monthlyChange,
+                label: `${days} day Δ in installs`,
+                data: change,
                 backgroundColor: 'rgba(255, 206, 86, 0.2)',
                 borderColor: 'rgba(255, 206, 86, 1)',
                 borderWidth: 2,
@@ -384,8 +346,7 @@ async function initChart() {
             const data = await loadAppData(installsUrl, '.chart-container:first');            
             if (data) {
                 renderChart(data);
-                renderWeeklyChart(data);
-                renderMonthlyChart(data);            
+                [7,30,90].forEach(days => renderChartByDeltaInDays(data,days))      
             }
         }
     }

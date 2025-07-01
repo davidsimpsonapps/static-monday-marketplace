@@ -168,7 +168,7 @@ header {
 }
 
 .chart-container {
-    @apply text-sm italic text-gray-600;
+    @apply text-sm;
 }
 .chart-container + .chart-container {
     @apply mt-10;
