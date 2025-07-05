@@ -55,8 +55,8 @@ nav a+a {
 
 
 pre {
-    @apply border rounded p-4;
-    overflow: auto;
+    @apply border rounded p-4 overflow-auto;
+    max-height: calc(100vh - 120px);
 }
 
 span[title] svg {

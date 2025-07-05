@@ -22,7 +22,7 @@ eleventyComputed:
     <!-- Main content -->
     <div class="flex-1">
       <div class="pb-4">
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between sm:gap-6">
           <div class="flex flex-col sm:flex-row sm:items-start gap-6">
 
             {% if app.logo_url %}
@@ -73,13 +73,13 @@ eleventyComputed:
 
               {% set rating = ratings | findRatingById(app.app_id) %}
               {% if rating %}
-                <a href="#reviews" data-toggle="tooltip" title="See reviews">
-                  <div class="flex items-center mt-1 text-gray-400  text-sm">
+                <div class="mt-1 text-gray-400 text-sm">
+                  <a href="#reviews" data-toggle="tooltip" title="See reviews">
                     <span class="text-yellow-500 ">★</span>
                     <span class="ml-1">{{ rating.rating | formatRating }}</span>
                     <span class=" ml-1">({{ rating.count }})</span>
-                  </div>
-                </a>
+                  </a>
+                </div>
               {% endif %}
               {% if installs %}
                 <p class="text-gray-600 text-sm mb-2 sm:mb-4">
