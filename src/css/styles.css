@@ -227,7 +227,7 @@ button.selected,
 }
 
 .badge {
-    @apply inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs;
+    @apply inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs border-2 border-white;
 }
 .badge.green {
     @apply bg-green-100 text-green-800;
@@ -250,10 +250,10 @@ button.selected,
     @apply mb-6 text-sm sm:h-12;
 }
 .top-installs li a {
-    max-width: calc( 100% - 65px );
+    max-width: calc( 100% - 72px );
     text-overflow: ellipsis;
     overflow: hidden;
-    @apply whitespace-nowrap inline-block align-top font-semibold;
+    @apply whitespace-nowrap inline-block align-top font-semibold mr-1;
 }
 
 .top-installs li .vendor {
@@ -261,6 +261,9 @@ button.selected,
     text-overflow: ellipsis;
     overflow: hidden;
     @apply whitespace-nowrap inline-block align-middle;
+}
+.top-installs li:hover .badge {
+    @apply bg-gray-200;
 }
 
 /* .top-installs > div {
