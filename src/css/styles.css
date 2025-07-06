@@ -256,6 +256,13 @@ button.selected,
     @apply whitespace-nowrap inline-block align-top font-semibold;
 }
 
+.top-installs li .vendor {
+    max-width: calc( 100% - 25px );
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @apply whitespace-nowrap inline-block align-middle;
+}
+
 /* .top-installs > div {
     @apply bg-gray-100;
 } */
@@ -271,6 +278,7 @@ button.selected,
 .top-installs li[data-app-id] {
     cursor: pointer;
     @apply p-1 rounded;
+    margin-bottom: 2px;
 }
 .top-installs li[data-app-id].selected {
     @apply bg-blue-100;
