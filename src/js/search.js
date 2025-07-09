@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Search function
   function performSearch(e) {
     const searchText = e.target.value.toLowerCase();
-    const allItems = document.querySelectorAll('.item:not(.list-header)');
+    const allItems = document.querySelectorAll('.search-item');
     
     // not async `allItems.forEach` so we can calculate the total number of visible apps
     for (const item of allItems) {

@@ -289,6 +289,10 @@ button.selected,
 .top-installs li[data-app-id]:hover {
     @apply bg-gray-100;
 }
+.top-installs li.hide-me {
+    @apply list-item overflow-hidden m-0 p-0;
+    height: 0;
+}
 
 [data-toggle] svg {
     display: inline-block !important;

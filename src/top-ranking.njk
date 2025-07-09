@@ -28,6 +28,8 @@ title: Top ranking apps
 
     <h1 class="text-lg sm:text-2xl font-semibold mt-10 mb-4">Top ranking apps</h1>
 
+    {% include "partials/search.njk" %}
+
     <p class="text-sm">Click on an item to highlight it in all lists. This data is refreshed daily sometime between 00:00 and 03:00 UTC.</p>
 
     <div class="top-installs sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4">
@@ -49,7 +51,7 @@ title: Top ranking apps
             <ol id="allTime">
                 {% for app in apps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
-                    <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
+                    <li class="search-item" data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
                         <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
@@ -84,7 +86,7 @@ title: Top ranking apps
             <ol id="last90days">
                 {% for app in apps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
-                    <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
+                    <li class="search-item" data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
                         <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
@@ -118,7 +120,7 @@ title: Top ranking apps
             <ol id="last30days">
                 {% for app in thisMonthsApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
-                    <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
+                    <li class="search-item" data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
                         <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
@@ -152,7 +154,7 @@ title: Top ranking apps
             <ol id="last7days">
                 {% for app in thisWeeksApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
-                    <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
+                    <li class="search-item" data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
                         <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
@@ -180,7 +182,7 @@ title: Top ranking apps
                     data-toggle="tooltip" 
                     title="View the data file & last update time"
                     >⏱️</a>
-                    
+
                 <button class="highlight-all-apps-in-list" 
                     aria-controls="trendingApps" 
                     data-toggle="tooltip" 
@@ -194,7 +196,7 @@ title: Top ranking apps
             <ol id="trendingApps">
                 {% for app in trendingApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
-                    <li data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
+                    <li class="search-item" data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
                         <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
@@ -211,7 +213,7 @@ title: Top ranking apps
                 {% endfor %}
             </ol>
 
-            <p class="text-sm text-gray-600 italic ">This category is limited to 20 items only.</p>
+            <!--<p class="text-sm text-gray-600 italic ">This category is limited to 20 items only.</p>-->
         
         </div>
     </div>
