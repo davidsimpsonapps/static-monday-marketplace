@@ -180,13 +180,13 @@ header {
     @apply text-center;
 }
 .headlines-container .label {
-    @apply uppercase text-gray-500 text-xs font-semibold;
+    @apply uppercase text-gray-500 text-xs font-semibold tracking-widest;
 }
 .headlines-container .headline {
     @apply text-lg font-semibold;
 }
 .headlines-container .delta {
-    @apply text-sm text-gray-500;
+    @apply text-sm font-semibold;
 }
 
 

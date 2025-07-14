@@ -151,14 +151,25 @@ function updateHeadlines(appData, days  ) {
             const el = container.querySelector(cls);
             if (el) el.setAttribute("title", val);
         };
+        const addClass = (cls, val) => {
+            const el = container.querySelector(cls);
+            if (el) el.classList.add(val);
+        };
         set('.headline-max', max === -Infinity ? '-' : max.toLocaleString());
         setTitle('.headline-max-date', maxIdx !== -1 ? sortedHistory[maxIdx].date : '-');
         set('.headline-min', min === Infinity ? '-' : min.toLocaleString());
-        set('.headline-min-delta', min === Infinity ? '-' : (100* ((min-max)/max)).toFixed(1) + '%');
+
+        const minDelta = (100* ((min-max)/max)).toFixed(1) ;
+        set('.headline-min-delta', min === Infinity ? '-' : minDelta + '%');
+        addClass('.headline-min-delta', minDelta >= 0 ?'text-green-600' : 'text-red-600')
+
         setTitle('.headline-min-date', minIdx !== -1 ? sortedHistory[minIdx].date : '-');
         set('.headline-current', current === null ? '-' : current.toLocaleString());
-        set('.headline-current-delta', current === null ? '-' : (100* ((current-max)/max)).toFixed(1) + '%');
+
+        const currentDelta = (100* ((current-max)/max)).toFixed(1) ;
+        set('.headline-current-delta', current === null ? '-' : currentDelta + '%');
         setTitle('.headline-current-date', currentIdx !== -1 ? sortedHistory[currentIdx].date : '-');
+        addClass('.headline-current-delta', currentDelta >= 0 ?  'text-green-600' : 'text-red-600');
     }
     tooltips && tooltips();
 }
