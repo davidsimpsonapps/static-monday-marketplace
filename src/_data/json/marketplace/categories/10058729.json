@@ -152,6 +152,38 @@
         8,
         6
       ]
+    },
+    {
+      "date": "2025-07-11",
+      "marketplace_category_ids": [
+        10000011,
+        8,
+        6
+      ]
+    },
+    {
+      "date": "2025-07-12",
+      "marketplace_category_ids": [
+        10000011,
+        8,
+        6
+      ]
+    },
+    {
+      "date": "2025-07-13",
+      "marketplace_category_ids": [
+        10000011,
+        8,
+        6
+      ]
+    },
+    {
+      "date": "2025-07-14",
+      "marketplace_category_ids": [
+        10000011,
+        8,
+        6
+      ]
     }
   ]
 }
