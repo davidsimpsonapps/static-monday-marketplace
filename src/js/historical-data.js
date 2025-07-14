@@ -119,6 +119,50 @@ function renderChart(appData) {
 // Assumes: 
 // `<canvas id="installsChart-${days}d"></canvas>`
 
+function updateHeadlines(appData, days  ) {
+    // Sort history by date (oldest first)
+    const sortedHistory = [...appData.history].sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+    // Calculate 7d change (difference from 7 days prior)
+    const change = sortedHistory.map((item, idx, arr) => {
+        if (idx < days) return null;
+        const current = parseInt(item.count);
+        const prev = parseInt(arr[idx - days].count);
+        return current - prev;
+    });
+    // Find max, min, and current (last non-null)
+    let max = -Infinity, min = Infinity, maxIdx = -1, minIdx = -1, current = null, currentIdx = -1;
+    for (let i = 0; i < change.length; i++) {
+        if (change[i] !== null) {
+            if (change[i] > max) { max = change[i]; maxIdx = i; }
+            if (change[i] < min) { min = change[i]; minIdx = i; }
+            current = change[i];
+            currentIdx = i;
+        }
+    }
+    // Update DOM
+    const container = document.getElementById(`headlines-${days}d`);
+    if (container) {
+        const set = (cls, val) => {
+            const el = container.querySelector(cls);
+            if (el) el.textContent = val;
+        };
+        const setTitle = (cls, val) => {
+            const el = container.querySelector(cls);
+            if (el) el.setAttribute("title", val);
+        };
+        set('.headline-max', max === -Infinity ? '-' : max.toLocaleString());
+        setTitle('.headline-max-date', maxIdx !== -1 ? sortedHistory[maxIdx].date : '-');
+        set('.headline-min', min === Infinity ? '-' : min.toLocaleString());
+        set('.headline-min-delta', min === Infinity ? '-' : (100* ((min-max)/max)).toFixed(1) + '%');
+        setTitle('.headline-min-date', minIdx !== -1 ? sortedHistory[minIdx].date : '-');
+        set('.headline-current', current === null ? '-' : current.toLocaleString());
+        set('.headline-current-delta', current === null ? '-' : (100* ((current-max)/max)).toFixed(1) + '%');
+        setTitle('.headline-current-date', currentIdx !== -1 ? sortedHistory[currentIdx].date : '-');
+    }
+    tooltips && tooltips();
+}
+
 function renderChartByDeltaInDays(appData, days) {
     const node = document.getElementById(`installsChart-${days}d`);
     if (!node) {
@@ -159,6 +203,9 @@ function renderChartByDeltaInDays(appData, days) {
         },
         options: defaultOptions
     });
+    
+    updateHeadlines(appData, days);
+    
 }
 
 function renderRatingsChart(ratingsData) {

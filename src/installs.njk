@@ -49,6 +49,22 @@ description: "An aggregated history of installations for all apps from the monda
         <div class="chart-container">
             <h4 id="installs-7d" class="font-semibold">Change in total number of installs in last 7 days</h4>
             <p class="text-xs text-gray-600">Compares the number of installs on each date with 7 days previously:</p>        
+            <div id="headlines-7d" class="headlines-container" >
+                <div class="headline-max-date" data-toggle="tooltip" title="Loading...">
+                    <div class="label">Max</div>
+                    <div class="headline headline-max"></div>
+                </div>
+                <div class="headline-min-date" data-toggle="tooltip" title="Loading...">
+                    <div class="label">Min</div>
+                    <div class="headline headline-min"></div>
+                    <div class="delta headline-min-delta"></div>
+                </div>
+                <div class="headline-current-date" data-toggle="tooltip" title="Loading...">
+                    <div class="label">Current</div>
+                    <div class="headline headline-current"></div>
+                    <div class="delta headline-current-delta"></div>
+                </div>
+            </div>
             <div class="h-96">
                 <canvas id="installsChart-7d"></canvas>
             </div>
@@ -57,6 +73,22 @@ description: "An aggregated history of installations for all apps from the monda
         <div class="chart-container">
             <h4 id="installs-30d" class="font-semibold">Change in total number of installs in last 30 days</h4>
             <p class="text-xs text-gray-600">Compares the number of installs on each date with 30 days previously:</p>
+            <div id="headlines-30d" class="headlines-container">
+                <div class="headline-max-date" data-toggle="tooltip" title="Loading...">
+                    <div class="label">Max</div>
+                    <div class="headline headline-max"></div>
+                </div>
+                <div class="headline-min-date" data-toggle="tooltip" title="Loading...">
+                    <div class="label">Min</div>
+                    <div class="headline headline-min"></div>
+                    <div class="delta headline-min-delta"></div>
+                </div>
+                <div class="headline-current-date" data-toggle="tooltip" title="Loading...">
+                    <div class="label">Current</div>
+                    <div class="headline headline-current"></div>
+                    <div class="delta headline-current-delta"></div>
+                </div>
+            </div>
             <div class="h-96">
                 <canvas id="installsChart-30d"></canvas>
             </div>
@@ -65,6 +97,22 @@ description: "An aggregated history of installations for all apps from the monda
         <div class="chart-container">
             <h4 id="installs-90d" class="font-semibold">Change in total number of installs in last 90 days</h4>
             <p class="text-xs text-gray-600">Compares the number of installs on each date with 90 days previously:</p>
+            <div id="headlines-90d" class="headlines-container">
+               <div class="headline-max-date" data-toggle="tooltip" title="Loading...">
+                    <div class="label">Max</div>
+                    <div class="headline headline-max"></div>
+                </div>
+                <div class="headline-min-date" data-toggle="tooltip" title="Loading...">
+                    <div class="label">Min</div>
+                    <div class="headline headline-min"></div>
+                    <div class="delta headline-min-delta"></div>
+                </div>
+                <div class="headline-current-date" data-toggle="tooltip" title="Loading...">
+                    <div class="label">Current</div>
+                    <div class="headline headline-current"></div>
+                    <div class="delta headline-current-delta"></div>
+                </div>
+            </div>
             <div class="h-96">
                 <canvas id="installsChart-90d"></canvas>
             </div>

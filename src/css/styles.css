@@ -173,6 +173,22 @@ header {
 .chart-container + .chart-container {
     @apply mt-10;
 }
+.headlines-container {
+    @apply flex gap-8 justify-center mb-4;
+}
+.headlines-container > div {
+    @apply text-center;
+}
+.headlines-container .label {
+    @apply uppercase text-gray-500 text-xs font-semibold;
+}
+.headlines-container .headline {
+    @apply text-lg font-semibold;
+}
+.headlines-container .delta {
+    @apply text-sm text-gray-500;
+}
+
 
 li.toc-list-item {
     @apply p-2 py-1
