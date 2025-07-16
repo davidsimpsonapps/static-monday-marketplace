@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    const visbleApps = [...allItems].filter(card => card.style.display === 'block');
+    const visbleApps = [...allItems].filter(card => card.classList.contains('hide-me') === false);
     const totalsBadge = document.querySelector('[data-total]');
     
     if (totalsBadge) {
