@@ -29,10 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    const visbleApps = [...allItems].filter(card => card.classList.contains('hide-me') === false);
     const totalsBadge = document.querySelector('[data-total]');
     
     if (totalsBadge) {
+      const visbleApps = [...allItems].filter(card => card.classList.contains('hide-me') === false);
+
       if (visbleApps.length < parseInt(totalsBadge.getAttribute('data-total'))) {
         totalsBadge.innerHTML = `${visbleApps.length} / ${totalsBadge.getAttribute('data-total')}`;
       } else {
