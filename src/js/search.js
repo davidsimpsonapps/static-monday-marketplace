@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const visbleApps = [...allItems].filter(card => card.classList.contains('hide-me') === false);
 
       if (visbleApps.length < parseInt(totalsBadge.getAttribute('data-total'))) {
-        totalsBadge.innerHTML = `${visbleApps.length} / ${totalsBadge.getAttribute('data-total')}`;
+        totalsBadge.innerText = `${visbleApps.length} / ${totalsBadge.getAttribute('data-total')}`;
       } else {
-        totalsBadge.innerHTML = totalsBadge.getAttribute('data-total');
+        totalsBadge.innerText = totalsBadge.getAttribute('data-total');
       }
     }
   }
