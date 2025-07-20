@@ -132,37 +132,47 @@ eleventyComputed:
         <!-- Install history since 2025-06-07 -->
         <p class="text-xs text-gray-600">June 9, 2025 onwards only. Collected sometime after 00:00 UTC daily.</p>
         
+
         <div class="chart-container">
-            <h4 id="installsAll" class="font-semibold">Total number of installs</h4>
-            <div class="h-96">
-                <canvas id="installChart"></canvas>
-            </div>
+          <h4 id="installsAll" class="font-semibold">Total number of installs</h4>
+          <div class="h-96">
+            <canvas id="installChart"></canvas>
+          </div>
         </div>
         
         <div class="chart-container">
-            <h4 id="installs-7d" class="font-semibold">Change in total number of installs in last 7 days</h4>
-            <p class="text-xs text-gray-600">Compares the number of installs on each date with 7 days previously:</p>        
-            <div class="h-96">
-                <canvas id="installsChart-7d"></canvas>
-            </div>
+          <h4 id="installs-7d" class="font-semibold">Change in total number of installs in last 7 days</h4>
+          <p class="text-xs text-gray-600">Compares the number of installs on each date with 7 days previously:</p>        
+          <div id="headlines-7d" class="headlines-container" >
+            {% include "partials/headlines.njk" %}
+          </div>
+          <div class="h-96">
+            <canvas id="installsChart-7d"></canvas>
+          </div>
         </div> 
-<!--
-        <div class="chart-container">
-            <h4 id="installs-30d" class="font-semibold">Change in total number of installs in last 30 days</h4>
-            <p class="text-xs text-gray-600">Compares the number of installs on each date with 30 days previously:</p>
-            <div class="h-96">
-                <canvas id="installsChart-30d"></canvas>
-            </div>
-        </div>   
 
         <div class="chart-container">
-            <h4 id="installs-90d" class="font-semibold">Change in total number of installs in last 90 days</h4>
-            <p class="text-xs text-gray-600">Compares the number of installs on each date with 90 days previously:</p>
-            <div class="h-96">
-                <canvas id="installsChart-90d"></canvas>
-            </div>
-        </div>   
--->        
+          <h4 id="installs-30d" class="font-semibold">Change in total number of installs in last 30 days</h4>
+          <p class="text-xs text-gray-600">Compares the number of installs on each date with 30 days previously:</p>
+          <div id="headlines-30d" class="headlines-container" >
+            {% include "partials/headlines.njk" %}
+          </div>          
+          <div class="h-96">
+            <canvas id="installsChart-30d"></canvas>
+          </div>
+        </div>  
+
+        <div class="chart-container">
+          <h4 id="installs-90d" class="font-semibold">Change in total number of installs in last 90 days</h4>
+          <p class="text-xs text-gray-600">Compares the number of installs on each date with 90 days previously:</p>
+          <div id="headlines-90d" class="headlines-container" >
+            {% include "partials/headlines.njk" %}
+          </div>
+          <div class="h-96">
+            <canvas id="installsChart-90d"></canvas>
+          </div>
+        </div>  
+      
       </div>
     </div>
 
