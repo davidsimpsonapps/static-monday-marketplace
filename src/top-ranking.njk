@@ -270,6 +270,12 @@ document.addEventListener('DOMContentLoaded', function() {
       appElements.forEach(el => {
         el.classList.remove('selected');
       });
+      highlightAllAppsInThisList.forEach(el => {
+        el.classList.remove('selected');
+      });
+      element.classList.add('selected');
+
+
       const listId = element.getAttribute('aria-controls');
       if (listId) {
         const appsInThisList = document.querySelectorAll(`#${listId} li[data-app-id]`)

@@ -296,11 +296,11 @@ button.selected,
 
 .top-installs li[data-app-id] {
     cursor: pointer;
-    @apply p-1 rounded;
-    margin-bottom: 2px;
+    @apply px-2 py-1 rounded;
+    margin-bottom: 4px;
 }
 .top-installs li[data-app-id].selected {
-    @apply bg-blue-100;
+    @apply bg-yellow-100;
 }
 .top-installs li[data-app-id]:hover {
     @apply bg-gray-100;
@@ -319,3 +319,10 @@ button.selected,
     @apply m-1 px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
 }
 
+.highlight-all-apps-in-list {
+    border-radius: 9999px;
+    padding: 0.25em 0.5em;
+}
+.highlight-all-apps-in-list.selected {
+    @apply bg-yellow-100;
+}
