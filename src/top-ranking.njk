@@ -239,6 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
     element.addEventListener('click', function() {
       // Get the data-app-id value of the clicked element
       const appId = this.getAttribute('data-app-id');
+      window.history.pushState({}, '', `#/highlight/[data-app-id="${appId}"]`);
       
       // First remove .selected from all elements
       appElements.forEach(el => {
@@ -266,6 +267,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add click event listener to each element
   highlightAllAppsInThisList.forEach(element => {
     element.addEventListener('click', function() {
+      const ariaControls = element.getAttribute('aria-controls');
+      window.history.pushState({}, '', `#/highlight/[aria-controls="${ariaControls}"]`);
+
       // First remove .selected from all elements
       appElements.forEach(el => {
         el.classList.remove('selected');

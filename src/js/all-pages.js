@@ -197,6 +197,20 @@ const tooltips = () => {
     });
 }
 
+// On page load, check for click hash and trigger click
+function triggerClickFromHash() {
+  const hash = window.location.hash;
+  const match = hash.match(/#\/highlight\/(.+)$/);
+  if (match) {
+    const selector = decodeURIComponent(match[1]);
+    const el = document.querySelector(selector);
+    if (el) {
+      el.click();
+    }
+  }
+}
+
+
 
 
  const init = () => {
@@ -206,6 +220,7 @@ const tooltips = () => {
     emboldenNavLinks();
     scrollToTop();
     tooltips();
+    triggerClickFromHash();
 
     const headerNode = document.querySelector('.header-wrapper');
 
