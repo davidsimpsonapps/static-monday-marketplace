@@ -1,0 +1,21 @@
+{
+  "description": "Category history for app 10331386",
+  "history": [
+    {
+      "date": "2025-07-29",
+      "marketplace_category_ids": [
+        10000001,
+        7,
+        6
+      ]
+    },
+    {
+      "date": "2025-07-30",
+      "marketplace_category_ids": [
+        10000001,
+        7,
+        6
+      ]
+    }
+  ]
+}
