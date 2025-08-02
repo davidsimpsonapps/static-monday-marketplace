@@ -4,6 +4,14 @@
     {
       "date": "2025-08-01",
       "marketplace_category_ids": []
+    },
+    {
+      "date": "2025-08-02",
+      "marketplace_category_ids": [
+        10000006,
+        10000000,
+        6
+      ]
     }
   ]
 }
