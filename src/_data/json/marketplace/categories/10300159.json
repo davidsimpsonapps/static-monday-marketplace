@@ -184,6 +184,14 @@
     {
       "date": "2025-08-06",
       "marketplace_category_ids": []
+    },
+    {
+      "date": "2025-08-07",
+      "marketplace_category_ids": [
+        10,
+        7,
+        4
+      ]
     }
   ]
 }
