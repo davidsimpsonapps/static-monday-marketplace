@@ -239,7 +239,7 @@ jobs:
 
       - name: Fetch 'Trending this week' data
         run: |
-          curl -s "https://platform-bigbrain-bridge.monday.com/features_external_public?featureName=trending_this_week&identifierType=custom&identifier=top_apps" > trending_this_week.json
+          curl -s "https://monday.com/bigbrain-data-api/feature/dynamic/external/public/cross-tenant?featureName=app_marketplace_trending_this_week&version=&startTime=&endTime=&filters=%7B%22account_id%22%3A%22-1%22%7D&metrics=%5B%5D" > trending_this_week.json
 
       - name: Process and store 'Trending this week' data
         run: |

@@ -68,12 +68,15 @@ module.exports = async function() {
 
 
     // Add "Trending this week" into the `marketplace_category_ids`
-    const responseTrendingThisWeek = await fetch('https://platform-bigbrain-bridge.monday.com/features_external_public?featureName=trending_this_week&identifierType=custom&identifier=top_apps');
+    const responseTrendingThisWeek = await fetch('https://monday.com/bigbrain-data-api/feature/dynamic/external/public/cross-tenant?featureName=app_marketplace_trending_this_week&version=&startTime=&endTime=&filters=%7B%22account_id%22%3A%22-1%22%7D&metrics=%5B%5D');
+
     const dataTrendingThisWeek = await responseTrendingThisWeek.json();
+
+    const trendingAppIds = dataTrendingThisWeek?.data[0]?.top_apps ?? [];
 
     apps.forEach(app => {
       // Add "Trending this week" into the `marketplace_category_ids`
-      if (dataTrendingThisWeek.includes(app.id)) {
+      if (trendingAppIds.includes(app.id)) {
         console.log(`"${app.name}" is featured this week`);
         app.marketplace_category_ids.push(10000004);//
       }
