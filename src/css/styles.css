@@ -326,3 +326,8 @@ button.selected,
 .highlight-all-apps-in-list.selected {
     @apply bg-yellow-100;
 }
+
+
+li.toc-list-item {
+    list-style-type: none;
+}
