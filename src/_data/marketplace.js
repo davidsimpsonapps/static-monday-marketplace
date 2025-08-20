@@ -71,8 +71,15 @@ module.exports = async function() {
     const responseTrendingThisWeek = await fetch('https://monday.com/bigbrain-data-api/feature/dynamic/external/public/cross-tenant?featureName=app_marketplace_trending_this_week&version=&startTime=&endTime=&filters=%7B%22account_id%22%3A%22-1%22%7D&metrics=%5B%5D');
 
     const dataTrendingThisWeek = await responseTrendingThisWeek.json();
-
-    const trendingAppIds = dataTrendingThisWeek?.data[0]?.top_apps ?? [];
+    const topAppsRaw = dataTrendingThisWeek?.data?.[0]?.top_apps ?? '[]';
+    let trendingAppIds = [];
+    try {
+      trendingAppIds = typeof topAppsRaw === 'string'
+        ? JSON.parse(topAppsRaw)
+        : (Array.isArray(topAppsRaw) ? topAppsRaw : []);
+    } catch (e) {
+      trendingAppIds = [];
+    }
 
     apps.forEach(app => {
       // Add "Trending this week" into the `marketplace_category_ids`

@@ -262,8 +262,8 @@ jobs:
             appId=$(echo "$app" | jq -r '.appId')
             output_file="src/_data/json/trending/apps/${appId}.json"
 
-            # Check if the app is trending today
-            if jq -e --arg id "$id" 'map(tostring) | index($id)' "$historical_file" > /dev/null; then
+            # Check if the app is trending today (new response shape: { data[0].top_apps: "[...]" })
+            if jq -e --argjson id "$id" '.data[0].top_apps // "[]" | fromjson | index($id)' "$historical_file" > /dev/null; then
               count=1
             else
               count=0
