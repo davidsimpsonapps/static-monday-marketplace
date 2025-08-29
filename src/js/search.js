@@ -1,3 +1,5 @@
+const TIMEOUT = 250;
+
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('search');
   if (!searchInput) return;
@@ -61,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Debounced search function
-  const debouncedSearch = debounce(performSearch, 500);
+  const debouncedSearch = debounce(performSearch, TIMEOUT);
 
   // Add event listener with debounced search
   searchInput.addEventListener('input', debouncedSearch);

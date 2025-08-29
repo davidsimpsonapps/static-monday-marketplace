@@ -134,7 +134,7 @@ header {
 }
 
 .item-list.cards .item-title {
-    @apply text-lg font-semibold mb-1 mt-2;
+    @apply text-lg font-semibold mb-1 mt-0;
 }
 .item-list.list .item-title {
     @apply text-base font-semibold m-0 p-0;
