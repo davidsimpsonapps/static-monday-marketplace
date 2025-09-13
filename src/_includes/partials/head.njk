@@ -17,6 +17,9 @@
 {% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
 <meta name="google-site-verification" content="9U0NQS-QO814XXRbIkeLOyboO_D9zdAu5cTG6MFKmZg" />
 
+{% if image %}<meta property="og:image" content="{{ image }}">
+{% else %}<meta property="og:image" content="{{ site. url }}/images/a4m-favicon.svg">{% endif %}
+
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-51B50L3XKM"></script>

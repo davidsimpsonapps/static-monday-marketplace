@@ -11,6 +11,7 @@ eleventyComputed:
   description: "{{app.name | safe}} (app for monday.com). {{app.short_description}}."
   keywords: "{{app.keywords}},app for monday.com" 
   canonical: "/apps/{{ app.id }}/#/{{ app.name | sanitisePathname }}"
+  image: "{{ app.logo_url }}"
 ---
 
 {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
