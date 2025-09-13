@@ -117,7 +117,21 @@ module.exports = function(eleventyConfig) {
         .toLowerCase()
         // Trim leading and trailing spaces
         .trim();
-});
+  });
+
+  // 
+  eleventyConfig.addFilter("vendorMetaDescription", function(apps) {
+    if (!apps || !apps.length) return '';
+    
+    let appDescriptions = 'monday.com marketplace vendor for ' + apps.map(app => 
+      app?.name?.trim() || 'App'
+    ).join(', ');
+    
+    // return appDescriptions.length > 155 
+    //   ? appDescriptions.substring(0, 152) + '...' 
+    //   : 
+    return appDescriptions;
+  });
 
   eleventyConfig.addFilter("removeAquisitionSource", function(apps, source) {
     return apps.filter(app => app.acquisition_source !== source);

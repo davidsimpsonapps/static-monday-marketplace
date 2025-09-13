@@ -9,6 +9,7 @@ permalink: /vendors/{{ vendor.id }}/
 eleventyComputed:
   title: "{{vendor.name}} • Vendors"
   canonical: "/vendors/{{ vendor.id }}/#/{{ vendor.name | sanitisePathname }}"
+  description: "{{ marketplace | filterByVendor(vendor.id) | sortByInstalls(installs) | vendorMetaDescription }}"
 ---
 
 {% from "partials/app-card.njk" import appCard %}

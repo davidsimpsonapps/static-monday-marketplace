@@ -13,7 +13,7 @@
 {% if canonical %}<link rel="canonical" href="{{ site. url }}{{ canonical }}" />{%else %}<link rel="canonical" href="{{ site. url }}{{ page.url }}" />{% endif %}
 <meta property="og:title" content="{{ title }} | Apps for monday.com">
 {% if description %}<meta name="description" content="{{ description }}">
-<meta property="og:description" content="{{ description }}">{% endif %}
+<meta property="og:description" content="{{ description }}">{% else %}<!-- !description -->{% endif %}
 {% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
 <meta name="google-site-verification" content="9U0NQS-QO814XXRbIkeLOyboO_D9zdAu5cTG6MFKmZg" />
 
