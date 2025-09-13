@@ -107,6 +107,17 @@ module.exports = function(eleventyConfig) {
       day: 'numeric'
     });
   });
+  eleventyConfig.addFilter("sanitisePathname", function(pathname) {
+    return pathname
+        // Replace non-alphanumeric characters (except '/') with spaces
+        .replace(/[^a-zA-Z0-9/]/g, ' ')
+        // Replace multiple consecutive spaces with single spaces
+        .replace(/\s+/g, '-')
+        // Convert to lowercase
+        .toLowerCase()
+        // Trim leading and trailing spaces
+        .trim();
+});
 
   eleventyConfig.addFilter("removeAquisitionSource", function(apps, source) {
     return apps.filter(app => app.acquisition_source !== source);

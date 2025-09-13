@@ -12,7 +12,7 @@
     {% endif %}
 
       <a 
-        href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" 
+        href="/apps/{{ app.id }}/#/{{ app.name | sanitisePathname }}" 
         class="item search-item"
         data-alpha="{{ app.name }}"
         data-installs="{{ appInstalls }}"

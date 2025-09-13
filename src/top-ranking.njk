@@ -54,7 +54,7 @@ title: Top ranking apps
                 {% for app in apps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li class="search-item" data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
-                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | sanitisePathname }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.totalInstalls %}
@@ -89,7 +89,7 @@ title: Top ranking apps
                 {% for app in apps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li class="search-item" data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
-                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | sanitisePathname }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.thirtyDays %}
@@ -123,7 +123,7 @@ title: Top ranking apps
                 {% for app in thisMonthsApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li class="search-item" data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
-                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | sanitisePathname }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.thirtyDays %}
@@ -157,7 +157,7 @@ title: Top ranking apps
                 {% for app in thisWeeksApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li class="search-item" data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
-                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | sanitisePathname }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.sevenDays %}
@@ -199,7 +199,7 @@ title: Top ranking apps
                 {% for app in trendingApps %}
                     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
                     <li class="search-item" data-id="{{ app.id}}" data-app-id="{{ app.app_id}}">
-                        <a href="/apps/{{ app.id }}/#/{{ app.name | lower | replace(' ', '-') }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
+                        <a href="/apps/{{ app.id }}/#/{{ app.name | sanitisePathname }}" data-toggle="tooltip" title="{{ app.name }}" data-placement="top">
                             {{ app.name }}
                         </a>
                         {% if app.installsDelta.sevenDays %}

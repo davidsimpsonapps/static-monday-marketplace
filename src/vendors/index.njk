@@ -38,7 +38,7 @@ title: Vendors
         {% set appInstalls =  vendor.installs %}
         {% set monthlyInstalls = appInstalls | averageInstallsPerMonth(vendor.created_at) %}
       
-        <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | lower | replace(' ', '-') }}" 
+        <a href="/vendors/{{ vendor.id }}/#/{{ vendor.name | sanitisePathname }}" 
           class="item search-item card"
           
           data-alpha="{{ vendor.name | trim }}"
