@@ -1,0 +1,34 @@
+{% macro SeoRichSnippet(product, vendor, rating, site) %}
+  {% if product %}
+    {# Build canonical product URL (Nunjucks: use ~ for concat, no JS ternary) #}
+    {% set origin = '' %}
+    {% if site and site.origin %}
+      {% set origin = site.origin %}
+    {% endif %}
+    {% set productUrl = origin ~ '/apps/' ~ product.id ~ '/#/' ~ (product.name | sanitisePathname) %}
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "SoftwareApplication",
+            "name": {{ (product.name or '') | dump | safe }},
+            "operatingSystem": "Web",
+            "applicationCategory": "BusinessApplication",
+            {% if rating %}
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "{{ (rating.rating or 0) | dump }}",
+                "ratingCount": "{{ (rating.count or 0) | dump }}"
+            },
+            {% endif %}
+            "author": {
+                "@type": "Organization",
+                "name": {{ ((vendor and vendor.name) or 'Unknown') | dump | safe }}
+            },
+            "image": {{ (product.logo_url or '') | dump | safe }},
+            "description": {{ (((product.name or '') ~ ' (app for monday.com). ' ~ (product.short_description or '')) | trim) | dump | safe }},
+            "url": {{ productUrl | dump | safe }}
+        }
+    </script>
+  {% endif %}
+{% endmacro %}

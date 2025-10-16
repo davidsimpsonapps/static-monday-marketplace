@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
   {% include "partials/head.njk" %}
+  {% if app %}
+    {% from "partials/google-seo-rich-snippets.njk" import SeoRichSnippet %}
+    {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
+    {% set rating = ratings | findRatingById(app.app_id) %}
+    {{ SeoRichSnippet(app, vendor, rating, site) }}
+  {% endif %}
 </head>
 <body class="min-h-screen bg-white scroll-p-[24rem]">
   <div class="text-center bg-blue-600 text-xs p-2">
