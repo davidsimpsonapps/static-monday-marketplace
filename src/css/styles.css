@@ -325,7 +325,7 @@ li.toc-list-item {
 }
 
 .breadcrumb {
-  @apply flex flex-row text-sm text-gray-500 gap-2 mb-6;
+  @apply flex flex-row text-sm text-gray-500 gap-2 mb-6 hidden sm:flex;
 }
 .breadcrumb svg {
   margin: 0.2em 0;
