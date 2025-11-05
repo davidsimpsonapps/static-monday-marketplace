@@ -1,333 +1,338 @@
 @import url(https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Kufi+Arabic:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Noto+Sans+Hebrew:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap);
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
---font-family: Figtree, Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP, sans-serif;
-	--title-font-family: Poppins, Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP, sans-serif;
+:root {
+  --font-family: Figtree, Roboto, Noto Sans Hebrew, Noto Kufi Arabic,
+    Noto Sans JP, sans-serif;
+  --title-font-family: Poppins, Roboto, Noto Sans Hebrew, Noto Kufi Arabic,
+    Noto Sans JP, sans-serif;
 }
-
-
 
 body {
-    font-family: var(--font-family);
+  font-family: var(--font-family);
 }
 
-
-
-h1,h2,h3,h4,h5,h6 {
-    @apply font-normal;
-    font-family: var(--title-font-family);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-normal;
+  font-family: var(--title-font-family);
 }
-.h1,.h2,.h3,.h4,.h5,.h6 {
-    font-family: var(--title-font-family);
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: var(--title-font-family);
 }
 
 h2 {
-    @apply mt-10 mb-4 font-bold;
+  @apply mt-10 mb-4 font-bold;
 }
 
 p {
-    @apply py-2;
+  @apply py-2;
 }
 /* for strange `<p><br></p>` that's added to text*/
 .prose p {
-    @apply m-0 p-0;
+  @apply m-0 p-0;
 }
 
 .prose ul,
 .porse li {
-    @apply m-0;
+  @apply m-0;
 }
 a {
-    @apply text-blue-700 hover:text-blue-900;
+  @apply text-blue-700 hover:text-blue-900;
 }
 nav a {
-    @apply text-blue-700 hover:text-blue-900 py-1 hover:underline;
+  @apply text-blue-700 hover:text-blue-900 py-1 hover:underline;
 }
-nav a+a {
-    @apply ml-2;
+nav a + a {
+  @apply ml-2;
 }
-
-
 
 pre {
-    @apply border rounded p-4 overflow-auto;
-    max-height: calc(100vh - 120px);
+  @apply border rounded p-4 overflow-auto;
+  max-height: calc(100vh - 120px);
 }
 
 span[title] svg {
-    @apply inline-block;
+  @apply inline-block;
 }
-
-
 
 .header-wrapper {
-    @apply sticky top-0 shadow-sm backdrop-blur-lg z-[100];
+  @apply sticky top-0 shadow-sm backdrop-blur-lg z-[100];
 }
 .header-wrapper[data-hostname="localhost"] {
-    @apply bg-sky-100 ;
+  @apply bg-sky-100;
 }
 header {
-    nav {
-        @apply order-2 sm:order-1 mt-2 sm:mt-0  sm:mr-2;
-    }
-    #home {
-        @apply order-1 sm:order-2 flex items-center gap-2 text-xl font-bold text-gray-800;
-    }
-    #home svg {
-        @apply rounded-sm;
-    }
-
+  nav {
+    @apply order-2 sm:order-1 mt-2 sm:mt-0  sm:mr-2;
+  }
+  #home {
+    @apply order-1 sm:order-2 flex items-center gap-2 text-xl font-bold text-gray-800;
+  }
+  #home svg {
+    @apply rounded-sm;
+  }
 }
 
 .add-to-monday {
-    max-width: 180px;
+  max-width: 180px;
 }
 
 .item-list.cards {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-y-4;
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-y-4;
 }
 .item-list.list {
-    @apply table;
+  @apply table;
 }
 .item-list.cards .item {
-    @apply flex flex-col justify-between h-full;
+  @apply flex flex-col justify-between h-full;
 }
 .item-list.list .item {
-    @apply table w-full;
+  @apply table w-full;
 }
 
 .item {
-    @apply overflow-hidden;
-    @apply block bg-white rounded-lg transition-colors transition-shadow duration-200;
-    @apply p-4 mb-4;
-    @apply hover:bg-gray-100;
+  @apply overflow-hidden;
+  @apply block bg-white rounded-lg transition-colors transition-shadow duration-200;
+  @apply p-4 mb-4;
+  @apply hover:bg-gray-100;
 }
 .item-list .item.hide-me,
 .vendors.item-list.list .item .vendors-hide-list {
-    display: none!important;
+  display: none !important;
 }
-
 
 .item.list-header {
-    @apply text-sm hover:bg-white font-semibold mt-4 border-b-2;
+  @apply text-sm hover:bg-white font-semibold mt-4 border-b-2;
 }
 
-
-
-.item-list.list .item   {
-    @apply table-row gap-2 w-full;   
-} 
-.item-list.list .item > *  {
-    @apply table-cell align-middle p-2;   
-} 
+.item-list.list .item {
+  @apply table-row gap-2 w-full;
+}
+.item-list.list .item > * {
+  @apply table-cell align-middle p-2;
+}
 
 .item-list.cards .item-logo {
-    @apply w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded;
+  @apply w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded;
 }
 .item-list.list .item-logo {
-    @apply w-6 h-6 rounded;
+  @apply w-6 h-6 rounded;
 }
 
 .item-list.cards .item-title {
-    @apply text-lg font-semibold mb-1 mt-0;
+  @apply text-lg font-semibold mb-1 mt-0;
 }
 .item-list.list .item-title {
-    @apply text-base font-semibold m-0 p-0;
+  @apply text-base font-semibold m-0 p-0;
 }
-.item.cards  .description {
-    @apply text-sm text-gray-600;
+.item.cards .description {
+  @apply text-sm text-gray-600;
 }
 .item-list.cards .cards-hidden,
 .item-list.list .list-hidden,
 .item-list.list .description {
-    @apply hidden;
+  @apply hidden;
 }
 
 .item-list .item .install-counts {
-    @apply text-gray-400 text-xs;
+  @apply text-gray-400 text-xs;
 }
 
 .item-list.cards .item .install-counts {
-    @apply my-2 mb-4;
+  @apply my-2 mb-4;
 }
 
 .item-list.list .list-cols {
-    @apply flex items-center gap-2;
+  @apply flex items-center gap-2;
 }
 .item-list.list .list-cols .ratings {
-    @apply w-24 min-w-24;
+  @apply w-24 min-w-24;
 }
 
 .category-card {
-    @apply overflow-hidden block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden flex flex-col h-full;
+  @apply overflow-hidden block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden flex flex-col h-full;
 }
 
 .chart-container {
-    @apply text-sm;
+  @apply text-sm;
 }
 .chart-container + .chart-container {
-    @apply mt-10;
+  @apply mt-10;
 }
 .headlines-container {
-    @apply flex gap-8 justify-center mb-4;
+  @apply flex gap-8 justify-center mb-4;
 }
 .headlines-container > div {
-    @apply text-center;
+  @apply text-center;
 }
 .headlines-container .label {
-    @apply uppercase text-gray-500 text-xs font-semibold tracking-widest;
+  @apply uppercase text-gray-500 text-xs font-semibold tracking-widest;
 }
 .headlines-container .headline {
-    @apply text-lg font-semibold;
+  @apply text-lg font-semibold;
 }
 .headlines-container .delta {
-    @apply text-sm font-semibold;
+  @apply text-sm font-semibold;
 }
-
 
 li.toc-list-item {
-    @apply p-2 py-1
+  @apply p-2 py-1;
 }
 .toc-link::before {
-    max-height: 60px;
+  max-height: 60px;
 }
 li.toc-list-item .is-active-link::before {
-    @apply bg-blue-500;
+  @apply bg-blue-500;
 }
 
 ul {
-    @apply list-disc pl-4;
+  @apply list-disc pl-4;
 }
 ol {
-    @apply list-decimal pl-4;
+  @apply list-decimal pl-4;
 }
 
-
 .sorting {
-    @apply -mt-2 mb-6 leading-8;
+  @apply -mt-2 mb-6 leading-8;
 }
 button.list-format,
 .apps-menu a,
 .sorting button {
-    @apply bg-gray-100 text-gray-600 px-2 py-1  text-sm;
-    &:hover {
-        @apply bg-gray-200;
-    }
-    &.active {
-        @apply bg-gray-200;
-    }
-    cursor: pointer;
+  @apply bg-gray-100 text-gray-600 px-2 py-1  text-sm;
+  &:hover {
+    @apply bg-gray-200;
+  }
+  &.active {
+    @apply bg-gray-200;
+  }
+  cursor: pointer;
 }
 
 .apps-menu a,
 .sorting .grow button {
-    @apply rounded;
+  @apply rounded;
 }
-
 
 button.list-format svg.Icon-module_icon {
-    vertical-align: text-bottom;
+  vertical-align: text-bottom;
 }
-
-
 
 button.selected,
 .apps-menu a.selected,
 .sorting button.selected {
-    @apply bg-gray-300 text-black; 
+  @apply bg-gray-300 text-black;
 }
 
 .badge {
-    @apply inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs border-2 border-white;
+  @apply inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs border-2 border-white;
 }
 .badge.green {
-    @apply bg-green-100 text-green-800;
+  @apply bg-green-100 text-green-800;
 }
 .badge.blue {
-    @apply bg-blue-100 text-blue-800;
+  @apply bg-blue-100 text-blue-800;
 }
 .badge.purple {
-    @apply bg-purple-100 text-purple-800;
+  @apply bg-purple-100 text-purple-800;
 }
 
 .top-installs h2 {
-    @apply  font-semibold mt-4;
+  @apply font-semibold mt-4;
 }
- 
+
 .top-installs li {
-    @apply sm:h-20 md:h-16;
+  @apply sm:h-20 md:h-16;
 }
 .top-installs p {
-    @apply mb-6 text-sm sm:h-12;
+  @apply mb-6 text-sm sm:h-12;
 }
 .top-installs li a {
-    max-width: calc( 100% - 72px );
-    text-overflow: ellipsis;
-    overflow: hidden;
-    @apply whitespace-nowrap inline-block align-top font-semibold mr-1;
+  max-width: calc(100% - 72px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @apply whitespace-nowrap inline-block align-top font-semibold mr-1;
 }
 
 .top-installs li .vendor {
-    max-width: calc( 100% - 25px );
-    text-overflow: ellipsis;
-    overflow: hidden;
-    @apply whitespace-nowrap inline-block align-middle;
+  max-width: calc(100% - 25px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @apply whitespace-nowrap inline-block align-middle;
 }
 .top-installs li:hover .badge {
-    @apply bg-gray-200;
+  @apply bg-gray-200;
 }
 
 /* .top-installs > div {
     @apply bg-gray-100;
 } */
 .top-installs ol {
-    @apply pl-8;
+  @apply pl-8;
 }
 .top-installs svg {
-    width: 20px;
-    height: 20px;
-    @apply text-blue-600;
+  width: 20px;
+  height: 20px;
+  @apply text-blue-600;
 }
 
 .top-installs li[data-app-id] {
-    cursor: pointer;
-    @apply px-2 py-1 rounded;
-    margin-bottom: 4px;
+  cursor: pointer;
+  @apply px-2 py-1 rounded;
+  margin-bottom: 4px;
 }
 .top-installs li[data-app-id].selected {
-    @apply bg-yellow-100;
+  @apply bg-yellow-100;
 }
 .top-installs li[data-app-id]:hover {
-    @apply bg-gray-100;
+  @apply bg-gray-100;
 }
 .top-installs li.hide-me {
-    @apply list-item overflow-hidden m-0 p-0;
-    height: 0;
+  @apply list-item overflow-hidden m-0 p-0;
+  height: 0;
 }
 
 [data-toggle] svg {
-    display: inline-block !important;
+  display: inline-block !important;
 }
 
-
 .button {
-    @apply m-1 px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
+  @apply m-1 px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
 }
 
 .highlight-all-apps-in-list {
-    border-radius: 9999px;
-    padding: 0.25em 0.5em;
+  border-radius: 9999px;
+  padding: 0.25em 0.5em;
 }
 .highlight-all-apps-in-list.selected {
-    @apply bg-yellow-100;
+  @apply bg-yellow-100;
 }
 
-
 li.toc-list-item {
-    list-style-type: none;
+  list-style-type: none;
+}
+
+.breadcrumb {
+  @apply flex flex-row text-sm text-gray-500 gap-2 mb-6;
+}
+.breadcrumb svg {
+  margin: 0.2em 0;
+}
+.breadcrumb span {
+  @apply flex flex-row;
+}
+.breadcrumb a {
+  @apply text-gray-500 flex gap-2 hover:text-gray-800;
 }
