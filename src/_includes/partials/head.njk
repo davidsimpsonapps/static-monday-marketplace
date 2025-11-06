@@ -9,8 +9,9 @@
 <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
 <!-- Preload critical resources -->
-<link rel="preload" href="/js/all-pages.js" as="script">
-<link rel="preload" href="/css/styles.css" as="style">
+<link rel="preload" href="/js/all-pages.js?_={{ '' | cacheBusterTimestamp }}" as="script">
+<link rel="preload" href="/css/styles.css?_={{ '' | cacheBusterTimestamp }}" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Kufi+Arabic:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Noto+Sans+Hebrew:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" as="style">
 
 <!-- Preconnect early -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +22,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Kufi+Arabic:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Noto+Sans+Hebrew:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"></noscript>
 
 
-
-<!-- Load non-critical CSS asynchronously -->
-<link rel="preload" href="/css/styles.css?_={{ '' | cacheBusterTimestamp }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/styles.css?_={{ '' | cacheBusterTimestamp }}"></noscript>
+<link href="/css/styles.css?_={{ '' | cacheBusterTimestamp }}" rel="stylesheet">
 
 {% if canonical %}<link rel="canonical" href="{{ site. url }}{{ canonical }}" />{%else %}<link rel="canonical" href="{{ site. url }}{{ page.url }}" />{% endif %}
 <meta property="og:title" content="{{ title }} | Apps for monday.com">
