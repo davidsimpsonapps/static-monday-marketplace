@@ -18,6 +18,7 @@
         data-installs="{{ appInstalls }}"
         data-monthly-installs="{{ montlyInstalls }}"
         data-release-date="{{ app.created_at }}"
+        data-last-updated="{{ app.updated_at }}"
         {% if ratings %}data-rating="{{ rating.rating }}"{% endif %}
         {% if ratings %}data-ratings-count="{{ rating.count }}"{% endif %}
         {% if app.installsDelta.sevenDays %}data-installs-delta-7d="{{ app.installsDelta.sevenDays }}"{% endif %}
