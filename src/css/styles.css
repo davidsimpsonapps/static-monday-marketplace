@@ -98,6 +98,9 @@ header {
 }
 .item-list.cards .item {
   @apply flex flex-col justify-between h-full;
+
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 .item-list.list .item {
   @apply table w-full;
