@@ -840,6 +840,46 @@
         10,
         4
       ]
+    },
+    {
+      "date": "2025-11-13",
+      "marketplace_category_ids": [
+        10000001,
+        10,
+        4
+      ]
+    },
+    {
+      "date": "2025-11-14",
+      "marketplace_category_ids": [
+        10000001,
+        10,
+        4
+      ]
+    },
+    {
+      "date": "2025-11-15",
+      "marketplace_category_ids": [
+        10000001,
+        10,
+        4
+      ]
+    },
+    {
+      "date": "2025-11-16",
+      "marketplace_category_ids": [
+        10000001,
+        10,
+        4
+      ]
+    },
+    {
+      "date": "2025-11-17",
+      "marketplace_category_ids": [
+        10000001,
+        10,
+        4
+      ]
     }
   ]
 }
