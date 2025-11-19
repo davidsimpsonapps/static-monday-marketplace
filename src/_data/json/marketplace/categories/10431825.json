@@ -925,6 +925,22 @@
         13,
         6
       ]
+    },
+    {
+      "date": "2025-11-18",
+      "marketplace_category_ids": [
+        10000017,
+        13,
+        6
+      ]
+    },
+    {
+      "date": "2025-11-19",
+      "marketplace_category_ids": [
+        10000017,
+        13,
+        6
+      ]
     }
   ]
 }

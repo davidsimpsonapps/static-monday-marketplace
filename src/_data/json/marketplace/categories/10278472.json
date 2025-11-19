@@ -168,6 +168,22 @@
         7,
         4
       ]
+    },
+    {
+      "date": "2025-11-18",
+      "marketplace_category_ids": [
+        10000001,
+        7,
+        4
+      ]
+    },
+    {
+      "date": "2025-11-19",
+      "marketplace_category_ids": [
+        10000001,
+        7,
+        4
+      ]
     }
   ]
 }
