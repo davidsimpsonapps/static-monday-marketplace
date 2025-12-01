@@ -728,6 +728,10 @@
     {
       "date": "2025-11-30",
       "marketplace_category_ids": []
+    },
+    {
+      "date": "2025-12-01",
+      "marketplace_category_ids": []
     }
   ]
 }
