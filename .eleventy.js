@@ -33,6 +33,17 @@ module.exports = function(eleventyConfig) {
     return apps.find(app => app.id === parseInt(id));
   });
 
+  // Add custom shuffle filter (Fisher–Yates, non-mutating)
+  eleventyConfig.addFilter("shuffle", function(array) {
+    if (!Array.isArray(array)) return array;
+    const copy = [...array];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  });
+
   // Add custom filter to find vendor by ID
   eleventyConfig.addFilter("findVendorById", function(vendors, id) {
     return vendors.find(vendor => vendor.id === parseInt(id));

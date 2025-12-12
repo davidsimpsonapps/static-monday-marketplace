@@ -60,7 +60,7 @@ title: Home
     </div>
     
 
-    {% set specialApps = ['10000076', '10000574','10000414' ] %}
+    {% set specialApps = ['10000999', '10000574', '10000076'] | shuffle %}
     {% for id in specialApps %}
       {% set app = marketplace | findAppById(id) %}
       {{ appCard(app, ratings, vendors, installs) }}
