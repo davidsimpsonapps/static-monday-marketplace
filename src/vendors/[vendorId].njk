@@ -186,38 +186,20 @@ eleventyComputed:
           </div>
         </div>
         
-        <div class="chart-container">
-          <h4 id="installs-7d" class="font-semibold">Change in total number of installs in last 7 days</h4>
-          <p class="text-xs text-gray-600">Compares the number of installs on each date with 7 days previously:</p>        
-          <div id="headlines-7d" class="headlines-container" >
-            {% include "partials/headlines.njk" %}
-          </div>
-          <div class="h-96">
-            <canvas id="installsChart-7d"></canvas>
-          </div>
-        </div> 
 
-        <div class="chart-container">
-          <h4 id="installs-30d" class="font-semibold">Change in total number of installs in last 30 days</h4>
-          <p class="text-xs text-gray-600">Compares the number of installs on each date with 30 days previously:</p>
-          <div id="headlines-30d" class="headlines-container" >
-            {% include "partials/headlines.njk" %}
-          </div>          
-          <div class="h-96">
-            <canvas id="installsChart-30d"></canvas>
-          </div>
-        </div>  
-
-        <div class="chart-container">
-          <h4 id="installs-90d" class="font-semibold">Change in total number of installs in last 90 days</h4>
-          <p class="text-xs text-gray-600">Compares the number of installs on each date with 90 days previously:</p>
-          <div id="headlines-90d" class="headlines-container" >
-            {% include "partials/headlines.njk" %}
-          </div>
-          <div class="h-96">
-            <canvas id="installsChart-90d"></canvas>
-          </div>
-        </div>  
+        {% set days = [7,30,90, 180] %}
+        {% for day in days %}
+          <div class="chart-container">
+            <h4 id="installs-{{ day }}d" class="font-semibold">Change in total number of installs in last {{ day }} days</h4>
+            <p class="text-xs text-gray-600">Compares the number of installs on each date with {{ day }} days previously:</p>
+            <div id="headlines-{{ day }}d" class="headlines-container" >
+              {% include "partials/headlines.njk" %}
+            </div>
+            <div class="h-96">
+              <canvas id="installsChart-{{ day }}d"></canvas>
+            </div>
+          </div>  
+        {% endfor %}
       
       </div>
     </div>

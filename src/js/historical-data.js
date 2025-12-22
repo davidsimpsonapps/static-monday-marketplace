@@ -178,7 +178,7 @@ function renderChartByDeltaInDays(appData, days) {
     const node = document.getElementById(`installsChart-${days}d`);
     if (!node) {
         return 
-    }
+}
     const ctx = node.getContext('2d');
     // Sort history by date (oldest first)
     const sortedHistory = [...appData.history].sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -404,7 +404,7 @@ async function initChart() {
             const data = await loadAppData(installsUrl, '.chart-container:first');            
             if (data) {
                 renderChart(data);
-                [7,30,90].forEach(days => renderChartByDeltaInDays(data,days))      
+                [7,30,90,180].forEach(days => renderChartByDeltaInDays(data,days))      
             }
         }
     }
