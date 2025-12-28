@@ -1479,6 +1479,54 @@
         9,
         6
       ]
+    },
+    {
+      "date": "2025-12-23",
+      "marketplace_category_ids": [
+        10000021,
+        9,
+        6
+      ]
+    },
+    {
+      "date": "2025-12-24",
+      "marketplace_category_ids": [
+        10000021,
+        9,
+        6
+      ]
+    },
+    {
+      "date": "2025-12-25",
+      "marketplace_category_ids": [
+        10000021,
+        9,
+        6
+      ]
+    },
+    {
+      "date": "2025-12-26",
+      "marketplace_category_ids": [
+        10000021,
+        9,
+        6
+      ]
+    },
+    {
+      "date": "2025-12-27",
+      "marketplace_category_ids": [
+        10000021,
+        9,
+        6
+      ]
+    },
+    {
+      "date": "2025-12-28",
+      "marketplace_category_ids": [
+        10000021,
+        9,
+        6
+      ]
     }
   ]
 }
