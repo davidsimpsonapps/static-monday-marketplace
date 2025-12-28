@@ -213,7 +213,36 @@ function triggerClickFromHash() {
 
 
 
- const init = () => {
+const redirectToFriendlyUrl = () => {
+    const friendlyUrlLink = document.querySelector('[rel="friendly-url"]');
+    if (friendlyUrlLink) {
+        const friendlyUrl = friendlyUrlLink.getAttribute('href');
+        if (friendlyUrl) {
+            try {
+                const url = new URL(friendlyUrl, window.location.origin);
+                const newPath = url.pathname + url.search + url.hash;
+                const currentPath = window.location.pathname + window.location.search + window.location.hash;
+                
+                if (newPath !== currentPath) {
+                    window.history.replaceState({}, '', newPath);
+                }
+            } catch (e) {
+                // If URL parsing fails, fall back to simple pathname replacement
+                const urlObj = new URL(friendlyUrl, window.location.href);
+                window.history.replaceState({}, '', urlObj.pathname + urlObj.search + urlObj.hash);
+            }
+        }
+    }
+}
+
+// Run immediately if DOM is already loaded, otherwise wait for DOMContentLoaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', redirectToFriendlyUrl);
+} else {
+    redirectToFriendlyUrl();
+}
+
+const init = () => {
 
     toggleListStyle();
     cardSorting();

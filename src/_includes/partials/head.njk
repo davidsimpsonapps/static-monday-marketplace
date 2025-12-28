@@ -25,6 +25,7 @@
 <link href="/css/styles.css?_={{ '' | cacheBusterTimestamp }}" rel="stylesheet">
 
 {% if canonical %}<link rel="canonical" href="{{ site. url }}{{ canonical }}" />{%else %}<link rel="canonical" href="{{ site. url }}{{ page.url }}" />{% endif %}
+{% if friendly %}<link rel="friendly-url" href="{{ site. url }}{{ friendly }}" />{% endif %}
 <meta property="og:title" content="{{ title }} | Apps for monday.com">
 {% if description %}<meta name="description" content="{{ description }}">
 <meta property="og:description" content="{{ description }}">{% else %}<!-- !description -->{% endif %}
