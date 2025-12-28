@@ -5,30 +5,46 @@
     {% if site and site.origin %}
       {% set origin = site.origin %}
     {% endif %}
-    {% set productUrl = origin ~ '/apps/' ~ product.id ~ '/#/' ~ (product.name | sanitisePathname) %}
+    {% set productUrl = origin ~ '/apps/' ~ product.id ~ '/' %}
 
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "SoftwareApplication",
-            "name": {{ (product.name or '') | dump | safe }},
-            "operatingSystem": "Web",
-            "applicationCategory": "BusinessApplication",
-            {% if rating %}
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "{{ (rating.rating or 0) | dump }}",
-                "ratingCount": "{{ (rating.count or 0) | dump }}"
-            },
-            {% endif %}
-            "author": {
-                "@type": "Organization",
-                "name": {{ ((vendor and vendor.name) or 'Unknown') | dump | safe }}
-            },
-            "image": {{ (product.logo_url or '') | dump | safe }},
-            "description": {{ (((product.name or '') ~ ' (app for monday.com). ' ~ (product.short_description or '')) | trim) | dump | safe }},
-            "url": {{ productUrl | dump | safe }}
-        }
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": {{ (product.name or '') | dump | safe }},
+        "operatingSystem": "Any",
+        "applicationCategory": "BusinessApplication",
+        {% if rating %}
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "{{ (rating.rating or 0) | dump }}",
+            "ratingCount": "{{ (rating.count or 0) | dump }}"
+        },
+        {% endif %}
+        "publisher": {
+            "@type": "Organization",
+            "name": {{ ((vendor and vendor.name) or 'Unknown') | dump | safe }},
+            "url": {{ (( vendor and vendor.website) or 'Unknown') | dump | safe }}
+        },
+
+        "isAccessibleForFree": {% if product.plans %}false{% else %}true{% endif %},
+        "image": {{ (product.logo_url or '') | dump | safe }},
+        "description": {{ (((product.name or '') ~ ' (app for monday.com). ' ~ (product.short_description or '')) | trim) | dump | safe }},
+        "url": {{ productUrl | dump | safe }}{% if product.plans and product.plans[0] and product.plans[0].prices and product.plans[0].prices.monthly %},
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ product.plans[0].prices.monthly }}",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "{{ product.plans[0].prices.monthly }}",
+            "priceCurrency": "USD",
+            "billingDuration": 1,
+            "billingIncrement": 1,
+            "unitText": "MONTH"
+          }
+        }{% endif %}
+      }
     </script>
   {% endif %}
 {% endmacro %}
