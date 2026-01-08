@@ -23,7 +23,7 @@ h5,
 h6 {
   @apply font-normal;
   font-family: var(--title-font-family);
-  scroll-margin-top: 80px;
+  scroll-margin-top: 70px;
 }
 .h1,
 .h2,
