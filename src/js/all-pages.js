@@ -204,6 +204,11 @@ function triggerClickFromHash() {
 }
 
 const redirectToFriendlyUrl = () => {
+  if (window.location.hash.length > 0) {
+    // don't update the URL
+    console.log(window.location.hash);
+    return;
+  }
   const friendlyUrlLink = document.querySelector('[rel="friendly-url"]');
   if (friendlyUrlLink) {
     const friendlyUrl = friendlyUrlLink.getAttribute("href");
