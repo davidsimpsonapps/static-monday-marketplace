@@ -57,10 +57,10 @@ description: "An aggregated history of installations for all apps from the monda
         </div>
         
 
-        {% set days = [7,30,90, 180] %}
+        {% set days = [1,7,30,90,180] %}
         {% for day in days %}
           <div class="chart-container">
-            <h4 id="installs-{{ day }}d" class="font-semibold">Change in total number of installs in last {{ day }} days</h4>
+            <h4 id="installs-{{ day }}d" class="font-semibold">Change in total number of installs in last {{ day }} day(s)</h4>
             <p class="text-xs text-gray-600">Compares the number of installs on each date with {{ day }} days previously:</p>
             <div id="headlines-{{ day }}d" class="headlines-container" >
               {% include "partials/headlines.njk" %}
