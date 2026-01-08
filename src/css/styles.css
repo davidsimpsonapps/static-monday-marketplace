@@ -70,9 +70,11 @@ span[title] svg {
 
 .header-wrapper {
   @apply sticky top-0 shadow-sm backdrop-blur-lg z-[100];
+
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .header-wrapper[data-hostname="localhost"] {
-  @apply bg-sky-100;
+  @apply bg-pink-100;
 }
 header {
   nav {
