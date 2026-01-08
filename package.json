@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "A starter project for Eleventy with Tailwind CSS",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "NODE_ENV=production eleventy",
-    "watch": "eleventy --watch",
-    "dev": "eleventy --serve",
+    "start": "NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve",
+    "build": "NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 eleventy",
+    "watch": "NODE_OPTIONS=--max-old-space-size=8192 eleventy --watch",
+    "dev": "NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve",
     "build:css": "tailwindcss -i ./src/css/styles.css -o ./_site/css/styles.css --minify",
     "build:all": "npm run build:css && npm run build",
     "deploy": "npm run build && wrangler pages deploy _site --project-name=static-monday-marketplace"
