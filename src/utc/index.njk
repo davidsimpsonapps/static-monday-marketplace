@@ -5,7 +5,7 @@ title: Current time in UTC
 
 
 
-<div class="mx-auto">
+<div class="mx-auto main">
   <div class="breadcrumb">
     <span>
       <a href="/">
@@ -29,8 +29,11 @@ title: Current time in UTC
     </h1>
   </div>
 
-  <div id="time" class="text-9xl font-bold my-8"></div>
-  <div id="localised-date" class="text-3xl"></div>
+  <div id="copy" class="my-4 md:my-8">
+    <div id="time" class="text-6xl md:text-9xl font-bold"></div>
+    <div class="text-sm text-gray-600">Click to copy</div>
+  </div>
+  <div id="localised-date" class="text-lg md:text-3xl"></div>
 </div>
 
 
@@ -71,4 +74,79 @@ title: Current time in UTC
 
   updateUtcTime();
   setInterval(updateUtcTime, 1000);
+
+
+  // Copy to clipboard stuff below here:
+  const copyElement = document.getElementById('copy');
+  const timeElement = document.getElementById('time');
+
+  // Add clickable styling
+  timeElement.style.cursor = 'pointer';
+  timeElement.classList.add('hover:opacity-80', 'transition-opacity');
+
+  // Create toast element
+  const toast = document.createElement('div');
+  toast.style.position = 'fixed';
+  toast.style.bottom = '20px';
+  toast.style.left = '50%';
+  toast.style.transform = 'translateX(-50%)';
+  toast.style.backgroundColor = '#10B981'; // green-500
+  toast.style.color = 'white';
+  toast.style.fontSize = '12px';
+  toast.style.padding = '8px 16px';
+  toast.style.borderRadius = '4px';
+  toast.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+  toast.style.zIndex = '9999';
+  toast.style.display = 'none';
+  toast.textContent = 'Time copied to clipboard!';
+  document.body.appendChild(toast);
+
+  copyElement.addEventListener('click', async () => {
+    try {
+      const textToCopy = timeElement.textContent;
+      
+      // Modern clipboard API
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(textToCopy);
+      } else {
+        // Fallback for non-HTTPS contexts
+        fallbackCopy(textToCopy);
+      }
+      
+      // Show toast
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 2000);
+      
+    } catch (err) {
+      console.error('Failed to copy:', err);
+      alert('Failed to copy to clipboard');
+    }
+  });
+
+  function fallbackCopy(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+      document.execCommand('copy');
+    } catch (err) {
+      console.error('Fallback failed:', err);
+    }
+    
+    document.body.removeChild(textArea);
+  }
 </script>
+
+<style>
+  .main {
+    min-height: calc(100vh - 310px);
+  }
+</style>
