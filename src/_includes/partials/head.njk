@@ -24,16 +24,36 @@
 
 <link href="/css/styles.css?_={{ '' | cacheBusterTimestamp }}" rel="stylesheet">
 
-{% if canonical %}<link rel="canonical" href="{{ site. url }}{{ canonical }}" />{%else %}<link rel="canonical" href="{{ site. url }}{{ page.url }}" />{% endif %}
-{% if friendly %}<link rel="friendly-url" href="{{ site. url }}{{ friendly }}" />{% endif %}
-<meta property="og:title" content="{{ title }} | Apps for monday.com">
+{% if canonical %}<link rel="canonical" href="{{ site.url }}{{ canonical }}" />{%else %}<link rel="canonical" href="{{ site. url }}{{ page.url }}" />{% endif %}
+{% if friendly %}<link rel="friendly-url" href="{{ site.url }}{{ friendly }}" />{% endif %}
 {% if description %}<meta name="description" content="{{ description }}">
-<meta property="og:description" content="{{ description }}">{% else %}<!-- !description -->{% endif %}
+
 {% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
 <meta name="google-site-verification" content="9U0NQS-QO814XXRbIkeLOyboO_D9zdAu5cTG6MFKmZg" />
 
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">{% else %}<!-- !description -->{% endif %}
+
 {% if image %}<meta property="og:image" content="{{ image }}">
-{% else %}<meta property="og:image" content="{{ site. url }}/images/a4m-favicon.svg">{% endif %}
+{% else %}<meta property="og:image" content="{{ site.url }}/images/a4m-favicon.svg">{% endif %}
+{% if app and app.gallery_assets and app.gallery_assets.length > 0 %}
+
+  {% for asset in app.gallery_assets %}
+    <meta property="og:image" content="{{ asset.url }}">
+  {% endfor %}
+
+  <meta property="og:type" content="product">
+  <meta property="product:availability" content="in stock" />
+  <meta property="product:condition" content="new" />  
+  {% if vendor %}
+    <meta property="product:brand" content="{{ vendor.name }}" />
+  {% endif %}
+{% elif vendor %}
+  <meta property="og:type" content="business.business" />
+  <meta property="business:contact_data:website" content="{{ vendor.website }}" />
+{% else %}
+  <meta property="og:type" content="website" />
+{% endif %}
 
 
 <!-- Google tag (gtag.js) -->
