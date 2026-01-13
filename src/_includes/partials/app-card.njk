@@ -25,6 +25,8 @@
         {% if app.installsDelta.sevenDays %}data-installs-delta-7d="{{ app.installsDelta.sevenDays }}"{% endif %}
         {% if app.installsDelta.thirtyDays %}data-installs-delta-30d="{{ app.installsDelta.thirtyDays }}"{% endif %}
         data-is-bestseller="{% if app.label === "Best seller" %}{% else %}0{% endif %}"
+
+        data-partner-program="{{ vendor.partners_program }}"
       >
         
           <div>
