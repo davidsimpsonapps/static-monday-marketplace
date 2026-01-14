@@ -57,7 +57,7 @@ nav a {
   @apply text-blue-700 hover:text-blue-900 py-1 hover:underline;
 }
 nav a + a {
-  @apply ml-2;
+  @apply ml-1;
 }
 
 pre {
