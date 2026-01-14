@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Partners
+title: monday.com partners
 ---
 
 <style>
@@ -30,7 +30,7 @@ title: Partners
 
   <div class="flex gap-3 mb-4">
     <h1 class="text-lg md:text-2xl font-semibold">
-      Partners
+      monday.com partners
     </h1>
     <span>
       <span data-total="{{ partners.length }}"class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
@@ -39,8 +39,8 @@ title: Partners
     </span>
   </div>
   <p class="py-4">
-    This website lists all <a target="_blank" href="https://monday.com/gotopartners/directory">monday.com partners</a> 
-     in one list. Search for specific partner below.
+    This website displays <a target="_blank" href="https://monday.com/gotopartners/directory">monday.com partners</a> 
+     in a single list. Search for specific partner below.
   </p>
 
 
@@ -52,7 +52,7 @@ title: Partners
 
 
     {% for partner in partners  %}
-        <a href="/partners/#{{ partner.slug }}/" 
+        <a href="/partners/{{ partner.slug }}/" 
           class="item search-item card"
           
           data-alpha="{{ partner.name | trim }}"
@@ -67,10 +67,8 @@ title: Partners
           data-partner-program="{{ partner.partners_program }}"
           >
           <div>
-            {% if partner.profilePictureUrl.indexOf('https:') != -1 %}
+            {% if  partner.profilePictureUrl %}
               <img src="{{ partner.profilePictureUrl }}" alt="{{ partner.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg">
-           {% elseif partner.profilePictureUrl %}
-              <img src="https://partners.mondayprograms.com/{{ partner.profilePictureUrl }}" alt="{{ partner.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg">
             {% endif %}
             <h2 class="text-xl font-semibold mt-4 mb-2">
               {{ partner.name }}
