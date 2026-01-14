@@ -1,0 +1,315 @@
+---
+layout: base.njk
+pagination:
+  data: partners
+  size: 1
+  alias: partner
+  addAllPagesToCollections: true
+permalink: /partners/{{ partner.slug }}/
+eleventyComputed:
+  title: "{{partner.name | safe}} • monday.com partners"
+  description: "{{partner.shortIntro | safe}}"
+  canonical: "/partners/{{ partner.slug }}/"
+  friendly: "/partners/{{ partner.slug }}/"
+  image: "{{ app.logoUrl }}"
+---
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.36.4/tocbot.css" integrity="sha512-nJwmkYKmBxqHBZfKnXTiVA2YVIrRULgO+gn6m70r4vqSMCRtQKmRSfd9LozVxcOR7V9/LV0TWLqkmspIHhr1KA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+{% if partner %}
+  <div class="breadcrumb">
+    <span>
+      <a href="/">
+        <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="breadcrumbIcon_d94850cf8c"><path d="M9.56992 2.1408C9.82591 1.95307 10.1741 1.95307 10.4301 2.1408L17.7028 7.47413C17.8896 7.61113 18 7.82894 18 8.06061V16.7879C18 17.1895 17.6744 17.5152 17.2727 17.5152H11.9394C11.5377 17.5152 11.2121 17.1895 11.2121 16.7879V13.1515H8.78788V16.7879C8.78788 17.1895 8.46227 17.5152 8.06061 17.5152H2.72727C2.32561 17.5152 2 17.1895 2 16.7879V8.06061C2 7.82894 2.11037 7.61113 2.29719 7.47413L9.56992 2.1408ZM3.45455 8.42914V16.0606H7.33333V12.4242C7.33333 12.0226 7.65894 11.697 8.06061 11.697H11.9394C12.3411 11.697 12.6667 12.0226 12.6667 12.4242V16.0606H16.5455V8.42914L10 3.62914L3.45455 8.42914Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        <span>Home</span>
+      </a>
+    </span>
+
+    <span>
+      <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="separatorIcon_3a648a2555" aria-hidden="true"><path d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303L13 10L13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </span>
+
+    <span>
+      <a href="/partners/" >
+        Partners
+      </a>
+    </span>    
+
+    <span>
+      <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="separatorIcon_3a648a2555" aria-hidden="true"><path d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303L13 10L13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </span>
+
+    <span>
+      <a href="/partners/{{ partner.slug }}/" >
+        {{ partner.name }}
+      </a>
+    </span>
+
+  </div>
+{% endif %}
+
+<div class="sm:mx-auto sm:my-0 overflow-hidden">
+  <div class="flex flex-col lg:flex-row gap-16">
+    <!-- Main content -->
+    <div class="flex-1">
+      <div class="pb-4">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between sm:gap-6">
+          <div class="flex flex-col sm:flex-row sm:items-start gap-6">
+
+            {% if partner.profilePictureUrl %}
+              <img src="{{ partner.profilePictureUrl }}" alt="{{ partner.name }} logo" class="w-12 h-12 rounded">
+            {% else %}
+              <div class="w-12 h-12 rounded-lg bg-gray-100"></div>
+            {% endif %}
+            <div>
+              <h1 class="text-xl font-semibold mb-2 no-tocbot">
+                {{ partner.name }}
+
+                {% if partner.tier === 'BRONZE' %}
+                    <span data-toggle="tooltip" title="Bronze Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                {% elseif partner.tier === 'SILVER' %}
+                    <span data-toggle="tooltip" title="Silver Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="gray"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                {% elseif partner.tier === 'GOLD' %}
+                    <span data-toggle="tooltip" title="Gold  Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#FFCB00"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                {% elseif partner.tier === 'PLATINUM' %}
+                    <span data-toggle="tooltip" title="Platinum Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                {% endif %}  
+                {% if partner.advancedDelivery === true %}
+                    <span data-toggle="tooltip" title="Advanced delivery partner"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.50454 4.60798C9.66002 4.53683 9.82901 4.5 10 4.5C10.171 4.5 10.34 4.53683 10.4955 4.60798C10.651 4.67913 10.7893 4.78294 10.9011 4.91234C10.9185 4.93248 10.9347 4.95358 10.9497 4.97554L13.5554 8.78235L16.1462 6.76057C16.1826 6.73213 16.2217 6.70731 16.263 6.68647C16.4589 6.58748 16.6783 6.54427 16.8971 6.56156C17.1159 6.57885 17.3258 6.65597 17.5038 6.78449C17.6817 6.91302 17.8209 7.08799 17.9061 7.29029C17.9904 7.49034 18.0187 7.70951 17.988 7.92432L17.1332 14.8819C17.0865 15.2356 16.785 15.5 16.4282 15.5H3.57184C3.21533 15.5 2.91391 15.236 2.86689 14.8826L2.0121 7.97663C1.9813 7.76167 2.00955 7.54233 2.09388 7.34213C2.17909 7.13983 2.31829 6.96485 2.49624 6.83633C2.67419 6.70781 2.88406 6.63069 3.10289 6.6134C3.32172 6.59611 3.54109 6.63932 3.73701 6.73831C3.77579 6.7579 3.81269 6.781 3.84725 6.80732L6.44312 8.78455L9.05026 4.97554C9.06529 4.95358 9.08154 4.93248 9.09894 4.91234C9.21071 4.78294 9.34905 4.67913 9.50454 4.60798ZM10 6.10617L12.5148 9.7802C12.6067 9.91726 12.7261 10.0337 12.8655 10.1222C13.0067 10.2118 13.1652 10.2707 13.3307 10.295C13.4961 10.3193 13.6648 10.3084 13.8258 10.2632C13.9825 10.2191 14.1284 10.1435 14.2546 10.0409L16.5058 8.2841L15.8047 14.0777H4.19465L3.49344 8.32579L5.74941 10.0441C5.87469 10.145 6.01918 10.2196 6.17417 10.2632C6.33517 10.3084 6.50389 10.3193 6.66935 10.295C6.83481 10.2707 6.99329 10.2118 7.13449 10.1222C7.27388 10.0337 7.39333 9.91724 7.48527 9.78017L10 6.10617Z" fill="#323338"></path></svg></span>  
+                {% endif %}        
+              </h1>
+              <p class="text-gray-600">
+                {% if vendor %}
+                  <a href="/vendors/{{ vendor.id }}/" class="text-blue-600 hover:text-blue-800">
+                    {{ vendor.name }}
+                  </a>
+
+                  {% if vendor.partners_program === 1 %}
+                    <span data-toggle="tooltip" title="Bronze Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                  {% elseif vendor.partners_program === 2 %}
+                    <span data-toggle="tooltip" title="Silver Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="gray"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                  {% elseif vendor.partners_program === 3 %}
+                    <span data-toggle="tooltip" title="Gold Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#FFCB00"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                  {% elseif vendor.partners_program === 4 %}
+                    <span data-toggle="tooltip" title="Platinum Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                  {% endif %}
+
+
+                  {% if partner.websiteUrl and partner.websiteUrl !== 'https://example.com' %}
+                    <a title="Partner's website" href="{{ partner.websiteUrl }}" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800 mx-1">
+                      <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                      </svg>
+                    </a>
+                  {% endif %}
+                {% endif %}
+              </p>
+              <!--<p class="text-gray-600 mb-4">App IDs: {{ partner.id }} • {{partner.app_id}}</p>-->
+
+              {% if partner.rating %}
+                <div class="mt-1 text-gray-400 text-sm">
+                  <a href="#reviews" data-toggle="tooltip" title="See reviews">
+                    <span class="text-yellow-500 ">★</span>
+                    <span class="ml-1">{{ partner.rating | formatRating }}</span>
+                  </a>
+                </div>
+              {% endif %}
+
+
+            </div>
+          </div>
+          <div class="flex-shrink-0 lg:self-start">
+            {% if partner.calendlyUrl %}
+            <div class="mb-2 sm:text-right">
+              <a 
+                href="{{ partner.calendlyUrl }}" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-white   bg-blue-600 hover:bg-blue-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Book an intro call
+              </a>
+            </div>
+            {% endif %}
+
+            <div class="mb-2 sm:text-right">
+              <a 
+                href="https://monday.com/gotopartners/directory/{{ partner.slug }}" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                </svg>
+                View on partner directory
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+
+
+
+      
+      <div class="py-8">
+
+
+        <h2 class="text-lg sm:text-2xl font-semibold my-4">About {{ partner.name }}</h2>
+        <div class="prose max-w-none">
+          {{ partner.shortIntro | safe }}
+        </div>
+
+
+        
+        <h3 class=" font-semibold my-4">Expertise & focus areas</h3>
+        <div class="prose max-w-none">
+          {{ partner.expertiseAndFocus | safe }}
+        </div>
+
+
+        
+        <h2 class=" font-semibold my-4">Why work with us</h2>
+        <div class="prose max-w-none">
+          {{ partner.whyWorkWithUs | safe }}
+        </div>
+
+
+        
+        <h2 class="text-lg sm:text-2xl font-semibold my-4">{{ partner.shortDescription }}</h2>
+        <div class="prose max-w-none">
+          {{ partner.longDescription | safe }}
+        </div>
+      </div>
+      
+
+
+
+
+
+      <!-- Reviews Section -->
+      <div class="py-8">
+        <h2 id="reviews" class="text-lg sm:text-2xl leading-6 font-medium text-gray-900">Reviews</h2>
+      
+        {% set appReviews = [] %}
+        {% if appReviews and appReviews.length > 0 %}
+          
+            {% for review in appReviews %}
+              <div class="py-4 border-t border-gray-200">
+                <div class="flex items-center mb-2">
+                  <div class="flex items-center">
+                    {% for i in range(1, 6) %}
+                      {% if i <= review.rating %}
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                      {% else %}
+                        <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                  <span class="ml-2 text-sm text-gray-500">
+                    {{ review.commentedAt | formatDate }}
+                  </span>
+                </div>
+                <p class="text-gray-700">
+                  <b>{{review.reviewerNameInitials}}:</b>  
+                  {{ review.comment }}
+                </p>
+                {% if review.developerReply %}
+                  <div class="mt-2 pl-4 border-l-2 border-gray-200">
+                    <p class="text-sm text-gray-500">Developer response:</p>
+                    <p class="text-gray-700">{{ review.developerReply }}</p>
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          
+        {% else %}
+          <div class="py-4">
+            <p class="text-gray-500">No reviews yet.</p>
+          </div>
+        {% endif %}
+      </div>
+
+
+
+
+
+
+
+
+
+      <!-- Debug output -->
+      <div class="py-8 text-sm text-gray-500 w-full">
+
+          <h2>Partner metadata</h2>
+
+          <span>Listing updated: {{ partner.updatedAt | formatDate }}</span>
+          </span>
+
+          <button onclick="toggleDebug()" class="button">
+            View partner data JSON
+          </button>
+          <pre id="debugOutput" class="bg-gray-100 p-4 mb-4 text-sm hidden max-w-4xl">{{ partner | stringify }}</pre>
+      </div>
+    
+    </div>
+
+    <!-- Table of Contents 
+    <div class="hidden xl:block xl:w-64 flex-shrink-0">
+      <div class="fixed top-28 _overflow-y-auto py-4">
+        <h3 class="font-xs text-gray-500 font-light tracking-wide mb-4 ">Table of Contents</h3>
+        <nav class="js-toc"></nav>
+      </div>
+    </div>
+    -->
+  </div>
+</div>
+
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.36.4/tocbot.min.js" integrity="sha512-BZUSsJAPNtkd+kdY/bD7hvQKZ5zlgWt++KGy/Pa/5uEJNgs0jZ6JaX6MuclRUanowuxmhb5S3LRPEa3QmrUVfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  // Function to generate a valid ID from text
+  function generateId(text) {
+    return text
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric chars with hyphens
+      .replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
+      .replace(/-+/g, '-'); // Replace multiple hyphens with single hyphen
+  }
+
+  // Add IDs to headings that don't have them
+  document.querySelectorAll('h1:not(.no-tocbot), h2:not(.no-tocbot), h3:not(.no-tocbot)').forEach(heading => {
+    if (!heading.id) {
+      heading.id = generateId(heading.textContent);
+    }
+  });
+
+  tocbot.init({
+    tocSelector: '.js-toc',
+    contentSelector: '.flex-1',
+    headingSelector: 'h1:not(.no-tocbot), h2:not(.no-tocbot), h3:not(.no-tocbot)',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollSmoothDuration: 420,
+    scrollSmoothOffset: -120,
+    headingsOffset: 40,
+    collapseDepth: 0,
+    orderedList: false
+  });
+</script>
+-->
+
+<script>
+function toggleDebug() {
+  const debugOutput = document.getElementById('debugOutput');
+  debugOutput.classList.toggle('hidden');
+}
+</script> 
+
+<script src="/js/fslightbox-basic-3.6.1/fslightbox.js"></script>
