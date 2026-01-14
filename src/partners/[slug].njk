@@ -115,10 +115,10 @@ eleventyComputed:
               
               {% if partner.rating %}
                 <div class="mt-1 text-gray-400 text-sm">
-                  <a href="#reviews" data-toggle="tooltip" title="See reviews">
+                  <!--<a href="#reviews" data-toggle="tooltip" title="See reviews">-->
                     <span class="text-yellow-500 ">★</span>
                     <span class="ml-1">{{ partner.rating | formatRating }}</span>
-                  </a>
+                  <!--</a>-->
                 </div>
               {% endif %}
 
@@ -192,7 +192,7 @@ eleventyComputed:
 
 
       <!-- Reviews Section -->
-      <div class="py-8">
+      <div class="py-8 hidden">
         <h2 id="reviews" class="text-lg sm:text-2xl leading-6 font-medium text-gray-900">Reviews</h2>
       
         {% set appReviews = [] %}
