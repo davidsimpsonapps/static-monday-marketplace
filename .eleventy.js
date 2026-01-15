@@ -9,21 +9,13 @@ const { join } = require("path");
 const { minify } = require("terser");
 
 module.exports = async function (eleventyConfig) {
-  const { getName } = await import("country-list");
+  // const { getName } = await import("country-list");
+  const country = require("countryjs");
   eleventyConfig.addFilter("countryName", (code) => {
-    const overrides = {
-      AE: "United Arab Emerates",
-      GB: "United Kingdom",
-      KR: "Korea",
-      NL: "Netherlands",
-      PH: "Philippines",
-      TW: "Taiwan",
-      US: "United States",
-    };
-    if (overrides[code]) {
-      return overrides[code];
-    }
-    return getName(code) ?? code;
+    return country.name(code) ?? code;
+  });
+  eleventyConfig.addFilter("regionName", (code) => {
+    return country.region(code) ?? "";
   });
 
   // Language Name
