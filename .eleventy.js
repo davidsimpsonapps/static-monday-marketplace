@@ -14,7 +14,9 @@ module.exports = async function (eleventyConfig) {
     const overrides = {
       AE: "United Arab Emerates",
       GB: "United Kingdom",
+      KR: "Korea",
       NL: "Netherlands",
+      PH: "Philippines",
       TW: "Taiwan",
       US: "United States",
     };
