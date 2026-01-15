@@ -105,6 +105,13 @@ header {
   border-bottom-left-radius: 30px;
   border-top-right-radius: 30px;
 }
+.item-list.cards .item.person {
+  @apply flex flex-col justify-between h-full rounded;
+
+  border-top-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+}
+
 .item-list.list .item {
   @apply table w-full;
 }
@@ -132,8 +139,12 @@ header {
 }
 
 .item-list.cards .item-logo {
-  @apply w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded;
+  @apply w-8 h-8 sm:w-10 sm:h-10 mb-4 object-cover rounded;
 }
+.item-list.cards .item-logo.person {
+  @apply w-10 h-10  sm:w-16 sm:h-16 rounded-full;
+}
+
 .item-list.list .item-logo {
   @apply w-6 h-6 rounded;
 }

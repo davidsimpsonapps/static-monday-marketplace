@@ -15,6 +15,8 @@ eleventyComputed:
 ---
 
 
+{% from "partials/person-card.njk" import personCard %}
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.36.4/tocbot.css" integrity="sha512-nJwmkYKmBxqHBZfKnXTiVA2YVIrRULgO+gn6m70r4vqSMCRtQKmRSfd9LozVxcOR7V9/LV0TWLqkmspIHhr1KA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 {% if partner %}
@@ -229,6 +231,15 @@ eleventyComputed:
             {{ partner.longDescription | safe }}
           </div>
         {% endif %}
+      </div>
+
+      <div>
+        <h2>People</h2>
+        <div class="item-list cards">
+          {% for person in partner.employees %}
+            {{ personCard(person) }}
+          {% endfor %}
+        </div>
       </div>
       
 
