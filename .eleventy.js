@@ -25,6 +25,7 @@ module.exports = async function (eleventyConfig) {
   );
   eleventyConfig.addFilter("languageName", (code) => {
     const overrides = {
+      he: "Hebrew",
       man: "Mandarin",
       "zh-yue": "Yue Chinese",
     };
