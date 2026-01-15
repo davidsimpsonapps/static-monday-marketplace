@@ -10,6 +10,37 @@ const { minify } = require("terser");
 
 
 module.exports = function(eleventyConfig) {
+module.exports = async function (eleventyConfig) {
+  const { getName } = await import("country-list");
+  eleventyConfig.addFilter("countryName", (code) => {
+    const overrides = {
+      AE: "United Arab Emerates",
+      GB: "United Kingdom",
+      NL: "Netherlands",
+      TW: "Taiwan",
+      US: "United States",
+    };
+    if (overrides[code]) {
+      return overrides[code];
+    }
+    return getName(code) ?? code;
+  });
+
+  // Language Name
+  const languages = require("@cospired/i18n-iso-languages");
+  languages.registerLocale(
+    require("@cospired/i18n-iso-languages/langs/en.json")
+  );
+  eleventyConfig.addFilter("languageName", (code) => {
+    const overrides = {
+      man: "Mandarin",
+      "zh-yue": "Yue Chinese",
+    };
+    if (overrides[code]) {
+      return overrides[code];
+    }
+    return languages.getName(code, "en") ?? code;
+  });
 
   // cache-busting timestamp filter e.g. '2025-06-24T21:12'
   // should be enough so that every build is cachebusted

@@ -113,15 +113,39 @@ eleventyComputed:
                 {% endif %}
               </p>
               
-              {% if partner.rating %}
-                <div class="mt-1 text-gray-400 text-sm">
+
+
+              <div class="flex gap-6 my-2 text-gray-600 text-sm">
+                {% if partner.rating %}
+                <div>
+
+                  <div class="text-gray-400 mb-1">Rating</div>
                   <!--<a href="#reviews" data-toggle="tooltip" title="See reviews">-->
                     <span class="text-yellow-500 ">★</span>
                     <span class="ml-1">{{ partner.rating | formatRating }}</span>
                   <!--</a>-->
                 </div>
-              {% endif %}
+                {% endif %}
 
+                <div>
+                  <div class="text-gray-400 mb-1">Partner since</div>
+                  <div>{{ partner.partnerSince }}</div>
+                </div>
+                <div>
+                  <div class="text-gray-400 mb-1">Locations</div>
+                  <div>{{ partner.countryCode | countryName }}</div>
+                  {% for code in partner.supportedCountryCodes  %}
+                    <div>{{ code | countryName }}</div>
+                  {% endfor %}
+                </div>
+
+                <div>
+                  <div class="text-gray-400 mb-1">Languages</div>
+                  {% for code in partner.languages  %}
+                    <div>{{ code | languageName }}</div>
+                  {% endfor %}
+                </div>
+              </div>
 
             </div>
           </div>

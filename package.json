@@ -14,6 +14,8 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.4",
+    "@cospired/i18n-iso-languages": "^4.2.0",
+    "country-list": "^2.4.1",
     "html-minifier-terser": "^7.2.0",
     "node-fetch": "^2.6.7"
   },
