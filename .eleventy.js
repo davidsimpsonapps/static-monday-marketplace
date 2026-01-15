@@ -8,8 +8,6 @@ const { readdir, readFile, writeFile } = require("fs/promises");
 const { join } = require("path");
 const { minify } = require("terser");
 
-
-module.exports = function(eleventyConfig) {
 module.exports = async function (eleventyConfig) {
   const { getName } = await import("country-list");
   eleventyConfig.addFilter("countryName", (code) => {
