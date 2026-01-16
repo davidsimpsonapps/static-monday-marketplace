@@ -84,7 +84,7 @@ eleventyComputed:
                 {% endif %}        
               </h1>
 
-              <div class="py-2">{{ person.title }}, <a href="{{ person.partner.slug }}">{{ person.partner.name }}<a/></div>
+              <div class="py-2">{{ person.title }}, <a href="/partners/{{ person.partner.slug }}">{{ person.partner.name }}<a/></div>
 
               <div class="flex gap-2">
                 {% if person.partner.productExpertise.includes('MONDAY_SALES_CRM') %}
