@@ -1,0 +1,172 @@
+---
+layout: base.njk
+pagination:
+  data: people
+  size: 1
+  alias: person
+  addAllPagesToCollections: true
+permalink: /people/{{ person.id }}/
+eleventyComputed:
+  title: "{{person.name | safe}} • monday.com partners"
+  description: "{{person.name | safe}} is {{person.title | safe}} at {{person.partner.name | safe}}"
+  canonical: "/people/{{ person.id }}/"
+  friendly: "/people/{{ person.id }}/#/{{ person.name | sanitisePathname }}"
+  image: "{{ person.imageUrl }}"
+---
+
+<div class="mx-auto">
+  <div class="breadcrumb">
+    <span>
+      <a href="/">
+        <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="breadcrumbIcon_d94850cf8c"><path d="M9.56992 2.1408C9.82591 1.95307 10.1741 1.95307 10.4301 2.1408L17.7028 7.47413C17.8896 7.61113 18 7.82894 18 8.06061V16.7879C18 17.1895 17.6744 17.5152 17.2727 17.5152H11.9394C11.5377 17.5152 11.2121 17.1895 11.2121 16.7879V13.1515H8.78788V16.7879C8.78788 17.1895 8.46227 17.5152 8.06061 17.5152H2.72727C2.32561 17.5152 2 17.1895 2 16.7879V8.06061C2 7.82894 2.11037 7.61113 2.29719 7.47413L9.56992 2.1408ZM3.45455 8.42914V16.0606H7.33333V12.4242C7.33333 12.0226 7.65894 11.697 8.06061 11.697H11.9394C12.3411 11.697 12.6667 12.0226 12.6667 12.4242V16.0606H16.5455V8.42914L10 3.62914L3.45455 8.42914Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        <span>Home</span>
+      </a>
+    </span>
+    <span>
+      <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="separatorIcon_3a648a2555" aria-hidden="true"><path d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303L13 10L13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </span>
+    <span>
+      <a href="/partners/" >
+        Partners
+      </a>
+    </span> 
+    <span>
+      <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="separatorIcon_3a648a2555" aria-hidden="true"><path d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303L13 10L13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </span>
+    <span>
+      <a href="/partners/{{ person.partner.slug }}" >
+        {{ person.partner.name }}
+      </a>
+    </span> 
+
+    <span>
+      <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="separatorIcon_3a648a2555" aria-hidden="true"><path d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303L13 10L13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </span>
+    <span>
+      <a href="/people/{{ person.id}}" >
+        {{ person.name }}
+      </a>
+    </span> 
+  </div>
+
+
+
+
+
+  <div class="sm:mx-auto sm:my-0 overflow-hidden">
+  <div class="flex flex-col lg:flex-row gap-16">
+    <!-- Main content -->
+    <div class="flex-1">
+      <div class="pb-4">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between sm:gap-6">
+          <div class="flex flex-col sm:flex-row sm:items-start gap-6">
+
+            {% if person.imageUrl %}
+              <img src="{{ person.imageUrl }}" alt="{{ person.name }} logo" class="w-12 h-12 sm:w-24 sm:h-24 rounded sm:rounded-lg object-cover">
+            {% else %}
+              <div class="w-12 h-12 sm:w-24 sm:h-24 rounded sm:rounded-lg"></div>
+            {% endif %}
+            <div>
+              <h1 class="text-xl sm:text-3xl font-bold mb-2 no-tocbot">
+                {{ person.name }}
+
+                {% if person.partner.tier === 'BRONZE' %}
+                    <span data-toggle="tooltip" title="Bronze Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                {% elseif person.partner.tier === 'SILVER' %}
+                    <span data-toggle="tooltip" title="Silver Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="gray"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                {% elseif person.partner.tier === 'GOLD' %}
+                    <span data-toggle="tooltip" title="Gold  Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#FFCB00"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                {% elseif person.partner.tier === 'PLATINUM' %}
+                    <span data-toggle="tooltip" title="Platinum Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
+                {% endif %}  
+                {% if person.partner.advancedDelivery === true %}
+                    <span data-toggle="tooltip" title="Advanced delivery partner"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.50454 4.60798C9.66002 4.53683 9.82901 4.5 10 4.5C10.171 4.5 10.34 4.53683 10.4955 4.60798C10.651 4.67913 10.7893 4.78294 10.9011 4.91234C10.9185 4.93248 10.9347 4.95358 10.9497 4.97554L13.5554 8.78235L16.1462 6.76057C16.1826 6.73213 16.2217 6.70731 16.263 6.68647C16.4589 6.58748 16.6783 6.54427 16.8971 6.56156C17.1159 6.57885 17.3258 6.65597 17.5038 6.78449C17.6817 6.91302 17.8209 7.08799 17.9061 7.29029C17.9904 7.49034 18.0187 7.70951 17.988 7.92432L17.1332 14.8819C17.0865 15.2356 16.785 15.5 16.4282 15.5H3.57184C3.21533 15.5 2.91391 15.236 2.86689 14.8826L2.0121 7.97663C1.9813 7.76167 2.00955 7.54233 2.09388 7.34213C2.17909 7.13983 2.31829 6.96485 2.49624 6.83633C2.67419 6.70781 2.88406 6.63069 3.10289 6.6134C3.32172 6.59611 3.54109 6.63932 3.73701 6.73831C3.77579 6.7579 3.81269 6.781 3.84725 6.80732L6.44312 8.78455L9.05026 4.97554C9.06529 4.95358 9.08154 4.93248 9.09894 4.91234C9.21071 4.78294 9.34905 4.67913 9.50454 4.60798ZM10 6.10617L12.5148 9.7802C12.6067 9.91726 12.7261 10.0337 12.8655 10.1222C13.0067 10.2118 13.1652 10.2707 13.3307 10.295C13.4961 10.3193 13.6648 10.3084 13.8258 10.2632C13.9825 10.2191 14.1284 10.1435 14.2546 10.0409L16.5058 8.2841L15.8047 14.0777H4.19465L3.49344 8.32579L5.74941 10.0441C5.87469 10.145 6.01918 10.2196 6.17417 10.2632C6.33517 10.3084 6.50389 10.3193 6.66935 10.295C6.83481 10.2707 6.99329 10.2118 7.13449 10.1222C7.27388 10.0337 7.39333 9.91724 7.48527 9.78017L10 6.10617Z" fill="#323338"></path></svg></span>  
+                {% endif %}        
+              </h1>
+
+              <div class="py-2">{{ person.title }}, {{ person.partner.name }}</div>
+
+              <div class="flex gap-2">
+                {% if person.partner.productExpertise.includes('MONDAY_SALES_CRM') %}
+                  <img data-toggle="tooltip" title="monday crm"  alt="monday crm logo" 
+                    src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/crm_icon_footer.png"
+                    width="15" height="15">
+                {% endif %}
+                {% if person.partner.productExpertise.includes('MONDAY_DEV') %}
+                  <img data-toggle="tooltip" title="monday dev"  alt="monday dev logo"
+                    src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/dev_new_mobile_footer_logo.png"
+                    width="15" height="15">
+                {% endif %}
+                {% if person.partner.productExpertise.includes('MONDAY_SERVICE') %}
+                  <img data-toggle="tooltip" title="monday service" alt="monday service logo"
+                    src="https://dapulse-res.cloudinary.com/image/upload/remote_mondaycom_static/uploads/Yotam_Ron/service/Service-logo-footer.png"
+                    width="15" height="15">
+                {% endif %}
+                {% if person.partner.productExpertise.includes('MONDAY_WORK_MANAGEMENT') %}
+                  <img data-toggle="tooltip" title="monday work management" alt="monday work management logo" 
+                    src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/WM_new_logo/Footer_wm_logo.png" 
+                    width="15" height="15">
+                {% endif %}
+              </div>
+            
+              <p class="text-gray-600">
+                {% if partner.websiteUrl and partner.websiteUrl !== 'https://example.com' %}
+                <a title="Partner's website" href="{{ partner.websiteUrl }}" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800 mx-1">
+                    <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                    </svg>
+                </a>
+                {% endif %}
+              </p>
+
+              <div class="my-2 text-sm text-gray-600">
+                <div class="flex gap-1 my-2">
+                  <svg title="Location" viewBox="0 0 20 20" fill="currentColor" width="20" height="20" aria-hidden="true" class="icon_60df150cc3 text-[#676879]" data-testid="icon" data-vibe="Icon"><path d="M4.52 4.52a7.75 7.75 0 0 1 12.988 3.56 7.283 7.283 0 0 1 .242 1.89V10a7.75 7.75 0 0 1-15.296 1.768 5.989 5.989 0 0 1-.203-1.652L2.25 10a7.75 7.75 0 0 1 2.27-5.48Zm-.61 6.883a6.248 6.248 0 0 1-.159-1.284c.003-.123.01-.246.024-.369h2.788c.075 0 .136.022.175.047.025.017.034.03.035.034l.473 1.607-.001.002a.198.198 0 0 1-.07.045.348.348 0 0 1-.133.025h-.689a.75.75 0 0 0-.73.579l-.37 1.57a5.23 5.23 0 0 1-1.13-1.646 4.691 4.691 0 0 1-.213-.61Zm2.536 3.739.501-2.132h.095c.242 0 .483-.046.708-.14.224-.093.431-.233.6-.416a1.51 1.51 0 0 0 .357-.659c.062-.25.057-.511-.016-.76l-.48-1.63a1.566 1.566 0 0 0-.643-.857 1.82 1.82 0 0 0-1.005-.298H4a6.25 6.25 0 0 1 10.062-3h-.75a1.624 1.624 0 0 0-1.576 1.23l-.438 1.75a1.625 1.625 0 0 0 1.576 2.02h.285l.356 2.143a1.625 1.625 0 0 0 1.488 1.353 6.249 6.249 0 0 1-8.557 1.396ZM16.25 9.97a6.246 6.246 0 0 0-.194-1.514 5.783 5.783 0 0 0-.765-1.706h-1.98a.124.124 0 0 0-.12.094l-.437 1.75a.127.127 0 0 0 .023.107.124.124 0 0 0 .097.048h.92a.75.75 0 0 1 .74.627l.461 2.77a.125.125 0 0 0 .123.104h.651c.313-.72.477-1.496.48-2.28Z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                  <span>{{ person.countryCode | countryName }}</span>
+                </div>
+
+                <div class="flex gap-1 my-2">
+                  <svg title="Languages" viewBox="0 0 20 20" fill="currentColor" width="20" height="20" aria-hidden="true" class="icon_60df150cc3 text-[#676879]" data-testid="icon" data-vibe="Icon"><path d="M7.23521 5.24354L7.25273 5.24373L7.27025 5.24353H8.72135C8.55118 6.62377 8.02255 7.73589 7.28225 8.57637C6.77574 7.9905 6.38451 7.30765 6.13374 6.57955C5.99258 6.16968 5.55095 5.95362 5.14734 6.09697C4.74373 6.24032 4.53097 6.6888 4.67213 7.09867C4.98186 7.99799 5.46737 8.85136 6.09998 9.58971C5.10317 10.2281 3.93537 10.5373 2.79063 10.5127C2.36313 10.5035 2.00924 10.8479 2.00018 11.2821C1.99112 11.7162 2.33032 12.0756 2.75781 12.0848C4.32392 12.1185 5.93434 11.6458 7.26508 10.6865C8.25569 11.4335 9.45562 11.9372 10.8072 12.0586L8.47644 16.7924C8.28521 17.1808 8.44023 17.653 8.82267 17.8472C9.20512 18.0414 9.67017 17.884 9.86139 17.4956L10.8305 15.5274H15.4602L16.5442 17.5846C16.7459 17.9675 17.2151 18.1118 17.5921 17.9069C17.9691 17.7021 18.1112 17.2256 17.9095 16.8428L13.7262 8.9037C13.5897 8.64458 13.3222 8.48442 13.0329 8.48848C12.7435 8.49255 12.4805 8.66016 12.3511 8.92302L11.567 10.5155C11.5489 10.5144 11.5307 10.5139 11.5122 10.5142C10.3573 10.5278 9.31732 10.1858 8.45174 9.61031C9.41904 8.51048 10.0986 7.05062 10.2802 5.24353H11.7271C12.1547 5.24353 12.5014 4.89153 12.5014 4.45731C12.5014 4.0231 12.1547 3.6711 11.7271 3.6711L8.02695 3.6711L8.02695 2.78622C8.02695 2.352 7.68032 2 7.25273 2C6.82514 2 6.47852 2.352 6.47852 2.78622V3.6711L2.77422 3.6711C2.34663 3.6711 2 4.0231 2 4.45732C2 4.89153 2.34663 5.24354 2.77422 5.24354L7.23521 5.24354ZM14.6316 13.9549L13.0669 10.9853L11.6047 13.9549H14.6316Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                  {% for code in person.languages  %}
+                    <span>{{ code | languageName }}. </span>
+                    {% endfor %}
+                </div>
+              </div>
+
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+ 
+
+       <p class="description text-sm text-gray-600 line-clamp-6 my-2 p-0">{{ person.description }}</p>
+
+
+      <!-- Debug output -->
+      <div class="py-8 text-sm text-gray-500 w-full">
+
+          <h2>Person metadata</h2>
+
+          <span>Listing updated: {{ person.updatedAt | formatDate }}</span>
+
+          <button onclick="toggleDebug()" class="button text-sm">
+            View person data JSON
+          </button>
+          <pre id="debugOutput" class="bg-gray-100 p-4 mb-4 text-sm hidden __max-w-4xl">{{ person | stringify }}</pre>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+
+
+
+
+<script>
+function toggleDebug() {
+  const debugOutput = document.getElementById('debugOutput');
+  debugOutput.classList.toggle('hidden');
+}
+</script> 

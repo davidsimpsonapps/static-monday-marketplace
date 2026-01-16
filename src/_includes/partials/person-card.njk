@@ -1,8 +1,8 @@
 {% macro personCard(person) %}
 
-      <div 
-        data-href="/people/{{ person.id }}/" 
-        class="item person search-item text-gray-700"
+      <a 
+        href="/people/{{ person.id }}/" 
+        class="item person search-item text-gray-700 justify-normal"
       >
         
         <div>
@@ -38,6 +38,6 @@
             </div>
         </div>
         
-      </div>
+      </a>
 
 {% endmacro %}      
