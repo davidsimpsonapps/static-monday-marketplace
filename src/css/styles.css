@@ -226,6 +226,7 @@ ol {
   @apply -mt-2 mb-6 leading-8;
 }
 button.list-format,
+nav.tabs a,
 .apps-menu a,
 .sorting button {
   @apply bg-gray-100 text-gray-600 px-2 py-1  text-sm;
@@ -237,7 +238,7 @@ button.list-format,
   }
   cursor: pointer;
 }
-
+nav.tabs a,
 .apps-menu a,
 .sorting .grow button {
   @apply rounded;
@@ -248,6 +249,7 @@ button.list-format svg.Icon-module_icon {
 }
 
 button.selected,
+nav.tabs a.font-bold,
 .apps-menu a.selected,
 .sorting button.selected {
   @apply bg-gray-300 text-black;

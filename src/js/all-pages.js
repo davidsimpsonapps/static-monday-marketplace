@@ -21,7 +21,13 @@ const emboldenNavLinks = () => {
     } else if (matchType === "csv") {
       const csv = link.getAttribute("data-csv");
       const matches = csv.split(",");
-      isMatch = matches.includes(currentPath);
+      // isMatch = matches.includes(currentPath);
+
+      matches.map((linkPath) => {
+        if (currentPath.startsWith(linkPath)) {
+          isMatch = true;
+        }
+      });
     }
 
     if (isMatch) {
