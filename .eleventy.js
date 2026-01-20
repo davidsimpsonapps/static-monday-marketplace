@@ -21,10 +21,11 @@ module.exports = async function (eleventyConfig) {
   // Language Name
   const languages = require("@cospired/i18n-iso-languages");
   languages.registerLocale(
-    require("@cospired/i18n-iso-languages/langs/en.json")
+    require("@cospired/i18n-iso-languages/langs/en.json"),
   );
   eleventyConfig.addFilter("languageName", (code) => {
     const overrides = {
+      el: "Greek",
       he: "Hebrew",
       man: "Mandarin",
       "zh-yue": "Yue Chinese",
