@@ -5,10 +5,12 @@
 @tailwind utilities;
 
 :root {
-  --font-family: Figtree, Roboto, Noto Sans Hebrew, Noto Kufi Arabic,
-    Noto Sans JP, sans-serif;
-  --title-font-family: Poppins, Roboto, Noto Sans Hebrew, Noto Kufi Arabic,
-    Noto Sans JP, sans-serif;
+  --font-family:
+    Figtree, Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP,
+    sans-serif;
+  --title-font-family:
+    Poppins, Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP,
+    sans-serif;
 }
 
 body {
@@ -142,7 +144,7 @@ header {
   @apply w-8 h-8 sm:w-10 sm:h-10 mb-4 object-cover rounded;
 }
 .item-list.cards .item-logo.person {
-  @apply w-10 h-10  sm:w-16 sm:h-16 rounded-full;
+  @apply w-10 h-10 w-16 h-16 rounded-full;
 }
 
 .item-list.list .item-logo {

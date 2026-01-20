@@ -62,7 +62,7 @@ eleventyComputed:
           <div class="flex flex-col sm:flex-row sm:items-start gap-6">
 
             {% if person.imageUrl %}
-              <img src="{{ person.imageUrl }}" alt="{{ person.name }} logo" class="w-12 h-12 sm:w-24 sm:h-24 rounded sm:rounded-lg object-cover">
+              <img src="{{ person.imageUrl }}" alt="{{ person.name }} logo" class="w-24 h-24 md:w-48 md:h-48 rounded sm:rounded-lg object-cover">
             {% else %}
               <div class="w-12 h-12 sm:w-24 sm:h-24 rounded sm:rounded-lg"></div>
             {% endif %}
@@ -84,7 +84,10 @@ eleventyComputed:
                 {% endif %}        
               </h1>
 
-              <div class="py-2">{{ person.title }}, <a href="/partners/{{ person.partner.slug }}">{{ person.partner.name }}<a/></div>
+              <div class="py-2">
+                {{ person.title }}, 
+                <a href="/partners/{{ person.partner.slug }}">{{ person.partner.name }}<a/>.
+              </div>
 
               <div class="flex gap-2">
                 {% if person.partner.productExpertise.includes('MONDAY_SALES_CRM') %}
@@ -143,9 +146,8 @@ eleventyComputed:
         </div>
       </div>
  
-
-       <p class="description text-sm text-gray-600 my-2 p-0">{{ person.description }}</p>
-
+      <h2>About {{ person.name }}</h2>
+      <div class="description my-2 p-0 max-w-2xl">{{ person.description }}</div>
 
       <!-- Debug output -->
       <div class="py-8 text-sm text-gray-500 w-full">
