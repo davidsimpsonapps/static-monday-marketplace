@@ -141,7 +141,7 @@ header {
 }
 
 .item-list.cards .item-logo {
-  @apply w-8 h-8 sm:w-10 sm:h-10 mb-4 object-cover rounded;
+  @apply w-8 h-8 sm:w-10 sm:h-10 mb-4 object-cover object-top rounded;
 }
 .item-list.cards .item-logo.person {
   @apply w-10 h-10 w-16 h-16 rounded-full;
