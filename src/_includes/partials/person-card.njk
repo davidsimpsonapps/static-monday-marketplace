@@ -19,8 +19,9 @@
           </h2>
 
           <div data-person-title>
-            {{ person.title }}<span>,</span>
+            {{ person.title }}{% if person.partner %}<span>,</span>
             <span>{{ person.partner.name }}.</span>
+            {% endif %}
           </div>
 
         </div>
