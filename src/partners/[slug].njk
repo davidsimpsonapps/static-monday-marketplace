@@ -234,14 +234,25 @@ eleventyComputed:
       </div>
 
       <div>
-        <h2>People</h2>
-        <div class="item-list cards">
-          {% for person in partner.employees %}
-            {{ personCard(person) }}
-          {% endfor %}
+        <div class="flex gap-3 mb-4">
+          <h2 class="mb-1 text-lg">People</h2>
+          <span>
+            <span data-total="{{ partner.employees.length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
+              {{ partner.employees.length }}
+            </span>
+          </span>
         </div>
+        
+        {% if partner.employees.length === 0 %}
+          <div>No people listed.</div>
+        {% else %}
+          <div class="item-list cards">
+            {% for person in partner.employees %}
+              {{ personCard(person) }}
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
-      
 
 
 
