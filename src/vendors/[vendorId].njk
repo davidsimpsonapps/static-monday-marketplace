@@ -7,7 +7,7 @@ pagination:
   addAllPagesToCollections: true
 permalink: /vendors/{{ vendor.id }}/
 eleventyComputed:
-  title: "{{vendor.name}} • monday.com marketplavce vendors"
+  title: "{{vendor.name}} • monday.com marketplace vendors"
   canonical: "/vendors/{{ vendor.id }}/"
   friendly: "/vendors/{{ vendor.id }}/#/{{ vendor.name | sanitisePathname }}"
   description: "{{ marketplace | filterByVendor(vendor.id) | sortByInstalls(installs) | vendorMetaDescription }}"
