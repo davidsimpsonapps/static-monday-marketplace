@@ -272,6 +272,10 @@
     {
       "date": "2026-01-31",
       "marketplace_category_ids": []
+    },
+    {
+      "date": "2026-02-01",
+      "marketplace_category_ids": []
     }
   ]
 }
