@@ -1421,6 +1421,12 @@
       "marketplace_category_ids": [
         10000001
       ]
+    },
+    {
+      "date": "2026-02-02",
+      "marketplace_category_ids": [
+        10000001
+      ]
     }
   ]
 }
