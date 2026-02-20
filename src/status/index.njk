@@ -20,7 +20,12 @@ canonical: "/status/"
   </span>
 </div>
 
-<h1 class="text-lg md:text-2xl font-semibold mb-6">monday.com Service Status</h1>
+<h1 class="text-lg md:text-2xl font-semibold mb-4">monday.com Service Status</h1>
+
+<nav class="tabs">
+  <a data-match="exact" href="/status/">Service Status</a>
+  <a data-match="include" href="/status/infrastructure/">Infrastructure</a>
+</nav>
 
 {# Overall status banner — rendered client-side #}
 <div id="status-banner" class="mb-8">
@@ -50,8 +55,5 @@ canonical: "/status/"
   </div>
 </div>
 
-<p class="mt-8 text-sm">
-  <a href="/status/infrastructure/">View average infrastructure response times →</a>
-</p>
 
 <script src="/js/status-charts.js?_={{ '' | cacheBusterTimestamp }}"></script>
