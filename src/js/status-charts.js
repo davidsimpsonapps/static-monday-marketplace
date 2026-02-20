@@ -118,7 +118,9 @@ function renderStatusGrid(checks) {
   const groups = {};
   checks
     .slice()
-    .sort((a, b) => a.healthcheck_display_name.localeCompare(b.healthcheck_display_name))
+    .sort((a, b) =>
+      a.healthcheck_display_name.localeCompare(b.healthcheck_display_name),
+    )
     .forEach((check) => {
       const key = check.service_display_name;
       if (!groups[key]) groups[key] = [];
@@ -128,9 +130,10 @@ function renderStatusGrid(checks) {
   const html = Object.entries(groups)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([groupName, groupChecks]) => {
-      const cards = groupChecks.map((check) => {
-        const cfg = statusConfig(check.current_status);
-        return `
+      const cards = groupChecks
+        .map((check) => {
+          const cfg = statusConfig(check.current_status);
+          return `
           <div class="border-l-4 ${cfg.borderClass} ${cfg.bgClass} rounded-r-lg p-4">
             <div class="flex items-start justify-between gap-2">
               <div class="min-w-0">
@@ -140,10 +143,11 @@ function renderStatusGrid(checks) {
                 ${cfg.label}
               </span>
             </div>
-            <div class="text-xs text-gray-400 mt-2">Updated: ${formatDateTime(check.last_updated)}</div>
+            <div class="text-xs text-gray-400 mt-2">Healthy since: ${formatDateTime(check.last_updated)}</div>
           </div>
         `;
-      }).join("");
+        })
+        .join("");
 
       return `
         <div class="mb-6">
