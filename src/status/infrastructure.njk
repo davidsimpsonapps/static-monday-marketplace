@@ -47,7 +47,7 @@ canonical: "/status/infrastructure/"
   {% for endpoint in endpoints %}
   <div>
     <h3 class="text-sm font-semibold text-gray-700 mb-2">{{ endpoint.label }}</h3>
-    <div class="relative h-52">
+    <div class="relative h-64">
       <canvas id="chart-{{ endpoint.suffix }}"></canvas>
     </div>
   </div>
