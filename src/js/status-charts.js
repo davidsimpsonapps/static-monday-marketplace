@@ -115,27 +115,46 @@ function renderStatusGrid(checks) {
     return;
   }
 
-  const cards = checks
-    .map((check) => {
-      const cfg = statusConfig(check.current_status);
-      return `
-      <div class="border-l-4 ${cfg.borderClass} ${cfg.bgClass} rounded-r-lg p-4">
-        <div class="flex items-start justify-between gap-2">
-          <div class="min-w-0">
-            <div class="text-sm font-medium text-gray-900">${check.healthcheck_display_name}</div>
-            <div class="text-xs text-gray-500 mt-0.5">${check.service_display_name}</div>
+  const groups = {};
+  checks
+    .slice()
+    .sort((a, b) => a.healthcheck_display_name.localeCompare(b.healthcheck_display_name))
+    .forEach((check) => {
+      const key = check.service_display_name;
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(check);
+    });
+
+  const html = Object.entries(groups)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([groupName, groupChecks]) => {
+      const cards = groupChecks.map((check) => {
+        const cfg = statusConfig(check.current_status);
+        return `
+          <div class="border-l-4 ${cfg.borderClass} ${cfg.bgClass} rounded-r-lg p-4">
+            <div class="flex items-start justify-between gap-2">
+              <div class="min-w-0">
+                <div class="text-sm font-medium text-gray-900">${check.healthcheck_display_name}</div>
+              </div>
+              <span class="shrink-0 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${cfg.badgeBg} ${cfg.badgeText}">
+                ${cfg.label}
+              </span>
+            </div>
+            <div class="text-xs text-gray-400 mt-2">Updated: ${formatDateTime(check.last_updated)}</div>
           </div>
-          <span class="shrink-0 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${cfg.badgeBg} ${cfg.badgeText}">
-            ${cfg.label}
-          </span>
+        `;
+      }).join("");
+
+      return `
+        <div class="mb-6">
+          <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">${groupName}</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">${cards}</div>
         </div>
-        <div class="text-xs text-gray-400 mt-2">Healthy since: ${formatDateTime(check.last_updated)}</div>
-      </div>
-    `;
+      `;
     })
     .join("");
 
-  document.getElementById("status-grid").innerHTML = cards;
+  document.getElementById("status-grid").innerHTML = html;
 }
 
 // ---- Status history ----
