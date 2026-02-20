@@ -357,3 +357,7 @@ li.toc-list-item {
 .breadcrumb a {
   @apply text-gray-500 flex gap-2 hover:text-gray-800;
 }
+
+.q-and-a:has([data-answered="false"]) {
+  @apply text-gray-400;
+}
