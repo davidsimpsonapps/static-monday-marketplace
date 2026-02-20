@@ -9,7 +9,8 @@
     "dev": "NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve",
     "build:css": "tailwindcss -i ./src/css/styles.css -o ./_site/css/styles.css --minify",
     "build:all": "npm run build:css && npm run build",
-    "deploy": "npm run build && wrangler pages deploy _site --project-name=static-monday-marketplace"
+    "deploy": "npm run build && wrangler pages deploy _site --project-name=static-monday-marketplace",
+    "ngrok": "ngrok http --domain=apps-for-monday.eu.ngrok.io 8080"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
