@@ -123,7 +123,7 @@ function renderStatusGrid(checks) {
             ${cfg.label}
           </span>
         </div>
-        <div class="text-xs text-gray-400 mt-2">Updated: ${formatDateTime(check.last_updated)}</div>
+        <div class="text-xs text-gray-400 mt-2">Healthy since: ${formatDateTime(check.last_updated)}</div>
       </div>
     `;
   }).join('');
