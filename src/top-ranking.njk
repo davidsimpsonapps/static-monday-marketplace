@@ -38,14 +38,14 @@ description: "Lists of the top apps for installs on the monday.com marketplace f
             </span>
             -->
         </div>
-
-        <span class="apps-menu">
-          <a href="/">Listings</a>
-          <a href="/categories/">Categories</a>
-          <a href="/top-ranking/" class="selected">Top ranking</a>
-          <a href="/installs/">Installs</a>
-        </span>
     </div>
+
+    <nav class="tabs">
+        <a data-match="exact" href="/">Listings</a>
+        <a data-match="include" href="/categories/">Categories</a>
+        <a data-match="exact" href="/top-ranking/">Top ranking</a>
+        <a data-match="exact" href="/installs/">Installs</a>
+    </nav>  
 
 
     {% include "partials/search.njk" %}

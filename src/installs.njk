@@ -21,26 +21,21 @@ description: "An aggregated history of installations for all apps from the monda
     </span> 
   </div>
 
-<div>
-
-
-    
-
-  
+  <div>
     <div class="flex gap-3 mb-2 items-center justify-between">
         <div class="flex gap-3 items-center">
             <h1 id="installs" class="text-lg sm:text-2xl font-semibold mt-0 mb-4">
               Installs • monday.com marketplace apps installation history
             </h1>
         </div>
-
-
-        <span class="apps-menu">
-          <a href="/">Listings</a>
-          <a href="/top-ranking/">Top ranking</a>
-          <a href="/installs/" class="selected">Installs</a>
-        </span>
     </div>
+
+   <nav class="tabs">
+      <a data-match="exact" href="/">Listings</a>
+      <a data-match="include" href="/categories/">Categories</a>
+      <a data-match="exact" href="/top-ranking/">Top ranking</a>
+      <a data-match="exact" href="/installs/">Installs</a>
+    </nav>
 
 
     <!-- Install history since 2025-06-07 -->

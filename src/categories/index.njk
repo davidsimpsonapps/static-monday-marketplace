@@ -24,16 +24,21 @@ title: Categories
 <div class="mx-auto">
 
 
-  <div class="flex gap-3 mb-4">
-    <h1 class="text-lg md:text-2xl font-semibold">
-      Categories
-    </h1>
-    <span>
-      <span data-total="{{ categories.length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
-        {{ categories.length }}
-      </span>
-    </span>
-  </div>  
+
+  <div class="flex gap-3 mb-2 items-center justify-between">
+    <div class="flex gap-3 items-center">
+      <h1 class="text-lg md:text-2xl font-semibold">
+        Apps
+      </h1>
+    </div>
+  </div>
+
+  <nav class="tabs">
+    <a data-match="exact" href="/">Listings</a>
+    <a data-match="include" href="/categories/">Categories</a>
+    <a data-match="exact" href="/top-ranking/">Top ranking</a>
+    <a data-match="exact" href="/installs/">Installs</a>
+  </nav>
 
   
 
