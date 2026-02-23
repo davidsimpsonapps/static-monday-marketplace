@@ -138,6 +138,12 @@
                 </span>
               {% endif %}
 
+              {% if app.marketplace_category_ids.length === 0 %}
+                <span data-toggle="tooltip" title="App may have been delisted"  class="badge opacity-30">
+                  No categories
+                </span>
+              {% endif %}
+
             </div>
           </div>
         
