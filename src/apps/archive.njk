@@ -19,11 +19,11 @@ title: Home
   <div class="flex gap-3 mb-2 items-center justify-between">
     <div class="flex gap-3 items-center mb-4">
       <h1 class="text-lg md:text-2xl font-semibold">
-        Apps
+        Archived apps
       </h1>
       <span>
-        <span data-total="{{ marketplace.length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
-          {{ marketplace.length }}
+        <span data-total="{{ marketplace | appsWithoutCategories | length  }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
+          {{ marketplace | appsWithoutCategories | length }}
         </span>
       </span>
     </div>
@@ -65,10 +65,8 @@ title: Home
     
 
   
-    {% for app in marketplace | removeAquisitionSource('monday') | sortByCreatedAt %}
-      {% if app.marketplace_category_ids.length === 0 %}
-        {{ appCard(app, ratings, vendors, installs) }}
-      {% endif %}
+    {% for app in marketplace  | appsWithoutCategories | removeAquisitionSource('monday') | sortByCreatedAt %}
+      {{ appCard(app, ratings, vendors, installs) }}
     {% endfor %}
   </div>
 </div>

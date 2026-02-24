@@ -22,8 +22,8 @@ title: Home
         Apps
       </h1>
       <span>
-        <span data-total="{{ marketplace.length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
-          {{ marketplace.length }}
+        <span data-total="{{ marketplace | appsWithCategories | length }}" class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
+          {{ marketplace | appsWithCategories | length }}
         </span>
       </span>
     </div>
@@ -69,10 +69,8 @@ title: Home
       {{ appCard(app, ratings, vendors, installs) }}
     {% endfor %}
   
-    {% for app in marketplace | removeAquisitionSource('monday') | removeAppsByIds(specialApps) | sortByCreatedAt %}
-      {% if app.marketplace_category_ids.length > 0 %}
+    {% for app in marketplace | appsWithCategories | removeAquisitionSource('monday') | removeAppsByIds(specialApps) | sortByCreatedAt %}
         {{ appCard(app, ratings, vendors, installs) }}
-      {% endif %}
     {% endfor %}
   </div>
 </div>

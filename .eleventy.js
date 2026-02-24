@@ -17,6 +17,15 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter("regionName", (code) => {
     return country.region(code) ?? "";
   });
+  eleventyConfig.addFilter("appsWithoutCategories", (apps) => {
+    return (
+      apps.filter((app) => app.marketplace_category_ids.length === 0) ?? []
+    );
+  });
+
+  eleventyConfig.addFilter("appsWithCategories", (apps) => {
+    return apps.filter((app) => app.marketplace_category_ids.length > 0) ?? [];
+  });
 
   // Language Name
   const languages = require("@cospired/i18n-iso-languages");
