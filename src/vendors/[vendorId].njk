@@ -165,7 +165,9 @@ eleventyComputed:
 
         {% for app in apps %}
           {% set appRatings = ratings | default([]) %}
-          {{ appCard(app, appRatings, vendors, installs) }}
+          {% if app.marketplace_category_ids.length > 0 %}
+            {{ appCard(app, appRatings, vendors, installs) }}
+          {% endif %}
         {% endfor %}
       </div>
 
