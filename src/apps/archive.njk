@@ -38,8 +38,9 @@ title: Home
   </nav>
 
   <p class="py-4">
-    This website lists all <a target="_blank" href="https://monday.com/marketplace/">monday.com marketplace</a> 
-    apps on one page. Search for specific apps below.
+    These apps are not listed in any categories, 
+    which means normally that they have been removed from the marketplace, 
+    or are just about to be launched.
   </p>
   
   {% include "partials/search.njk" %}
@@ -63,14 +64,9 @@ title: Home
     </div>
     
 
-    {% set specialApps = ['10000999', '10000574', '10000076'] | shuffle %}
-    {% for id in specialApps %}
-      {% set app = marketplace | findAppById(id) %}
-      {{ appCard(app, ratings, vendors, installs) }}
-    {% endfor %}
   
-    {% for app in marketplace | removeAquisitionSource('monday') | removeAppsByIds(specialApps) | sortByCreatedAt %}
-      {% if app.marketplace_category_ids.length > 0 %}
+    {% for app in marketplace | removeAquisitionSource('monday') | sortByCreatedAt %}
+      {% if app.marketplace_category_ids.length === 0 %}
         {{ appCard(app, ratings, vendors, installs) }}
       {% endif %}
     {% endfor %}
