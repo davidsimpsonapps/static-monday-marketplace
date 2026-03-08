@@ -27,8 +27,25 @@ canonical: "/status/"
   <a data-match="include" href="/status/infrastructure/">Infrastructure</a>
 </nav>
 
+
+<h2>Manual alerts</h2>
+<div id="manual-status-banner" class="mb-8">
+  <div class="rounded-lg p-4 border bg-red-50 border-red-200 flex items-center gap-3">
+    <span class="text-red-800 text-xl leading-none">●</span>
+    <span class="font-semibold text-red-800">
+      Ongoing incident - workflow and automation actions not being displayed for marketplace apps.
+      Replicated in multiple accounts and reported to monday.com support for action (#4675477, #4680576, #4680612, #4681236).
+    </span>
+    <span class="text-xs ml-auto opacity-70">Since: 2026-03-04 07:46 UTC</span>
+  </div>
+</div>
+
+<h2>Automated checks</h2>
+
+
 {# Overall status banner — rendered client-side #}
 <div id="status-banner" class="mb-8">
+
   <div class="animate-pulse bg-gray-100 rounded-lg h-14"></div>
 </div>
 
