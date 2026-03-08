@@ -1,8 +1,8 @@
 ---
 layout: base.njk
-title: "monday.com infrastructure response times"
-description: "Historical average response times for monday.com infrastructure endpoints, comparing EU and US regions."
-canonical: "/status/infrastructure/"
+title: "monday.com service status"
+description: "Current status and historical average response times for monday.com infrastructure endpoints."
+canonical: "/status/"
 ---
 
 <div class="breadcrumb">
@@ -22,11 +22,11 @@ canonical: "/status/infrastructure/"
     <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true"><path d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303L13 10L13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
   </span>
   <span>
-    <a href="/status/infrastructure/">Infrastructure</a>
+    <a href="/status/incidents/">Incidents</a>
   </span>
 </div>
 
-<h1 class="text-lg md:text-2xl font-semibold mb-4">monday.com infrastructure response times</h1>
+<h1 class="text-lg md:text-2xl font-semibold mb-4">monday.com service status</h1>
 
 <nav class="tabs pb-4">
   <a data-match="exact" href="/status/">Service status</a>
@@ -34,28 +34,32 @@ canonical: "/status/infrastructure/"
   <a data-match="include" href="/status/infrastructure/">Infrastructure</a>
 </nav>
 
-<p class="text-sm text-gray-500 mb-8">Daily average response times per endpoint, comparing EU and US regions. Data collected since July 2025.</p>
 
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-  {% set endpoints = [
-    {suffix: "basic", label: "Basic Health"},
-    {suffix: "board", label: "Board GraphQL API"},
-    {suffix: "board-items", label: "Board Items GraphQL API"},
-    {suffix: "filtered-board-items", label: "Filtered Board Items GraphQL API"},
-    {suffix: "secure-storage", label: "Secure Storage"},
-    {suffix: "storage", label: "Storage"}
-  ] %}
-  {% for endpoint in endpoints %}
-  <div>
-    <h3 class="text-sm font-semibold text-gray-700 mb-2">{{ endpoint.label }}</h3>
-    <div class="relative h-64">
-      <canvas id="chart-{{ endpoint.suffix }}"></canvas>
-    </div>
-  </div>
-  {% endfor %}
-</div>
+<h2>Status History</h2>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script
-  data-avg-response-times-url="/_data/json/status/avg-response-times.json"
-  src="/js/status-charts.js?_={{ '' | cacheBusterTimestamp }}"></script>
+<p>This page is a collective memory of incidents which are not recorded anywhere else.</p>
+
+<table class="w-full text-sm">
+        <thead>
+          <tr class="border-b-2 border-gray-200">
+            <th class="text-left py-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">From</th>
+            <th class="text-left py-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">To</th>
+            <th class="text-left py-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Details</th>
+            <th class="text-left py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Current status</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr class="border-b border-gray-100 hover:bg-gray-50">
+        <td class="py-2 pr-4 text-xs text-gray-500 whitespace-nowrap">2026-03-04 07:46 UTC</td>
+        <td class="py-2 pr-4 text-sm text-gray-700 whitespace-nowrap">Ongoing</td>
+        <td class="py-2 pr-4 text-sm text-gray-700">
+            Workflow and automation actions not being displayed for marketplace apps.<br>
+Replicated in multiple accounts and reported to monday.com support (#4675477, #4680576, #4680612, #4681236).
+        </td>
+        <td class="py-2 text-sm whitespace-nowrap">
+          <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">Unhealthy</span>
+          <!--<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Healthy</span>-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
