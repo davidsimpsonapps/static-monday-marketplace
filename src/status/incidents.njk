@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "monday.com service status • incident history"
+title: "monday.com service status • Incident history"
 description: "Current status and historical average response times for monday.com infrastructure endpoints."
 canonical: "/status/"
 incidents:
@@ -42,28 +42,13 @@ incidents:
 </nav>
 
 
-<h2>Incident History</h2>
+<h2 class="mt-0">Incident history</h2>
 
-<div class="mb-6">
-    <p>This page is a collective memory of incidents which are not recorded elsewhere.</p>
-</div>
 
-<!--
-<div class="my-8">
-    <div class="text-left py-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-        Start date - 
-        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-            Ongoing
-        </span>
-    </div>
-    <h3 class="font-semibold">Title</h3>
-    <div>Description</div>
-</div>
-
--->
+<p>This page is a collective memory of incidents which are not recorded elsewhere.</p>
 
 {% for incident in incidents %}
-    <div class="my-8">
+    <div class="my-6">
         <div class="text-left py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
             {{ incident.start }} - 
             {% if incident.end %}
