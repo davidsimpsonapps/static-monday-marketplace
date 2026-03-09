@@ -29,15 +29,15 @@ canonical: "/status/"
 </nav>
 
 
-<!-- comment this out when not in use & remove `.hidden` from `#status-banner` -->
+<!-- comment this out when not in use & remove `.hidden` from `#status-banner` 
 <div id="manual-status-banner" class="mb-8">
   <div class="rounded-lg p-4 border bg-red-50 border-red-200 flex flex-col gap-3">
     <span class="text-red-800">
       <div class="font-semibold">
-        <b>Ongoing incident:</b> Workflow and automation blocks not being displayed for marketplace apps.
+        Workflow and automation blocks not being displayed for marketplace apps.
       </div>
       <div>
-        Users cannot select automation blocks for marketplace app within workflow or sentence builders.
+        Users reported that they cannot select automation blocks for marketplace app within workflow or sentence builders.
         Replicated in multiple accounts and reported to monday.com support (#4675477, #4680576, #4680612, #4681236).
       </div>
     </span>
@@ -47,11 +47,13 @@ canonical: "/status/"
   </div>
 </div>
 
+-->
+
 
 
 
 {# Overall status banner — rendered client-side #}
-<div id="status-banner" class="mb-8 hidden">
+<div id="status-banner" class="mb-8 _hidden">
   <div class="animate-pulse bg-gray-100 rounded-lg h-14"></div>
 </div>
 
