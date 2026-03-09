@@ -4,11 +4,13 @@ title: "monday.com service status • Incident history"
 description: "Current status and historical average response times for monday.com infrastructure endpoints."
 canonical: "/status/"
 incidents:
-  - title: Workflow and automation actions not being displayed for marketplace apps
-    text: "Users cannot select automation block for marketplace app within workflow or sentence builders. \
-          Replicated in multiple accounts and reported to monday.com support (#4675477, #4680576, #4680612, #4681236)."
-    start: 2026-03-02 17:03 UTC
+  - start: 2026-03-02 17:03 UTC
     # end: 
+    title: Workflow and automation actions not being displayed for marketplace apps
+    description: "Users reported that they cannot select automation block for marketplace app within workflow or sentence builders. <br>
+                  Replicated in multiple accounts and reported to monday.com support (#4675477, #4680576, #4680612, #4681236)."
+    resolution: "The issue affects only users that have the developer mode flag turned on.  
+                 Meaning if you have users that installed your app & are exposed to the new automation builder - as long as they don't have the developer mode flag turned on, they should be able to see your blocks."
 
 ---
 
@@ -47,9 +49,10 @@ incidents:
 
 <p>This page is a collective memory of incidents which may not be recorded elsewhere.</p>
 
+<div class="incidents">
 {% for incident in incidents %}
     <div class="my-6">
-        <div class="text-left py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+        <div class="incident-heading">
             {{ incident.start }} - 
             {% if incident.end %}
                 {{ incident.end }}
@@ -60,8 +63,13 @@ incidents:
             {% endif %}
         </div>
         <h3 class="font-semibold my-2">{{ incident.title }}</h3>
+        <h4 class="incident-heading">Description</h4>
         <div>
-            {{ incident.text | safe }}
+            {{ incident.description | safe }}
         </div>
+        {% if incident.resolution %}
+          <h4 class="incident-heading">Resolution</h4>
+          {{ incident.resolution }}
+        {% endif %}
     </div>
 {% endfor %} 
