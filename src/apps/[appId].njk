@@ -131,7 +131,7 @@ eleventyComputed:
                 <p class="text-gray-600 text-sm mb-2 sm:mb-4">
          
                   
-                  {% set appInstalls =  installs | findInstallsById(app.app_id) %}
+                  {% set appInstalls = app.installsDelta.totalInstalls %}
                   <a href="#installs" data-toggle="tooltip" title="See installation history"
                     >{{ appInstalls | numberFormat }} installs</a>,
                   since {{ app.created_at | formatDate }}.

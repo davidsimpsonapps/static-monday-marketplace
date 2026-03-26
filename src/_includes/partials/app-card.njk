@@ -1,10 +1,9 @@
 {% macro appCard(app, ratings, vendors, installs) %}
     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
 
-    {% set appInstalls = 0 %}
+    {% set appInstalls = app.installsDelta.totalInstalls %}
     {% set montlyInstalls = 0 %}
     {% if installs %}
-      {% set appInstalls =  installs | findInstallsById(app.app_id) %}
       {% set montlyInstalls = appInstalls | averageInstallsPerMonth(app.created_at) %}
     {% endif %}
     {% if ratings %}
