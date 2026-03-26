@@ -17,7 +17,7 @@ const HEALTHCHECK_IDS = [
   'monday-infra-us-storage',
 ];
 
-const OUTPUT_DIR = join(__dirname, 'json/status');
+const OUTPUT_DIR = join(__dirname, '../json/status');
 const OUTPUT_FILE = join(OUTPUT_DIR, 'avg-response-times.json');
 
 module.exports = async function () {
