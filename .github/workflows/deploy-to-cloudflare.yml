@@ -2,10 +2,10 @@ name: Deploy to Cloudflare Pages
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   schedule:
-    - cron: '0 1 * * *' # Runs at 1:00 AM UTC every day
-  workflow_dispatch:      # Allows manual runs
+    - cron: "0 1 * * *" # Runs at 1:00 AM UTC every day
+  workflow_dispatch: # Allows manual runs
 
 jobs:
   deploy:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "24"
 
       # - name: Cache Eleventy image cache
       #   uses: actions/cache@v3

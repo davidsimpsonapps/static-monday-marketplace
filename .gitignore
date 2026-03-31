@@ -2,8 +2,6 @@
 _site/
 dist/
 
-src/json/status/avg-response-times.json
-
 # cache
 .cache/
 

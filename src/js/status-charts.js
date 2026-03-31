@@ -1,6 +1,6 @@
 const HEALTHCHECKS_URL = "https://status.getgorilla.app/api/healthchecks";
 const HISTORY_URL =
-  "https://status.getgorilla.app/api/healthchecks/history?limit=1000";
+  "https://status.getgorilla.app/api/healthchecks/history?limit=100";
 
 const ENDPOINT_TYPES = [
   { suffix: "basic", label: "Basic Health" },
@@ -308,8 +308,10 @@ document.addEventListener("DOMContentLoaded", async function () {
   if (scriptEl) {
     try {
       const url = scriptEl.getAttribute("data-avg-response-times-url");
+      console.log("url", url);
       const response = await fetch(url);
       const data = await response.json();
+
       buildCharts(data);
     } catch (e) {
       console.error("Failed to load avg response times data:", e);
