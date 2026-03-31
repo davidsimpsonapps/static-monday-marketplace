@@ -31,9 +31,9 @@ module.exports = async function () {
     await mkdir(OUTPUT_DIR, { recursive: true });
     await writeFile(OUTPUT_FILE, JSON.stringify(result));
 
-    return result;
+    return null;
   } catch (error) {
     console.error('Error fetching avg response times:', error);
-    return [];
+    return null;
   }
 };
