@@ -405,6 +405,7 @@ module.exports = async function (eleventyConfig) {
 
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/_data/json");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/json");
@@ -412,6 +413,7 @@ module.exports = async function (eleventyConfig) {
 
   // Watch for changes in these folders
   eleventyConfig.addWatchTarget("src/css");
+  eleventyConfig.addWatchTarget("src/_data/json");
   eleventyConfig.addWatchTarget("src/images");
   eleventyConfig.addWatchTarget("src/js");
   eleventyConfig.addWatchTarget("src/json");
