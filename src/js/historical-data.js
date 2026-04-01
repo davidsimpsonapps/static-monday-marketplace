@@ -85,7 +85,7 @@ function renderChart(appData) {
 
   // Sort history by date (newest first)
   const sortedHistory = [...appData.history].sort(
-    (a, b) => new Date(a.date) - new Date(b.date)
+    (a, b) => new Date(a.date) - new Date(b.date),
   );
 
   // Prepare chart data
@@ -126,7 +126,7 @@ function renderChart(appData) {
 function updateHeadlines(appData, days) {
   // Sort history by date (oldest first)
   const sortedHistory = [...appData.history].sort(
-    (a, b) => new Date(a.date) - new Date(b.date)
+    (a, b) => new Date(a.date) - new Date(b.date),
   );
 
   // Calculate 7d change (difference from 7 days prior)
@@ -175,7 +175,7 @@ function updateHeadlines(appData, days) {
     set(".headline-max", max === -Infinity ? "-" : max.toLocaleString());
     setTitle(
       ".headline-max-date",
-      maxIdx !== -1 ? sortedHistory[maxIdx].date : "-"
+      maxIdx !== -1 ? sortedHistory[maxIdx].date : "-",
     );
     set(".headline-min", min === Infinity ? "-" : min.toLocaleString());
 
@@ -183,12 +183,12 @@ function updateHeadlines(appData, days) {
     set(".headline-min-delta", min === Infinity ? "-" : minDelta + "%");
     addClass(
       ".headline-min-delta",
-      minDelta >= 0 ? "text-green-600" : "text-red-600"
+      minDelta >= 0 ? "text-green-600" : "text-red-600",
     );
 
     setTitle(
       ".headline-min-date",
-      minIdx !== -1 ? sortedHistory[minIdx].date : "-"
+      minIdx !== -1 ? sortedHistory[minIdx].date : "-",
     );
     set(".headline-current", current === null ? "-" : current.toLocaleString());
 
@@ -196,11 +196,11 @@ function updateHeadlines(appData, days) {
     set(".headline-current-delta", current === null ? "-" : currentDelta + "%");
     setTitle(
       ".headline-current-date",
-      currentIdx !== -1 ? sortedHistory[currentIdx].date : "-"
+      currentIdx !== -1 ? sortedHistory[currentIdx].date : "-",
     );
     addClass(
       ".headline-current-delta",
-      currentDelta >= 0 ? "text-green-600" : "text-red-600"
+      currentDelta >= 0 ? "text-green-600" : "text-red-600",
     );
   }
   tooltips && tooltips();
@@ -214,7 +214,7 @@ function renderChartByDeltaInDays(appData, days) {
   const ctx = node.getContext("2d");
   // Sort history by date (oldest first)
   const sortedHistory = [...appData.history].sort(
-    (a, b) => new Date(a.date) - new Date(b.date)
+    (a, b) => new Date(a.date) - new Date(b.date),
   );
   // Calculate monthly change (difference from 30 days prior)
   const change = sortedHistory.map((item, idx, arr) => {
@@ -259,18 +259,18 @@ function renderRatingsChart(ratingsData) {
   if (ratingsData && Array.isArray(ratingsData.history)) {
     // Sort history by date ascending
     const sortedRatings = [...ratingsData.history].sort(
-      (a, b) => new Date(a.date) - new Date(b.date)
+      (a, b) => new Date(a.date) - new Date(b.date),
     );
 
     // Prepare data for average rating chart
     const ratingLabels = sortedRatings.map((item) => item.date);
     const ratingAverages = sortedRatings.map((item) =>
-      item.rating ? parseFloat(item.rating) : null
+      item.rating ? parseFloat(item.rating) : null,
     );
 
     // Prepare data for ratings count chart
     const ratingCounts = sortedRatings.map((item) =>
-      item.count ? parseInt(item.count) : 0
+      item.count ? parseInt(item.count) : 0,
     );
 
     // Render ratings average chart
@@ -356,7 +356,7 @@ function renderCategoriesCharts(categoriesData) {
     });
 
     const sortedData = history.sort(
-      (a, b) => new Date(a.date) - new Date(b.date)
+      (a, b) => new Date(a.date) - new Date(b.date),
     );
 
     // console.log(`Category ${c} `, sortedData);
@@ -373,7 +373,7 @@ function renderCategoriesCharts(categoriesData) {
     const chartCtx = node.getContext("2d");
     const labels = sortedData.map((item) => item.date);
     const data = sortedData.map((item) =>
-      item.count ? parseInt(item.count) : 0
+      item.count ? parseInt(item.count) : 0,
     );
 
     const options = { ...defaultOptions };
@@ -414,7 +414,7 @@ function renderTrendingChart(appData) {
 
   // Sort history by date (newest first)
   const sortedHistory = [...appData.history].sort(
-    (a, b) => new Date(a.date) - new Date(b.date)
+    (a, b) => new Date(a.date) - new Date(b.date),
   );
 
   // Prepare chart data
@@ -454,12 +454,13 @@ async function initChart() {
   const installsUrlNode = document.querySelector("[data-installs-url]");
   if (installsUrlNode) {
     const installsUrl = installsUrlNode.getAttribute("data-installs-url");
+    console.log("installsUrl", installsUrl);
     if (installsUrl) {
       const data = await loadAppData(installsUrl, ".chart-container:first");
       if (data) {
         renderChart(data);
         [1, 7, 30, 90, 180].forEach((days) =>
-          renderChartByDeltaInDays(data, days)
+          renderChartByDeltaInDays(data, days),
         );
       }
     }
@@ -480,7 +481,7 @@ async function initChart() {
     if (categoriesUrl) {
       const categoriesData = await loadAppData(
         categoriesUrl,
-        "#categories-body"
+        "#categories-body",
       );
       categoriesData && renderCategoriesCharts(categoriesData);
     }
