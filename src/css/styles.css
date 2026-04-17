@@ -228,7 +228,7 @@ ol {
   @apply -mt-2 mb-6 leading-8;
 }
 button.list-format,
-nav.tabs a,
+/* nav.tabs a, */
 .apps-menu a,
 .sorting button {
   @apply bg-gray-100 text-gray-600 px-2 py-1  text-sm;
@@ -240,7 +240,7 @@ nav.tabs a,
   }
   cursor: pointer;
 }
-nav.tabs a,
+/* nav.tabs a, */
 .apps-menu a,
 .sorting .grow button {
   @apply rounded;
@@ -251,7 +251,7 @@ button.list-format svg.Icon-module_icon {
 }
 
 button.selected,
-nav.tabs a.font-bold,
+/* nav.tabs a.font-bold, */
 .apps-menu a.selected,
 .sorting button.selected {
   @apply bg-gray-300 text-black;
@@ -364,4 +364,17 @@ li.toc-list-item {
 
 .incident-heading {
   @apply py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider;
+}
+
+/* */
+
+nav.tabs {
+  @apply flex gap-4 mb-12 border-b border-gray-200 dark:border-gray-700;
+}
+nav.tabs a {
+  @apply py-2;
+}
+nav.tabs a.active,
+nav.tabs a.font-bold {
+  @apply font-semibold border-b-2 border-brand-dark-blue;
 }

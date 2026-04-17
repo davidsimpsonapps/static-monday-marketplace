@@ -31,7 +31,7 @@ const emboldenNavLinks = () => {
     }
 
     if (isMatch) {
-      link.classList.add("font-bold");
+      link.classList.add("font-bold active");
     }
   });
 };
@@ -43,7 +43,7 @@ const toggleListStyle = () => {
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
         const target = document.querySelector(
-          button.getAttribute("aria-controls")
+          button.getAttribute("aria-controls"),
         );
         if (target) {
           target.classList.add(button.getAttribute("data-add-class"));
@@ -98,7 +98,7 @@ const cardSorting = () => {
       const direction = button.getAttribute("data-direction");
       const dataType = button.getAttribute("data-type");
       const appCards = Array.from(
-        document.querySelectorAll(".item:not(.list-header)")
+        document.querySelectorAll(".item:not(.list-header)"),
       );
 
       const selectors = sortBy.split(",");
@@ -236,7 +236,7 @@ const redirectToFriendlyUrl = () => {
         window.history.replaceState(
           {},
           "",
-          urlObj.pathname + urlObj.search + urlObj.hash
+          urlObj.pathname + urlObj.search + urlObj.hash,
         );
       }
     }
@@ -250,7 +250,7 @@ const anchoredHeadings = () => {
   //   document.addEventListener("DOMContentLoaded", () => {
   // Select all headings with an ID
   const headings = document.querySelectorAll(
-    "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"
+    "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]",
   );
 
   headings.forEach((heading) => {
@@ -265,11 +265,11 @@ const anchoredHeadings = () => {
     // Show icon on hover
     heading.addEventListener(
       "mouseenter",
-      () => (linkIcon.style.opacity = "1")
+      () => (linkIcon.style.opacity = "1"),
     );
     heading.addEventListener(
       "mouseleave",
-      () => (linkIcon.style.opacity = "0")
+      () => (linkIcon.style.opacity = "0"),
     );
 
     // Click handler to update URL and copy
