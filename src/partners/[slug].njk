@@ -10,7 +10,8 @@ eleventyComputed:
   title: "{{partner.name | safe}} • monday.com partners"
   description: "{{partner.shortIntro | safe}}"
   canonical: "/partners/{{ partner.slug }}/"
-  friendly: "/partners/{{ partner.slug }}/"
+  friendly: "/partners/{{ partner.slug }}/#/{{ partner.name | sanitisePathname }}"
+
   image: "{{ partner.profilePictureUrl }}"
 ---
 
