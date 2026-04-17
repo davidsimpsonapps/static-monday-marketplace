@@ -31,7 +31,7 @@ const emboldenNavLinks = () => {
     }
 
     if (isMatch) {
-      link.classList.add("font-bold active");
+      link.classList.add("font-bold");
     }
   });
 };
