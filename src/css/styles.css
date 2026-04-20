@@ -369,10 +369,10 @@ li.toc-list-item {
 /* */
 
 nav.tabs {
-  @apply flex gap-4 mb-12 border-b border-gray-200 dark:border-gray-700;
+  @apply flex text-sm sm:text-base gap-2 sm:gap-4 mb-4 border-b border-gray-200 dark:border-gray-700;
 }
 nav.tabs a {
-  @apply py-2;
+  @apply py-2 text-center;
 }
 nav.tabs a.active,
 nav.tabs a.font-bold {
