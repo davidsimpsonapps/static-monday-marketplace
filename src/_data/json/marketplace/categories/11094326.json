@@ -56,6 +56,14 @@
     {
       "date": "2026-04-20",
       "marketplace_category_ids": []
+    },
+    {
+      "date": "2026-04-21",
+      "marketplace_category_ids": [
+        11,
+        7,
+        6
+      ]
     }
   ]
 }
