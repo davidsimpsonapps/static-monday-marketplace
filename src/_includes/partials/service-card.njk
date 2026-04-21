@@ -1,0 +1,14 @@
+{% macro serviceCard(service) %}
+  <div class="item  search-item text-gray-700 justify-normal">
+    {{ service.id | serviceIcon | safe }}
+    <div  data-person-name class="grow-0">
+      <h2 class="item-title inline">
+        {{ service.name }}      
+      </h2>
+    </div>
+    <p class="description text-sm text-gray-600 line-clamp-6 my-2 p-0 grow">
+      {{ service.description }}
+    </p>
+  </div>
+
+{% endmacro %}      
