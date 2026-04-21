@@ -119,7 +119,7 @@ eleventyComputed:
 
               {% set rating = ratings | findRatingById(app.app_id) %}
               {% if rating %}
-                <div class="mt-1 text-gray-400 text-sm">
+                <div class="mt-1 text-sm">
                   <a href="#reviews" data-toggle="tooltip" title="See reviews">
                     <span class="text-yellow-500 ">★</span>
                     <span class="ml-1">{{ rating.rating | formatRating }}</span>
@@ -313,10 +313,10 @@ eleventyComputed:
                                     {% endif %}
                                   </div>
                                 {% else %}
-                                  <div data-answered="false" class="ml-4 mt-2 text-gray-400">Not answered</div>
+                                  <div data-answered="false" class="ml-4 mt-2 text-gray-600">Not answered</div>
                                 {% endif %}
                               {% else %}
-                                <div data-answered="false" class="ml-4 mt-2 text-gray-400">Not answered</div>
+                                <div data-answered="false" class="ml-4 mt-2 text-gray-600">Not answered</div>
                               {% endif %}
                             </div>
                             {% if answer and answer.detailedAnswer %}
