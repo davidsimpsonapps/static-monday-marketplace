@@ -39,6 +39,7 @@ module.exports = async function (eleventyConfig) {
     const overrides = {
       el: "Greek",
       he: "Hebrew",
+      lad: "Judeo-Spanish",
       man: "Mandarin",
       "zh-yue": "Yue Chinese",
     };
