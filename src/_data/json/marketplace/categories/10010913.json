@@ -1913,6 +1913,12 @@
       "marketplace_category_ids": [
         10000001
       ]
+    },
+    {
+      "date": "2026-04-25",
+      "marketplace_category_ids": [
+        10000001
+      ]
     }
   ]
 }
