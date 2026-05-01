@@ -60,9 +60,9 @@ incidents:
 {% for incident in incidents %}
     <div class="my-6">
         <div class="incident-heading">
-            {{ incident.start }} - 
+            {{ incident.start }}
             {% if incident.end %}
-                {{ incident.end }}
+                 - {{ incident.end }}
                 <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                     Resolved
                 </span>
