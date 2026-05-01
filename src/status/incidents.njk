@@ -4,11 +4,18 @@ title: "monday.com service status • Incident history"
 description: "Current status and historical average response times for monday.com infrastructure endpoints."
 canonical: "/status/"
 incidents:
+  - start: 2026-04-29 17:00 UTC
+    # end: 2026-03-09 13:53 UTC
+    title: Access to the new automation builder has been removed
+    description: "<p>Users reported that they no longer access the new 'build from scratch' automation builder – the legacy automation builder is displayed instead. 
+                  All account currently known to be affected have the developer mode flag turned on.
+                  <p>Replicated in multiple accounts (10+) and reported to monday.com support (#4862433, #4865944)."
+    # resolution: ""
   - start: 2026-03-02 17:03 UTC
     end: 2026-03-09 13:53 UTC
     title: Workflow and automation actions not being displayed for marketplace apps
-    description: "Users reported that they cannot select automation block for marketplace app within workflow or sentence builders. <br>
-                  Replicated in multiple accounts and reported to monday.com support (#4675477, #4680576, #4680612, #4681236)."
+    description: "<p>Users reported that they cannot select automation block for marketplace app within workflow or sentence builders.
+                  <p>Replicated in multiple accounts and reported to monday.com support (#4675477, #4680576, #4680612, #4681236)."
     resolution: "Fix deployed. The issue affected only users that have the developer mode flag turned on.  
                  Meaning if you have users that installed your app & are exposed to the new automation builder - as long as they didn't have the developer mode flag turned on, they would be able to see your blocks."
 
