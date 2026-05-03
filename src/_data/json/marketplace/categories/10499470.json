@@ -396,6 +396,22 @@
         9,
         7
       ]
+    },
+    {
+      "date": "2026-05-02",
+      "marketplace_category_ids": [
+        10,
+        9,
+        7
+      ]
+    },
+    {
+      "date": "2026-05-03",
+      "marketplace_category_ids": [
+        10,
+        9,
+        7
+      ]
     }
   ]
 }
