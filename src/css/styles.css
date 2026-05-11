@@ -81,7 +81,7 @@ span[title] svg {
 }
 header {
   nav {
-    @apply order-2 sm:order-1 mt-2 sm:mt-0  sm:mr-2;
+    @apply order-2 sm:order-1 mt-2 sm:mt-0 sm:mr-2 flex items-center flex-wrap gap-2 sm:gap-3;
   }
   #home {
     @apply order-1 sm:order-2 flex items-center gap-2 text-xl font-bold text-gray-800;
@@ -367,6 +367,60 @@ li.toc-list-item {
 }
 
 /* */
+
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item > a::after {
+  display: none;
+}
+
+.nav-item .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  z-index: 200;
+}
+.nav-item .dropdown > div {
+  @apply border rounded-b bg-white shadow-xl;
+  margin-top: 16px;
+}
+.nav-item:hover > a {
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .nav-item > a::after {
+    content: " ▾";
+    font-size: 0.7em;
+    vertical-align: middle;
+    display: inline;
+  }
+
+  .nav-item:hover .dropdown {
+    display: block;
+  }
+}
+
+.nav-item .dropdown a {
+  display: block;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.nav-item .dropdown a + a {
+  margin-left: 0;
+}
+
+.nav-item .dropdown a:hover {
+  @apply bg-gray-100;
+  text-decoration: none;
+}
 
 nav.tabs {
   @apply flex text-sm sm:text-base gap-2 sm:gap-4 mb-4 border-b border-gray-200 dark:border-gray-700;

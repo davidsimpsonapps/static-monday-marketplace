@@ -24,10 +24,38 @@
           apps for monday.com
         </a>
         <nav>
-          <a data-match="csv" data-csv="/apps/,/categories/,/installs/,/top-ranking/" href="/">Apps</a>
+          <div class="nav-item">
+            <a data-match="csv" data-csv="/,/categories/,/installs/,/top-ranking/,/apps/archive/" href="/">Apps</a>
+            <div class="dropdown">
+              <div>
+                <a href="/">Listings</a>
+                <a href="/categories/">Categories</a>
+                <a href="/top-ranking/">Top ranking</a>
+                <a href="/installs/">Installs</a>
+                <a href="/apps/archive/">Archive</a>
+              </div>
+            </div>
+          </div>
           <a data-match="include" href="/vendors/">Vendors</a>
-          <a data-match="csv" data-csv="/partners/,/people/" href="/partners/">Partners</a>
-          <a data-match="include" href="/status/">Status</a>
+          <div class="nav-item">
+            <a data-match="csv" data-csv="/partners/,/people/" href="/partners/">Partners</a>
+            <div class="dropdown">
+              <div>
+                <a href="/partners/">Companies</a>
+                <a href="/people/">People</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a data-match="include" href="/status/">Status</a>
+            <div class="dropdown">
+              <div>
+                <a href="/status/">Service Status</a>
+                <a href="/status/incidents/">Incidents</a>
+                <a href="/status/infrastructure/">Infrastructure</a>
+              </div>
+            </div>
+          </div>
           <a data-match="include" href="/about/">About</a>
         </nav>
       </div>
