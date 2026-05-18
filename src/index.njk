@@ -66,11 +66,11 @@ title: Home
     {% set specialApps = ['10000999', '10000574', '10000076'] | shuffle %}
     {% for id in specialApps %}
       {% set app = marketplace | findAppById(id) %}
-      {{ appCard(app, ratings, vendors, installs) }}
+      {{ appCard(app, ratings, vendors, installs, loop.index0) }}
     {% endfor %}
-  
+
     {% for app in marketplace | appsWithCategories | removeAquisitionSource('monday') | removeAppsByIds(specialApps) | sortByCreatedAt %}
-        {{ appCard(app, ratings, vendors, installs) }}
+        {{ appCard(app, ratings, vendors, installs, loop.index0 + 3) }}
     {% endfor %}
   </div>
 </div>

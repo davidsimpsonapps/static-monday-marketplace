@@ -69,7 +69,7 @@ title: monday.com partner people
 
     
       {% for person in people %}
-        {{ personCard(person) }}
+        {{ personCard(person, loop.index0) }}
       {% endfor %}
     
   </div>

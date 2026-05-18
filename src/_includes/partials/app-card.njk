@@ -1,4 +1,4 @@
-{% macro appCard(app, ratings, vendors, installs) %}
+{% macro appCard(app, ratings, vendors, installs, index=0) %}
     {% set vendor = vendors | findVendorById(app.marketplace_developer_id) %}
 
     {% set appInstalls = app.installsDelta.totalInstalls %}
@@ -30,7 +30,7 @@
         
           <div>
           {% if app.logo_url %}
-            <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="item-logo">
+            <img src="{{ app.logo_url }}" alt="{{ app.name }} logo" class="item-logo"{% if index >= 20 %} loading="lazy"{% endif %}>
           {% else %}
             <div class="item-logo bg-gray-100"></div>
           {% endif %}

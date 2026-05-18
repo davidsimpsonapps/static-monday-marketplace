@@ -69,7 +69,9 @@ title: monday.com marketplace vendors
           >
           <div>
             {% if vendor.logo_url %}
-              <img src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg">
+              <img 
+                {% if loop.index0 >= 20 %}loading="lazy"{% endif %}
+                src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg">
             {% endif %}
             <h2 class="text-xl font-semibold mt-4 mb-2">
               {{ vendor.name }}

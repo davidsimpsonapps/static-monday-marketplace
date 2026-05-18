@@ -1,4 +1,4 @@
-{% macro personCard(person) %}
+{% macro personCard(person, index=0) %}
 
       <a 
         href="/people/{{ person.id }}/" 
@@ -7,7 +7,7 @@
         
         <div class="grow-0">
           {% if person.imageUrl %}
-            <img src="{{ person.imageUrl }}" alt="{{ person.name }} picture" class="item-logo person">
+            <img src="{{ person.imageUrl }}" alt="{{ person.name }} picture" class="item-logo person"{% if index >= 20 %} loading="lazy"{% endif %}>
           {% else %}
             <div class="item-logo person bg-gray-100 rounded-full"></div>
           {% endif %}

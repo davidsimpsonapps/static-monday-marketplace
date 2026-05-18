@@ -75,7 +75,8 @@ title: monday.com partners
           >
           <div>
             {% if  partner.profilePictureUrl %}
-              <img src="{{ partner.profilePictureUrl }}" alt="{{ partner.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg object-cover">
+              <img {% if loop.index0 >= 20 %}loading="lazy"{% endif %}
+                src="{{ partner.profilePictureUrl }}" alt="{{ partner.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg object-cover">
             {% endif %}
             <h2 class="text-xl font-semibold mt-4 mb-2">
               {{ partner.name }}
