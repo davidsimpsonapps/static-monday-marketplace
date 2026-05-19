@@ -132,13 +132,13 @@
                 </span>
               {% endif %}
               {% if app.acquisition_source === 'Touch' %}
-                <span data-toggle="tooltip" title="Acquisition source: {{ app.acquisition_source }}" class="badge opacity-30">
+                <span data-toggle="tooltip" title="Acquisition source: {{ app.acquisition_source }}" class="badge">
                   {{ app.acquisition_source }}
                 </span>
               {% endif %}
 
               {% if app.marketplace_category_ids.length === 0 %}
-                <span data-toggle="tooltip" title="App may have been delisted"  class="badge opacity-30">
+                <span data-toggle="tooltip" title="App may have been delisted"  class="badge">
                   No categories
                 </span>
               {% endif %}
