@@ -60,17 +60,12 @@ title: monday.com partner people
 
   {% include "partials/search.njk" %}
   {% include "partials/sorting.njk" %}
-
-  <div class="item-list cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
-
-
+  <div id="item-list" class="item-list cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
 
     {% from "partials/person-card.njk" import personCard %}
-
-    
-      {% for person in people %}
-        {{ personCard(person, loop.index0) }}
-      {% endfor %}
+    {% for person in people %}
+      {{ personCard(person, loop.index0) }}
+    {% endfor %}
     
   </div>
 </div> 
