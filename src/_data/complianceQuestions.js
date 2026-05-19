@@ -1,9 +1,8 @@
-const fetch = require('node-fetch');
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function() {
   try {
-    const response = await fetch('https://marketplace-ms.monday.com/marketplace_ms/public/compliance_questions');
-    const questions = await response.json();
+    const questions = await EleventyFetch('https://marketplace-ms.monday.com/marketplace_ms/public/compliance_questions', { duration: "1d", type: "json" });
     
     // Group questions by type
     const questionsByType = questions.reduce((acc, question) => {

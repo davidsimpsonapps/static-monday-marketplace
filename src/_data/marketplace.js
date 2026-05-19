@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 const { vendorBlockList } = require('./data-filters');
 
@@ -59,8 +59,7 @@ function getInstallsDelta(app, { allInstallsToday, allInstallsSevenDaysAgo, allI
 
 module.exports = async function() {
   try {
-    const response = await fetch('https://cdn.monday.com/public_marketplace_apps');
-    const data = await response.json();
+    const data = await EleventyFetch('https://cdn.monday.com/public_marketplace_apps', { duration: "1d", type: "json" });
     const apps =  data.marketplace_apps.filter(app => !vendorBlockList.includes(app.marketplace_developer_id));
 
     const historicalInstalls = getHistoricalInstalls();
@@ -68,9 +67,7 @@ module.exports = async function() {
 
 
     // Add "Trending this week" into the `marketplace_category_ids`
-    const responseTrendingThisWeek = await fetch('https://monday.com/bigbrain-data-api/feature/dynamic/external/public/cross-tenant?featureName=app_marketplace_trending_this_week&version=&startTime=&endTime=&filters=%7B%22account_id%22%3A%22-1%22%7D&metrics=%5B%5D');
-
-    const dataTrendingThisWeek = await responseTrendingThisWeek.json();
+    const dataTrendingThisWeek = await EleventyFetch('https://monday.com/bigbrain-data-api/feature/dynamic/external/public/cross-tenant?featureName=app_marketplace_trending_this_week&version=&startTime=&endTime=&filters=%7B%22account_id%22%3A%22-1%22%7D&metrics=%5B%5D', { duration: "1d", type: "json" });
     const topAppsRaw = dataTrendingThisWeek?.data?.[0]?.top_apps ?? '[]';
     let trendingAppIds = [];
     try {

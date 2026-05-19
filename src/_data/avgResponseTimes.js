@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 const HEALTHCHECK_IDS = [
   "monday-infra-eu-basic",
@@ -20,9 +20,7 @@ module.exports = async function () {
     // this call to get the healthcheck data is really heavy work,
     // so must be cached daily rather than called directly
     const url = `https://status.getgorilla.app/api/avg-response-times?healthcheck_ids=${HEALTHCHECK_IDS.join(",")}`;
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    const data = await response.json();
+    const data = await EleventyFetch(url, { duration: "1d", type: "json" });
     return data.data || [];
   } catch (error) {
     console.error("Error fetching avg response times:", error);

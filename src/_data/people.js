@@ -1,12 +1,11 @@
-const fetch = require("node-fetch");
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 const url =
   "https://monday.com/gotopartners/api/partners?sortOrder=DESC&limit=10000000";
 
 module.exports = async function () {
   try {
-    const response = await fetch(url);
-    const data = await response.json();
+    const data = await EleventyFetch(url, { duration: "1d", type: "json" });
     const partners = data.partners;
 
     const people = [];

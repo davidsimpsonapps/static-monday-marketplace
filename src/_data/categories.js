@@ -1,11 +1,11 @@
-const fetch = require("node-fetch");
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
   try {
-    const response = await fetch(
-      "https://marketplace-ms.monday.com/marketplace_ms/public/marketplace-categories"
+    const data = await EleventyFetch(
+      "https://marketplace-ms.monday.com/marketplace_ms/public/marketplace-categories",
+      { duration: "1d", type: "json" }
     );
-    const data = await response.json();
 
     // Filter out categories that shouldn't be displayed
     return (

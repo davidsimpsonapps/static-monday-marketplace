@@ -1,9 +1,8 @@
-const fetch = require('node-fetch');
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function() {
   try {
-    const response = await fetch('https://marketplace-ms.monday.com/marketplace_ms/public/analytics/app_ratings');
-    const data = await response.json();
+    const data = await EleventyFetch('https://marketplace-ms.monday.com/marketplace_ms/public/analytics/app_ratings', { duration: "1d", type: "json" });
     
     // Convert the object into an array of rating objects
     const ratings = Object.values(data).map(rating => ({
