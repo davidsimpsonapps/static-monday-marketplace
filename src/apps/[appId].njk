@@ -313,14 +313,14 @@ eleventyComputed:
                                     {% endif %}
                                   </div>
                                 {% else %}
-                                  <div data-answered="false" class="ml-4 mt-2 text-gray-600">Not answered</div>
+                                  <div data-answered="false" class="ml-4 mt-2">Not answered</div>
                                 {% endif %}
                               {% else %}
-                                <div data-answered="false" class="ml-4 mt-2 text-gray-600">Not answered</div>
+                                <div data-answered="false" class="ml-4 mt-2">Not answered</div>
                               {% endif %}
                             </div>
                             {% if answer and answer.detailedAnswer %}
-                              <div class="mt-2 text-gray-600">
+                              <div class="mt-2">
                                 {{ answer.detailedAnswer }}
                               </div>
                             {% endif %}
@@ -362,7 +362,7 @@ eleventyComputed:
                       {% endif %}
                     {% endfor %}
                   </div>
-                  <span class="ml-2 text-sm text-gray-500">
+                  <span class="ml-2 text-sm">
                     {{ review.commentedAt | formatDate }}
                   </span>
                 </div>
@@ -372,7 +372,7 @@ eleventyComputed:
                 </p>
                 {% if review.developerReply %}
                   <div class="mt-2 pl-4 border-l-2 border-gray-200">
-                    <p class="text-sm text-gray-500">Developer response:</p>
+                    <p class="text-sm">Developer response:</p>
                     <p class="text-gray-700">{{ review.developerReply }}</p>
                   </div>
                 {% endif %}
@@ -393,7 +393,7 @@ eleventyComputed:
         
         <h3 id="installs" class="text-xl font-medium mb-4">Installation history</h3>
 
-        <p class="text-xs text-gray-600">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
+        <p class="text-xs">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
         
         <div class="chart-container">
           <h4 id="installsAll" class="font-semibold">Total number of installs</h4>
@@ -407,7 +407,7 @@ eleventyComputed:
         {% for day in days %}
           <div class="chart-container">
             <h4 id="installs-{{ day }}d" class="font-semibold">Change in total number of installs in last {{ day }} day(s)</h4>
-            <p class="text-xs text-gray-600">Compares the number of installs on each date with {{ day }} days previously:</p>
+            <p class="text-xs">Compares the number of installs on each date with {{ day }} days previously:</p>
             <div id="headlines-{{ day }}d" class="headlines-container" >
               {% include "partials/headlines.njk" %}
             </div>
@@ -424,7 +424,7 @@ eleventyComputed:
         <h3 id="ratings" class="text-xl font-medium mb-4">Ratings history</h3>
 
         <div id="ratings-body">
-          <!--<p class="text-xs text-gray-600 italic">Please note: Data between May 22, 2025 and June 20, 2025 is only provisional and has not been confirmed to be error free.</p>-->
+          <!--<p class="text-xs italic">Please note: Data between May 22, 2025 and June 20, 2025 is only provisional and has not been confirmed to be error free.</p>-->
           <div class="chart-container">
             <div class="h-96">
               <canvas id="ratingsRatingChart"></canvas>
@@ -476,7 +476,7 @@ eleventyComputed:
 
 
       <!-- Debug output -->
-      <div class="py-8 text-sm text-gray-500 w-full">
+      <div class="py-8 text-sm w-full">
 
           <h2>App metadata</h2>
 
@@ -499,7 +499,7 @@ eleventyComputed:
     <!-- Table of Contents -->
     <div class="hidden xl:block xl:w-64 flex-shrink-0">
       <div class="fixed top-28 _overflow-y-auto py-4">
-        <h3 class="font-xs text-gray-500 font-light tracking-wide mb-4 ">Table of Contents</h3>
+        <h3 class="font-xs font-light tracking-wide mb-4 ">Table of Contents</h3>
         <nav class="js-toc"></nav>
       </div>
     </div>

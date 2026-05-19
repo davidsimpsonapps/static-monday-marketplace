@@ -52,7 +52,8 @@ p {
 .porse li {
   @apply m-0;
 }
-a {
+a,
+a .anchor {
   @apply text-blue-700 hover:text-blue-900;
 }
 nav a {
@@ -89,6 +90,11 @@ header {
   #home svg {
     @apply rounded-sm;
   }
+}
+
+a p,
+a div {
+  @apply text-black;
 }
 
 .add-to-monday {
@@ -158,7 +164,7 @@ header {
   @apply text-base font-semibold m-0 p-0;
 }
 .item.cards .description {
-  @apply text-sm text-gray-600;
+  @apply text-sm;
 }
 .item-list.cards .cards-hidden,
 .item-list.list .list-hidden,
@@ -167,7 +173,7 @@ header {
 }
 
 .item-list .item .install-counts {
-  @apply text-gray-400 text-xs;
+  @apply text-xs;
 }
 
 .item-list.cards .item .install-counts {
@@ -198,7 +204,7 @@ header {
   @apply text-center;
 }
 .headlines-container .label {
-  @apply uppercase text-gray-500 text-xs font-semibold tracking-widest;
+  @apply uppercase text-xs font-semibold tracking-widest;
 }
 .headlines-container .headline {
   @apply text-lg font-semibold;
@@ -231,7 +237,7 @@ button.list-format,
 /* nav.tabs a, */
 .apps-menu a,
 .sorting button {
-  @apply bg-gray-100 text-gray-600 px-2 py-1  text-sm;
+  @apply bg-gray-100 px-2 py-1  text-sm;
   &:hover {
     @apply bg-gray-200;
   }
@@ -346,7 +352,7 @@ li.toc-list-item {
 }
 
 .breadcrumb {
-  @apply flex flex-row text-sm text-gray-500 gap-2 mb-6 hidden sm:flex;
+  @apply flex flex-row text-sm gap-2 mb-6 hidden sm:flex;
 }
 .breadcrumb svg {
   margin: 0.2em 0;
@@ -355,7 +361,7 @@ li.toc-list-item {
   @apply flex flex-row;
 }
 .breadcrumb a {
-  @apply text-gray-500 flex gap-2 hover:text-gray-800;
+  @apply flex gap-2 hover:text-gray-800;
 }
 
 .q-and-a:has([data-answered="false"]) {
@@ -363,7 +369,7 @@ li.toc-list-item {
 }
 
 .incident-heading {
-  @apply py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider;
+  @apply py-2 text-xs font-semibold uppercase tracking-wider;
 }
 
 /* */

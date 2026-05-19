@@ -44,7 +44,7 @@ description: "An aggregated history of installations for all apps from the monda
         
         <p>An aggregated history of installations for all apps from the monday.com marketplace.</p>
 
-        <p class="text-xs text-gray-600">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
+        <p class="text-xs">We have data for December 28, 2024 onwards only. Collected sometime after 00:00 UTC daily.</p>
         <div class="chart-container">
             <h4 id="installsAll" class="font-semibold">Total number of installs</h4>
             <div class="h-96">
@@ -57,7 +57,7 @@ description: "An aggregated history of installations for all apps from the monda
         {% for day in days %}
           <div class="chart-container">
             <h4 id="installs-{{ day }}d" class="font-semibold">Change in total number of installs in last {{ day }} day(s)</h4>
-            <p class="text-xs text-gray-600">Compares the number of installs on each date with {{ day }} days previously:</p>
+            <p class="text-xs">Compares the number of installs on each date with {{ day }} days previously:</p>
             <div id="headlines-{{ day }}d" class="headlines-container" >
               {% include "partials/headlines.njk" %}
             </div>

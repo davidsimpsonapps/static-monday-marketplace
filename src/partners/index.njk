@@ -76,7 +76,7 @@ title: monday.com partners
                 src="{{ partner.profilePictureUrl }}" alt="{{ partner.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg object-cover">
             {% endif %}
             <h2 class="text-xl font-semibold mt-4 mb-2">
-              {{ partner.name }}
+              <span class="anchor">{{ partner.name }}</span>
               {% if partner.tier === 'BRONZE' %}
                 <span data-toggle="tooltip" title="Bronze Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
               {% elseif partner.tier === 'SILVER' %}
@@ -126,7 +126,7 @@ title: monday.com partners
             </p>
 
 
-            <div class="text-sm text-gray-500">
+            <div class="text-sm">
               {% if partner.rating and partner.rating > 0 %}
                 <span>
                   <span class="text-yellow-500">★</span>

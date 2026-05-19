@@ -59,7 +59,7 @@ title: Categories
         </div>
         <div class="p-4 border-t border-gray-100">
           <div class="flex items-center justify-between">
-            <span class="text-sm text-gray-600">
+            <span class="text-sm">
               {% set appCount = marketplace | filterByCategory(category.id) | length %}
               {{ appCount }} app{% if appCount != 1 %}s{% endif %}
             </span>

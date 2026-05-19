@@ -143,7 +143,7 @@ function renderStatusGrid(checks) {
                 ${cfg.label}
               </span>
             </div>
-            <div class="text-xs text-gray-600 mt-2">Healthy since: ${formatDateTime(check.last_updated)}</div>
+            <div class="text-xs mt-2">Healthy since: ${formatDateTime(check.last_updated)}</div>
           </div>
         `;
         })
@@ -151,7 +151,7 @@ function renderStatusGrid(checks) {
 
       return `
         <div class="mb-6">
-          <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">${groupName}</h3>
+          <h3 class="text-sm font-semibold uppercase tracking-wider mb-3">${groupName}</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">${cards}</div>
         </div>
       `;
@@ -193,12 +193,12 @@ function renderHistory(events) {
       const newCfg = statusConfig(event.new_status);
       return `
       <tr class="border-b border-gray-100 hover:bg-gray-50">
-        <td class="py-2 pr-4 text-xs text-gray-600 whitespace-nowrap">${formatDateTime(event.status_change_time)}</td>
+        <td class="py-2 pr-4 text-xs whitespace-nowrap">${formatDateTime(event.status_change_time)}</td>
         <td class="py-2 pr-4 text-sm text-gray-700">${event.service_display_name}</td>
         <td class="py-2 pr-4 text-sm text-gray-700">${event.healthcheck_display_name}</td>
         <td class="py-2 text-sm whitespace-nowrap">
           <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${prevCfg.badgeBg} ${prevCfg.badgeText}">${prevCfg.label}</span>
-          <span class="mx-1 text-gray-600">→</span>
+          <span class="mx-1">→</span>
           <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${newCfg.badgeBg} ${newCfg.badgeText}">${newCfg.label}</span>
         </td>
       </tr>
@@ -211,10 +211,10 @@ function renderHistory(events) {
       <table class="w-full text-sm">
         <thead>
           <tr class="border-b-2 border-gray-200">
-            <th class="text-left py-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Time</th>
-            <th class="text-left py-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Service</th>
-            <th class="text-left py-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Check</th>
-            <th class="text-left py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Status Change</th>
+            <th class="text-left py-2 pr-4 text-xs font-semibold uppercase tracking-wider">Time</th>
+            <th class="text-left py-2 pr-4 text-xs font-semibold uppercase tracking-wider">Service</th>
+            <th class="text-left py-2 pr-4 text-xs font-semibold uppercase tracking-wider">Check</th>
+            <th class="text-left py-2 text-xs font-semibold uppercase tracking-wider">Status Change</th>
           </tr>
         </thead>
         <tbody>${rows}</tbody>
