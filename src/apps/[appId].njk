@@ -138,7 +138,8 @@ eleventyComputed:
                   &nbsp;
                   <span class="whitespace-nowrap">{{ appInstalls | averageInstallsPerMonth(app.created_at)}} installs/month.</span>
                   &nbsp;
-                  <span class="whitespace-nowrap">Updated {{ app.app_live_version.updated_at | formatDate }}.</span>
+                  <span class="whitespace-nowrap">App updated {{ app.app_live_version.updated_at | formatDate }}.</span>
+                  <span class="whitespace-nowrap">Listing updated {{ app.updated_at | formatDate }}.</span>
                 </p>
               {% endif %}
 
