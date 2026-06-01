@@ -108,8 +108,7 @@
               </div>
             </div>
 
-
-            <div class="text-xs">Listing updated: {{ app.updated_at | formatDate }}</div>
+            <div class="text-xs mb-4">Listing updated: {{ app.updated_at | formatDate }}</div>
             <div class="flex flex-wrap gap-2 list-hidden">
               {% if app | isHostedOnMonday %}
                 <span title="App & logs hosted by monday.com" class="badge green">
@@ -143,12 +142,8 @@
                   No categories
                 </span>
               {% endif %}
-
-              <span class="text-xs">Listing updated: {{ app.updated_at | formatDate }}</span>
-
             </div>
-       </div>
-        
+         </div>
       </a>
 
 {% endmacro %}      
