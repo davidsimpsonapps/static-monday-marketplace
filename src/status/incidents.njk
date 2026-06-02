@@ -7,13 +7,13 @@ incidents:
   - start: 2026-06-02 11:02 UTC
     title: "Operation of the old automation builder is degraded"
     description: "<p>Existing automations are getting a null error for recipes that were working for a long time.</p>
-                  <p>It is not possible to create automations in the old automation builder whch use OAuth</p>
+                  <p>It is not possible to create automations in the old automation builder whch use OAuth.</p>
                   <p>Replicated in multiple accounts and reported to monday.com support (#4946128).</p>"
   - start: 2026-06-01 17:20 UTC
     title: "Retroactive breaking change to the <code>create_timeline_item</code> mutation"
-    descrption: "<p>At some time there has been an undocumented change to the <code>create_timeline_item</code> mutation. You used to be able to send a <code>timestamp</code> in and it would respect that timestamp as the <code>created_at</code>  time.</p>
+    description: "<p>At some time there has been an undocumented change to the <code>create_timeline_item</code> mutation. You used to be able to send a <code>timestamp</code> in and it would respect that timestamp as the <code>created_at</code>  time.</p>
                  <p>At some point, this has changed. Now the <code>timestamp</code> entry has been discarded, breaking my automation block. Now all new timeline items have the <code>created_at</code> timestamp of when the mutation was executed.</p>
-                 <p>Replicated in multiple accounts and reported to monday.com support (#4943281).</p>"
+                 <p>Replicated in multiple accounts and reported to monday.com support (#4943281). Also <a href="https://developer-community.monday.com/api-apps-framework-4/when-did-the-the-retroactive-breaking-change-to-the-create-timeline-item-mutation-happen-5286" target="_bkank">documented here</a>.</p>"
   - start: 2026-04-29 17:00 UTC
     end: 2026-05-04 13:16 UTC
     title: Access to the new automation builder has been removed
