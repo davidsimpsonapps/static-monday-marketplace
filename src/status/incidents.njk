@@ -84,7 +84,7 @@ incidents:
                 </span>
             {% endif %}
         </div>
-        <h3 class="font-semibold my-2">{{ incident.title }}</h3>
+        <h3 class="font-semibold my-2">{{ incident.title | safe }}</h3>
         <h4 class="incident-heading">Description</h4>
         <div>
             {{ incident.description | safe }}
