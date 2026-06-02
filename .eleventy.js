@@ -399,6 +399,35 @@ module.exports = async function (eleventyConfig) {
     },
   );
 
+  // Filter plans to only those with the highest version number.
+  // Plan IDs follow the pattern "{appId}-{versionId}-{planSlug}".
+  eleventyConfig.addFilter("latestVersionPlans", function (plans) {
+    if (!Array.isArray(plans) || plans.length === 0) return plans;
+    const maxVersion = Math.max(
+      ...plans.map((p) => parseInt((p.id || "").split("-")[1], 10) || 0),
+    );
+    return plans.filter(
+      (p) => parseInt((p.id || "").split("-")[1], 10) === maxVersion,
+    );
+  });
+
+  // Filter reviews to only APPROVED ones, safe for schema output.
+  eleventyConfig.addFilter("approvedReviews", function (reviews) {
+    if (!Array.isArray(reviews)) return [];
+    return reviews.filter((r) => r.moderationStatus === "APPROVED");
+  });
+
+  // Extract the 4-digit year from an ISO date string.
+  eleventyConfig.addFilter("yearFromDate", function (dateStr) {
+    if (!dateStr) return "";
+    return new Date(dateStr).getFullYear().toString();
+  });
+
+  // URL-encode a string (e.g. for sameAs URLs with spaces).
+  eleventyConfig.addFilter("urlencode", function (str) {
+    return encodeURIComponent(str || "");
+  });
+
   // Add custom filter to concatenate arrays
   eleventyConfig.addFilter("concat", function (array, value) {
     return array.concat(value);

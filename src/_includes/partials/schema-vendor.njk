@@ -1,0 +1,46 @@
+{% if vendor %}
+  {% set _origin = site.origin if (site and site.origin) else '' %}
+  {% set _vendorUrl = _origin ~ '/vendors/' ~ vendor.id ~ '/' %}
+  {% set _marketplaceUrl = 'https://monday.com/marketplace/partner/' ~ vendor.id ~ '/' ~ (vendor.name | urlencode) %}
+
+  {% set _sameAs = [] %}
+  {% if vendor.website %}{% set _sameAs = _sameAs | concat([vendor.website]) %}{% endif %}
+  {% set _sameAs = _sameAs | concat([_marketplaceUrl]) %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": {{ (_vendorUrl ~ '#organization') | dump | safe }},
+        "name": {{ (vendor.name or '') | dump | safe }},
+        "url": {{ (vendor.website or _vendorUrl) | dump | safe }},
+        {% if vendor.logo_url %}"logo": {{ vendor.logo_url | dump | safe }},{% endif %}
+        {% if vendor.email %}"email": {{ vendor.email | dump | safe }},{% endif %}
+        {% if vendor.created_at %}"foundingDate": {{ vendor.created_at | yearFromDate | dump | safe }},{% endif %}
+        {% if vendor.ratings and vendor.ratings.count > 0 %}
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "{{ vendor.ratings.rating }}",
+          "reviewCount": {{ vendor.ratings.count }},
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        {% endif %}
+        "sameAs": [
+          {% for url in _sameAs %}{{ url | dump | safe }}{% if not loop.last %},{% endif %}{% endfor %}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home",    "item": {{ _origin | dump | safe }}},
+          {"@type": "ListItem", "position": 2, "name": "Vendors", "item": {{ (_origin ~ '/vendors/') | dump | safe }}},
+          {"@type": "ListItem", "position": 3, "name": {{ (vendor.name or '') | dump | safe }}, "item": {{ _vendorUrl | dump | safe }}}
+        ]
+      }
+    ]
+  }
+  </script>
+{% endif %}

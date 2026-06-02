@@ -1,0 +1,61 @@
+{% if partner %}
+  {% set _origin = site.origin if (site and site.origin) else '' %}
+  {% set _partnerUrl = _origin ~ '/partners/' ~ partner.slug ~ '/' %}
+
+  {# Exclude placeholder/empty URLs #}
+  {% set _hasRealWebsite = partner.websiteUrl and 'example.com' not in partner.websiteUrl and partner.websiteUrl | trim %}
+  {% set _sameAs = [] %}
+  {% if _hasRealWebsite %}{% set _sameAs = _sameAs | concat([partner.websiteUrl]) %}{% endif %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": {{ (_partnerUrl ~ '#organization') | dump | safe }},
+        "name": {{ (partner.name or '') | dump | safe }},
+        "description": {{ (partner.shortIntro or partner.shortDescription or '') | dump | safe }},
+        {% if _hasRealWebsite %}"url": {{ partner.websiteUrl | dump | safe }},{% endif %}
+        {% if partner.logoUrl %}"logo": {{ partner.logoUrl | dump | safe }},{% endif %}
+        {% if partner.profilePictureUrl %}"image": {{ partner.profilePictureUrl | dump | safe }},{% endif %}
+        {% if partner.foundedYear %}"foundingDate": {{ partner.foundedYear | string | dump | safe }},{% endif %}
+        {% if partner.countryCode %}
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": {{ partner.countryCode | dump | safe }}
+        },
+        {% endif %}
+        {% if partner.supportedCountryCodes and partner.supportedCountryCodes.length > 0 %}
+        "areaServed": [
+          {% for code in partner.supportedCountryCodes %}{{ code | dump | safe }}{% if not loop.last %},{% endif %}{% endfor %}
+        ],
+        {% endif %}
+        {% if partner.languages and partner.languages.length > 0 %}
+        "knowsLanguage": [
+          {% for lang in partner.languages %}{{ lang | languageName | dump | safe }}{% if not loop.last %},{% endif %}{% endfor %}
+        ],
+        {% endif %}
+        {% if _sameAs.length > 0 %}
+        "sameAs": [
+          {% for url in _sameAs %}{{ url | dump | safe }}{% if not loop.last %},{% endif %}{% endfor %}
+        ],
+        {% endif %}
+        "memberOf": {
+          "@type": "Organization",
+          "name": "monday.com Partner Network",
+          "url": "https://monday.com/marketplace/partner"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home",     "item": {{ _origin | dump | safe }}},
+          {"@type": "ListItem", "position": 2, "name": "Partners", "item": {{ (_origin ~ '/partners/') | dump | safe }}},
+          {"@type": "ListItem", "position": 3, "name": {{ (partner.name or '') | dump | safe }}, "item": {{ _partnerUrl | dump | safe }}}
+        ]
+      }
+    ]
+  }
+  </script>
+{% endif %}

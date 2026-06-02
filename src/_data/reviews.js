@@ -1,16 +1,17 @@
-const fetch = require('node-fetch');
+const fetch = require("node-fetch");
 
-module.exports = async function() {
-
+module.exports = async function () {
   // return {};
   try {
     // Get all apps from the marketplace data
-    const response = await fetch('https://cdn.monday.com/public_marketplace_apps');
+    const response = await fetch(
+      "https://cdn.monday.com/public_marketplace_apps",
+    );
     const apps = await response.json();
-    
+
     // Create a map to store reviews for each app
     const reviewsMap = {};
-    
+
     // Fetch reviews for each app
     for (const app of apps.marketplace_apps) {
       try {
@@ -27,11 +28,11 @@ module.exports = async function() {
       }
     }
 
-    console.log(JSON.stringify(reviewsMap,null,2));
-    
+    console.log(JSON.stringify(reviewsMap, null, 2));
+
     return reviewsMap;
   } catch (error) {
-    console.error('Error fetching apps:', error);
+    console.error("Error fetching apps:", error);
     return {};
   }
-}; 
+};
