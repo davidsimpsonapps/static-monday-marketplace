@@ -5,12 +5,12 @@ description: "Current status and historical average response times for monday.co
 canonical: "/status/"
 incidents:
   - start: 2026-06-02 11:02 UTC
-    title: Automations saved in the old automation builder, are not correctly passing values
+    title: "Operation of the old automation builder is degraded"
     description: "<p>Existing automations are getting a null error for recipes that were working for a long time.</p>
                   <p>It is not possible to create automations in the old automation builder whch use OAuth</p>
                   <p>Replicated in multiple accounts and reported to monday.com support (#4946128).</p>"
   - start: 2026-06-01 17:20 UTC
-    title: Retroactive breaking change to the create_timeline_item mutation
+    title: "Retroactive breaking change to the <code>create_timeline_item</code> mutation"
     descrption: "<p>At some time there has been an undocumented change to the <code>create_timeline_item</code> mutation. You used to be able to send a <code>timestamp</code> in and it would respect that timestamp as the <code>created_at</code>  time.</p>
                  <p>At some point, this has changed. Now the <code>timestamp</code> entry has been discarded, breaking my automation block. Now all new timeline items have the <code>created_at</code> timestamp of when the mutation was executed.</p>
                  <p>Replicated in multiple accounts and reported to monday.com support (#4943281).</p>"
