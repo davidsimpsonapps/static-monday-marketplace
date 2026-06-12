@@ -52,38 +52,6 @@ description: "An aggregated history of installations for all apps from the monda
             </div>
         </div>
 
-        <div id="installation-notes">
-            <h4 class="font-semibold">Installation notes</h4>
-
-            <div class="note">
-                <h5>May 2026: two visible dips caused by <em>monday mcp</em></h5>
-                <p>
-                    Both the <strong>May 7–8</strong> dip and the <strong>May 18–19</strong> permanent drop are almost
-                    entirely attributable to a single app: <strong>
-                    <a target="_blank" href="https://monday.com/marketplace/listing/10000806/monday-mcp">monday mcp</a>
-                    </strong> (App ID 10401658), monday.com's
-                    own official Model Context Protocol integration.
-                </p>
-                <ul>
-                    <li>
-                        <strong>May 7→8 (−32,918 / recovered May 9):</strong> The app's install count fell to zero in
-                        the snapshot, then returned to normal the following day. No other app moved by more than −4.
-                        This appears to be a <strong>one-day data pipeline gap</strong> on monday.com's API — no real
-                        uninstalls occurred.
-                    </li>
-                    <li>
-                        <strong>May 18→19 (−35,825 / permanent):</strong> The app's 36,344 installs stopped being
-                        reported in the daily snapshot and have not returned. All other apps changed by ±1–2, which is
-                        normal daily churn. The app listing still exists in the marketplace. The most likely explanations
-                        are that monday.com changed how MCP connections are counted (no longer reported as app installs),
-                        or the listing was republished under a different ID.
-                    </li>
-                </ul>
-                <p>The underlying marketplace install growth continued at its normal rate throughout — the dips are
-                    artefacts of how this one app's count is surfaced in the API, not a real change in adoption.</p>
-            </div>
-        </div>
-        
 
         {% set days = [1,7,30,90,180] %}
         {% for day in days %}
