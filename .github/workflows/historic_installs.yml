@@ -285,6 +285,80 @@ jobs:
             fi
           done
 
+      - name: Fetch AI connector install data
+        run: |
+          curl -s "https://monday.com/bigbrain-data-api/feature/dynamic/external/public/cross-tenant?featureName=marketplace_ai_connectors_usage&version=&startTime=&endTime=&filters=%7B%22identifier%22%3A%2210%22%7D&metrics=%5B%5D" > ai_connectors.json
+
+      - name: Process and store AI connector install data
+        run: |
+          mkdir -p src/_data/json/installs/ai-connectors
+
+          # Use sys_last_refresh date (UTC) from the API response
+          data_date=$(jq -r '.data[0].sys_last_refresh' ai_connectors.json | cut -c1-10)
+          # Fall back to today if missing
+          current_date=${data_date:-$(date +'%Y-%m-%d')}
+
+          # Hardcoded mapping: internal app_id -> marketplace id and name
+          declare -A MARKETPLACE_ID
+          MARKETPLACE_ID[10401658]=10000806
+          MARKETPLACE_ID[10913702]=10001076
+          MARKETPLACE_ID[10924490]=10001080
+          MARKETPLACE_ID[10924498]=10001081
+          MARKETPLACE_ID[10924537]=10001082
+          MARKETPLACE_ID[10929474]=10001083
+          MARKETPLACE_ID[10929596]=10001084
+          MARKETPLACE_ID[10929609]=10001085
+          MARKETPLACE_ID[11094326]=10001133
+
+          declare -A APP_NAME
+          APP_NAME[10401658]="monday mcp"
+          APP_NAME[10913702]="Microsoft 365 Copilot"
+          APP_NAME[10924490]="ChatGPT"
+          APP_NAME[10924498]="Claude"
+          APP_NAME[10924537]="Cursor"
+          APP_NAME[10929474]="Gemini CLI"
+          APP_NAME[10929596]="Figma Make"
+          APP_NAME[10929609]="Le Chat"
+          APP_NAME[11094326]="Perplexity"
+
+          jq -r '.data[0].data | to_entries[] | "\(.key) \(.value)"' ai_connectors.json | while read app_id count; do
+            marketplace_id=${MARKETPLACE_ID[$app_id]}
+            app_name=${APP_NAME[$app_id]}
+
+            if [ -z "$marketplace_id" ]; then
+              echo "Unknown app_id $app_id — skipping"
+              continue
+            fi
+
+            output_file="src/_data/json/installs/ai-connectors/${marketplace_id}.json"
+
+            if [ -f "$output_file" ]; then
+              # Replace entry for this date if it exists, otherwise append
+              existing=$(jq --arg date "$current_date" '[.history[] | select(.date == $date)] | length' "$output_file")
+              if [ "$existing" -gt 0 ]; then
+                jq \
+                  --arg date "$current_date" \
+                  --arg count "$count" \
+                  '(.history[] | select(.date == $date) | .count) |= $count' \
+                  "$output_file" > tmp.json && mv tmp.json "$output_file"
+              else
+                jq \
+                  --arg date "$current_date" \
+                  --arg count "$count" \
+                  '.history += [{"date": $date, "count": $count}]' \
+                  "$output_file" > tmp.json && mv tmp.json "$output_file"
+              fi
+            else
+              jq -n \
+                --argjson appId "$marketplace_id" \
+                --arg name "$app_name" \
+                --arg date "$current_date" \
+                --arg count "$count" \
+                '{appId: $appId, name: $name, history: [{"date": $date, "count": $count}]}' \
+                > "$output_file"
+            fi
+          done
+
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
