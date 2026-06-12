@@ -93,6 +93,12 @@ module.exports = async function (eleventyConfig) {
     return Math.floor((now - start) / (1000 * 60 * 60 * 24));
   });
 
+  eleventyConfig.addFilter("daysBetween", function (startString, endString) {
+    const start = new Date(startString);
+    const end = new Date(endString);
+    return Math.floor((end - start) / (1000 * 60 * 60 * 24));
+  });
+
   // cache-busting timestamp filter e.g. '2025-06-24T21:12'
   // should be enough so that every build is cachebusted
   eleventyConfig.addFilter("cacheBusterTimestamp", function () {
