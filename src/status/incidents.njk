@@ -2,13 +2,25 @@
 layout: base.njk
 title: "monday.com service status • Incident history"
 description: "Current status and historical average response times for monday.com infrastructure endpoints."
-canonical: "/status/"
+canonical: "/status/incidents/"
 incidents:
+  - start: 2026-06-10 08:11 UTC
+    title: "Automation blocks with missing crednetials"
+    description: "<p>The credetials feature is not working the exact problem is detailed here:</p>
+                  <p><a href="https://monday-help.dsapps.dev/microsoft-365-office-embedded/missing-credentials">
+                  monday-help.dsapps.dev/microsoft-365-office-embedded/missing-credentials
+                  </a></p>
+                  <p>Replicated in multiple accounts (including customers) and reported to monday.com support June 12, 2026.</p>"
   - start: 2026-06-02 11:02 UTC
     title: "Operation of the old automation builder is degraded"
     description: "<p>Existing automations are getting a null error for recipes that were working for a long time.</p>
                   <p>It is not possible to create automations in the old automation builder whch use OAuth.</p>
-                  <p>Replicated in multiple accounts and reported to monday.com support (#4946128).</p>"
+                  <p>Replicated in multiple accounts (including customers) and reported to monday.com support (#4946128).</p>"
+  - start: 2026-03-06 06:04 UTC
+    title: "Credentials empty in app integration templates"
+    description: "<p>The credentials block is not saving the credentials, when created from an App Integration Template. Logs also show no credentials are sent. It only works via the 'Create Automation' button. Preset templates are not able to save the credentials.</p>
+                  <p>Replicated in multiple accounts (including customers) and reported to monday.com support on March 17, 2026 (#4722079).</p>"
+
   - start: 2026-06-01 17:20 UTC
     end: 2026-06-03 14:00 UTC
     title: "Retroactive breaking change to the <code>create_timeline_item</code> mutation"
