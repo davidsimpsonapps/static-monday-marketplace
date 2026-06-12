@@ -7,10 +7,10 @@ incidents:
   - start: 2026-06-10 08:11 UTC
     title: "Automation blocks with missing crednetials"
     description: "<p>The credetials feature is not working the exact problem is detailed here:</p>
-                  <p><a href="https://monday-help.dsapps.dev/microsoft-365-office-embedded/missing-credentials">
+                  <p><a target='_blank' href='https://monday-help.dsapps.dev/microsoft-365-office-embedded/missing-credentials'>
                   monday-help.dsapps.dev/microsoft-365-office-embedded/missing-credentials
                   </a></p>
-                  <p>Replicated in multiple accounts (including customers) and reported to monday.com support June 12, 2026.</p>"
+                  <p>Replicated in multiple accounts (including customers) and reported to monday.com support June 12, 2026 (#4972815, #4972816, #4972818, #4972819, #4972820, #4972821).</p>"
   - start: 2026-06-02 11:02 UTC
     title: "Operation of the old automation builder is degraded"
     description: "<p>Existing automations are getting a null error for recipes that were working for a long time.</p>
@@ -68,9 +68,12 @@ incidents:
 
 <h1 class="text-lg md:text-2xl font-semibold mb-4">monday.com service status</h1>
 
+{% set ongoingCount = 0 %}
+{% for incident in incidents %}{% if not incident.end %}{% set ongoingCount = ongoingCount + 1 %}{% endif %}{% endfor %}
+
 <nav class="tabs">
   <a data-match="exact" href="/status/">Service status</a>
-  <a data-match="include" href="/status/incidents/">Incidents</a>
+  <a data-match="include" href="/status/incidents/">Incidents <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">{{ ongoingCount }}</span></a>
   <a data-match="include" href="/status/infrastructure/">Infrastructure</a>
 </nav>
 
@@ -94,7 +97,7 @@ incidents:
                 </span>
             {% else %}
                 <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                    Ongoing
+                    Ongoing • {{ incident.start | daysSince }} days
                 </span>
             {% endif %}
         </div>

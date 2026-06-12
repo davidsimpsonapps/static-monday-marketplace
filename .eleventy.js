@@ -87,6 +87,12 @@ module.exports = async function (eleventyConfig) {
         </svg>`;
   });
 
+  eleventyConfig.addFilter("daysSince", function (dateString) {
+    const start = new Date(dateString);
+    const now = new Date();
+    return Math.floor((now - start) / (1000 * 60 * 60 * 24));
+  });
+
   // cache-busting timestamp filter e.g. '2025-06-24T21:12'
   // should be enough so that every build is cachebusted
   eleventyConfig.addFilter("cacheBusterTimestamp", function () {
