@@ -42,8 +42,7 @@ async function main() {
   const entry = json.data?.[0];
   if (!entry) throw new Error('Unexpected API response shape');
 
-  // Use the refresh date (UTC) as today's date key
-  const date = entry.sys_last_refresh.slice(0, 10);
+  const date = new Date().toISOString().slice(0, 10);
   const counts = entry.data;
 
   console.log(`Data date: ${date}`);

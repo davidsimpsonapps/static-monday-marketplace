@@ -291,12 +291,12 @@ jobs:
 
       - name: Process and store AI connector install data
         run: |
-          mkdir -p src/_data/json/installs/ai-connectors
+          mkdir -p src/_data/json/installs/ai-connectors/historical
 
-          # Use sys_last_refresh date (UTC) from the API response
-          data_date=$(jq -r '.data[0].sys_last_refresh' ai_connectors.json | cut -c1-10)
-          # Fall back to today if missing
-          current_date=${data_date:-$(date +'%Y-%m-%d')}
+          current_date=$(date +'%Y-%m-%d')
+
+          # Save raw daily snapshot
+          cp ai_connectors.json "src/_data/json/installs/ai-connectors/historical/${current_date}.json"
 
           # Hardcoded mapping: internal app_id -> marketplace id and name
           declare -A MARKETPLACE_ID
