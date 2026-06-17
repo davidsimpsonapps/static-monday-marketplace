@@ -30,7 +30,7 @@ incidents:
     resolution: "<p><b>Message from monday.com (June 17):</b>Our engineering team has now completed their investigation and I can give you a clear answer on what happened.</p> 
                   <p><b>What happened:</b></p>
                   <p>On 1 June 2026, a bug in that new code path caused the <pre>timestamp</pre> argument passed to <pre>create_timeline_item</pre> to be ignored when setting the display date on the timeline item. Instead of using the historical email date you provided, the system used the moment the API call was made. The value was received correctly by our servers, it was discarded by the new code path before being written to the record.</p> 
-                  <p><b>Why it appeared to "fix itself":</b></p>
+                  <p><b>Why it appeared to \"fix itself\":</b></p>
                   <p>Our engineering team identified and deployed a fix on 3 June 2026. This is why items imported before that date show incorrect dates, while items imported after 3 June should correctly reflect the timestamp value you passed.</p>"
   - start: 2026-04-29 17:00 UTC
     end: 2026-05-04 13:16 UTC
