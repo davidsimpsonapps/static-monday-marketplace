@@ -16,10 +16,11 @@ module.exports = async function () {
     for (const app of apps.marketplace_apps) {
       try {
         const url = `https://marketplace-ms.monday.com/marketplace_ms/public/app_reviews/${app.app_id}?sortBy=MOST_RECENT&limit=50`;
+        //.          https://marketplace-ms.monday.com/marketplace_ms/public/app_reviews/10029356?sortBy=MOST_RECENT&limit=50
         console.log(`Getting reviews for: ${app.name} / ${app.app_id}: `, url);
         const reviewsResponse = await fetch(url);
         const reviewsData = await reviewsResponse.json();
-        if (reviewsData.reviews) {
+        if (reviewsData?.reviews) {
           reviewsMap[app.app_id] = reviewsData.reviews;
         }
       } catch (error) {
