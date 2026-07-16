@@ -46,19 +46,21 @@ eleventyComputed:
       <a data-match="include" href="/apps/archive/">Archive</a>
     </nav>
 
-    <p class="text-sm">Apps whose weekly install rate doubled or halved, comparing installs gained in the last
-    7 days against installs gained in the 7 days before that. This is about the rate of change, not the total
+    <p>Apps whose weekly install rate doubled or halved, comparing installs gained in the last
+    7 days against installs gained in the 7 days before that.</p>
+    <p>This is about the rate of change, not the total
     install count, so it catches a large app suddenly accelerating (or stalling back out) just as well as a
-    small app doubling in size. Only changes where the larger side of the comparison is at least
+    small app doubling in size.</p>
+    <p>Only changes where the larger side of the comparison is at least
     {{ 100 | numberFormat }} installs are shown, to keep tiny apps from flooding the list with meaningless swings.</p>
 
-    <p class="text-xs">This data is refreshed daily sometime between 00:00 and 03:00 UTC, alongside the
+    <p class="text-sm">This data is refreshed daily sometime between 00:00 and 03:00 UTC, alongside the
     <a href="/installs/">install history</a>.</p>
 
     {% if pagination.pageNumber == 0 %}
       {% if anomalies.latest.length > 0 %}
-        <div class="chart-container">
-          <h4 class="font-semibold">New today ({{ anomalies.latestBuildDate | formatDate }})</h4>
+        <div>
+          <h2 class="text-lg md:text-2xl mt-6 font-semibold">New today ({{ anomalies.latestBuildDate | formatDate }})</h2>
           <p class="text-xs">Anomalies first detected in today's build.</p>
           <ul class="flex flex-col gap-2 mt-2">
             {% for episode in anomalies.latest %}
@@ -73,7 +75,7 @@ eleventyComputed:
     {% endif %}
 
     <div class="chart-container">
-      <h4 class="font-semibold">All anomalies</h4>
+      <h2 class="text-lg md:text-2xl mt-0 font-semibold">All anomalies</h2>
       <p class="text-xs">Every detected jump or drop since we started collecting data, most recent first.</p>
 
       {% if episodes.length > 0 %}

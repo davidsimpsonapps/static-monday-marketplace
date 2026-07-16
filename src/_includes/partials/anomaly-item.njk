@@ -14,7 +14,7 @@
     {% else %}
       <span class="font-semibold">{{ episode.name or "Unknown app (" + episode.app_id + ")" }}</span>
     {% endif %}
-    {% if vendor %}<span class="text-gray-600 text-xs">by {{ vendor.name }}</span>{% endif %}
+    {% if vendor %}<span class="text-gray-600 text-xs"> by {{ vendor.name }} </span>{% endif %}
 
     <div class="text-xs text-gray-600">
       {{ episode.beforeWeeklyInstalls | numberFormat }} &rarr; {{ episode.afterWeeklyInstalls | numberFormat }} installs/week
