@@ -12,7 +12,7 @@
     {% include "partials/schema-partner.njk" %}
   {% endif %}
 </head>
-<body class="min-h-screen bg-white scroll-p-[24rem]">
+<body class="min-h-screen bg-white scroll-p-[24rem] flex flex-col">
   <div class="text-center bg-blue-600 text-xs p-2">
     <a class="text-white hover:text-white hover:opacity-80" target="_blank" href="https://monday.com/marketplace/listing/10000076/microsoft-365-sharepoint-automate-embed">
       Make monday.com work 
@@ -66,14 +66,23 @@
     </header>
   </div>
  
-  <main class="xl:container mx-auto px-4 py-8">
+  <main class="xl:container mx-auto px-4 py-8 flex-1">
     {{ content | safe }}
   </main>
 
-  <footer class="xl:container mx-auto px-4 py-8 mt-8 py-8 border-t-2">
+  <footer class="xl:container mx-auto px-4 py-8 mt-8 py-8 border-t-2  md:pb-20">
     &copy; <a href="https://www.dsapps.dev/" class="underline hover:text-blue-500">David Simpson Apps</a>. All rights reserved.
     <a class="underline hover:text-blue-500" href="/utc/">UTC</a>.
+    <br>
+    <a class="underline hover:text-blue-500" href="https://forms.monday.com/forms/f6ec658a2c23afc1052d908972edf24b?r=use1" target="_blank" rel="noopener">Are you a marketplace vendor? Join our Slack workspace to get updates about this website.</a>
   </footer>
+
+  <div class="hidden md:block fixed bottom-0 left-0 w-full bg-pink-100 p-2 z-50 text-center text-xs">
+    Are you a monday.com marketplace vendor?
+    <a class="underline hover:opacity-80" href="https://forms.monday.com/forms/f6ec658a2c23afc1052d908972edf24b?r=use1" target="_blank" rel="noopener">
+      Join our private Slack workspace to get updates about this website.
+    </a>
+  </div>
 
   {% include "partials/scroll-to-top.njk" %}
   
