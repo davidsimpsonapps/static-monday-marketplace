@@ -12,6 +12,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
       - name: Fetch full marketplace data
         run: |
           curl -s "https://cdn.monday.com/public_marketplace_apps" > marketplace.json
@@ -358,6 +363,9 @@ jobs:
                 > "$output_file"
             fi
           done
+
+      - name: Detect install anomalies
+        run: node scripts/update-anomalies.js
 
       - name: Commit and push changes
         run: |

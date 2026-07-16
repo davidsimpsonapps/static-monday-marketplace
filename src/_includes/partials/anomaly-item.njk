@@ -1,0 +1,37 @@
+{% set vendor = vendors | findVendorById(episode.vendorId) %}
+<li class="flex items-center gap-3 p-2 rounded border border-gray-100">
+  {% if episode.logoUrl %}
+    <img src="{{ episode.logoUrl }}" alt="{{ episode.name }} logo" class="w-8 h-8 rounded shrink-0">
+  {% else %}
+    <div class="w-8 h-8 rounded bg-gray-100 shrink-0"></div>
+  {% endif %}
+
+  <div class="flex-1 min-w-0">
+    {% if episode.id %}
+      <a href="/apps/{{ episode.id }}/#installs-7d" class="font-semibold hover:underline">
+        {{ episode.name }}
+      </a>
+    {% else %}
+      <span class="font-semibold">{{ episode.name or "Unknown app (" + episode.app_id + ")" }}</span>
+    {% endif %}
+    {% if vendor %}<span class="text-gray-600 text-xs">by {{ vendor.name }}</span>{% endif %}
+
+    <div class="text-xs text-gray-600">
+      {{ episode.beforeWeeklyInstalls | numberFormat }} &rarr; {{ episode.afterWeeklyInstalls | numberFormat }} installs/week
+      between {{ episode.startDate | formatDate }} and {{ episode.endDate | formatDate }}
+      {% if episode.ongoing %}<span class="italic">(ongoing)</span>{% endif %}
+    </div>
+  </div>
+
+  {% if episode.id %}
+    <a href="/apps/{{ episode.id }}/#installs-7d"
+      class="badge shrink-0 {% if episode.direction == 'jump' %}green{% else %}bg-red-100 text-red-800{% endif %}"
+      data-toggle="tooltip" title="View this app's install history" data-placement="top">
+      {% if episode.direction == 'jump' %}&#9650;{% else %}&#9660;{% endif %} {{ episode.rateLabel }}
+    </a>
+  {% else %}
+    <span class="badge shrink-0 {% if episode.direction == 'jump' %}green{% else %}bg-red-100 text-red-800{% endif %}">
+      {% if episode.direction == 'jump' %}&#9650;{% else %}&#9660;{% endif %} {{ episode.rateLabel }}
+    </span>
+  {% endif %}
+</li>

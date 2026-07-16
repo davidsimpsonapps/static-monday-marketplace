@@ -1,0 +1,108 @@
+---
+layout: base.njk
+title: Anomalies • Unusual install changes on the monday.com marketplace
+description: "Apps whose installs have doubled or halved within a week on the monday.com marketplace."
+pagination:
+  data: anomalies.episodes
+  size: 40
+  alias: episodes
+  addAllPagesToCollections: true
+permalink: "/anomalies/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  canonical: "/anomalies/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+  <div class="breadcrumb">
+    <span>
+      <a href="/" title="Home">
+        <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="breadcrumbIcon_d94850cf8c"><path d="M9.56992 2.1408C9.82591 1.95307 10.1741 1.95307 10.4301 2.1408L17.7028 7.47413C17.8896 7.61113 18 7.82894 18 8.06061V16.7879C18 17.1895 17.6744 17.5152 17.2727 17.5152H11.9394C11.5377 17.5152 11.2121 17.1895 11.2121 16.7879V13.1515H8.78788V16.7879C8.78788 17.1895 8.46227 17.5152 8.06061 17.5152H2.72727C2.32561 17.5152 2 17.1895 2 16.7879V8.06061C2 7.82894 2.11037 7.61113 2.29719 7.47413L9.56992 2.1408ZM3.45455 8.42914V16.0606H7.33333V12.4242C7.33333 12.0226 7.65894 11.697 8.06061 11.697H11.9394C12.3411 11.697 12.6667 12.0226 12.6667 12.4242V16.0606H16.5455V8.42914L10 3.62914L3.45455 8.42914Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+      </a>
+    </span>
+    <span>
+      <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="separatorIcon_3a648a2555" aria-hidden="true"><path d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303L13 10L13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </span>
+    <span>
+      <a href="/anomalies/">
+        Anomalies
+      </a>
+    </span>
+  </div>
+
+  <div>
+    <div class="flex gap-3 mb-2 items-center justify-between">
+        <div class="flex gap-3 items-center">
+            <h1 class="text-lg sm:text-2xl font-semibold mt-0 mb-4">
+              Anomalies • unusual install changes
+            </h1>
+        </div>
+    </div>
+
+    <nav class="tabs">
+      <a data-match="exact" href="/">Listings</a>
+      <a data-match="include" href="/categories/">Categories</a>
+      <a data-match="exact" href="/top-ranking/">Top ranking</a>
+      <a data-match="exact" href="/installs/">Installs</a>
+      <a data-match="include" href="/anomalies/">Anomalies</a>
+      <a data-match="include" href="/apps/archive/">Archive</a>
+    </nav>
+
+    <p class="text-sm">Apps whose weekly install rate doubled or halved, comparing installs gained in the last
+    7 days against installs gained in the 7 days before that. This is about the rate of change, not the total
+    install count, so it catches a large app suddenly accelerating (or stalling back out) just as well as a
+    small app doubling in size. Only changes where the larger side of the comparison is at least
+    {{ 100 | numberFormat }} installs are shown, to keep tiny apps from flooding the list with meaningless swings.</p>
+
+    <p class="text-xs">This data is refreshed daily sometime between 00:00 and 03:00 UTC, alongside the
+    <a href="/installs/">install history</a>.</p>
+
+    {% if pagination.pageNumber == 0 %}
+      {% if anomalies.latest.length > 0 %}
+        <div class="chart-container">
+          <h4 class="font-semibold">New today ({{ anomalies.latestBuildDate | formatDate }})</h4>
+          <p class="text-xs">Anomalies first detected in today's build.</p>
+          <ul class="flex flex-col gap-2 mt-2">
+            {% for episode in anomalies.latest %}
+              {% include "partials/anomaly-item.njk" %}
+            {% endfor %}
+          </ul>
+        </div>
+        <hr class="my-8">
+      {% else %}
+        <p class="text-xs italic">No new anomalies detected in today's build.</p>
+      {% endif %}
+    {% endif %}
+
+    <div class="chart-container">
+      <h4 class="font-semibold">All anomalies</h4>
+      <p class="text-xs">Every detected jump or drop since we started collecting data, most recent first.</p>
+
+      {% if episodes.length > 0 %}
+        <ul class="flex flex-col gap-2 mt-2">
+          {% for episode in episodes %}
+            {% include "partials/anomaly-item.njk" %}
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="text-xs italic">No anomalies found.</p>
+      {% endif %}
+    </div>
+
+    {% if pagination.pages.length > 1 %}
+      <nav class="flex items-center justify-between mt-8 text-sm">
+        <div>
+          {% if pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}" class="badge">&larr; Newer</a>
+          {% endif %}
+        </div>
+        <div class="text-gray-600">
+          Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}
+        </div>
+        <div>
+          {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}" class="badge">Older &rarr;</a>
+          {% endif %}
+        </div>
+      </nav>
+    {% endif %}
+
+  </div>
