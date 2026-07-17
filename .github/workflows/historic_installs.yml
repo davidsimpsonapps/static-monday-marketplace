@@ -367,6 +367,11 @@ jobs:
       - name: Detect install anomalies
         run: node scripts/update-anomalies.js
 
+      - name: Notify Slack of new anomalies
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: node scripts/notify-slack-anomalies.js
+
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"

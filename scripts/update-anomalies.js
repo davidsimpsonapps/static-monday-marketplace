@@ -20,9 +20,14 @@
 const fs = require("fs");
 const path = require("path");
 
+const { vendorBlockList } = require("../src/_data/data-filters");
+
 const INSTALLS_APPS_DIR = path.join(__dirname, "../src/_data/json/installs/apps");
 const ANOMALIES_FILE = path.join(__dirname, "../src/_data/json/installs/anomalies.json");
 const MARKETPLACE_FILE = path.join(__dirname, "../src/_data/json/marketplace/marketplace.json");
+// Not committed (see .gitignore) - read by scripts/notify-slack-anomalies.js
+// in the same workflow run, then discarded.
+const NEW_ANOMALIES_FILE = path.join(__dirname, "../new-anomalies.json");
 
 // The larger side of the this-week-vs-last-week comparison must be at least
 // this many installs for a change to count - filters out noise like an app
@@ -78,7 +83,11 @@ function loadAppMetaByAppId() {
   const metaByAppId = new Map();
 
   for (const app of raw.marketplace_apps || []) {
-    metaByAppId.set(app.app_id, { id: app.id, name: app.name });
+    metaByAppId.set(app.app_id, {
+      id: app.id,
+      name: app.name,
+      blocked: vendorBlockList.includes(app.marketplace_developer_id),
+    });
   }
 
   return metaByAppId;
@@ -112,10 +121,11 @@ function main() {
     .filter((file) => /^\d+\.json$/.test(file));
 
   let latestDateAcrossAll = anomalies.processedThrough;
+  const newEpisodes = [];
 
   for (const file of files) {
     const appId = parseInt(file.replace(/\.json$/, ""), 10);
-    const meta = metaByAppId.get(appId) || { id: null, name: null };
+    const meta = metaByAppId.get(appId) || { id: null, name: null, blocked: false };
 
     let data;
     try {
@@ -169,6 +179,7 @@ function main() {
           };
           appEpisodes.push(streak);
           episodesByApp.set(appId, appEpisodes);
+          if (!meta.blocked) newEpisodes.push(streak);
         }
       } else if (streak) {
         streak = null;
@@ -192,8 +203,9 @@ function main() {
   };
 
   fs.writeFileSync(ANOMALIES_FILE, JSON.stringify(output, null, 2) + "\n");
+  fs.writeFileSync(NEW_ANOMALIES_FILE, JSON.stringify(newEpisodes, null, 2) + "\n");
   console.log(
-    `Processed anomalies through ${latestDateAcrossAll}. Total episodes: ${episodes.length}.`,
+    `Processed anomalies through ${latestDateAcrossAll}. Total episodes: ${episodes.length}. New this run: ${newEpisodes.length}.`,
   );
 }
 

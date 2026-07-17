@@ -12,7 +12,8 @@
     "deploy": "npm run build && wrangler pages deploy _site --project-name=static-monday-marketplace",
     "ngrok": "ngrok http --domain=apps-for-monday.eu.ngrok.io 8080",
     "fetch:ai-connectors": "node scripts/fetch-ai-connectors.js",
-    "update:anomalies": "node scripts/update-anomalies.js"
+    "update:anomalies": "node scripts/update-anomalies.js",
+    "notify:anomalies": "node scripts/notify-slack-anomalies.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",

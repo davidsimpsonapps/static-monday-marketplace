@@ -12,6 +12,10 @@ node_modules/
 .env
 .env.local
 
+# Anomalies detected in the most recent run, consumed by
+# scripts/notify-slack-anomalies.js and not meant to be committed
+new-anomalies.json
+
 # OS files
 .DS_Store
 Thumbs.db
