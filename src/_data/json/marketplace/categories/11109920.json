@@ -112,6 +112,12 @@
     {
       "date": "2026-07-19",
       "marketplace_category_ids": []
+    },
+    {
+      "date": "2026-07-20",
+      "marketplace_category_ids": [
+        10000001
+      ]
     }
   ]
 }

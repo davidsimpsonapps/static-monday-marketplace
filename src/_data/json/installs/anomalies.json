@@ -1,7 +1,33 @@
 {
   "description": "Apps whose weekly install rate doubled or halved (installs gained this week vs installs gained the week before), where the larger side of the comparison is at least 100 installs.",
-  "processedThrough": "2026-07-19",
+  "processedThrough": "2026-07-20",
   "episodes": [
+    {
+      "id": 10000413,
+      "app_id": 10128544,
+      "name": "Triggerly - Unlimited QR code item tracking",
+      "direction": "jump",
+      "startDate": "2026-07-16",
+      "startCount": 1874,
+      "endDate": "2026-07-20",
+      "endCount": 2045,
+      "beforeWeeklyInstalls": 5,
+      "afterWeeklyInstalls": 251,
+      "ongoing": true
+    },
+    {
+      "id": 99,
+      "app_id": 28944,
+      "name": "VLOOKUP Auto-link item to multiple boards ",
+      "direction": "jump",
+      "startDate": "2026-07-13",
+      "startCount": 15371,
+      "endDate": "2026-07-20",
+      "endCount": 15594,
+      "beforeWeeklyInstalls": 9,
+      "afterWeeklyInstalls": 223,
+      "ongoing": true
+    },
     {
       "id": 10000190,
       "app_id": 10050849,
@@ -12,34 +38,7 @@
       "endDate": "2026-07-19",
       "endCount": 7653,
       "beforeWeeklyInstalls": 27,
-      "afterWeeklyInstalls": 174,
-      "ongoing": true
-    },
-    {
-      "id": 10000413,
-      "app_id": 10128544,
-      "name": "Triggerly - Unlimited QR code item tracking",
-      "direction": "jump",
-      "startDate": "2026-07-16",
-      "startCount": 1874,
-      "endDate": "2026-07-19",
-      "endCount": 1994,
-      "beforeWeeklyInstalls": 5,
-      "afterWeeklyInstalls": 241,
-      "ongoing": true
-    },
-    {
-      "id": 99,
-      "app_id": 28944,
-      "name": "VLOOKUP Auto-link item to multiple boards ",
-      "direction": "jump",
-      "startDate": "2026-07-13",
-      "startCount": 15371,
-      "endDate": "2026-07-19",
-      "endCount": 15593,
-      "beforeWeeklyInstalls": 9,
-      "afterWeeklyInstalls": 271,
-      "ongoing": true
+      "afterWeeklyInstalls": 174
     },
     {
       "id": 10000960,
