@@ -1,6 +1,6 @@
 {
   "description": "Apps whose weekly install rate doubled or halved (installs gained this week vs installs gained the week before), where the larger side of the comparison is at least 100 installs.",
-  "processedThrough": "2026-07-22",
+  "processedThrough": "2026-07-23",
   "episodes": [
     {
       "id": 10000413,
@@ -9,10 +9,23 @@
       "direction": "jump",
       "startDate": "2026-07-16",
       "startCount": 1874,
-      "endDate": "2026-07-22",
-      "endCount": 2151,
+      "endDate": "2026-07-23",
+      "endCount": 2191,
       "beforeWeeklyInstalls": 5,
-      "afterWeeklyInstalls": 314,
+      "afterWeeklyInstalls": 317,
+      "ongoing": true
+    },
+    {
+      "id": 99,
+      "app_id": 28944,
+      "name": "VLOOKUP Auto-link item to multiple boards ",
+      "direction": "drop",
+      "startDate": "2026-07-23",
+      "startCount": 15627,
+      "endDate": "2026-07-23",
+      "endCount": 15627,
+      "beforeWeeklyInstalls": 274,
+      "afterWeeklyInstalls": 63,
       "ongoing": true
     },
     {
