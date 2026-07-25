@@ -60,8 +60,8 @@ eleventyComputed:
     {% if pagination.pageNumber == 0 %}
       {% if anomalies.latest.length > 0 %}
         <div>
-          <h2 class="text-lg md:text-2xl mt-6 font-semibold">New today ({{ anomalies.latestBuildDate | formatDate }})</h2>
-          <p class="text-xs">Anomalies first detected in today's build.</p>
+          <h2 class="text-lg md:text-2xl mt-6 font-semibold">Current anomalies • {{ anomalies.latestBuildDate | formatDate }}</h2>
+          <p class="text-xs">Anomalies detected in today's build.</p>
           <ul class="flex flex-col gap-2 mt-2">
             {% for episode in anomalies.latest %}
               {% include "partials/anomaly-item.njk" %}
