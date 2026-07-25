@@ -489,6 +489,11 @@ module.exports = async function (eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/_data/json");
+  // Daily archive snapshots (marketplace/installs/ratings/trending history)
+  // live outside _data so Eleventy's data cascade doesn't parse every one of
+  // them into memory on every build - they're passthrough-only, never read
+  // as template data. Mapped back onto the same output path as before.
+  eleventyConfig.addPassthroughCopy({ "src/archive/json": "_data/json" });
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/json");
@@ -497,6 +502,7 @@ module.exports = async function (eleventyConfig) {
   // Watch for changes in these folders
   eleventyConfig.addWatchTarget("src/css");
   eleventyConfig.addWatchTarget("src/_data/json");
+  eleventyConfig.addWatchTarget("src/archive/json");
   eleventyConfig.addWatchTarget("src/images");
   eleventyConfig.addWatchTarget("src/js");
   eleventyConfig.addWatchTarget("src/json");

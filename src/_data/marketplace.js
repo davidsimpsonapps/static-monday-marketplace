@@ -21,10 +21,10 @@ function getHistoricalInstalls() {
     const oneYearAgo    = new Date(today); oneYearAgo.setDate(today.getDate() - 365);
 
     const allInstallsToday        = require('./json/installs/apps/installs.json');
-    const allInstallsSevenDaysAgo = require(`./json/installs/apps/historical/${formatDate(sevenDaysAgo)}.json`);
-    const allInstallsThirtyAgo    = require(`./json/installs/apps/historical/${formatDate(thirtyDaysAgo)}.json`);
-    const allInstallsNinetyAgo    = require(`./json/installs/apps/historical/${formatDate(ninetyDaysAgo)}.json`);
-    // const allInstallsOneYearAgo   = require(`./json/installs/apps/historical/${formatDate(oneYearAgo)}.json`);
+    const allInstallsSevenDaysAgo = require(`../archive/json/installs/apps/historical/${formatDate(sevenDaysAgo)}.json`);
+    const allInstallsThirtyAgo    = require(`../archive/json/installs/apps/historical/${formatDate(thirtyDaysAgo)}.json`);
+    const allInstallsNinetyAgo    = require(`../archive/json/installs/apps/historical/${formatDate(ninetyDaysAgo)}.json`);
+    // const allInstallsOneYearAgo   = require(`../archive/json/installs/apps/historical/${formatDate(oneYearAgo)}.json`);
 
 
     return { allInstallsToday, allInstallsSevenDaysAgo, allInstallsThirtyAgo, allInstallsNinetyAgo, /*allInstallsOneYearAgo*/ };
