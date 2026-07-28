@@ -1,6 +1,6 @@
 {
   "description": "Apps whose weekly install rate doubled or halved (installs gained this week vs installs gained the week before), where the larger side of the comparison is at least 100 installs.",
-  "processedThrough": "2026-07-27",
+  "processedThrough": "2026-07-28",
   "episodes": [
     {
       "id": 99,
@@ -12,8 +12,7 @@
       "endDate": "2026-07-27",
       "endCount": 15664,
       "beforeWeeklyInstalls": 274,
-      "afterWeeklyInstalls": 70,
-      "ongoing": true
+      "afterWeeklyInstalls": 70
     },
     {
       "id": 10000413,
