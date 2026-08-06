@@ -1,7 +1,20 @@
 {
   "description": "Apps whose weekly install rate doubled or halved (installs gained this week vs installs gained the week before), where the larger side of the comparison is at least 100 installs.",
-  "processedThrough": "2026-08-05",
+  "processedThrough": "2026-08-06",
   "episodes": [
+    {
+      "id": 10000360,
+      "app_id": 10114143,
+      "name": "DocExport PDF Generator",
+      "direction": "jump",
+      "startDate": "2026-08-06",
+      "startCount": 9976,
+      "endDate": "2026-08-06",
+      "endCount": 9976,
+      "beforeWeeklyInstalls": 42,
+      "afterWeeklyInstalls": 101,
+      "ongoing": true
+    },
     {
       "id": 10000413,
       "app_id": 10128544,
