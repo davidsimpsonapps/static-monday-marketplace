@@ -16,6 +16,11 @@ node_modules/
 # scripts/notify-slack-anomalies.js and not meant to be committed
 new-anomalies.json
 
+# Marketplace additions/removals/archivals detected in the most recent run,
+# consumed by scripts/notify-slack-marketplace-changes.js and not meant to be
+# committed
+new-marketplace-changes.json
+
 # OS files
 .DS_Store
 Thumbs.db

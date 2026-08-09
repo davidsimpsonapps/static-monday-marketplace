@@ -13,7 +13,9 @@
     "ngrok": "ngrok http --domain=apps-for-monday.eu.ngrok.io 8080",
     "fetch:ai-connectors": "node scripts/fetch-ai-connectors.js",
     "update:anomalies": "node scripts/update-anomalies.js",
-    "notify:anomalies": "node scripts/notify-slack-anomalies.js"
+    "notify:anomalies": "node scripts/notify-slack-anomalies.js",
+    "update:marketplace-changes": "node scripts/update-marketplace-changes.js",
+    "notify:marketplace-changes": "node scripts/notify-slack-marketplace-changes.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",

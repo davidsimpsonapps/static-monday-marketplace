@@ -83,6 +83,14 @@ jobs:
             fi
           done
 
+      - name: Detect marketplace changes
+        run: node scripts/update-marketplace-changes.js
+
+      - name: Notify Slack of marketplace changes
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: node scripts/notify-slack-marketplace-changes.js
+
       - name: Fetch app install data
         run: |
           curl -s "https://monday-apps-ms.monday.com/apps_ms/public/app_analytics/app_installs" > installs.json

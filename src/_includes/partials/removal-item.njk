@@ -1,0 +1,28 @@
+<li class="flex items-center gap-3 p-2 rounded border border-gray-100">
+  {% if event.logoUrl %}
+    <img src="{{ event.logoUrl }}" alt="{{ event.name }} logo" class="w-8 h-8 rounded shrink-0">
+  {% else %}
+    <div class="w-8 h-8 rounded bg-gray-100 shrink-0"></div>
+  {% endif %}
+
+  <div class="flex-1 min-w-0">
+    {% if event.type == 'archived' %}
+      <a href="/apps/{{ event.id }}/" class="font-semibold hover:underline">
+        {{ event.name }}
+      </a>
+      {{ ' ' }}
+    {% else %}
+      <span class="font-semibold">{{ event.name or "Unknown app (" + event.app_id + ")" }}</span>
+    {% endif %}
+    {% if event.vendor %}<span class="text-gray-600 text-xs"> by {{ event.vendor.name }} </span>{% endif %}
+
+    <div class="text-xs text-gray-600">
+      {% if event.type == 'archived' %}Archived{% else %}Removed from the marketplace{% endif %}
+      on {{ event.date | formatDate }}
+    </div>
+  </div>
+
+  <span class="badge shrink-0 {% if event.type == 'archived' %}yellow{% else %}red{% endif %}">
+    {% if event.type == 'archived' %}Archived{% else %}Removed{% endif %}
+  </span>
+</li>
