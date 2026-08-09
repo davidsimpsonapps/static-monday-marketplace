@@ -11,10 +11,15 @@
   --title-font-family:
     Poppins, Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP,
     sans-serif;
+  --primary-background-color: #fff;
 }
 
 body {
   font-family: var(--font-family);
+}
+
+main {
+  @apply max-w-full;
 }
 
 h1,
@@ -436,12 +441,59 @@ li.toc-list-item {
 }
 
 nav.tabs {
-  @apply flex text-sm sm:text-base gap-2 sm:gap-4 mb-4 border-b border-gray-200 dark:border-gray-700;
+  @apply flex text-sm sm:text-base gap-2 sm:gap-4 mb-4 max-w-full overflow-x-auto border-b border-gray-200 dark:border-gray-700;
 }
 nav.tabs a {
-  @apply py-2 text-center;
+  @apply py-2 text-center whitespace-nowrap;
 }
 nav.tabs a.active,
 nav.tabs a.font-bold {
   @apply font-semibold border-b-2 border-brand-dark-blue;
+}
+
+/* CSS-only horizontal shadow-scrolling effect  */
+.horizontal-scrollbox,
+nav.tabs {
+  /* border: 1px solid rgba(128, 128, 128, 0.2); */
+  overflow: auto;
+
+  background:
+	/* Shadow covers */
+    linear-gradient(
+      90deg,
+      var(--primary-background-color) 30%,
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        var(--primary-background-color) 70%
+      )
+      100% 0,
+    /* Shadows */
+    radial-gradient(
+        50% 100% at left,
+        rgba(128, 128, 128, 0.3),
+        rgba(0, 0, 0, 0)
+      )
+      0 100%,
+    radial-gradient(
+        50% 100% at right,
+        rgba(128, 128, 128, 0.3),
+        rgba(0, 0, 0, 0)
+      )
+      100% 0;
+  background-repeat: no-repeat;
+  background-color: var(--primary-background-color);
+  background-size:
+    30px 100%,
+    30px 100%,
+    30px 100%,
+    30px 100%;
+
+  /* Opera doesn't support this in the shorthand */
+  background-attachment: local, local, scroll, scroll;
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+  scrollbar-width: thin;
+  border-radius: 5px;
 }
