@@ -12,11 +12,13 @@
 // are browsed. "Removed" means the id disappeared from the feed entirely.
 //
 // Removed and archived apps are persisted - together with their last known
-// full app JSON and their vendor's last known full JSON (from
+// full app JSON, their vendor's last known full JSON (from
 // src/archive/json/installs/vendors/historical/, the same day as the app
-// snapshot) - to src/_data/json/marketplace/removals.json, intended to back
-// a "removals" page. Keeping the vendor JSON alongside the app JSON means the
-// page doesn't depend on that vendor still existing in the live vendor feed.
+// snapshot), and the app's own last known install count (from
+// src/archive/json/installs/apps/historical/, same day) - to
+// src/_data/json/marketplace/removals.json, intended to back a "removals"
+// page. Keeping the vendor JSON alongside the app JSON means the page
+// doesn't depend on that vendor still existing in the live vendor feed.
 // Added apps are Slack-only; there's nothing to archive, the app just shows
 // up in marketplace.json going forward.
 //
@@ -34,6 +36,7 @@ const { vendorBlockList } = require("../src/_data/data-filters");
 
 const HISTORICAL_DIR = path.join(__dirname, "../src/archive/json/marketplace/historical");
 const VENDORS_HISTORICAL_DIR = path.join(__dirname, "../src/archive/json/installs/vendors/historical");
+const INSTALLS_HISTORICAL_DIR = path.join(__dirname, "../src/archive/json/installs/apps/historical");
 const REMOVALS_FILE = path.join(__dirname, "../src/_data/json/marketplace/removals.json");
 // Not committed (see .gitignore) - read by scripts/notify-slack-marketplace-changes.js
 // in the same workflow run, then discarded.
@@ -64,32 +67,58 @@ function loadVendorSnapshot(date) {
   return byId;
 }
 
+function loadInstallSnapshot(date) {
+  const filePath = path.join(INSTALLS_HISTORICAL_DIR, `${date}.json`);
+  const byAppId = new Map();
+  if (!fs.existsSync(filePath)) return byAppId;
+
+  const raw = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  for (const [appId, count] of Object.entries(raw)) {
+    byAppId.set(String(appId), Number(count));
+  }
+  return byAppId;
+}
+
+function getInstallCount(installsByAppId, appId) {
+  const count = installsByAppId.get(String(appId));
+  return count == null ? null : count;
+}
+
 function loadRemovalsFile() {
   if (fs.existsSync(REMOVALS_FILE)) {
     return JSON.parse(fs.readFileSync(REMOVALS_FILE, "utf-8"));
   }
   return {
     description:
-      "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
+      "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, the last known full JSON for its vendor, and the app's own last known install count (installs, null if no snapshot was available), from the day the change was detected (for removals, that's the day before it disappeared).",
     processedThrough: null,
     events: [],
   };
 }
 
-function buildEvent(type, id, app, vendor, date) {
+function buildEvent(type, id, app, vendor, date, installs) {
   return {
     id,
     app_id: app.app_id,
     name: app.name,
     type,
     date,
+    installs: installs ?? null,
     blocked: vendorBlockList.includes(app.marketplace_developer_id),
     app,
     vendor: vendor ?? null,
   };
 }
 
-function diffDay(previous, current, previousVendors, currentVendors, currentDate) {
+function diffDay(
+  previous,
+  current,
+  previousVendors,
+  currentVendors,
+  previousInstalls,
+  currentInstalls,
+  currentDate,
+) {
   const added = [];
   const removed = [];
   const archived = [];
@@ -106,14 +135,16 @@ function diffDay(previous, current, previousVendors, currentVendors, currentDate
       });
     } else if (hasCategories(prevApp) && !hasCategories(app)) {
       const vendor = currentVendors.get(app.marketplace_developer_id);
-      archived.push(buildEvent("archived", id, app, vendor, currentDate));
+      const installs = getInstallCount(currentInstalls, app.app_id);
+      archived.push(buildEvent("archived", id, app, vendor, currentDate, installs));
     }
   }
 
   for (const [id, app] of previous) {
     if (!current.has(id)) {
       const vendor = previousVendors.get(app.marketplace_developer_id);
-      removed.push(buildEvent("removed", id, app, vendor, currentDate));
+      const installs = getInstallCount(previousInstalls, app.app_id);
+      removed.push(buildEvent("removed", id, app, vendor, currentDate, installs));
     }
   }
 
@@ -145,11 +176,15 @@ function main() {
       const current = loadSnapshot(dates[i]);
       const previousVendors = loadVendorSnapshot(dates[i - 1]);
       const currentVendors = loadVendorSnapshot(dates[i]);
+      const previousInstalls = loadInstallSnapshot(dates[i - 1]);
+      const currentInstalls = loadInstallSnapshot(dates[i]);
       const { added, removed, archived } = diffDay(
         previous,
         current,
         previousVendors,
         currentVendors,
+        previousInstalls,
+        currentInstalls,
         dates[i],
       );
 

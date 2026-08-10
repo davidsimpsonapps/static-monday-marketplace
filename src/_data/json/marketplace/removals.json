@@ -8,6 +8,7 @@
       "name": "SitePulse",
       "type": "archived",
       "date": "2026-08-08",
+      "installs": 7,
       "app": {
         "id": 10001165,
         "marketplace_developer_id": 100000221,
@@ -234,6 +235,7 @@
       "name": "Google Sheets Automator",
       "type": "removed",
       "date": "2026-08-05",
+      "installs": 5641,
       "app": {
         "id": 10000613,
         "marketplace_developer_id": 10000253,
@@ -475,6 +477,7 @@
       "name": "MSTeamsDirect+",
       "type": "archived",
       "date": "2026-07-24",
+      "installs": 37,
       "app": {
         "id": 10001115,
         "marketplace_developer_id": 100000157,
@@ -1399,6 +1402,7 @@
       "name": "Docs to Sites by Sundae",
       "type": "archived",
       "date": "2026-07-08",
+      "installs": 564,
       "app": {
         "id": 10000329,
         "marketplace_developer_id": 10000139,
@@ -1835,6 +1839,7 @@
       "name": "PermitNerd",
       "type": "archived",
       "date": "2026-07-08",
+      "installs": 4,
       "app": {
         "id": 10001046,
         "marketplace_developer_id": 100000150,
@@ -2141,6 +2146,7 @@
       "name": "Microsoft 365 Copilot ",
       "type": "archived",
       "date": "2026-06-19",
+      "installs": null,
       "app": {
         "id": 10001076,
         "marketplace_developer_id": 1,
@@ -2243,6 +2249,7 @@
       "name": "Required Fields Automation",
       "type": "archived",
       "date": "2026-06-17",
+      "installs": 57,
       "app": {
         "id": 10000644,
         "marketplace_developer_id": 10000163,
@@ -2487,6 +2494,7 @@
       "name": "ProBackup",
       "type": "archived",
       "date": "2026-06-05",
+      "installs": 1292,
       "app": {
         "id": 10000042,
         "marketplace_developer_id": 10000027,
@@ -3053,6 +3061,7 @@
       "name": "MoceanAPI SMS",
       "type": "archived",
       "date": "2026-06-02",
+      "installs": 2920,
       "app": {
         "id": 10000045,
         "marketplace_developer_id": 10000030,
@@ -3188,6 +3197,7 @@
       "name": "Shopify Connector",
       "type": "archived",
       "date": "2026-06-02",
+      "installs": 10,
       "app": {
         "id": 10001087,
         "marketplace_developer_id": 100000167,
@@ -4947,6 +4957,7 @@
       "name": "Pipedrive",
       "type": "archived",
       "date": "2026-05-27",
+      "installs": 5808,
       "app": {
         "id": 10000011,
         "marketplace_developer_id": 10000010,
@@ -5065,6 +5076,7 @@
       "name": "Real Estate Map View",
       "type": "archived",
       "date": "2026-05-17",
+      "installs": 54,
       "app": {
         "id": 10000947,
         "marketplace_developer_id": 100000110,
@@ -5223,6 +5235,7 @@
       "name": "Gitlab",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 31,
         "marketplace_developer_id": 1,
@@ -5339,6 +5352,7 @@
       "name": "Stripe",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 37,
         "marketplace_developer_id": 1,
@@ -5433,6 +5447,7 @@
       "name": "Copper",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 38,
         "marketplace_developer_id": 1,
@@ -5527,6 +5542,7 @@
       "name": "Box",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 45,
         "marketplace_developer_id": 1,
@@ -5624,6 +5640,7 @@
       "name": "Basecamp",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 47,
         "marketplace_developer_id": 1,
@@ -5718,6 +5735,7 @@
       "name": "Eventbrite",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 49,
         "marketplace_developer_id": 1,
@@ -5812,6 +5830,7 @@
       "name": "Harvest",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 50,
         "marketplace_developer_id": 1,
@@ -5906,6 +5925,7 @@
       "name": "Google Drive",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 60,
         "marketplace_developer_id": 1,
@@ -6025,6 +6045,7 @@
       "name": "PagerDuty",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 61,
         "marketplace_developer_id": 1,
@@ -6119,6 +6140,7 @@
       "name": "Toggl",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 63,
         "marketplace_developer_id": 1,
@@ -6213,6 +6235,7 @@
       "name": "Jira Cloud",
       "type": "archived",
       "date": "2026-05-13",
+      "installs": null,
       "app": {
         "id": 10000142,
         "marketplace_developer_id": 1,
@@ -6330,6 +6353,7 @@
       "name": "Twilio",
       "type": "archived",
       "date": "2026-05-12",
+      "installs": null,
       "app": {
         "id": 33,
         "marketplace_developer_id": 1,
@@ -6446,6 +6470,7 @@
       "name": "Zoom Integration",
       "type": "archived",
       "date": "2026-05-12",
+      "installs": null,
       "app": {
         "id": 41,
         "marketplace_developer_id": 1,
@@ -6540,6 +6565,7 @@
       "name": "Microsoft SharePoint",
       "type": "archived",
       "date": "2026-05-11",
+      "installs": 307,
       "app": {
         "id": 10000674,
         "marketplace_developer_id": 10000197,
@@ -6870,6 +6896,7 @@
       "name": "WorkCanvas",
       "type": "removed",
       "date": "2026-05-01",
+      "installs": 100,
       "app": {
         "id": 10001152,
         "marketplace_developer_id": 1,
@@ -6996,6 +7023,7 @@
       "name": "GenieTools",
       "type": "archived",
       "date": "2026-04-27",
+      "installs": 14,
       "app": {
         "id": 10000996,
         "marketplace_developer_id": 100000138,
@@ -7326,6 +7354,7 @@
       "name": "Apollo.io Data Importer",
       "type": "archived",
       "date": "2026-04-27",
+      "installs": 28,
       "app": {
         "id": 10001106,
         "marketplace_developer_id": 100000121,
@@ -7506,6 +7535,7 @@
       "name": "AI Marketing teammate",
       "type": "removed",
       "date": "2026-04-23",
+      "installs": 1,
       "app": {
         "id": 10001117,
         "marketplace_developer_id": 100000181,
@@ -7584,6 +7614,7 @@
       "name": "Evently HR worker",
       "type": "removed",
       "date": "2026-04-23",
+      "installs": 2,
       "app": {
         "id": 10001118,
         "marketplace_developer_id": 100000182,
@@ -8057,6 +8088,7 @@
       "name": "AutoBrain - Smart Predictions and Predictive Analytics",
       "type": "archived",
       "date": "2026-04-16",
+      "installs": 70,
       "app": {
         "id": 10000817,
         "marketplace_developer_id": 100000056,
@@ -8702,6 +8734,7 @@
       "name": "Microsoft Dynamics 365 Integration",
       "type": "archived",
       "date": "2026-04-15",
+      "installs": 573,
       "app": {
         "id": 10000357,
         "marketplace_developer_id": 100000000,
@@ -9407,6 +9440,7 @@
       "name": "SubLift",
       "type": "archived",
       "date": "2026-04-07",
+      "installs": 20,
       "app": {
         "id": 10000851,
         "marketplace_developer_id": 10000016,
@@ -9635,6 +9669,7 @@
       "name": "Google Easy Embed Pro",
       "type": "archived",
       "date": "2026-04-07",
+      "installs": 4,
       "app": {
         "id": 10001116,
         "marketplace_developer_id": 100000174,
@@ -10546,6 +10581,7 @@
       "name": "Aircall",
       "type": "archived",
       "date": "2026-04-07",
+      "installs": 4474,
       "app": {
         "id": 100000001,
         "marketplace_developer_id": 100000001,
@@ -10721,6 +10757,7 @@
       "name": "Outlook email Integration (legacy)",
       "type": "archived",
       "date": "2026-04-02",
+      "installs": null,
       "app": {
         "id": 30,
         "marketplace_developer_id": 1,
@@ -10814,6 +10851,7 @@
       "name": "Microsoft Teams (legacy)",
       "type": "archived",
       "date": "2026-04-02",
+      "installs": null,
       "app": {
         "id": 40,
         "marketplace_developer_id": 1,
@@ -10907,6 +10945,7 @@
       "name": "Trello",
       "type": "archived",
       "date": "2026-04-02",
+      "installs": null,
       "app": {
         "id": 62,
         "marketplace_developer_id": 1,
@@ -10999,6 +11038,7 @@
       "name": "resynced.io: easy two-way synchronizations",
       "type": "archived",
       "date": "2026-03-24",
+      "installs": 320,
       "app": {
         "id": 10000688,
         "marketplace_developer_id": 10000055,
@@ -11122,6 +11162,7 @@
       "name": "Chrome Extension for monday.com",
       "type": "archived",
       "date": "2026-03-20",
+      "installs": 2909,
       "app": {
         "id": 10000210,
         "marketplace_developer_id": 42,
@@ -11321,6 +11362,7 @@
       "name": "360 View",
       "type": "archived",
       "date": "2026-03-20",
+      "installs": 388,
       "app": {
         "id": 10000431,
         "marketplace_developer_id": 42,
@@ -11656,6 +11698,7 @@
       "name": "Hill Charts for monday.com",
       "type": "archived",
       "date": "2026-03-20",
+      "installs": 10,
       "app": {
         "id": 10000610,
         "marketplace_developer_id": 10000252,
@@ -12070,6 +12113,7 @@
       "name": "Easy Automate",
       "type": "archived",
       "date": "2026-03-20",
+      "installs": 65,
       "app": {
         "id": 10000652,
         "marketplace_developer_id": 10000271,
@@ -12777,6 +12821,7 @@
       "name": "Item Assign",
       "type": "archived",
       "date": "2026-03-20",
+      "installs": 40,
       "app": {
         "id": 10000695,
         "marketplace_developer_id": 10000252,
@@ -13090,6 +13135,7 @@
       "name": "Calendar Availability ",
       "type": "archived",
       "date": "2026-03-19",
+      "installs": 39,
       "app": {
         "id": 10000922,
         "marketplace_developer_id": 10000174,
@@ -13694,6 +13740,7 @@
       "name": "Social Media Manager",
       "type": "archived",
       "date": "2026-03-18",
+      "installs": 377,
       "app": {
         "id": 10000925,
         "marketplace_developer_id": 10000174,
@@ -14393,6 +14440,7 @@
       "name": "Pingdom Integration",
       "type": "archived",
       "date": "2026-03-03",
+      "installs": null,
       "app": {
         "id": 10001095,
         "marketplace_developer_id": 1,
@@ -14470,6 +14518,7 @@
       "name": "QuickBooks Integration",
       "type": "removed",
       "date": "2026-02-26",
+      "installs": 2,
       "app": {
         "id": 10001059,
         "marketplace_developer_id": 1,
@@ -14544,6 +14593,7 @@
       "name": "LinkedIn Integration",
       "type": "removed",
       "date": "2026-02-26",
+      "installs": 4,
       "app": {
         "id": 10001061,
         "marketplace_developer_id": 1,
@@ -14624,6 +14674,7 @@
       "name": "Jira Data Center",
       "type": "removed",
       "date": "2026-02-26",
+      "installs": null,
       "app": {
         "id": 10001072,
         "marketplace_developer_id": 1,
@@ -14726,6 +14777,7 @@
       "name": "TiMonE",
       "type": "removed",
       "date": "2026-02-24",
+      "installs": 313,
       "app": {
         "id": 10000243,
         "marketplace_developer_id": 10000110,
@@ -14893,6 +14945,7 @@
       "name": "TiMonE",
       "type": "archived",
       "date": "2026-02-19",
+      "installs": 313,
       "app": {
         "id": 10000243,
         "marketplace_developer_id": 10000110,
@@ -15060,6 +15113,7 @@
       "name": "Voice Updates",
       "type": "archived",
       "date": "2026-02-01",
+      "installs": 1040,
       "app": {
         "id": 81,
         "marketplace_developer_id": 29,
@@ -15165,6 +15219,7 @@
       "name": "Live Collab",
       "type": "archived",
       "date": "2026-02-01",
+      "installs": 2607,
       "app": {
         "id": 85,
         "marketplace_developer_id": 33,
@@ -15276,6 +15331,7 @@
       "name": "Formito",
       "type": "archived",
       "date": "2026-02-01",
+      "installs": 2287,
       "app": {
         "id": 92,
         "marketplace_developer_id": 35,
@@ -15387,6 +15443,7 @@
       "name": "Semrush",
       "type": "archived",
       "date": "2026-02-01",
+      "installs": 2285,
       "app": {
         "id": 10000003,
         "marketplace_developer_id": 10000002,
@@ -15502,6 +15559,7 @@
       "name": "CopyURL",
       "type": "archived",
       "date": "2026-02-01",
+      "installs": 691,
       "app": {
         "id": 10000004,
         "marketplace_developer_id": 10000003,
@@ -15621,6 +15679,7 @@
       "name": "Esti - Estimation Helper",
       "type": "archived",
       "date": "2026-02-01",
+      "installs": 1073,
       "app": {
         "id": 10000006,
         "marketplace_developer_id": 10000005,
@@ -15740,6 +15799,7 @@
       "name": "Cash Flow - Collection",
       "type": "archived",
       "date": "2026-02-01",
+      "installs": 2865,
       "app": {
         "id": 10000018,
         "marketplace_developer_id": 10000015,
@@ -15859,6 +15919,7 @@
       "name": "Clockhound",
       "type": "archived",
       "date": "2026-02-01",
+      "installs": 561,
       "app": {
         "id": 10000095,
         "marketplace_developer_id": 10000049,
@@ -16098,6 +16159,7 @@
       "name": "VideoNotes",
       "type": "archived",
       "date": "2026-02-01",
+      "installs": 577,
       "app": {
         "id": 10000108,
         "marketplace_developer_id": 10000056,
@@ -16218,6 +16280,7 @@
       "name": "Collaborative Whiteboard",
       "type": "removed",
       "date": "2026-01-28",
+      "installs": null,
       "app": {
         "id": 68,
         "marketplace_developer_id": 1,
@@ -16309,6 +16372,7 @@
       "name": "Figma Integration",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 1450,
       "app": {
         "id": 10000204,
         "marketplace_developer_id": 10000102,
@@ -16989,6 +17053,7 @@
       "name": "Google Sheets Integration",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 882,
       "app": {
         "id": 10000223,
         "marketplace_developer_id": 10000102,
@@ -17659,6 +17724,7 @@
       "name": "Google Slides Integration",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 177,
       "app": {
         "id": 10000225,
         "marketplace_developer_id": 10000102,
@@ -18329,6 +18395,7 @@
       "name": "Reports & Charts by Appvibe",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 655,
       "app": {
         "id": 10000248,
         "marketplace_developer_id": 10000102,
@@ -18998,6 +19065,7 @@
       "name": "Slack Integration by Appvibe",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 711,
       "app": {
         "id": 10000260,
         "marketplace_developer_id": 10000102,
@@ -19747,6 +19815,7 @@
       "name": "HubSpot by Appvibe",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 371,
       "app": {
         "id": 10000262,
         "marketplace_developer_id": 10000102,
@@ -20488,6 +20557,7 @@
       "name": "Canva Integration",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 2018,
       "app": {
         "id": 10000274,
         "marketplace_developer_id": 10000102,
@@ -21237,6 +21307,7 @@
       "name": "Google Forms by Appvibe",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 219,
       "app": {
         "id": 10000297,
         "marketplace_developer_id": 10000102,
@@ -21981,6 +22052,7 @@
       "name": "Git Integration",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 100,
       "app": {
         "id": 10000298,
         "marketplace_developer_id": 10000102,
@@ -22144,6 +22216,7 @@
       "name": "Bitbucket Integration",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 104,
       "app": {
         "id": 10000299,
         "marketplace_developer_id": 10000102,
@@ -22266,6 +22339,7 @@
       "name": "GitLab Integration",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 97,
       "app": {
         "id": 10000323,
         "marketplace_developer_id": 10000102,
@@ -22393,6 +22467,7 @@
       "name": "GitHub Integration",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 263,
       "app": {
         "id": 10000324,
         "marketplace_developer_id": 10000102,
@@ -23101,6 +23176,7 @@
       "name": "Azure DevOps Integration",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 92,
       "app": {
         "id": 10000325,
         "marketplace_developer_id": 10000102,
@@ -23519,6 +23595,7 @@
       "name": "Test Management",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 274,
       "app": {
         "id": 10000358,
         "marketplace_developer_id": 10000102,
@@ -24600,6 +24677,7 @@
       "name": "Google Calendar by Appvibe",
       "type": "archived",
       "date": "2026-01-21",
+      "installs": 328,
       "app": {
         "id": 10000381,
         "marketplace_developer_id": 10000102,
@@ -25015,6 +25093,7 @@
       "name": "TEST APP - product catalog - bucket pricing ",
       "type": "removed",
       "date": "2026-01-15",
+      "installs": null,
       "app": {
         "id": 10001013,
         "marketplace_developer_id": 10000022,
@@ -25487,6 +25566,7 @@
       "name": "TEST APP - product catalog - unit pricing ",
       "type": "removed",
       "date": "2026-01-15",
+      "installs": null,
       "app": {
         "id": 10001015,
         "marketplace_developer_id": 10000022,
@@ -25646,6 +25726,7 @@
       "name": "Gmail",
       "type": "archived",
       "date": "2026-01-09",
+      "installs": null,
       "app": {
         "id": 29,
         "marketplace_developer_id": 1,
@@ -25735,6 +25816,7 @@
       "name": "Slack",
       "type": "archived",
       "date": "2026-01-09",
+      "installs": null,
       "app": {
         "id": 57,
         "marketplace_developer_id": 1,
@@ -25825,6 +25907,7 @@
       "name": "Discontinued - Simple Recurring Tasks",
       "type": "archived",
       "date": "2026-01-07",
+      "installs": 15,
       "app": {
         "id": 10000871,
         "marketplace_developer_id": 100000074,
@@ -26825,6 +26908,7 @@
       "name": "The Fetcher",
       "type": "archived",
       "date": "2026-01-07",
+      "installs": 9,
       "app": {
         "id": 10000966,
         "marketplace_developer_id": 100000097,
@@ -27097,6 +27181,7 @@
       "name": "Google Quick Access to monday.com",
       "type": "archived",
       "date": "2025-12-26",
+      "installs": 965,
       "app": {
         "id": 10000531,
         "marketplace_developer_id": 10000228,
@@ -27437,6 +27522,7 @@
       "name": "Batch Hero for monday",
       "type": "archived",
       "date": "2025-12-23",
+      "installs": 685,
       "app": {
         "id": 10000345,
         "marketplace_developer_id": 10000145,
@@ -27691,6 +27777,7 @@
       "name": "WhatsApp integration by TimelinesAI",
       "type": "archived",
       "date": "2025-12-22",
+      "installs": 2909,
       "app": {
         "id": 10000385,
         "marketplace_developer_id": 10000159,
@@ -27815,6 +27902,7 @@
       "name": "Find and Replace Text",
       "type": "archived",
       "date": "2025-12-22",
+      "installs": 7,
       "app": {
         "id": 10000779,
         "marketplace_developer_id": 100000041,
@@ -27967,6 +28055,7 @@
       "name": "DiffSense Pro",
       "type": "archived",
       "date": "2025-12-22",
+      "installs": 23,
       "app": {
         "id": 10000785,
         "marketplace_developer_id": 100000043,
@@ -28221,6 +28310,7 @@
       "name": "Quickbooks Eazyconnect",
       "type": "archived",
       "date": "2025-12-22",
+      "installs": 23,
       "app": {
         "id": 10000789,
         "marketplace_developer_id": 100000046,
@@ -28384,6 +28474,7 @@
       "name": "Text Tools for Workdocs",
       "type": "archived",
       "date": "2025-12-22",
+      "installs": 11,
       "app": {
         "id": 10000802,
         "marketplace_developer_id": 100000041,
@@ -28649,6 +28740,7 @@
       "name": "Human Resource Management System (HRMS) for monday.com",
       "type": "archived",
       "date": "2025-12-22",
+      "installs": 4,
       "app": {
         "id": 10000855,
         "marketplace_developer_id": 100000066,
@@ -28966,6 +29058,7 @@
       "name": "Business Intelligence",
       "type": "archived",
       "date": "2025-12-22",
+      "installs": 10,
       "app": {
         "id": 10000975,
         "marketplace_developer_id": 100000090,
@@ -29530,6 +29623,7 @@
       "name": "WhatsApp integration by TimelinesAI",
       "type": "archived",
       "date": "2025-12-18",
+      "installs": 2908,
       "app": {
         "id": 10000385,
         "marketplace_developer_id": 10000159,
@@ -29654,6 +29748,7 @@
       "name": "PivotXL: Sync with Excel",
       "type": "archived",
       "date": "2025-12-18",
+      "installs": 21,
       "app": {
         "id": 10000933,
         "marketplace_developer_id": 100000070,
@@ -30206,6 +30301,7 @@
       "name": "[TEST APP, DO NOT REMOVE] 08.12 feature-based grzegorz app",
       "type": "removed",
       "date": "2025-12-17",
+      "installs": null,
       "app": {
         "id": 10000993,
         "marketplace_developer_id": 10000214,
@@ -30359,6 +30455,7 @@
       "name": "[TEST APP, DO NOT REMOVE] 08.12 bucket-based app",
       "type": "removed",
       "date": "2025-12-17",
+      "installs": null,
       "app": {
         "id": 10000994,
         "marketplace_developer_id": 10000214,
@@ -30834,6 +30931,7 @@
       "name": "sumUp for monday",
       "type": "archived",
       "date": "2025-12-17",
+      "installs": 1057,
       "app": {
         "id": 10000344,
         "marketplace_developer_id": 10000145,
@@ -31438,6 +31536,7 @@
       "name": "app10504360 - board view",
       "type": "removed",
       "date": "2025-12-16",
+      "installs": 1,
       "app": {
         "id": 10000890,
         "marketplace_developer_id": 10000214,
@@ -31516,6 +31615,7 @@
       "name": "app10505712",
       "type": "removed",
       "date": "2025-12-16",
+      "installs": 4,
       "app": {
         "id": 10000916,
         "marketplace_developer_id": 10000214,
@@ -31751,6 +31851,7 @@
       "name": "Burndown Chart App",
       "type": "archived",
       "date": "2025-12-12",
+      "installs": 3635,
       "app": {
         "id": 97,
         "marketplace_developer_id": 40,
@@ -31866,6 +31967,7 @@
       "name": "Workday Automations & Holiday Calendar",
       "type": "archived",
       "date": "2025-12-12",
+      "installs": 508,
       "app": {
         "id": 10000322,
         "marketplace_developer_id": 10000135,
@@ -32193,6 +32295,7 @@
       "name": "FreshService Integration",
       "type": "archived",
       "date": "2025-12-10",
+      "installs": 259,
       "app": {
         "id": 10000161,
         "marketplace_developer_id": 10000016,
@@ -32319,6 +32422,7 @@
       "name": "DocBuilder AI",
       "type": "archived",
       "date": "2025-12-09",
+      "installs": 129,
       "app": {
         "id": 10000275,
         "marketplace_developer_id": 10000127,
@@ -32442,6 +32546,7 @@
       "name": "Command Line Interface (CLI) - Automate Actions",
       "type": "archived",
       "date": "2025-12-05",
+      "installs": 168,
       "app": {
         "id": 10000368,
         "marketplace_developer_id": 10000098,
@@ -33228,6 +33333,7 @@
       "name": "Clone Plus - Copy Items",
       "type": "archived",
       "date": "2025-12-05",
+      "installs": 228,
       "app": {
         "id": 10000412,
         "marketplace_developer_id": 10000098,
@@ -34010,6 +34116,7 @@
       "name": "Autofill Group Name",
       "type": "archived",
       "date": "2025-12-03",
+      "installs": 211,
       "app": {
         "id": 10000092,
         "marketplace_developer_id": 10000044,
@@ -34241,6 +34348,7 @@
       "name": "Priority Pro",
       "type": "archived",
       "date": "2025-12-03",
+      "installs": 787,
       "app": {
         "id": 10000201,
         "marketplace_developer_id": 10000100,
@@ -34587,6 +34695,7 @@
       "name": "Tag to Action",
       "type": "archived",
       "date": "2025-12-03",
+      "installs": 262,
       "app": {
         "id": 10000207,
         "marketplace_developer_id": 10000044,
@@ -35191,6 +35300,7 @@
       "name": "Due Date Group Allocator",
       "type": "archived",
       "date": "2025-12-03",
+      "installs": 280,
       "app": {
         "id": 10000405,
         "marketplace_developer_id": 10000044,
@@ -35443,6 +35553,7 @@
       "name": "FieldValidator Pro",
       "type": "archived",
       "date": "2025-12-03",
+      "installs": 70,
       "app": {
         "id": 10000520,
         "marketplace_developer_id": 10000044,
@@ -35735,6 +35846,7 @@
       "name": "App Reviews Integration",
       "type": "archived",
       "date": "2025-11-27",
+      "installs": 5,
       "app": {
         "id": 10000934,
         "marketplace_developer_id": 100000099,
@@ -35886,6 +35998,7 @@
       "name": "Planning Poker for monday.com",
       "type": "archived",
       "date": "2025-11-06",
+      "installs": 273,
       "app": {
         "id": 10000193,
         "marketplace_developer_id": 10000098,
@@ -36642,6 +36755,7 @@
       "name": "Dashboard Hub for monday.com",
       "type": "archived",
       "date": "2025-11-06",
+      "installs": 3183,
       "app": {
         "id": 10000200,
         "marketplace_developer_id": 10000098,
@@ -37410,6 +37524,7 @@
       "name": "BigPicture PPM",
       "type": "archived",
       "date": "2025-11-06",
+      "installs": 1075,
       "app": {
         "id": 10000355,
         "marketplace_developer_id": 10000098,
@@ -38221,6 +38336,7 @@
       "name": "PDF Exporter for monday.com",
       "type": "archived",
       "date": "2025-11-06",
+      "installs": 1360,
       "app": {
         "id": 10000393,
         "marketplace_developer_id": 10000098,
@@ -39031,6 +39147,7 @@
       "name": "Some name odf the app",
       "type": "archived",
       "date": "2025-11-06",
+      "installs": 4,
       "app": {
         "id": 10000814,
         "marketplace_developer_id": 10000214,
@@ -39607,6 +39724,7 @@
       "name": "Figment",
       "type": "archived",
       "date": "2025-11-05",
+      "installs": 25,
       "app": {
         "id": 10000719,
         "marketplace_developer_id": 100000011,
@@ -39963,6 +40081,7 @@
       "name": "Invoice Generator",
       "type": "archived",
       "date": "2025-10-30",
+      "installs": 129,
       "app": {
         "id": 10000756,
         "marketplace_developer_id": 100000029,
@@ -40319,6 +40438,7 @@
       "name": "Todoist",
       "type": "removed",
       "date": "2025-10-22",
+      "installs": null,
       "app": {
         "id": 46,
         "marketplace_developer_id": 1,
@@ -40402,6 +40522,7 @@
       "name": "Capable Aircall Integration",
       "type": "archived",
       "date": "2025-10-20",
+      "installs": 13,
       "app": {
         "id": 10000867,
         "marketplace_developer_id": 10000142,
@@ -40613,6 +40734,7 @@
       "name": "Jira Cloud (old)",
       "type": "removed",
       "date": "2025-10-08",
+      "installs": null,
       "app": {
         "id": 52,
         "description": "<p>Align product, design, and support teams with your development workflow to ensure every aspect is transparent. With everyone in the know, collaboration is easier than ever! This integration allows you to create a two-way sync, pushing changes from your monday.com board into Jira and pulling data from Jira into monday.com. Never miss a thing!</p>",
@@ -40689,6 +40811,7 @@
       "name": "Github (Old Version)",
       "type": "removed",
       "date": "2025-10-08",
+      "installs": null,
       "app": {
         "id": 56,
         "description": "<p>Create and track issues. Send updates about pull requests. Connect your repositories with ease. The possibilities with this integration are endless. This integration works two ways. It allows you to pull information in from GitHub and push information back out. Best of all, you can sync all future changes from GitHub.</p>",
@@ -40765,6 +40888,7 @@
       "name": "Shopify",
       "type": "removed",
       "date": "2025-10-08",
+      "installs": null,
       "app": {
         "id": 59,
         "description": "<p>Track your new orders and inventory with the Shopify Integration! This integration helps you to have a high-level view of your store in one place. Add a new item when you receive an order. Update an item when your inventory falls below a set number. Never lose track of your stock again.</p>",
@@ -40841,6 +40965,7 @@
       "name": "Pipedrive (Old Native App)",
       "type": "removed",
       "date": "2025-10-08",
+      "installs": null,
       "app": {
         "id": 64,
         "description": "<p>Streamline your customer relationship management process and incorporate it seamlessly into monday.com! With the Pipedrive integration, you can create an item when a new deal, a new activity, a new person or new organization are created. Even better, when you set up this integration, you’ll sync all future changes from Pipedrive.</p>",
@@ -40917,6 +41042,7 @@
       "name": "Lead & Contact Info Finder",
       "type": "archived",
       "date": "2025-10-01",
+      "installs": 120,
       "app": {
         "id": 10000565,
         "description": "<p>Keep your CRM data up-to-date with all relevant prospects.</p><p>Complete missing contact information, and find new leads within your target prospects.</p><p><br></p><p><strong><em>Use it for free with your monthly credits, or upgrade for additional credits.</em></strong></p><p><br></p><ul><li>Automatically complete missing information for each contact in your CRM (including current role, LinkedIn profile and company information)</li></ul><p><br></p><ul><li>Easily enrich CRM contacts with accurate phone numbers and verified emails</li></ul><p><br></p><ul><li>Add new contacts that you find on LinkedIn directly into monday.com in a single click</li></ul><p><br></p><ul><li>Discover contacts who switched jobs</li></ul><p><br></p><ul><li>Discover additional decision makers and contacts with similar roles within companies in your CRM</li></ul><p><br></p><ul><li>Find new leads in new companies, based on their persona (role, seniority and location)</li></ul><p><br></p><p><br></p><p><strong>Trusted by 100s of Salesforce and HubSpot customers, and now available for monday.com!</strong></p><p><br></p><p>“For 3 years, RightBound has been a main source for our prospecting campaigns. Our team gets the right accounts, with up-to-date prospects, verified emails &amp; mobile phone numbers, that deliver &gt;15% connect rate.”</p><p><br></p><p>- Dan Sylvester, SVP of Revenue at SundaySky</p><p><br></p><p><br></p><p>“RightBound gives us the best contact info coverage on any given prospect list, with over&nbsp;<strong>90% email and phone accuracy.</strong></p><p>- Ryan Reisert, VP of Outbound Strategy at Apex Revenue</p><p><br></p><p><br></p><p>״RightBound autonomously prospects thousands of contacts, directly feeding our CRM, including additional or alternative contacts within existing accounts.”</p><p>- Tomer Magal, VP Sales at WiseStamp</p>",
@@ -41443,6 +41569,7 @@
       "name": "LaTeX Math for monday.com",
       "type": "removed",
       "date": "2025-09-19",
+      "installs": 7,
       "app": {
         "id": 10000784,
         "description": "<p>The<strong> #1 solution</strong> for LaTeX Math in monday! Display professional mathematical formulas and equations directly in your workspace. Our app renders LaTeX - the gold standard for mathematical notation.</p><p><br></p><p><strong>Key Benefits:</strong></p><ul><li><strong>Visualize Complex Math:</strong>&nbsp;Show formulas exactly as they're meant to be seen</li><li><strong>Seamless Experience:</strong>&nbsp;View LaTeX expressions right inside monday.com</li><li><strong>High-Quality Display:</strong>&nbsp;✨ Crisp, clear formula rendering at any size</li><li><strong>Easy to Use:</strong>&nbsp;No technical knowledge required beyond basic LaTeX syntax</li><li><strong>Export Options:</strong>&nbsp;Save your formulas as SVG or PNG files for use elsewhere</li></ul><p><br></p><p><strong>How It Works:</strong></p><ol><li>Copy your LaTeX expression from any source</li><li>Paste it into our LaTeX widget</li><li>⚡ Watch your mathematical notation render instantly</li></ol><p><br></p><p>Perfect for teams in engineering, science, education, finance, 🔬 and any field requiring precise mathematical communication. 💼</p>",
@@ -41618,6 +41745,7 @@
       "name": "Google Calendar Embed Plus",
       "type": "archived",
       "date": "2025-09-16",
+      "installs": 262,
       "app": {
         "id": 10000810,
         "description": "<p><strong>Google Calendar Embed Plus</strong> provides a revolutionary approach to integrating and embedding Google Calendar within various monday workflows.</p><p><br></p><p>The app allows various teams to <strong>embed</strong> &amp;<strong> sync</strong> unlimited google calendar within monday. The app also allow various monday team members to easily <strong>discuss, comments, replies, likes</strong> on any Google calendar events in real-time without leaving <strong>monday.com</strong>.</p><p><br></p><p>🔑 <strong>Key Features Offered:</strong></p><p><br></p><p>👉 <strong>Unlimited Google Calendar Embed &amp; Synching:</strong></p><p>monday teams can embed and sync unlimited Google Calendar via monday <strong>Board Views, Custom Objects, Items Views, Dashboard Widgets.</strong></p><p><br></p><p>👉&nbsp;<strong>Real Time Google Events Calendar Updates:&nbsp;</strong></p><p>&nbsp;Google calendar events data are synched in realtime with your monday.</p><p><br></p><p>👉 <strong>Fully Integrated Google Calendar Events Feedback/Discussion System:</strong></p><ul><li><strong><em>Google Calendar Events Discussion System</em></strong></li><li><strong><em>Comments System</em></strong></li><li><strong><em>Message Reply System</em></strong></li><li><strong><em>Likes System</em></strong></li><li><strong><em>Discussion Real-Time Alert: </em></strong><em>Get real-time notification alert each time team member </em><strong><em>embeds Google Calendar, comments, reply, sub-reply, likes</em></strong><em> on calendarly events and more...</em></li></ul><p><br></p><p>👉 <strong>Fully Integrated Search Engine System:</strong></p><p>&nbsp;Easily search any embedded Google Calendar in real-time.</p><p><br></p><p>✨ <strong>Database Storage</strong></p><p>This app is <strong>GDPR</strong> &amp; <strong>CCPA</strong> compliance. Your data is <strong>100%</strong> stored in your monday instance leveraging <strong>monday key Database storage API</strong>. This means that your data is <strong>100%</strong> in your hand. We <strong>Jelisoft</strong>, do not have access to any of your data and not even a single character of your data is stored on our end.</p><p><br></p><p>👉 <strong>App Supports:</strong></p><p>✅Item Views</p><p>✅Board Views</p><p>✅Dashboard Widgets</p><p>✅Custom Objects</p>",
@@ -41912,6 +42040,7 @@
       "name": "Outlook Calendar Embed Plus",
       "type": "archived",
       "date": "2025-09-16",
+      "installs": 94,
       "app": {
         "id": 10000881,
         "description": "<p><strong>Outlook Calendar Embed Plus</strong>&nbsp;provides a revolutionary approach to&nbsp;<strong>integrating&nbsp;</strong>and&nbsp;<strong>embedding</strong>&nbsp;Outlook Calendar within various monday workflows. The app allows various teams to&nbsp;<strong>embed&nbsp;</strong>&amp;&nbsp;<strong>sync</strong>&nbsp;unlimited Outlook calendar within monday.&nbsp;</p><p><br></p><p>The app also allow various monday team members to easily&nbsp;<strong>discuss, comments, replies, likes</strong>&nbsp;on any Outlook calendar events in real-time without leaving&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>.</p><p>🔑&nbsp;<strong>Key Features Offered:</strong></p><p>👉&nbsp;<strong>Unlimited Outlook Calendar Embed &amp; Synching:</strong></p><p>monday teams can&nbsp;<strong>embed&nbsp;</strong>and&nbsp;<strong>sync</strong>&nbsp;unlimited Outlook Calendar via monday&nbsp;<strong>Board Views, Custom Objects, Items Views, Dashboard Widgets.</strong></p><p>👉&nbsp;<strong>Real Time Outlook Events Calendar Updates:</strong></p><p>Outlook calendar events data are synched in real-time with your monday.</p><p>👉&nbsp;<strong>Fully Integrated Outlook Calendar Events Feedback/Discussion System:</strong></p><ul><li><strong>Outlook Calendar Events Discussion System</strong></li><li><strong>Comments System</strong></li><li><strong>Message Reply System</strong></li><li><strong>Likes System</strong></li><li><strong>Discussion Real-Time Alert:</strong>&nbsp;Get real-time notification alert each time team member&nbsp;<strong>embeds Outlook Calendar, comments, reply, sub-reply, likes</strong>&nbsp;on calendarly events and more.</li></ul><p>👉&nbsp;<strong>Fully Integrated Search Engine System:</strong></p><p>Easily search any embedded Outlook Calendar in real-time.</p><p>Calendar in realtime</p><p>✨&nbsp;<strong>Database Storage:</strong></p><p>This app is&nbsp;<strong>GDPR</strong>&nbsp;&amp;&nbsp;<strong>CCPA&nbsp;</strong>compliance. Your data is&nbsp;<strong>100%&nbsp;</strong>stored in your monday instance leveraging&nbsp;<strong>monday key Database storage API</strong>.</p><p>This means that your data is&nbsp;<strong>100%</strong>&nbsp;in your hand. We&nbsp;<strong>Jelisoft</strong>, do not have access to any of your data and not even a single character of your data is stored on our end.</p><p>👉&nbsp;<strong>App Supports:</strong></p><p>✅Item Views</p><p>✅Board Views</p><p>✅Dashboard Widgets</p><p>✅Custom Objects</p>",
@@ -42042,6 +42171,7 @@
       "name": "QSR Sites & Projects Suite",
       "type": "archived",
       "date": "2025-09-05",
+      "installs": 6,
       "app": {
         "id": 10000853,
         "description": "<p>Effortlessly manage&nbsp;<strong>site requests, construction, upgrades, visits, and risk tracking</strong>—all in one platform. From&nbsp;<strong>pre-construction approvals</strong>&nbsp;to&nbsp;<strong>financial tracking (CAPEX/Invoices)</strong>&nbsp;and&nbsp;<strong>risk management</strong>, gain full control over your projects.</p><p><strong>Key Features:</strong></p><p>🏗&nbsp;<strong>Site &amp; Construction Management</strong>&nbsp;– Oversee development from request to completion</p><p>🚀&nbsp;<strong>Upgrades &amp; Approvals</strong>&nbsp;– Streamline site enhancements and ensure compliance</p><p>📊&nbsp;<strong>Reporting &amp; Dashboards</strong>&nbsp;– Get real-time insights across all sites and projects</p><p>💰&nbsp;<strong>Finance Tracking</strong>&nbsp;– Manage budgets, invoices, and capital expenses</p><p>⚠&nbsp;<strong>Risk Management</strong>&nbsp;– Stay ahead of potential issues with a structured risk register</p><p><strong>Simplify operations, improve decision-making, and scale effortlessly.</strong></p><p>👉&nbsp;<a href=\"https://meet.yesware.com/me/stevederviniotis\" rel=\"noopener noreferrer\" target=\"_blank\">Book a Demo</a>&nbsp;or&nbsp;<a href=\"mailto:contactus@workperfect.io\" rel=\"noopener noreferrer\" target=\"_blank\">Contact Us</a>&nbsp;to learn more!</p>",
@@ -42213,6 +42343,7 @@
       "name": "app10509710",
       "type": "removed",
       "date": "2025-09-03",
+      "installs": null,
       "app": {
         "id": 10000897,
         "description": "<p>description 10509710 description 10509710 description 10509710 description 10509710 description 10509710 description 10509710 description 10509710 description 10509710 description 10509710 description 10509710 description 10509710</p>",
@@ -42288,6 +42419,7 @@
       "name": "app10505712",
       "type": "removed",
       "date": "2025-09-03",
+      "installs": 3,
       "app": {
         "id": 10000904,
         "description": "<p>short description 10505712short description 10505712short description 10505712short description 10505712short description 10505712short description 10505712short description 10505712short description 10505712</p>",
@@ -42523,6 +42655,7 @@
       "name": "Bridge Bot MCP for Slack",
       "type": "removed",
       "date": "2025-08-23",
+      "installs": null,
       "app": {
         "id": 10000893,
         "description": "<p>Transform your team's productivity with Bridge Bot AI, the most intelligent&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;integration for Slack. This powerful AI assistant bridges the gap between your&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;workspace and Slack conversations, enabling natural language interactions with your project management data.</p><p>🤖 AI-Powered Natural Language Processing</p><p>Ask questions in plain English and get instant, formatted responses. No need to learn complex commands - just talk to the bot like a colleague:</p><p>- \"List my boards and their status\"</p><p>- \"Create a new task 'Design Review' in Marketing board\"</p><p>- \"Show me overdue items across all projects\"</p><p>- \"Update task status to Done\"</p><p>⚡ Smart Approval Workflows</p><p>Built-in approval system for sensitive operations ensures data integrity:</p><p>- Automatic detection of create/update/delete operations</p><p>- Interactive approval buttons in Slack</p><p>- Real-time notifications and execution tracking</p><p>- Secure approval trails for compliance</p><p>🔄 Seamless Integration Experience</p><p>- @Bridge Bot for&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>: Mention the bot in any channel</p><p>- Direct Messages: Private conversations with the bot</p><p>- Interactive Components: Rich buttons and menus for enhanced UX</p><p>📊 Advanced Features</p><p>- MCP Integration: Leverages Model Context Protocol for intelligent data processing</p><p>- User Mention Resolution: Automatically converts @user mentions to&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;user details</p><p>- Request Limiting: Built-in usage tracking and plan management</p><p>- Instant Acknowledgments: Immediate feedback while processing requests</p><p>- Rich Formatting: Beautiful, structured responses with emojis and formatting</p><p>-&nbsp;Per-query limitation: Supports up to 20 tool calls per query to ensure optimal performance and response time</p><p>🔐 Enterprise Security</p><p>- OAuth 2.0 authentication for both&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;and Slack</p><p>- Request signature verification</p><p>- Secure token management with automatic refresh</p><p>- User isolation and permission management</p><p>🚀 Easy Setup &amp; Management</p><p>- One-click installation and authentication</p><p>- Automatic user linking between platforms</p><p>- Comprehensive error handling and user guidance</p><p>- Real-time health monitoring</p>",
@@ -42650,6 +42783,7 @@
       "name": "app10499878",
       "type": "removed",
       "date": "2025-08-19",
+      "installs": null,
       "app": {
         "id": 10000889,
         "description": "<p>short description short description short descriptionshort description short description short descriptionshort description short description short descriptionshort description short description short descriptionshort description short description short descriptionshort description short description short descriptionshort description short description short description</p>",
@@ -42728,6 +42862,7 @@
       "name": "Enrich Person",
       "type": "archived",
       "date": "2025-08-16",
+      "installs": 76,
       "app": {
         "id": 10000459,
         "description": "<p><strong>Transform Email into Actionable Insights on&nbsp;monday.com</strong></p><p>Enrich Person is a powerful tool designed for monday.com users who wish to automatically convert email addresses into comprehensive contact profiles directly within their boards. Ideal for teams in sales, marketing, HR, and more, Enrich Person provides a seamless integration that enriches contact data to empower your business operations.</p><p><strong>Key Features and Benefits:</strong></p><ul><li><strong>Automatic Data Enrichment:</strong>&nbsp;Automatically populate your monday.com boards with detailed information from just an email address, including job titles, company names, locations, and more.</li><li><strong>Customizable Fields</strong>: Choose which data points are most relevant to your needs and display them exactly where you need them on your board.</li><li><strong>Enhanced Decision Making:</strong>&nbsp;With complete profiles, tailor your approach to sales, marketing campaigns, or recruitment strategies.</li><li><strong>Increased Productivity:</strong>&nbsp;Spend less time gathering data and more time leveraging it to grow your business and relationships.</li><li><strong>Improved Data Accuracy:</strong>&nbsp;Ensure that your contact information is always accurate and up-to-date, enhancing your business relationships and communication strategies.</li></ul><p><strong>Problems Solved by Enrich Person:</strong></p><ul><li><strong>Incomplete Contact Details:</strong>&nbsp;Fills in the gaps in your contact data, providing you with the information needed to make informed decisions.</li><li><strong>Manual Data Entry:</strong>&nbsp;Minimizes the need for tedious manual entry, enhancing productivity and reducing human error.</li><li><strong>Time-Consuming Research</strong>: Minimize the hours spent researching contacts by automating data collection.</li><li><strong>Lack of Personalization</strong>: Improve your outreach with personalized information that helps make every communication count.</li></ul><p><strong>Specific Use Cases:</strong></p><ul><li><strong>Sales Teams</strong>: Quickly access potential customers' professional backgrounds to tailor your pitch and close deals faster.</li><li><strong>HR Departments</strong>: Streamline candidate screening by automatically gathering comprehensive profiles from just an email address.</li><li><strong>Marketing Professionals</strong>: Enhance your audience segmentation with detailed demographic and professional data for targeted campaigns.</li></ul>",
@@ -43134,6 +43269,7 @@
       "name": "iTemplate Wizard",
       "type": "archived",
       "date": "2025-08-01",
+      "installs": 285,
       "app": {
         "id": 10000249,
         "description": "<p><strong>Itemplate Wizard</strong>&nbsp;allows you to optimize time and reduce effort put into creating repetitive tasks by creating a dedicated&nbsp;<strong>repository of templates</strong>. Forget about having to manually systematize your content, fill in the fields and create sub-tasks!</p><p><br></p><p><strong>What possible problems does it solve?</strong></p><ul><li>Unoptimized task-creating process</li><li>Struggle related to remembering all the details necessary whilst creating an item</li><li>Users find item-creating process a difficult one</li></ul><p><br></p><p><strong>Benefits of our solution:</strong></p><ul><li>Work becomes standarized</li><li>Time and effort needed to create an item is reduced</li></ul><p><br></p><p><strong>Who is this solution for?</strong></p><ul><li>Team leaders (useful in team-managing processes)</li><li>HR representatives (used during new employees onboarding)</li><li>Sales team</li></ul><p><br></p><p><strong>Who are we?</strong></p><ul><li>Deviniti delivers reliable, high performance solutions that provide significant business value to over 5 million customers in 103 countries. We have earned the trust of these users because our software helps organizations use technology to deliver measurable business results.</li><li><a href=\"https://calendly.com/tomasz-pospiech-deviniti/30min\" rel=\"noopener noreferrer\" target=\"_blank\">Book a demo</a>&nbsp;</li></ul>",
@@ -43496,6 +43632,7 @@
       "name": "Support Pulse - Collaboration at Scale",
       "type": "archived",
       "date": "2025-08-01",
+      "installs": 187,
       "app": {
         "id": 10000265,
         "description": "<p>Have you ever struggled to communicate efficiently with someone outside your monday.com account? Or when someone sent a form and couldn’t see their request? If yes, <strong>Support Pulse </strong>is a tool for you!<strong>&nbsp;</strong></p><p><br></p><p><a href=\"https://calendar.app.google/sSdcGq77SEMiXbzd6\" rel=\"noopener noreferrer\" target=\"_blank\">Book a demo</a> with our team.</p><p><br></p><p>With Support Pulse you can create a central hub where all employees or external customers can send in forms, see their details, current status, and keep track of the conversation with your fulfillment team - all without additional seat license costs.&nbsp;</p><p><br></p><p>Your team will benefit from having a separate thread for external communication and will be able to resolve cases more quickly and accurately.&nbsp;</p><p><br></p><p><strong>Who can benefit from Support Pulse?</strong></p><p>👉<strong> Teams handling requests from internal employees</strong>: All requestors will see the cases they raised along with the necessary details, without the need to access monday.com and paying for a full seat.</p><p>👉<strong> Companies that need to keep a standardized communication: </strong>Each request comes with a comment section where requestors and team members can keep a conversation relevant to the current request.</p><p>👉<strong> Companies using Intranet solutions: </strong>Portals can be embedded in intranets or other domains for added security.</p><p><br></p><p><strong>Key Features</strong></p><p>🖥️ <strong>Customer Portals</strong> - Embeddable web-pages where customers or employees can fill in request forms and see the relevant details.&nbsp;</p><p>💬 <strong>Agent-Customer communication</strong> - allows you to stay in touch with the requestor and provide an archive of conversations assigned to a specific request.&nbsp;</p><p>🔔 <strong>Comment notifications</strong> - Every time there’s a new comment on the request, the requestor gets an email notification and the fulfillment team gets a relevant update on the item.&nbsp;</p><p>🔨 <strong>Support Templates</strong> - Preconfigured boards along with created automations that can be easily adjusted to any use case or department.&nbsp;</p><p><br></p><p>For more information, visit our <a href=\"https://deviniti.com/support/addon/monday/support-pulse/latest/about/\" rel=\"noopener noreferrer\" target=\"_blank\">documentation</a>&nbsp;</p>",
@@ -43842,6 +43979,7 @@
       "name": "Time Tracking – TimeVibe: Precision Tracking with Team Insights",
       "type": "archived",
       "date": "2025-07-17",
+      "installs": 899,
       "app": {
         "id": 10000271,
         "description": "<p>Transform how you manage time on monday.com. TimeVibe lets you track tasks with precision and visualize team productivity in real-time—all within your boards. Whether you're a project manager optimizing resources or a freelancer billing clients, TimeVibe keeps you ahead.</p><p><br></p><p><strong>Why TimeVibe is the #1 Time Tracker for Monday.com:</strong></p><p><br></p><ul><li><strong>Precision Tracking:</strong> Log time manually or with smart timers. Track items, subitems, and team activity instantly.</li><li><strong>Real-Time Insights:</strong> See productivity per user and across workspaces—spot bottlenecks, celebrate wins.</li><li><strong>Seamless Sync:</strong> One-click install. Unlike standalone tools, TimeVibe lives inside monday.com—no context switching.</li><li><strong>Customizable Power:</strong> Add toggle, dropdown, or text fields to fit your workflow—billable hours, categories, and more.</li><li><strong>Easy Exports:</strong> Turn logs into monday.com boards or Excel reports in seconds. Cut reporting time by 60%.</li></ul><p><br></p><p><strong>Standout Features:</strong></p><p><br></p><ul><li><strong>Live Team Pulse</strong>: Watch your team’s time unfold in real-time across workspaces—managers love this for accountability.</li><li><strong>Vibe Your Way</strong>: Intuitive design with a fresh, engaging interface that makes tracking feel effortless.</li><li><strong>Scalable Simplicity</strong>: Trusted by hundreds of teams—from solo hustlers to Fortune 500 players—TimeVibe scales without the complexity.</li></ul><p><br></p><p><strong>What TimeVibe Users Say:</strong></p><p><br></p><p><em>“TimeVibe turned our chaotic monday.com boards into a productivity goldmine. I can see exactly who’s overloaded in real-time—no more guesswork. It’s hands-down the best time tracking tool we’ve tried.”</em></p><p>— <em>Sarah T., Project Lead</em></p><p><br></p><p><em>“I used to underbill clients because I’d forget to track time. With TimeVibe’s smart timers, I’ve added $500 a month to my invoices—and it’s all right inside monday.com. Game-changer!”</em></p><p>— <em>Jake R., Independent Designer</em></p><p><br></p><p><strong>Real Results from TimeVibe Users:</strong></p><ul><li><strong>30% increase in billable hours captured</strong> within the first month.</li><li><strong>95% of users stick with TimeVibe</strong> after the trial—far above the industry average.</li><li><strong>60x return on effort</strong>: Invest 5 minutes to set up, save 5 hours a week.</li></ul><p><br></p><p>Ready to master your time? Install TimeVibe today and enjoy a 14-day free trial—no credit card needed. Watch your teams productivity soar!</p><p><br></p><p>📅 <a href=\"https://appvibe.com/demo\" rel=\"noopener noreferrer\" target=\"_blank\">Book a demo</a> | 💬 <a href=\"https://appvibe.com/contact\" rel=\"noopener noreferrer\" target=\"_blank\">Chat with us</a> | 🌟 <a href=\"https://appvibe.com/demo\" rel=\"noopener noreferrer\" target=\"_blank\">See it in action</a></p>",
@@ -45899,6 +46037,7 @@
       "name": "Google Calendar Sync for monday.com",
       "type": "archived",
       "date": "2025-07-09",
+      "installs": 221,
       "app": {
         "id": 10000780,
         "description": "<p><strong>Seamlessly Sync Any Google Calendar with Your Boards!</strong></p><p>🚀&nbsp;<strong>No more calendar chaos!</strong>&nbsp;Easily integrate any of your Google Calendars with your boards without the need to share personal calendars or create extra Google accounts. Manage events with complete flexibility and control.</p><p><strong>🔥&nbsp;Why Choose This App?</strong></p><p>🗓&nbsp;<strong>Connect Multiple Calendars &amp; Accounts</strong>&nbsp;– Choose from any Google Calendar linked to your account or add multiple Google accounts to sync different calendars across different boards.</p><p>⚡&nbsp;<strong>Custom Sync Options</strong>&nbsp;– Set up one-way or two-way synchronization between your boards and Google Calendar to match your workflow.</p><p>✅&nbsp;<strong>Smart Automation for Events</strong>&nbsp;– Automatically create calendar events when item statuses change, ensuring only relevant updates are scheduled.</p><p>🔄&nbsp;<strong>Instant &amp; Reliable Syncing</strong>&nbsp;– Enjoy real-time synchronization, plus an additional scheduled sync every 15 minutes to guarantee no updates are missed.</p><p>📩&nbsp;<strong>We Want Your Feedback!</strong>&nbsp;– Have ideas for improvements? Reach out to us, and let’s make this app even better together.</p><p>🎥&nbsp;<strong>See It in Action!</strong>&nbsp;– Book a free live demo and explore how this integration can simplify your scheduling!</p><p>Talk to us -&nbsp;<a href=\"https://calendly.com/graceatkins001/30min?month=2025-02\" rel=\"noopener noreferrer\" target=\"_blank\">https://calendly.com/graceatkins001/30min?month=2025-02</a></p>",
@@ -46264,6 +46403,7 @@
       "name": "QSR Sites & Projects Suite",
       "type": "archived",
       "date": "2025-07-04",
+      "installs": 6,
       "app": {
         "id": 10000853,
         "description": "<p>Effortlessly manage&nbsp;<strong>site requests, construction, upgrades, visits, and risk tracking</strong>—all in one platform. From&nbsp;<strong>pre-construction approvals</strong>&nbsp;to&nbsp;<strong>financial tracking (CAPEX/Invoices)</strong>&nbsp;and&nbsp;<strong>risk management</strong>, gain full control over your projects.</p><p><strong>Key Features:</strong></p><p>🏗&nbsp;<strong>Site &amp; Construction Management</strong>&nbsp;– Oversee development from request to completion</p><p>🚀&nbsp;<strong>Upgrades &amp; Approvals</strong>&nbsp;– Streamline site enhancements and ensure compliance</p><p>📊&nbsp;<strong>Reporting &amp; Dashboards</strong>&nbsp;– Get real-time insights across all sites and projects</p><p>💰&nbsp;<strong>Finance Tracking</strong>&nbsp;– Manage budgets, invoices, and capital expenses</p><p>⚠&nbsp;<strong>Risk Management</strong>&nbsp;– Stay ahead of potential issues with a structured risk register</p><p><strong>Simplify operations, improve decision-making, and scale effortlessly.</strong></p><p>👉&nbsp;<a href=\"https://meet.yesware.com/me/stevederviniotis\" rel=\"noopener noreferrer\" target=\"_blank\">Book a Demo</a>&nbsp;or&nbsp;<a href=\"mailto:contactus@workperfect.io\" rel=\"noopener noreferrer\" target=\"_blank\">Contact Us</a>&nbsp;to learn more!</p>",
@@ -46435,6 +46575,7 @@
       "name": "Project Delivery Master",
       "type": "archived",
       "date": "2025-07-04",
+      "installs": 4,
       "app": {
         "id": 10000854,
         "description": "<p><strong>The Project Delivery Master Template</strong></p><p>An all-in-one solution to manage your projects efficiently from start to finish. 🚀</p><ul><li><strong>💰 Real-Time Profitability Analysis</strong></li><li>Ensure financial goals are met with up-to-date insights.</li><li><strong>📅 Streamlined Project Planning</strong></li><li>Manage task assignments, deadlines, and progress tracking effortlessly.</li><li><strong>📊 Client Reporting Dashboard</strong></li><li>Keep your clients informed with live, real-time updates.</li><li><strong>🤝 Cross-Department Collaboration</strong></li><li>Foster seamless teamwork across departments for smooth project delivery.</li><li><strong>🔧 Optimized Resource Management</strong></li><li>Efficiently allocate resources to ensure the best use of time and skills.</li><li><strong>⚡ Agile Sprint Planning</strong></li><li>Perfect for supporting Agile workflows and keeping projects on track.</li><li><strong>📈 Optional CRM Integration</strong></li><li>Align sales and project delivery with integrated client relationship management.</li></ul><p>This&nbsp;<strong>all-in-one template</strong>&nbsp;ensures your projects are completed&nbsp;<strong>on time, within budget</strong>, and with&nbsp;<strong>clear communication</strong>. 🎯</p><p><br></p><p>💬&nbsp;<strong>Ready to see PDM in action? Book a&nbsp;</strong><a href=\"https://scheduler.zoom.us/hilla/30-mins-11111-ovonhvd0\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>free demo</strong></a><strong>&nbsp;today!</strong></p>",
@@ -46598,6 +46739,7 @@
       "name": "HRMS for monday.com",
       "type": "archived",
       "date": "2025-07-04",
+      "installs": 6,
       "app": {
         "id": 10000855,
         "description": "<p>HRMS for&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;is a comprehensive human resource management system designed to streamline HR processes within the&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;platform. With this app, users can easily manage employee data and streamline onboarding and offboarding processes. The app includes workflows for Resource requisition, ATS, Onboarding, Talent management, employee engagement, HR service desk and HR reporting making it a valuable tool for HR professionals looking to simplify and optimize their workflows. This solution has over 100+ prebuilt automations covering key aspects of HR operations. With this you will have \"Everything you need to manage</p><p>HR on One Platform\". So, are you ready to digitize your HR with an end-to-end solution built on&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>? 💻💼🏢</p>",
@@ -46789,6 +46931,7 @@
       "name": "Legal Intake CRM",
       "type": "archived",
       "date": "2025-07-04",
+      "installs": 3,
       "app": {
         "id": 10000856,
         "description": "<p><strong>Legal Intake CRM</strong>&nbsp;helps law firms streamline client intake, manage cases, and automate their legal workflows, all within&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>. Built for legal professionals, this no-code solution centralizes intake forms, contact management, case tracking, and document handling in one smart, easy-to-use workspace.</p><p><strong>What You’ll Get With Legal Intake CRM:</strong></p><ul><li><strong>Customizable Client Intake Forms</strong>&nbsp;– Collect client details, documents, and signatures automatically.</li><li><strong>Automated Case Pipelines</strong>&nbsp;– Move leads through legal stages like consultation, engagement, and case review without manual follow-up.</li><li><strong>Centralized Contact &amp; Matter Management</strong>&nbsp;– Track clients, referrals, cases, and related documents in one organized system.</li><li><strong>Deadline &amp; Task Management</strong>&nbsp;– Stay ahead of court dates, document deadlines, and follow-ups with built-in reminders.</li><li><strong>Dashboards &amp; Reporting</strong>&nbsp;– Get real-time visibility into open cases, intake volume, conversion rates, and attorney caseloads.</li><li><strong>Document Generation &amp; e-Signatures</strong>&nbsp;– Integrate with tools like DocuGen, PandaDoc, or DocuSign to generate, send, and sign retainers or legal forms.</li><li><strong>Legal-Specific Workflow Templates</strong>&nbsp;– Designed for personal injury, immigration, estate planning, and more.</li></ul><p><strong>Solving Common Legal Challenges:</strong></p><ul><li>Tired of using email, spreadsheets, and disconnected tools for intake?</li><li>Missing follow-ups, losing leads, or struggling with document tracking?</li><li>Wasting time onboarding clients or managing staff assignments?</li></ul><p><strong>Legal Intake CRM</strong>&nbsp;turns chaos into clarity — streamlining your entire client journey with automation, visibility, and control.</p><p><strong>Ready to simplify your intake process?</strong></p><p><a href=\"https://calendly.com/workflowmagic/legal-solution\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>Book a free demo</strong></a>&nbsp;to learn how this solution can work for your firm.</p><p><strong>About Workflow Magic:</strong></p><p>We’re a&nbsp;<strong>Platinum&nbsp;</strong><a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>monday.com</strong></a><strong>&nbsp;partner</strong>&nbsp;that helps law firms and service businesses streamline operations and scale with ease. With 500+ implementations and 100+ five-star reviews, our solutions turn your workflow into magic. Learn more at&nbsp;<a href=\"https://www.workflowmagic.co/\" rel=\"noopener noreferrer\" target=\"_blank\">www.workflowmagic.co</a>.</p>",

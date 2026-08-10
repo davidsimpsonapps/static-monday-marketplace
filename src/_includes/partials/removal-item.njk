@@ -19,6 +19,7 @@
     <div class="text-xs text-gray-600">
       {% if event.type == 'archived' %}Archived{% else %}Removed from the marketplace{% endif %}
       on {{ event.date | formatDate }}
+      {% if event.installs != null %}• {{ event.installs | numberFormat }} installs{% endif %}
     </div>
   </div>
 
