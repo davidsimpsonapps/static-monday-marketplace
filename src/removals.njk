@@ -59,7 +59,7 @@ eleventyComputed:
         <div>
           <h2 class="text-lg md:text-2xl mt-6 font-semibold">Latest changes • {{ removals.latestBuildDate | formatDate }}</h2>
           <p class="text-xs">Removals and archivals detected in today's build.</p>
-          <ul class="flex flex-col gap-2 mt-2">
+          <ul class="flex flex-col gap-2 mt-2 p-0">
             {% for event in removals.latest %}
               {% include "partials/removal-item.njk" %}
             {% endfor %}
@@ -76,7 +76,7 @@ eleventyComputed:
       <p class="text-xs">Every detected removal or archival since we started collecting data, most recent first.</p>
 
       {% if events.length > 0 %}
-        <ul class="flex flex-col gap-2 mt-2">
+        <ul class="flex flex-col gap-2 mt-2 p-0">
           {% for event in events %}
             {% include "partials/removal-item.njk" %}
           {% endfor %}

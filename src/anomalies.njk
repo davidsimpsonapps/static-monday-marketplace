@@ -63,7 +63,7 @@ eleventyComputed:
         <div>
           <h2 class="text-lg md:text-2xl mt-6 font-semibold">Current anomalies • {{ anomalies.latestBuildDate | formatDate }}</h2>
           <p class="text-xs">Anomalies detected in today's build.</p>
-          <ul class="flex flex-col gap-2 mt-2">
+          <ul class="flex flex-col gap-2 mt-2 p-0">
             {% for episode in anomalies.latest %}
               {% include "partials/anomaly-item.njk" %}
             {% endfor %}
@@ -80,7 +80,7 @@ eleventyComputed:
       <p class="text-xs">Every detected jump or drop since we started collecting data, most recent first.</p>
 
       {% if episodes.length > 0 %}
-        <ul class="flex flex-col gap-2 mt-2">
+        <ul class="flex flex-col gap-2 mt-2 p-0">
           {% for episode in episodes %}
             {% include "partials/anomaly-item.njk" %}
           {% endfor %}
