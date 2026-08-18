@@ -1,7 +1,399 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-08-17",
+  "processedThrough": "2026-08-18",
   "events": [
+    {
+      "id": 10000403,
+      "app_id": 10125369,
+      "name": "Planning in Scrum Manager",
+      "type": "archived",
+      "date": "2026-08-18",
+      "installs": null,
+      "app": {
+        "id": 10000403,
+        "marketplace_developer_id": 10000170,
+        "app_id": 10125369,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1707395409/monday-apps-marketplace/Planning%20in%20Scrum%20Manager/Gallery-1_1.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1707395409/monday-apps-marketplace/Planning%20in%20Scrum%20Manager/2_12.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1707395409/monday-apps-marketplace/Planning%20in%20Scrum%20Manager/3_9.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/video/upload/v1707395412/monday-apps-marketplace/Planning%20in%20Scrum%20Manager/Planning_in_Scrum_Manager.mp4",
+            "type": "video"
+          }
+        ],
+        "description": "<p>Planning in Scrum Manager is an interactive estimation app designed to invigorate project planning across all team types - hybrid, in-person, or remote.</p><p>Seamlessly integrated with monday.com , this app transforms traditional task estimation into an engaging, collaborative game. Ideal for any team dynamic, it ensures ease of use and accuracy in generating task estimates, making project planning both fun and efficient.</p><p><br></p><p><strong>Key Features:</strong></p><p><br></p><p><strong>Seamless Integration: </strong>Effortlessly import tasks from your Monday workspace into our intuitive planning game.</p><p><br></p><p><strong>Easy Setup:</strong> Get up and running quickly with straightforward session setups. Assign roles for watchers and estimators and control timer settings for a streamlined experience.</p><p><br></p><p><strong>Flexible Estimation Approaches:</strong> Choose between synchronous for real-time estimation, or asynchronous estimation to accommodate busy schedules with an option for team members to vote when it suits them.</p><p><br></p><p><strong>Unbiased Voting System:</strong> Ensure fair inputs with a voting system that reveals estimates only after all participants have contributed.</p><p><br></p><p><strong>Transparent Tracking: </strong>Monitor who has voted and view their estimates at any time, fostering transparency and accountability within your team.</p><p><br></p><p><strong>Enhance Team Collaboration: </strong>With Planning in Scrum Manager, you'll not only improve estimation precision but also boost team synergy.</p><p><br></p><p>The app's engaging format encourages active participation and collective decision-making, making it ideal for hybrid, remote, or in-person teams.</p><p>Ready to estimate? Empower your team with Planning in Scrum Manager</p>",
+        "short_description": "The easy way to estimate tasks for remote teams!",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1707395408/monday-apps-marketplace/Planning%20in%20Scrum%20Manager/App.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1707395408/monday-apps-marketplace/Planning%20in%20Scrum%20Manager/app-icon-192x192px.png",
+        "feedback_url": "support@view26.com",
+        "privacy_policy_url": "https://www.view26.com/privacy/",
+        "featured": false,
+        "name": "Planning in Scrum Manager",
+        "how_to_use_url": "https://planning-in-scrum-manager.scrollhelp.site/pism/getting-started",
+        "external_pricing_url": null,
+        "keywords": "software development, \n Collaboration,\n Team management,\n  Planning Poker,  \nEstimation, \n Task estimation",
+        "compliance_answers": [],
+        "created_at": "2024-02-08T12:30:42.000Z",
+        "updated_at": "2026-08-17T10:43:19.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Easier resource management"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://help.view26.com/legal/monday-com-apps-terms-and-conditions",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read,boards:read,boards:write,users:read",
+        "app_client_id": "cf752b456f9de96e8f6c21122487fb1e",
+        "app_color": {
+          "hsl": {
+            "h": 180,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 180,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 180,
+          "source": "rgb"
+        },
+        "plans": [
+          {
+            "id": "10125369-1-SM_01_500",
+            "appPlanId": "SM_01_500",
+            "name": "Up to 500 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 150,
+              "yearly": 100,
+              "maxSeats": 500
+            },
+            "versionState": "live",
+            "appId": 10125369,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "Seamless Integration",
+                "Easy Setup",
+                "Choose between synchronous or async estimation",
+                "Unbiased Voting System"
+              ],
+              "monthlyFee": 150,
+              "yearlyFee": 100,
+              "maxSeats": 500
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10125369-1-SM_01_03",
+            "appPlanId": "SM_01_03",
+            "name": "Up to 3 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 3,
+              "yearly": 2,
+              "maxSeats": 3
+            },
+            "versionState": "live",
+            "appId": 10125369,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "Seamless Integration",
+                "Easy Setup",
+                "Choose between synchronous or async estimation",
+                "Unbiased Voting System"
+              ],
+              "monthlyFee": 3,
+              "yearlyFee": 2,
+              "maxSeats": 3
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10125369-1-SM_01_05",
+            "appPlanId": "SM_01_05",
+            "name": "Up to 5 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 5,
+              "yearly": 4,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10125369,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "Seamless Integration",
+                "Easy Setup",
+                "Choose between synchronous or async estimation",
+                "Unbiased Voting System"
+              ],
+              "monthlyFee": 5,
+              "yearlyFee": 4,
+              "maxSeats": 5
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10125369-1-SM_01_10",
+            "appPlanId": "SM_01_10",
+            "name": "Up to 10 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 10,
+              "yearly": 8,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10125369,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "Seamless Integration",
+                "Easy Setup",
+                "Choose between synchronous or async estimation",
+                "Unbiased Voting System"
+              ],
+              "monthlyFee": 10,
+              "yearlyFee": 8,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10125369-1-SM_01_020",
+            "appPlanId": "SM_01_020",
+            "name": "Up to 20 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 20,
+              "yearly": 17,
+              "maxSeats": 20
+            },
+            "versionState": "live",
+            "appId": 10125369,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "Seamless Integration",
+                "Easy Setup",
+                "Choose between synchronous or async estimation",
+                "Unbiased Voting System"
+              ],
+              "monthlyFee": 20,
+              "yearlyFee": 17,
+              "maxSeats": 20
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10125369-1-SM_01_050",
+            "appPlanId": "SM_01_050",
+            "name": "Up to 30 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 50,
+              "yearly": 42,
+              "maxSeats": 30
+            },
+            "versionState": "live",
+            "appId": 10125369,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "Seamless Integration",
+                "Easy Setup",
+                "Choose between synchronous or async estimation",
+                "Unbiased Voting System"
+              ],
+              "monthlyFee": 50,
+              "yearlyFee": 42,
+              "maxSeats": 30
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10125369-1-SM_01_100",
+            "appPlanId": "SM_01_100",
+            "name": "Up to 100 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 80,
+              "yearly": 75,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10125369,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "Seamless Integration",
+                "Easy Setup",
+                "Choose between synchronous or async estimation",
+                "Unbiased Voting System"
+              ],
+              "monthlyFee": 80,
+              "yearlyFee": 75,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10125369-1-SM_01_200",
+            "appPlanId": "SM_01_200",
+            "name": "Up to 200 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 100,
+              "yearly": 80,
+              "maxSeats": 200
+            },
+            "versionState": "live",
+            "appId": 10125369,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "Easy Setup",
+                "Choose between synchronous or async estimation",
+                "Unbiased Voting System"
+              ],
+              "monthlyFee": 100,
+              "yearlyFee": 80,
+              "maxSeats": 200
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10125369-1-SM_01_Unlimited",
+            "appPlanId": "SM_01_Unlimited",
+            "name": "Unlimited",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 500,
+              "yearly": 400,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10125369,
+            "description": "Unlimited Plan",
+            "extraData": {
+              "bullets": [
+                "Seamless Integration",
+                "Easy Setup",
+                "Choose between synchronous or async estimation",
+                "Unbiased Voting System"
+              ],
+              "monthlyFee": 500,
+              "yearlyFee": 400,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2024-03-24T08:54:52.356Z",
+          "id": 10201540
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Easier resource management"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://help.view26.com/legal/monday-com-apps-terms-and-conditions",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10001165,
       "app_id": 11071817,
