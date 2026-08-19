@@ -1,7 +1,247 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-08-18",
+  "processedThrough": "2026-08-19",
   "events": [
+    {
+      "id": 10000503,
+      "app_id": 10154224,
+      "name": "Quick Add Item",
+      "type": "archived",
+      "date": "2026-08-19",
+      "installs": null,
+      "app": {
+        "id": 10000503,
+        "marketplace_developer_id": 10000212,
+        "app_id": 10154224,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/video/upload/v1718290090/monday-apps-marketplace/Quick%20Add%20Item/quick_add_item_promo_video.mp4",
+            "type": "video"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1718290099/monday-apps-marketplace/Quick%20Add%20Item/1.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1718290099/monday-apps-marketplace/Quick%20Add%20Item/2.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1718290099/monday-apps-marketplace/Quick%20Add%20Item/3.png"
+          }
+        ],
+        "description": "<p><strong>Enhance your productivity with our powerful Quick Add Item app!</strong></p><p><br></p><p>Designed to streamline your workflow, this innovative tool allows you to create items or subitems on the fly, without the need to open boards or navigate through multiple layers. Perfect for teams who value efficiency and speed, we ensure that your focus remains on what truly matters—getting the job done.</p><p><strong>Seamless Item or Subitem Creation:</strong></p><p>• Quickly add new items or subitems directly from one place.</p><p>• No need to open individual boards or delve into specific projects.</p><p><strong>Intuitive User Interface:</strong></p><p>• User-friendly design that integrates smoothly with your existing setup.</p><p>• Simple, clean, and efficient interface that requires no learning curve.</p><p><strong>Instant Updates:</strong></p><p>• Real-time synchronization ensures that your new items are immediately reflected across your boards.</p><p><strong>Boost Productivity:</strong></p><p>• Save valuable time by creating items without navigating away from your current task.</p><p>• Keep your team focused and minimize interruptions.</p><p><br></p><p>If you're interested in a demo, you can&nbsp;<a href=\"https://calendly.com/contact-ziim/30min\" rel=\"noopener noreferrer\" target=\"_blank\">schedule one here</a>.</p><p>If you have questions, you can contact us at&nbsp;<a href=\"mailto:contact@projectaddons.com\" rel=\"noopener noreferrer\" target=\"_blank\">contact@projectaddons.com</a>.</p>",
+        "short_description": "Create an item or subitem easily across workspaces.",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1718290089/monday-apps-marketplace/Quick%20Add%20Item/quick_item_add_app_card.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1718290089/monday-apps-marketplace/Quick%20Add%20Item/quick_item_add_192x192.png",
+        "feedback_url": "contact@projectaddons.com",
+        "privacy_policy_url": "https://projectaddons.com/privacy-policy/",
+        "featured": false,
+        "name": "Quick Add Item",
+        "how_to_use_url": "https://projectaddons.com/quick-add-item-how-to-use/",
+        "external_pricing_url": null,
+        "keywords": "create, item, subitem, quick, fast",
+        "compliance_answers": [
+          {
+            "questionId": 1,
+            "shortAnswer": false,
+            "detailedAnswer": "N/A We do not store any user data. "
+          },
+          {
+            "questionId": 2,
+            "shortAnswer": true,
+            "detailedAnswer": "Our client-side application is hosted on monday.com’s servers. Additionally, we are using Dependabot on GitHub to receive notifications for hotfixes and security updates."
+          },
+          {
+            "questionId": 3,
+            "shortAnswer": true
+          },
+          {
+            "questionId": 4,
+            "shortAnswer": false,
+            "detailedAnswer": "N/A since the app is a client-side app."
+          },
+          {
+            "questionId": 5,
+            "shortAnswer": true,
+            "detailedAnswer": "We are using DOMPurify Javascript library for the app to sanitize user supplied content."
+          },
+          {
+            "questionId": 6,
+            "shortAnswer": false,
+            "detailedAnswer": "N/A The app does not have a back-end."
+          },
+          {
+            "questionId": 7,
+            "shortAnswer": true,
+            "detailedAnswer": "Since this is a client-side application we only have MFA on monday.com's app management portal. "
+          },
+          {
+            "questionId": 8,
+            "shortAnswer": true,
+            "detailedAnswer": "N/A Since the app is client-side application, it is not subject to logs. The app does not store secrets or PII data. "
+          },
+          {
+            "questionId": 9,
+            "shortAnswer": false,
+            "detailedAnswer": "N/A Since the app is client-side application, it is not subject to mass parameter assignment attacks."
+          },
+          {
+            "questionId": 10,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 11,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 12,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 13,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 14,
+            "shortAnswer": true,
+            "detailedAnswer": "contact@projectaddons.com"
+          },
+          {
+            "questionId": 15,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 17,
+            "dataHostingProvider": "monday"
+          },
+          {
+            "questionId": 18,
+            "detailedAnswer": "N/A This is not logging since it is a client-side app.",
+            "logHostingProvider": "other"
+          }
+        ],
+        "created_at": "2024-06-13T14:46:48.000Z",
+        "updated_at": "2026-08-18T12:31:26.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial + Free plan available",
+        "label": null,
+        "app_values": [
+          "Everyday tasks"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://projectaddons.com/terms-of-service/",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write,workspaces:read,users:read,tags:read,account:read",
+        "app_client_id": "b7cc36e9f8e83df64962faa5ad5ed101",
+        "app_color": "#564190",
+        "plans": [
+          {
+            "id": "10154224-1-free_tier",
+            "appPlanId": "free_tier",
+            "name": "Up to 2 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 0,
+              "yearly": 0,
+              "maxSeats": 2
+            },
+            "versionState": "live",
+            "appId": 10154224,
+            "description": "Full use of this app for up to 2 team members.",
+            "extraData": {
+              "bullets": [
+                "Find and replace items and subitems across one or many workspaces",
+                "Use extensive search options",
+                "Export search results",
+                "Use caching when desired"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0,
+              "maxSeats": 2
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10154224-1-pro_tier",
+            "appPlanId": "pro_tier",
+            "name": "Unlimited Seats",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 5,
+              "yearly": 4,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10154224,
+            "description": "Full use of this app for Unlimited team members.",
+            "extraData": {
+              "bullets": [
+                "Find and replace items and subitems across one or many workspaces",
+                "Use extensive search options",
+                "Export search results",
+                "Use caching when desired"
+              ],
+              "monthlyFee": 5,
+              "yearlyFee": 4,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2024-06-29T12:07:37.747Z",
+          "id": 10267483
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Everyday tasks"
+          ],
+          "pricing_data": "14 days trial + Free plan available",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://projectaddons.com/terms-of-service/",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000403,
       "app_id": 10125369,
