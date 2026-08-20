@@ -1,7 +1,125 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-08-19",
+  "processedThrough": "2026-08-20",
   "events": [
+    {
+      "id": 10000272,
+      "app_id": 10085931,
+      "name": "Chassis",
+      "type": "archived",
+      "date": "2026-08-20",
+      "installs": null,
+      "app": {
+        "id": 10000272,
+        "marketplace_developer_id": 10000121,
+        "app_id": 10085931,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1691418516/monday-apps-marketplace/Chassis/Gallery_Image_Template_4_6.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1691418514/monday-apps-marketplace/Chassis/Gallery_Image_Template_5_4.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1691418522/monday-apps-marketplace/Chassis/Card_Image_Template_5.png"
+          }
+        ],
+        "description": "<p>This app will allow users who rely on monday.com in their daily PM work to upload their projects to <strong>Chassis</strong> where they can prioritize them between each other based on our customizeable prioritization framework.</p><p><br></p><p>Moreover, this integration will allow them to have a clear view of what projects are actually worth to do and which are worth to cancel or deprioritize.</p>",
+        "short_description": "App allows users to push updates to their Chassis account for easier prioritization of projects.",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1691418522/monday-apps-marketplace/Chassis/Card_Image_Template_5.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1691418519/monday-apps-marketplace/Chassis/Chassis_App_Logo.png",
+        "feedback_url": "team@onchassis.com",
+        "privacy_policy_url": "https://www.onchassis.com/privacy-policy.pdf",
+        "featured": false,
+        "name": "Chassis",
+        "how_to_use_url": "https://www.onchassis.com/how-to-use-monday-integration",
+        "external_pricing_url": null,
+        "keywords": "chassis,\n integration, \nprioritization",
+        "compliance_answers": [],
+        "created_at": "2023-08-07T14:30:42.000Z",
+        "updated_at": "2026-08-19T11:20:39.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "Free",
+        "label": null,
+        "app_values": [
+          "Popular with Dev users"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": true,
+        "show_connections": false,
+        "terms_of_service_url": "https://www.onchassis.com/terms-of-use.pdf",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read,boards:read,workspaces:read,account:read",
+        "app_client_id": "4427d2572a6d206257d1ce6fc8f88a48",
+        "app_color": {
+          "hsl": {
+            "h": 12.631578947368382,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 12.631578947368382,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 12.631578947368382,
+          "source": "rgb"
+        },
+        "plans": null,
+        "app_live_version": {
+          "updated_at": "2024-03-24T08:50:40.540Z",
+          "id": 10136055
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "none",
+          "hasFreePlan": false,
+          "hasPaidPlan": false,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Popular with Dev users"
+          ],
+          "pricing_data": "Free",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": true,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://www.onchassis.com/terms-of-use.pdf",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000503,
       "app_id": 10154224,
