@@ -1,7 +1,913 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-08-20",
+  "processedThrough": "2026-08-21",
   "events": [
+    {
+      "id": 10000902,
+      "app_id": 10380570,
+      "name": "Kindra AI℠",
+      "type": "archived",
+      "date": "2026-08-21",
+      "installs": null,
+      "app": {
+        "id": 10000902,
+        "marketplace_developer_id": 100000083,
+        "app_id": 10380570,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000902/10000902_2025_7_22_11_33_8_j8m7v5s.jpg",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000902/10000902_2025_7_22_11_33_14_9yhh8x.jpg",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000902/10000902_2025_7_22_11_33_20_kyzsuge.jpg",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000902/10000902_2025_7_22_11_33_28_iqkqj4f.jpg",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000902/10000902_2025_7_22_11_33_35_g7wef0r.jpg",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000902/10000902_2025_7_22_11_34_37_g8tga0i.mp4",
+            "type": "video"
+          }
+        ],
+        "description": "<p>Get instant answers about your monday.com data through natural conversation with AI that understands your workspace.</p><p><br></p><p>Your data lives across dozens of boards. Getting simple answers shouldn't require 15 minutes of clicking and filtering. Kindra AI℠ brings intelligent assistance to your monday.com workspace - ask questions naturally and get instant insights.</p><p><br></p><p><strong>🚀 Key Features:</strong></p><ul><li><strong>📊 Instant visualization</strong> - Get charts, tables, and pivot views immediately</li><li>📥 <strong>Data exports - </strong>Export CSVs for use in Excel or Google Sheets</li><li><strong>🔍 Universal search</strong> - Find anything across all boards with partial info</li><li><strong>💬 Natural conversation</strong> - No query languages or technical knowledge needed</li><li><strong>⚡ Zero setup</strong> - Works with your existing data from day one</li></ul><p><br></p><p>Simply type questions and get accurate responses with visualizations. Whether finding a policy number, analyzing workloads, or tracking trends, Kindra AI responds like a colleague with perfect memory of your workspace.</p><p><br></p><p><strong>🎯 Built for teams using monday.com for:</strong></p><ul><li>CRM &amp; sales pipelines</li><li>Real estate management</li><li>HR &amp; people operations</li><li>Marketing campaigns</li><li>Financial tracking</li><li>Any data-driven workflow</li></ul><p><br></p><p><strong>💡 Example Questions:</strong></p><ul><li>\"Show me all high-priority items across all boards\"</li><li>\"What's our conversion rate by source?\"</li><li>\"Find all contracts expiring next month\"</li><li>\"Show properties by neighborhood and status\"</li></ul><p><br></p><p><strong>🔒 What Makes Kindra AI Different:</strong></p><ul><li><strong>Approved by monday.com</strong> - Built on official APIs</li><li><strong>Smart search</strong> - Find anything with partial information across all boards</li><li><strong>No dashboards needed</strong> - Just type questions and see instant visualizations</li></ul><p><br></p><p><strong>🌟 Common Use Cases:</strong></p><ul><li><strong>Sales teams:</strong> Track pipeline health, identify at-risk deals, analyze conversion rates</li><li><strong>Real estate:</strong> Monitor property status, track client interactions, analyze market trends</li><li><strong>HR departments:</strong> Visualize headcount, track onboarding progress, identify bottlenecks</li><li><strong>Marketing teams:</strong> Measure campaign performance, track content calendars, analyze ROI</li><li><strong>Operations:</strong> Find process inefficiencies, track SLAs, monitor team workloads</li></ul><p><br></p><p>Install Kindra AI and start getting answers in minutes. No configuration required.</p>",
+        "short_description": "Your AI-powered data expert for monday.com",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000902/10000902_2025_7_22_11_32_33_9gfql7i.jpg",
+        "logo_url": "https://cdn.monday.com/marketplace/10000902/10000902_2025_7_22_11_31_40_hxwzpc2l.png",
+        "feedback_url": "support@kindra.ai",
+        "privacy_policy_url": "https://www.kindra.ai/privacy",
+        "featured": false,
+        "name": "Kindra AI℠",
+        "how_to_use_url": "https://www.kindra.ai/how-to-use",
+        "external_pricing_url": null,
+        "keywords": "analytics,multiple boards,cross-board,reports,export,CRM,search,AI,find,chat",
+        "compliance_answers": [
+          {
+            "questionId": 20,
+            "shortAnswer": false,
+            "detailedAnswer": "Not certified. Our security practices align with ISO 27001 principles including automated security scanning, audit logging, and encrypted data storage.j"
+          },
+          {
+            "questionId": 19,
+            "shortAnswer": true,
+            "detailedAnswer": "The app sends data outside of monday.com to provide AI-powered functionality. Customer-submitted data (board names, item names, chat messages) is sent to Anthropic Claude API and Google Gemini API for AI processing. Non-customer-submitted data (account IDs, board IDs, user IDs) is sent to our infrastructure and monitoring services. All data transmission uses TLS 1.2+ encryption. OAuth tokens are never transmitted to third parties."
+          },
+          {
+            "questionId": 18,
+            "detailedAnswer": "Application logs are routed through Heroku's Logplex (retained for 1 week, US region). Audit logs for compliance purposes are stored in encrypted PostgreSQL database (US region) with 2-month retention and workspace-level isolation. All logs exclude sensitive information via automatic parameter filtering.",
+            "logHostingProvider": "other"
+          },
+          {
+            "questionId": 17,
+            "detailedAnswer": "App data is stored in encrypted PostgreSQL database hosted in US East region. All data is encrypted at rest and in transit. Automated daily backups with point-in-time recovery. Customer data is logically segregated by workspace.",
+            "dataHostingProvider": "DB"
+          },
+          {
+            "questionId": 15,
+            "shortAnswer": false,
+            "detailedAnswer": "We currently use automated security scanning (static analysis and dependency auditing) on every code deployment with immediate alerting for vulnerabilities."
+          },
+          {
+            "questionId": 14,
+            "shortAnswer": true,
+            "detailedAnswer": "Security contact: support@kindra.ai"
+          },
+          {
+            "questionId": 13,
+            "shortAnswer": false,
+            "detailedAnswer": "Kindra AI is not HIPAA compliant and is not designed for Protected Health Information (PHI). Terms of Service prohibit entering PHI.j"
+          },
+          {
+            "questionId": 12,
+            "shortAnswer": false,
+            "detailedAnswer": "Not certified. Our security controls align with SOC 2 principles including encryption in transit and at rest, comprehensive audit logging, multi-factor authentication for production access, and workspace data segregation. Infrastructure hosted on Heroku (SOC 2 Type II certified platform)."
+          },
+          {
+            "questionId": 11,
+            "shortAnswer": true,
+            "detailedAnswer": "We implement GDPR requirements including data minimization, user rights (access, rectification, erasure), encryption, and audit logging. Data is stored in US East region."
+          },
+          {
+            "questionId": 10,
+            "shortAnswer": true,
+            "detailedAnswer": "Server-side redirects are restricted to internal application paths and monday.com OAuth flow. User-generated content containing links (http, https, mailto) opens in new tabs with noopener/noreferrer protection and undergoes URL validation and HTML sanitization./"
+          },
+          {
+            "questionId": 9,
+            "shortAnswer": true,
+            "detailedAnswer": "All API endpoints use explicit parameter validation and database constraints enforce data integrity.\n"
+          },
+          {
+            "questionId": 8,
+            "shortAnswer": true,
+            "detailedAnswer": "Sensitive parameters (passwords, tokens, secrets) are automatically filtered from logs. Logs containing compliance-required PII are stored separately in encrypted database with access control."
+          },
+          {
+            "questionId": 7,
+            "shortAnswer": true,
+            "detailedAnswer": "Multi-factor authentication is enforced for all production system access via authenticator app. Platform-level MFA is mandatory for both Dashboard and CLI access."
+          },
+          {
+            "questionId": 6,
+            "shortAnswer": true,
+            "detailedAnswer": "Access to customer data is restricted based on the principle of least privilege. All data is workspace-scoped with authorization policies enforcing isolation.j"
+          },
+          {
+            "questionId": 5,
+            "shortAnswer": true,
+            "detailedAnswer": "Multi-layer XSS protection includes automatic HTML escaping, content sanitization, and Content Security Policy enforcement.j"
+          },
+          {
+            "questionId": 4,
+            "shortAnswer": true,
+            "detailedAnswer": "CSRF protection is enabled for all state-changing actions with cryptographic token verification. Webhook endpoints use JWT signature verification."
+          },
+          {
+            "questionId": 3,
+            "shortAnswer": true,
+            "detailedAnswer": "Security breaches are reported to monday.com promptly upon discovery with breach scope, affected data, and remediation steps."
+          },
+          {
+            "questionId": 2,
+            "shortAnswer": true,
+            "detailedAnswer": "Security patches are prioritized based on severity. Critical vulnerabilities are addressed immediately. Dependencies are monitored daily via Dependabot with automated security scanning on every deployment."
+          },
+          {
+            "questionId": 1,
+            "shortAnswer": true,
+            "detailedAnswer": "All customer data is logically segregated by workspace with database constraints and access controls enforcing isolation. OAuth tokens are per-user with automatic scope enforcement."
+          }
+        ],
+        "created_at": "2025-08-22T11:30:12.000Z",
+        "updated_at": "2026-08-20T05:59:37.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 day trial",
+        "label": null,
+        "app_values": [
+          "Make data-driver decisions"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://www.kindra.ai/terms",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read,boards:read,users:read,updates:read",
+        "app_client_id": "c1dc0e0280a16e25a2abb9adf8445e98",
+        "app_color": {
+          "hsl": {
+            "h": 267.2,
+            "s": 0.2964426877470356,
+            "l": 0.503921568627451,
+            "a": 1
+          },
+          "hex": "#7d5ba6",
+          "rgb": {
+            "r": 125,
+            "g": 91,
+            "b": 166,
+            "a": 1
+          },
+          "hsv": {
+            "h": 267.2,
+            "s": 0.45180722891566266,
+            "v": 0.6509803921568628,
+            "a": 1
+          },
+          "oldHue": 256.9230769230769,
+          "source": "hex"
+        },
+        "plans": [
+          {
+            "id": "10380570-1-kindra_starter",
+            "appPlanId": "kindra_starter",
+            "name": "Kindra AI Starter",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 79,
+              "yearly": 64,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": "Perfect for small teams ready to add AI intelligence to their monday.com workspace",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Discover hidden dependencies across all your boards"
+              ],
+              "monthlyFee": 79,
+              "yearlyFee": 64,
+              "maxSeats": 5
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10380570-1-kindra_team",
+            "appPlanId": "kindra_team",
+            "name": "Kindra AI Team",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 149,
+              "yearly": 119,
+              "maxSeats": 15
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": " Ideal for growing teams who need AI insights across multiple projects",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Generate intelligent status reports automatically"
+              ],
+              "monthlyFee": 149,
+              "yearlyFee": 119,
+              "maxSeats": 15
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10380570-1-kindra_business",
+            "appPlanId": "kindra_business",
+            "name": "Kindra AI Business",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 299,
+              "yearly": 239,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": "Built for departments ready to transform project management with AI",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Remember context behind every project decision"
+              ],
+              "monthlyFee": 299,
+              "yearlyFee": 239,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10380570-1-kindra_professional",
+            "appPlanId": "kindra_professional",
+            "name": "Kindra AI Professional",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 599,
+              "yearly": 479,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": "Enterprise-grade AI intelligence for your entire organization",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Access your personal AI project assistant anytime"
+              ],
+              "monthlyFee": 599,
+              "yearlyFee": 479,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10380570-1-kindra_scale",
+            "appPlanId": "kindra_scale",
+            "name": "Kindra AI Scale",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 1099,
+              "yearly": 899,
+              "maxSeats": 200
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": "Accelerate AI adoption across multiple departments and teams",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Scale AI insights across your growing organization"
+              ],
+              "monthlyFee": 1099,
+              "yearlyFee": 899,
+              "maxSeats": 200
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10380570-1-kindra_growth",
+            "appPlanId": "kindra_growth",
+            "name": "Kindra AI Growth",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 1899,
+              "yearly": 1599,
+              "maxSeats": 400
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": "Power your growing organization with AI-driven productivity",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Advanced AI analytics across all your projects"
+              ],
+              "monthlyFee": 1899,
+              "yearlyFee": 1599,
+              "maxSeats": 400
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10380570-1-kindra_advanced",
+            "appPlanId": "kindra_advanced",
+            "name": "Kindra AI Advanced",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 2599,
+              "yearly": 2199,
+              "maxSeats": 600
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": "Advanced AI capabilities for mid-size enterprises",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Comprehensive AI workflow automation"
+              ],
+              "monthlyFee": 2599,
+              "yearlyFee": 2199,
+              "maxSeats": 600
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10380570-1-kindra_premium",
+            "appPlanId": "kindra_premium",
+            "name": " Kindra AI Premium",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 3099,
+              "yearly": 2599,
+              "maxSeats": 800
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": "Premium AI intelligence for large-scale operations",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Enterprise-wide AI deployment support"
+              ],
+              "monthlyFee": 3099,
+              "yearlyFee": 2599,
+              "maxSeats": 800
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10380570-1-kindra_elite",
+            "appPlanId": "kindra_elite",
+            "name": "Kindra AI Elite",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 3599,
+              "yearly": 2999,
+              "maxSeats": 1000
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": "Elite AI platform for enterprise-wide transformation",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Complete AI transformation for your organization"
+              ],
+              "monthlyFee": 3599,
+              "yearlyFee": 2999,
+              "maxSeats": 1000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10380570-1-kindra_unlimited",
+            "appPlanId": "kindra_unlimited",
+            "name": " Kindra AI Unlimited",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 9999,
+              "yearly": 8299,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": "Unlimited AI power for the world's most ambitious",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Maximum AI capabilities with no user limits"
+              ],
+              "monthlyFee": 9999,
+              "yearlyFee": 8299,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10380570-2-DEFAULT",
+            "appPlanId": "DEFAULT",
+            "name": "default",
+            "versionId": 2,
+            "isTrial": true,
+            "prices": {
+              "type": "bucket_based",
+              "buckets": {
+                "3": {
+                  "monthly": 30,
+                  "yearly": 25
+                },
+                "5": {
+                  "monthly": 50,
+                  "yearly": 41
+                },
+                "10": {
+                  "monthly": 100,
+                  "yearly": 82
+                },
+                "15": {
+                  "monthly": 150,
+                  "yearly": 123
+                },
+                "20": {
+                  "monthly": 200,
+                  "yearly": 164
+                },
+                "25": {
+                  "monthly": 250,
+                  "yearly": 205
+                },
+                "30": {
+                  "monthly": 300,
+                  "yearly": 246
+                },
+                "35": {
+                  "monthly": 350,
+                  "yearly": 287
+                },
+                "40": {
+                  "monthly": 400,
+                  "yearly": 328
+                },
+                "45": {
+                  "monthly": 450,
+                  "yearly": 369
+                },
+                "50": {
+                  "monthly": 500,
+                  "yearly": 410
+                },
+                "55": {
+                  "monthly": 550,
+                  "yearly": 451
+                },
+                "60": {
+                  "monthly": 600,
+                  "yearly": 492
+                },
+                "65": {
+                  "monthly": 650,
+                  "yearly": 533
+                },
+                "70": {
+                  "monthly": 700,
+                  "yearly": 574
+                },
+                "75": {
+                  "monthly": 750,
+                  "yearly": 615
+                },
+                "80": {
+                  "monthly": 800,
+                  "yearly": 656
+                },
+                "85": {
+                  "monthly": 850,
+                  "yearly": 697
+                },
+                "90": {
+                  "monthly": 900,
+                  "yearly": 738
+                },
+                "95": {
+                  "monthly": 950,
+                  "yearly": 779
+                },
+                "100": {
+                  "monthly": 1000,
+                  "yearly": 820
+                },
+                "110": {
+                  "monthly": 1100,
+                  "yearly": 902
+                },
+                "120": {
+                  "monthly": 1200,
+                  "yearly": 984
+                },
+                "130": {
+                  "monthly": 1300,
+                  "yearly": 1066
+                },
+                "140": {
+                  "monthly": 1400,
+                  "yearly": 1148
+                },
+                "150": {
+                  "monthly": 1500,
+                  "yearly": 1230
+                },
+                "160": {
+                  "monthly": 1600,
+                  "yearly": 1312
+                },
+                "170": {
+                  "monthly": 1700,
+                  "yearly": 1394
+                },
+                "180": {
+                  "monthly": 1800,
+                  "yearly": 1476
+                },
+                "190": {
+                  "monthly": 1900,
+                  "yearly": 1558
+                },
+                "200": {
+                  "monthly": 2000,
+                  "yearly": 1640
+                },
+                "225": {
+                  "monthly": 2250,
+                  "yearly": 1845
+                },
+                "250": {
+                  "monthly": 2500,
+                  "yearly": 2050
+                },
+                "275": {
+                  "monthly": 2750,
+                  "yearly": 2255
+                },
+                "300": {
+                  "monthly": 3000,
+                  "yearly": 2460
+                },
+                "350": {
+                  "monthly": 3500,
+                  "yearly": 2870
+                },
+                "400": {
+                  "monthly": 4000,
+                  "yearly": 3280
+                },
+                "450": {
+                  "monthly": 4500,
+                  "yearly": 3690
+                },
+                "500": {
+                  "monthly": 5000,
+                  "yearly": 4100
+                },
+                "550": {
+                  "monthly": 5500,
+                  "yearly": 4510
+                },
+                "600": {
+                  "monthly": 6000,
+                  "yearly": 4920
+                },
+                "650": {
+                  "monthly": 6500,
+                  "yearly": 5330
+                },
+                "700": {
+                  "monthly": 7000,
+                  "yearly": 5740
+                },
+                "750": {
+                  "monthly": 7500,
+                  "yearly": 6150
+                },
+                "800": {
+                  "monthly": 8000,
+                  "yearly": 6560
+                },
+                "850": {
+                  "monthly": 8500,
+                  "yearly": 6970
+                },
+                "900": {
+                  "monthly": 9000,
+                  "yearly": 7380
+                },
+                "950": {
+                  "monthly": 9500,
+                  "yearly": 7790
+                },
+                "1000": {
+                  "monthly": 10000,
+                  "yearly": 8200
+                },
+                "1100": {
+                  "monthly": 11000,
+                  "yearly": 9020
+                },
+                "1200": {
+                  "monthly": 12000,
+                  "yearly": 9840
+                },
+                "1300": {
+                  "monthly": 13000,
+                  "yearly": 10660
+                },
+                "1400": {
+                  "monthly": 14000,
+                  "yearly": 11480
+                },
+                "1500": {
+                  "monthly": 15000,
+                  "yearly": 12300
+                },
+                "1600": {
+                  "monthly": 16000,
+                  "yearly": 13120
+                },
+                "1700": {
+                  "monthly": 17000,
+                  "yearly": 13940
+                },
+                "1800": {
+                  "monthly": 18000,
+                  "yearly": 14760
+                },
+                "1900": {
+                  "monthly": 19000,
+                  "yearly": 15580
+                },
+                "2000": {
+                  "monthly": 20000,
+                  "yearly": 16400
+                },
+                "2250": {
+                  "monthly": 22500,
+                  "yearly": 18450
+                },
+                "2500": {
+                  "monthly": 25000,
+                  "yearly": 20500
+                },
+                "2750": {
+                  "monthly": 27500,
+                  "yearly": 22550
+                },
+                "3000": {
+                  "monthly": 30000,
+                  "yearly": 24600
+                },
+                "3250": {
+                  "monthly": 32500,
+                  "yearly": 26650
+                },
+                "3500": {
+                  "monthly": 35000,
+                  "yearly": 28700
+                },
+                "3750": {
+                  "monthly": 37500,
+                  "yearly": 30750
+                },
+                "4000": {
+                  "monthly": 40000,
+                  "yearly": 32800
+                },
+                "4250": {
+                  "monthly": 42500,
+                  "yearly": 34850
+                },
+                "4500": {
+                  "monthly": 45000,
+                  "yearly": 36900
+                },
+                "4750": {
+                  "monthly": 47500,
+                  "yearly": 38950
+                },
+                "5000": {
+                  "monthly": 50000,
+                  "yearly": 41000
+                },
+                "6000": {
+                  "monthly": 60000,
+                  "yearly": 49200
+                },
+                "7000": {
+                  "monthly": 70000,
+                  "yearly": 57400
+                },
+                "8000": {
+                  "monthly": 80000,
+                  "yearly": 65600
+                },
+                "9000": {
+                  "monthly": 90000,
+                  "yearly": 73800
+                },
+                "10000": {
+                  "monthly": 100000,
+                  "yearly": 82000
+                },
+                "12500": {
+                  "monthly": 125000,
+                  "yearly": 102500
+                },
+                "15000": {
+                  "monthly": 150000,
+                  "yearly": 123000
+                },
+                "17500": {
+                  "monthly": 175000,
+                  "yearly": 143500
+                },
+                "20000": {
+                  "monthly": 200000,
+                  "yearly": 164000
+                },
+                "25000": {
+                  "monthly": 250000,
+                  "yearly": 205000
+                },
+                "30000": {
+                  "monthly": 300000,
+                  "yearly": 246000
+                },
+                "35000": {
+                  "monthly": 350000,
+                  "yearly": 287000
+                },
+                "40000": {
+                  "monthly": 400000,
+                  "yearly": 328000
+                },
+                "45000": {
+                  "monthly": 450000,
+                  "yearly": 369000
+                },
+                "50000": {
+                  "monthly": 500000,
+                  "yearly": 410000
+                },
+                "60000": {
+                  "monthly": 600000,
+                  "yearly": 492000
+                },
+                "70000": {
+                  "monthly": 700000,
+                  "yearly": 574000
+                },
+                "80000": {
+                  "monthly": 800000,
+                  "yearly": 656000
+                },
+                "90000": {
+                  "monthly": 900000,
+                  "yearly": 738000
+                },
+                "100000": {
+                  "monthly": 1000000,
+                  "yearly": 820000
+                },
+                "1000000": {
+                  "monthly": 1000000,
+                  "yearly": 820000
+                }
+              }
+            },
+            "versionState": "live",
+            "appId": 10380570,
+            "description": "Instant answers to all of your monday.com data questions with predictable pricing",
+            "extraData": {
+              "bullets": [
+                "Unlimited AI requests - no tokens, no limits, no surprises",
+                "Unlimited inline data visualizations - bar and donut charts, line graphs, and scatter plots",
+                "Instant pivot tables of your data in chat",
+                "VLOOKUP and cross-board insights"
+              ],
+              "monthlyFee": null,
+              "yearlyFee": null
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-08-27T06:29:51.949Z",
+          "id": 10872222
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Make data-driver decisions"
+          ],
+          "pricing_data": "14 day trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://www.kindra.ai/terms",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000272,
       "app_id": 10085931,
