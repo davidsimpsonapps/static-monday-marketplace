@@ -1,6 +1,6 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-08-24",
+  "processedThrough": "2026-08-25",
   "events": [
     {
       "id": 10000902,
