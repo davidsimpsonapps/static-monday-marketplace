@@ -68,6 +68,14 @@
     {
       "date": "2026-08-30",
       "marketplace_category_ids": []
+    },
+    {
+      "date": "2026-08-31",
+      "marketplace_category_ids": [
+        10,
+        9,
+        6
+      ]
     }
   ]
 }

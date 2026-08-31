@@ -1,7 +1,124 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-08-30",
+  "processedThrough": "2026-08-31",
   "events": [
+    {
+      "id": 10000166,
+      "app_id": 10046364,
+      "name": "Marketo Integration",
+      "type": "archived",
+      "date": "2026-08-31",
+      "installs": null,
+      "app": {
+        "id": 10000166,
+        "marketplace_developer_id": 10000084,
+        "app_id": 10046364,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1675859068/monday-apps-marketplace/Marketo%20Integration/Gallery_Image_1_6.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1675859070/monday-apps-marketplace/Marketo%20Integration/Gallery_Image_2_5.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1675859067/monday-apps-marketplace/Marketo%20Integration/Gallery_Image_3_6.png"
+          }
+        ],
+        "description": "<p>The <strong>Marketo Connector </strong>helps streamline workflow between marketing teams and production teams that use monday.com and Adobe Marketo Engage.</p><p><br></p><p>It provides near real-time performance insights to marketing teams, allowing them to be agile.</p><p><br></p><p>The connector provides information needed by marketers when making in-flight adjustments to optimize email job performance.</p><p>The connector creates and continuously/seamlessly synchronizes email jobs between monday.com and Marketo.</p><p>When an email job is created in monday.com the connector creates a corresponding email job object in Marketo, within a specified Email Program, using a specified Email Template.</p><p>The connector also aligns strategy to execution by linking the objects between the systems. As a result, marketing strategies are linked to communication outcomes.</p><p><br></p><p>Once the Email Job is created and included in one or more Marketo Smart Campaigns, automated synchronization continuously fetches email results and includes them in corresponding monday.com email job information. The connector is configured via a step-driven easy setup wizard, which walks an administrator through authentication setup in each system.&nbsp;</p><p><br></p><p>Once the setup is complete, the connector works in the background to synchronize email jobs and results.</p><p><br></p><p><strong>Benefits:</strong></p><p>- Align Marketing Strategy with Execution</p><p>- Eliminate manual effort though automation</p><p>- Improve performance reporting</p><p>- Personalized configuration</p><p><br></p><p><strong>Features:</strong></p><p>- Email Job synchronization from monday.com to Marketo</p><p>- Email Job creation from monday.com to Marketo</p><p>- Campaign results synchronization from Marketo to monday.com</p><p>- monday.com Workspace creation using CapabilitySource Enterprise Marketer for monday.com Solution Template</p><p><br></p><p><strong>Watch </strong><a href=\"https://www.screencast.com/t/YWSc8YjR\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>the demo video</strong></a><strong> to better understand how to use Marketo Integration in monday.com</strong></p>",
+        "short_description": "Create synchronize email  and results with Marketo Engage. ",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1675859038/monday-apps-marketplace/Marketo%20Integration/Card_Image_7.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1675859039/monday-apps-marketplace/Marketo%20Integration/icon_7.png",
+        "feedback_url": "https://capabilitysource.com/contact/",
+        "privacy_policy_url": "https://marketo-connector.capabilitysource.com/privacy-policy",
+        "featured": false,
+        "name": "Marketo Integration",
+        "how_to_use_url": "https://marketo-connector.capabilitysource.com/how-to-guide",
+        "external_pricing_url": "https://capabilitysource.com/pricing/",
+        "keywords": "Automation, Campaign,Integration,Marketing,Email,Engage,Marketo,Adobe",
+        "compliance_answers": [],
+        "created_at": "2023-02-08T13:07:36.000Z",
+        "updated_at": "2026-08-30T07:01:09.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Centralize your work on monday.com"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": true,
+        "show_connections": false,
+        "terms_of_service_url": null,
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read,boards:read,boards:write,workspaces:read,workspaces:write,webhooks:write,webhooks:read",
+        "app_client_id": "f377e1dafce792f95e388193fea22a20",
+        "app_color": {
+          "hsl": {
+            "h": 345.44117647058823,
+            "s": 0.5714285714285713,
+            "l": 0.4666666666666667,
+            "a": 1
+          },
+          "hex": "#bb3354",
+          "rgb": {
+            "r": 187,
+            "g": 51,
+            "b": 84,
+            "a": 1
+          },
+          "hsv": {
+            "h": 345.44117647058823,
+            "s": 0.7272727272727272,
+            "v": 0.7333333333333333,
+            "a": 1
+          },
+          "oldHue": 27.96116504854368,
+          "source": "hex"
+        },
+        "plans": null,
+        "app_live_version": {
+          "updated_at": "2024-03-24T08:55:02.270Z",
+          "id": 10204101
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "external",
+          "hasFreePlan": false,
+          "hasPaidPlan": false,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Centralize your work on monday.com"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": true,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000902,
       "app_id": 10380570,
