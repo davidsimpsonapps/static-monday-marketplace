@@ -1,7 +1,674 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-09-02",
+  "processedThrough": "2026-09-03",
   "events": [
+    {
+      "id": 10000254,
+      "app_id": 10076769,
+      "name": "Copilot: ChatGPT 4 for monday.com",
+      "type": "archived",
+      "date": "2026-09-03",
+      "installs": null,
+      "app": {
+        "id": 10000254,
+        "marketplace_developer_id": 10000104,
+        "app_id": 10076769,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/video/upload/v1688978531/monday-apps-marketplace/Copilot:%20ChatGPT%204%20for%20monday.com/Meet_chatGPT_4_for_your_team.mp4",
+            "type": "video"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1688978520/monday-apps-marketplace/Copilot:%20ChatGPT%204%20for%20monday.com/1_26.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1688978522/monday-apps-marketplace/Copilot:%20ChatGPT%204%20for%20monday.com/2_26.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1688978523/monday-apps-marketplace/Copilot:%20ChatGPT%204%20for%20monday.com/3_24.png"
+          }
+        ],
+        "description": "<p>A next generation of OpenAI assistant (<strong>GPT-4</strong>) that produces unbelievably good results!</p><p><u>The app can help you:</u></p><p><br></p><p>🧠 Brainstorming ideas for projects and initiatives.</p><p>👥 Streamlining communication within teams by facilitating group discussions.</p><p>📕 Summarizing the documents, long chat or even a source code.</p><p>📂 Generating the documents/requirements, based on user-suggested prompts.</p><p>🐞 Help you debug, understand and improve your code.</p><p>💡 Enhancing problem-solving capabilities by offering alternative solutions or approaches.</p><p>🎓 Supporting knowledge sharing and collaboration within the organization.</p><p>📝 Assisting in the creation and editing of written content, such as reports or presentations.</p><p>📈 Providing guidance on best practices, industry trends, and relevant research.</p><p><br></p><p><strong>Disclaimer:</strong><em>&nbsp;ChatGPT 4 is only available for the paid tiers for the limited amount of requests.</em></p><p><br></p><p>The free tiers or paid tiers consumed more than a daily limit would be automatically switched to a ChatGPT 3.5 turbo.</p><p><br></p><p><a href=\"https://usemotion.com/meet/michael-popchuk/copilot-m?d=30\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>Request a free personalized demo!</strong></a></p>",
+        "short_description": "The only GPT-4 assistant that with unified billing, chats and enhanced data privacy.",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1688978516/monday-apps-marketplace/Copilot:%20ChatGPT%204%20for%20monday.com/Banner.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1688978518/monday-apps-marketplace/Copilot:%20ChatGPT%204%20for%20monday.com/copilot_logo_2.png",
+        "feedback_url": "tuesday@getreport.ai",
+        "privacy_policy_url": "https://getreport.ai/privacy-policy/",
+        "featured": false,
+        "name": "Copilot: ChatGPT 4 for monday.com",
+        "how_to_use_url": "https://getreport.ai/monday/chat-gpt",
+        "external_pricing_url": null,
+        "keywords": "ai,ai assistant,ai chat,gpt,openai,chatgpt,chat",
+        "compliance_answers": [],
+        "created_at": "2023-07-10T08:49:47.000Z",
+        "updated_at": "2026-09-02T13:39:07.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "AI"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://getreport.ai/EULA/",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read,boards:read,updates:read",
+        "app_client_id": "4b6749835d7065c9deff0b537746d80f",
+        "app_color": {
+          "hsl": {
+            "h": 7.03448275862069,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 7.03448275862069,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 7.03448275862069,
+          "source": "hex"
+        },
+        "plans": [
+          {
+            "id": "10076769-1-plan_01",
+            "appPlanId": "plan_01",
+            "name": "Up to 10 Users (Flat fee)",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 50,
+              "yearly": 50,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10076769,
+            "description": "Suitable for teams up to 10 users.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 50,
+              "yearlyFee": 50,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10076769-1-plan_02",
+            "appPlanId": "plan_02",
+            "name": "11-25 Users",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 100,
+              "yearly": 100,
+              "maxSeats": 25
+            },
+            "versionState": "live",
+            "appId": 10076769,
+            "description": "Designed for teams of 11 to 25",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 100,
+              "yearlyFee": 100,
+              "maxSeats": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10076769-1-plan_03",
+            "appPlanId": "plan_03",
+            "name": "26-50 Users",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 150,
+              "yearly": 150,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10076769,
+            "description": "Ideal for teams of 26 to 50",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 150,
+              "yearlyFee": 150,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10076769-1-plan_04",
+            "appPlanId": "plan_04",
+            "name": "51-200 Users",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 400,
+              "yearly": 400,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10076769,
+            "description": "Perfect for teams of 51 to 200",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 400,
+              "yearlyFee": 400,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10076769-1-plan_05",
+            "appPlanId": "plan_05",
+            "name": "201-1000 Users",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 750,
+              "yearly": 750,
+              "maxSeats": 1000
+            },
+            "versionState": "live",
+            "appId": 10076769,
+            "description": "Suitable for teams of 201 to 1000",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 750,
+              "yearlyFee": 750,
+              "maxSeats": 1000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10076769-1-plan_06",
+            "appPlanId": "plan_06",
+            "name": "1001-2500 Users",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 850,
+              "yearly": 850,
+              "maxSeats": 2500
+            },
+            "versionState": "live",
+            "appId": 10076769,
+            "description": "Ideal for teams of 1001 to 2500",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 850,
+              "yearlyFee": 850,
+              "maxSeats": 2500
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10076769-1-plan_07",
+            "appPlanId": "plan_07",
+            "name": "Unlimited",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 1500,
+              "yearly": 1500,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10076769,
+            "description": "Suitable for all sizes of accounts",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 1500,
+              "yearlyFee": 1500,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2024-03-24T08:50:41.384Z",
+          "id": 10136267
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "AI"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://getreport.ai/EULA/",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000294,
+      "app_id": 10092642,
+      "name": "Open API (Swagger) Integration",
+      "type": "archived",
+      "date": "2026-09-03",
+      "installs": null,
+      "app": {
+        "id": 10000294,
+        "marketplace_developer_id": 10000104,
+        "app_id": 10092642,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1695039088/monday-apps-marketplace/Open%20API%20%28Swagger%29/Requests.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1695039088/monday-apps-marketplace/Open%20API%20%28Swagger%29/swagger1.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1695039088/monday-apps-marketplace/Open%20API%20%28Swagger%29/swagger2.png"
+          }
+        ],
+        "description": "<p><strong>Start integrating Open API (Swagger) directly from monday.com!</strong></p><p><br></p><p>Use our API integration tool trusted by developers globally!</p><p><em>Looking to simplify your API management?</em> <a href=\"https://yourwebsite.com/demo\" rel=\"noopener noreferrer\" target=\"_blank\">Schedule a free demonstration</a>.</p><p><br></p><p>🌐 <strong>Open API (Swagger) Board/Item/Widget View</strong></p><p>Easily embed the Open API document in any board, item, or widget inside monday.com with just a few clicks.</p><p>Manage and share API keys for your developer team directly from your organization’s monday.com workspace.</p><p><br></p><p>✅ <strong>Bypass CORS setup</strong></p><p>Our app enables proxying requests to your API, removing the need for cumbersome CORS setups and facilitating smooth API interactions.</p><p><br></p><p>▶️ <strong>Tailor your Swagger UI Display</strong></p><p>Customize Swagger UI display settings and access advanced features like enabling submit methods and Validator URL right from the Item view. Your API documentation, the way you want it, right when you need it.</p><p><br></p><p><a href=\"https://app.usemotion.com/meet/dmytro/getreportai?d=20\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>Request a free personalized demo!</strong></a></p>",
+        "short_description": "Embed Swagger UI to display Open API document directly in your board, item, or doc as a widget.",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1695039087/monday-apps-marketplace/Open%20API%20%28Swagger%29/Card_Image_9.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1695039061/monday-apps-marketplace/Open%20API%20%28Swagger%29/swagger_developer_icon.png",
+        "feedback_url": "tuesday@getreport.ai",
+        "privacy_policy_url": null,
+        "featured": false,
+        "name": "Open API (Swagger) Integration",
+        "how_to_use_url": "https://getreport.ai/monday/swagger/",
+        "external_pricing_url": null,
+        "keywords": "swagger, API, openapi, documentation, Swagger Integration, Swagger UI, API Document, Software Development,API Management",
+        "compliance_answers": [],
+        "created_at": "2023-09-18T12:07:51.000Z",
+        "updated_at": "2026-09-02T07:01:51.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Popular with Dev users"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://getreport.ai/EULA/",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read",
+        "app_client_id": "64ae48492e2b27823646bf88f89e5439",
+        "app_color": {
+          "hsl": {
+            "h": 180,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 180,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 180,
+          "source": "rgb"
+        },
+        "plans": [
+          {
+            "id": "10092642-1-swagger_30",
+            "appPlanId": "swagger_30",
+            "name": "Up to 30 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 50,
+              "yearly": 50,
+              "maxSeats": 30
+            },
+            "versionState": "live",
+            "appId": 10092642,
+            "description": "Use the app without any limitations for up to 30 team members. This plan comes with our standard support.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 50,
+              "yearlyFee": 50,
+              "maxSeats": 30
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10092642-1-swagger_40",
+            "appPlanId": "swagger_40",
+            "name": "Up to 40 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 60,
+              "yearly": 60,
+              "maxSeats": 40
+            },
+            "versionState": "live",
+            "appId": 10092642,
+            "description": "Use the app without any limitations for up to 40 team members. This plan comes with our advanced support.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 60,
+              "yearlyFee": 60,
+              "maxSeats": 40
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10092642-1-swagger_50",
+            "appPlanId": "swagger_50",
+            "name": "Up to 50 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 70,
+              "yearly": 70,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10092642,
+            "description": "Use the app without any limitations for up to 50 team members. This plan comes with our advanced support.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 70,
+              "yearlyFee": 70,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10092642-1-swagger_100",
+            "appPlanId": "swagger_100",
+            "name": "Up to 100 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 140,
+              "yearly": 140,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10092642,
+            "description": "Use the app without any limitations for up to 100 team members. This plan comes with our advanced support.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 140,
+              "yearlyFee": 140,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10092642-1-swagger_200",
+            "appPlanId": "swagger_200",
+            "name": "Up to 200 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 220,
+              "yearly": 220,
+              "maxSeats": 200
+            },
+            "versionState": "live",
+            "appId": 10092642,
+            "description": "Use the app without any limitations for up to 200 team members. This plan comes with our advanced support.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 220,
+              "yearlyFee": 220,
+              "maxSeats": 200
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10092642-1-swagger_unlimed",
+            "appPlanId": "swagger_unlimed",
+            "name": "Unlimited",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 250,
+              "yearly": 250,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10092642,
+            "description": "Use the app without any limitations for any team number. This plan comes with our premium support.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 250,
+              "yearlyFee": 250,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10092642-1-swagger_free",
+            "appPlanId": "swagger_free",
+            "name": "Free",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 0,
+              "yearly": 0,
+              "maxSeats": 2
+            },
+            "versionState": "live",
+            "appId": 10092642,
+            "description": "Free for up to 2 team members. This plan comes without support.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 0,
+              "yearlyFee": 0,
+              "maxSeats": 2
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10092642-1-swagger_5",
+            "appPlanId": "swagger_5",
+            "name": "Up to 5 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 10,
+              "yearly": 10,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10092642,
+            "description": "Use the app without any limitations for up to 5 team members. This plan comes with our standard support.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 10,
+              "yearlyFee": 10,
+              "maxSeats": 5
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10092642-1-swagger_10",
+            "appPlanId": "swagger_10",
+            "name": "Up to 10 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 20,
+              "yearly": 20,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10092642,
+            "description": "Use the app without any limitations for up to 10 team members. This plan comes with our standard support.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 20,
+              "yearlyFee": 20,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10092642-1-swagger_20",
+            "appPlanId": "swagger_20",
+            "name": "Up to 20 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 35,
+              "yearly": 35,
+              "maxSeats": 20
+            },
+            "versionState": "live",
+            "appId": 10092642,
+            "description": "Use the app without any limitations for up to 20 team members. This plan comes with our standard support.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 35,
+              "yearlyFee": 35,
+              "maxSeats": 20
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2024-03-24T08:51:18.940Z",
+          "id": 10146135
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Popular with Dev users"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://getreport.ai/EULA/",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000166,
       "app_id": 10046364,
