@@ -1,7 +1,321 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-09-03",
+  "processedThrough": "2026-09-04",
   "events": [
+    {
+      "id": 10000289,
+      "app_id": 10094215,
+      "name": "Formula in Automation Recipes",
+      "type": "archived",
+      "date": "2026-09-04",
+      "installs": null,
+      "app": {
+        "id": 10000289,
+        "marketplace_developer_id": 10000127,
+        "app_id": 10094215,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/video/upload/v1698594957/monday-apps-marketplace/Formula%20Caster/v2/Check_out_this_cool_new_app_1.mp4",
+            "type": "video"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1697728973/monday-apps-marketplace/Formula%20Caster/v2/1.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1697728973/monday-apps-marketplace/Formula%20Caster/v2/2.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1697728973/monday-apps-marketplace/Formula%20Caster/v2/3.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1697728973/monday-apps-marketplace/Formula%20Caster/v2/4.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1697728973/monday-apps-marketplace/Formula%20Caster/v2/5.png"
+          }
+        ],
+        "description": "<p><strong><u>Are you stuck with monday’s automations? 😩</u></strong></p><p>You’re not alone.</p><p><br></p><p>monday’s automations can cover some basic needs -&nbsp;</p><p>but for more advanced use cases, it might not be enough.&nbsp;</p><p><br></p><p>You might struggle with applying calculations inside automations..</p><p>or using the formula column in transferring data to another source…</p><p>or maybe you just can’t find the right recipe for your special case.</p><p><br></p><p>For this reason,&nbsp;</p><p>We decided to develop the most comprehensive, effective and robust automation app on monday.com - <strong>Formula in Automation Recipes!</strong></p><p><br></p><p><em>With “Formula in Automation Recipes”, You’ll be able to:</em></p><p><br></p><ul><li>Use formula results with external apps, APIs and integrations!</li><li><strong>Unlock </strong>Automation Chain Reaction:<strong> Change </strong>statuses automatically depending on the outcome of a formula -&nbsp;and trigger subsequent workflow automations!</li><li>Perform advanced calculations on <strong>subitems</strong></li><li><strong>Copy mirror values to number’s columns; And use accurate information when integrating with external apps!</strong></li><li>Trigger actions on <strong>EXTERNAL</strong> boards from your main board!</li><li>And much, much more!</li></ul><p><br></p><p><strong>And if you’re still worried you can’t find what you’re looking for…</strong></p><p><br></p><p><strong>Here’s our promise:</strong></p><p><em>IF YOU CAN’T FIND A RECIPE THAT SUITS YOUR USE CASE - WE WILL DROP WHAT WE'RE DOING AND DEVELOP IT FOR YOU IN 7 DAYS - GUARANTEED.</em></p><p><br></p><p>So what have you got to lose?</p><p><strong>Install the app now!&nbsp;</strong></p><p><br></p><p>Or</p><p><br></p><p>📅 <a href=\"https://tidycal.com/snir/formula\" rel=\"noopener noreferrer\" target=\"_blank\">Book a call</a> with us and explore the possibilities!</p>",
+        "short_description": "Advanced automation recipes, covering hundreds of unique use cases",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1694008738/monday-apps-marketplace/Formula%20Caster/Research_Proposal_Business_Presentation_in_Purple_Green_Orange_Gradients_Style_1920_960_px_592_348_px_1.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1697729100/monday-apps-marketplace/Formula%20Caster/v2/Untitled_192_x_192_px.png",
+        "feedback_url": "snir@alayofdigital.com",
+        "privacy_policy_url": "https://formulalookout.com/privacy-policy/",
+        "featured": false,
+        "name": "Formula in Automation Recipes",
+        "how_to_use_url": "https://garfieldlabs.com/installation-guide-chatgpt-integration/",
+        "external_pricing_url": null,
+        "keywords": "Invoice,\nGoogle,\nFormula,\nSlack,\nEmail,\nChat GPT,\nZapier,\nDoc,\nGeneral Caster,\nAutoboost",
+        "compliance_answers": [],
+        "created_at": "2023-09-06T14:02:07.000Z",
+        "updated_at": "2026-09-03T06:36:24.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": null,
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://formulalookout.com/terms-of-service/",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write,updates:write,notifications:write,updates:read,webhooks:write,webhooks:read",
+        "app_client_id": "234f38a1bfd86358c23a1d4d8921c198",
+        "app_color": {
+          "hsl": {
+            "h": 235,
+            "s": 0.23456790123456794,
+            "l": 0.21600000000000003,
+            "a": 1
+          },
+          "hex": "#2a2c44",
+          "rgb": {
+            "r": 42,
+            "g": 44,
+            "b": 68,
+            "a": 1
+          },
+          "hsv": {
+            "h": 235,
+            "s": 0.38,
+            "v": 0.2666666666666667,
+            "a": 1
+          },
+          "oldHue": 235,
+          "source": "rgb"
+        },
+        "plans": [
+          {
+            "id": "10094215-1-basic_plan_15",
+            "appPlanId": "basic_plan_15",
+            "name": "Basic",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "standard",
+              "monthly": 15,
+              "yearly": 14
+            },
+            "versionState": "live",
+            "appId": 10094215,
+            "description": "Experience all features with 250 automations per month.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 15,
+              "yearlyFee": 14
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10094215-1-premium_plan_79",
+            "appPlanId": "premium_plan_79",
+            "name": "Premium",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 70,
+              "yearly": 67
+            },
+            "versionState": "live",
+            "appId": 10094215,
+            "description": "Experience all features with unlimited automations per month.",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 70,
+              "yearlyFee": 67
+            },
+            "isFree": false,
+            "isRecommended": true,
+            "currency": "USD"
+          },
+          {
+            "id": "10094215-2-formula_free_id",
+            "appPlanId": "formula_free_id",
+            "name": "Free Plan",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10094215,
+            "description": "Access a huge selection of advanced automations and recipes, up to 250 runs/month",
+            "extraData": {
+              "bullets": [
+                "Perform calculations in automation",
+                "Subitem automations",
+                "Mirror column automations and recipes",
+                "Cross board automations",
+                "Formula in Automations & Recipes",
+                "Unlimited amount of users"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10094215-2-formula_bronze_id",
+            "appPlanId": "formula_bronze_id",
+            "name": "Bronze Plan",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 29,
+              "yearly": 19
+            },
+            "versionState": "live",
+            "appId": 10094215,
+            "description": "5000 runs/month, for unlimited amount of users, premium email support, and access to all automations and recipes",
+            "extraData": {
+              "bullets": [
+                "Perform calculations & formulas in automation & recipes",
+                "Subitems automations & recipes",
+                "Mirror column automations & recipes",
+                "Cross board automations & recipes",
+                "Premium Email/Slack Support"
+              ],
+              "monthlyFee": 29,
+              "yearlyFee": 19
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10094215-2-formula_silver_id",
+            "appPlanId": "formula_silver_id",
+            "name": "Silver Plan",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 89,
+              "yearly": 79
+            },
+            "versionState": "live",
+            "appId": 10094215,
+            "description": "25K runs/month, for unlimited amount of users, VIP email support, and access to all automations and recipes",
+            "extraData": {
+              "bullets": [
+                "Perform calculations & formulas in automation & recipes",
+                "Subitem automations & recipes",
+                "Mirror column automations & recipes",
+                "Cross board automations & recipes",
+                "Premium Email/Slack Support"
+              ],
+              "monthlyFee": 89,
+              "yearlyFee": 79
+            },
+            "isFree": false,
+            "isRecommended": true,
+            "currency": "USD"
+          },
+          {
+            "id": "10094215-2-formula_gold_id",
+            "appPlanId": "formula_gold_id",
+            "name": "Gold Plan",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 249,
+              "yearly": 229
+            },
+            "versionState": "live",
+            "appId": 10094215,
+            "description": "100K runs/month, for unlimited amount of users, VIP+ priority support, and access to all automations and recipes",
+            "extraData": {
+              "bullets": [
+                "Perform calculations & formulas in automation & recipes",
+                "Subitem automations & recipes",
+                "Mirror column automations & recipes",
+                "Cross board automations & recipes",
+                "Premium Email/Slack Support"
+              ],
+              "monthlyFee": 249,
+              "yearlyFee": 229
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10094215-2-formula_platinum_id",
+            "appPlanId": "formula_platinum_id",
+            "name": "Platinum Plan",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 1099,
+              "yearly": 1000
+            },
+            "versionState": "live",
+            "appId": 10094215,
+            "description": "500K ops/month, everything we have to offer + Custom recipe building for your specific use cases",
+            "extraData": {
+              "bullets": [
+                "Everything from the other packages",
+                "Custom feature building for your specific use cases",
+                "Premium onboarding, support, and training"
+              ],
+              "monthlyFee": 1099,
+              "yearlyFee": 1000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2024-06-14T06:12:31.285Z",
+          "id": 10258228
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://formulalookout.com/terms-of-service/",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000254,
       "app_id": 10076769,
