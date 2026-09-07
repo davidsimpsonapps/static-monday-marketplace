@@ -376,6 +376,17 @@ module.exports = async function (eleventyConfig) {
     ).length;
   });
 
+  // A "former" vendor is one where every app has been delisted (no categories)
+  eleventyConfig.addFilter("isFormerVendor", function (vendor, marketplace) {
+    const apps = marketplace.filter(
+      (app) => app.marketplace_developer_id === parseInt(vendor.id),
+    );
+    return (
+      apps.length > 0 &&
+      apps.every((app) => app.marketplace_category_ids.length === 0)
+    );
+  });
+
   // Add custom filter to sort vendors by install count
   eleventyConfig.addFilter("sortVendorsByInstalls", function (vendors) {
     return vendors

@@ -38,10 +38,14 @@ title: monday.com marketplace vendors
     </span>
   </div>
   <p class="py-4">
-    This website lists all <a target="_blank" href="https://monday.com/marketplace/">monday.com marketplace</a> 
+    This website lists all <a target="_blank" href="https://monday.com/marketplace/">monday.com marketplace</a>
     vendors in one list. Search for specific vendors below.
   </p>
 
+  <nav class="tabs" id="vendor-status-tabs">
+    <a href="#" data-tab-target="all" class="active">All vendors</a>
+    <a href="#" data-tab-target="former">Former vendors</a>
+  </nav>
 
   {% include "partials/search.njk" %}
   {% include "partials/sorting.njk" %}
@@ -50,10 +54,11 @@ title: monday.com marketplace vendors
     {% for vendor in vendors | sortVendorsByInstalls %}
         {% set appInstalls =  vendor.installs %}
         {% set monthlyInstalls = appInstalls | averageInstallsPerMonth(vendor.created_at) %}
-      
-        <a href="/vendors/{{ vendor.id }}/" 
+        {% set isFormerVendor = vendor | isFormerVendor(marketplace) %}
+
+        <a href="/vendors/{{ vendor.id }}/"
           class="item search-item card"
-          
+          data-vendor-status="{{ 'former' if isFormerVendor else 'active' }}"
           data-alpha="{{ vendor.name | trim }}"
           data-installs="{{ appInstalls }}"
           data-monthly-installs="{{ monthlyInstalls }}"
@@ -66,12 +71,13 @@ title: monday.com marketplace vendors
           >
           <div>
             {% if vendor.logo_url %}
-              <img 
+              <img
                 {% if loop.index0 >= 20 %}loading="lazy"{% endif %}
                 src="{{ vendor.logo_url }}" alt="{{ vendor.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg">
             {% endif %}
             <h2 class="text-xl font-semibold mt-4 mb-2">
               <span class="anchor">{{ vendor.name }}</span>
+
               {% if vendor.partners_program === 1 %}
                 <span data-toggle="tooltip" title="Bronze Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#C25531"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
               {% elseif vendor.partners_program === 2 %}
@@ -106,13 +112,19 @@ title: monday.com marketplace vendors
               {{ vendor | getVendorAppCount(marketplace) }} app{% if vendor.appCount != 1 %}s{% endif %}
 
            
-              <div class="mt-2">
+              <div class="mx-2">
 
                 {{ appInstalls | numberFormat }} installs,
                 since {{ vendor.created_at | formatDate }}.<br>
                 {{ monthlyInstalls | numberFormat }} installs/month.
 
               </div>
+              {% if isFormerVendor %}
+                <span data-toggle="tooltip" title="All of this vendor's apps have been delisted from the marketplace" 
+                class="badge red">
+                  Former vendor
+                </span>
+              {% endif %}
 
             </div>
           </div>
@@ -121,6 +133,44 @@ title: monday.com marketplace vendors
     {% endfor %}
 
 
-    
+
   </div>
-</div> 
+</div>
+
+<script>
+  (function () {
+    var tabsNav = document.getElementById('vendor-status-tabs');
+    if (!tabsNav) return;
+    var tabs = tabsNav.querySelectorAll('[data-tab-target]');
+    var items = document.querySelectorAll('#item-list .item[data-vendor-status]');
+    var totalsBadge = document.querySelector('[data-total]');
+    var allTotal = totalsBadge ? totalsBadge.getAttribute('data-total') : null;
+
+    function setTab(target) {
+      tabs.forEach(function (tab) {
+        tab.classList.toggle('active', tab.getAttribute('data-tab-target') === target);
+      });
+
+      var visibleCount = 0;
+      items.forEach(function (item) {
+        var isVisible = target === 'all' || item.getAttribute('data-vendor-status') === target;
+        item.classList.toggle('tab-hidden', !isVisible);
+        if (isVisible) visibleCount++;
+      });
+
+      if (totalsBadge) {
+        totalsBadge.setAttribute('data-total', target === 'all' ? allTotal : visibleCount);
+        totalsBadge.innerText = target === 'all' ? allTotal : visibleCount;
+      }
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function (e) {
+        e.preventDefault();
+        setTab(tab.getAttribute('data-tab-target'));
+      });
+    });
+
+    setTab('all');
+  })();
+</script> 

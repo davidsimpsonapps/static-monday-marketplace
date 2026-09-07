@@ -136,6 +136,7 @@ a div {
   @apply hover:bg-gray-100;
 }
 .item-list .item.hide-me,
+.item-list .item.tab-hidden,
 .vendors.item-list.list .item .vendors-hide-list {
   display: none !important;
 }

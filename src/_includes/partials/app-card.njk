@@ -13,6 +13,7 @@
       <a 
         href="/apps/{{ app.id }}/" 
         class="item search-item"
+        data-app-status="{{ 'live' if app.marketplace_category_ids.length > 0 else 'archived' }}"
         data-alpha="{{ app.name }}"
         data-installs="{{ appInstalls }}"
         data-monthly-installs="{{ montlyInstalls }}"

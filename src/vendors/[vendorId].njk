@@ -130,18 +130,25 @@ eleventyComputed:
       
 
       {% set apps = marketplace | filterByVendor(vendor.id) | sortByInstalls %}
+      {% set liveApps = apps | appsWithCategories %}
+      {% set archivedApps = apps | appsWithoutCategories %}
 
-      <div class="flex gap-3 mb-4">
+      <div class="flex gap-3 mb-2 items-center">
         <h2 class="text-lg md:text-2xl mt-0 font-semibold no-tocbot">
           Apps by {{ vendor.name }}
         </h2>
-        <span>
-          <span data-total="{{ vendors.length }}"class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">
-            {{ apps | appsWithCategories | length }}
-          </span>
-        </span>
       </div>
 
+      <nav class="tabs" id="vendor-app-tabs" data-default-tab="{{ 'live' if liveApps.length > 0 else 'archived' }}">
+        <a href="#" data-tab-target="live">
+          Live apps
+          <span class="inline-block bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs ml-1">{{ liveApps.length }}</span>
+        </a>
+        <a href="#" data-tab-target="archived">
+          Archived apps
+          <span class="inline-block bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full text-xs ml-1">{{ archivedApps.length }}</span>
+        </a>
+      </nav>
 
       {% include "partials/search.njk" %}
       {% include "partials/sorting.njk" %}
@@ -151,7 +158,7 @@ eleventyComputed:
           <div></div>
           <div>App</div>
           <div>
-            <div class="list-cols">           
+            <div class="list-cols">
               <div class="ratings">
                 Ratings
               </div>
@@ -163,11 +170,36 @@ eleventyComputed:
 
         {% for app in apps %}
           {% set appRatings = ratings | default([]) %}
-          {% if app.marketplace_category_ids.length > 0 %}
-            {{ appCard(app, appRatings, vendors, installs) }}
-          {% endif %}
+          {{ appCard(app, appRatings, vendors, installs) }}
         {% endfor %}
       </div>
+
+      <script>
+        (function () {
+          var tabsNav = document.getElementById('vendor-app-tabs');
+          if (!tabsNav) return;
+          var tabs = tabsNav.querySelectorAll('[data-tab-target]');
+          var items = document.querySelectorAll('#item-list .item[data-app-status]');
+
+          function setTab(target) {
+            tabs.forEach(function (tab) {
+              tab.classList.toggle('active', tab.getAttribute('data-tab-target') === target);
+            });
+            items.forEach(function (item) {
+              item.classList.toggle('tab-hidden', item.getAttribute('data-app-status') !== target);
+            });
+          }
+
+          tabs.forEach(function (tab) {
+            tab.addEventListener('click', function (e) {
+              e.preventDefault();
+              setTab(tab.getAttribute('data-tab-target'));
+            });
+          });
+
+          setTab(tabsNav.getAttribute('data-default-tab') || 'live');
+        })();
+      </script>
 
 
       <div class="my-8"></div>
