@@ -225,9 +225,12 @@ function renderHistory(events) {
 
 // ---- Response time charts ----
 
+const CHART_DAYS = 30;
+
 function buildCharts(data) {
   if (!data || !data.length) return;
 
+  data = data.slice(-CHART_DAYS);
   const dates = data.map((d) => d.date);
 
   ENDPOINT_TYPES.forEach(({ suffix }) => {
