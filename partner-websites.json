@@ -1627,5 +1627,248 @@
     "url": "https://xurpas.com/",
     "email": "matthew.velmonte@xurpas.com",
     "isMicrosoftPartner": false
+  },
+  {
+    "id": "e2963d88-cb77-44a3-8c68-99d9a1dfff5d",
+    "slug": "10thirtylabs",
+    "name": "10thirtyLabs",
+    "tier": "Bronze",
+    "url": "https://10thirtylabs.com/",
+    "email": "hello@10thirtylabs.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "026ecf3b-4b95-4372-bf9e-b5f193949369",
+    "slug": "kim-berney",
+    "name": "Axis",
+    "tier": "Bronze",
+    "url": null,
+    "email": null,
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "8da0f44f-a16e-4805-af41-5317ec781b08",
+    "slug": "hco",
+    "name": "H&CO",
+    "tier": "Bronze",
+    "url": "https://www.hco.com/",
+    "email": "info@hco.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "c5f359d0-ca75-4a9b-82b1-dcce232235d9",
+    "slug": "leonardo-nunez",
+    "name": "IKONA",
+    "tier": "Bronze",
+    "url": "https://ikona.com.mx/en/",
+    "email": "contacto@ikona.com.mx",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1cb0dbf6-7169-4bbc-a1f3-10adcf32a343",
+    "slug": "kale-smart-sc",
+    "name": "Kale Smart SC",
+    "tier": "Bronze",
+    "url": "https://www.kalesmart.com.mx/en",
+    "email": null,
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "a37ba3ee-253b-4708-b642-764237a091c9",
+    "slug": "hezi-bosmi",
+    "name": "Kindaa",
+    "tier": "Bronze",
+    "url": null,
+    "email": null,
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "8a7c001c-be9a-4da0-a86a-275a410127d3",
+    "slug": "nadya-neykova",
+    "name": "Opsters",
+    "tier": "Bronze",
+    "url": "https://opsters.com/",
+    "email": "lyudmil@opsters.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "9baf5f32-45c1-4640-820f-85fb6663ec30",
+    "slug": "phoenix-phos",
+    "name": "Phoenix Phos",
+    "tier": "Bronze",
+    "url": "https://www.phoenixphos.com.au/",
+    "email": "contact@phoenixphos.com.au",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "dd25965f-cdfe-41f4-9d73-09074731e616",
+    "slug": "rewire-solutions",
+    "name": "Rewire Solutions",
+    "tier": "Bronze",
+    "url": "https://rewire-solutions.com/",
+    "email": "eve@rewire-solutions.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "bd6477bc-cc39-40ab-90ed-089a757a8db2",
+    "slug": "pedro-spolaor",
+    "name": "Rota da Gestão",
+    "tier": "Bronze",
+    "url": "https://pedrospolaor.com.br/rota-da-gestao/",
+    "email": "pedro@pedrospolaor.com.br",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "9a269351-5295-46cd-b434-1be44c9359cb",
+    "slug": "techtime-initiative-group",
+    "name": "TechTime Initiative Group",
+    "tier": "Bronze",
+    "url": "https://techtime-initiative.com.au/",
+    "email": "info@techtime-initiative.com.au",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "6d04988f-75c3-49eb-ba99-28f88fcc647b",
+    "slug": "the-automation-partner",
+    "name": "The Automation Partner",
+    "tier": "Bronze",
+    "url": "https://theautomationpartner.com/",
+    "email": null,
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "12223c40-4002-4949-809e-918d38ed83bc",
+    "slug": "naomi-coe",
+    "name": "The Workflow People",
+    "tier": "Bronze",
+    "url": "https://www.theworkflowpeople.co.uk/",
+    "email": "hello@theworkflowpeople.co.uk",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "bfbbbfbd-95ab-4a6e-afc2-865f6abed34f",
+    "slug": "valere",
+    "name": "Valere",
+    "tier": "Bronze",
+    "url": "https://www.valere.io/",
+    "email": "contact@valere.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "c83ed185-962c-4687-9b10-0e8bfd4a2650",
+    "slug": "web3d",
+    "name": "WEB3D",
+    "tier": "Bronze",
+    "url": "https://web3d.co.il/",
+    "email": "info@web3d.co.il",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1795e794-c923-4dd8-8969-4f3fb7b4b22f",
+    "slug": "omara-fuks",
+    "name": "Wikky",
+    "tier": "Bronze",
+    "url": "https://www.wikky.io/",
+    "email": "sales@wikky.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "03ffe7e4-4823-4831-89ff-be41ed1c9f8a",
+    "slug": "rahul-dev-sarker",
+    "name": "X CloudOps LLC",
+    "tier": "Bronze",
+    "url": "https://xcloudops.co/",
+    "email": "info@xcloudops.co",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "973c5bd0-b79c-479e-b47e-c89401634ea6",
+    "slug": "quatrodois",
+    "name": "quatrodois",
+    "tier": "Bronze",
+    "url": "https://www.quatrodois.com.br/",
+    "email": null,
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "d6d5ddd1-cee3-4782-b870-f0f96cf0e18f",
+    "slug": "pedro-malaga",
+    "name": "CLAUMA",
+    "tier": "Authorized",
+    "url": "https://yourvirtualprojectmanager.com/",
+    "email": "contact@yourvirtualprojectmanager.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "65967756-dc5d-402d-a8e6-04a04e431bc4",
+    "slug": "rehan-abdul-qayyum",
+    "name": "Codex Solutions International",
+    "tier": "Authorized",
+    "url": "https://codexsolutionsint.com/",
+    "email": "info@codexsolutionsint.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "98ec6f51-4b58-435d-b583-ee2e3b36d6c2",
+    "slug": "omer-alobaidi",
+    "name": "Entlix limited",
+    "tier": "Authorized",
+    "url": "https://www.entlix.co.uk/",
+    "email": "info@entlix.co.uk",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "170bd8ab-e494-4a38-ac5a-862af11ebdc3",
+    "slug": "jason-keenan",
+    "name": "MAKEITFLOW",
+    "tier": "Authorized",
+    "url": "https://makeitflow.ca/",
+    "email": "info@makeitflow.ca",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "0d5560be-a7cb-4c64-ae50-e71224b03664",
+    "slug": "naveed-choudhury",
+    "name": "Mint Consulting Australia",
+    "tier": "Authorized",
+    "url": "https://mintconsulting.org/",
+    "email": "info@mintconsulting.org",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "f13b3d26-99c5-4f03-bacc-71e8a6135020",
+    "slug": "mohamad-jahar",
+    "name": "Msquare Automation",
+    "tier": "Authorized",
+    "url": "https://msquare.pro/",
+    "email": "support@msquare.pro",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "f0abc6e8-35fe-44e0-929d-325753ea358b",
+    "slug": "patrick-kool",
+    "name": "Productivity Tools",
+    "tier": "Authorized",
+    "url": "https://www.productivitytools.io/",
+    "email": "hello@productivitytools.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "402f1ac4-b046-4a26-9a65-50e876dd62e1",
+    "slug": "muhammed-sameer-sheikh",
+    "name": "Proto IT Consultants",
+    "tier": "Authorized",
+    "url": "https://protogroup.co/",
+    "email": "info@protogroup.co",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "495b4e24-8393-4ead-b9ce-22279f4fa2a0",
+    "slug": "eddy-azoulay",
+    "name": "WME Solutions",
+    "tier": "Authorized",
+    "url": "https://www.wme-solutions.com/",
+    "email": null,
+    "isMicrosoftPartner": false
   }
 ]

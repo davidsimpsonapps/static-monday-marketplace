@@ -74,12 +74,9 @@ eleventyComputed:
                   <a href="{{ vendor.website }}" target="_blank" rel="nofollow noreferer noopener">
                     Website
                   </a>
-                {% else %}
-                  No website found
                 {% endif %}
-                •
                 {% if vendor.email %}
-                  <a href="mailto:{{ vendor.email }}" class="text-blue-600 hover:text-blue-800">Support</a>
+                  • <a href="mailto:{{ vendor.email }}" class="text-blue-600 hover:text-blue-800">Support</a>
                 {% endif %}
               </p>
 
