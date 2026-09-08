@@ -142,6 +142,14 @@ module.exports = async function (eleventyConfig) {
     return categories.find((category) => category.id === parseInt(id));
   });
 
+  // Add custom filter to find a partner's website/email/Microsoft-partner
+  // record (from our own separately-maintained partner-websites.json) by
+  // the partner's monday.com gotopartners id
+  eleventyConfig.addFilter("findPartnerWebsiteById", function (list, id) {
+    if (!Array.isArray(list)) return null;
+    return list.find((entry) => entry.id === id) ?? null;
+  });
+
   // Add custom filter to format numbers with commas
   eleventyConfig.addFilter("numberFormat", function (num) {
     return parseInt(num).toLocaleString();

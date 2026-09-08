@@ -1,0 +1,1631 @@
+[
+  {
+    "id": "bc79f313-9624-4359-90a7-d275207c6097",
+    "slug": "ability-ops",
+    "name": "Ability Ops",
+    "tier": "Platinum",
+    "url": "https://abilityops.com/",
+    "email": "contact@abilityops.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1e4c795c-1c0f-40c5-9c58-efdf185688d6",
+    "slug": "abra-it",
+    "name": "Abra-it",
+    "tier": "Platinum",
+    "url": "https://www.abra-it.com/",
+    "email": "alon.topaz@abra-it.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "7e8209cb-8acf-4c73-97b8-939bb31c0dda",
+    "slug": "adaptive-pace",
+    "name": "Adaptive Pace",
+    "tier": "Platinum",
+    "url": "https://www.adaptivepace.com/",
+    "email": "jane@adaptivepace.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "3604454d-5460-48b3-969f-4b135f790089",
+    "slug": "aety",
+    "name": "Aety",
+    "tier": "Platinum",
+    "url": "https://aety.io/",
+    "email": "info@aety.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "57d322d3-244e-4968-bc96-a402b4449518",
+    "slug": "agence-gro",
+    "name": "Agence Gro",
+    "tier": "Platinum",
+    "url": "https://agencegro.ca/",
+    "email": "philip@agencegro.ca",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "eafcf1a7-cc1c-4ea7-84a3-1d5a4881e7ba",
+    "slug": "alest",
+    "name": "Alest",
+    "tier": "Platinum",
+    "url": "https://alest.com.br/",
+    "email": "monday@alest.com.br",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "359ff8bb-f710-4267-93cf-9435f8acd6f0",
+    "slug": "antlerwing",
+    "name": "AntlerWing",
+    "tier": "Platinum",
+    "url": "https://antlerwing.com/",
+    "email": "hello@lucidday.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "3e02edf8-d4ad-4c4a-b5db-e9e04279c9ed",
+    "slug": "axanexa",
+    "name": "axa·nexa",
+    "tier": "Platinum",
+    "url": "https://www.axanexa.com/",
+    "email": "kcarpenter@axanexa.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "c579cf25-d8de-4962-a6a0-0e66ed6fb1c7",
+    "slug": "blinno",
+    "name": "Blinno",
+    "tier": "Platinum",
+    "url": "https://www.blinno.ch/",
+    "email": "info@blinno.ch",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "73969265-8430-4648-bf58-8a32f25b34e4",
+    "slug": "boost-il",
+    "name": "boost IL",
+    "tier": "Platinum",
+    "url": "https://www.moveoboost.com",
+    "email": "danak@moveoboost.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "d09a92f8-be52-4d30-bcc9-68b7f87c12a5",
+    "slug": "boost-uk",
+    "name": "boost UK",
+    "tier": "Platinum",
+    "url": "https://www.moveoboost.com",
+    "email": "contact@moveoboost.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1838394b-a6bb-4936-867a-8fe917a79a9f",
+    "slug": "mitchell-mclaughlin",
+    "name": "CarbonWeb",
+    "tier": "Platinum",
+    "url": "https://www.carbonweb.co/",
+    "email": "max@carbonweb.co",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "18670242-437d-409f-9c5e-13a809e70280",
+    "slug": "cartagon-ax-cloud",
+    "name": "Cartagon",
+    "tier": "Platinum",
+    "url": "https://cartagon.com/",
+    "email": "comercial@cartagon.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "7b5b300a-31be-461f-acbd-cf21ff817620",
+    "slug": "cinapsys",
+    "name": "Cinapsys",
+    "tier": "Platinum",
+    "url": "https://cinapsys.com/",
+    "email": "gabriel@cinapsys.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "aa848b93-7648-4610-a195-3b35a36f9e49",
+    "slug": "cloud-concept",
+    "name": "Cloud Concept",
+    "tier": "Platinum",
+    "url": "https://cloudconceptgroup.com/",
+    "email": "care@cloudconceptgroup.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "3cb2aa16-af9f-40a3-af95-cd3ed3456672",
+    "slug": "devoteam",
+    "name": "Devoteam",
+    "tier": "Platinum",
+    "url": "https://www.devoteam.com/",
+    "email": "aurelien.labruyere@devoteamgcloud.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "617587eb-dac7-432d-9892-9f59696a449c",
+    "slug": "tanner-nelson",
+    "name": "Elevate Operations",
+    "tier": "Platinum",
+    "url": "https://www.elevateops.io/",
+    "email": "tanner@elevateops.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "d95d171a-ef1e-4c62-bb24-4ff38e9dc2d9",
+    "slug": "eligeo-business-solutions",
+    "name": "eligeo ai",
+    "tier": "Platinum",
+    "url": "https://www.eligeo.com/",
+    "email": "leticia.mendes@eligeo.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "709f6933-e6fa-4ff7-af61-9a091f7c20b8",
+    "slug": "empyra-us",
+    "name": "Empyra.com, Inc.",
+    "tier": "Platinum",
+    "url": "https://www.empyra.com/",
+    "email": "sales@empyra.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "b175ed44-470a-4ef1-af7e-40a274280560",
+    "slug": "enablen-consulting-aps",
+    "name": "EnableN Consulting ApS",
+    "tier": "Platinum",
+    "url": "https://www.enablen.no/",
+    "email": "kas@enablen-consulting.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "6c9485fc-f04e-4f75-9db4-55130b5a42ae",
+    "slug": "enreap",
+    "name": "Enreap",
+    "tier": "Platinum",
+    "url": "https://enreap.com/",
+    "email": "jaikishan.daryanani@enreap.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "7868f792-7d4b-462d-b73f-12fed1a7c022",
+    "slug": "ergoman-greece-ltd",
+    "name": "Ergoman Greece SA",
+    "tier": "Platinum",
+    "url": "https://ergoman.net/",
+    "email": "d.rokkos@ergoman.net",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "f41cbc1d-9501-4342-91f9-3fd742d34b55",
+    "slug": "evero",
+    "name": "Evero",
+    "tier": "Platinum",
+    "url": "https://evero.nl/",
+    "email": "hello@evero.nl",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "a30470c3-554a-44ed-8401-2c7b37514414",
+    "slug": "fruition-apac",
+    "name": "Fruition APAC",
+    "tier": "Platinum",
+    "url": "https://www.fruitionservices.io/",
+    "email": "josh@fruitionservices.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "8ca39684-dd1a-47b5-b5a2-853b9ad1c53b",
+    "slug": "gb-advisors",
+    "name": "GB Advisors",
+    "tier": "Platinum",
+    "url": "https://www.gb-advisors.com/",
+    "email": "sales@gb-advisors.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "024675e0-a5be-4aef-8275-3cf4a6abcbdc",
+    "slug": "gorilla-services",
+    "name": "Gorilla Services",
+    "tier": "Platinum",
+    "url": "https://www.gorillaservices.eu/",
+    "email": "monday.com@gorillaservices.nl",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "6fdc27b2-fec4-43b0-943b-cbf6f94b856a",
+    "slug": "hiberus",
+    "name": "hiberus Mexico",
+    "tier": "Platinum",
+    "url": "https://www.hiberus.com/",
+    "email": "comunicacion_mx@hiberus.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "8788c9d5-47e5-4216-9fdc-001dc07f8913",
+    "slug": "ified-sph",
+    "name": "Ified (SPH)",
+    "tier": "Platinum",
+    "url": "https://ifiedinc.com/",
+    "email": "monday@ifiedinc.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "4acd2b4c-d5d6-4216-a68e-0a59b013aded",
+    "slug": "impresoft-engage",
+    "name": "Impresoft Engage",
+    "tier": "Platinum",
+    "url": "https://www.impresoftengage.com/",
+    "email": "marketing@impresoftengage.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "f21c6c80-552f-48af-9909-dbbde9f4ac9f",
+    "slug": "incentro-africa",
+    "name": "Incentro Africa",
+    "tier": "Platinum",
+    "url": "https://www.incentro.com/en-EAF/",
+    "email": "matthew.munyiri@incentro.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "80c95b30-a445-4efd-a066-0997c5de40e4",
+    "slug": "inet-process",
+    "name": "iNet Process",
+    "tier": "Platinum",
+    "url": "https://www.inetprocess.com/",
+    "email": "lionel.fernandes@inetprocess.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "d2b1e3df-a72e-4b3e-8cba-5a2c63500e79",
+    "slug": "inteli-k",
+    "name": "Inteli-K",
+    "tier": "Platinum",
+    "url": "https://inteli-k.com/",
+    "email": "monday@inteli-k.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "158b0042-3499-41d1-8529-145fb4cb606a",
+    "slug": "kpmg-israel",
+    "name": "KPMG Israel",
+    "tier": "Platinum",
+    "url": "https://kpmg.com/il/en/home.html",
+    "email": "nhinga@kpmg.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "886ddec7-da6f-47a6-b3e2-e476f278eee7",
+    "slug": "make-it-simple",
+    "name": "MakeITSimple",
+    "tier": "Platinum",
+    "url": "https://makeitsimple.com.br/",
+    "email": "comercial@makeitsimple.com.br",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "dccd86fc-ad76-44f7-91f0-4e12e2068a8d",
+    "slug": "matrix-devops-israel",
+    "name": "matrix DevOps ",
+    "tier": "Platinum",
+    "url": "https://www.matrixdevops.co.il/",
+    "email": "orlib@matrix.co.il",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "794625c9-19b7-4216-96a1-33e7f23bf8b0",
+    "slug": "meta-lean",
+    "name": "Meta Lean",
+    "tier": "Platinum",
+    "url": "https://meta-lean.com/",
+    "email": "info@meta-lean.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "721a355c-03c8-4a7f-a298-bf3d2d97a8ce",
+    "slug": "mutherboard",
+    "name": "Mutherboard",
+    "tier": "Platinum",
+    "url": "https://mutherboard.com/",
+    "email": "rory@mutherboard.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "22aa0f1b-1410-430f-881a-7fb5f8d57a0c",
+    "slug": "nortrez-brazil",
+    "name": "Nortrez (Brasil)",
+    "tier": "Platinum",
+    "url": "https://nortrez.com/",
+    "email": "contato@nortrez.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "da84513d-6ac9-4e78-b690-f3410fc045b4",
+    "slug": "nortrez-mexico",
+    "name": "Nortrez Mexico",
+    "tier": "Platinum",
+    "url": "https://nortrez.com/",
+    "email": "hola@nortrez.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "58d49bd9-6e08-4200-9ceb-e3d2a8ac0893",
+    "slug": "omnidea",
+    "name": "Omnidea",
+    "tier": "Platinum",
+    "url": "https://www.omnidea.it/",
+    "email": "info@omnidea.it",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "88d6b78f-912a-432d-b71b-68ffe8b2a4c0",
+    "slug": "omnitas-consulting",
+    "name": "Omnitas Consulting",
+    "tier": "Platinum",
+    "url": "https://www.omnitas.com/",
+    "email": "info@omnitas.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1b2eb48d-bfdd-4bdc-99f2-08236fdb33e2",
+    "slug": "omnitas-uk",
+    "name": "Omnitas UK",
+    "tier": "Platinum",
+    "url": "https://www.omnitas.com/",
+    "email": "gustaf@omnitas.se",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "532b3dbe-3d7a-4b8e-beed-b02e21080ea6",
+    "slug": "twodo",
+    "name": "One twodo",
+    "tier": "Platinum",
+    "url": "https://www.twodotech.com/",
+    "email": "info@twodotech.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "eadb95a6-41fd-4c4d-8792-db8b9ee31c26",
+    "slug": "orangedot-obo",
+    "name": "OrangeDot",
+    "tier": "Platinum",
+    "url": "https://www.orangedotdigital.com/",
+    "email": "jennifer@theobogroup.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "643cf228-253f-47be-9c0a-873e01cf3eb0",
+    "slug": "polishedgeek",
+    "name": "Polished Geek",
+    "tier": "Platinum",
+    "url": "https://polishedgeek.com/",
+    "email": "deb@polishedgeek.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "479bfd05-92ec-4f85-b48d-92c365d52208",
+    "slug": "process-technologies-sa",
+    "name": "Process Technologies S.A.",
+    "tier": "Platinum",
+    "url": "https://www.protechcompany.com/",
+    "email": "info@protechcompany.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "0f1dd31a-ece9-44bc-a608-f2a22e820c02",
+    "slug": "provident-crm",
+    "name": "Provident CRM",
+    "tier": "Platinum",
+    "url": "https://www.providentcrm.com/",
+    "email": "sales@providentcrm.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1fa5eda4-f81f-4a1a-99b8-c5f50137686b",
+    "slug": "purple-plum-consulting",
+    "name": "Purple Plum Consulting",
+    "tier": "Platinum",
+    "url": "https://purpleplumtech.com/",
+    "email": "sales@purpleplumtech.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1043a9dc-7d2a-4ec8-8970-f40bec48559b",
+    "slug": "tara-horn",
+    "name": "Simpleday",
+    "tier": "Platinum",
+    "url": "https://simpledaysolutions.com/",
+    "email": "tara@simpledaysolutions.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "8ad5ae27-4cd1-4ac1-a1c9-18a4eaa0bd08",
+    "slug": "simplificabiz",
+    "name": "simplifica.biz",
+    "tier": "Platinum",
+    "url": "https://www.simplifica.biz/",
+    "email": "hola@simplifica.biz",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "fa90c2bb-99cf-42a1-a8a7-097d8f7f085d",
+    "slug": "solo-network",
+    "name": "Solo Network",
+    "tier": "Platinum",
+    "url": "https://www.solonetwork.com.br/",
+    "email": "paulo.leal@solonetwork.com.br",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "371556b0-0479-4300-be46-69c9a6788f4d",
+    "slug": "tcs",
+    "name": "TCS",
+    "tier": "Platinum",
+    "url": "https://www.tcs.com/",
+    "email": "anindita.b1@tcs.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "f4d1c571-a49f-493e-8488-caf8e37aeb21",
+    "slug": "michael-wagner",
+    "name": "The SaaSy People",
+    "tier": "Platinum",
+    "url": "https://www.thesaasypeople.com/",
+    "email": "michael.wagner@thesaasypeople.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "bff5ab8e-312c-4d2d-a53c-f6bfe31386ea",
+    "slug": "thanos-spelas",
+    "name": "thespelas.com",
+    "tier": "Platinum",
+    "url": "https://thespelas.com/",
+    "email": "thanos@thespelas.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "e857e1ca-3402-4220-a2ad-72ef8da4ab76",
+    "slug": "tiiltio",
+    "name": "tiilt.io",
+    "tier": "Platinum",
+    "url": "https://www.tiilt.io/",
+    "email": "contact@tiilt.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "2ef4b1b7-abd5-4574-8889-bfad8e63be6d",
+    "slug": "transfunnel-consulting",
+    "name": "TransFunnel",
+    "tier": "Platinum",
+    "url": "https://transfunnel.com/",
+    "email": "mona@transfunnel.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "7845f92e-0b98-47eb-ad93-e1bfdd4db909",
+    "slug": "tryve",
+    "name": "Tryve",
+    "tier": "Platinum",
+    "url": "https://tryve.com/",
+    "email": "nathalie.gobel@tryve.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "fd296931-6ee6-499a-9ed9-ba4dd24888e5",
+    "slug": "unitask",
+    "name": "Unitask",
+    "tier": "Platinum",
+    "url": "https://www.unitask-inc.com/",
+    "email": "itay.n@unitask-inc.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "2c0cfd7b-dacc-40bd-8611-ae4ccd2e10dc",
+    "slug": "alex-robinson",
+    "name": "upstream",
+    "tier": "Platinum",
+    "url": "https://www.upstreamtech.io/",
+    "email": "alex@upstreamtech.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "f486bdf8-67c6-4feb-9ba7-d60a53729cb0",
+    "slug": "wisely",
+    "name": "Wisely",
+    "tier": "Platinum",
+    "url": "https://www.wiselyglobal.tech/",
+    "email": "team@wiselyglobal.tech",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "d09f2b86-6ab2-40df-858a-3039139ae967",
+    "slug": "work-perfect",
+    "name": "Work Perfect Pty Ltd",
+    "tier": "Platinum",
+    "url": "https://workperfect.io/",
+    "email": "contactus@workperefct.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "7f1518d0-ea4e-48e1-b4d5-87ddb6104915",
+    "slug": "marly-jay",
+    "name": "Workflow Design Co.",
+    "tier": "Platinum",
+    "url": "https://workflowdesign.com/",
+    "email": "marly@workflowdesign.co",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "d9cde900-7386-4ad8-bd9b-1b964d4ffd30",
+    "slug": "lydia-agopian",
+    "name": "Workflow Magic",
+    "tier": "Platinum",
+    "url": "https://workflowmagic.co/",
+    "email": "lydia@workflowmagic.co",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "8a9d6a78-3331-4c29-9062-c5eb13eba0cb",
+    "slug": "workiflow",
+    "name": "Workiflow",
+    "tier": "Platinum",
+    "url": "https://www.workiflow.com/",
+    "email": "danny@workiflow.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "57933c99-1776-4183-87ac-748fc72ecd40",
+    "slug": "workise",
+    "name": "Workise",
+    "tier": "Platinum",
+    "url": "https://workise.com.br/",
+    "email": "contato@workise.com.br",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "b9206817-b2c6-4dfa-bcc2-6b8118d91275",
+    "slug": "xebia",
+    "name": "Xebia",
+    "tier": "Platinum",
+    "url": "https://www.xebia.com/",
+    "email": "freek.vandegriendt@xebia.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "29b6b131-3652-426c-8994-cd9ab9c7e49b",
+    "slug": "xtivia",
+    "name": "XTIVIA",
+    "tier": "Platinum",
+    "url": "https://www.xtivia.com/",
+    "email": "amorrow@xtivia.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "4c799b86-07ce-4f11-956f-ad8294c7d82f",
+    "slug": "meytal-peleg",
+    "name": "YEP Solutions",
+    "tier": "Platinum",
+    "url": "https://www.yepsolutions.io/",
+    "email": "meytal@yepsolutions.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "b6e5cf4f-53f6-47a5-9733-6bf97bf070ad",
+    "slug": "24-luna-by-opg-gmbh",
+    "name": "24 Luna by One Productivity Group GmbH",
+    "tier": "Gold",
+    "url": "https://www.24luna.com/",
+    "email": "info@opg.onl",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "e5084e17-63bc-496c-ac02-b8697c139e7e",
+    "slug": "a-players",
+    "name": "A-Players",
+    "tier": "Gold",
+    "url": "https://www.a-players.io/",
+    "email": "hello@a-players.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "231d4d25-a5d0-43bd-9ec0-ba830e70c9d1",
+    "slug": "adaptavist",
+    "name": "Adaptavist",
+    "tier": "Gold",
+    "url": "https://www.adaptavist.com/",
+    "email": "hello@adaptavist.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "24e7e1ee-dafd-4e76-b569-7e5911b7ea4c",
+    "slug": "adaptavist-spain",
+    "name": "Adaptavist Spain",
+    "tier": "Gold",
+    "url": "https://www.adaptavist.com/",
+    "email": "sales.spain@adaptavist.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "e7831dae-c76a-492f-a5f2-42c14148c93d",
+    "slug": "capabilitysource",
+    "name": "CapabilitySource",
+    "tier": "Gold",
+    "url": "https://capabilitysource.com/",
+    "email": "solutions@capabilitysource.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "55c7e2e3-be39-4946-ac7e-17d9d520fc61",
+    "slug": "carbonweblatam",
+    "name": "CarbonWeb LATAM",
+    "tier": "Gold",
+    "url": "https://www.carbonweb.co/",
+    "email": "jzevallos@carbonweb.co",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "11c61ec8-ebeb-4166-8d01-da24df107537",
+    "slug": "cloudcache-consulting-pvt-ltd",
+    "name": "CloudCache Consulting Pvt Ltd",
+    "tier": "Gold",
+    "url": "https://cloudcacheconsulting.com/",
+    "email": "vivek@cloudcacheconsulting.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1c62d1df-1188-4acf-8feb-bd8108e3817b",
+    "slug": "cxlabs",
+    "name": "CXLABS",
+    "tier": "Gold",
+    "url": "https://www.cxlabs.digital/",
+    "email": "ago@cxlabs.digital",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "b2fe3545-207e-48d2-be62-0cd5acd6a42b",
+    "slug": "demicon",
+    "name": "demicon",
+    "tier": "Gold",
+    "url": "https://demicon.com/",
+    "email": "contact@demicon.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "564dffba-699d-43e0-9697-536a7e26e5b2",
+    "slug": "deviniti",
+    "name": "Deviniti",
+    "tier": "Gold",
+    "url": "https://deviniti.com/",
+    "email": "jakub.szmanda@deviniti.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "39702dee-9de4-4ceb-820d-ca4016f00ed6",
+    "slug": "ease-solutions",
+    "name": "Ease Solutions Pte Ltd",
+    "tier": "Gold",
+    "url": "https://www.easesolutions.com/",
+    "email": "info@easesolutions.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "349212ff-53fe-4f80-bf2d-67255dd9cedb",
+    "slug": "entrypoint",
+    "name": "entrypoint",
+    "tier": "Gold",
+    "url": "https://www.entrypoint.co.il/",
+    "email": "benjy@entrypoint.co.il",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "dd04ef5d-dd27-4af1-9546-0af7d35db915",
+    "slug": "epic-cloud",
+    "name": "Epic Cloud",
+    "tier": "Gold",
+    "url": "https://www.epicloud.com.tw/",
+    "email": "pm@epicloud.com.tw",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "52b03c3b-03c4-4937-a54b-24098d3c9d77",
+    "slug": "escalate-partners-llc",
+    "name": "Escalate Partners LLC",
+    "tier": "Gold",
+    "url": "https://www.escalateops.com/",
+    "email": "sales@escalateops.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "e92f4556-0c3c-4137-813c-cc30c2bfac16",
+    "slug": "ethanolle",
+    "name": "Ethanolle",
+    "tier": "Gold",
+    "url": "https://ethanolle.com/",
+    "email": "admin@ethanolle.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "16290fb6-4637-41d5-a7f3-5bd9e0ccd31e",
+    "slug": "fruition-us",
+    "name": "Fruition US",
+    "tier": "Gold",
+    "url": "https://www.fruitionservices.io/",
+    "email": "josh@fruitionservices.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "71515371-78d6-482c-a746-b99e02b7a07e",
+    "slug": "gaco",
+    "name": "GACO",
+    "tier": "Gold",
+    "url": "https://www.gaco.com.au/",
+    "email": "elijah@gaco.com.au",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "4923749f-9974-4dae-8a68-327d714a972c",
+    "slug": "gapps-oy",
+    "name": "Gapps",
+    "tier": "Gold",
+    "url": "https://www.gappsgroup.com/",
+    "email": "myynti@gappsgroup.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "f9d6e2a4-fa0f-49b0-a996-4b95a2e24ab1",
+    "slug": "gaprise-inc",
+    "name": "GAPRISE INC.",
+    "tier": "Gold",
+    "url": "https://www.gaprise.com/",
+    "email": "monday@gaprise.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "3adefdc3-c514-4d0e-9f25-64a45a381f3f",
+    "slug": "gro3",
+    "name": "GRO3",
+    "tier": "Gold",
+    "url": "https://gro3.com/",
+    "email": "duncan.moore@gro3.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "57d8518a-92e2-4fb2-8383-e62d685eecb9",
+    "slug": "guerilla-360",
+    "name": "Guerilla 360",
+    "tier": "Gold",
+    "url": "https://www.guerilla360.com/",
+    "email": "info@guerilla360.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "50266c20-6079-480e-8279-bdb15f48b93d",
+    "slug": "huware",
+    "name": "Huware",
+    "tier": "Gold",
+    "url": "https://huware.com/",
+    "email": "marketing@huware.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "7ba6f835-6e8c-4821-bc9d-8e09644e6024",
+    "slug": "i4asiacorp",
+    "name": "i4 Asia Incorporated",
+    "tier": "Gold",
+    "url": "https://www.i4asiacorp.com/",
+    "email": "info@i4asiacorp.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "2309c7b0-887c-4b2f-ada6-4862def819c0",
+    "slug": "ignition-consulting-group",
+    "name": "Ignition Consulting Group",
+    "tier": "Gold",
+    "url": "https://ignitioncg.com.au/",
+    "email": "chris@ignitioncg.com.au",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "23173c3b-a2e8-4c15-8f20-4eddce37b2ec",
+    "slug": "ilegra",
+    "name": "ilegra",
+    "tier": "Gold",
+    "url": "https://www.ilegra.com/",
+    "email": "arcus.meirose@ilegra.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "49d752be-fbab-4fc6-9db3-df5d7230ed05",
+    "slug": "incentro-spain",
+    "name": "Incentro España",
+    "tier": "Gold",
+    "url": "https://www.incentro.com/es-ES",
+    "email": "contacto@incentro.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "f829e556-27dd-4b7c-a1af-8ab7cc63ec66",
+    "slug": "inco-soluciones",
+    "name": "Inco Soluciones",
+    "tier": "Gold",
+    "url": "https://incosoluciones.com/",
+    "email": "fpadilla@incosoluciones.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "d1c12786-ad59-4ae4-bdd8-1c876a9244d5",
+    "slug": "intelligent-studios",
+    "name": "Intelligent Studios",
+    "tier": "Gold",
+    "url": "https://intelstudios.com/",
+    "email": "monday@intelstudios.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "723c448f-4fb6-407a-9869-23af15277851",
+    "slug": "mediapost-martech",
+    "name": "MediaPoste Martech",
+    "tier": "Gold",
+    "url": "https://www.mediaposte-martech.com/",
+    "email": "contact@mediapost-martech.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "636ab73f-f5ed-4f30-8fa6-fa385d75c629",
+    "slug": "micronova",
+    "name": "MicroNova",
+    "tier": "Gold",
+    "url": "https://www.micronova.de/",
+    "email": "monday@micronova.de",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "dcb3f4a5-beff-4542-a580-54b5859c003a",
+    "slug": "omni-factors",
+    "name": "Omni Factors",
+    "tier": "Gold",
+    "url": "https://omnifactors.com/",
+    "email": "mete.ucan@omnifactors.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "ec6fec7c-2ab2-460a-a002-86eb2847ed2c",
+    "slug": "omni-factors-me",
+    "name": "Omni Factors ME",
+    "tier": "Gold",
+    "url": "https://omnifactors.com/",
+    "email": "support@omnifactors.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "f6af4686-be15-468e-ad3c-8c78691fde82",
+    "slug": "open-source-consulting-inc",
+    "name": "Open Source Consulting Inc.",
+    "tier": "Gold",
+    "url": "https://www.osci.kr/",
+    "email": "hijung@osci.kr",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "ae01ba2c-bbf5-47bd-a155-6a979e005cdf",
+    "slug": "orkesta",
+    "name": "orkesta",
+    "tier": "Gold",
+    "url": "https://www.orkesta.net/",
+    "email": "info@orkesta.net",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "396b5f1a-28ea-49f0-ad7a-c08982016fe0",
+    "slug": "quirk",
+    "name": "Quirk",
+    "tier": "Gold",
+    "url": "https://www.quirk.com.au/",
+    "email": "brad@quirk.com.au",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "fb4528f3-15a2-4273-a42c-a7e5e39bb051",
+    "slug": "seidor-chile",
+    "name": "SEIDOR Chile",
+    "tier": "Gold",
+    "url": "https://www.seidor.com/",
+    "email": "ignacio.fuentes@seidor.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "a7f0436b-89a0-47a2-8418-d63c4de7ec59",
+    "slug": "seidor-france",
+    "name": "SEIDOR France",
+    "tier": "Gold",
+    "url": "https://www.seidor.com/",
+    "email": "guillermo.aguila@seidor.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "7e778e68-d9ed-4ee4-b296-505b9b1a1680",
+    "slug": "squadhub",
+    "name": "SquadHub",
+    "tier": "Gold",
+    "url": "https://squadhub.com.br/",
+    "email": "leoadonis@squadhub.com.br",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "fd1120b2-2abe-44d3-b4f5-7212c5574255",
+    "slug": "takum",
+    "name": "Takúm Soluciones",
+    "tier": "Gold",
+    "url": "https://takum.co/",
+    "email": "juan.vallejo@takum.co",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "0f8e22ad-fee6-4d08-9060-7a3abeb99bf5",
+    "slug": "uxb",
+    "name": "UXB",
+    "tier": "Gold",
+    "url": "https://uxb.ooo/",
+    "email": "monday@uxb.ooo",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "7f45b40f-e3b3-4f37-b176-b88268bc0473",
+    "slug": "workflow-power",
+    "name": "WorkflowPower",
+    "tier": "Gold",
+    "url": "https://www.workflowpower.com/",
+    "email": "team@workflowpower.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "510698dc-064a-462e-a716-50d2672d084c",
+    "slug": "the-sales-studio",
+    "name": "Ximble",
+    "tier": "Gold",
+    "url": "https://www.ximble.nl/",
+    "email": "hello@thesalesstudio.nl",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "b41edbc9-fa04-4e9a-b5a5-804643310009",
+    "slug": "aafigueiredo-ltda",
+    "name": "A.A.Figueiredo Ltda.",
+    "tier": "Silver",
+    "url": "https://www.aafigueiredo.com.br/",
+    "email": "contato@aafigueiredo.com.br",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "bc1bc116-0acb-4018-aabb-6cfa92f9bb50",
+    "slug": "access-lab",
+    "name": "Access Lab",
+    "tier": "Silver",
+    "url": "https://accesslab.co.jp/",
+    "email": "info@accesslab.co.jp",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "8f50e2b5-03a0-4b58-a099-4fba07d533f9",
+    "slug": "achievan",
+    "name": "Achievan",
+    "tier": "Silver",
+    "url": "https://www.achievan.com/",
+    "email": "amin.panjwani@achievan.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "05cfda6e-d97b-4391-b93f-3c6fca8dd278",
+    "slug": "advaiya",
+    "name": "Advaiya Solutions",
+    "tier": "Silver",
+    "url": "https://advaiya.com/",
+    "email": "pragya.das@advaiya.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "77cba23c-b145-4936-b8d5-77c0cd84da68",
+    "slug": "allready",
+    "name": "AllReady",
+    "tier": "Silver",
+    "url": "https://www.itsallready.it/",
+    "email": "andrea@itsallready.it",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "8d068c2d-5e84-4334-a61b-44a615fe8c77",
+    "slug": "axxun",
+    "name": "Axxun",
+    "tier": "Silver",
+    "url": "https://axxun.ch/",
+    "email": "info@axxun.ch",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "49a773a5-1be7-4ff0-97f6-4e864defb264",
+    "slug": "bit2bit-americas",
+    "name": "bit2bit Americas",
+    "tier": "Silver",
+    "url": "https://bit2bitamericas.com/",
+    "email": "ventas@bit2bitamericas.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "0f45b1b8-ab48-4227-bc7c-56f498d0cabe",
+    "slug": "boost-us",
+    "name": "boost US",
+    "tier": "Silver",
+    "url": "https://www.moveoboost.com/",
+    "email": "yardenb@moveoboost.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "619e22b6-23f3-4c5b-94b8-76b526eb244b",
+    "slug": "cad-it",
+    "name": "CADIT Singapore",
+    "tier": "Silver",
+    "url": "https://www.cadit.com/",
+    "email": "james.cluniesross@cadit.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "b1ba3816-5181-432c-b056-9d4a5275e4b5",
+    "slug": "cloud-buro",
+    "name": "Cloud Buro",
+    "tier": "Silver",
+    "url": "https://cloud-buro.com/",
+    "email": "hello@cloud-buro.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "47799713-4779-4ba5-82a7-8581b2b5148a",
+    "slug": "cloud-concept-pty-ltd",
+    "name": "Cloud Concept (Pty) Ltd",
+    "tier": "Silver",
+    "url": "https://cloudconceptgroup.com/",
+    "email": "grant@cloudconceptgroup.co.za",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "ebd28261-2d3b-4e98-b563-f00a4fc73fd5",
+    "slug": "copperhill-consulting",
+    "name": "CopperHill",
+    "tier": "Silver",
+    "url": "https://www.copperhillconsulting.com/",
+    "email": "danielle.duva@consultch.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "c40cd9ae-e424-4b5b-87a1-81e7974e3efd",
+    "slug": "dragonsoft-dynamic-technology",
+    "name": "Dragonsoft Dynamic Technology",
+    "tier": "Silver",
+    "url": "https://hkdsdtech.com/",
+    "email": "customer@hkdsdtech.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "ca5c3a1f-1a0f-4117-9a5b-b8fc56a3ceb5",
+    "slug": "ellis-partner",
+    "name": "Ellis Partner",
+    "tier": "Silver",
+    "url": "https://ellis-partners.com/",
+    "email": "zacharie@ellis-partners.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1f863b5d-c759-4c72-9c05-ed125b561a1d",
+    "slug": "empyra-india",
+    "name": "Empyra Software Solutions Private Limited ",
+    "tier": "Silver",
+    "url": "https://www.empyra.com/",
+    "email": "mkrishna@empyra.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "5ec60bbf-f8b5-47e6-a58e-16553546195f",
+    "slug": "ergoman-communication-gmbh",
+    "name": "ERGOMAN Communication",
+    "tier": "Silver",
+    "url": "https://ergoman.net/",
+    "email": "sales@ergoman.net",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "e1a1a686-8885-4b33-883c-6b1b71775dd4",
+    "slug": "farport-software-srl",
+    "name": "Farport Software S.r.l.",
+    "tier": "Silver",
+    "url": "https://www.getyourflow.space/",
+    "email": "simone.urbani@getyourflow.space",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "6df41033-7fa1-485f-b2f8-0026d64d8886",
+    "slug": "fruition-uk",
+    "name": "Fruition UK",
+    "tier": "Silver",
+    "url": "https://www.fruitionservices.io/",
+    "email": "kevin@fruitionservices.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "33364fb7-cfd0-4fe7-acfc-46202e3d0b4c",
+    "slug": "fullcrm",
+    "name": "Fullcrm",
+    "tier": "Silver",
+    "url": "https://fullcrm.com/",
+    "email": "hello@fullcrm.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "e4119592-af93-432a-ac6c-714fcd0a0e8d",
+    "slug": "william-wong",
+    "name": "Get Efficient",
+    "tier": "Silver",
+    "url": "https://www.getefficient.ai/",
+    "email": "william@getefficient.work",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "7ab87c33-0aa9-4af8-92ad-af42137c07ba",
+    "slug": "gopomelo",
+    "name": "GoPomelo",
+    "tier": "Silver",
+    "url": "https://www.gopomelo.com/",
+    "email": "dewantoro@gopomelo.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "49695e06-a663-45fc-a4c7-86915a0d595c",
+    "slug": "mark-anley",
+    "name": "Green Llamas",
+    "tier": "Silver",
+    "url": "https://greenllamas.com/",
+    "email": "info@greenllamas.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "68e5151d-ef36-42b6-ad5c-3e0b7d6ee6c4",
+    "slug": "hiberus-spain",
+    "name": "Hiberus",
+    "tier": "Silver",
+    "url": "https://www.hiberus.com/",
+    "email": "mgarcias@hiberus.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "5edc6aef-2b38-42d5-b84d-2da2f9c52243",
+    "slug": "inayah-consulting",
+    "name": "Inayah Consulting",
+    "tier": "Silver",
+    "url": "https://inayahconsulting.com/",
+    "email": "info@inayahconsulting.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "53c1e074-115f-46c8-99c3-6809125c6db0",
+    "slug": "incentro-indonesia",
+    "name": "Incentro Asia Pacific",
+    "tier": "Silver",
+    "url": "https://www.incentro.com/en-NL",
+    "email": "apac@incentro.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "bb0091ad-1d94-49b9-b3e8-88c0aecd9675",
+    "slug": "inovus-technologies",
+    "name": "Inovus Technologies",
+    "tier": "Silver",
+    "url": "https://www.inovustech.io/",
+    "email": "jchlopek@inovustech.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "5da12dbc-0a48-45f3-94f8-7e1721079e8b",
+    "slug": "iready-taiwan",
+    "name": "iReady Taiwan & Hong Kong",
+    "tier": "Silver",
+    "url": "https://www.iready.com.hk/",
+    "email": "hsinyuan.fan@igrouptaiwan.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "82d327f7-26bb-4a11-b76f-94098fc81020",
+    "slug": "itti-con-company-limited",
+    "name": "ITTI CON Company Limited",
+    "tier": "Silver",
+    "url": "https://www.itticon.com/",
+    "email": "kunlasap@itticon.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "87ea1f46-d934-4633-b682-87ea172a9408",
+    "slug": "izeno-singapore",
+    "name": "iZeno",
+    "tier": "Silver",
+    "url": "https://izeno.com/",
+    "email": "priska.aprilia@izeno.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "f15a1e41-9b5f-415d-9acb-bc208103c1be",
+    "slug": "jackadder-international",
+    "name": "Jackadder International",
+    "tier": "Silver",
+    "url": "https://www.jackadder.international/",
+    "email": "info@jackadder.international",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "c4fa2dfe-4a29-4740-97b4-af410cbf1103",
+    "slug": "kick-consulting",
+    "name": "Kick Consulting",
+    "tier": "Silver",
+    "url": "https://www.kickconsulting.com.au/",
+    "email": "contact@kickconsulting.com.au",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "c0071a8a-332f-4a1e-9a57-0aed97018a04",
+    "slug": "kite",
+    "name": "KITE LLC",
+    "tier": "Silver",
+    "url": "https://www.kitebiz.net/",
+    "email": "infor@kitebiz.net",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "77e76a78-c399-4f81-96b1-42540e166a4d",
+    "slug": "kolme-group",
+    "name": "Kolme Group",
+    "tier": "Silver",
+    "url": "https://kolmegroup.com/",
+    "email": "ppmanswers@kolmegroup.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "7172a50e-470d-46b4-bd12-754a8e98047b",
+    "slug": "lanum",
+    "name": "Lanum",
+    "tier": "Silver",
+    "url": "https://www.lanum.com.br/",
+    "email": "contato@lanum.com.br",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "51b679f3-b971-4262-bcc4-9d9dea122b35",
+    "slug": "linktech",
+    "name": "Linktech",
+    "tier": "Silver",
+    "url": "https://www.linktech.com.tw/",
+    "email": "sales@linktech.com.tw",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "6dbfb470-b028-483b-b418-90b82b469c28",
+    "slug": "magic-button-labs",
+    "name": "Magic Button Labs",
+    "tier": "Silver",
+    "url": "https://www.magicbuttonlabs.com/",
+    "email": "sales@magicbuttonlabs.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "2e25a96a-d545-4520-aa4e-925a785aa5ea",
+    "slug": "miidas-consultoria",
+    "name": "MIIDAS Consultoria",
+    "tier": "Silver",
+    "url": "https://www.miidas.com.br/",
+    "email": "rafael@miidas.com.br",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "faa56f8e-b331-47a9-a7f3-8091f1dec0d2",
+    "slug": "motii",
+    "name": "Motii",
+    "tier": "Silver",
+    "url": "https://www.motii.co/",
+    "email": "ben@motii.co",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "fcab2d70-b395-4279-8824-30b447bf0a71",
+    "slug": "mustard-seed-systems-corp",
+    "name": "Mustard Seed Systems Corp.",
+    "tier": "Silver",
+    "url": "https://mseedsystems.com/",
+    "email": "judith@mseedsystems.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "9c07552e-192f-457e-bd89-c87c4ae4188e",
+    "slug": "eddwise-finance",
+    "name": "NC Solutions",
+    "tier": "Silver",
+    "url": "https://www.ncs.ge/",
+    "email": "zpichkhaia@ncsolutions.ge",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "a0f554a1-0aae-40d8-9970-5e318002b261",
+    "slug": "noliam-ag",
+    "name": "Noliam AG",
+    "tier": "Silver",
+    "url": "https://www.noliam.com/",
+    "email": "dmitry.rasin@noliam.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "87adfee4-b0fa-44d8-b1cf-d4d382dafdd3",
+    "slug": "novus-consulting",
+    "name": "Novus Consulting",
+    "tier": "Silver",
+    "url": "https://www.novus-consulting.com/",
+    "email": "cp.lau@novus-consulting.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "0802959d-6e1d-408a-835b-f996c85554c7",
+    "slug": "oac-analytics",
+    "name": "OAC Analytics AG",
+    "tier": "Silver",
+    "url": "https://www.oac-analytics.de/",
+    "email": "bhagat.ransi@oac-analytics.de",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "b550bfe2-52a1-45c0-a08f-6f0fcde38688",
+    "slug": "org-dev-group",
+    "name": "Org Dev Group",
+    "tier": "Silver",
+    "url": "https://www.orgdevgroup.io/",
+    "email": "ivanm@orgdevgroup.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "a44cf233-f0d7-4a2f-a0b8-bf5882b07d87",
+    "slug": "partner-it",
+    "name": "Partner IT",
+    "tier": "Silver",
+    "url": "https://partnerit.ch/",
+    "email": "info@partnerit.ch",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "bafd0c17-05cc-484e-9bab-8711de6b2f14",
+    "slug": "px2b",
+    "name": "PX2B",
+    "tier": "Silver",
+    "url": "https://www.px2b.com/",
+    "email": "contato@px2b.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "931f0cff-95e8-4ac3-b174-1f1aeb3bb0d0",
+    "slug": "redk-crm-solutions-spain",
+    "name": "redk CRM Solutions Spain",
+    "tier": "Silver",
+    "url": "https://www.redk.net/",
+    "email": "ventas@redk.net",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "a94666f3-f2fc-452e-9f71-92d7b4a0800e",
+    "slug": "rikkei-digital",
+    "name": "Rikkei Digital",
+    "tier": "Silver",
+    "url": "https://www.digitalworkplace.vn/",
+    "email": "contact@digitalworkplace.vn",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "9e604807-0033-48bc-ad57-203cb81c4545",
+    "slug": "seidor-spain",
+    "name": "SEIDOR España",
+    "tier": "Silver",
+    "url": "https://www.seidor.com/",
+    "email": "barbara.may@seidor.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "a973cc66-1217-448a-998c-18bf0c4d9dc6",
+    "slug": "seidor-mexico",
+    "name": "SEIDOR Mexico",
+    "tier": "Silver",
+    "url": "https://www.seidor.com/es-mx",
+    "email": "luz.cortescruz@seidor.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "0e1a7081-f8aa-428a-96b4-68811c9b55d7",
+    "slug": "eddie-blomkvist",
+    "name": "Straviont",
+    "tier": "Silver",
+    "url": "https://www.straviont.com/",
+    "email": "eddie@solosap.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "853adc4f-36f3-4704-9243-dd89d3bb9c8b",
+    "slug": "synolia",
+    "name": "Synolia",
+    "tier": "Silver",
+    "url": "https://www.synolia.com/",
+    "email": "contact@synolia.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "4362167b-d04b-4242-b8fb-42a6d07e30cd",
+    "slug": "talenta",
+    "name": "TalentA Corp.",
+    "tier": "Silver",
+    "url": "https://www.talenta.co.jp/",
+    "email": "info@talenta.co.jp",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "c235abda-c1ab-4cc1-abd1-d692c2d57a3d",
+    "slug": "tech-profuse-private-limited",
+    "name": "Tech Profuse Private Limited",
+    "tier": "Silver",
+    "url": "https://www.techprofuse.com/",
+    "email": "kiran@techprofuse.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "81d8c456-f90e-4195-924f-3c9572b8611d",
+    "slug": "thecila-global-services-au",
+    "name": "Techila Services",
+    "tier": "Silver",
+    "url": "https://techila.com.au/",
+    "email": "nick.bird@techila.com.au",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "0eed90d9-d1b7-4f3b-b92a-b23a68244807",
+    "slug": "the-crm-team",
+    "name": "The CRM Team",
+    "tier": "Silver",
+    "url": "https://thecrmteam.com/",
+    "email": "luvuyo@thecrmteam.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "b456a336-1c9e-4145-9098-92b80d62d93f",
+    "slug": "the-penguin-group",
+    "name": "The Penguin Group",
+    "tier": "Silver",
+    "url": "https://thepenguin.group/",
+    "email": "daniela@thepenguin.group",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "90bef19a-d260-48cf-b274-7e6d2c63f4ad",
+    "slug": "the-saas-jedi",
+    "name": "The SaaS JEDI",
+    "tier": "Silver",
+    "url": "https://thesaasjedi.com/",
+    "email": "contact@thesaasjedi.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1a135444-bcce-4cdf-9a35-13ac4b128723",
+    "slug": "thinqloud",
+    "name": "Thinqloud Solutions",
+    "tier": "Silver",
+    "url": "https://www.thinqloud.com/",
+    "email": "ish.chowdhary@thinqloud.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "bdca9a39-2e0c-4821-b36a-4fbe3ccc9847",
+    "slug": "thrivematics",
+    "name": "Thrivematics",
+    "tier": "Silver",
+    "url": "https://thrivematics.com/",
+    "email": "peter@thrivematics.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "11be3e95-af51-42a4-bc7d-af5aceac1217",
+    "slug": "till-freitag-consulting-gmbh",
+    "name": "Till Freitag Consulting GmbH",
+    "tier": "Silver",
+    "url": "https://till-freitag.com/",
+    "email": "monday@till-freitag.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "1c00a999-0250-4cde-8c32-b2f3c2f838af",
+    "slug": "toolstrek",
+    "name": "Toolstrek",
+    "tier": "Silver",
+    "url": "https://toolstrek.com/",
+    "email": "yesplease@toolstrek.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "9fd79405-cf6b-4102-b807-698b02504ceb",
+    "slug": "trundl",
+    "name": "Trundl",
+    "tier": "Silver",
+    "url": "https://trundl.com/",
+    "email": "contact@trundl.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "3e6a1a01-f0ef-4e84-9de3-f4fb463319b4",
+    "slug": "twyst",
+    "name": "Twyst",
+    "tier": "Silver",
+    "url": "https://twyst.co.il/",
+    "email": "ido@twyst.co.il",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "bced93d2-6a1a-40cd-ba3b-27186dc5cea4",
+    "slug": "wild-6",
+    "name": "Wild 6",
+    "tier": "Silver",
+    "url": "https://thewild6.com/",
+    "email": "eric.darling@thewild6.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "04ad6f88-8d92-44c6-89c7-fff19537d309",
+    "slug": "workiflow-sa-pty-ltd",
+    "name": "Workiflow SA (Pty) Ltd",
+    "tier": "Silver",
+    "url": "https://www.workiflow.com/",
+    "email": "john-paul@workiflow.co.za",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "0cfc2b14-8700-4451-9c0e-684b86a5c443",
+    "slug": "worktables",
+    "name": "Worktables",
+    "tier": "Silver",
+    "url": "https://worktables.io/",
+    "email": "hello@worktables.io",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "d0d09004-c920-455d-aae7-272e670e6fd5",
+    "slug": "worqinc",
+    "name": "worqinc",
+    "tier": "Silver",
+    "url": "https://worqinc.com/",
+    "email": "info@worqinc.com",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "5399c02d-f5f4-413b-aabc-cb9f88ee7eac",
+    "slug": "worsy",
+    "name": "WORSY Work Easy GmbH",
+    "tier": "Silver",
+    "url": "https://www.worsy.de/",
+    "email": "vertrieb@worsy.de",
+    "isMicrosoftPartner": false
+  },
+  {
+    "id": "a500bc40-7131-4c22-86fe-d8ad15a357e7",
+    "slug": "xebia-dach",
+    "name": "Xebia DACH",
+    "tier": "Silver",
+    "url": "https://www.xebia.com/",
+    "email": "wessel.dejong@xebia.com",
+    "isMicrosoftPartner": true
+  },
+  {
+    "id": "32da9dbe-e19e-4b76-9a81-a02b469bee35",
+    "slug": "xurpas-enterprise",
+    "name": "Xurpas Enterprise",
+    "tier": "Silver",
+    "url": "https://xurpas.com/",
+    "email": "matthew.velmonte@xurpas.com",
+    "isMicrosoftPartner": false
+  }
+]
