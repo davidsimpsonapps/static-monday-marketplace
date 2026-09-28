@@ -4,6 +4,10 @@ title: "monday.com service status • Incident history"
 description: "Current status and historical average response times for monday.com infrastructure endpoints."
 canonical: "/status/incidents/"
 incidents:
+  - start: 2026-09-28 11:19 UTC
+    title: "Webhooks are missing th Authorization header"
+    description: "<p>No authorization in newly created webhooks. Webhooks created by the API using app token are created as normal webhooks and not as app webhooks and let users edit and update them</p>
+                  <p>Replicated in multiple accounts (including customers) and reported to monday.com support (#5230446, #5231219).</p>"  
   - start: 2026-08-14 00:00 UTC
     title: "monday.com automation engine - Fields fail to populate"
     description: "<p>Dropdown fields in automation sentences show \"No options found\" as <a target='_blank' href='https://www.dsapps.dev/support/docs/monday.com/automation-engine-problems/'>described here</a>.</p>
