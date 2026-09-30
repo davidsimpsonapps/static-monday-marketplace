@@ -13,8 +13,9 @@ It's consumed by `src/_data/vendorDetails.js` and joined to a vendor by
 are used in the **Contact** section of `src/vendors/[vendorId].njk`. Vendors
 with no entry still get a Contact section showing the API's website/email.
 
-Only **Silver, Gold and Platinum** vendors are covered
-(`partners_program` 2, 3 and 4; Bronze is 1, none is 0).
+Only **Bronze, Silver, Gold and Platinum** vendors are covered
+(`partners_program` 1, 2, 3 and 4; 0 means no partner tier). All tiers were
+added 2026-09-30.
 
 This data can't be fetched programmatically. It was collected by Claude
 doing web research per vendor (first added 2026-09-30), so **it might be
@@ -23,7 +24,7 @@ Periodically re-run this process.
 
 ## 1. Check what's missing or stale
 
-Fetch the live vendor list and diff Silver+ vendors against
+Fetch the live vendor list and diff Bronze+ vendors against
 `vendor-details.json` by `vendorId`:
 
 ```bash
@@ -32,14 +33,14 @@ curl -s "https://marketplace-ms.monday.com/marketplace_ms/public/marketplace-dev
 
 python3 -c "
 import json
-tiers = {2: 'Silver', 3: 'Gold', 4: 'Platinum'}
+tiers = {1: 'Bronze', 2: 'Silver', 3: 'Gold', 4: 'Platinum'}
 api = {v['id']: v for v in json.load(open('/tmp/vendors_api.json'))['marketplace_developers']
        if v.get('partners_program') in tiers}
 have = {d['vendorId']: d for d in json.load(open('vendor-details.json'))}
 for i in sorted(api.keys() - have.keys()):
     v = api[i]; print('missing:', i, tiers[v['partners_program']], v['name'], v.get('website'), v.get('email'))
 for i in sorted(have.keys() - api.keys()):
-    print('stale (no longer Silver+ or gone):', i, have[i]['name'])
+    print('stale (no longer Bronze+ or gone):', i, have[i]['name'])
 for i in sorted(api.keys() & have.keys()):
     if tiers[api[i]['partners_program']] != have[i]['tier']:
         print('tier changed:', i, have[i]['tier'], '->', tiers[api[i]['partners_program']])
@@ -47,9 +48,9 @@ for i in sorted(api.keys() & have.keys()):
 ```
 
 - **Missing vendors**: need fresh research (see step 2).
-- **Stale entries**: the vendor dropped below Silver or left the marketplace.
+- **Stale entries**: the vendor dropped out of the partner tiers or left the marketplace.
   Removing them is optional: the template still works if an entry exists,
-  but it's cleaner to keep the file Silver+ only.
+  but it's cleaner to keep the file Bronze+ only.
 - **Tier changed**: update the `tier` field. It's display/reference only;
   lookups are by `vendorId`.
 
@@ -105,7 +106,7 @@ Schema (keep this exact field order/shape):
 {
   "vendorId": 10000114,
   "name": "<vendor display name from the API>",
-  "tier": "Platinum" | "Gold" | "Silver",
+  "tier": "Platinum" | "Gold" | "Silver" | "Bronze",
   "legalName": "Kusterer & Müller GbR" | null,
   "contactName": "Simon Kusterer" | null,
   "contactTitle": "Managing Director" | null,
@@ -133,8 +134,9 @@ are not shown on the site.
   entry for each ID with the same data.
 - **Group brands**: Upscale, ScriptRunner, Kolekti and Adaptavist are all
   Adaptavist Group; they share the group's Companies House registered office.
-- **Not a real vendor**: `10000072` "Rami LTD." is a monday.com internal/test
-  account (website monday.com, test apps). It's a candidate for
+- **Not real vendors**: `10000072` "Rami LTD." and `10000214` "Grzegorz
+  Swatowski Sp. z o. o." are monday.com internal/test accounts (website
+  monday.com, @monday.com emails). Both are candidates for
   `vendorBlockList` in `src/_data/data-filters.js`.
 
 ## 3. Spot-check existing entries
