@@ -191,8 +191,8 @@
     "name": "Boost Apps",
     "tier": "Gold",
     "legalName": "Boost Moveo Ltd.",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Matan Holi",
+    "contactTitle": "CEO & Co-Founder",
     "address": {
       "street": "31 Lilienblum St.",
       "city": "Tel Aviv",
@@ -201,7 +201,10 @@
       "country": "Israel",
       "countryCode": "IL"
     },
-    "sources": ["https://www.moveoboost.com/boost-website-privacy-policy"],
+    "sources": [
+      "https://www.moveoboost.com/boost-website-privacy-policy",
+      "https://www.linkedin.com/company/deployboost/"
+    ],
     "notes": "Part of Moveo Group. No individual is named publicly (privacy@moveo.group). Same company as vendor 10000023."
   },
   {
@@ -568,7 +571,9 @@
     },
     "sources": [
       "https://www.carbonweb.co/tc/",
-      "https://www.cleveland19.com/2025/02/12/young-entrepreneurs-running-tech-company-downtown-willoughby/"
+      "https://www.linkedin.com/company/carbonweb/",
+      "https://www.cleveland19.com/2025/02/12/young-entrepreneurs-running-tech-company-downtown-willoughby/",
+      "https://www.dnb.com/business-directory/company-profiles/carbon-web-print-llc.ec5484e0423e25feab517eb6d74ad258"
     ],
     "notes": "CarbonApps is the app arm of CarbonWeb (monday.com partner). Co-founders: Mitchell McLaughlin and Jack Kubicek. The office is in downtown Willoughby; no street address was found. The monday.com vendor email is jblair@carbonweb.co. Same company as vendor 58."
   },
@@ -1311,7 +1316,10 @@
       "country": null,
       "countryCode": null
     },
-    "sources": ["https://capablekoala.co/terms/"],
+    "sources": [
+      "https://capablekoala.co/terms/",
+      "https://www.linkedin.com/company/capable-koala/"
+    ],
     "notes": "No address or people published."
   },
   {
@@ -1337,8 +1345,8 @@
     "name": "TitanApps",
     "tier": "Bronze",
     "legalName": "Railsware Products Studio LLC",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Yaroslav Lazor",
+    "contactTitle": "CEO",
     "address": {
       "street": "117 E Colorado Blvd, Suite 600, Office 650",
       "city": "Pasadena",
@@ -1347,7 +1355,11 @@
       "country": "United States",
       "countryCode": "US"
     },
-    "sources": ["https://titanapps.io/terms"],
+    "sources": [
+      "https://titanapps.io/terms",
+      "https://marketplace.atlassian.com/vendors/1213126/titanapps",
+      "https://www.linkedin.com/company/titanapps/"
+    ],
     "notes": "TitanApps is a Railsware product. Delaware LLC, reg. no. 4461258."
   },
   {
@@ -1355,17 +1367,20 @@
     "name": "Exponenciel Inc.",
     "tier": "Bronze",
     "legalName": "Exponenciel Inc.",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Gilles Cavin",
+    "contactTitle": "CEO",
     "address": {
       "street": null,
-      "city": null,
-      "region": null,
+      "city": "Laval",
+      "region": "Quebec",
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Canada",
+      "countryCode": "CA"
     },
-    "sources": ["https://mdboosters.com/"],
+    "sources": [
+      "https://mdboosters.com/",
+      "https://www.exponenciel.com/contactus.aspx"
+    ],
     "notes": "Trades as mdBoosters. No address or people published."
   },
   {
@@ -1391,17 +1406,23 @@
     "name": "Boja Consulting AB",
     "tier": "Bronze",
     "legalName": "BOJA Technology AB",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Johan Brodin",
+    "contactTitle": "CTO & Founder",
     "address": {
-      "street": null,
-      "city": null,
-      "region": null,
-      "postalCode": null,
+      "street": "Vikingagatan 33a",
+      "city": "Limhamn",
+      "region": "Skåne County",
+      "postalCode": "21618",
       "country": "Sweden",
       "countryCode": "SE"
     },
-    "sources": ["https://bojaconsulting.com/privacy.html"],
+    "sources": [
+      "https://bojaconsulting.com/privacy.html",
+      "https://www.linkedin.com/company/boja-technology-ab/",
+      "https://www.linkedin.com/in/johan-brodin-05324a1",
+      "https://marketplace.atlassian.com/vendors/1215075/boja-technology",
+      "https://www.hitta.se/f%C3%B6retagsinformation/boja+technology%20ab/5568298094"
+    ],
     "notes": "Previously named BOJA Consulting AB. No address published."
   },
   {
@@ -1517,8 +1538,8 @@
     "name": "Stiltsoft Europe OÜ",
     "tier": "Bronze",
     "legalName": "Stiltsoft Europe OÜ",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Maxim Kuzmich",
+    "contactTitle": "Co-Founder and CEO",
     "address": {
       "street": "Ahtri tn 6a-23, Kesklinna linnaosa",
       "city": "Tallinn",
@@ -1529,7 +1550,10 @@
     },
     "sources": [
       "https://ariregister.rik.ee/eng/company/16265404",
-      "https://stiltsoft.com/company/"
+      "https://stiltsoft.com/company/",
+      "https://marketplace.atlassian.com/vendors/1216111/stiltsoft-europe-o",
+      "https://www.linkedin.com/company/stiltsoft/",
+      "https://www.linkedin.com/in/maxim-kuzmich/"
     ],
     "notes": "Registry code 16265404. The company page only names its CEOs as 'Maxim and Alex'. Vendor email akhaneev@stiltsoft.com."
   },
@@ -1692,8 +1716,8 @@
     "name": "DOIT-BI",
     "tier": "Bronze",
     "legalName": "DOIT-BI Sp. z o.o.",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Olha Haivanenko",
+    "contactTitle": "Co-Founder",
     "address": {
       "street": "pl. Powstańców Śląskich 1/11",
       "city": "Wrocław",
@@ -1702,7 +1726,11 @@
       "country": "Poland",
       "countryCode": "PL"
     },
-    "sources": ["https://doit-bi.com/"],
+    "sources": [
+      "https://doit-bi.com/",
+      "https://www.linkedin.com/company/doit-bi/people/",
+      "https://www.linkedin.com/in/olgaproco"
+    ],
     "notes": "KRS 0001034827. Parent: DB HOLDCO Sp. z o.o. (KRS 0001182069), same address."
   },
   {
@@ -1731,8 +1759,8 @@
     "name": "SaaSJet",
     "tier": "Bronze",
     "legalName": "SaaSJet",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Oksana Vaskivska",
+    "contactTitle": "CEO",
     "address": {
       "street": "8D/104 Rodziny Hiszpańskich",
       "city": "Warsaw",
@@ -1741,7 +1769,11 @@
       "country": "Poland",
       "countryCode": "PL"
     },
-    "sources": ["https://saasjet.com/about-us/"],
+    "sources": [
+      "https://saasjet.com/about-us/",
+      "https://www.linkedin.com/company/saasjet/",
+      "https://www.linkedin.com/in/oksana-vaskivska-9ab2b045/"
+    ],
     "notes": "Full legal entity name not published. Also has an office at Za Rudkoju 33, Ternopil 46001, Ukraine."
   },
   {
@@ -1767,8 +1799,8 @@
     "name": "BeeLabX",
     "tier": "Bronze",
     "legalName": "BeelabX",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Eddy Azoulay",
+    "contactTitle": "Partner",
     "address": {
       "street": "2105 Vista Oeste NW, Suite E #3804",
       "city": "Albuquerque",
@@ -1777,8 +1809,12 @@
       "country": "United States",
       "countryCode": "US"
     },
-    "sources": ["https://www.beelabxapps.com/terms-of-service"],
-    "notes": "Registered-agent style address; no people named."
+    "sources": [
+      "https://www.beelabxapps.com/terms-of-service",
+      "https://www.linkedin.com/company/beelabx/",
+      "https://www.wme-solutions.com/en/our-team"
+    ],
+    "notes": "Eddy Azoulay is based in Thailand - is this really a USA-based company?"
   },
   {
     "vendorId": 10000032,
@@ -1824,8 +1860,8 @@
     "name": "RAYATT Australia Pty. Ltd.",
     "tier": "Bronze",
     "legalName": "RAYATT Australia Pty. Ltd.",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Sahiba S",
+    "contactTitle": "CEO",
     "address": {
       "street": null,
       "city": null,
@@ -1834,7 +1870,10 @@
       "country": "Australia",
       "countryCode": "AU"
     },
-    "sources": ["https://rayatt.com/contact/"],
+    "sources": [
+      "https://rayatt.com/contact/",
+      "https://www.linkedin.com/company/rayatt-australia-pty-ltd/"
+    ],
     "notes": "'Global - with teams in ANZ, UK'. No address, ABN or people published. Vendor email is support@docotive.com (their Docotive product)."
   },
   {
@@ -1860,8 +1899,8 @@
     "name": "Unikoo BV",
     "tier": "Bronze",
     "legalName": "Unikoo BV",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Ine Dullaert",
+    "contactTitle": "Co-founder",
     "address": {
       "street": "Callensstraat 39A",
       "city": "Antwerpen",
@@ -1870,7 +1909,11 @@
       "country": "Belgium",
       "countryCode": "BE"
     },
-    "sources": ["https://www.unikoo.be/"],
+    "sources": [
+      "https://www.unikoo.be/",
+      "https://www.linkedin.com/company/unikoo/",
+      "https://www.linkedin.com/in/ine-dullaert-05b71043/"
+    ],
     "notes": "Antwerp office (also Gent and Hasselt); not confirmed as the registered office."
   },
   {
@@ -1938,8 +1981,8 @@
     "name": "Myndbend",
     "tier": "Bronze",
     "legalName": "Billow Myndbend, Inc.",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Daniel Latzman",
+    "contactTitle": "CEO",
     "address": {
       "street": "PO Box 150306",
       "city": "Brooklyn",
@@ -1948,7 +1991,10 @@
       "country": "United States",
       "countryCode": "US"
     },
-    "sources": ["https://www.myndbend.com/privacy-policy/"],
+    "sources": [
+      "https://www.myndbend.com/privacy-policy/",
+      "https://www.linkedin.com/company/billow-myndbend/"
+    ],
     "notes": "Mailing address from the privacy policy."
   },
   {
@@ -2041,13 +2087,15 @@
     "contactTitle": null,
     "address": {
       "street": null,
-      "city": null,
+      "city": "Tel Aviv",
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Israel",
+      "countryCode": "IL"
     },
-    "sources": [],
+    "sources": [
+      "https://www.kycisrael.com/companies/515962611/pangolin-labs-ltd/"
+    ],
     "notes": "op.today no longer resolves. No matching company found on UK Companies House."
   },
   {
