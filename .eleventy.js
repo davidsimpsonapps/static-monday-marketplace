@@ -150,6 +150,24 @@ module.exports = async function (eleventyConfig) {
     return list.find((entry) => entry.id === id) ?? null;
   });
 
+  // Add custom filter to find a vendor's contact name / legal name / postal
+  // address record (from our own separately-maintained vendor-details.json)
+  // by the vendor's monday.com marketplace developer id
+  eleventyConfig.addFilter("findVendorDetailsById", function (list, id) {
+    if (!Array.isArray(list)) return null;
+    return list.find((entry) => entry.vendorId === id) ?? null;
+  });
+
+  // Add custom filter to turn a vendor-details.json address object into
+  // display lines, skipping unknown (null) parts
+  eleventyConfig.addFilter("addressLines", function (address) {
+    if (!address) return [];
+    const locality = [address.city, address.region, address.postalCode]
+      .filter(Boolean)
+      .join(" ");
+    return [address.street, locality, address.country].filter(Boolean);
+  });
+
   // Add custom filter to format numbers with commas
   eleventyConfig.addFilter("numberFormat", function (num) {
     return parseInt(num).toLocaleString();

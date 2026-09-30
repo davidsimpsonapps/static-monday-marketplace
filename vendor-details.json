@@ -1,0 +1,693 @@
+[
+  {
+    "vendorId": 10000174,
+    "name": "Upscale (Part of The Adaptavist Group)",
+    "tier": "Platinum",
+    "legalName": "Adaptavist Group Ltd",
+    "contactName": "Jari Worsley",
+    "contactTitle": "General Manager, Upscale",
+    "address": {
+      "street": "25 Wilton Road, Victoria",
+      "city": "London",
+      "region": null,
+      "postalCode": "SW1V 1LW",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": [
+      "https://www.upscale.tech/",
+      "https://find-and-update.company-information.service.gov.uk/search/companies?q=adaptavist"
+    ],
+    "notes": "Adaptavist Group brand; address is the group's Companies House registered office (website legal page lists Telephone House, 69-77 Paul Street, London EC2A 4NW as a trading address)."
+  },
+  {
+    "vendorId": 10000154,
+    "name": "ScriptRunner",
+    "tier": "Platinum",
+    "legalName": "Adaptavist Group Ltd",
+    "contactName": "Simon Haighton-Williams",
+    "contactTitle": "CEO, The Adaptavist Group",
+    "address": {
+      "street": "25 Wilton Road, Victoria",
+      "city": "London",
+      "region": null,
+      "postalCode": "SW1V 1LW",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": [
+      "https://www.scriptrunnerhq.com/",
+      "https://find-and-update.company-information.service.gov.uk/search/companies?q=adaptavist",
+      "https://www.adaptavist.com/blog/an-exciting-new-chapter-for-adaptavist"
+    ],
+    "notes": "Adaptavist Group brand with no separately named leader found; contact is the group CEO."
+  },
+  {
+    "vendorId": 10000100,
+    "name": "Kolekti (part of The Adaptavist Group)",
+    "tier": "Platinum",
+    "legalName": "Adaptavist Group Ltd",
+    "contactName": "Adam Wignall",
+    "contactTitle": "General Manager, Kolekti",
+    "address": {
+      "street": "25 Wilton Road, Victoria",
+      "city": "London",
+      "region": null,
+      "postalCode": "SW1V 1LW",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": [
+      "https://www.kolekti.com/company",
+      "https://find-and-update.company-information.service.gov.uk/search/companies?q=adaptavist"
+    ],
+    "notes": "Adaptavist Group brand. The Kolekti company page lists the same 25 Wilton Road address."
+  },
+  {
+    "vendorId": 10000098,
+    "name": "Appfire",
+    "tier": "Platinum",
+    "legalName": "Appfire Technologies, LLC",
+    "contactName": "Matt Dircks",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "1500 District Avenue",
+      "city": "Burlington",
+      "region": "MA",
+      "postalCode": "01803",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://appfire.com/newsroom/appfire-founder-randall-ward-and-board-of-directors-appoint-matt-dircks-as-ceo-to-lead-the-company-into-its-next-growth-chapter",
+      "https://clay.com/dossier/appfire-headquarters-office-locations"
+    ],
+    "notes": "Matt Dircks has been CEO since January 2025 (founder Randall Ward is CEO Emeritus). Legal entity name comes from third-party profiles."
+  },
+  {
+    "vendorId": 10000072,
+    "name": "Rami LTD.",
+    "tier": "Platinum",
+    "legalName": "monday.com Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "6 Yitzhak Sadeh Street",
+      "city": "Tel Aviv",
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://www.globaldata.com/company-profile/mondaycom-ltd/locations/"
+    ],
+    "notes": "Not a real third-party vendor. The website is monday.com, the email is rami@monday.com, and its apps are 'cross region test' and 'Boards portal', so this is a monday.com internal/test account. Consider adding 10000072 to vendorBlockList."
+  },
+  {
+    "vendorId": 10000069,
+    "name": "Adaptavist",
+    "tier": "Platinum",
+    "legalName": "Adaptavist Group Ltd",
+    "contactName": "Simon Haighton-Williams",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "25 Wilton Road, Victoria",
+      "city": "London",
+      "region": null,
+      "postalCode": "SW1V 1LW",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": [
+      "https://www.adaptavist.com/legal",
+      "https://find-and-update.company-information.service.gov.uk/search/companies?q=adaptavist",
+      "https://www.adaptavist.com/blog/an-exciting-new-chapter-for-adaptavist"
+    ],
+    "notes": "Registered office from Companies House. adaptavist.com/legal lists Telephone House, 69-77 Paul Street, London EC2A 4NW; VAT GB 242020075."
+  },
+  {
+    "vendorId": 48,
+    "name": "Spot-nik",
+    "tier": "Platinum",
+    "legalName": "Spot-nik Ltd.",
+    "contactName": "Guy Gavish",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://spot-nik.com/privacy-policy/",
+      "https://spot-nik.com/terms-of-service/"
+    ],
+    "notes": "No postal address is published. Israel is inferred from the governing-law clause and the privacy policy. Guy Gavish is named as the privacy/support contact (guy.gavish@spot-nik.com); his title isn't stated."
+  },
+  {
+    "vendorId": 45,
+    "name": "Avisi Apps",
+    "tier": "Platinum",
+    "legalName": "Avisi Apps B.V.",
+    "contactName": "Bas Wienhoven",
+    "contactTitle": "Team Lead / Product Owner",
+    "address": {
+      "street": "Nieuwe Stationsstraat 10",
+      "city": "Arnhem",
+      "region": "Gelderland",
+      "postalCode": "6811 KS",
+      "country": "Netherlands",
+      "countryCode": "NL"
+    },
+    "sources": ["https://apps.avisi.com/", "https://apps.avisi.com/about-us"],
+    "notes": "KvK 76632490, VAT NL860713659B01. Avisi's founder is Gert-Jan van de Streek."
+  },
+  {
+    "vendorId": 100000022,
+    "name": "Ziflow.com",
+    "tier": "Gold",
+    "legalName": "Ziflow Limited",
+    "contactName": "Anthony Welgemoed",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "1st Floor, 48 Chancery Lane",
+      "city": "London",
+      "region": null,
+      "postalCode": "WC2A 1JF",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": [
+      "https://www.ziflow.com/privacy-policy",
+      "https://find-and-update.company-information.service.gov.uk/company/09819483"
+    ],
+    "notes": "UK company no. 09819483. Active directors: Anthony Welgemoed, Matthew John Atkinson (co-founder), Jonathan Drillings, Firas Raouf, Michael Volpe."
+  },
+  {
+    "vendorId": 10000231,
+    "name": "Boost Apps",
+    "tier": "Gold",
+    "legalName": "Boost Moveo Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "31 Lilienblum St.",
+      "city": "Tel Aviv",
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://www.moveoboost.com/boost-website-privacy-policy"],
+    "notes": "Part of Moveo Group. No individual is named publicly (privacy@moveo.group). Same company as vendor 10000023."
+  },
+  {
+    "vendorId": 10000135,
+    "name": "Tower Apps Ltd",
+    "tier": "Gold",
+    "legalName": "Tower Apps Ltd",
+    "contactName": "Bettina Leitner",
+    "contactTitle": "Managing Director",
+    "address": {
+      "street": "128 City Road",
+      "city": "London",
+      "region": null,
+      "postalCode": "EC1V 2NX",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": [
+      "https://www.towerapps.com/imprint/",
+      "https://find-and-update.company-information.service.gov.uk/company/15053987"
+    ],
+    "notes": "UK company no. 15053987. 128 City Road is a registered-office service; the team is Germany-based."
+  },
+  {
+    "vendorId": 10000127,
+    "name": "Pioneera",
+    "tier": "Gold",
+    "legalName": "Pioneera",
+    "contactName": "Snir Alayof",
+    "contactTitle": "Founder & CEO",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://pioneera.io/about-one"],
+    "notes": "Remote team founded in 2023. No legal entity or postal address is published."
+  },
+  {
+    "vendorId": 10000126,
+    "name": "Fantasy Media LTD",
+    "tier": "Gold",
+    "legalName": "Fantasy Media LTD",
+    "contactName": "Tomer Helft",
+    "contactTitle": "Founder & CEO",
+    "address": {
+      "street": null,
+      "city": "Tel Aviv",
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://www.fantasymedia.io/privacy-policy",
+      "https://www.fantasymedia.io/our-story",
+      "https://www.linkedin.com/company/fantasy-media-ltd/"
+    ],
+    "notes": "No address or country is published. Only the first name 'Daniel' was found (privacy contact daniel@fantasymedia.io); no surname or title."
+  },
+  {
+    "vendorId": 10000120,
+    "name": "Plugin Genie LLC",
+    "tier": "Gold",
+    "legalName": "Plugin Genie LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://plugingenie.com/",
+      "https://learn.microsoft.com/connectors/monday"
+    ],
+    "notes": "US LLC; no address is published. Search results named an 'Oliver Albrecht' as founder, but no primary source confirmed it, so it was left out."
+  },
+  {
+    "vendorId": 10000059,
+    "name": "Jobflows",
+    "tier": "Gold",
+    "legalName": "Jetpack Apps",
+    "contactName": "Nir Ofir",
+    "contactTitle": "Founder",
+    "address": {
+      "street": "8 Zmora",
+      "city": "Shoham",
+      "region": null,
+      "postalCode": "608505",
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://jetpackapps.io/terms-of-service",
+      "https://monday.com/appdeveloper/blog/developer-success-nir-ofir/"
+    ],
+    "notes": "Jobflows is a Jetpack Apps product (email jobflows@jetpackapps.co). The postal code is as printed in Jetpack's terms and may be truncated."
+  },
+  {
+    "vendorId": 10000023,
+    "name": "Boost Apps",
+    "tier": "Gold",
+    "legalName": "Boost Moveo Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "31 Lilienblum St.",
+      "city": "Tel Aviv",
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://www.moveoboost.com/boost-website-privacy-policy"],
+    "notes": "Part of Moveo Group. Same company as vendor 10000231."
+  },
+  {
+    "vendorId": 42,
+    "name": "Jetpack Apps",
+    "tier": "Gold",
+    "legalName": "Jetpack Apps",
+    "contactName": "Nir Ofir",
+    "contactTitle": "Founder",
+    "address": {
+      "street": "8 Zmora",
+      "city": "Shoham",
+      "region": null,
+      "postalCode": "608505",
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://jetpackapps.io/terms-of-service",
+      "https://monday.com/appdeveloper/blog/developer-success-nir-ofir/"
+    ],
+    "notes": "The postal code is as printed in Jetpack's terms and may be truncated."
+  },
+  {
+    "vendorId": 10,
+    "name": "DocuGen, Inc.",
+    "tier": "Gold",
+    "legalName": "DocuGen, Inc.",
+    "contactName": "Sami Caracand",
+    "contactTitle": "Founder",
+    "address": {
+      "street": "9450 SW Gemini Dr",
+      "city": "Beaverton",
+      "region": "OR",
+      "postalCode": "97008-7105",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://docugen.io/",
+      "https://docugen.io/privacy-policy/",
+      "https://www.zoominfo.com/p/Sami-Caracand/1313346711"
+    ],
+    "notes": "Founder listed only as 'Sami C.' on G2/TrustRadius; no full name confirmed. Linked to Cloud Concept (Dubai monday.com partner)."
+  },
+  {
+    "vendorId": 6,
+    "name": "Omnidea S.r.l.",
+    "tier": "Gold",
+    "legalName": "Omnidea S.r.l. a socio unico",
+    "contactName": "Roberto Tremonti",
+    "contactTitle": null,
+    "address": {
+      "street": "Via Niccolò Tommaseo, 94",
+      "city": "Padova",
+      "region": "PD",
+      "postalCode": "35131",
+      "country": "Italy",
+      "countryCode": "IT"
+    },
+    "sources": ["https://www.omnidea.it/"],
+    "notes": "P.IVA IT03683000271. The contact name comes from the monday.com vendor email (roberto.tremonti@omnidea.it); his role isn't confirmed."
+  },
+  {
+    "vendorId": 100000048,
+    "name": "Rewind Software Inc.",
+    "tier": "Silver",
+    "legalName": "Rewind Software Inc.",
+    "contactName": "Mike Potter",
+    "contactTitle": "Co-founder & CEO",
+    "address": {
+      "street": "333 Preston Street, Suite 200",
+      "city": "Ottawa",
+      "region": "ON",
+      "postalCode": "K1S 5N4",
+      "country": "Canada",
+      "countryCode": "CA"
+    },
+    "sources": [
+      "https://rewind.com/legal/privacy-policy",
+      "https://rewind.com/blog/meet-team-mike-potter-ceo-co-founder/"
+    ],
+    "notes": null
+  },
+  {
+    "vendorId": 10000188,
+    "name": "PickApps",
+    "tier": "Silver",
+    "legalName": "PickApps",
+    "contactName": "Shaul Gittelman",
+    "contactTitle": "Co-Founder, Head of Product",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://www.pickapps-solutions.com/terms-conditions",
+      "https://www.linkedin.com/in/shaul-gittelman-737055146/"
+    ],
+    "notes": "No address or people are published. Italy is inferred from the notice address info@PickApps.it."
+  },
+  {
+    "vendorId": 10000175,
+    "name": "Super Workday",
+    "tier": "Silver",
+    "legalName": null,
+    "contactName": "Yash Garg",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://superworkday.com/",
+      "https://www.linkedin.com/in/yashgarg2107/"
+    ],
+    "notes": "The site is desktop-only/JS-rendered and no company details were found. Needs manual research."
+  },
+  {
+    "vendorId": 10000122,
+    "name": "Baruzo Tech",
+    "tier": "Silver",
+    "legalName": "Baruzotech Private Limited",
+    "contactName": "Kevin Vaghasiya",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "703 Valentina Business Hub, L.P. Savani Road, Adajan",
+      "city": "Surat",
+      "region": "Gujarat",
+      "postalCode": "395009",
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": [
+      "https://www.baruzotech.com/privacy-policy",
+      "https://www.linkedin.com/in/kevin-vaghasiya/"
+    ],
+    "notes": "No founder or director is named publicly."
+  },
+  {
+    "vendorId": 10000116,
+    "name": "DevSamurai",
+    "tier": "Silver",
+    "legalName": "DevSamurai Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "3-6-25 Komone, Itabashi-ku",
+      "city": "Tokyo",
+      "region": null,
+      "postalCode": "173-0037",
+      "country": "Japan",
+      "countryCode": "JP"
+    },
+    "sources": [
+      "https://www.devsamurai.com/en/about-us/",
+      "https://marketplace.atlassian.com/vendors/1216701/devsamurai",
+      "https://www.linkedin.com/company/devsamurai/"
+    ],
+    "notes": "Established 2018-10-17. No CEO is named on the site. Also has DevSamurai Vietnam JSC in Ho Chi Minh City."
+  },
+  {
+    "vendorId": 10000114,
+    "name": "Gorilla Apps",
+    "tier": "Silver",
+    "legalName": "Kusterer & Müller GbR",
+    "contactName": "Simon Kusterer",
+    "contactTitle": "Managing Director",
+    "address": {
+      "street": "Hagbergstrasse 11",
+      "city": "Stuttgart",
+      "region": "Baden-Württemberg",
+      "postalCode": "70188",
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://getgorilla.app/imprint"],
+    "notes": "Co-managing director: Markus Müller. VAT ID DE815324806."
+  },
+  {
+    "vendorId": 10000104,
+    "name": "Get Report LLC",
+    "tier": "Silver",
+    "legalName": "Get Report LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://getreport.ai/privacy-policy"],
+    "notes": "US LLC per the privacy policy; no address or people are published."
+  },
+  {
+    "vendorId": 10000063,
+    "name": "Tempo Software",
+    "tier": "Silver",
+    "legalName": "Tempo Software",
+    "contactName": "Vic Chynoweth",
+    "contactTitle": "CEO",
+    "address": {
+      "street": null,
+      "city": "Boston",
+      "region": "MA",
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://www.tempo.io/news/tempo-strengthens-executive-leadership"
+    ],
+    "notes": "HQ city is from a January 2026 press release dateline; no street address was confirmed. Offices are also in Reykjavík and Montreal. The monday.com vendor email is d.belevtsov@tempo.io."
+  },
+  {
+    "vendorId": 10000052,
+    "name": "CarbonApps",
+    "tier": "Silver",
+    "legalName": "Carbon Web Print LLC",
+    "contactName": "Mitchell McLaughlin",
+    "contactTitle": "Co-founder",
+    "address": {
+      "street": null,
+      "city": "Willoughby",
+      "region": "OH",
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://www.carbonweb.co/tc/",
+      "https://www.cleveland19.com/2025/02/12/young-entrepreneurs-running-tech-company-downtown-willoughby/"
+    ],
+    "notes": "CarbonApps is the app arm of CarbonWeb (monday.com partner). Co-founders: Mitchell McLaughlin and Jack Kubicek. The office is in downtown Willoughby; no street address was found. The monday.com vendor email is jblair@carbonweb.co. Same company as vendor 58."
+  },
+  {
+    "vendorId": 10000047,
+    "name": "Presago",
+    "tier": "Silver",
+    "legalName": "Presago S.R.L.",
+    "contactName": "Alessandro Distefano",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "Via Mazzaglia 24",
+      "city": "Nicolosi",
+      "region": "CT",
+      "postalCode": "95030",
+      "country": "Italy",
+      "countryCode": "IT"
+    },
+    "sources": [
+      "https://www.presago.com/",
+      "https://marketplace.atlassian.com/vendors/1218238/presago",
+      "https://www.linkedin.com/company/presago/"
+    ],
+    "notes": "VAT IT06018240876. presago.com prints the CAP as 95052; the Atlassian listing gives 95030 (the Nicolosi CAP). No people are named publicly."
+  },
+  {
+    "vendorId": 10000034,
+    "name": "David Simpson Apps",
+    "tier": "Silver",
+    "legalName": "Concise Web Design Limited",
+    "contactName": "David Simpson",
+    "contactTitle": "Founder",
+    "address": {
+      "street": "Unit 4a, Langley House, Wheatcroft Business Park, Edwalton",
+      "city": "Nottingham",
+      "region": null,
+      "postalCode": "NG12 4DG",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": ["https://www.dsapps.dev/contact/"],
+    "notes": "Own company; fill in the address manually."
+  },
+  {
+    "vendorId": 10000019,
+    "name": "Collabsoft",
+    "tier": "Silver",
+    "legalName": "Software Defined Everything B.V.",
+    "contactName": "Remie Bolte",
+    "contactTitle": "Founder, Lead Developer",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Netherlands",
+      "countryCode": "NL"
+    },
+    "sources": ["https://www.collabsoft.com/about-us"],
+    "notes": "Dutch B.V.; the postal address and KvK number weren't published on the site."
+  },
+  {
+    "vendorId": 10000016,
+    "name": "Unitask Ltd",
+    "tier": "Silver",
+    "legalName": "Unitask Ltd",
+    "contactName": "Adar Rubin",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "HaSivim St 49, Park Yanai",
+      "city": "Petah Tikva",
+      "region": null,
+      "postalCode": "4959504",
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://www.unitask-inc.com/about/officials/",
+      "https://www.unitask-inc.com/contact/"
+    ],
+    "notes": "Address and name transliterated from Hebrew (רחוב הסיבים 49 פארק ינאי פתח תקווה; אדר רובין). Also has a Haifa office at WeWork, Derech HaAtzmaut 45."
+  },
+  {
+    "vendorId": 100000000,
+    "name": "KPMG - Israel",
+    "tier": "Silver",
+    "legalName": "KPMG Somekh Chaikin",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "Millennium Tower, 17 Ha'arba'a Street",
+      "city": "Tel Aviv",
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://kpmg.com/il/en/home/about/offices/tel-aviv-1.html",
+      "https://en.wikipedia.org/wiki/HaArba%27a_Street"
+    ],
+    "notes": "Israeli partnership; KPMG member firm. No named monday.com alliance lead was found (vendor email is a shared us-isladvmoncoeproj@kpmg.com mailbox). Postal code unconfirmed (old 5-digit code was 64739)."
+  },
+  {
+    "vendorId": 58,
+    "name": "CarbonApps",
+    "tier": "Silver",
+    "legalName": "Carbon Web Print LLC",
+    "contactName": "Mitchell McLaughlin",
+    "contactTitle": "Co-founder",
+    "address": {
+      "street": null,
+      "city": "Willoughby",
+      "region": "OH",
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://www.carbonweb.co/tc/",
+      "https://www.cleveland19.com/2025/02/12/young-entrepreneurs-running-tech-company-downtown-willoughby/"
+    ],
+    "notes": "Same company as vendor 10000052. Co-founders: Mitchell McLaughlin and Jack Kubicek."
+  }
+]
