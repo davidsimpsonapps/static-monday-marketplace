@@ -1084,18 +1084,23 @@
     "vendorId": 10000190,
     "name": "WorkOSMods",
     "tier": "Bronze",
-    "legalName": "WorkOSMods",
-    "contactName": null,
-    "contactTitle": null,
+    "legalName": "Digital Solutions Bridge Ltd",
+    "contactName": "Ouafa Williams",
+    "contactTitle": "Director",
     "address": {
-      "street": null,
-      "city": null,
+      "street": "71-75 Shelton Street, Covent Garden",
+      "city": "London",
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United Kingdom",
+      "countryCode": "GB"
     },
-    "sources": ["https://workosmods.com/"],
+    "sources": [
+      "https://workosmods.com/",
+      "https://www.linkedin.com/company/workosmods/",
+      "https://www.dsbridge.co.uk/",
+      "https://find-and-update.company-information.service.gov.uk/company/16402155"
+    ],
     "notes": "Nothing beyond the brand name is published."
   },
   {
@@ -1188,12 +1193,12 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United States",
+      "countryCode": "US"
     },
     "sources": [
       "https://workflowmagic.co/about-us/",
-      "linkedin.com/company/workflow-magic/"
+      "https://linkedin.com/company/workflow-magic/"
     ],
     "notes": "Founded in 2022. No address published."
   },
@@ -1201,7 +1206,7 @@
     "vendorId": 10000161,
     "name": "Setup Solution",
     "tier": "Bronze",
-    "legalName": "Individual Entrepreneur Artem Antipov",
+    "legalName": "Artem Antipov",
     "contactName": "Artem Antipov",
     "contactTitle": "Owner",
     "address": {
