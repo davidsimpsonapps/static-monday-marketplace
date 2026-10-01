@@ -524,7 +524,7 @@
     "name": "Get Report LLC",
     "tier": "Silver",
     "legalName": "Get Report LLC",
-    "contactName": "Michael",
+    "contactName": "Michael Popchuk",
     "contactTitle": null,
     "address": {
       "street": "8 The GRN, STE A",
@@ -536,7 +536,9 @@
     },
     "sources": [
       "https://getreport.ai/privacy-policy",
-      "https://marketplace.atlassian.com/vendors/1223941/get-report"
+      "https://marketplace.atlassian.com/vendors/1223941/get-report",
+      "https://www.linkedin.com/company/get-report/",
+      "https://linkedin.com/in/popchuk/"
     ],
     "notes": "US LLC per the privacy policy; no address or people are published. Possible offshore company: Dover, DE registered-agent address; the developer (lablab.ai profile Dmitry Perepelytsia) appears to be based outside the US. Unconfirmed."
   },
