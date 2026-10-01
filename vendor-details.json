@@ -2178,11 +2178,12 @@
       "region": null,
       "postalCode": null,
       "country": "Sri Lanka",
-      "countryCode": "SY"
+      "countryCode": "LK"
     },
     "sources": [
       "https://www.dreamteam.website",
-      "https://www.linkedin.com/company/serandibsoft/"
+      "https://www.linkedin.com/company/serandibsoft/",
+      "https://linkedin.com/in/thusitha-manathunga/"
     ],
     "notes": "First name from the vendor email thusitha@serandibsoft.com. No country published; 'Serendib' is a historic name for Sri Lanka, which hints at a Sri Lankan developer, but that's unconfirmed."
   },
