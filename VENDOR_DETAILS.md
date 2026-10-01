@@ -182,6 +182,24 @@ start the note with **"Possible offshore company: ..."** plus the evidence. If y
 can't tell, say that the US address is a registered-agent address and the
 team's location wasn't established.
 
+### Check every UK address the same way
+
+Companies House is the best evidence for UK entries. Each company's
+`/officers` and `/persons-with-significant-control` pages show every
+director/member's **country of residence** and **nationality**, which
+quickly shows whether the people behind a London address actually live
+elsewhere. Also check:
+
+- registered-office services and virtual offices (e.g. `128 City Road,
+  London EC1V 2NX`), law-firm or accountant addresses shared by unrelated
+  companies (e.g. `4 Mentmore Court, Milton Keynes`), and liquidators'
+  addresses on dissolved companies;
+- whether a company with that name exists at all; a "UK" vendor with no
+  Companies House match gets a "Possible offshore company" note.
+
+Examples found so far: Broken Build LLP (all members in Ukraine, moved to
+Ukraine) and Ziflow (UK company, all directors abroad, run from Dallas).
+
 ### Known quirks
 
 - **Duplicate vendor accounts**: some companies have two vendor IDs (Boost

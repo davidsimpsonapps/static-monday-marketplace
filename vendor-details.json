@@ -184,7 +184,7 @@
       "https://www.ziflow.com/privacy-policy",
       "https://find-and-update.company-information.service.gov.uk/company/09819483"
     ],
-    "notes": "UK company no. 09819483. Active directors: Anthony Welgemoed, Matthew John Atkinson (co-founder), Jonathan Drillings, Firas Raouf, Michael Volpe."
+    "notes": "UK company no. 09819483. Active directors: Anthony Welgemoed, Matthew John Atkinson (co-founder), Jonathan Drillings, Firas Raouf, Michael Volpe. UK company run from abroad: the registered office is its law firm's address (Keystone Law, 48 Chancery Lane), and Companies House shows every director living outside the UK (US, Switzerland, Saudi Arabia), with correspondence to 14675 Dallas Parkway, Dallas, TX. Operationally a US company."
   },
   {
     "vendorId": 10000231,
@@ -226,7 +226,7 @@
       "https://www.towerapps.com/imprint/",
       "https://find-and-update.company-information.service.gov.uk/company/15053987"
     ],
-    "notes": "UK company no. 15053987. 128 City Road is a registered-office service; the team is Germany-based."
+    "notes": "UK company no. 15053987. 128 City Road is a registered-office service; the team is Germany-based. Possible offshore company: 128 City Road is a registered-office service. Director Bettina Leitner (Austrian) is UK-resident, but a person with significant control is a German national living in Uruguay, and the product says its operations are in Germany."
   },
   {
     "vendorId": 10000127,
@@ -2082,7 +2082,7 @@
       "https://adftech.net/monday/",
       "https://find-and-update.company-information.service.gov.uk/company/09980030"
     ],
-    "notes": "UK company no. 09980030. Co-director: Alicja Anna Bieniek."
+    "notes": "UK company no. 09980030. Co-director: Alicja Anna Bieniek. Directors live in England; the registered office is shared with SNG Technologies Ltd (likely an accountant's address)."
   },
   {
     "vendorId": 19,
@@ -2771,37 +2771,41 @@
     "vendorId": 24,
     "name": "SNG Technologies Ltd.",
     "tier": null,
-    "legalName": "SNG Technologies Ltd.",
-    "contactName": "Tomek",
-    "contactTitle": null,
+    "legalName": "SNG Technologies Ltd",
+    "contactName": "Tomasz Pawel Kustrzynski",
+    "contactTitle": "Director",
     "address": {
-      "street": null,
-      "city": null,
+      "street": "4 Mentmore Court, Great Holm",
+      "city": "Milton Keynes",
       "region": null,
-      "postalCode": null,
-      "country": "Poland",
-      "countryCode": "PL"
+      "postalCode": "MK8 9AT",
+      "country": "United Kingdom",
+      "countryCode": "GB"
     },
-    "sources": [],
-    "notes": "No website listed. First name from the vendor email tomek@sngconnect.com. Country from the domain's WHOIS registrant record."
+    "sources": [
+      "https://find-and-update.company-information.service.gov.uk/company/08088595"
+    ],
+    "notes": "UK company no. 08088595 (vendor email tomek@sngconnect.com). Co-director Chelsea Kotula (US-resident). The registered office is the same as ADF TECH LTD's, likely an accountant's address. Corrects an earlier WHOIS-based 'Poland'. No website listed."
   },
   {
     "vendorId": 5,
     "name": "100 Shapes Ltd.",
     "tier": null,
-    "legalName": "100 Shapes Ltd.",
-    "contactName": "Michele",
-    "contactTitle": null,
+    "legalName": "100 SHAPES LTD",
+    "contactName": "Michele Angelo Memoli",
+    "contactTitle": "Director",
     "address": {
       "street": null,
-      "city": null,
+      "city": "London",
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United Kingdom",
+      "countryCode": "GB"
     },
-    "sources": [],
-    "notes": "No website listed. First name from the vendor email michele@100shapes.com. WHOIS shows Jacksonville, FL, US, which may be a privacy service; the 'Ltd.' form suggests UK. Country unconfirmed."
+    "sources": [
+      "https://find-and-update.company-information.service.gov.uk/company/07836950"
+    ],
+    "notes": "UK company no. 07836950, now DISSOLVED; the last registered office was a liquidator's address (Recovery House, Ilford). Directors Michele Angelo and Paolo Domenico Memoli were London-based (Italian/British). No website listed."
   },
   {
     "vendorId": 10000033,
@@ -2954,7 +2958,7 @@
       "https://www.ziflow.com/about",
       "https://find-and-update.company-information.service.gov.uk/company/09819483"
     ],
-    "notes": "Same company as Gold vendor 100000022. US office: 14675 Dallas Parkway, Suite 120, Dallas, TX 75254."
+    "notes": "Same company as Gold vendor 100000022. US office: 14675 Dallas Parkway, Suite 120, Dallas, TX 75254. UK company run from abroad: the registered office is its law firm's address (Keystone Law, 48 Chancery Lane), and Companies House shows every director living outside the UK (US, Switzerland, Saudi Arabia), with correspondence to 14675 Dallas Parkway, Dallas, TX. Operationally a US company."
   },
   {
     "vendorId": 10000093,
@@ -3546,7 +3550,7 @@
       "countryCode": "GB"
     },
     "sources": ["https://www.appgami.com/terms-of-service"],
-    "notes": "Country from the governing law (England) in the terms."
+    "notes": "Country from the governing law (England) in the terms. Possible offshore company: no UK company named Appgami exists on Companies House, so the UK location is unverified."
   },
   {
     "vendorId": 10000205,
@@ -4069,7 +4073,7 @@
     "name": "mutherboard.com",
     "tier": null,
     "legalName": "mutherboard.com Ltd.",
-    "contactName": "Tania",
+    "contactName": "Tania Benade",
     "contactTitle": "Managing Director",
     "address": {
       "street": "12 Station Parade",
@@ -4081,9 +4085,10 @@
     },
     "sources": [
       "https://mutherboard.com/about",
-      "https://mutherboard.com/team"
+      "https://mutherboard.com/team",
+      "https://find-and-update.company-information.service.gov.uk/company/13524327"
     ],
-    "notes": "The team page gives first names only."
+    "notes": "The team page gives first names only. UK company no. 13524327; directors Tania Benade and Robert Meyer, both England-resident."
   },
   {
     "vendorId": 100000096,
@@ -4652,8 +4657,11 @@
       "country": "United States",
       "countryCode": "US"
     },
-    "sources": ["https://www.subscriptionflow.com/legal-terms/"],
-    "notes": "The product is developed and operated by Techloyce Limited (UK, Brentwood CM14 5XD)."
+    "sources": [
+      "https://www.subscriptionflow.com/legal-terms/",
+      "https://find-and-update.company-information.service.gov.uk/company/08376132"
+    ],
+    "notes": "The product is developed and operated by Techloyce Limited (UK, Brentwood CM14 5XD). Techloyce Limited is UK company no. 08376132 (The Hermitage, 15a Shenfield Road, Brentwood CM15 8AG), director Kashif Saleem (UK-resident)."
   },
   {
     "vendorId": 10000226,
@@ -4671,7 +4679,7 @@
       "countryCode": "GB"
     },
     "sources": ["https://thackd.com/"],
-    "notes": "Country from the domain's WHOIS registrant record."
+    "notes": "Country from the domain's WHOIS registrant record. Possible offshore company: no UK company named Thackd exists on Companies House, so the UK location is unverified."
   },
   {
     "vendorId": 10000180,
@@ -4779,7 +4787,7 @@
       "countryCode": "GB"
     },
     "sources": ["https://workflowpilot.io"],
-    "notes": null
+    "notes": "Possible offshore company: no UK company named WorkflowPilot exists on Companies House, so the UK location is unverified."
   },
   {
     "vendorId": 10000223,
@@ -5743,18 +5751,21 @@
     "name": "Capable",
     "tier": null,
     "legalName": "Capable Works Limited",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Jack Francis Graves",
+    "contactTitle": "Director",
     "address": {
-      "street": null,
-      "city": null,
-      "region": null,
-      "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "street": "Lytchett House, 13 Freeland Park, Wareham Road",
+      "city": "Poole",
+      "region": "Dorset",
+      "postalCode": "BH16 6FA",
+      "country": "United Kingdom",
+      "countryCode": "GB"
     },
-    "sources": ["https://www.gocapable.com/about/eula"],
-    "notes": null
+    "sources": [
+      "https://www.gocapable.com/about/eula",
+      "https://find-and-update.company-information.service.gov.uk/company/14563835"
+    ],
+    "notes": "UK company no. 14563835. Other directors Christian Reichert and Björn Döhler live in Germany and are the founders of resolution Reichert Network Solutions GmbH (vendor 10000163)."
   },
   {
     "vendorId": 100000016,
@@ -5814,22 +5825,23 @@
     "vendorId": 10000173,
     "name": "Broken Build",
     "tier": null,
-    "legalName": "Broken Build",
+    "legalName": "Broken Build LLP",
     "contactName": "Olexiy Artemenko",
     "contactTitle": "CEO",
     "address": {
-      "street": "44 Broadway",
-      "city": "London",
+      "street": null,
+      "city": "Kyiv",
       "region": null,
-      "postalCode": "E15 1XH",
-      "country": "United Kingdom",
-      "countryCode": "GB"
+      "postalCode": null,
+      "country": "Ukraine",
+      "countryCode": "UA"
     },
     "sources": [
       "https://www.brokenbuild.net/company/about-us",
-      "https://www.brokenbuild.net/contact-us"
+      "https://www.brokenbuild.net/contact-us",
+      "https://find-and-update.company-information.service.gov.uk/company/OC445385"
     ],
-    "notes": "Co-founders include Oleksandr Zhebryakov (vendor email alex.zhebryakov@). The team appears to be Ukrainian."
+    "notes": "Offshore company with a UK address: Broken Build LLP (OC445385) is registered at 44 Broadway, London E15 1XH, but all three designated members (Vasyl Krokha, Artem Oleshko, Oleksandr Zhebryakov) live in Ukraine (Kyiv, Lviv region). CEO Olexiy Artemenko per the site; vendor email alex.zhebryakov@."
   },
   {
     "vendorId": 10000146,
@@ -5911,8 +5923,8 @@
     "name": "Westsmith Ltd",
     "tier": null,
     "legalName": "Westsmith Ltd",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Daniel Ball",
+    "contactTitle": "Director",
     "address": {
       "street": "Incuhive Space, Hursley Park Road, Hursley",
       "city": "Winchester",
@@ -5921,8 +5933,11 @@
       "country": "United Kingdom",
       "countryCode": "GB"
     },
-    "sources": ["https://westsmith.co.uk/about/"],
-    "notes": null
+    "sources": [
+      "https://westsmith.co.uk/about/",
+      "https://find-and-update.company-information.service.gov.uk/company/11859881"
+    ],
+    "notes": "UK company no. 11859881."
   },
   {
     "vendorId": 10000240,
@@ -6205,18 +6220,21 @@
     "name": "Reqfields",
     "tier": null,
     "legalName": "Ideonate Ltd",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Daniel Stephen Lester",
+    "contactTitle": "Director",
     "address": {
-      "street": "c/o Sb Consulting Ltd, Old Bishops College",
+      "street": "Room 2, Ingram House, Churchgate",
       "city": "Cheshunt",
-      "region": null,
-      "postalCode": "EN8 9XP",
+      "region": "Hertfordshire",
+      "postalCode": "EN8 9XB",
       "country": "United Kingdom",
       "countryCode": "GB"
     },
-    "sources": ["https://mreqfields.com/contact/index.html"],
-    "notes": "UK company no. 11763313 (accountant's registered office). Product: Reqfields."
+    "sources": [
+      "https://mreqfields.com/contact/index.html",
+      "https://find-and-update.company-information.service.gov.uk/company/11763313"
+    ],
+    "notes": "UK company no. 11763313; registered office per Companies House (the site still shows the older Old Bishops College address). Product: Reqfields. Co-director Suzannah Deborah Lester."
   },
   {
     "vendorId": 10000165,
