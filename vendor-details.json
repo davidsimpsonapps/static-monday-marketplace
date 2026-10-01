@@ -527,10 +527,10 @@
     "contactName": "Michael Popchuk",
     "contactTitle": null,
     "address": {
-      "street": "8 The GRN, STE A",
-      "city": "Dover",
-      "region": "DE",
-      "postalCode": "19901",
+      "street": null,
+      "city": "Austin",
+      "region": "Texas",
+      "postalCode": null,
       "country": "United States",
       "countryCode": "US"
     },
