@@ -234,7 +234,7 @@
     "vendorId": 10000127,
     "name": "Pioneera",
     "tier": "Gold",
-    "legalName": "Pioneera",
+    "legalName": "Alayof Digital Ltd",
     "contactName": "Snir Alayof",
     "contactTitle": "Founder & CEO",
     "address": {
@@ -242,11 +242,15 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Israel",
+      "countryCode": "IL"
     },
-    "sources": ["https://pioneera.io/about-one"],
-    "notes": "Remote team founded in 2023. No legal entity or postal address is published."
+    "sources": [
+      "https://pioneera.io/about-one",
+      "https://www.alayofdigital.com/",
+      "https://www.linkedin.com/in/snir-alon-08387522b/"
+    ],
+    "notes": "Company number 516963691 (Israeli Registrar of Companies). Remote team founded in 2023. No legal entity or postal address is published."
   },
   {
     "vendorId": 10000126,
@@ -1039,15 +1043,15 @@
     "name": "Bonfire Apps LLC",
     "tier": "Bronze",
     "legalName": "Bonfire Apps LLC",
-    "contactName": null,
+    "contactName": "Bonfire Apps LLC",
     "contactTitle": null,
     "address": {
       "street": null,
-      "city": null,
-      "region": null,
+      "city": "Lawrenceville",
+      "region": "Georgia",
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United States",
+      "countryCode": "US"
     },
     "sources": ["https://www.bonfireapps.com/"],
     "notes": "No address or people published. Web results for 'Bonfire Apps' founded by Théo Voglimacci are a different (Paris couples-app) company."
@@ -1892,13 +1896,18 @@
     "contactTitle": "CEO & Founder",
     "address": {
       "street": null,
-      "city": null,
+      "city": "Sombor",
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Serbia",
+      "countryCode": "RS"
     },
-    "sources": ["https://www.spicytab.com/contact"],
+    "sources": [
+      "https://www.spicytab.com/contact",
+      "https://community.monday.com/member/44cmWGfqyR",
+      "https://www.companywall.rs/firma/spicytab-doo/MMx16gvcY/osobe-i-vlasnistvo",
+      "https://lablab.ai/ai-hackathons/monday-ai-app-hackathon/spicytab"
+    ],
     "notes": "No legal entity or address published."
   },
   {
@@ -2151,17 +2160,20 @@
     "name": "Serandibsoft",
     "tier": null,
     "legalName": "Serandibsoft",
-    "contactName": "Thusitha",
+    "contactName": "Thusitha Manathunga",
     "contactTitle": null,
     "address": {
       "street": null,
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Sri Lanka",
+      "countryCode": "SY"
     },
-    "sources": ["https://www.dreamteam.website"],
+    "sources": [
+      "https://www.dreamteam.website",
+      "https://www.linkedin.com/company/serandibsoft/"
+    ],
     "notes": "First name from the vendor email thusitha@serandibsoft.com. No country published; 'Serendib' is a historic name for Sri Lanka, which hints at a Sri Lankan developer, but that's unconfirmed."
   },
   {
