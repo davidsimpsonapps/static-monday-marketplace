@@ -781,18 +781,20 @@
     "contactName": "Anish Jain",
     "contactTitle": null,
     "address": {
-      "street": "30 N Gould St, STE R",
-      "city": "Sheridan",
-      "region": "WY",
+      "street": null,
+      "city": "Delhi",
+      "region": null,
       "postalCode": "82801",
-      "country": "United States",
-      "countryCode": "US"
+      "country": null,
+      "countryCode": "IN"
     },
     "sources": [
       "https://appstronauts.shop/about",
-      "https://malwaretips.com/blogs/30-n-gould-st-sheridan-wy-scams-exposed/"
+      "https://malwaretips.com/blogs/30-n-gould-st-sheridan-wy-scams-exposed/",
+      "https://www.linkedin.com/company/appstronauts-app/",
+      "https://www.anishjain.xyz/resume.pdf"
     ],
-    "notes": "Wyoming registered-agent address. Vendor email helloanishjain@gmail.com suggests an Anish Jain, but that's unconfirmed."
+    "notes": "Wyoming registered-agent address for Delhi, India based Anish Jain."
   },
   {
     "vendorId": 10000249,
@@ -1798,21 +1800,24 @@
     "vendorId": 10000044,
     "name": "BeeLabX",
     "tier": "Bronze",
-    "legalName": "BeelabX",
+    "legalName": "WME Solutions Co., Ltd",
     "contactName": "Eddy Azoulay",
     "contactTitle": "Partner",
     "address": {
-      "street": "2105 Vista Oeste NW, Suite E #3804",
-      "city": "Albuquerque",
-      "region": "NM",
-      "postalCode": "87120",
-      "country": "United States",
-      "countryCode": "US"
+      "street": "228/15 Moo 4 THALANG",
+      "city": "Phuket",
+      "region": null,
+      "postalCode": "83110",
+      "country": "Thailand",
+      "countryCode": "TH"
     },
     "sources": [
       "https://www.beelabxapps.com/terms-of-service",
       "https://www.linkedin.com/company/beelabx/",
-      "https://www.wme-solutions.com/en/our-team"
+      "https://www.linkedin.com/company/wme-solutions/",
+      "https://www.wme-solutions.com/en/our-team",
+      "https://companieshouse.co.th/wme-solutions-co-ltd-0835567000190",
+      "https://www.dnb.com/business-directory/company-profiles/wme-solutions--company-limited.7f33315963e97315a07919cf18eb3ab0"
     ],
     "notes": "Eddy Azoulay is based in Thailand - is this really a USA-based company?"
   },
