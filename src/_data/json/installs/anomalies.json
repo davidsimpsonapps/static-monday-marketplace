@@ -1,6 +1,6 @@
 {
   "description": "Apps whose weekly install rate doubled or halved (installs gained this week vs installs gained the week before), where the larger side of the comparison is at least 100 installs.",
-  "processedThrough": "2026-09-30",
+  "processedThrough": "2026-10-01",
   "episodes": [
     {
       "id": 10000020,
@@ -9,10 +9,10 @@
       "direction": "drop",
       "startDate": "2026-09-30",
       "startCount": 16214,
-      "endDate": "2026-09-30",
-      "endCount": 16214,
+      "endDate": "2026-10-01",
+      "endCount": 16225,
       "beforeWeeklyInstalls": 113,
-      "afterWeeklyInstalls": 38,
+      "afterWeeklyInstalls": 32,
       "ongoing": true
     },
     {
@@ -124,18 +124,6 @@
       "afterWeeklyInstalls": 107
     },
     {
-      "id": 10000360,
-      "app_id": 10114143,
-      "name": "DocExport PDF Generator",
-      "direction": "jump",
-      "startDate": "2026-01-08",
-      "startCount": 6437,
-      "endDate": "2026-01-12",
-      "endCount": 6511,
-      "beforeWeeklyInstalls": 74,
-      "afterWeeklyInstalls": 200
-    },
-    {
       "id": 10000020,
       "app_id": 10006537,
       "name": "Outlook Integration",
@@ -146,6 +134,18 @@
       "endCount": 12866,
       "beforeWeeklyInstalls": 40,
       "afterWeeklyInstalls": 101
+    },
+    {
+      "id": 10000360,
+      "app_id": 10114143,
+      "name": "DocExport PDF Generator",
+      "direction": "jump",
+      "startDate": "2026-01-08",
+      "startCount": 6437,
+      "endDate": "2026-01-12",
+      "endCount": 6511,
+      "beforeWeeklyInstalls": 74,
+      "afterWeeklyInstalls": 200
     },
     {
       "id": 10000287,
