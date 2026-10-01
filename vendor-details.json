@@ -369,7 +369,7 @@
       "https://docugen.io/privacy-policy/",
       "https://www.zoominfo.com/p/Sami-Caracand/1313346711"
     ],
-    "notes": "Founder listed only as 'Sami C.' on G2/TrustRadius; no full name confirmed. Linked to Cloud Concept (Dubai monday.com partner)."
+    "notes": "Founder listed only as 'Sami C.' on G2/TrustRadius; no full name confirmed. Linked to Cloud Concept (Dubai monday.com partner). Possible offshore company: the Beaverton, OR address may be a virtual office; DocuGen is linked to Cloud Concept, a Dubai-based monday.com partner."
   },
   {
     "vendorId": 6,
@@ -532,7 +532,7 @@
       "https://getreport.ai/privacy-policy",
       "https://marketplace.atlassian.com/vendors/1223941/get-report"
     ],
-    "notes": "US LLC per the privacy policy; no address or people are published."
+    "notes": "US LLC per the privacy policy; no address or people are published. Possible offshore company: Dover, DE registered-agent address; the developer (lablab.ai profile Dmitry Perepelytsia) appears to be based outside the US. Unconfirmed."
   },
   {
     "vendorId": 10000063,
@@ -745,15 +745,15 @@
     "contactName": "Atul Gupta",
     "contactTitle": "Founder",
     "address": {
-      "street": "600 N Broad Street, Suite 5 #845",
-      "city": "Middletown",
-      "region": "DE",
-      "postalCode": "19709",
-      "country": "United States",
-      "countryCode": "US"
+      "street": "C 30, RB Road, Adarsh Nagar",
+      "city": "New Delhi",
+      "region": "Delhi",
+      "postalCode": "110033",
+      "country": "India",
+      "countryCode": "IN"
     },
     "sources": ["https://www.cloudvandana.com/"],
-    "notes": "Legal entity suffix not published. Address looks like a Delaware registered-agent address; the team is India-based."
+    "notes": "Offshore company with a US address: the US address (600 N Broad Street, Suite 5 #845, Middletown, DE 19709) is a Delaware registered-agent address; the team and India office are in New Delhi. Legal entity suffix not published."
   },
   {
     "vendorId": 10000265,
@@ -909,7 +909,7 @@
       "https://www.workiflow.com/trust-center/privacy",
       "https://www.workiflow.com/about"
     ],
-    "notes": "Delaware registered address. Founded in 2019 by brothers Keenan and John-Paul Theron, who are Managing Directors. Also a monday.com Platinum services partner."
+    "notes": "Delaware registered address. Founded in 2019 by brothers Keenan and John-Paul Theron, who are Managing Directors. Also a monday.com Platinum services partner. Mixed: the US address is a Delaware registered-agent address and the founders are in South Africa (Jeffreys Bay) and Portugal, but the CEO is based in Georgia, US, so it's left as a US company."
   },
   {
     "vendorId": 10000214,
@@ -1443,7 +1443,7 @@
       "countryCode": "US"
     },
     "sources": ["https://thepdfmaker.com/privacy-policy"],
-    "notes": "Trades as The PDF Maker. Delaware registered-agent style address."
+    "notes": "Trades as The PDF Maker. Delaware registered-agent style address. Possible offshore company: Dover, DE registered-agent address; where the team is based wasn't established."
   },
   {
     "vendorId": 10000107,
@@ -1929,18 +1929,19 @@
     "contactName": "Kranthi Kiran Pulluru",
     "contactTitle": "Founder",
     "address": {
-      "street": "Suite B-2, 2035 Sunset Lake Road",
-      "city": "Newark",
-      "region": "DE",
-      "postalCode": "19702",
-      "country": "United States",
-      "countryCode": "US"
+      "street": null,
+      "city": "Belagavi",
+      "region": "Karnataka",
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
     },
     "sources": [
       "https://www.thoughtflow.io/privacy-policy",
-      "https://www.thoughtflow.io/about"
+      "https://www.thoughtflow.io/about",
+      "https://www.thecompanycheck.com/company/b/thoughtflow/b9qi5050mj0ya2yco"
     ],
-    "notes": "Delaware registered-agent style address."
+    "notes": "Offshore company with a US address: the US address (Suite B-2, 2035 Sunset Lake Road, Newark, DE 19702) is a registered-agent address. ThoughtFlow is based in Belgaum (Belagavi), India, with an Indian entity Thoughtflow Technologies Private Limited (incorporated 2022), and is backed by Upekkha."
   },
   {
     "vendorId": 10000004,
@@ -2142,5 +2143,4211 @@
     },
     "sources": ["https://www.tomorrows-tools.com/"],
     "notes": "No legal entity, address or people published."
+  },
+  {
+    "vendorId": 17,
+    "name": "Serandibsoft",
+    "tier": null,
+    "legalName": "Serandibsoft",
+    "contactName": "Thusitha",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.dreamteam.website"],
+    "notes": "First name from the vendor email thusitha@serandibsoft.com. No country published; 'Serendib' is a historic name for Sri Lanka, which hints at a Sri Lankan developer, but that's unconfirmed."
+  },
+  {
+    "vendorId": 20,
+    "name": "Miro",
+    "tier": null,
+    "legalName": "RealtimeBoard, Inc. (Miro)",
+    "contactName": "Andrey Khusid",
+    "contactTitle": "CEO and Co-founder",
+    "address": {
+      "street": null,
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94104",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://miro.com/about/"],
+    "notes": "Address on the site shows 'Suite 900' and 94104 without a street."
+  },
+  {
+    "vendorId": 15,
+    "name": "Excellent Team",
+    "tier": null,
+    "legalName": "Excellent Team",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Netherlands",
+      "countryCode": "NL"
+    },
+    "sources": ["https://excellent-team.nl/forums"],
+    "notes": "Country from the .nl domain and site content."
+  },
+  {
+    "vendorId": 10000024,
+    "name": "DocuSign, inc.",
+    "tier": null,
+    "legalName": "Docusign, Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "221 Main Street, Suite 800",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94105",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.docusign.com/privacy"],
+    "notes": "Vendor email apps@moveoboost.com: the monday.com app is built/supported by Boost by Moveo."
+  },
+  {
+    "vendorId": 16,
+    "name": "Screenful",
+    "tier": null,
+    "legalName": "Screenful Oy",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "Vilhonvuorenkatu 11",
+      "city": "Helsinki",
+      "region": null,
+      "postalCode": "00500",
+      "country": "Finland",
+      "countryCode": "FI"
+    },
+    "sources": ["https://screenful.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 27,
+    "name": "Jotform",
+    "tier": null,
+    "legalName": "Jotform Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "4 Embarcadero Center, Suite 780",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94111",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.jotform.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 36,
+    "name": "Omnitas Consulting AB",
+    "tier": null,
+    "legalName": "Omnitas Consulting AB",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Sweden",
+      "countryCode": "SE"
+    },
+    "sources": ["https://omnitas.dev"],
+    "notes": "Country from the Swedish 'AB' legal form."
+  },
+  {
+    "vendorId": 10000067,
+    "name": "Keem Apps",
+    "tier": null,
+    "legalName": "KeemApps",
+    "contactName": "Keem",
+    "contactTitle": "Developer",
+    "address": {
+      "street": null,
+      "city": "Frederiksberg",
+      "region": null,
+      "postalCode": null,
+      "country": "Denmark",
+      "countryCode": "DK"
+    },
+    "sources": ["https://apps.shopify.com/notify-google-chat"],
+    "notes": "Location from the same developer's Shopify app listing."
+  },
+  {
+    "vendorId": 10000099,
+    "name": "Lanum Tecnologia",
+    "tier": null,
+    "legalName": "Lanum Tecnologia",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Brazil",
+      "countryCode": "BR"
+    },
+    "sources": ["https://www.lanum.com.br/parcerias/monday/"],
+    "notes": "Country from the .com.br domain. Vendor email plopes@lanum.com.br."
+  },
+  {
+    "vendorId": 10000007,
+    "name": "Hootsuite Inc.",
+    "tier": null,
+    "legalName": "Hootsuite Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Vancouver",
+      "region": "BC",
+      "postalCode": null,
+      "country": "Canada",
+      "countryCode": "CA"
+    },
+    "sources": ["https://www.hootsuite.com/about"],
+    "notes": "The about page still lists founder Ryan Holmes as 'CEO and Founder', which may be out of date, so no contact is recorded. Country from the domain's WHOIS registrant record (British Columbia)."
+  },
+  {
+    "vendorId": 10000043,
+    "name": "Ulgebra",
+    "tier": null,
+    "legalName": "Ulgebraz Technologies Pvt. Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://apps.ulgebra.com/"],
+    "notes": "Indian phone number (+91) on the site."
+  },
+  {
+    "vendorId": 51,
+    "name": "PandaDoc Inc.",
+    "tier": null,
+    "legalName": "PandaDoc Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.pandadoc.com/"],
+    "notes": "Site blocked automated fetches; country from general knowledge (San Francisco HQ)."
+  },
+  {
+    "vendorId": 13,
+    "name": "Barefoot Australia Pty Ltd",
+    "tier": null,
+    "legalName": "Barefoot Australia Pty Ltd",
+    "contactName": "Dugald",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Australia",
+      "countryCode": "AU"
+    },
+    "sources": [],
+    "notes": "No website listed. First name from the vendor email dugald@roobrick.org; country from the 'Pty Ltd' legal form."
+  },
+  {
+    "vendorId": 10000087,
+    "name": "Okapya Software Solutions",
+    "tier": null,
+    "legalName": "Okapya Software Solutions Inc.",
+    "contactName": "Yves Riel",
+    "contactTitle": "Founder",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": "QC",
+      "postalCode": null,
+      "country": "Canada",
+      "countryCode": "CA"
+    },
+    "sources": ["https://okapya.com/about/"],
+    "notes": "Product: Checklist for Jira. HeroCoders' legal pages reference Okapya Software Solutions Inc."
+  },
+  {
+    "vendorId": 21,
+    "name": "Typeform",
+    "tier": null,
+    "legalName": "Typeform",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Spain",
+      "countryCode": "ES"
+    },
+    "sources": ["https://www.typeform.com/about-us/"],
+    "notes": "Jay Choi is listed as Chief Executive Officer on the site."
+  },
+  {
+    "vendorId": 100000003,
+    "name": "Quickley Inc",
+    "tier": null,
+    "legalName": "Quickley, Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://quickley.com"],
+    "notes": "Country inferred from the 'Inc.' form only; unconfirmed."
+  },
+  {
+    "vendorId": 30,
+    "name": "Polished Geek",
+    "tier": null,
+    "legalName": "Polished Geek LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "500 Westover Drive, Suite 6832",
+      "city": "Sanford",
+      "region": "NC",
+      "postalCode": "27330-8941",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://polishedgeek.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000010,
+    "name": "Pipedrive",
+    "tier": null,
+    "legalName": "Pipedrive Inc.",
+    "contactName": "Paulo Cunha",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "530 Fifth Avenue, 8th floor, Suite 802",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10036",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://www.pipedrive.com/en/contact",
+      "https://www.pipedrive.com/en/about"
+    ],
+    "notes": "Parent company is Pipedrive OÜ (Estonia)."
+  },
+  {
+    "vendorId": 37,
+    "name": "HLS s.r.o.",
+    "tier": null,
+    "legalName": "HLS s.r.o.",
+    "contactName": "Luboš Husivarga",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Slovakia",
+      "countryCode": "SK"
+    },
+    "sources": ["https://eledo.online/"],
+    "notes": "Contact name from the vendor email lubos.husivarga@gmail.com. Eledo is the product."
+  },
+  {
+    "vendorId": 100000001,
+    "name": "Aircall.io",
+    "tier": null,
+    "legalName": "Aircall.io, Inc.",
+    "contactName": "Scott Chancellor",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "44 W 28th St, 14th Floor",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10001",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://aircall.io/terms/", "https://aircall.io/about/"],
+    "notes": "Group parent is Aircall SAS (France)."
+  },
+  {
+    "vendorId": 10000013,
+    "name": "Beautiful.ai",
+    "tier": null,
+    "legalName": "Beautiful Slides, Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94131",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.beautiful.ai/"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000034,
+    "name": "Fortimus",
+    "tier": null,
+    "legalName": "Fortimus Technologies LLP",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "SNO 1415 A-11 S.NO 14, Comfort Zone Balewadi, Baner Gaon, Haveli",
+      "city": "Pune",
+      "region": "Maharashtra",
+      "postalCode": "411045",
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://www.fortimus.co/"],
+    "notes": null
+  },
+  {
+    "vendorId": 26,
+    "name": "Krishna Sumanth Tummalacharla",
+    "tier": null,
+    "legalName": "Axle Digital",
+    "contactName": "Krishna Sumanth Tummalacharla",
+    "contactTitle": "Developer",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://discussionsapp.com/"],
+    "notes": "Vendor name is the individual developer; the site footer says Axle Digital."
+  },
+  {
+    "vendorId": 9,
+    "name": "Unito",
+    "tier": null,
+    "legalName": "Unito",
+    "contactName": "Marc Boscher",
+    "contactTitle": "CEO",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Canada",
+      "countryCode": "CA"
+    },
+    "sources": ["https://unito.io/about-us/"],
+    "notes": "Unito is based in Montreal."
+  },
+  {
+    "vendorId": 12,
+    "name": "Skiply",
+    "tier": null,
+    "legalName": "Skiply",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Aix-les-Bains",
+      "region": null,
+      "postalCode": null,
+      "country": "France",
+      "countryCode": "FR"
+    },
+    "sources": [
+      "https://www.lejournaldesentreprises.com/breve/le-lyonnais-taqt-acquiert-le-savoyard-skiply-2104869"
+    ],
+    "notes": "Skiply (ubiqod) was acquired by Taqt (Lyon) in October 2024."
+  },
+  {
+    "vendorId": 53,
+    "name": "Synolia",
+    "tier": null,
+    "legalName": "Synolia",
+    "contactName": "Romain André",
+    "contactTitle": "CEO of the Synolia Group",
+    "address": {
+      "street": "59 rue de l'Abondance",
+      "city": "Lyon",
+      "region": null,
+      "postalCode": "69003",
+      "country": "France",
+      "countryCode": "FR"
+    },
+    "sources": [
+      "https://www.synolia.com/contact/",
+      "https://www.synolia.com/en/team/"
+    ],
+    "notes": "Co-founder & President: Pascal Brunel. Also a Paris office."
+  },
+  {
+    "vendorId": 40,
+    "name": "tmnxt",
+    "tier": null,
+    "legalName": "DEMICON GmbH",
+    "contactName": "Dmitry Rasin",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": [],
+    "notes": "tmnxt.com is now a parked domain. Contact name and company from the vendor email dmitry.rasin@demicon.de."
+  },
+  {
+    "vendorId": 39,
+    "name": "PageProof",
+    "tier": null,
+    "legalName": "PageProof.com Limited",
+    "contactName": "Gemma Rann",
+    "contactTitle": "CEO & Founder",
+    "address": {
+      "street": "80A Hinemoa Street",
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "New Zealand",
+      "countryCode": "NZ"
+    },
+    "sources": ["https://pageproof.com/about", "https://pageproof.com/"],
+    "notes": "Also PO Box 7117."
+  },
+  {
+    "vendorId": 10000159,
+    "name": "Initech Software Services Ltd",
+    "tier": null,
+    "legalName": "Initech Software Services Ltd",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Ramat Gan",
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://timelines.ai/privacy-policy",
+      "https://slimpages.startupim.com/min_company_page/initech-software"
+    ],
+    "notes": "Offshore company with a US address: the published address (30 N Gould St, Ste R, Sheridan, WY 82801) is a Wyoming registered-agent address; TimelinesAI is an Israeli startup based in Ramat Gan. Trades as TimelinesAI."
+  },
+  {
+    "vendorId": 10000147,
+    "name": "Canva",
+    "tier": null,
+    "legalName": "Canva Pty Ltd",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": "NSW",
+      "postalCode": null,
+      "country": "Australia",
+      "countryCode": "AU"
+    },
+    "sources": ["https://www.canva.com/"],
+    "notes": "Country from the domain's WHOIS registrant record (Canva Pty. Ltd., New South Wales)."
+  },
+  {
+    "vendorId": 10000030,
+    "name": "Micro Ocean Technologies Sdn Bhd",
+    "tier": null,
+    "legalName": "Micro Ocean Technologies Sdn. Bhd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "No. 1-2, Incubator 2, Technology Park Malaysia, Bukit Jalil",
+      "city": "Kuala Lumpur",
+      "region": null,
+      "postalCode": "57000",
+      "country": "Malaysia",
+      "countryCode": "MY"
+    },
+    "sources": ["https://moceanapi.com/legal/terms"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000015,
+    "name": "Engini.ai LTD",
+    "tier": null,
+    "legalName": "Engini.ai LTD",
+    "contactName": "Itay",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://engini.ai/"],
+    "notes": "First name from the vendor email itay@engini.ai."
+  },
+  {
+    "vendorId": 49,
+    "name": "Freshworks",
+    "tier": null,
+    "legalName": "Freshworks Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "2950 S. Delaware Street, Suite 201",
+      "city": "San Mateo",
+      "region": "CA",
+      "postalCode": "94403",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.freshworks.com/contact/"],
+    "notes": "Indian-founded (Chennai) but genuinely headquartered in the US (San Mateo), listed on NASDAQ. Vendor email spritlesupport@ suggests the app was built by Spritle Software."
+  },
+  {
+    "vendorId": 33,
+    "name": "Aparak",
+    "tier": null,
+    "legalName": "Aparak",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.aparak.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 24,
+    "name": "SNG Technologies Ltd.",
+    "tier": null,
+    "legalName": "SNG Technologies Ltd.",
+    "contactName": "Tomek",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Poland",
+      "countryCode": "PL"
+    },
+    "sources": [],
+    "notes": "No website listed. First name from the vendor email tomek@sngconnect.com. Country from the domain's WHOIS registrant record."
+  },
+  {
+    "vendorId": 5,
+    "name": "100 Shapes Ltd.",
+    "tier": null,
+    "legalName": "100 Shapes Ltd.",
+    "contactName": "Michele",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": [],
+    "notes": "No website listed. First name from the vendor email michele@100shapes.com. WHOIS shows Jacksonville, FL, US, which may be a privacy service; the 'Ltd.' form suggests UK. Country unconfirmed."
+  },
+  {
+    "vendorId": 10000033,
+    "name": "Master Concept",
+    "tier": null,
+    "legalName": "Master Concept",
+    "contactName": "Dennis Wong",
+    "contactTitle": "Director & Co-Founder",
+    "address": {
+      "street": "2/F, The Whitney, 183 Wai Yip Street, Kwun Tong",
+      "city": "Kowloon",
+      "region": null,
+      "postalCode": null,
+      "country": "Hong Kong",
+      "countryCode": "HK"
+    },
+    "sources": [
+      "https://masterconcept.ai/contact-us/",
+      "https://masterconcept.ai/about-master-concept/"
+    ],
+    "notes": "Co-founder Derek Chan. Offices also in Taipei and Kuala Lumpur."
+  },
+  {
+    "vendorId": 10000213,
+    "name": "Appd",
+    "tier": null,
+    "legalName": "Appd",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Australia",
+      "countryCode": "AU"
+    },
+    "sources": ["https://appd.com.au/"],
+    "notes": "Country from the .com.au domain."
+  },
+  {
+    "vendorId": 10000097,
+    "name": "DSS, INC.",
+    "tier": null,
+    "legalName": "DS SOLUTION Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Japan",
+      "countryCode": "JP"
+    },
+    "sources": ["https://www.dssolution.jp/en/about-us/"],
+    "notes": "Japanese company (.jp) with a Hanoi, Vietnam office: 5F Rainbow Building, 19/5 Street, Van Quan Ward, Ha Dong District."
+  },
+  {
+    "vendorId": 10000195,
+    "name": "InQubyte LLC",
+    "tier": null,
+    "legalName": "InQubyte LLC",
+    "contactName": "Krishna",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.Inqubyte.com"],
+    "notes": "Possibly offshore: an 'LLC' with only a US phone number and no address; the team's location wasn't established. First name from the vendor email Krishna@inqubyte.com. US (+1 360) phone number on the site."
+  },
+  {
+    "vendorId": 35,
+    "name": "Formito",
+    "tier": null,
+    "legalName": "Formito",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": "NM",
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://formito.com/"],
+    "notes": "Country from the domain's WHOIS registrant record (New Mexico); may be a registered-agent/privacy address. Unconfirmed."
+  },
+  {
+    "vendorId": 10000002,
+    "name": "Semrush",
+    "tier": null,
+    "legalName": "Semrush Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "800 Boylston Street, Suite 2475",
+      "city": "Boston",
+      "region": "MA",
+      "postalCode": "02199",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.semrush.com/company/legal/privacy-policy/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000112,
+    "name": "HeroCoders",
+    "tier": null,
+    "legalName": "HeroCoders",
+    "contactName": "Jacek Jaroczyński",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "Ul. Zosi 16",
+      "city": "Gdańsk",
+      "region": null,
+      "postalCode": "80-119",
+      "country": "Poland",
+      "countryCode": "PL"
+    },
+    "sources": [
+      "https://www.herocoders.com/about",
+      "https://www.herocoders.com/legal/privacy-policy"
+    ],
+    "notes": null
+  },
+  {
+    "vendorId": 10000018,
+    "name": "Ziflow LTD",
+    "tier": null,
+    "legalName": "Ziflow Limited",
+    "contactName": "Anthony Welgemoed",
+    "contactTitle": "Co-founder and CEO",
+    "address": {
+      "street": "1st Floor, 48 Chancery Lane",
+      "city": "London",
+      "region": null,
+      "postalCode": "WC2A 1JF",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": [
+      "https://www.ziflow.com/about",
+      "https://find-and-update.company-information.service.gov.uk/company/09819483"
+    ],
+    "notes": "Same company as Gold vendor 100000022. US office: 14675 Dallas Parkway, Suite 120, Dallas, TX 75254."
+  },
+  {
+    "vendorId": 10000093,
+    "name": "SaaS Labs",
+    "tier": null,
+    "legalName": "SaaS Labs US, Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": [
+      "https://justcall.io/legal/",
+      "https://techcrunch.com/2022/01/19/saas-labs-raises-42-million-for-its-business-automation-platform-acquires-callpage-and-atolia",
+      "https://yourstory.com/2021/10/automation-startup-saas-labs/"
+    ],
+    "notes": "Offshore company with a US address: the US address (355 Bryant Street, #403, San Francisco, CA 94107) is a numbered unit. SaaS Labs (JustCall) was founded in India in 2016 by Gaurav Sharma; reports place it in Noida or Gurugram."
+  },
+  {
+    "vendorId": 100000026,
+    "name": "Satisfaction Drivers",
+    "tier": null,
+    "legalName": "Single Door Techno Solutions Private Limited",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "199/3, Ground floor, East Part, Near Chandi Mandir Hijli Co-Operative, Paschim Midnapur",
+      "city": "Kharagpur",
+      "region": "West Bengal",
+      "postalCode": "721306",
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://satisfactiondrivers.com/terms-and-conditions/"],
+    "notes": "Trades as Satisfaction Drivers."
+  },
+  {
+    "vendorId": 10000109,
+    "name": "Cedergold",
+    "tier": null,
+    "legalName": "Cedergold",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://www.cedergold.com/"],
+    "notes": "Country from the governing-law clause (laws of Israel)."
+  },
+  {
+    "vendorId": 50,
+    "name": "Pagos, Inc.",
+    "tier": null,
+    "legalName": "Pagos, Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "75 Second Avenue, Suite 605",
+      "city": "Needham",
+      "region": "MA",
+      "postalCode": "02494",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://spreadsheetweb.com/terms-of-use/"],
+    "notes": "Product: SpreadsheetWEB. Vendor email ukadakal@pagos.com."
+  },
+  {
+    "vendorId": 10000031,
+    "name": "42nd",
+    "tier": null,
+    "legalName": "42nd LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Sheridan",
+      "region": "WY",
+      "postalCode": "82801",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://42nd.co/contact/"],
+    "notes": "Possible offshore company: the US address is a registered-agent/virtual-office address (Sheridan, WY); where the team is based wasn't established. Wyoming address (likely registered agent)."
+  },
+  {
+    "vendorId": 10000145,
+    "name": "Decadis AG",
+    "tier": null,
+    "legalName": "Decadis AG",
+    "contactName": "Markus Hegemann",
+    "contactTitle": "CEO (Vorstandsvorsitzender)",
+    "address": {
+      "street": null,
+      "city": "Koblenz",
+      "region": null,
+      "postalCode": "56068",
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://www.decadis.de/rechtliches/impressum"],
+    "notes": "Board: Markus Hegemann, Christian Czaia, Julian Riedinger."
+  },
+  {
+    "vendorId": 100000002,
+    "name": "CatchApp",
+    "tier": null,
+    "legalName": "CatchApp",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Chemnitz",
+      "region": null,
+      "postalCode": null,
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://www.cbinsights.com/compare/catchapp-vs-plannie"],
+    "notes": "Probably the Chemnitz-based CatchApp (founded 2013, integrates with Hootsuite and Google Drive); not confirmed that it owns catchapp.mobi."
+  },
+  {
+    "vendorId": 10000045,
+    "name": "weweave UG (limited liability)",
+    "tier": null,
+    "legalName": "weweave UG (haftungsbeschränkt)",
+    "contactName": "Jan Jonas",
+    "contactTitle": "Director",
+    "address": {
+      "street": "Fichtenweg 8d",
+      "city": "Idstein",
+      "region": null,
+      "postalCode": "65510",
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://weweave.net/imprint", "https://weweave.net/contact"],
+    "notes": "HRB 30164, Amtsgericht Wiesbaden."
+  },
+  {
+    "vendorId": 10000220,
+    "name": "Manisha Ghosh",
+    "tier": null,
+    "legalName": null,
+    "contactName": "Manisha Ghosh",
+    "contactTitle": "Developer",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://manishaghosh.in/"],
+    "notes": "Individual developer; country from the .in domain and site content."
+  },
+  {
+    "vendorId": 10000176,
+    "name": "Whatcrm",
+    "tier": null,
+    "legalName": "Whatcrm",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Russia",
+      "countryCode": "RU"
+    },
+    "sources": ["https://whatcrm.net/en"],
+    "notes": "Country inferred from the Russian (+7) WhatsApp support number; unconfirmed."
+  },
+  {
+    "vendorId": 10000133,
+    "name": "Timely AS",
+    "tier": null,
+    "legalName": "Timely AS",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Oslo",
+      "region": null,
+      "postalCode": "0182",
+      "country": "Norway",
+      "countryCode": "NO"
+    },
+    "sources": ["https://www.timely.com/terms/"],
+    "notes": "Registered in Norway."
+  },
+  {
+    "vendorId": 25,
+    "name": "Glances",
+    "tier": null,
+    "legalName": "Glances",
+    "contactName": "Jason Eggers",
+    "contactTitle": "Co-founder, CEO",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://glances.com/about"],
+    "notes": "Co-founder/CTO Chad Hutchins (vendor email chad@glances.com)."
+  },
+  {
+    "vendorId": 10000171,
+    "name": "Crunchbase",
+    "tier": null,
+    "legalName": "Crunchbase Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://about.crunchbase.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000177,
+    "name": "FillFaster",
+    "tier": null,
+    "legalName": "FillFaster LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "30 N Gould St, Ste R",
+      "city": "Sheridan",
+      "region": "WY",
+      "postalCode": "82801",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://fillfaster.com/privacy-policy/"],
+    "notes": "Possible offshore company: the US address is a registered-agent/virtual-office address (Sheridan, WY); the site's testimonials are mostly from Israeli businesses, so the team may be Israeli (unconfirmed). Wyoming registered-agent address."
+  },
+  {
+    "vendorId": 10000193,
+    "name": "SKV Group",
+    "tier": null,
+    "legalName": "SKV Group",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "Meskheti Street, N 31g",
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Georgia",
+      "countryCode": "GE"
+    },
+    "sources": ["https://www.skv-group.net/terms/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000017,
+    "name": "Perforce Software",
+    "tier": null,
+    "legalName": "Perforce Software, Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "400 First Avenue North, Suite 400",
+      "city": "Minneapolis",
+      "region": "MN",
+      "postalCode": "55401",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://www.gliffy.com/contact-us",
+      "https://www.perforce.com/privacy-policy"
+    ],
+    "notes": "Product: Gliffy."
+  },
+  {
+    "vendorId": 100000032,
+    "name": "Transfunnel Consulting Pvt Ltd",
+    "tier": null,
+    "legalName": "Transfunnel Consulting Private Limited",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "26, DBS Business Centre, Cunningham Road, Vasanth Nagar",
+      "city": "Bengaluru",
+      "region": "Karnataka",
+      "postalCode": "560052",
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": [
+      "https://transfunnel.com/terms-and-conditions/",
+      "https://transfunnel.com/about-us/"
+    ],
+    "notes": "Also an office in Jaipur."
+  },
+  {
+    "vendorId": 10000218,
+    "name": "Worktables",
+    "tier": null,
+    "legalName": "Worktables",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": "NJ",
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://worktables.io/"],
+    "notes": "Site says 'Location: New Jersey USA | Sao Paulo Brazil' with a US (+1 862) number."
+  },
+  {
+    "vendorId": 10000000,
+    "name": "Devart",
+    "tier": null,
+    "legalName": "Devart Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://tmetric.com/privacy-policy"],
+    "notes": "Product: TMetric. No address published on the TMetric site."
+  },
+  {
+    "vendorId": 10000036,
+    "name": "iNet Process",
+    "tier": null,
+    "legalName": "iNet Process",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "4 Rue Hautefeuille",
+      "city": "Paris",
+      "region": null,
+      "postalCode": "75006",
+      "country": "France",
+      "countryCode": "FR"
+    },
+    "sources": ["https://www.inetprocess.com/privacy-policy"],
+    "notes": "Also an office in Raleigh, NC. Vendor email arsene.bodereau@inetprocess.com."
+  },
+  {
+    "vendorId": 10000278,
+    "name": "EmbedIn",
+    "tier": null,
+    "legalName": "EmbedIn",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://embed-in.com"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000005,
+    "name": "Moveo HLS LTD",
+    "tier": null,
+    "legalName": "Moveo HLS Ltd.",
+    "contactName": "Eyal Makover",
+    "contactTitle": "Co-founder & CEO",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://www.moveohls.com/about"],
+    "notes": "Part of Moveo Group."
+  },
+  {
+    "vendorId": 10000057,
+    "name": "Visme",
+    "tier": null,
+    "legalName": "Easy WebContent, LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "9211 Corporate Blvd.",
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.visme.co/terms_conditions/"],
+    "notes": "Trades as Visme (Rockville, MD)."
+  },
+  {
+    "vendorId": 29,
+    "name": "Yuriy Klyuch",
+    "tier": null,
+    "legalName": null,
+    "contactName": "Yuriy Klyuch",
+    "contactTitle": "Developer",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": [],
+    "notes": "Individual developer (vendor name); no website."
+  },
+  {
+    "vendorId": 56,
+    "name": "Catapult Labs, LLC",
+    "tier": null,
+    "legalName": "Catapult Labs, LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "1141 E. Glendale Ave. PMB 2009",
+      "city": "Phoenix",
+      "region": "AZ",
+      "postalCode": "85020",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.catapultlabs.com/legal"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000152,
+    "name": "Google",
+    "tier": null,
+    "legalName": "Google LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "1600 Amphitheatre Parkway",
+      "city": "Mountain View",
+      "region": "CA",
+      "postalCode": "94043",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://cloud.google.com/gemini-enterprise"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000163,
+    "name": "Resolution GmbH",
+    "tier": null,
+    "legalName": "resolution Reichert Network Solutions GmbH",
+    "contactName": "Christian Reichert",
+    "contactTitle": "CEO & Co-Founder",
+    "address": {
+      "street": null,
+      "city": "Zweibrücken",
+      "region": "Rheinland-Pfalz",
+      "postalCode": "66482",
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": [
+      "https://www.resolution.de/imprint/",
+      "https://www.resolution.de/"
+    ],
+    "notes": "HRB 30588."
+  },
+  {
+    "vendorId": 10000026,
+    "name": "Moneylogz Limited",
+    "tier": null,
+    "legalName": "Etay Lev Limited",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.moneylogz.com/privacy-policy/"],
+    "notes": "Moneylogz is operated by Etay Lev Limited."
+  },
+  {
+    "vendorId": 10000091,
+    "name": "Givebutter",
+    "tier": null,
+    "legalName": "Givebutter, Inc.",
+    "contactName": "Ari Krasner",
+    "contactTitle": "Co-Founder",
+    "address": {
+      "street": "2810 N Church St #53748",
+      "city": "Wilmington",
+      "region": "DE",
+      "postalCode": "19802",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://givebutter.com/privacy",
+      "https://givebutter.com/about"
+    ],
+    "notes": "The Wilmington, DE address is a registered-agent address, but Givebutter is a genuine US company. Vendor email floyd@givebutter.com."
+  },
+  {
+    "vendorId": 10000068,
+    "name": "SparkMind Solutions",
+    "tier": null,
+    "legalName": "SparkMind Solutions",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://currencyconvertor.carrd.co/"],
+    "notes": "No company details published; Gmail support address."
+  },
+  {
+    "vendorId": 10000244,
+    "name": "High End Software",
+    "tier": null,
+    "legalName": "High End Software",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "8th Floor, 810, Universal Millennium Business Hub, opposite Sarthana Nature Park, Sarthana",
+      "city": "Surat",
+      "region": "Gujarat",
+      "postalCode": "395006",
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://www.newage4.com/contact"],
+    "notes": null
+  },
+  {
+    "vendorId": 32,
+    "name": "Appgami",
+    "tier": null,
+    "legalName": "Appgami",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": ["https://www.appgami.com/terms-of-service"],
+    "notes": "Country from the governing law (England) in the terms."
+  },
+  {
+    "vendorId": 10000205,
+    "name": "Eobyte",
+    "tier": null,
+    "legalName": "Eobyte",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Lithuania",
+      "countryCode": "LT"
+    },
+    "sources": ["https://eobyte.com/"],
+    "notes": "Country from the governing-law clause ('laws of lt')."
+  },
+  {
+    "vendorId": 10000149,
+    "name": "SyncMatters",
+    "tier": null,
+    "legalName": "SyncMatters",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://app.trujay.com"],
+    "notes": "Product: Trujay data migration."
+  },
+  {
+    "vendorId": 10000262,
+    "name": "Quantum Rabbit",
+    "tier": null,
+    "legalName": "Quantum Rabbit",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Ukraine",
+      "countryCode": "UA"
+    },
+    "sources": ["https://www.quantumrabbit.net/"],
+    "notes": "Country from site content."
+  },
+  {
+    "vendorId": 10000083,
+    "name": "Apps Shark",
+    "tier": null,
+    "legalName": "Apps Shark",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": [],
+    "notes": "appsshark.com has lapsed and is for sale (HugeDomains)."
+  },
+  {
+    "vendorId": 47,
+    "name": "Atlas Authority, LLC",
+    "tier": null,
+    "legalName": "Modus Create, LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "11921 Freedom Drive, Suite 521",
+      "city": "Reston",
+      "region": "VA",
+      "postalCode": "20190",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://www.moduscreate.com/privacy-policy",
+      "https://www.moduscreate.com/about"
+    ],
+    "notes": "Atlas Authority is now part of Modus Create. Sharon Lynch is listed as Chief Executive Officer. Vendor email boris@atlasauthority.com."
+  },
+  {
+    "vendorId": 10000201,
+    "name": "GIKI Technologies",
+    "tier": null,
+    "legalName": "GIKI Technologies",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://giki.tech/"],
+    "notes": "Gmail support address; nothing published."
+  },
+  {
+    "vendorId": 10000268,
+    "name": "Zi Cloud",
+    "tier": null,
+    "legalName": "Zi Cloud",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://powertools.zicloud.co/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000003,
+    "name": "PURPLE - Software Playground",
+    "tier": null,
+    "legalName": "PURPLE - Software Playground",
+    "contactName": "Shai Shapira",
+    "contactTitle": "CEO & Co-Founder",
+    "address": {
+      "street": "Amal 58",
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://www.prpl.io/about-us"],
+    "notes": "Co-founders: Shai Shapira, Daniel Hovel, Hai Kalderon."
+  },
+  {
+    "vendorId": 100000039,
+    "name": "Boost Plugins Inc.",
+    "tier": null,
+    "legalName": "Boost Plugins Inc.",
+    "contactName": "Griffin Miller",
+    "contactTitle": "Founder, Product Lead",
+    "address": {
+      "street": null,
+      "city": "Boulder",
+      "region": "CO",
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://boostplugins.com/about"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000094,
+    "name": "Cloud Fans",
+    "tier": null,
+    "legalName": "Cloud Fans",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Weinheim",
+      "region": null,
+      "postalCode": "69469",
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://www.cloud.fans/terms/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000264,
+    "name": "Grey Bottle",
+    "tier": null,
+    "legalName": "Grey Bottle, LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://greybottle.com/terms.html"],
+    "notes": "Country inferred from the 'LLC' form only; unconfirmed."
+  },
+  {
+    "vendorId": 10000185,
+    "name": "Seibert Media",
+    "tier": null,
+    "legalName": "Seibert Group GmbH",
+    "contactName": "Martin Seibert",
+    "contactTitle": "Managing Director",
+    "address": {
+      "street": "Luisenstraße 37-39",
+      "city": "Wiesbaden",
+      "region": null,
+      "postalCode": "65185",
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://go.seibert.group/recht/impressum"],
+    "notes": "Represented by Joachim Seibert, Martin Seibert and Sebastian Martini."
+  },
+  {
+    "vendorId": 10000210,
+    "name": "EightIf Solutions",
+    "tier": null,
+    "legalName": "EightIf Solutions",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": "QLD",
+      "postalCode": null,
+      "country": "Australia",
+      "countryCode": "AU"
+    },
+    "sources": ["https://boostaddons.co/"],
+    "notes": "Trades as Boost Add-Ons. Country from the domain's WHOIS registrant record (Queensland)."
+  },
+  {
+    "vendorId": 46,
+    "name": "Bitskout OÜ",
+    "tier": null,
+    "legalName": "Bitskout OÜ",
+    "contactName": "Ilia Zelenkin",
+    "contactTitle": "Co-Founder, CEO",
+    "address": {
+      "street": "Masina 22",
+      "city": "Tallinn",
+      "region": null,
+      "postalCode": "10144",
+      "country": "Estonia",
+      "countryCode": "EE"
+    },
+    "sources": [
+      "https://www.bitskout.com/about",
+      "https://www.bitskout.com/contact"
+    ],
+    "notes": null
+  },
+  {
+    "vendorId": 10000119,
+    "name": "Prospero",
+    "tier": null,
+    "legalName": "Prospero",
+    "contactName": "Hadar Chen",
+    "contactTitle": "Co-Founder",
+    "address": {
+      "street": "18 Jerusalem Blvd",
+      "city": "Ashdod",
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://goprospero.com/terms/", "https://goprospero.com/"],
+    "notes": "Footer also mentions Fulton Creative, LLC."
+  },
+  {
+    "vendorId": 100000036,
+    "name": "Loomilab",
+    "tier": null,
+    "legalName": "Loomilab",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": "Western Province",
+      "postalCode": null,
+      "country": "Sri Lanka",
+      "countryCode": "LK"
+    },
+    "sources": ["https://www.loomilab.com/"],
+    "notes": "Country from the domain's WHOIS registrant record."
+  },
+  {
+    "vendorId": 10000056,
+    "name": "Moveo Group",
+    "tier": null,
+    "legalName": "Moveo Group",
+    "contactName": "Eyal Makover",
+    "contactTitle": "Chief Executive Officer",
+    "address": {
+      "street": "31 Lilienblum St.",
+      "city": "Tel Aviv",
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://www.moveo.group/about",
+      "https://www.moveoboost.com/boost-website-privacy-policy"
+    ],
+    "notes": "Address from Boost Moveo's privacy policy (same group)."
+  },
+  {
+    "vendorId": 10000183,
+    "name": "Tanuja Technologies Private Limited",
+    "tier": null,
+    "legalName": "Tanuja Technologies Private Limited",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://tanuja.tech/"],
+    "notes": "Indian phone number (+91) on the site."
+  },
+  {
+    "vendorId": 55,
+    "name": "MobiSafe Technologies",
+    "tier": null,
+    "legalName": "MobiSafe Technologies",
+    "contactName": "Kobi",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.mobisafe.io/"],
+    "notes": "First name from the vendor email Kobi@mobisafe.io."
+  },
+  {
+    "vendorId": 10000150,
+    "name": "set",
+    "tier": null,
+    "legalName": "set",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://setit.tech/"],
+    "notes": "Country from site content."
+  },
+  {
+    "vendorId": 10000139,
+    "name": "Crazy Ant Labs LLC",
+    "tier": null,
+    "legalName": "Crazy Ant Labs LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://sundae.so/"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000030,
+    "name": "TinyFox Labs s. r. o.",
+    "tier": null,
+    "legalName": "TinyFox Labs s. r. o.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Slovakia",
+      "countryCode": "SK"
+    },
+    "sources": ["https://tinyfoxlabs.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000071,
+    "name": "AGAT Software Development LTD",
+    "tier": null,
+    "legalName": "AGAT Software Inc.",
+    "contactName": "Yoav Crombie",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "57 Hagefen Street",
+      "city": "Aseret",
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": [
+      "https://agatsoftware.com/legal/privacy-policy/",
+      "https://agatsoftware.com/about-us"
+    ],
+    "notes": null
+  },
+  {
+    "vendorId": 10000049,
+    "name": "Herzum North America, Inc.",
+    "tier": null,
+    "legalName": "Herzum North America, Inc.",
+    "contactName": "Adam Betzen",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.herzum.com/monday/"],
+    "notes": "Contact name from the vendor email adam.betzen@herzum.com. Herzum is part of the catworkx/STAGIL group."
+  },
+  {
+    "vendorId": 10000234,
+    "name": "WiseAutomations",
+    "tier": null,
+    "legalName": "WiseAutomations",
+    "contactName": "Eyal Arbib",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://eyalarbib.wixsite.com/apps-for-monday"],
+    "notes": "Contact name from the site URL (eyalarbib.wixsite.com)."
+  },
+  {
+    "vendorId": 10000125,
+    "name": "Filestage GmbH",
+    "tier": null,
+    "legalName": "Filestage GmbH",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "Lautenschlagerstraße 16",
+      "city": "Stuttgart",
+      "region": "Baden-Württemberg",
+      "postalCode": "70173",
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://filestage.io/imprint/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000088,
+    "name": "Blinno GmbH",
+    "tier": null,
+    "legalName": "Blinno GmbH",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Switzerland",
+      "countryCode": "CH"
+    },
+    "sources": ["https://www.blinno.ch/impressum"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000114,
+    "name": "Lusha Systems Ltd.",
+    "tier": null,
+    "legalName": "Lusha Systems Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://www.lusha.com/legal/terms_and_conditions-2/"],
+    "notes": "Also Lusha Systems Inc. (US)."
+  },
+  {
+    "vendorId": 10000270,
+    "name": "mutherboard.com",
+    "tier": null,
+    "legalName": "mutherboard.com Ltd.",
+    "contactName": "Tania",
+    "contactTitle": "Managing Director",
+    "address": {
+      "street": "12 Station Parade",
+      "city": "Harrogate",
+      "region": null,
+      "postalCode": "HG1 1UE",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": [
+      "https://mutherboard.com/about",
+      "https://mutherboard.com/team"
+    ],
+    "notes": "The team page gives first names only."
+  },
+  {
+    "vendorId": 100000096,
+    "name": "Interacti Digital LLC",
+    "tier": null,
+    "legalName": "Interacti Digital LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "1007 N Orange St. 4th Floor, 2130",
+      "city": "Wilmington",
+      "region": "DE",
+      "postalCode": "19801",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.interactidigital.com/contact"],
+    "notes": "Possible offshore company: the US address is a registered-agent/virtual-office address (1007 N Orange St, Wilmington, DE); where the team is based wasn't established."
+  },
+  {
+    "vendorId": 100000078,
+    "name": "OST Consulting",
+    "tier": null,
+    "legalName": "OST Consulting SRL",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "Chemin de la Truite 9",
+      "city": "Uccle",
+      "region": null,
+      "postalCode": "1180",
+      "country": "Belgium",
+      "countryCode": "BE"
+    },
+    "sources": ["https://www.ost-labs.com/terms-conditions"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000037,
+    "name": "Fluid Apps",
+    "tier": null,
+    "legalName": "Fluid Apps",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Australia",
+      "countryCode": "AU"
+    },
+    "sources": ["https://getfluidapps.com/"],
+    "notes": "Country inferred from Australia Post-focused apps and a monday.com form in the Asia-Pacific region; unconfirmed."
+  },
+  {
+    "vendorId": 10000138,
+    "name": "AppKnitters",
+    "tier": null,
+    "legalName": "AppKnitters",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://www.appknitters.com/"],
+    "notes": "Country from site content."
+  },
+  {
+    "vendorId": 10000040,
+    "name": "Thanks.io, LLC",
+    "tier": null,
+    "legalName": "Thanks.io, LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "PO Box 16132",
+      "city": "Two Rivers",
+      "region": "AK",
+      "postalCode": "99716",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.thanks.io/terms"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000260,
+    "name": "SolDevelo",
+    "tier": null,
+    "legalName": "SolDevelo Sp. z o.o.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "Al. Zwycięstwa 96/98",
+      "city": "Gdynia",
+      "region": null,
+      "postalCode": "81-451",
+      "country": "Poland",
+      "countryCode": "PL"
+    },
+    "sources": [
+      "https://soldevelo.com/privacy-policy/",
+      "https://soldevelo.com/contact/"
+    ],
+    "notes": "Also a US office: 1700 7th Ave Suite 2100, Seattle, WA 98101."
+  },
+  {
+    "vendorId": 52,
+    "name": "SurveySparrow",
+    "tier": null,
+    "legalName": "SurveySparrow Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "4th Floor, Office No.1, Wing-1, Jyothirmaya, Infopark Phase-II, Brahmapuram, Kunnathunadu Taluk",
+      "city": "Kochi",
+      "region": "Kerala",
+      "postalCode": "682303",
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": [
+      "https://surveysparrow.com/about-us/",
+      "https://surveysparrow.com/contact-us/"
+    ],
+    "notes": "Offshore company with a US address: the US address (2261 Market Street, STE 22625, San Francisco, CA 94114) is a virtual-mailbox suite. SurveySparrow's offices are in India: Kochi (shown), Chennai and Bangalore."
+  },
+  {
+    "vendorId": 10000014,
+    "name": "MediaValet",
+    "tier": null,
+    "legalName": "MediaValet Inc.",
+    "contactName": "Rob Chase",
+    "contactTitle": "President & Chief Executive Officer",
+    "address": {
+      "street": "990 Homer Street, 5th Floor",
+      "city": "Vancouver",
+      "region": "BC",
+      "postalCode": null,
+      "country": "Canada",
+      "countryCode": "CA"
+    },
+    "sources": [
+      "https://www.mediavalet.com/about-us",
+      "https://www.mediavalet.com/"
+    ],
+    "notes": "Also a US office in Menlo Park, CA."
+  },
+  {
+    "vendorId": 100000051,
+    "name": "Stackfully",
+    "tier": null,
+    "legalName": "Stackfully",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://stackfully.co/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000282,
+    "name": "QBeeQ",
+    "tier": null,
+    "legalName": "QBeeQ, Inc.",
+    "contactName": "Ido Darnell",
+    "contactTitle": "Founder + CEO",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://www.qbeeq.io/about-us",
+      "https://www.qbeeq.io/privacy-policy"
+    ],
+    "notes": "An older about page lists Michael Becker as CEO & Co-Founder and Ido Darnell as COO."
+  },
+  {
+    "vendorId": 10000058,
+    "name": "Do Async",
+    "tier": null,
+    "legalName": "Do Async",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Berlin",
+      "region": null,
+      "postalCode": "10247",
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://doasync.com/terms/"],
+    "notes": "Site content also mentions Ukraine."
+  },
+  {
+    "vendorId": 10000172,
+    "name": "123X",
+    "tier": null,
+    "legalName": "Shivaani Divya Consulting, Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://123x.dev/terms/"],
+    "notes": "123X is operated by Shivaani Divya Consulting, Inc."
+  },
+  {
+    "vendorId": 100000054,
+    "name": "Jelisoft",
+    "tier": null,
+    "legalName": "Jelisoft",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://jelisoft.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000128,
+    "name": "evolu software GmbH",
+    "tier": null,
+    "legalName": "evolu software GmbH",
+    "contactName": "Andreas Spall",
+    "contactTitle": "CEO",
+    "address": {
+      "street": null,
+      "city": "Frankfurt",
+      "region": null,
+      "postalCode": "60325",
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://evolu.software/imprint.html"],
+    "notes": "HRB 109030, Frankfurt."
+  },
+  {
+    "vendorId": 10000182,
+    "name": "ShortDay",
+    "tier": null,
+    "legalName": "ShortDay",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.shortday.cc/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000129,
+    "name": "OPRO Co., Ltd.",
+    "tier": null,
+    "legalName": "OPRO Co., Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Japan",
+      "countryCode": "JP"
+    },
+    "sources": ["https://corp.opro.net/"],
+    "notes": "Country from the Japanese site and jp.opro.net email."
+  },
+  {
+    "vendorId": 10000106,
+    "name": "Clawdia AI LTD",
+    "tier": null,
+    "legalName": "Clawdia AI LTD",
+    "contactName": "Maoz Kain",
+    "contactTitle": "CEO",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.clawdia.ai/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000113,
+    "name": "Intellibot Trading Pty Ltd",
+    "tier": null,
+    "legalName": "Intellibot Trading Pty Ltd",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Australia",
+      "countryCode": "AU"
+    },
+    "sources": ["https://www.rungopher.com"],
+    "notes": "Trades as Gopher. Country from the 'Pty Ltd' legal form."
+  },
+  {
+    "vendorId": 10000148,
+    "name": "Apprely Technologies LLP",
+    "tier": null,
+    "legalName": "Apprely Technologies LLP",
+    "contactName": "Onkar",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://apprely.com/"],
+    "notes": "First name from the vendor email onkarv@apprely.com. Country from the Indian 'LLP' form; unconfirmed."
+  },
+  {
+    "vendorId": 10000008,
+    "name": "Growstars - Ashi Harel",
+    "tier": null,
+    "legalName": "Growstars",
+    "contactName": "Ashi Harel",
+    "contactTitle": "Founder",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["http://growstars.io"],
+    "notes": "Name from the vendor display name 'Growstars - Ashi Harel'."
+  },
+  {
+    "vendorId": 100000050,
+    "name": "CodeForMe",
+    "tier": null,
+    "legalName": "CodeForMe",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://code4me.in"],
+    "notes": "Country from the .in domain."
+  },
+  {
+    "vendorId": 100000040,
+    "name": "MarketForge",
+    "tier": null,
+    "legalName": "MarketForge",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.marketforge.tech/"],
+    "notes": null
+  },
+  {
+    "vendorId": 41,
+    "name": "Beerd van de Streek",
+    "tier": null,
+    "legalName": null,
+    "contactName": "Beerd van de Streek",
+    "contactTitle": "Developer",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Netherlands",
+      "countryCode": "NL"
+    },
+    "sources": ["https://portfolio-beestree.web.app/"],
+    "notes": "Individual developer; country from the .nl email domain (leukenaardig.nl)."
+  },
+  {
+    "vendorId": 100000013,
+    "name": "Box Hill Digital",
+    "tier": null,
+    "legalName": "Box Hill Digital",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.boxhilldigital.com/"],
+    "notes": "The site's 'founder' testimonials use placeholder names (Jack Daniel, Thomas Shelby), so none are used."
+  },
+  {
+    "vendorId": 100000023,
+    "name": "Constant in Nothing",
+    "tier": null,
+    "legalName": "Constant in Nothing",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://constantinnothing.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000269,
+    "name": "SGTLab",
+    "tier": null,
+    "legalName": "SGTLab",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://sgt-lab.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000121,
+    "name": "Stargate Apps",
+    "tier": null,
+    "legalName": "Stargate Tech Labs SRL",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Romania",
+      "countryCode": "RO"
+    },
+    "sources": ["https://www.stargateapps.io/about"],
+    "notes": "Stargate Apps is the product name of Stargate Tech Labs SRL."
+  },
+  {
+    "vendorId": 10000286,
+    "name": "Sharply",
+    "tier": null,
+    "legalName": "Sharply",
+    "contactName": "David M. Jentjens",
+    "contactTitle": "Co-Founder & Lead Developer",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Brazil",
+      "countryCode": "BR"
+    },
+    "sources": ["https://sharply-portfolio.vercel.app/"],
+    "notes": "Co-founder Caio B. Tranjan. Country from site content."
+  },
+  {
+    "vendorId": 10000077,
+    "name": "DESANTORSA SA de CV",
+    "tier": null,
+    "legalName": "DESANTORSA SA de CV",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Mexico",
+      "countryCode": "MX"
+    },
+    "sources": ["https://desantor.com/"],
+    "notes": "Country from the Mexican 'SA de CV' legal form."
+  },
+  {
+    "vendorId": 10000222,
+    "name": "RevApps Incorporated",
+    "tier": null,
+    "legalName": "RevApps Incorporated",
+    "contactName": "Alexander",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": "CA",
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["http://revapps.io/"],
+    "notes": "First name from the vendor email alexander@revapps.io. Country from the domain's WHOIS registrant record (California)."
+  },
+  {
+    "vendorId": 10000066,
+    "name": "SubscriptionFlow, Inc.",
+    "tier": null,
+    "legalName": "SubscriptionFlow Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "165 Broadway, 23rd Floor",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10006",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.subscriptionflow.com/legal-terms/"],
+    "notes": "The product is developed and operated by Techloyce Limited (UK, Brentwood CM14 5XD)."
+  },
+  {
+    "vendorId": 10000226,
+    "name": "Thackd",
+    "tier": null,
+    "legalName": "Thackd",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": ["https://thackd.com/"],
+    "notes": "Country from the domain's WHOIS registrant record."
+  },
+  {
+    "vendorId": 10000180,
+    "name": "ops42",
+    "tier": null,
+    "legalName": "ops42",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://ops42.org"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000117,
+    "name": "Canary Apps LLC",
+    "tier": null,
+    "legalName": "Canary Apps LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://canary-apps.com/"],
+    "notes": "Country inferred from the 'LLC' form only; unconfirmed."
+  },
+  {
+    "vendorId": 54,
+    "name": "Tolstoy, Ltd.",
+    "tier": null,
+    "legalName": "Tolstoy, Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.gotolstoy.com"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000009,
+    "name": "Marcus Stöckel",
+    "tier": null,
+    "legalName": null,
+    "contactName": "Marcus Stöckel",
+    "contactTitle": "Developer",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://nyxophyl.net/mmmi/"],
+    "notes": "Individual developer; country from site content."
+  },
+  {
+    "vendorId": 10000285,
+    "name": "AllDayIT Ltd.",
+    "tier": null,
+    "legalName": "AllDayIT Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://www.alldayit.com/privacy"],
+    "notes": "Country from site content."
+  },
+  {
+    "vendorId": 10000209,
+    "name": "Workflow Pilot",
+    "tier": null,
+    "legalName": "WorkflowPilot",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "London",
+      "region": null,
+      "postalCode": null,
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": ["https://workflowpilot.io"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000223,
+    "name": "Muhre Software Solutions",
+    "tier": null,
+    "legalName": "Muhre Software Solutions",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.muhre.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000143,
+    "name": "Mapsly LLC",
+    "tier": null,
+    "legalName": "Mapsly LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "440 N Barranca Ave #4985",
+      "city": "Covina",
+      "region": "CA",
+      "postalCode": "91723",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://mapsly.com/", "https://mapsly.com/terms/"],
+    "notes": "The Covina, CA address is a mailbox (#4985). Mapsly was founded by Sergey Shurygin; there's also a Mapsly Europe Ltd. Where the team is based wasn't established. Also Mapsly Europe Ltd."
+  },
+  {
+    "vendorId": 100000204,
+    "name": "Plugio",
+    "tier": null,
+    "legalName": "Plugio",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Istanbul",
+      "region": null,
+      "postalCode": null,
+      "country": "Türkiye",
+      "countryCode": "TR"
+    },
+    "sources": ["https://plugio.io"],
+    "notes": "Country from the domain's WHOIS registrant record."
+  },
+  {
+    "vendorId": 10000238,
+    "name": "Circleback AI, Inc.",
+    "tier": null,
+    "legalName": "Circleback AI, Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://circleback.ai/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000230,
+    "name": "Clever Extensions (OPC) Private Ltd",
+    "tier": null,
+    "legalName": "Clever Extensions (OPC) Private Ltd",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://cleverextensions.com/"],
+    "notes": "Country from the Indian '(OPC) Private Ltd' legal form."
+  },
+  {
+    "vendorId": 100000038,
+    "name": "Flowtech Apps LLC",
+    "tier": null,
+    "legalName": "Flowtech Apps LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://flowtechapps.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000059,
+    "name": "Inception Software LLP",
+    "tier": null,
+    "legalName": "Inception Software LLP",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://inceptionsoftware.org"],
+    "notes": "Country inferred from the 'LLP' form; unconfirmed."
+  },
+  {
+    "vendorId": 10000200,
+    "name": "Turbo Flow",
+    "tier": null,
+    "legalName": "Individual Entrepreneur Zeha Irawan",
+    "contactName": "Zeha Irawan",
+    "contactTitle": "Owner",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Indonesia",
+      "countryCode": "ID"
+    },
+    "sources": ["https://getturboflow.com/terms"],
+    "notes": "Turbo Flow (GetTurboflow) is an Indonesian sole proprietorship."
+  },
+  {
+    "vendorId": 10000181,
+    "name": "M.E. Sommers Inc.",
+    "tier": null,
+    "legalName": "M.E. Sommers Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://mesommersinc.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000060,
+    "name": "Evatro",
+    "tier": null,
+    "legalName": "Evatro",
+    "contactName": "Kıvanç Gümrükçü",
+    "contactTitle": null,
+    "address": {
+      "street": "YTÜ Teknopark Teknoloji Geliştirme Bölgesi Davutpaşa Kampüsü A1 Blok No: 151/1C D.Z02",
+      "city": "İstanbul",
+      "region": "Esenler",
+      "postalCode": "34220",
+      "country": "Türkiye",
+      "countryCode": "TR"
+    },
+    "sources": ["https://evatro.com/gizlilik-politikasi/"],
+    "notes": "Contact name from the vendor email kivanc.gumrukcu@evatro.com."
+  },
+  {
+    "vendorId": 10000239,
+    "name": "UpSmith",
+    "tier": null,
+    "legalName": "UpSmith Sdn. Bhd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Malaysia",
+      "countryCode": "MY"
+    },
+    "sources": ["https://upsmith.app/privacypolicy/"],
+    "notes": "Country from the Malaysian 'Sdn. Bhd.' legal form."
+  },
+  {
+    "vendorId": 10000141,
+    "name": "Railsware Products Studio, LLC",
+    "tier": null,
+    "legalName": "Railsware Products Studio, LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "117 E Colorado Blvd, Suite 600, Office 650",
+      "city": "Pasadena",
+      "region": "CA",
+      "postalCode": "91105",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.coupler.io/terms-of-use"],
+    "notes": "Product: Coupler.io. Same company as Bronze vendor 10000136 (TitanApps)."
+  },
+  {
+    "vendorId": 10000144,
+    "name": "J Money Apps",
+    "tier": null,
+    "legalName": "J Money Apps",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://jmoneyapps.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000012,
+    "name": "monkApps",
+    "tier": null,
+    "legalName": "monkApps",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://mailmonk.app/"],
+    "notes": "Product: mailMonk."
+  },
+  {
+    "vendorId": 10000217,
+    "name": "VB Investment Holdings LLC",
+    "tier": null,
+    "legalName": "VB Investment Holdings LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "598 Broadway, 9th Floor",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10012",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.vb-holdings.com/privacy-policy"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000131,
+    "name": "AXANEXA",
+    "tier": null,
+    "legalName": "AXANEXA LLC",
+    "contactName": "John Hu",
+    "contactTitle": "Founder & President",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://www.axanexa.com/about",
+      "https://axanexa.com/legal/privacy-policy"
+    ],
+    "notes": "Vendor email mbuckiewicz@axanexa.com."
+  },
+  {
+    "vendorId": 10000111,
+    "name": "Currency Converter Pro",
+    "tier": null,
+    "legalName": "Currency Converter Pro",
+    "contactName": "Varun Kundra",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://currency.framer.website/"],
+    "notes": "Contact name from the vendor email varunkundrabiz@gmail.com."
+  },
+  {
+    "vendorId": 10000245,
+    "name": "Atomic Apps",
+    "tier": null,
+    "legalName": "AtomicApps OÜ",
+    "contactName": "Aidan",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Estonia",
+      "countryCode": "EE"
+    },
+    "sources": ["https://www.atomicapps.io/"],
+    "notes": "First name from the vendor email aidan@atomicapps.io. Country from the Estonian 'OÜ' legal form."
+  },
+  {
+    "vendorId": 10000261,
+    "name": "Inteli-k",
+    "tier": null,
+    "legalName": "Inteli-k",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.inteli-k.com"],
+    "notes": "Spanish-language support email (soporte@)."
+  },
+  {
+    "vendorId": 100000064,
+    "name": "Kryl Solutions, LLC",
+    "tier": null,
+    "legalName": "Kryl Solutions, LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://kryl.com"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000078,
+    "name": "Canto, Inc.",
+    "tier": null,
+    "legalName": "Canto, Inc.",
+    "contactName": "Wain Kellum",
+    "contactTitle": "Chief Executive Officer",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.canto.com/about-us/"],
+    "notes": "German subsidiary Canto GmbH, Berlin."
+  },
+  {
+    "vendorId": 10000084,
+    "name": "CapabilitySource",
+    "tier": null,
+    "legalName": "CapabilitySource Inc.",
+    "contactName": "Glenn Coward",
+    "contactTitle": null,
+    "address": {
+      "street": "913 Franklin Ave., Suite 201",
+      "city": "Waco",
+      "region": "TX",
+      "postalCode": "76701",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://capabilitysource.com/privacy-policy/"],
+    "notes": "Contact name from the vendor email glenn.coward@capabilitysource.com."
+  },
+  {
+    "vendorId": 10000199,
+    "name": "SundayDevs",
+    "tier": null,
+    "legalName": "SundayDevs",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": "Treviso",
+      "postalCode": null,
+      "country": "Italy",
+      "countryCode": "IT"
+    },
+    "sources": ["https://www.sundaydevs.com/"],
+    "notes": "Country from the domain's WHOIS registrant record."
+  },
+  {
+    "vendorId": 10000194,
+    "name": "ControlHippo",
+    "tier": null,
+    "legalName": "Appitsimple Technologies LLP",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://controlhippo.com/"],
+    "notes": "ControlHippo is operated by Appitsimple Technologies LLP; Indian phone numbers (+91) on the site."
+  },
+  {
+    "vendorId": 10000281,
+    "name": "Zenzap",
+    "tier": null,
+    "legalName": "Zenzap Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.zenzap.co/privacy-policy/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000272,
+    "name": "Caby Apps",
+    "tier": null,
+    "legalName": "Caby Apps",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Hanoi",
+      "region": null,
+      "postalCode": null,
+      "country": "Vietnam",
+      "countryCode": "VN"
+    },
+    "sources": ["https://cabyapps.com/"],
+    "notes": "Country from the domain's WHOIS registrant record."
+  },
+  {
+    "vendorId": 10000050,
+    "name": "DonorSearch",
+    "tier": null,
+    "legalName": "DonorSearch",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "510 East 96th Street, Ste 110",
+      "city": "Indianapolis",
+      "region": "IN",
+      "postalCode": "46240",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.donorsearch.net/about-donorsearch/"],
+    "notes": "Vendor email nikil@donorsearch.net. Linked pages suggest DonorSearch is now part of EverTrue (CEO Adam Blake)."
+  },
+  {
+    "vendorId": 100000057,
+    "name": "Deiser",
+    "tier": null,
+    "legalName": "Deiser Desarrollo e Integración de Sistemas, S.L.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Madrid",
+      "region": null,
+      "postalCode": "28001",
+      "country": "Spain",
+      "countryCode": "ES"
+    },
+    "sources": [
+      "https://www.deiser.com/legal-statement",
+      "https://www.deiser.com/contact-us"
+    ],
+    "notes": "Also DEISER APPS, S.L."
+  },
+  {
+    "vendorId": 100000122,
+    "name": "UserSentry",
+    "tier": null,
+    "legalName": "UserSentry",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://www.user-sentry.com"],
+    "notes": "Country from the domain's WHOIS registrant record."
+  },
+  {
+    "vendorId": 10000212,
+    "name": "Project Addons",
+    "tier": null,
+    "legalName": "Project Addons",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.projectaddons.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000005,
+    "name": "Access Lab, LLC",
+    "tier": null,
+    "legalName": "Access Lab, LLC",
+    "contactName": "Daisuke Okuda",
+    "contactTitle": "Director & Founder",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Japan",
+      "countryCode": "JP"
+    },
+    "sources": ["https://accesslab.co.jp/en/about-us/"],
+    "notes": "Japanese LLC (gōdō kaisha)."
+  },
+  {
+    "vendorId": 10000236,
+    "name": "socialzmanager",
+    "tier": null,
+    "legalName": "socialzmanager",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://socialzmanager.com/"],
+    "notes": "Proton Mail support address."
+  },
+  {
+    "vendorId": 10000267,
+    "name": "Cloudstride DOO",
+    "tier": null,
+    "legalName": "Cloudstride DOO",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Montenegro",
+      "countryCode": "ME"
+    },
+    "sources": ["https://cloudstride.io/contact/"],
+    "notes": "Country inferred from the 'DOO' legal form and a +382 (Montenegro) phone number; also lists +46 and +44 numbers."
+  },
+  {
+    "vendorId": 10000082,
+    "name": "Kulaone",
+    "tier": null,
+    "legalName": "Kulaone",
+    "contactName": "Daniel",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["http://monday.kulaone.com/"],
+    "notes": "First name from the vendor email daniel@kulaone.com."
+  },
+  {
+    "vendorId": 10000248,
+    "name": "Alison.Ai",
+    "tier": null,
+    "legalName": "Alison.Ai",
+    "contactName": "Asaf Yanai",
+    "contactTitle": "Co-Founder & CEO",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://alison.ai/company/about-us"],
+    "notes": "Co-founder/CTO Koby Berkovich. Vendor email adi@alison.ai."
+  },
+  {
+    "vendorId": 10000198,
+    "name": "MoroSystems, s.r.o.",
+    "tier": null,
+    "legalName": "MoroSystems, s.r.o.",
+    "contactName": "Tomáš Páral",
+    "contactTitle": "Founder, CEO",
+    "address": {
+      "street": null,
+      "city": "Brno",
+      "region": null,
+      "postalCode": null,
+      "country": "Czech Republic",
+      "countryCode": "CZ"
+    },
+    "sources": [
+      "https://www.morosystems.com/contact/",
+      "https://www.morosystems.com/"
+    ],
+    "notes": "Commercial Register, Regional Court in Brno, Section C, File 53303."
+  },
+  {
+    "vendorId": 100000019,
+    "name": "Scoop Analytics, Inc.",
+    "tier": null,
+    "legalName": "Scoop Analytics, Inc.",
+    "contactName": "Brad Peters",
+    "contactTitle": "Founder & CEO",
+    "address": {
+      "street": "P.O. Box 117517",
+      "city": "Burlingame",
+      "region": "CA",
+      "postalCode": "94011",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://www.scoopanalytics.com/privacy-policy",
+      "https://www.scoopanalytics.com/about"
+    ],
+    "notes": null
+  },
+  {
+    "vendorId": 10000079,
+    "name": "Nanocorp AG",
+    "tier": null,
+    "legalName": "NANOS AI AG",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "Müllerstr. 12",
+      "city": "Berlin",
+      "region": null,
+      "postalCode": "13353",
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": ["https://nanos.ai/contact"],
+    "notes": "Vendor name: Nanocorp AG."
+  },
+  {
+    "vendorId": 100000216,
+    "name": "CloudTalk",
+    "tier": null,
+    "legalName": "CloudTalk s.r.o.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Slovakia",
+      "countryCode": "SK"
+    },
+    "sources": [
+      "https://www.cloudtalk.io/privacy-notice/",
+      "https://www.cloudtalk.io/contact/"
+    ],
+    "notes": "US entity CloudTalk.io Inc. Offices include New York, London, Mexico City and Toronto (320 Bay Street)."
+  },
+  {
+    "vendorId": 10000167,
+    "name": "Artwork Flow",
+    "tier": null,
+    "legalName": "Artwork Flow",
+    "contactName": "Ankit Tomar",
+    "contactTitle": "CEO and Co-founder",
+    "address": {
+      "street": null,
+      "city": "Bengaluru",
+      "region": "Karnataka",
+      "postalCode": "560045",
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": [
+      "https://www.artworkflowhq.com/contact-us",
+      "https://www.artworkflowhq.com/about-us"
+    ],
+    "notes": "Offshore company with a US address: the site also lists Miamisburg, Ohio 45342, but the team, phone number (+91) and Bengaluru office are Indian. Now part of Esko (Esko-Graphics BV)."
+  },
+  {
+    "vendorId": 10000124,
+    "name": "Kobo",
+    "tier": null,
+    "legalName": "Kobo, Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "37 Highland Ave",
+      "city": "Cambridge",
+      "region": "MA",
+      "postalCode": "02139",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.kobotoolbox.org/terms/"],
+    "notes": "Product: KoboToolbox (non-profit)."
+  },
+  {
+    "vendorId": 10000251,
+    "name": "App Bay (Industry Office Pty Ltd)",
+    "tier": null,
+    "legalName": "Industry Office Pty Ltd",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "10 Glen Alvie Street",
+      "city": "Seaford",
+      "region": "VIC",
+      "postalCode": "3198",
+      "country": "Australia",
+      "countryCode": "AU"
+    },
+    "sources": ["https://www.appbay.com.au/privacy-policy-"],
+    "notes": "Trades as App Bay."
+  },
+  {
+    "vendorId": 10000257,
+    "name": "Spritle Softwares",
+    "tier": null,
+    "legalName": "Spritle Softwares",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://saasly.in"],
+    "notes": "Indian (+91) and Singapore (+65) phone numbers; Spritle is based in Chennai."
+  },
+  {
+    "vendorId": 10000169,
+    "name": "Centilio",
+    "tier": null,
+    "legalName": "Centilio, Inc.",
+    "contactName": "Ravi Gandhi",
+    "contactTitle": "Founder",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": "Tamil Nadu",
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://centilio.com/terms", "https://centilio.com/about"],
+    "notes": "Offshore company with a US address: the US address (651 N Broad St, Suite 201, Middletown, DE 19709) is a registered-agent address; the site says 'Built in Tamil Nadu' (founder Ravi Gandhi, CTO Pranesh)."
+  },
+  {
+    "vendorId": 10000250,
+    "name": "KrispCall Pte. Ltd.",
+    "tier": null,
+    "legalName": "KrispCall Pte. Ltd.",
+    "contactName": "Dinesh Silwal",
+    "contactTitle": "Co-CEO / Co-Founder",
+    "address": {
+      "street": "20 Cecil Street, #05-03 PLUS",
+      "city": null,
+      "region": null,
+      "postalCode": "049705",
+      "country": "Singapore",
+      "countryCode": "SG"
+    },
+    "sources": [
+      "https://krispcall.com/about/",
+      "https://krispcall.com/contact-us/"
+    ],
+    "notes": "Co-CEO/co-founder Dr. Rajendra Dangol. Singapore is the real base; the US entity KrispCall Communications Inc. uses 8 The Green STE A, Dover, DE 19901 (a registered-agent address)."
+  },
+  {
+    "vendorId": 10000039,
+    "name": "Protiviti Member Firm Peru S.A.C.",
+    "tier": null,
+    "legalName": "Protiviti Member Firm Peru S.A.C.",
+    "contactName": "Luiggi Vilca",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Peru",
+      "countryCode": "PE"
+    },
+    "sources": ["https://protivitiperu.com/"],
+    "notes": "Contact name from the vendor email luiggi.vilca@protiviti.com.pe."
+  },
+  {
+    "vendorId": 10000219,
+    "name": "ArkiTech LLC",
+    "tier": null,
+    "legalName": "ArkiTech LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://arkitech.co.in/"],
+    "notes": "Country from the .co.in domain; the 'LLC' form suggests a US registration as well. Possible offshore company."
+  },
+  {
+    "vendorId": 100000125,
+    "name": "Solo network",
+    "tier": null,
+    "legalName": "Solo network",
+    "contactName": "Tacisio Coelho",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Brazil",
+      "countryCode": "BR"
+    },
+    "sources": ["https://solonetwork.com.br/home"],
+    "notes": "Contact name from the vendor email tacisio.coelho@solonetwork.com.br; country from the .com.br domain."
+  },
+  {
+    "vendorId": 10000153,
+    "name": "Amoeboids Technologies Pvt Ltd",
+    "tier": null,
+    "legalName": "Amoeboids Technologies Pvt Ltd",
+    "contactName": "Anand",
+    "contactTitle": null,
+    "address": {
+      "street": "303, 3rd Floor, Archway, S.No. 2/1/5, Plot No.5, Sopan Baug, Balewadi",
+      "city": "Pune",
+      "region": "Maharashtra",
+      "postalCode": "411045",
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://amoeboids.com/company/contact/"],
+    "notes": "First name from the vendor email anand@amoeboids.com."
+  },
+  {
+    "vendorId": 10000246,
+    "name": "Prismattic LLC",
+    "tier": null,
+    "legalName": "Prismattic LLC",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://prismattic.io/privacy"],
+    "notes": "Country inferred from the 'LLC' form only; unconfirmed."
+  },
+  {
+    "vendorId": 10000243,
+    "name": "Lumin",
+    "tier": null,
+    "legalName": "Lumin PDF Corporation",
+    "contactName": "Max Ferguson",
+    "contactTitle": "Founder, CEO",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "New Zealand",
+      "countryCode": "NZ"
+    },
+    "sources": ["https://www.luminpdf.com/company/who-we-are"],
+    "notes": "Lumin is headquartered in Auckland; US entity Lumin PDF, Inc."
+  },
+  {
+    "vendorId": 100000025,
+    "name": "Atlassian",
+    "tier": null,
+    "legalName": "Atlassian",
+    "contactName": "Mike Cannon-Brookes",
+    "contactTitle": "Co-founder & CEO",
+    "address": {
+      "street": "Level 6, 341 George Street",
+      "city": "Sydney",
+      "region": "NSW",
+      "postalCode": "2000",
+      "country": "Australia",
+      "countryCode": "AU"
+    },
+    "sources": ["https://www.atlassian.com/company/contact"],
+    "notes": "CEO name is general knowledge, not from the scraped page."
+  },
+  {
+    "vendorId": 100000063,
+    "name": "Capable",
+    "tier": null,
+    "legalName": "Capable Works Limited",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.gocapable.com/about/eula"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000016,
+    "name": "Webstablish",
+    "tier": null,
+    "legalName": "Webstablish",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Netherlands",
+      "countryCode": "NL"
+    },
+    "sources": ["https://webstablish.nl/"],
+    "notes": "Country from the .nl domain."
+  },
+  {
+    "vendorId": 10000178,
+    "name": "Signtaper Technologies FZCO",
+    "tier": null,
+    "legalName": "SignTaper Technologies FZCO",
+    "contactName": "Sumesh Tomas Kurian",
+    "contactTitle": "CEO",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United Arab Emirates",
+      "countryCode": "AE"
+    },
+    "sources": ["https://d7networks.com/", "https://d7networks.com/about/"],
+    "notes": "Trades as D7 Networks (Dubai). Indian affiliate Direct7 Telecom Solutions Pvt Ltd, Kochi."
+  },
+  {
+    "vendorId": 10000041,
+    "name": "ConfigCat Kft.",
+    "tier": null,
+    "legalName": "ConfigCat Kft.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Hungary",
+      "countryCode": "HU"
+    },
+    "sources": ["https://configcat.com/policies/privacy/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000173,
+    "name": "Broken Build",
+    "tier": null,
+    "legalName": "Broken Build",
+    "contactName": "Olexiy Artemenko",
+    "contactTitle": "CEO",
+    "address": {
+      "street": "44 Broadway",
+      "city": "London",
+      "region": null,
+      "postalCode": "E15 1XH",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": [
+      "https://www.brokenbuild.net/company/about-us",
+      "https://www.brokenbuild.net/contact-us"
+    ],
+    "notes": "Co-founders include Oleksandr Zhebryakov (vendor email alex.zhebryakov@). The team appears to be Ukrainian."
+  },
+  {
+    "vendorId": 10000146,
+    "name": "Onoff Telecom",
+    "tier": null,
+    "legalName": "Onoff Telecom",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": "Paris",
+      "region": null,
+      "postalCode": "75010",
+      "country": "France",
+      "countryCode": "FR"
+    },
+    "sources": ["https://business.onoff.app/en/"],
+    "notes": "Also an Estonian address (Tallinn 10111)."
+  },
+  {
+    "vendorId": 100000084,
+    "name": "Synergytop",
+    "tier": null,
+    "legalName": "SynergyTop LLC",
+    "contactName": "Deepak Kumar",
+    "contactTitle": null,
+    "address": {
+      "street": "TRANSBAY, Balewadi",
+      "city": "Pune",
+      "region": "Maharashtra",
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": ["https://synergytop.com/contact-us/"],
+    "notes": "Offshore company with a US address: the site lists US offices (8155 Mercury Ct, Suite 120, San Diego, CA 92111, plus Los Angeles and Los Altos), but its delivery offices are in Pune and Indore, India, with Indian (+91) phone numbers. Contact name from the vendor email deepak.kumar@synergytop.com."
+  },
+  {
+    "vendorId": 100000006,
+    "name": "Sysmo.pl - rozwiazania IT",
+    "tier": null,
+    "legalName": "Sysmo.pl",
+    "contactName": "Kajetan Zimniak",
+    "contactTitle": "CEO",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Poland",
+      "countryCode": "PL"
+    },
+    "sources": ["https://sysmo.pl/kontakt/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000029,
+    "name": "RightCliQ Solutions (Singapore) PTE LTD",
+    "tier": null,
+    "legalName": "RightCliQ Solutions (Singapore) PTE LTD",
+    "contactName": "Ali Asgar Abbas",
+    "contactTitle": "Founder & CEO",
+    "address": {
+      "street": "7 Bishan Street 15, Sky Habitat",
+      "city": "Singapore",
+      "region": null,
+      "postalCode": "573908",
+      "country": "Singapore",
+      "countryCode": "SG"
+    },
+    "sources": [
+      "https://proofeasy.io/terms-and-condition/",
+      "https://proofeasy.io/new-about-us/"
+    ],
+    "notes": "Product: ProofEasy."
+  },
+  {
+    "vendorId": 10000280,
+    "name": "Westsmith Ltd",
+    "tier": null,
+    "legalName": "Westsmith Ltd",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "Incuhive Space, Hursley Park Road, Hursley",
+      "city": "Winchester",
+      "region": null,
+      "postalCode": "SO21 2JN",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": ["https://westsmith.co.uk/about/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000240,
+    "name": "TQSTeam",
+    "tier": null,
+    "legalName": "TQSTeam",
+    "contactName": "Sagiv",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://www.tqsteam.com/"],
+    "notes": "First name from the vendor email Sagiv@tqsteam.com."
+  },
+  {
+    "vendorId": 10000006,
+    "name": "Bargain Technologies Pvt. Ltd.",
+    "tier": null,
+    "legalName": "Bargain Technologies Pvt. Ltd.",
+    "contactName": "Partha Neog",
+    "contactTitle": "CEO & Co-founder",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": [
+      "https://www.vantagecircle.com/about-us/",
+      "https://www.vantagecircle.com/contact-us/"
+    ],
+    "notes": "Trades as Vantage Circle. Lists offices in Plano TX, Calgary and Sydney; the company is Indian (Guwahati/Bengaluru)."
+  },
+  {
+    "vendorId": 100000028,
+    "name": "Objectives Board Ltd.",
+    "tier": null,
+    "legalName": "Objectives Board Ltd.",
+    "contactName": "Viktor Grekov",
+    "contactTitle": "Founder and CEO",
+    "address": {
+      "street": null,
+      "city": "Berlin",
+      "region": null,
+      "postalCode": null,
+      "country": "Germany",
+      "countryCode": "DE"
+    },
+    "sources": [
+      "https://oboard.io/about-us",
+      "https://wikitia.com/wiki/Oboard"
+    ],
+    "notes": "Offshore company with a US address: the privacy policy lists 201 Third Street, Suite 200, San Francisco, CA 94103, but Oboard is headquartered in Berlin with a remote team across Ukraine, Israel and the EU (founder and CEO Viktor Grekov)."
+  },
+  {
+    "vendorId": 100000045,
+    "name": "YEP Solutions LTD",
+    "tier": null,
+    "legalName": "YEP Solutions LTD",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://yepsolutions.io/"],
+    "notes": "Country from site content."
+  },
+  {
+    "vendorId": 100000009,
+    "name": "Solisana",
+    "tier": null,
+    "legalName": "Solisana",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://www.solisana.com/"],
+    "notes": "Country from site content only; unconfirmed."
+  },
+  {
+    "vendorId": 100000095,
+    "name": "Viskode solutions",
+    "tier": null,
+    "legalName": "Viskode solutions",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Sri Lanka",
+      "countryCode": "LK"
+    },
+    "sources": ["https://viskode.com/"],
+    "notes": "Country from the domain's WHOIS registrant record."
+  },
+  {
+    "vendorId": 100000133,
+    "name": "Bison Layer",
+    "tier": null,
+    "legalName": "Bison Layer",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Nigeria",
+      "countryCode": "NG"
+    },
+    "sources": ["https://bisonlayer.com/"],
+    "notes": "Country from site content only; unconfirmed."
+  },
+  {
+    "vendorId": 100000149,
+    "name": "Hidai Bar-Mor",
+    "tier": null,
+    "legalName": null,
+    "contactName": "Hidai Bar-Mor",
+    "contactTitle": "Developer",
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://hidaibarmor.com"],
+    "notes": "Individual developer (vendor name)."
+  },
+  {
+    "vendorId": 100000029,
+    "name": "Syncoora",
+    "tier": null,
+    "legalName": "Syncoora",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://syncoora.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000132,
+    "name": "Wistia",
+    "tier": null,
+    "legalName": "Wistia, Inc.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "120 Brookline St",
+      "city": "Cambridge",
+      "region": "MA",
+      "postalCode": "02139",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://wistia.com/terms"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000042,
+    "name": "getparallax",
+    "tier": null,
+    "legalName": "Right Team Inc",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.getparallax.com/privacy-policy/"],
+    "notes": "Product: Parallax."
+  },
+  {
+    "vendorId": 10000266,
+    "name": "Quirk",
+    "tier": null,
+    "legalName": "Quirk Consulting Pty Ltd.",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Australia",
+      "countryCode": "AU"
+    },
+    "sources": ["https://www.quirk.com.au"],
+    "notes": null
+  },
+  {
+    "vendorId": 100000073,
+    "name": "Virtual Vines",
+    "tier": null,
+    "legalName": "Virtual Vines",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.virtualvines.io"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000276,
+    "name": "Eudizital",
+    "tier": null,
+    "legalName": "Eudizital",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.eudizital.com/"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000051,
+    "name": "The Giving Block",
+    "tier": null,
+    "legalName": "The Giving Block",
+    "contactName": "Ben Pousty",
+    "contactTitle": "President",
+    "address": {
+      "street": "3501 Corporate Parkway",
+      "city": "Center Valley",
+      "region": "PA",
+      "postalCode": "18034",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": ["https://thegivingblock.com/about/"],
+    "notes": "Part of Shift4."
+  },
+  {
+    "vendorId": 10000166,
+    "name": "Reqfields",
+    "tier": null,
+    "legalName": "Ideonate Ltd",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "c/o Sb Consulting Ltd, Old Bishops College",
+      "city": "Cheshunt",
+      "region": null,
+      "postalCode": "EN8 9XP",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "sources": ["https://mreqfields.com/contact/index.html"],
+    "notes": "UK company no. 11763313 (accountant's registered office). Product: Reqfields."
+  },
+  {
+    "vendorId": 10000165,
+    "name": "CommPeak",
+    "tier": null,
+    "legalName": "CommPeak",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": "1003 Centre Point, 181-185 Gloucester Road, Wan Chai",
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Hong Kong",
+      "countryCode": "HK"
+    },
+    "sources": ["https://www.commpeak.com/contacts"],
+    "notes": null
+  },
+  {
+    "vendorId": 10000255,
+    "name": "Quizell",
+    "tier": null,
+    "legalName": "Quizell",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://quizell.com"],
+    "notes": "Country from the domain's WHOIS registrant record."
+  },
+  {
+    "vendorId": 10000070,
+    "name": "OBO",
+    "tier": null,
+    "legalName": "The OBO Group",
+    "contactName": "J. Skrzypczak",
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null,
+      "countryCode": null
+    },
+    "sources": ["https://www.hubday.io/"],
+    "notes": "Product: Hubday. Name from the vendor email jskrzypczak@theobogroup.com (first initial only)."
+  },
+  {
+    "vendorId": 10000241,
+    "name": "RightBound",
+    "tier": null,
+    "legalName": "RightBound Inc.",
+    "contactName": "Ran Oelgiesser",
+    "contactTitle": "Co-founder & CEO",
+    "address": {
+      "street": "Suite 541",
+      "city": "Kirkland",
+      "region": "WA",
+      "postalCode": "98033",
+      "country": "United States",
+      "countryCode": "US"
+    },
+    "sources": [
+      "https://rightbound.com/about/contact/",
+      "https://rightbound.com/about/"
+    ],
+    "notes": "Also an office in Aviv Tower, Tel Aviv (Israel)."
+  },
+  {
+    "vendorId": 100000017,
+    "name": "strivelabs.ai",
+    "tier": null,
+    "legalName": "Strive SaaS Labs Pvt Ltd.",
+    "contactName": "Satwik Hebbar",
+    "contactTitle": "Co-Founder",
+    "address": {
+      "street": "B 207, Radiance Icon, Koyambedu",
+      "city": "Chennai",
+      "region": "Tamil Nadu",
+      "postalCode": "600107",
+      "country": "India",
+      "countryCode": "IN"
+    },
+    "sources": [
+      "https://strivelabs.ai/terms-of-service/",
+      "https://strivelabs.ai/company/"
+    ],
+    "notes": null
+  },
+  {
+    "vendorId": 10000168,
+    "name": "MagnifiCode LTD",
+    "tier": null,
+    "legalName": "MagnifiCode LTD",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Israel",
+      "countryCode": "IL"
+    },
+    "sources": ["https://magnificode.net"],
+    "notes": "Country from site content; product BoardSync."
+  },
+  {
+    "vendorId": 100000081,
+    "name": "SheltieLabs",
+    "tier": null,
+    "legalName": "SheltieLabs",
+    "contactName": null,
+    "contactTitle": null,
+    "address": {
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": "Poland",
+      "countryCode": "PL"
+    },
+    "sources": ["http://sheltielabs.com"],
+    "notes": "Country from the domain's WHOIS registrant record."
   }
 ]

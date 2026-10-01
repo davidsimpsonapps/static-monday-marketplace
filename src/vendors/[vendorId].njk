@@ -19,6 +19,10 @@ eleventyComputed:
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.css">
 
+{% set details = vendorDetails | findVendorDetailsById(vendor.id) %}
+{% set vendorCountryCode = details.address.countryCode if details else null %}
+{% set vendorRegion = vendorCountryCode | regionName if vendorCountryCode else '' %}
+
 <div class="mx-auto">
   <div class="breadcrumb">
     <span>
@@ -38,6 +42,26 @@ eleventyComputed:
     <span>
       <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="separatorIcon_3a648a2555" aria-hidden="true"><path d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303L13 10L13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
     </span>
+    {% if vendorRegion %}
+    <span>
+      <a href="/vendors/?q={{ vendorRegion | urlencode }}" >
+        {{ vendorRegion }}
+      </a>
+    </span>
+    <span>
+      <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="separatorIcon_3a648a2555" aria-hidden="true"><path d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303L13 10L13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </span>
+    {% endif %}
+    {% if vendorCountryCode %}
+    <span>
+      <a href="/vendors/?q={{ vendorCountryCode | countryName | urlencode }}" >
+        {{ vendorCountryCode | countryName }}
+      </a>
+    </span>
+    <span>
+      <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" class="separatorIcon_3a648a2555" aria-hidden="true"><path d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303L13 10L13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </span>
+    {% endif %}
     <span>
       <a href="/vendors/{{ vendor.id }}/" >
         {{ vendor.name }}
@@ -199,7 +223,6 @@ eleventyComputed:
       </script>
 
 
-      {% set details = vendorDetails | findVendorDetailsById(vendor.id) %}
       {% set detailsAddress = details.address | addressLines if details else [] %}
       <div class="my-8"></div>
       <div>
@@ -248,7 +271,7 @@ eleventyComputed:
           {% endif %}
         </dl>
         {% if not details %}
-          <p class="text-xs text-gray-500 mt-2">Company name and address are only collected for Bronze, Silver, Gold and Platinum vendors.</p>
+          <p class="text-xs text-gray-500 mt-2">Company name and address are collected for partner vendors and for other vendors with more than 100 installs.</p>
         {% endif %}
       </div>
 
