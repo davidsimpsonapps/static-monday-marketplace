@@ -224,7 +224,9 @@
     },
     "sources": [
       "https://www.towerapps.com/imprint/",
-      "https://find-and-update.company-information.service.gov.uk/company/15053987"
+      "https://find-and-update.company-information.service.gov.uk/company/15053987",
+      "https://find-and-update.company-information.service.gov.uk/company/15053987/persons-with-significant-control",
+      "https://www.linkedin.com/in/harzl/"
     ],
     "notes": "UK company no. 15053987. 128 City Road is a registered-office service; the team is Germany-based. Possible offshore company: 128 City Road is a registered-office service. Director Bettina Leitner (Austrian) is UK-resident, but a person with significant control is a German national living in Uruguay, and the product says its operations are in Germany."
   },
@@ -604,7 +606,7 @@
     "name": "David Simpson Apps",
     "tier": "Silver",
     "legalName": "Concise Web Design Limited",
-    "contactName": "David Simpson",
+    "contactName": "David Simpson PhD FRSA",
     "contactTitle": "Founder",
     "address": {
       "street": "Unit 4a, Langley House, Wheatcroft Business Park, Edwalton",
