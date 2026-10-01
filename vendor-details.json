@@ -817,7 +817,7 @@
       "region": null,
       "postalCode": null,
       "country": "Malta",
-      "countryCode": "MA"
+      "countryCode": "MT"
     },
     "sources": ["https://www.shadebridge.com/"],
     "notes": "Legal name from the site footer. No matching company found on UK Companies House, so the country is unknown."
@@ -1112,13 +1112,16 @@
     "contactTitle": null,
     "address": {
       "street": null,
-      "city": null,
+      "city": "Tirana",
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Albania",
+      "countryCode": "AL"
     },
-    "sources": ["https://appstorm.tech/"],
+    "sources": [
+      "https://appstorm.tech/",
+      "https://appstorm.tech/tos#:~:text=Appstorm%2C%20Tirana%2C%20Albania"
+    ],
     "notes": "Nothing beyond the brand name is published."
   },
   {
