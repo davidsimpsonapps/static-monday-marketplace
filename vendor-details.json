@@ -4215,8 +4215,8 @@
     "name": "SolDevelo",
     "tier": null,
     "legalName": "SolDevelo Sp. z o.o.",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Krystian Lider",
+    "contactTitle": "Co-owner and CEO",
     "address": {
       "street": "Al. Zwycięstwa 96/98",
       "city": "Gdynia",
@@ -4227,7 +4227,9 @@
     },
     "sources": [
       "https://soldevelo.com/privacy-policy/",
-      "https://soldevelo.com/contact/"
+      "https://soldevelo.com/contact/",
+      "https://www.linkedin.com/company/soldevelo-sp-z-o-o/",
+      "https://www.linkedin.com/in/krystianlider/"
     ],
     "notes": "Also a US office: 1700 7th Ave Suite 2100, Seattle, WA 98101."
   },
