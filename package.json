@@ -15,7 +15,8 @@
     "update:anomalies": "node scripts/update-anomalies.js",
     "notify:anomalies": "node scripts/notify-slack-anomalies.js",
     "update:marketplace-changes": "node scripts/update-marketplace-changes.js",
-    "notify:marketplace-changes": "node scripts/notify-slack-marketplace-changes.js"
+    "notify:marketplace-changes": "node scripts/notify-slack-marketplace-changes.js",
+    "crawl:developer-docs": "node scripts/crawl-developer-docs.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
