@@ -1,0 +1,12 @@
+{# A flat grid of articles with their dates (topic pages). Expects `reports`. #}
+{% if reports.length > 0 %}
+  <div class="flex flex-col gap-4">
+    {% for report in reports %}
+      {% set featured = false %}
+      {% set showDate = true %}
+      {% include "partials/report-card.njk" %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="text-sm italic text-gray-500">Nothing here yet.</p>
+{% endif %}

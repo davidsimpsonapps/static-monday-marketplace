@@ -1,0 +1,6 @@
+{# Topic label of one article. Expects `topicSlug`. #}
+{% for t in reportTopics %}
+  {% if t.slug == topicSlug %}
+    <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full {{ t.dot }}"></span>{{ t.label }}</span>
+  {% endif %}
+{% endfor %}

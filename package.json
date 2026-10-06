@@ -17,15 +17,20 @@
     "update:marketplace-changes": "node scripts/update-marketplace-changes.js",
     "notify:marketplace-changes": "node scripts/notify-slack-marketplace-changes.js",
     "validate:details": "node scripts/company-details/validate.js",
-    "report:details": "node scripts/company-details/report.js"
+    "report:details": "node scripts/company-details/report.js",
+    "crawl:developer-docs": "node scripts/crawl-developer-docs.js",
+    "build:daily-report": "node scripts/build-daily-report.js",
+    "notify:daily-report": "node scripts/notify-slack-daily-report.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^7.0.0",
+    "@anthropic-ai/sdk": "^0.131.0",
     "@cospired/i18n-iso-languages": "^4.2.0",
     "countryjs": "^1.8.0",
     "html-minifier-terser": "^7.2.0",
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^2.6.7",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",

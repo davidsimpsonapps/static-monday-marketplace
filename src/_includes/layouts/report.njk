@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+
+{% set topicData = topic | reportTopic %}
+{% set crumbTitle = topicData.label %}
+{% set crumbUrl = "/daily/" + topic + "/" %}
+{% include "partials/reports-breadcrumb.njk" %}
+
+<article class="max-w-2xl">
+  <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-medium text-gray-500">
+    {% if sample %}<span class="rounded-full bg-pink-100 px-2 py-0.5 text-pink-800">Sample</span>{% endif %}
+    {% set topicSlug = topic %}
+    {% include "partials/report-topics.njk" %}
+    <time datetime="{{ page.date | dateToISO }}">{{ page.date | formatDate }}</time>
+  </div>
+  <h1 class="text-3xl sm:text-5xl font-bold tracking-tight leading-tight text-gray-900 mt-4 mb-5">{{ title | inlineCode | safe }}</h1>
+  <p class="text-lg sm:text-xl leading-relaxed text-gray-600 my-0 py-0">{{ lede | inlineCode | safe }}</p>
+
+  {% if content | trim %}
+    <hr class="my-8 border-gray-200">
+    <div class="report-body prose prose-lg prose-gray max-w-none">
+      {{ content | safe }}
+    </div>
+  {% endif %}
+
+  <hr class="mt-12 mb-6 border-gray-200">
+  <div class="flex flex-wrap items-center gap-2 text-sm">
+    <a class="font-semibold mr-2" href="/daily/">← All news</a>
+    <a class="inline-flex items-center gap-2 rounded-full border border-gray-200 px-3 py-1 text-gray-700 hover:border-gray-400 hover:text-gray-900" href="/daily/{{ topic }}/">
+      <span class="h-2 w-2 rounded-full {{ topicData.dot }}"></span>More {{ topicData.label | lower }}
+    </a>
+  </div>
+</article>
+
+{% set sameDay = collections.reports | sameDayExcept(page.date, page.url) %}
+{% if sameDay.length > 0 %}
+  <section class="max-w-2xl mt-16">
+    <h2 class="flex items-center gap-4 text-sm font-semibold uppercase tracking-wider text-gray-500 mt-0 mb-4">
+      Also on {{ page.date | formatDate }}
+      <span class="h-px flex-1 bg-gray-200"></span>
+    </h2>
+    <div class="flex flex-col gap-4">
+      {% for report in sameDay %}
+        {% set featured = false %}
+        {% set showDate = false %}
+        {% include "partials/report-card.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}

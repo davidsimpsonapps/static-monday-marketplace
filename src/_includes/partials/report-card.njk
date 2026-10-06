@@ -1,0 +1,17 @@
+{# One article in a /daily/ listing. Expects `report`; `featured` makes it the big lead card, `showDate` adds the date. #}
+<article class="group relative rounded-2xl border transition hover:shadow-md {% if featured %}border-blue-100 bg-gradient-to-br from-blue-50 via-white to-white p-6 sm:p-10{% else %}border-gray-200 bg-white p-5 hover:border-gray-300{% endif %}">
+  <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-medium text-gray-500">
+    {% if featured %}<span class="rounded-full bg-blue-700 px-2 py-0.5 text-white">Latest</span>{% endif %}
+    {% if report.data.sample %}<span class="rounded-full bg-pink-100 px-2 py-0.5 text-pink-800">Sample</span>{% endif %}
+    {% set topicSlug = report.data.topic %}
+    {% include "partials/report-topics.njk" %}
+    {% if showDate %}<time datetime="{{ report.date | dateToISO }}">{{ report.date | formatDate }}</time>{% endif %}
+  </div>
+  <h3 class="{% if featured %}text-2xl sm:text-4xl tracking-tight{% else %}text-lg sm:text-xl{% endif %} font-bold leading-tight text-gray-900 mt-3 mb-0">
+    <a class="text-gray-900 hover:text-blue-700 no-underline after:absolute after:inset-0" href="{{ report.url }}">{{ report.data.title | inlineCode | safe }}</a>
+  </h3>
+  <p class="{% if featured %}text-base sm:text-lg max-w-3xl{% else %}text-sm line-clamp-3{% endif %} leading-relaxed text-gray-600 mt-3 mb-0 py-0">{{ report.data.lede | inlineCode | safe }}</p>
+  {% if featured %}
+    <p class="mt-5 mb-0 py-0 text-sm font-semibold text-blue-700 group-hover:text-blue-900">Read more →</p>
+  {% endif %}
+</article>

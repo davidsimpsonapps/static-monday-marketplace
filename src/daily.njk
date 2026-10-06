@@ -1,0 +1,58 @@
+---
+layout: base.njk
+title: Daily • News for monday.com app developers
+description: "Daily news for monday.com app developers: new and removed marketplace apps, install anomalies, monday.com outages and incidents, and developer docs changes."
+pagination:
+  data: collections.reportDays
+  size: 7
+  alias: days
+permalink: "/daily/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  canonical: "/daily/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+{% set crumbTitle = "" %}
+{% include "partials/reports-breadcrumb.njk" %}
+
+<div class="max-w-3xl">
+  {% include "partials/daily-header.njk" %}
+  {% set activeTopic = "" %}
+  {% include "partials/report-filter.njk" %}
+
+  {% if days.length > 0 %}
+    {% for day in days %}
+      <section class="mb-12">
+        <h2 class="flex items-center gap-4 text-sm font-semibold uppercase tracking-wider text-gray-500 mt-0 mb-4">
+          <time datetime="{{ day.date | dateToISO }}">{{ day.date | formatDate }}</time>
+          <span class="h-px flex-1 bg-gray-200"></span>
+        </h2>
+        {% set showDate = false %}
+        {% if loop.first and pagination.pageNumber == 0 %}
+          {% set report = day.reports[0] %}
+          {% set featured = true %}
+          {% include "partials/report-card.njk" %}
+          {% set gridReports = day.reports.slice(1) %}
+        {% else %}
+          {% set gridReports = day.reports %}
+        {% endif %}
+        {% if gridReports.length > 0 %}
+          <div class="flex flex-col gap-4 {% if loop.first and pagination.pageNumber == 0 %}mt-4{% endif %}">
+            {% for report in gridReports %}
+              {% set featured = false %}
+              {% include "partials/report-card.njk" %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </section>
+    {% endfor %}
+
+    {% if pagination.href.previous or pagination.href.next %}
+      <div class="flex justify-between mt-10 text-sm font-semibold">
+        {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← Newer</a>{% else %}<span></span>{% endif %}
+        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Older →</a>{% endif %}
+      </div>
+    {% endif %}
+  {% else %}
+    <p class="text-sm italic text-gray-500">Nothing here yet.</p>
+  {% endif %}
+</div>

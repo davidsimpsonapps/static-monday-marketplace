@@ -489,6 +489,61 @@ module.exports = async function (eleventyConfig) {
   });
 
   // Create a collection of app pages
+  // Daily news articles (src/reports/, see scripts/build-daily-report.js),
+  // newest day first and, within a day, in topic order (reportTopics.js).
+  // Hand-written samples (`sample: true`) are for local development only and
+  // are left out of production builds.
+  const reportTopicOrder = require("./src/_data/reportTopics.js").map((t) => t.slug);
+  const getReports = (collection) =>
+    collection
+      .getFilteredByGlob("./src/reports/*.md")
+      .filter((report) => !(report.data.sample && process.env.NODE_ENV === "production"))
+      .sort(
+        (a, b) =>
+          b.date - a.date ||
+          reportTopicOrder.indexOf(a.data.topic) - reportTopicOrder.indexOf(b.data.topic),
+      );
+  eleventyConfig.addCollection("reports", getReports);
+
+  // The same articles grouped by day, for /daily/
+  eleventyConfig.addCollection("reportDays", function (collection) {
+    const days = [];
+    for (const report of getReports(collection)) {
+      const day = report.date.toISOString().slice(0, 10);
+      if (days.at(-1)?.day !== day) days.push({ day, date: report.date, reports: [] });
+      days.at(-1).reports.push(report);
+    }
+    return days;
+  });
+
+  // A topic from reportTopics.js by slug
+  eleventyConfig.addFilter("reportTopic", function (slug) {
+    return require("./src/_data/reportTopics.js").find((t) => t.slug === slug) || { slug, label: slug, dot: "" };
+  });
+
+  // Daily articles of one topic
+  eleventyConfig.addFilter("withTopic", function (reports, topic) {
+    return reports.filter((report) => report.data.topic === topic);
+  });
+
+  // Other daily articles from the same day as `url`
+  eleventyConfig.addFilter("sameDayExcept", function (reports, date, url) {
+    const day = new Date(date).toISOString().slice(0, 10);
+    return reports.filter(
+      (report) => report.url !== url && report.date.toISOString().slice(0, 10) === day,
+    );
+  });
+
+  // Plain text with `code spans` (report ledes) -> escaped HTML with <code>
+  eleventyConfig.addFilter("inlineCode", function (text) {
+    const escaped = String(text ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+    return escaped.replace(/`([^`]+)`/g, '<code class="rounded bg-gray-100 px-1 py-0.5 text-[0.9em]">$1</code>');
+  });
+
   eleventyConfig.addCollection("appPages", function (collection) {
     return collection.getAll()[0].data.marketplace.map((app) => ({
       url: `/apps/${app.id}/`,
@@ -591,8 +646,8 @@ module.exports = async function (eleventyConfig) {
     },
   });
 
-  // Copy static assets
-  eleventyConfig.addPassthroughCopy("src/css");
+  // Copy static assets. (src/css isn't copied: styles.css is compiled by the
+  // "css" extension above, and a raw copy would overwrite the compiled file.)
   eleventyConfig.addPassthroughCopy("src/_data/json");
   // Daily archive snapshots (marketplace/installs/ratings/trending history)
   // live outside _data so Eleventy's data cascade doesn't parse every one of
