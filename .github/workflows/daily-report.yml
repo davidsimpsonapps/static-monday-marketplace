@@ -1,0 +1,65 @@
+name: Daily Report
+
+on:
+  # Right after the daily data update has been committed. That update is
+  # scheduled for 00:00 UTC but usually lands between 04:00 and 05:30, after
+  # the developer docs crawl (03:30).
+  workflow_run:
+    workflows: ["Historic App Data Update"]
+    types: [completed]
+  workflow_dispatch: # Allows manual runs
+
+jobs:
+  report:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write # to trigger the deploy workflow
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master # workflow_run would otherwise check out the commit before the data update
+
+      # The report compares files against the previous data update, so it
+      # needs a few days of history (but not the whole, very large, repository)
+      - name: Fetch recent history
+        run: git fetch --shallow-since="4 days ago" origin master
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build daily report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/build-daily-report.js
+
+      - name: Commit and push report
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add src/reports/
+          if git diff --cached --quiet; then
+            echo "No report today"
+            exit 0
+          fi
+          git commit -m "Add daily report - $(date +'%Y-%m-%d')"
+          # Other scheduled workflows push to the same branch
+          git pull --rebase
+          git push
+          # Pushes made with GITHUB_TOKEN don't trigger other workflows, so
+          # start the deploy explicitly to publish the report right away
+          gh workflow run deploy-to-cloudflare.yml --ref master
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Notify Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: node scripts/notify-slack-daily-report.js

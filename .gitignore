@@ -30,3 +30,6 @@ Thumbs.db
 .idea/
 *.swp
 *.swo 
+# Daily report written in the most recent run, consumed by
+# scripts/notify-slack-daily-report.js and not meant to be committed
+new-daily-report.json
