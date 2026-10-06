@@ -1260,7 +1260,7 @@
       "1838394b-a6bb-4936-867a-8fe917a79a9f",
       "55c7e2e3-be39-4946-ac7e-17d9d520fc61"
     ],
-    "legalName": "Carbon Web Print LLC",
+    "legalName": "CarbonWeb Apps, LLC",
     "contactName": "Mitchell McLaughlin",
     "contactTitle": "Co-founder",
     "alternativeContacts": [
@@ -1278,7 +1278,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Ohio (US))",
+        "jurisdiction": "Ohio (US)",
+        "kind": "domestic",
+        "id": "5276827",
+        "name": "CARBONWEB APPS, LLC",
+        "companyType": "Domestic Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "CORPORATE AGENTS, INC",
+        "registeredAddress": "30195 Chagrin Blvd Ste 300, Cleveland, OH 44124-5703 (agent)",
+        "url": "https://opencorporates.com/companies/us_oh/5276827"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1295,12 +1308,18 @@
       {
         "type": "duns",
         "url": "https://www.dnb.com/business-directory/company-profiles/carbon-web-print-llc.ec5484e0423e25feab517eb6d74ad258"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_oh/5276827",
+        "id": "5276827",
+        "label": "Ohio (US) company no. 5276827 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "CarbonApps is the app arm of CarbonWeb (monday.com partner). Co-founders: Mitchell McLaughlin and Jack Kubicek. The office is in downtown Willoughby; no street address was found. The monday.com vendor email is jblair@carbonweb.co. Same company as vendor 58.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "CarbonApps is the app arm of CarbonWeb (monday.com partner). Co-founders: Mitchell McLaughlin and Jack Kubicek. The office is in downtown Willoughby; no street address was found. The monday.com vendor email is jblair@carbonweb.co. Same company as vendor 58. Legal entity: CarbonWeb Apps, LLC (Ohio no. 5276827), the app company of the CarbonWeb group; its sister company Carbon Web Print, LLC (Ohio no. 3966090) runs the monday.com consulting partner. Both use the same registered agent (Corporate Agents, Inc). Neither has foreign registrations in other states on OpenCorporates.",
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 10000047,
@@ -1528,7 +1547,7 @@
       "1838394b-a6bb-4936-867a-8fe917a79a9f",
       "55c7e2e3-be39-4946-ac7e-17d9d520fc61"
     ],
-    "legalName": "Carbon Web Print LLC",
+    "legalName": "CarbonWeb Apps, LLC",
     "contactName": "Mitchell McLaughlin",
     "contactTitle": "Co-founder",
     "alternativeContacts": [
@@ -1546,7 +1565,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Ohio (US))",
+        "jurisdiction": "Ohio (US)",
+        "kind": "domestic",
+        "id": "5276827",
+        "name": "CARBONWEB APPS, LLC",
+        "companyType": "Domestic Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "CORPORATE AGENTS, INC",
+        "registeredAddress": "30195 Chagrin Blvd Ste 300, Cleveland, OH 44124-5703 (agent)",
+        "url": "https://opencorporates.com/companies/us_oh/5276827"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1555,12 +1587,18 @@
       {
         "type": "press",
         "url": "https://www.cleveland19.com/2025/02/12/young-entrepreneurs-running-tech-company-downtown-willoughby/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_oh/5276827",
+        "id": "5276827",
+        "label": "Ohio (US) company no. 5276827 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Same company as vendor 10000052. Co-founders: Mitchell McLaughlin and Jack Kubicek.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "Same company as vendor 10000052. Co-founders: Mitchell McLaughlin and Jack Kubicek. Legal entity: CarbonWeb Apps, LLC (Ohio no. 5276827), the app company of the CarbonWeb group; its sister company Carbon Web Print, LLC (Ohio no. 3966090) runs the monday.com consulting partner. Both use the same registered agent (Corporate Agents, Inc). Neither has foreign registrations in other states on OpenCorporates.",
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 100000021,
@@ -2400,7 +2438,32 @@
         "countryCode": "IN"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Ohio (US))",
+        "jurisdiction": "Ohio (US)",
+        "kind": "domestic",
+        "id": "865224",
+        "name": "EMPYRA.COM, INC.",
+        "companyType": "Corporation for Profit",
+        "status": "Active",
+        "registeredAgent": "ELIAS F. ALEXANDER III",
+        "registeredAddress": "Youngstown, Mahoning County, OH (agent: 8072 Herbert Rd, Canfield, OH 44406)",
+        "url": "https://opencorporates.com/companies/us_oh/865224"
+      },
+      {
+        "register": "OpenCorporates (Texas (US))",
+        "jurisdiction": "Texas (US)",
+        "kind": "foreign",
+        "id": "0803732905",
+        "name": "EMPYRA.COM, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_tx/0803732905"
+      }
+    ],
     "sources": [
       {
         "type": "contact",
@@ -2409,12 +2472,24 @@
       {
         "type": "about",
         "url": "https://www.empyra.com/our-team"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_oh/865224",
+        "id": "865224",
+        "label": "Ohio (US) company no. 865224 (OpenCorporates)"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_tx/0803732905",
+        "id": "0803732905",
+        "label": "Texas (US) company no. 0803732905 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "appserve.ai is a division of Empyra. Co-founder Vishy Subramanyam (CTO). India offices in Bangalore.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "appserve.ai is a division of Empyra. Co-founder Vishy Subramanyam (CTO). India offices in Bangalore. Home registration: EMPYRA.COM, INC., an Ohio for-profit corporation (no. 865224, formerly Vision Solutions, Inc.), registered in Youngstown; its registered agent Elias F. Alexander III appears to be Empyra staff (Eli Alexander on the team page). Registered in Texas as a foreign corporation (no. 0803732905) for the Irving office.",
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 10000179,

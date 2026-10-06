@@ -21,7 +21,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Maryland (US))",
+        "jurisdiction": "Maryland (US)",
+        "kind": "foreign",
+        "id": "Z23261555",
+        "name": "ABILITY OPS LLC",
+        "companyType": "FOREIGN LLC",
+        "status": "Revived",
+        "registeredAgent": "UNITED STATES CORPORATION AGENTS, INC",
+        "registeredAddress": "47 EAST ALL SAINTS STREET, FREDERICK, 21701, MD",
+        "url": "https://opencorporates.com/companies/us_md/Z23261555"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -998,7 +1011,7 @@
     "locationFlag": null,
     "notes": "No address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "d95d171a-ef1e-4c62-bb24-4ff38e9dc2d9",
@@ -1119,7 +1132,32 @@
         "countryCode": "IN"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Ohio (US))",
+        "jurisdiction": "Ohio (US)",
+        "kind": "domestic",
+        "id": "865224",
+        "name": "EMPYRA.COM, INC.",
+        "companyType": "Corporation for Profit",
+        "status": "Active",
+        "registeredAgent": "ELIAS F. ALEXANDER III",
+        "registeredAddress": "Youngstown, Mahoning County, OH (agent: 8072 Herbert Rd, Canfield, OH 44406)",
+        "url": "https://opencorporates.com/companies/us_oh/865224"
+      },
+      {
+        "register": "OpenCorporates (Texas (US))",
+        "jurisdiction": "Texas (US)",
+        "kind": "foreign",
+        "id": "0803732905",
+        "name": "EMPYRA.COM, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_tx/0803732905"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1143,10 +1181,16 @@
         "url": "https://opencorporates.com/companies/us_tx/0803732905",
         "id": "0803732905",
         "label": "Texas (US) company no. 0803732905 (OpenCorporates)"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_oh/865224",
+        "id": "865224",
+        "label": "Ohio (US) company no. 865224 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": null,
+    "notes": "Home registration: EMPYRA.COM, INC., an Ohio for-profit corporation (no. 865224, formerly Vision Solutions, Inc.), registered in Youngstown; its registered agent Elias F. Alexander III appears to be Empyra staff (Eli Alexander on the team page). Registered in Texas as a foreign corporation (no. 0803732905) for the Irving office.",
     "lastVerified": "2026-10-06",
     "registrationsCheckedAt": "2026-10-06"
   },
@@ -1332,7 +1376,7 @@
     "email": "josh@fruitionservices.io",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "Fruition Services Pty Ltd",
     "contactName": "Josh Jebathilak",
     "contactTitle": "Director",
     "alternativeContacts": [],
@@ -1373,7 +1417,20 @@
         "countryCode": "IN"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Australia)",
+        "jurisdiction": "Australia",
+        "kind": "domestic",
+        "id": "667454006",
+        "name": "FRUITION SERVICES PTY LTD",
+        "companyType": "Australian Proprietary Company, Limited By Shares",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Dulwich Hill NSW 2203",
+        "url": "https://opencorporates.com/companies/au/667454006"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1387,6 +1444,16 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/fruition-apac",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/au/667454006",
+        "id": "667454006",
+        "label": "ACN 667454006 (OpenCorporates)"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/company/fruitionservices"
       }
     ],
     "locationFlag": null,
@@ -2687,7 +2754,7 @@
     "locationFlag": null,
     "notes": "No address published. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "1043a9dc-7d2a-4ec8-8970-f40bec48559b",
@@ -2966,7 +3033,7 @@
     "email": "thanos@thespelas.com",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "THESPELAS.COM LLC",
     "contactName": "Thanos Spelas",
     "contactTitle": "CEO",
     "alternativeContacts": [
@@ -3002,7 +3069,20 @@
         "countryCode": "GR"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "2627221",
+        "name": "THESPELAS.COM LLC",
+        "companyType": "Domestic Limited Liability Company",
+        "status": null,
+        "registeredAgent": "DASH INCORPORATORS LLC",
+        "registeredAddress": "Kent, DE, United States",
+        "url": "https://opencorporates.com/companies/us_de/2627221"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -3020,12 +3100,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/thanos-spelas",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/2627221",
+        "id": "2627221",
+        "label": "Delaware (US) company no. 2627221 (OpenCorporates)"
       }
     ],
     "locationFlag": "possible-offshore",
     "notes": "Possible offshore company: lists a New York address but also a Greek address (1 Alikis, 84004) with mostly Greek (+30) phone numbers.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "e857e1ca-3402-4220-a2ad-72ef8da4ab76",
@@ -3534,7 +3620,7 @@
     "locationFlag": null,
     "notes": "No address published; the site mentions Ireland. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "d9cde900-7386-4ad8-bd9b-1b964d4ffd30",
@@ -4464,7 +4550,7 @@
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "55c7e2e3-be39-4946-ac7e-17d9d520fc61",
@@ -5008,7 +5094,7 @@
     "email": "josh@fruitionservices.io",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "Fruition Services, Inc.",
     "contactName": "Zachary Weller",
     "contactTitle": "Director, North America",
     "alternativeContacts": [
@@ -5036,7 +5122,32 @@
         "countryCode": "AU"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "10030075",
+        "name": "FRUITION SERVICES, INC.",
+        "companyType": "Domestic Corporation",
+        "status": null,
+        "registeredAgent": "A REGISTERED AGENT, INC",
+        "registeredAddress": "8 The Green, Ste A, Dover, DE 19901",
+        "url": "https://opencorporates.com/companies/us_de/10030075"
+      },
+      {
+        "register": "OpenCorporates (New York (US))",
+        "jurisdiction": "New York (US)",
+        "kind": "foreign",
+        "id": "7934874",
+        "name": "FRUITION SERVICES NY",
+        "companyType": "Foreign Business Corporation",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "1584 Fulton Street, Apt 6C, Brooklyn, NY",
+        "url": "https://opencorporates.com/companies/us_ny/7934874"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -5050,12 +5161,28 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/fruition-us",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/10030075",
+        "id": "10030075",
+        "label": "Delaware (US) company no. 10030075 (OpenCorporates)"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_ny/7934874",
+        "id": "7934874",
+        "label": "New York (US) company no. 7934874 (OpenCorporates)"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/company/fruitionservices"
       }
     ],
     "locationFlag": null,
-    "notes": "US arm of Fruition (Australia). Contact from the monday.com partner profile's team list.",
+    "notes": "US arm of Fruition (Australia). Contact from the monday.com partner profile's team list. Fruition Services, Inc. is a Delaware corporation (agent A Registered Agent, Inc, a Dover registered-agent service), registered to trade in New York as FRUITION SERVICES NY; the parent is FRUITION SERVICES PTY LTD (Australia, ACN 667454006).",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "71515371-78d6-482c-a746-b99e02b7a07e",
@@ -7257,6 +7384,10 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/fruition-uk",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/company/fruitionservices"
       }
     ],
     "locationFlag": null,
