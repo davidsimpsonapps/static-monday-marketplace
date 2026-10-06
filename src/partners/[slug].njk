@@ -20,6 +20,8 @@ eleventyComputed:
 {% from "partials/person-card.njk" import personCard %}
 {% from "partials/service-card.njk" import serviceCard %}
 {% from "partials/microsoft-badge.njk" import microsoftBadge %}
+{% from "partials/company-details.njk" import companyDetails %}
+{% from "partials/cross-badges.njk" import vendorBadge %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.36.4/tocbot.css" integrity="sha512-nJwmkYKmBxqHBZfKnXTiVA2YVIrRULgO+gn6m70r4vqSMCRtQKmRSfd9LozVxcOR7V9/LV0TWLqkmspIHhr1KA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -90,7 +92,8 @@ eleventyComputed:
               <div class="w-12 h-12 sm:w-24 sm:h-24 rounded sm:rounded-lg"></div>
             {% endif %}
             <div>
-              {% set partnerSite = partnerWebsites | findPartnerWebsiteById(partner.id) %}
+              {% set partnerSite = partnerDetails | findPartnerDetailsById(partner.id) %}
+              {% set linkedVendors = vendors | findVendorsByIds(partnerSite.vendorIds) if partnerSite else [] %}
               <h1 class="text-xl sm:text-3xl font-bold mb-2 flex gap-1 no-tocbot">
                 <span>{{ partner.name }}</span>
 
@@ -109,7 +112,16 @@ eleventyComputed:
                 {% if partnerSite and partnerSite.isMicrosoftPartner %}
                     {{ microsoftBadge() }}
                 {% endif %}
+                {% if linkedVendors.length %}
+                    {{ vendorBadge(linkedVendors[0].name) }}
+                {% endif %}
               </h1>
+              {% if linkedVendors.length %}
+                <p class="text-sm text-gray-600 mb-1">
+                  Also a marketplace vendor:
+                  {% for v in linkedVendors %}<a href="/vendors/{{ v.id }}/" class="text-blue-600 hover:text-blue-800">{{ v.name }} →</a>{% if not loop.last %}, {% endif %}{% endfor %}
+                </p>
+              {% endif %}
 
               <div class="flex gap-2">
                 {% if partner.productExpertise.includes('MONDAY_SALES_CRM') %}
@@ -291,6 +303,9 @@ eleventyComputed:
 
 
 
+
+      {% set relatedVendor = { label: "Marketplace vendor", href: "/vendors/" ~ linkedVendors[0].id ~ "/", text: linkedVendors[0].name } if linkedVendors.length else null %}
+      {{ companyDetails(partnerSite if (partnerSite and (partnerSite.legalName or partnerSite.contactName or partnerSite.address.countryCode)) else null, partnerSite.url if partnerSite else null, partnerSite.email if partnerSite else null, "Company details have not been researched for this partner yet.", relatedVendor) }}
 
       <!-- Debug output -->
       <div class="py-8 text-sm w-full">

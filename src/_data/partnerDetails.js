@@ -4,12 +4,12 @@ const { join } = require("path");
 module.exports = async function () {
   try {
     const raw = await readFile(
-      join(__dirname, "..", "..", "partner-websites.json"),
+      join(__dirname, "..", "..", "partner-details.json"),
       "utf-8",
     );
     return JSON.parse(raw);
   } catch (error) {
-    console.error("Error reading partner-websites.json:", error);
+    console.error("Error reading partner-details.json:", error);
     return [];
   }
 };

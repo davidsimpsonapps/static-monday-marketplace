@@ -6,6 +6,13 @@
   {% set _hasRealWebsite = partner.websiteUrl and 'example.com' not in partner.websiteUrl and partner.websiteUrl | trim %}
   {% set _sameAs = [] %}
   {% if _hasRealWebsite %}{% set _sameAs = _sameAs | concat([partner.websiteUrl]) %}{% endif %}
+  {% set _details = partnerDetails | findPartnerDetailsById(partner.id) %}
+  {% set _addr = _details.address if (_details and _details.address and _details.address.countryCode) else null %}
+  {% if _details %}
+    {% if not _hasRealWebsite and _details.url %}{% set _sameAs = _sameAs | concat([_details.url]) %}{% endif %}
+    {% for _src in _details.sources %}{% if _src.type == 'linkedin' and _src.url and '/company/' in _src.url %}{% set _sameAs = _sameAs | concat([_src.url]) %}{% endif %}{% endfor %}
+    {% for _v in vendors | findVendorsByIds(_details.vendorIds) %}{% set _sameAs = _sameAs | concat([_origin ~ '/vendors/' ~ _v.id ~ '/']) %}{% endfor %}
+  {% endif %}
 
   <script type="application/ld+json">
   {
@@ -20,7 +27,17 @@
         {% if partner.logoUrl %}"logo": {{ partner.logoUrl | dump | safe }},{% endif %}
         {% if partner.profilePictureUrl %}"image": {{ partner.profilePictureUrl | dump | safe }},{% endif %}
         {% if partner.foundedYear %}"foundingDate": {{ partner.foundedYear | string | dump | safe }},{% endif %}
-        {% if partner.countryCode %}
+        {% if _details and _details.legalName %}"legalName": {{ _details.legalName | dump | safe }},{% endif %}
+        {% if _addr %}
+        "address": {
+          "@type": "PostalAddress",
+          {% if _addr.street %}"streetAddress": {{ _addr.street | dump | safe }},{% endif %}
+          {% if _addr.city %}"addressLocality": {{ _addr.city | dump | safe }},{% endif %}
+          {% if _addr.region %}"addressRegion": {{ _addr.region | dump | safe }},{% endif %}
+          {% if _addr.postalCode %}"postalCode": {{ _addr.postalCode | dump | safe }},{% endif %}
+          "addressCountry": {{ _addr.countryCode | dump | safe }}
+        },
+        {% elif partner.countryCode %}
         "address": {
           "@type": "PostalAddress",
           "addressCountry": {{ partner.countryCode | dump | safe }}

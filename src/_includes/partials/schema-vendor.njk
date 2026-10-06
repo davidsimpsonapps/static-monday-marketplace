@@ -6,6 +6,12 @@
   {% set _sameAs = [] %}
   {% if vendor.website %}{% set _sameAs = _sameAs | concat([vendor.website]) %}{% endif %}
   {% set _sameAs = _sameAs | concat([_marketplaceUrl]) %}
+  {% set _details = vendorDetails | findVendorDetailsById(vendor.id) %}
+  {% set _addr = _details.address if _details else null %}
+  {% if _details %}
+    {% for _src in _details.sources %}{% if _src.type == 'linkedin' and _src.url and '/company/' in _src.url %}{% set _sameAs = _sameAs | concat([_src.url]) %}{% endif %}{% endfor %}
+    {% for _p in partners | findPartnersByIds(_details.partnerIds) %}{% set _sameAs = _sameAs | concat([_origin ~ '/partners/' ~ _p.slug ~ '/']) %}{% endfor %}
+  {% endif %}
 
   <script type="application/ld+json">
   {
@@ -15,6 +21,17 @@
         "@type": "Organization",
         "@id": {{ (_vendorUrl ~ '#organization') | dump | safe }},
         "name": {{ (vendor.name or '') | dump | safe }},
+        {% if _details and _details.legalName %}"legalName": {{ _details.legalName | dump | safe }},{% endif %}
+        {% if _addr and _addr.countryCode %}
+        "address": {
+          "@type": "PostalAddress",
+          {% if _addr.street %}"streetAddress": {{ _addr.street | dump | safe }},{% endif %}
+          {% if _addr.city %}"addressLocality": {{ _addr.city | dump | safe }},{% endif %}
+          {% if _addr.region %}"addressRegion": {{ _addr.region | dump | safe }},{% endif %}
+          {% if _addr.postalCode %}"postalCode": {{ _addr.postalCode | dump | safe }},{% endif %}
+          "addressCountry": {{ _addr.countryCode | dump | safe }}
+        },
+        {% endif %}
         "url": {{ (vendor.website or _vendorUrl) | dump | safe }},
         {% if vendor.logo_url %}"logo": {{ vendor.logo_url | dump | safe }},{% endif %}
         {% if vendor.email %}"email": {{ vendor.email | dump | safe }},{% endif %}

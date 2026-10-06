@@ -1,0 +1,91 @@
+{#
+  Company Details section for vendor and partner pages, from a
+  vendor-details.json / partner-details.json entry.
+
+  details    – the entry (or null)
+  website    – company website URL (vendor API website / partner-details url)
+  email      – support/contact email, or a support URL
+  emptyNote  – text shown when there is no details entry
+  related    – optional {label, href, text} cross-link to the matching
+               vendor/partner page
+#}
+{% macro companyDetails(details, website, email, emptyNote, related) %}
+  {% set detailsAddress = details.address | addressLines if details else [] %}
+  <div class="my-8"></div>
+  <div>
+    <div class="flex items-baseline gap-2 mb-4">
+      <h2 id="contact" class="text-lg sm:text-2xl font-semibold">Company Details</h2>
+    </div>
+    <dl class="grid grid-cols-1 sm:grid-cols-[10rem_1fr] gap-x-4 gap-y-2 text-sm">
+      {% if details and details.legalName %}
+        <dt class="text-gray-500">Legal Name</dt>
+        <dd>{{ details.legalName }}</dd>
+      {% endif %}
+      {% if details and details.contactName %}
+        <dt class="text-gray-500">Contact</dt>
+        <dd>{{ details.contactName }}{% if details.contactTitle %}, <span class="text-gray-600">{{ details.contactTitle }}</span>{% endif %}</dd>
+      {% endif %}
+      {% if details and details.alternativeContacts and details.alternativeContacts.length %}
+        <dt class="text-gray-500">Other Contacts</dt>
+        <dd>
+          {% for person in details.alternativeContacts %}
+            <div>{{ person.contactName }}{% if person.contactTitle %}, <span class="text-gray-600">{{ person.contactTitle }}</span>{% endif %}</div>
+          {% endfor %}
+        </dd>
+      {% endif %}
+      {% if detailsAddress.length %}
+        <dt class="text-gray-500">Address</dt>
+        <dd>
+          <address class="not-italic">
+            {% for line in detailsAddress %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}
+          </address>
+        </dd>
+      {% endif %}
+      {% if details and details.alternativeAddresses and details.alternativeAddresses.length %}
+        <dt class="text-gray-500">Other Addresses</dt>
+        <dd class="space-y-2">
+          {% for other in details.alternativeAddresses %}
+            {% set otherLines = other | addressLines %}
+            <address class="not-italic">
+              {% if other.label %}<span class="text-gray-600">{{ other.label }}</span><br>{% endif %}
+              {% for line in otherLines %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}
+            </address>
+          {% endfor %}
+        </dd>
+      {% endif %}
+      {% if website %}
+        <dt class="text-gray-500">Website</dt>
+        <dd><a href="{{ website }}" target="_blank" rel="nofollow noreferer noopener" class="text-blue-600 hover:text-blue-800 break-all">{{ website }}</a></dd>
+      {% endif %}
+      {% if email %}
+        <dt class="text-gray-500">Support</dt>
+        <dd>
+          {% if email.startsWith('http') %}
+            <a href="{{ email }}" target="_blank" rel="nofollow noreferer noopener" class="text-blue-600 hover:text-blue-800 break-all">{{ email }}</a>
+          {% else %}
+            <a href="mailto:{{ email | trim }}" class="text-blue-600 hover:text-blue-800 break-all">{{ email | trim }}</a>
+          {% endif %}
+        </dd>
+      {% endif %}
+      {% if related %}
+        <dt class="text-gray-500">{{ related.label }}</dt>
+        <dd><a href="{{ related.href }}" class="text-blue-600 hover:text-blue-800">{{ related.text }} →</a></dd>
+      {% endif %}
+      {% if details and details.sources and details.sources.length %}
+        <dt class="text-gray-500">Sources</dt>
+        <dd>
+          {% for source in details.sources %}
+            {% if source.url %}
+              <a href="{{ source.url }}" target="_blank" rel="nofollow noreferer noopener" title="{{ source | sourceLabel }}: {{ source.url }}" data-toggle="tooltip" class="inline-block bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs mr-1">{{ loop.index }}</a>
+            {% else %}
+              <span title="{{ source | sourceLabel }}" data-toggle="tooltip" class="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full text-xs mr-1">{{ loop.index }}</span>
+            {% endif %}
+          {% endfor %}
+        </dd>
+      {% endif %}
+    </dl>
+    {% if not details and emptyNote %}
+      <p class="text-xs text-gray-500 mt-2">{{ emptyNote }}</p>
+    {% endif %}
+  </div>
+{% endmacro %}

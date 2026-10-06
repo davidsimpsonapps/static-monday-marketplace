@@ -1,0 +1,30 @@
+{#
+  Badges linking companies that are both a monday.com marketplace vendor and a
+  monday.com partner (see partnerIds / vendorIds in vendor-details.json and
+  partner-details.json). Badges are plain spans so they can sit inside cards
+  that are already links; pages add a separate visible link.
+#}
+
+{# Shown on partner cards/pages: this partner also sells marketplace apps. #}
+{% macro vendorBadge(vendorName) %}
+<span data-toggle="tooltip" title="Also a monday.com marketplace vendor{% if vendorName %}: {{ vendorName }}{% endif %}">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon">
+        <rect x="2" y="2" width="7" height="7" rx="1.5" fill="#FF3D57"></rect>
+        <rect x="11" y="2" width="7" height="7" rx="1.5" fill="#FFCB00"></rect>
+        <rect x="2" y="11" width="7" height="7" rx="1.5" fill="#00CA72"></rect>
+        <rect x="11" y="11" width="7" height="7" rx="1.5" fill="#6161FF"></rect>
+    </svg>
+</span>
+{% endmacro %}
+
+{# Shown on vendor cards/pages: this vendor is also a monday.com partner.
+   tier is the partner API tier, e.g. "PLATINUM". #}
+{% macro partnerBadge(tier, partnerName) %}
+{% set colours = { "PLATINUM": "#5559DF", "GOLD": "#FFCB00", "SILVER": "gray", "BRONZE": "#C25531", "AUTHORIZED": "#00A9FF" } %}
+<span data-toggle="tooltip" title="Also a monday.com {{ tier | lower | capitalize }} partner{% if partnerName %}: {{ partnerName }}{% endif %}">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon">
+        <path d="M10 2.5 17 9l-7 8.5L3 9l7-6.5Z" fill="{{ colours[tier] or '#5559DF' }}"></path>
+        <path d="M7 9.2 9.2 11.4 13.2 7.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+</span>
+{% endmacro %}

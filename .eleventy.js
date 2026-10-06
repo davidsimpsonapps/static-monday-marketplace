@@ -11,14 +11,29 @@ const { minify } = require("terser");
 module.exports = async function (eleventyConfig) {
   // const { getName } = await import("country-list");
   const country = require("countryjs");
+  // countryjs lacks a few newer codes (e.g. RS, ME), so fall back to the
+  // runtime's own region names, plus manual region overrides
+  const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
   eleventyConfig.addFilter("countryName", (code) => {
     const overrides = {
       RS: "Serbia",
     };
-    return overrides[code] ?? country.name(code) ?? code;
+    if (!code) return code;
+    let fallback = code;
+    try {
+      fallback = regionNames.of(code);
+    } catch {
+      // not a valid region code; show it as-is
+    }
+    return overrides[code] ?? country.name(code) ?? fallback;
   });
   eleventyConfig.addFilter("regionName", (code) => {
-    return country.region(code) ?? "";
+    const overrides = {
+      RS: "Europe",
+      ME: "Europe",
+      XK: "Europe",
+    };
+    return overrides[code] ?? country.region(code) ?? "";
   });
   eleventyConfig.addFilter("appsWithoutCategories", (apps) => {
     return (
@@ -142,12 +157,65 @@ module.exports = async function (eleventyConfig) {
     return categories.find((category) => category.id === parseInt(id));
   });
 
-  // Add custom filter to find a partner's website/email/Microsoft-partner
-  // record (from our own separately-maintained partner-websites.json) by
-  // the partner's monday.com gotopartners id
-  eleventyConfig.addFilter("findPartnerWebsiteById", function (list, id) {
+  // Add custom filter to find a partner's website/email/Microsoft-partner and
+  // company details record (from our own separately-maintained
+  // partner-details.json) by the partner's monday.com gotopartners id
+  eleventyConfig.addFilter("findPartnerDetailsById", function (list, id) {
     if (!Array.isArray(list)) return null;
     return list.find((entry) => entry.id === id) ?? null;
+  });
+
+  // Add custom filter to find monday.com partners (from the live partners
+  // API data) by a list of ids, used to link vendor pages to their partner
+  // pages. Highest partner tier first.
+  const partnerTierRank = { PLATINUM: 0, GOLD: 1, SILVER: 2, BRONZE: 3, AUTHORIZED: 4 };
+  eleventyConfig.addFilter("findPartnersByIds", function (partners, ids) {
+    if (!Array.isArray(partners) || !Array.isArray(ids)) return [];
+    return ids
+      .map((id) => partners.find((partner) => partner.id === id))
+      .filter(Boolean)
+      .sort((a, b) => (partnerTierRank[a.tier] ?? 9) - (partnerTierRank[b.tier] ?? 9));
+  });
+
+  // Add custom filter to find marketplace vendors (from the live vendors API
+  // data) by a list of ids, used to link partner pages to their vendor pages
+  eleventyConfig.addFilter("findVendorsByIds", function (vendors, ids) {
+    if (!Array.isArray(vendors) || !Array.isArray(ids)) return [];
+    return ids
+      .map((id) => vendors.find((vendor) => vendor.id === id))
+      .filter(Boolean);
+  });
+
+  // Add custom filter to describe a typed company-details source, e.g.
+  // "Companies House 09819483", "LinkedIn", "D-U-N-S 525385652"
+  const sourceTypeLabels = {
+    website: "Website",
+    imprint: "Imprint",
+    legal: "Legal / privacy",
+    about: "About",
+    contact: "Contact",
+    linkedin: "LinkedIn",
+    "companies-house": "Companies House",
+    "business-register": "Business register",
+    duns: "D-U-N-S",
+    vat: "VAT",
+    opencorporates: "OpenCorporates",
+    crunchbase: "Crunchbase",
+    directory: "Directory",
+    marketplace: "Marketplace listing",
+    press: "Press",
+    whois: "WHOIS",
+    other: "Source",
+  };
+  eleventyConfig.addFilter("sourceLabel", function (source) {
+    if (!source) return "";
+    if (typeof source === "string") return source;
+    if (source.label) return source.label;
+    let label = sourceTypeLabels[source.type] ?? "Source";
+    if (source.type === "linkedin" && source.url) {
+      label = source.url.includes("/in/") ? "LinkedIn profile" : "LinkedIn company page";
+    }
+    return source.id ? `${label} ${source.id}` : label;
   });
 
   // Add custom filter to find a vendor's contact name / legal name / postal

@@ -16,12 +16,15 @@ eleventyComputed:
 ---
 
 {% from "partials/app-card.njk" import appCard %}
+{% from "partials/company-details.njk" import companyDetails %}
+{% from "partials/cross-badges.njk" import partnerBadge %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.css">
 
 {% set details = vendorDetails | findVendorDetailsById(vendor.id) %}
 {% set vendorCountryCode = details.address.countryCode if details else null %}
 {% set vendorRegion = vendorCountryCode | regionName if vendorCountryCode else '' %}
+{% set linkedPartners = partners | findPartnersByIds(details.partnerIds) if details else [] %}
 
 <div class="mx-auto">
   <div class="breadcrumb">
@@ -92,7 +95,16 @@ eleventyComputed:
                 {% elseif vendor.partners_program === 4 %}
                   <span data-toggle="tooltip" title="Platinum Marketplace Partner"><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon"><circle cx="10" cy="10" r="8" fill="#5559DF"></circle><path d="M10.173 15.066a7.24 7.24 0 0 1 4.88-4.657L16 10.14l-.933-.314a7.24 7.24 0 0 1-4.657-4.88L10.141 4l-.313.932a7.24 7.24 0 0 1-4.881 4.657L4 9.858l.933.313a7.24 7.24 0 0 1 4.656 4.881l.27.948.314-.934Z" fill="#fff"></path></svg></span>
                 {% endif %}
+                {% if linkedPartners.length %}
+                  {{ partnerBadge(linkedPartners[0].tier, linkedPartners[0].name) }}
+                {% endif %}
               </h1>
+              {% if linkedPartners.length %}
+                <p class="text-sm text-gray-600 mb-1">
+                  Also a monday.com partner:
+                  {% for p in linkedPartners %}<a href="/partners/{{ p.slug }}/" class="text-blue-600 hover:text-blue-800">{{ p.name }} →</a>{% if not loop.last %}, {% endif %}{% endfor %}
+                </p>
+              {% endif %}
               <p class="text-gray-600">
                 {% if vendor.website %}
                   <a href="{{ vendor.website }}" target="_blank" rel="nofollow noreferer noopener">
@@ -100,7 +112,7 @@ eleventyComputed:
                   </a>
                 {% endif %}
                 {% if vendor.email %}
-                  • <a href="mailto:{{ vendor.email }}" class="text-blue-600 hover:text-blue-800">Support</a>
+                  • <a href="{{ vendor.email if vendor.email.startsWith('http') else 'mailto:' ~ (vendor.email | trim) }}" class="text-blue-600 hover:text-blue-800">Support</a>
                 {% endif %}
               </p>
 
@@ -223,57 +235,8 @@ eleventyComputed:
       </script>
 
 
-      {% set detailsAddress = details.address | addressLines if details else [] %}
-      <div class="my-8"></div>
-      <div>
-        <div class="flex items-baseline gap-2 mb-4">
-          <h2 id="contact" class="text-lg sm:text-2xl font-semibold">Company Details</h2>
-
-        </div>
-        <dl class="grid grid-cols-1 sm:grid-cols-[10rem_1fr] gap-x-4 gap-y-2 text-sm">
-          {% if details and details.legalName %}
-            <dt class="text-gray-500">Legal Name</dt>
-            <dd>{{ details.legalName }}</dd>
-          {% endif %}
-          {% if details and details.contactName %}
-            <dt class="text-gray-500">Contact</dt>
-            <dd>{{ details.contactName }}{% if details.contactTitle %}, <span class="text-gray-600">{{ details.contactTitle }}</span>{% endif %}</dd>
-          {% endif %}
-          {% if detailsAddress.length %}
-            <dt class="text-gray-500">Address</dt>
-            <dd>
-              <address class="not-italic">
-                {% for line in detailsAddress %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}
-              </address>
-            </dd>
-          {% endif %}
-          {% if vendor.website %}
-            <dt class="text-gray-500">Website</dt>
-            <dd><a href="{{ vendor.website }}" target="_blank" rel="nofollow noreferer noopener" class="text-blue-600 hover:text-blue-800 break-all">{{ vendor.website }}</a></dd>
-          {% endif %}
-          {% if vendor.email %}
-            <dt class="text-gray-500">Support</dt>
-            <dd>
-              {% if vendor.email.startsWith('http') %}
-                <a href="{{ vendor.email }}" target="_blank" rel="nofollow noreferer noopener" class="text-blue-600 hover:text-blue-800 break-all">{{ vendor.email }}</a>
-              {% else %}
-                <a href="mailto:{{ vendor.email | trim }}" class="text-blue-600 hover:text-blue-800 break-all">{{ vendor.email | trim }}</a>
-              {% endif %}
-            </dd>
-          {% endif %}
-          {% if details and details.sources.length %}
-            <dt class="text-gray-500">Sources</dt>
-            <dd>
-              {% for source in details.sources %}
-                <a href="{{ source }}" target="_blank" rel="nofollow noreferer noopener" title="{{ source }}" data-toggle="tooltip" class="inline-block bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs mr-1">{{ loop.index }}</a>
-              {% endfor %}
-            </dd>
-          {% endif %}
-        </dl>
-        {% if not details %}
-          <p class="text-xs text-gray-500 mt-2">Company name and address are collected for partner vendors and for other vendors with more than 100 installs.</p>
-        {% endif %}
-      </div>
+      {% set relatedPartner = { label: "monday.com partner", href: "/partners/" ~ linkedPartners[0].slug ~ "/", text: linkedPartners[0].name } if linkedPartners.length else null %}
+      {{ companyDetails(details, vendor.website, vendor.email, "Company name and address are collected for partner vendors and for other vendors with more than 100 installs.", relatedPartner) }}
 
       <div class="my-8"></div>
       <div>
