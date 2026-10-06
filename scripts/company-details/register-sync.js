@@ -7,6 +7,7 @@
 //   node scripts/company-details/register-sync.js --oc-only --limit 10
 //   node scripts/company-details/register-sync.js --dry      # print what would change
 //   node scripts/company-details/register-sync.js --recheck-days 365
+//   node scripts/company-details/register-sync.js --only p:carbonweb-slug,v:10000221   # specific entries (OpenCorporates limit still applies)
 //
 // Countries with their own scriptable register (registers.js ADAPTERS:
 // GB FR IL EE NO CH AU BR) are all checked in one run. Every other country
@@ -24,7 +25,7 @@
 const fs = require("fs");
 const path = require("path");
 const L = require("./lib");
-const { lookup, ADAPTERS, OpenCorporatesRateLimited } = require("./registers");
+const { lookup, openCorporatesAvailable, ADAPTERS, OpenCorporatesRateLimited } = require("./registers");
 
 const args = process.argv.slice(2);
 const flag = (f) => args.includes(f);
@@ -34,6 +35,7 @@ const DIRECT = !flag("--oc-only");
 const OC = !flag("--direct-only");
 const LIMIT = Number(opt("--limit", 10));
 const RECHECK_DAYS = Number(opt("--recheck-days", 365));
+const ONLY = opt("--only", null) ? new Set(opt("--only").split(",")) : null;
 const TODAY = new Date().toISOString().slice(0, 10);
 const OVERRIDES_FILE = path.join(__dirname, "register-overrides.json");
 const OVERRIDES = fs.existsSync(OVERRIDES_FILE) ? JSON.parse(fs.readFileSync(OVERRIDES_FILE, "utf-8")) : {};
@@ -103,7 +105,10 @@ function choose(e, key, records, cc) {
   if (ov) exact = records.filter((r) => r.id === ov);
   if (!exact.length) return { registrations: [], ambiguous: records.length ? `no exact name match among ${records.map((r) => `${r.name} (${r.id})`).join(" ; ")}` : null };
 
-  const domestic = exact.filter((r) => (r.kind || "domestic") === "domestic");
+  const dead = (r) => /inactive|dissolved|cancel|revoked|forfeit|withdrawn|struck|closed/i.test(r.status || "");
+  let domestic = exact.filter((r) => (r.kind || "domestic") === "domestic");
+  // several same-name home registrations: prefer the live one(s)
+  if (domestic.length > 1 && domestic.some((r) => !dead(r))) domestic = domestic.filter((r) => !dead(r));
   const foreign = exact.filter((r) => r.kind === "foreign");
   let home = domestic.length === 1 ? domestic[0] : null;
   if (!home && domestic.length > 1) {
@@ -178,15 +183,20 @@ function apply(e, { registrations, home, people }) {
   const cutoff = Date.now() - RECHECK_DAYS * 864e5;
   const due = (e) => !e.registrationsCheckedAt || Date.parse(e.registrationsCheckedAt) < cutoff;
 
-  const all = files.flatMap((f) => f.data.map((e) => ({ f, e, key: f.key(e), cc: e.address?.countryCode })));
+  const all = files.flatMap((f) => f.data.map((e) => ({ f, e, key: f.key(e), cc: e.address?.countryCode }))).filter((x) => !ONLY || ONLY.has(x.key));
   const direct = all.filter((x) => x.cc && ADAPTERS[x.cc] && due(x.e));
   const oc = all
     .filter((x) => x.cc && !ADAPTERS[x.cc] && due(x.e))
     .map((x) => ({ ...x, size: x.f.kind === "p" ? TIER_WEIGHT[x.e.tier] || 0 : installs.get(x.e.vendorId) || 0 }))
-    .sort((a, b) => b.size - a.size)
+    .sort((a, b) => (ONLY ? [...ONLY].indexOf(a.key) - [...ONLY].indexOf(b.key) : b.size - a.size))
     .slice(0, LIMIT);
-  const queue = [...(DIRECT ? direct : []), ...(OC ? oc : [])];
-  console.log(`${DIRECT ? direct.length : 0} entries via direct registers, ${OC ? oc.length : 0} via OpenCorporates${DRY ? " (dry run)" : ""}`);
+  let ocQueue = OC ? oc : [];
+  if (ocQueue.length && !(await openCorporatesAvailable())) {
+    console.log("OpenCorporates is rate-limiting us (HTTP 429) right now; skipping it this run. Try again in a couple of hours.");
+    ocQueue = [];
+  }
+  const queue = [...(DIRECT ? direct : []), ...ocQueue];
+  console.log(`${DIRECT ? direct.length : 0} entries via direct registers, ${ocQueue.length} via OpenCorporates${DRY ? " (dry run)" : ""}`);
 
   const cache = new Map();
   const ambiguous = [];

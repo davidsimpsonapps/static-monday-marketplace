@@ -242,11 +242,16 @@ async function opencorporates(cc, name, { details = true, onlyNames = null, maxD
       ? `https://opencorporates.com/companies?q=${encodeURIComponent(name)}&country_code=us`
       : `https://opencorporates.com/companies/${c}?q=${encodeURIComponent(name)}`;
   const html = await ocGet(url);
-  // title="More Free And Open Company Data On NAME (Missouri (US), FL001714487)"
-  const hits = [...html.matchAll(/href="(\/companies\/([a-z_]+)\/([^"]+))"[^>]*title="[^"]*\(([^()]*(?:\([^()]*\))?), [^,()]+\)"[^>]*>([^<]+)</g)];
+  // <a class="company_search_result branch active" href="/companies/us_nj/0100922138"
+  //    title="More Free And Open Company Data On NAME (New Jersey (US), 0100922138)">NAME</a>
+  // A "branch" class marks a foreign registration (registered to trade outside its home jurisdiction).
+  const hits = [...html.matchAll(/class="company_search_result([^"]*)" href="(\/companies\/([a-z_]+)\/([^"]+))"[^>]*title="[^"]*\(([^()]*(?:\([^()]*\))?), [^,()]+\)"[^>]*>([^<]+)</g)]
+    .map(([, cls, path, jurisdiction, number, jurisdictionName, hitName]) => ({ cls, path, jurisdiction, number, jurisdictionName, hitName }))
+    // home registrations first, so they get the detail lookups
+    .sort((a, b) => /branch/.test(a.cls) - /branch/.test(b.cls));
   const out = [];
   let fetched = 0;
-  for (const [, path, jurisdiction, number, jurisdictionName, hitName] of hits) {
+  for (const { cls, path, jurisdiction, number, jurisdictionName, hitName } of hits) {
     const rec = {
       register: `OpenCorporates (${T(jurisdictionName)})`,
       sourceType: "opencorporates",
@@ -256,6 +261,8 @@ async function opencorporates(cc, name, { details = true, onlyNames = null, maxD
       jurisdictionName: T(jurisdictionName),
       name: T(hitName),
       url: `https://opencorporates.com${path}`,
+      kind: /branch/.test(cls) ? "foreign" : "domestic",
+      status: /inactive/.test(cls) ? "Inactive" : /active/.test(cls) ? "Active" : null,
       people: [],
     };
     if (details && fetched < maxDetails && (!onlyNames || onlyNames(rec.name))) {
@@ -268,18 +275,18 @@ async function opencorporates(cc, name, { details = true, onlyNames = null, maxD
         if (i < 0) return null;
         const vals = [];
         for (const l of page.slice(i + 1, i + 1 + n)) {
-          if (LABELS.test(l)) break;
+          if (LABELS.test(l) && LABELS.exec(l)[0] === l) break; // a field label, not a value starting with one
           vals.push(l);
         }
         return vals.filter((v) => v !== "--" && !/please log in/i.test(v)).join(", ") || null;
       };
-      rec.status = after("Status", 1);
+      rec.status = after("Status", 1) || rec.status;
       rec.companyType = after("Company Type", 1);
       rec.address = after("Registered Address");
       rec.agent = after("Agent Name", 1);
       rec.agentAddress = after("Agent Address");
       const branch = after("Branch", 2);
-      rec.kind = branch ? (/foreign|branch/i.test(branch) ? "foreign" : branch) : "domestic";
+      if ((branch && /branch|foreign/i.test(branch)) || /foreign/i.test(rec.companyType || "")) rec.kind = "foreign";
       const home = raw.match(/Branch[\s\S]{0,600}?href="(\/companies\/[a-z_]+\/[^"]+)"/);
       if (home && rec.kind === "foreign") rec.homeCompanyUrl = `https://opencorporates.com${home[1]}`;
     }
@@ -296,7 +303,19 @@ async function lookup(countryCode, name, opts = {}) {
   return opencorporates(cc, name, opts);
 }
 
-module.exports = { lookup, opencorporates, ADAPTERS, OpenCorporatesRateLimited };
+// One cheap request to see whether OpenCorporates is currently blocking us.
+async function openCorporatesAvailable() {
+  try {
+    // the homepage isn't rate-limited, only search is, so probe a search
+    const res = await fetch("https://opencorporates.com/companies?q=opencorporates", { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(15000) });
+    lastOC = Date.now();
+    return res.status !== 429;
+  } catch {
+    return false;
+  }
+}
+
+module.exports = { lookup, opencorporates, openCorporatesAvailable, ADAPTERS, OpenCorporatesRateLimited };
 
 if (require.main === module) {
   const [cc, ...rest] = process.argv.slice(2);

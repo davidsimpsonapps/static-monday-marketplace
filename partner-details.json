@@ -8,7 +8,7 @@
     "email": "contact@abilityops.com",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "ABILITY OPS LLC",
     "contactName": "Tyler Manee",
     "contactTitle": "President",
     "alternativeContacts": [],
@@ -39,12 +39,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/ability-ops",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_md/Z23261555",
+        "id": "Z23261555",
+        "label": "Maryland (US) company no. Z23261555 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "1e4c795c-1c0f-40c5-9c58-efdf185688d6",
@@ -342,7 +348,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Texas (US))",
+        "jurisdiction": "Texas (US)",
+        "kind": "domestic",
+        "id": "0805271907",
+        "name": "Kosha Tex LLC",
+        "companyType": "Domestic Limited Liability Company (LLC)",
+        "status": "In Existence",
+        "registeredAgent": "Chintan Patolia",
+        "registeredAddress": "2101 ENCHANTED ROCK WAY, Celina, 75009-3040, TX",
+        "url": "https://opencorporates.com/companies/us_tx/0805271907"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -356,12 +375,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/antlerwing",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_tx/0805271907",
+        "id": "0805271907",
+        "label": "Texas (US) company no. 0805271907 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "US LLC per the profile; no address published, and the site content mentions India and Mexico. Contact email is on lucidday.com. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "3e02edf8-d4ad-4c4a-b5db-e9e04279c9ed",
@@ -385,7 +410,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Illinois (US))",
+        "jurisdiction": "Illinois (US)",
+        "kind": "domestic",
+        "id": "LLC_11618553",
+        "name": "AXANEXA LLC",
+        "companyType": "Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "REEDER CPA GROUP",
+        "registeredAddress": "1901 N ROSELLE ROAD SUITE 800, #598, SCHAUMBURG, 60195, IL",
+        "url": "https://opencorporates.com/companies/us_il/LLC_11618553"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -403,12 +441,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/axanexa",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_il/LLC_11618553",
+        "id": "LLC_11618553",
+        "label": "Illinois (US) company no. LLC_11618553 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "c579cf25-d8de-4962-a6a0-0e66ed6fb1c7",
@@ -653,7 +697,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Ohio (US))",
+        "jurisdiction": "Ohio (US)",
+        "kind": "domestic",
+        "id": "3966090",
+        "name": "CARBON WEB PRINT, LLC",
+        "companyType": "DOMESTIC LIMITED LIABILITY COMPANY",
+        "status": "Active",
+        "registeredAgent": "CORPORATE AGENTS, INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_oh/3966090"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -671,12 +728,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/mitchell-mclaughlin",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_oh/3966090",
+        "id": "3966090",
+        "label": "Ohio (US) company no. 3966090 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "CarbonWeb (CarbonApps is its app arm).",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "18670242-437d-409f-9c5e-13a809e70280",
@@ -1074,12 +1137,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/empyra-us",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_tx/0803732905",
+        "id": "0803732905",
+        "label": "Texas (US) company no. 0803732905 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "b175ed44-470a-4ef1-af7e-40a274280560",
@@ -2288,7 +2357,32 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Maryland (US))",
+        "jurisdiction": "Maryland (US)",
+        "kind": "domestic",
+        "id": "W16987588",
+        "name": "OUTBOUNDOPS LLC",
+        "companyType": "DOMESTIC LLC",
+        "status": "Active",
+        "registeredAgent": "VASILIOS PEROS",
+        "registeredAddress": "7165 COLUMBIA GATEWAY DRIVE, SUIT A, COLUMBIA, 21046, MD",
+        "url": "https://opencorporates.com/companies/us_md/W16987588"
+      },
+      {
+        "register": "OpenCorporates (Illinois (US))",
+        "jurisdiction": "Illinois (US)",
+        "kind": "foreign",
+        "id": "LLC_09503412",
+        "name": "OUTBOUNDOPS LLC",
+        "companyType": "Limited Liability Company",
+        "status": "Revoked",
+        "registeredAgent": null,
+        "registeredAddress": "7165 COLUMBIA GATEWAY DR. #A, COLUMBIA, 21046, MD",
+        "url": "https://opencorporates.com/companies/us_il/LLC_09503412"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2306,12 +2400,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/orangedot-obo",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_md/W16987588",
+        "id": "W16987588",
+        "label": "Maryland (US) company no. W16987588 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Part of The OBO Group (theobogroup.com), which also publishes the Hubday app as vendor OBO. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "643cf228-253f-47be-9c0a-873e01cf3eb0",
@@ -3463,7 +3563,104 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (New York (US))",
+        "jurisdiction": "New York (US)",
+        "kind": "domestic",
+        "id": "6636536",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "DOMESTIC LIMITED LIABILITY COMPANY",
+        "status": "Active",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT LLC",
+        "registeredAddress": "418 Broadway STE N, Albany, 12207, NY",
+        "url": "https://opencorporates.com/companies/us_ny/6636536"
+      },
+      {
+        "register": "OpenCorporates (Florida (US))",
+        "jurisdiction": "Florida (US)",
+        "kind": "foreign",
+        "id": "M26000002735",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Foreign Limited Liability",
+        "status": "Active",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT LLC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_fl/M26000002735"
+      },
+      {
+        "register": "OpenCorporates (Idaho (US))",
+        "jurisdiction": "Idaho (US)",
+        "kind": "foreign",
+        "id": "0006568121",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Foreign Limited Liability Company",
+        "status": "Active Existing",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT LLC",
+        "registeredAddress": "3 ROUTE 217, HUDSON, 12534, NY",
+        "url": "https://opencorporates.com/companies/us_id/0006568121"
+      },
+      {
+        "register": "OpenCorporates (Massachusetts (US))",
+        "jurisdiction": "Massachusetts (US)",
+        "kind": "foreign",
+        "id": "001942959",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Foreign Limited Liability Company (LLC)",
+        "status": "Active",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT SERVICE INC",
+        "registeredAddress": "82 WENDELL AVE. STE 100, PITTSFIELD, 01201, MA",
+        "url": "https://opencorporates.com/companies/us_ma/001942959"
+      },
+      {
+        "register": "OpenCorporates (Illinois (US))",
+        "jurisdiction": "Illinois (US)",
+        "kind": "foreign",
+        "id": "LLC_15971614",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT SERVICE, INC",
+        "registeredAddress": "2501 CHATHAM RD SUITE N, SPRING, 62704, IL",
+        "url": "https://opencorporates.com/companies/us_il/LLC_15971614"
+      },
+      {
+        "register": "OpenCorporates (Louisiana (US))",
+        "jurisdiction": "Louisiana (US)",
+        "kind": "foreign",
+        "id": "46628021Q",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Limited Liability Company (Non-Louisiana)",
+        "status": "Active In Good Standing",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT LLC",
+        "registeredAddress": "201 RUE BEAUREGARD, STE. 202, LAFAYETTE, 70508, LA",
+        "url": "https://opencorporates.com/companies/us_la/46628021Q"
+      },
+      {
+        "register": "OpenCorporates (Colorado (US))",
+        "jurisdiction": "Colorado (US)",
+        "kind": "foreign",
+        "id": "20258081928",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Foreign limited liability company",
+        "status": "Good Standing",
+        "registeredAgent": "Northwest Registered Agent LLC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_co/20258081928"
+      },
+      {
+        "register": "OpenCorporates (Arkansas (US))",
+        "jurisdiction": "Arkansas (US)",
+        "kind": "foreign",
+        "id": "811550141",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Foreign Limited Liability Company",
+        "status": "Not Current",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ar/811550141"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -3481,12 +3678,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/lydia-agopian",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_ny/6636536",
+        "id": "6636536",
+        "label": "New York (US) company no. 6636536 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Trades as Workflow Magic.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "8a9d6a78-3331-4c29-9062-c5eb13eba0cb",
@@ -3519,7 +3722,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "6464752",
+        "name": "WORKIFLOW LLC",
+        "companyType": "Domestic Limited Liability Company",
+        "status": null,
+        "registeredAgent": "LEGALINC CORPORATE SERVICES INC",
+        "registeredAddress": "New Castle, DE, United States",
+        "url": "https://opencorporates.com/companies/us_de/6464752"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -3537,12 +3753,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/workiflow",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/6464752",
+        "id": "6464752",
+        "label": "Delaware (US) company no. 6464752 (OpenCorporates)"
       }
     ],
     "locationFlag": "registered-agent",
     "notes": "Mixed: Delaware registered-agent address; the founders are in South Africa (Jeffreys Bay) and Portugal, the CEO is in Georgia, US.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "57933c99-1776-4183-87ac-748fc72ecd40",
@@ -3677,7 +3899,224 @@
         "countryCode": "US"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "3019951",
+        "name": "XTIVIA, INC.",
+        "companyType": "Corporation",
+        "status": null,
+        "registeredAgent": "UNITED CORPORATE SERVICES, INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_de/3019951"
+      },
+      {
+        "register": "OpenCorporates (Washington (US))",
+        "jurisdiction": "Washington (US)",
+        "kind": "foreign",
+        "id": "602831435",
+        "name": "XTIVIA, INC.",
+        "companyType": "FOREIGN PROFIT CORPORATION",
+        "status": "Active",
+        "registeredAgent": "CORPORATION SERVICE COMPANY",
+        "registeredAddress": "2035 LINCOLN HWY, SUITE 1010, EDISON, 08817-3351, NJ",
+        "url": "https://opencorporates.com/companies/us_wa/602831435"
+      },
+      {
+        "register": "OpenCorporates (Tennessee (US))",
+        "jurisdiction": "Tennessee (US)",
+        "kind": "foreign",
+        "id": "001550123",
+        "name": "XTIVIA, INC.",
+        "companyType": "Foreign For-profit Corporation",
+        "status": "Active",
+        "registeredAgent": "CORPORATION SERVICE COMPANY",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_tn/001550123"
+      },
+      {
+        "register": "OpenCorporates (Iowa (US))",
+        "jurisdiction": "Iowa (US)",
+        "kind": "foreign",
+        "id": "828298",
+        "name": "XTIVIA, INC.",
+        "companyType": "Code 490 Foreign Profit",
+        "status": "Active",
+        "registeredAgent": "CORPORATION SERVICE COMPANY",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ia/828298"
+      },
+      {
+        "register": "OpenCorporates (Ohio (US))",
+        "jurisdiction": "Ohio (US)",
+        "kind": "foreign",
+        "id": "5296145",
+        "name": "XTIVIA, INC.",
+        "companyType": "FOREIGN CORPORATION",
+        "status": "Active",
+        "registeredAgent": "CORPORATION SERVICE COMPANY",
+        "registeredAddress": "2035 LINCOLN HIGHWAY SUITE 1010, EDISON, 08817, NJ",
+        "url": "https://opencorporates.com/companies/us_oh/5296145"
+      },
+      {
+        "register": "OpenCorporates (New York (US))",
+        "jurisdiction": "New York (US)",
+        "kind": "foreign",
+        "id": "2368683",
+        "name": "XTIVIA, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ny/2368683"
+      },
+      {
+        "register": "OpenCorporates (West Virginia (US))",
+        "jurisdiction": "West Virginia (US)",
+        "kind": "foreign",
+        "id": "598945",
+        "name": "XTIVIA, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_wv/598945"
+      },
+      {
+        "register": "OpenCorporates (Florida (US))",
+        "jurisdiction": "Florida (US)",
+        "kind": "foreign",
+        "id": "F17000000881",
+        "name": "XTIVIA, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_fl/F17000000881"
+      },
+      {
+        "register": "OpenCorporates (Indiana (US))",
+        "jurisdiction": "Indiana (US)",
+        "kind": "foreign",
+        "id": "202506011889593",
+        "name": "XTIVIA, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_in/202506011889593"
+      },
+      {
+        "register": "OpenCorporates (Massachusetts (US))",
+        "jurisdiction": "Massachusetts (US)",
+        "kind": "foreign",
+        "id": "002000712",
+        "name": "XTIVIA, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ma/002000712"
+      },
+      {
+        "register": "OpenCorporates (Louisiana (US))",
+        "jurisdiction": "Louisiana (US)",
+        "kind": "foreign",
+        "id": "46551165F",
+        "name": "XTIVIA, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_la/46551165F"
+      },
+      {
+        "register": "OpenCorporates (Michigan (US))",
+        "jurisdiction": "Michigan (US)",
+        "kind": "foreign",
+        "id": "803272435",
+        "name": "XTIVIA, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_mi/803272435"
+      },
+      {
+        "register": "OpenCorporates (Missouri (US))",
+        "jurisdiction": "Missouri (US)",
+        "kind": "foreign",
+        "id": "F001321475",
+        "name": "XTIVIA, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_mo/F001321475"
+      },
+      {
+        "register": "OpenCorporates (Arizona (US))",
+        "jurisdiction": "Arizona (US)",
+        "kind": "foreign",
+        "id": "23666745",
+        "name": "XTIVIA, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_az/23666745"
+      },
+      {
+        "register": "OpenCorporates (Kansas (US))",
+        "jurisdiction": "Kansas (US)",
+        "kind": "foreign",
+        "id": "10091027",
+        "name": "Xtivia Inc",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ks/10091027"
+      },
+      {
+        "register": "OpenCorporates (Minnesota (US))",
+        "jurisdiction": "Minnesota (US)",
+        "kind": "foreign",
+        "id": "1122662b-d229-ef11-9083-00155d01c440",
+        "name": "Xtivia Inc.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_mn/1122662b-d229-ef11-9083-00155d01c440"
+      },
+      {
+        "register": "OpenCorporates (District of Columbia (US))",
+        "jurisdiction": "District of Columbia (US)",
+        "kind": "foreign",
+        "id": "C00008470650",
+        "name": "Xtivia Inc.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_dc/C00008470650"
+      },
+      {
+        "register": "OpenCorporates (North Carolina (US))",
+        "jurisdiction": "North Carolina (US)",
+        "kind": "foreign",
+        "id": "3385220",
+        "name": "Xtivia, Inc.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_nc/3385220"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -3695,12 +4134,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/xtivia",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/3019951",
+        "id": "3019951",
+        "label": "Delaware (US) company no. 3019951 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "4c799b86-07ce-4f11-956f-ad8294c7d82f",
