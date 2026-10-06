@@ -1,0 +1,12 @@
+{# Topic filter for /daily/. Expects `activeTopic` (a slug, or empty for "All"). #}
+{% set chip = "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm no-underline transition" %}
+{% set chipIdle = "border-gray-200 bg-white text-gray-700 hover:border-gray-400 hover:text-gray-900" %}
+{% set chipActive = "border-gray-900 bg-gray-900 text-white hover:text-white" %}
+<div class="flex flex-wrap gap-2 mb-10" aria-label="Filter by topic">
+  <a class="{{ chip }} {{ chipActive if not activeTopic else chipIdle }}" href="/daily/">All</a>
+  {% for topic in reportTopics %}
+    <a class="{{ chip }} {{ chipActive if activeTopic == topic.slug else chipIdle }}" href="/daily/{{ topic.slug }}/">
+      <span class="h-2 w-2 rounded-full {{ topic.dot }}"></span>{{ topic.label }}
+    </a>
+  {% endfor %}
+</div>

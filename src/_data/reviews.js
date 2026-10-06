@@ -2,6 +2,8 @@ const fetch = require("node-fetch");
 
 module.exports = async function () {
   // return {};
+  // Fetching reviews takes minutes - skip it for local development
+  if (process.env.SKIP_REVIEWS) return {};
   try {
     // Get all apps from the marketplace data
     const response = await fetch(

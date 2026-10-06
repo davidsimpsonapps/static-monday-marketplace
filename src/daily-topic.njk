@@ -1,0 +1,25 @@
+---
+layout: base.njk
+pagination:
+  data: reportTopics
+  size: 1
+  alias: topic
+permalink: "/daily/{{ topic.slug }}/"
+eleventyComputed:
+  title: "{{ topic.label }} • Daily news for monday.com app developers"
+  description: "Daily reports about {{ topic.label | lower }} for monday.com app developers."
+  canonical: "/daily/{{ topic.slug }}/"
+---
+
+{% set crumbTitle = topic.label %}
+{% include "partials/reports-breadcrumb.njk" %}
+
+<div class="max-w-3xl">
+  {% set topicLabel = topic.label %}
+  {% include "partials/daily-header.njk" %}
+  {% set activeTopic = topic.slug %}
+  {% include "partials/report-filter.njk" %}
+
+  {% set reports = collections.reports | withTopic(topic.slug) %}
+  {% include "partials/report-list.njk" %}
+</div>

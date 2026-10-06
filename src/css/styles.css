@@ -498,3 +498,22 @@ nav.tabs {
   scrollbar-width: thin;
   border-radius: 5px;
 }
+
+/* Daily reports (/daily/, /reports/) - article paragraphs need their spacing
+   back, which `.prose p` above removes for app descriptions */
+.report-body.prose p {
+  @apply my-5;
+}
+.report-body.prose h3 {
+  @apply mt-10 mb-3 text-xl font-bold text-gray-900;
+}
+.report-body.prose a {
+  @apply text-blue-700 underline decoration-blue-200 underline-offset-2 hover:decoration-blue-700;
+}
+.report-body.prose code {
+  @apply rounded bg-gray-100 px-1 py-0.5 font-normal;
+}
+.report-body.prose code::before,
+.report-body.prose code::after {
+  content: none;
+}
