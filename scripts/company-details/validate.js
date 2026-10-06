@@ -45,6 +45,20 @@ function checkEntry(where, e) {
       if (!isStrOrNull(c?.contactTitle ?? null)) err(where, `alternativeContacts[${i}].contactTitle must be a string or null`);
     });
 
+  if (!Array.isArray(e.registrations)) err(where, "registrations must be an array");
+  else
+    e.registrations.forEach((r, i) => {
+      const w = `${where} registrations[${i}]`;
+      if (typeof r?.register !== "string") err(w, "register must be a string");
+      if (r?.id != null && typeof r.id !== "string") err(w, "id must be a string or null");
+      if (r?.kind != null && !["domestic", "foreign"].includes(r.kind)) err(w, `unknown kind ${JSON.stringify(r.kind)}`);
+      if (r?.url && !/^https?:\/\//.test(r.url)) err(w, `url must be http(s): ${r.url}`);
+      for (const k of ["jurisdiction", "name", "companyType", "status", "registeredAgent", "registeredAddress"])
+        if (k in (r || {}) && !isStrOrNull(r[k])) err(w, `${k} must be a string or null`);
+    });
+  if (e.registrationsCheckedAt != null && !/^\d{4}-\d{2}-\d{2}$/.test(e.registrationsCheckedAt))
+    err(where, "registrationsCheckedAt must be YYYY-MM-DD or null");
+
   if (!Array.isArray(e.sources)) err(where, "sources must be an array");
   else
     e.sources.forEach((s, i) => {

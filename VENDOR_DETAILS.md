@@ -50,6 +50,8 @@ Node scripts, no extra dependencies. Run from the repo root.
 | `npm run report:details` | Compares both files with the live APIs: missing/stale entries, tier changes, partners whose researched country differs from their self-reported one, entries without a country, entries not verified recently (`-- --stale-days 180`), possible offshore companies. |
 | `node scripts/company-details/scrape.js <urls…>` / `--vendors 123,456` / `--partners slug-a,slug-b` | Fetches each site plus its imprint/legal/privacy/terms/about/contact pages (cached in `.cache/company-details/`, `--refresh` to refetch) and prints a digest: legal-entity names, address-like lines, founder/CEO lines, phone country codes and country mentions, each with its source page. |
 | `node scripts/company-details/companies-house.js <number or "NAME LTD">…` | UK Companies House: registered office, status, active officers and persons with significant control, with **country of residence and nationality**. |
+| `node scripts/company-details/register-sync.js` | Fills `registrations` (plus register sources, legal names and published directors) from official registers. Countries with their own register are all done in one run; every other country goes through OpenCorporates **10 companies per run**, biggest first, rotating via `registrationsCheckedAt`. Flags: `--direct-only`, `--oc-only`, `--limit N`, `--dry`, `--recheck-days N`. Ambiguous matches are skipped and listed; resolve them in `scripts/company-details/register-overrides.json`. |
+| `node scripts/company-details/registers.js <CC> "<name>"` / `BR --id <CNPJ>` | Looks a company up in its **country's own register** (see below) and prints the registered name, number, status, registered address, directors where published, and the register URL to cite as a source. |
 | `node scripts/company-details/whois.js <domain>…` | WHOIS registrant country/state/org, ignoring privacy services. Last resort for a country. |
 | `node scripts/company-details/match.js` | Proposes vendor↔partner matches by normalised name and website/email domain. `--write confirmed.json` records confirmed links (`[{ "partnerId": "<uuid>", "vendorIds": [123] }]`) on both sides. |
 
@@ -84,6 +86,13 @@ Both files share the company-details fields. Keep this field order.
     { "label": "US office", "street": null, "city": "Raleigh", "region": "NC",
       "postalCode": "27607", "country": "United States", "countryCode": "US" }
   ],
+  "registrations": [                    // official register entries (filled by register-sync.js)
+    { "register": "OpenCorporates (Delaware (US))", "jurisdiction": "Delaware (US)",
+      "kind": "domestic",               // "domestic" (home registration) | "foreign" (registered to trade in another state/country)
+      "id": "6464752", "name": "WORKIFLOW LLC", "companyType": "Limited Liability Company", "status": "Active",
+      "registeredAgent": "LEGALINC CORPORATE SERVICES INC", "registeredAddress": "New Castle, DE, United States",
+      "url": "https://opencorporates.com/companies/us_de/6464752" }
+  ],
   "sources": [
     { "type": "imprint", "url": "https://getgorilla.app/imprint" },
     { "type": "vat", "url": null, "id": "DE815324806" },
@@ -92,7 +101,8 @@ Both files share the company-details fields. Keep this field order.
   ],
   "locationFlag": null,                 // null | "offshore-moved" | "possible-offshore" | "registered-agent"
   "notes": "Free text for maintainers (not shown on the site)",
-  "lastVerified": "2026-10-06"          // YYYY-MM-DD the entry was last researched
+  "lastVerified": "2026-10-06",         // YYYY-MM-DD the entry was last researched
+  "registrationsCheckedAt": "2026-10-06" // when register-sync.js last looked this company up (null = never)
 }
 ```
 
@@ -116,6 +126,19 @@ Both files share the company-details fields. Keep this field order.
   "locationFlag": null, "notes": null, "lastVerified": "2026-10-06"
 }
 ```
+
+### Registrations
+
+`registrations` lists the company's entries in official registers: the
+home (`domestic`) registration and, for US companies especially, any
+`foreign` registrations in other states. Foreign registrations are not
+offices: their address is normally the registered agent's, so they belong
+here and **not** in `alternativeAddresses`. The page shows them in a
+"Registrations" row with the company type, status and registered agent.
+
+A home registration in Wyoming, Delaware or New Mexico with a commercial
+registered agent (Registered Agents Inc, Legalinc, Northwest, …) and no
+other presence is a strong hint for the US offshore check below.
 
 ### Sources
 
@@ -172,14 +195,37 @@ Work in this order; each step usually fills in more than the last.
    (German/Austrian/Swiss companies must publish one), privacy policies and
    terms usually name the legal entity, its registered office and sometimes a
    company number; about/team pages name the founders.
-3. **Official registers**:
-   - UK: `companies-house.js`, which shows officers' and owners' residence and nationality;
-   - Estonia: `https://ariregister.rik.ee/eng/company/<code>`;
-   - Poland: KRS via rejestr.io;
-   - Australia: `https://abr.business.gov.au/ABN/View/<abn>`;
-   - Germany: the HRB number in the imprint;
-   - Netherlands: KvK;
-   - Italy: P.IVA.
+3. **Official registers**: once you know the country, look the company up
+   in that country's register with `registers.js` and cite it as a source
+   (with the company number as `id`). Add published directors as the
+   contact (if missing) or as `alternativeContacts`, and add the registered
+   office to `alternativeAddresses` when it differs from the trading address.
+
+   | Country | Register used by `registers.js` | Directors? |
+   |---|---|---|
+   | GB | Companies House (`companies-house.js`): also officers' residence and nationality | yes |
+   | FR | Annuaire des Entreprises / recherche-entreprises API (SIREN) | yes |
+   | NO | Brønnøysund Register Centre (org. no. + roles API) | yes |
+   | BR | Receita Federal CNPJ via BrasilAPI: needs the CNPJ, which is usually in the site footer | yes (partners) |
+   | IL | Israeli Registrar of Companies, data.gov.il open dataset (company no., status, registered address) | no |
+   | EE | e-Äriregister (registry code, legal address) | no (names hidden) |
+   | CH | Zefix (UID, seat, link to the cantonal excerpt, which lists the board) | via the excerpt |
+   | AU | ABN Lookup (ABN, state, postcode; directors need a paid ASIC search) | no |
+   | everything else | OpenCorporates: US by state, IN, DE, NL, PL, CA, SG, … (company no., registered address; for US companies also the **registered agent**, a good offshore signal) | no (needs login) |
+
+   Other registers worth checking by hand: Germany's handelsregister.de
+   (Geschäftsführer, HRB) or North Data; the Netherlands' KvK (paid
+   extract); India's MCA21 master data (directors; captcha); Poland's KRS
+   (`api-krs.ms.gov.pl`, with director names masked); Québec's REQ;
+   Singapore's ACRA BizFile; Denmark's CVR; New Zealand's Companies Office.
+   US states rarely publish owners (Delaware and Wyoming deliberately
+   don't), so register lookups there mostly confirm the state, number and
+   registered agent.
+
+   Only accept a register match when the registered name matches the
+   entry's legal (or brand) name exactly, ignoring legal suffixes. Several
+   similar names (e.g. "Codex Group International" vs "Codex Solutions
+   International") are a reason to stop and check, not to pick one.
 4. **LinkedIn, D-U-N-S, Crunchbase, press**: search for the company's
    LinkedIn company page and the founder/CEO profile, its dnb.com business
    directory page (D-U-N-S number) and Crunchbase. Add each as a typed source.
@@ -277,6 +323,16 @@ and record confirmed links with `--write`:
 - **Domain matches are strong evidence;** name-only matches often aren't. Gorilla Services ≠ Gorilla Apps, Magic Button Labs ≠ Magic Apps.
 - **Group links are fine**, e.g. Adaptavist → Upscale/ScriptRunner/Kolekti, OrangeDot → OBO (both The OBO Group), upstream → Luxie Tech (same address and CTO), Cloud Concept → DocuGen.
 - **Linked vendors with no entry yet:** if a linked vendor has no `vendor-details.json` entry, create one from the partner's details.
+
+### Keep register data flowing
+
+Run `node scripts/company-details/register-sync.js` regularly (e.g. weekly).
+Each run checks every not-yet-checked company in countries with their own
+register, plus the next 10 biggest companies elsewhere via OpenCorporates.
+OpenCorporates blocks anonymous clients after a few dozen requests (HTTP
+429); the script stops cleanly when that happens and simply continues
+with the remaining companies next time. Entries are re-checked after
+`--recheck-days` (default 365).
 
 ## 3. Spot-check existing entries
 

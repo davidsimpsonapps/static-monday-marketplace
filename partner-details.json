@@ -21,6 +21,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -42,7 +43,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "1e4c795c-1c0f-40c5-9c58-efdf185688d6",
@@ -81,6 +83,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -102,7 +105,8 @@
     ],
     "locationFlag": null,
     "notes": "CEO name transliterated from Hebrew (שי אוזון). Alon Topaz is the monday.com contact email.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "7e8209cb-8acf-4c73-97b8-939bb31c0dda",
@@ -141,6 +145,20 @@
         "countryCode": "SG"
       }
     ],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "56 666 193 460",
+        "name": "ADAPTIVE PACE PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2070 NSW",
+        "url": "https://abr.business.gov.au/ABN/View/56666193460"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -158,11 +176,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/adaptive-pace",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/56666193460",
+        "id": "56 666 193 460",
+        "label": "ABN 56 666 193 460"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "3604454d-5460-48b3-969f-4b135f790089",
@@ -191,6 +216,7 @@
       "countryCode": "DK"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -204,7 +230,8 @@
     ],
     "locationFlag": null,
     "notes": "Danish phone numbers (+45) on the site; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "57d322d3-244e-4968-bc96-a402b4449518",
@@ -233,6 +260,7 @@
       "countryCode": "CA"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -246,7 +274,8 @@
     ],
     "locationFlag": null,
     "notes": "The monday.com profile says US, but the site (.ca, French-language) says Agence Gro is a Québec channel partner, so the country is Canada. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "eafcf1a7-cc1c-4ea7-84a3-1d5a4881e7ba",
@@ -270,6 +299,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -287,7 +317,8 @@
     ],
     "locationFlag": null,
     "notes": "City inferred from the São Paulo (+55 11) phone numbers.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "359ff8bb-f710-4267-93cf-9435f8acd6f0",
@@ -311,6 +342,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -328,7 +360,8 @@
     ],
     "locationFlag": null,
     "notes": "US LLC per the profile; no address published, and the site content mentions India and Mexico. Contact email is on lucidday.com. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "3e02edf8-d4ad-4c4a-b5db-e9e04279c9ed",
@@ -352,6 +385,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -373,7 +407,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "c579cf25-d8de-4962-a6a0-0e66ed6fb1c7",
@@ -406,6 +441,20 @@
       "countryCode": "CH"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Zefix (Swiss commercial register)",
+        "jurisdiction": "Zefix (Swiss commercial register)",
+        "kind": "domestic",
+        "id": "CHE-211.603.959",
+        "name": "Blinno GmbH",
+        "companyType": null,
+        "status": "EXISTIEREND",
+        "registeredAgent": null,
+        "registeredAddress": "Sirnach",
+        "url": "https://tg.chregister.ch/cr-portal/auszug/auszug.xhtml?uid=CHE-211.603.959"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -419,11 +468,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/blinno",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://tg.chregister.ch/cr-portal/auszug/auszug.xhtml?uid=CHE-211.603.959",
+        "id": "CHE-211.603.959",
+        "label": "UID CHE-211.603.959"
       }
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "73969265-8430-4648-bf58-8a32f25b34e4",
@@ -456,6 +512,20 @@
       "countryCode": "IL"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Israeli Registrar of Companies (data.gov.il)",
+        "jurisdiction": "Israeli Registrar of Companies (data.gov.il)",
+        "kind": "domestic",
+        "id": "516422946",
+        "name": "BOOST MOVEO  LTD",
+        "companyType": null,
+        "status": "פעילה",
+        "registeredAgent": null,
+        "registeredAddress": "לילינבלום 31 תל אביב - יפו 6513101",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516422946%22%7D"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -469,11 +539,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/boost-il",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516422946%22%7D",
+        "id": "516422946",
+        "label": "Israeli company no. 516422946"
       }
     ],
     "locationFlag": null,
     "notes": "Boost by Moveo (Moveo Group). Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "d09a92f8-be52-4d30-bcc9-68b7f87c12a5",
@@ -514,6 +591,20 @@
       "countryCode": "GB"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Companies House",
+        "jurisdiction": "Companies House",
+        "kind": "domestic",
+        "id": "15032656",
+        "name": "BOOST MOVEO UK LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "843 Finchley Road, London, England, NW11 8NA",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/15032656"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -532,7 +623,8 @@
     ],
     "locationFlag": null,
     "notes": "UK subsidiary of Boost by Moveo (Israel). Companies House: both directors and the controlling persons live in Israel.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "1838394b-a6bb-4936-867a-8fe917a79a9f",
@@ -561,6 +653,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -582,7 +675,8 @@
     ],
     "locationFlag": null,
     "notes": "CarbonWeb (CarbonApps is its app arm).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "18670242-437d-409f-9c5e-13a809e70280",
@@ -606,6 +700,7 @@
       "countryCode": "ES"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -629,7 +724,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "7b5b300a-31be-461f-acbd-cf21ff817620",
@@ -653,6 +749,7 @@
       "countryCode": "MX"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -666,7 +763,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "aa848b93-7648-4610-a195-3b35a36f9e49",
@@ -690,6 +788,7 @@
       "countryCode": "AE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -707,7 +806,8 @@
     ],
     "locationFlag": null,
     "notes": "Registered address from the privacy notice. Cloud Concept built the DocuGen app (vendor 10); the site also mentions South Africa heavily.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "3cb2aa16-af9f-40a3-af95-cd3ed3456672",
@@ -741,6 +841,20 @@
         "countryCode": "DE"
       }
     ],
+    "registrations": [
+      {
+        "register": "Annuaire des Entreprises (INSEE/RNE)",
+        "jurisdiction": "Annuaire des Entreprises (INSEE/RNE)",
+        "kind": "domestic",
+        "id": "402968655",
+        "name": "DEVOTEAM",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "73 RUE ANATOLE FRANCE 92300 LEVALLOIS-PERRET",
+        "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/402968655"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -758,11 +872,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/devoteam",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/402968655",
+        "id": "402968655",
+        "label": "SIREN 402968655"
       }
     ],
     "locationFlag": null,
     "notes": "Group HQ. The monday.com contact email is on devoteamgcloud.com.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "617587eb-dac7-432d-9892-9f59696a449c",
@@ -795,6 +916,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -812,7 +934,8 @@
     ],
     "locationFlag": null,
     "notes": "No address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "d95d171a-ef1e-4c62-bb24-4ff38e9dc2d9",
@@ -855,6 +978,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -876,7 +1000,8 @@
     ],
     "locationFlag": null,
     "notes": "The monday.com profile says US, but Eligeo is headquartered in Vancouver, Canada. CEO from Crunchbase.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "709f6933-e6fa-4ff7-af61-9a091f7c20b8",
@@ -931,6 +1056,7 @@
         "countryCode": "IN"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -952,7 +1078,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "b175ed44-470a-4ef1-af7e-40a274280560",
@@ -976,6 +1103,7 @@
       "countryCode": "DK"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -989,7 +1117,8 @@
     ],
     "locationFlag": null,
     "notes": "Danish ApS per the name, but the website is .no with Norwegian (+47) phone numbers. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "6c9485fc-f04e-4f75-9db4-55130b5a42ae",
@@ -1022,6 +1151,7 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1043,7 +1173,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "7868f792-7d4b-462d-b73f-12fed1a7c022",
@@ -1067,6 +1198,7 @@
       "countryCode": "GR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1080,7 +1212,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped; legal name from the partner name. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "f41cbc1d-9501-4342-91f9-3fd742d34b55",
@@ -1104,6 +1237,7 @@
       "countryCode": "NL"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1117,7 +1251,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "a30470c3-554a-44ed-8401-2c7b37514414",
@@ -1169,6 +1304,7 @@
         "countryCode": "IN"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1186,7 +1322,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "8ca39684-dd1a-47b5-b5a2-853b9ad1c53b",
@@ -1215,6 +1352,7 @@
       "countryCode": "PR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1228,7 +1366,8 @@
     ],
     "locationFlag": null,
     "notes": "Puerto Rico per the monday.com profile; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "024675e0-a5be-4aef-8275-3cf4a6abcbdc",
@@ -1252,6 +1391,7 @@
       "countryCode": "NL"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1265,7 +1405,8 @@
     ],
     "locationFlag": null,
     "notes": "Dutch phone number (+31); no address or legal entity published. Not the same company as Gorilla Apps (vendor 10000114). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "6fdc27b2-fec4-43b0-943b-cbf6f94b856a",
@@ -1289,6 +1430,7 @@
       "countryCode": "MX"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1302,7 +1444,8 @@
     ],
     "locationFlag": null,
     "notes": "Mexican arm of hiberus (Spanish group); no Mexican address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "8788c9d5-47e5-4216-9fdc-001dc07f8913",
@@ -1326,6 +1469,7 @@
       "countryCode": "KR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1343,7 +1487,8 @@
     ],
     "locationFlag": null,
     "notes": "South Korea per the monday.com profile. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "4acd2b4c-d5d6-4216-a68e-0a59b013aded",
@@ -1367,6 +1512,7 @@
       "countryCode": "IT"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1380,7 +1526,8 @@
     ],
     "locationFlag": null,
     "notes": "Registered and administrative office (Sede Legale e Amministrativa).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "f21c6c80-552f-48af-9909-dbbde9f4ac9f",
@@ -1404,6 +1551,7 @@
       "countryCode": "ZA"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1417,7 +1565,8 @@
     ],
     "locationFlag": null,
     "notes": "African arm of the Dutch Incentro group; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "80c95b30-a445-4efd-a066-0997c5de40e4",
@@ -1451,6 +1600,20 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [
+      {
+        "register": "Annuaire des Entreprises (INSEE/RNE)",
+        "jurisdiction": "Annuaire des Entreprises (INSEE/RNE)",
+        "kind": "domestic",
+        "id": "484716865",
+        "name": "INET PROCESS",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "8 RUE DU FAUBOURG POISSONNIERE 75010 PARIS",
+        "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/484716865"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1464,11 +1627,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/inet-process",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/484716865",
+        "id": "484716865",
+        "label": "SIREN 484716865"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "d2b1e3df-a72e-4b3e-8cba-5a2c63500e79",
@@ -1497,6 +1667,7 @@
       "countryCode": "MX"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1510,7 +1681,8 @@
     ],
     "locationFlag": null,
     "notes": "No address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "158b0042-3499-41d1-8529-145fb4cb606a",
@@ -1544,6 +1716,7 @@
         "countryCode": "IL"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1561,7 +1734,8 @@
     ],
     "locationFlag": null,
     "notes": "Israeli partnership; KPMG member firm. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "886ddec7-da6f-47a6-b3e2-e476f278eee7",
@@ -1594,6 +1768,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1607,7 +1782,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "dccd86fc-ad76-44f7-91f0-4e12e2068a8d",
@@ -1636,6 +1812,20 @@
       "countryCode": "IL"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Israeli Registrar of Companies (data.gov.il)",
+        "jurisdiction": "Israeli Registrar of Companies (data.gov.il)",
+        "kind": "domestic",
+        "id": "520039413",
+        "name": "MATRIX I.T. LTD",
+        "companyType": null,
+        "status": "פעילה",
+        "registeredAgent": null,
+        "registeredAddress": "שד אבא אבן 3 הרצליה 4672521",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22520039413%22%7D"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1653,11 +1843,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/matrix-devops-israel",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22520039413%22%7D",
+        "id": "520039413",
+        "label": "Israeli company no. 520039413"
       }
     ],
     "locationFlag": null,
     "notes": "Part of the Matrix IT group (Israel). Not the same company as Matrix Apps Team (vendor 10000048).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "794625c9-19b7-4216-96a1-33e7f23bf8b0",
@@ -1681,6 +1878,7 @@
       "countryCode": "AE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1694,7 +1892,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped; UAE per the monday.com profile. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "721a355c-03c8-4a7f-a298-bf3d2d97a8ce",
@@ -1723,6 +1922,20 @@
       "countryCode": "GB"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Companies House",
+        "jurisdiction": "Companies House",
+        "kind": "domestic",
+        "id": "13524327",
+        "name": "MUTHERBOARD.COM LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "Workhub Harrogate, 12 Station Parade, Harrogate, England, HG1 1UE",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/13524327"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1745,7 +1958,8 @@
     ],
     "locationFlag": null,
     "notes": "UK company no. 13524327; both directors England-resident.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "22aa0f1b-1410-430f-881a-7fb5f8d57a0c",
@@ -1769,6 +1983,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1782,7 +1997,8 @@
     ],
     "locationFlag": null,
     "notes": "City inferred from the São Paulo (11) phone number; no address published.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "da84513d-6ac9-4e78-b690-f3410fc045b4",
@@ -1806,6 +2022,7 @@
       "countryCode": "MX"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1819,7 +2036,8 @@
     ],
     "locationFlag": null,
     "notes": "Mexican arm of Nortrez (Brazil); no Mexican address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "58d49bd9-6e08-4200-9ceb-e3d2a8ac0893",
@@ -1843,6 +2061,7 @@
       "countryCode": "IT"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1866,7 +2085,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "88d6b78f-912a-432d-b71b-68ffe8b2a4c0",
@@ -1903,6 +2123,7 @@
       "countryCode": "SE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -1920,7 +2141,8 @@
     ],
     "locationFlag": null,
     "notes": "Swedish (+46) phone numbers; no street address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "1b2eb48d-bfdd-4bdc-99f2-08236fdb33e2",
@@ -1957,6 +2179,20 @@
       "countryCode": "GB"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Companies House",
+        "jurisdiction": "Companies House",
+        "kind": "domestic",
+        "id": "14551683",
+        "name": "OMNITAS CONSULTING LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "First Floor Victoria House, 178-180 Fleet Road, Fleet, United Kingdom, GU51 4DA",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/14551683"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1975,7 +2211,8 @@
     ],
     "locationFlag": null,
     "notes": "UK subsidiary of Omnitas (Sweden). Companies House: the director (Thomas Alf Andreas Mäkelä Karlsson) and controlling persons live in Sweden.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "532b3dbe-3d7a-4b8e-beed-b02e21080ea6",
@@ -1999,6 +2236,7 @@
       "countryCode": "IL"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2016,7 +2254,8 @@
     ],
     "locationFlag": null,
     "notes": "Israeli monday.com partner per its about page; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "eadb95a6-41fd-4c4d-8792-db8b9ee31c26",
@@ -2049,6 +2288,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2070,7 +2310,8 @@
     ],
     "locationFlag": null,
     "notes": "Part of The OBO Group (theobogroup.com), which also publishes the Hubday app as vendor OBO. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "643cf228-253f-47be-9c0a-873e01cf3eb0",
@@ -2084,7 +2325,12 @@
     "legalName": "Polished Geek LLC",
     "contactName": "Deb Cinkus, PMP",
     "contactTitle": "CEO and Founder",
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Donald Champion",
+        "contactTitle": "Manager/Member"
+      }
+    ],
     "address": {
       "street": "500 Westover Drive, Suite 6832",
       "city": "Sanford",
@@ -2094,6 +2340,68 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "North Carolina Secretary of State",
+        "jurisdiction": "North Carolina (US)",
+        "kind": "domestic",
+        "id": null,
+        "name": "Polished Geek, LLC",
+        "companyType": "Limited Liability Company",
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": "500 Westover Dr Ste 6832, Sanford, NC 27330-8941",
+        "url": "https://www.sosnc.gov/online_services/search/by_title/_Business_Registration"
+      },
+      {
+        "register": "California Secretary of State",
+        "jurisdiction": "California (US)",
+        "kind": "foreign",
+        "id": "202251119049",
+        "name": "Polished Geek, LLC",
+        "companyType": "Limited Liability Company",
+        "status": null,
+        "registeredAgent": "Registered Agents Inc",
+        "registeredAddress": "1401 21st St Ste R, Sacramento, CA 95811",
+        "url": "https://bizfileonline.sos.ca.gov/api/report/GetImageByNum/062094179212162161103059033252043134026138016224"
+      },
+      {
+        "register": "OpenCorporates (Missouri (US))",
+        "jurisdiction": "Missouri (US)",
+        "kind": "foreign",
+        "id": "FL001714487",
+        "name": "POLISHED GEEK LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": "REGISTERED AGENTS INC",
+        "registeredAddress": "117 South Lexington Street, Ste 100, Harrisonville, MO 64701",
+        "url": "https://opencorporates.com/companies/us_mo/FL001714487"
+      },
+      {
+        "register": "OpenCorporates (Indiana (US))",
+        "jurisdiction": "Indiana (US)",
+        "kind": "foreign",
+        "id": "202403221777080",
+        "name": "POLISHED GEEK LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": "REGISTERED AGENTS INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_in/202403221777080"
+      },
+      {
+        "register": "OpenCorporates (Florida (US))",
+        "jurisdiction": "Florida (US)",
+        "kind": "foreign",
+        "id": "M24000010043",
+        "name": "POLISHED GEEK LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": "REGISTERED AGENTS INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_fl/M24000010043"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2111,11 +2419,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/polishedgeek",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://bizfileonline.sos.ca.gov/api/report/GetImageByNum/062094179212162161103059033252043134026138016224",
+        "id": "202251119049",
+        "label": "California SOS entity no. 202251119049"
       }
     ],
-    "locationFlag": null,
-    "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "locationFlag": "registered-agent",
+    "notes": "Contact from the monday.com partner profile's team list. Registered-agent address: 500 Westover Dr, Sanford, NC is a virtual-mailbox address shared by many unrelated LLCs (each with its own \"suite\" number); Polished Geek is a North Carolina LLC (per its California filing) whose foreign registrations in CA, MO, IN and FL all use Registered Agents Inc. Where the team works is not published. North Carolina SOSID not yet confirmed (the NC register blocks automated lookups).",
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "479bfd05-92ec-4f85-b48d-92c365d52208",
@@ -2158,6 +2473,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2175,7 +2491,8 @@
     ],
     "locationFlag": null,
     "notes": "Argentine company (profile and site content); only Mexico and Miami office addresses are published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "0f1dd31a-ece9-44bc-a608-f2a22e820c02",
@@ -2199,6 +2516,7 @@
       "countryCode": "IE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2216,7 +2534,8 @@
     ],
     "locationFlag": null,
     "notes": "Irish (+353) and UK (+44) phone numbers; related entity Provident Solutions Limited. No address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "1fa5eda4-f81f-4a1a-99b8-c5f50137686b",
@@ -2249,6 +2568,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2266,7 +2586,8 @@
     ],
     "locationFlag": null,
     "notes": "No address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "1043a9dc-7d2a-4ec8-8970-f40bec48559b",
@@ -2295,6 +2616,20 @@
       "countryCode": "IL"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Israeli Registrar of Companies (data.gov.il)",
+        "jurisdiction": "Israeli Registrar of Companies (data.gov.il)",
+        "kind": "domestic",
+        "id": "516810322",
+        "name": "SIMPLEDAY SOLUTIONS  LTD",
+        "companyType": null,
+        "status": "פעילה",
+        "registeredAgent": null,
+        "registeredAddress": "אלוני ממרא 407 נווה דניאל 9090900",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516810322%22%7D"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2306,7 +2641,7 @@
       },
       {
         "type": "vat",
-        "url": null,
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516810322%22%7D",
         "id": "516810322"
       },
       {
@@ -2317,7 +2652,8 @@
     ],
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US profile: the monday.com profile says US, but the terms say Simpleday Solutions Ltd. is registered in Israel (VAT 516810322). Founder name from the profile slug and the contact email tara@.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "8ad5ae27-4cd1-4ac1-a1c9-18a4eaa0bd08",
@@ -2346,6 +2682,7 @@
       "countryCode": "MX"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2359,7 +2696,8 @@
     ],
     "locationFlag": null,
     "notes": "Mexican (+52) phone numbers; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "fa90c2bb-99cf-42a1-a8a7-097d8f7f085d",
@@ -2383,6 +2721,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2396,7 +2735,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "371556b0-0479-4300-be46-69c9a6788f4d",
@@ -2420,6 +2760,7 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2437,7 +2778,8 @@
     ],
     "locationFlag": null,
     "notes": "Global HQ is in Mumbai, India; the monday.com profile lists the US. The scraped leadership page lists N. Chandrasekaran as CEO & MD (now Chairman of Tata Sons) next to K. Krithivasan.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "f4d1c571-a49f-493e-8488-caf8e37aeb21",
@@ -2480,6 +2822,20 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [
+      {
+        "register": "Companies House",
+        "jurisdiction": "Companies House",
+        "kind": "domestic",
+        "id": "12341379",
+        "name": "THE SAASY PEOPLE LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "47 Cannon Street, Arca Building, Birmingham, West Midlands, England, B2 5EF",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/12341379"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2498,7 +2854,8 @@
     ],
     "locationFlag": null,
     "notes": "Additional UK offices in Reading and Stockport.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "bff5ab8e-312c-4d2d-a53c-f6bfe31386ea",
@@ -2545,6 +2902,7 @@
         "countryCode": "GR"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2566,7 +2924,8 @@
     ],
     "locationFlag": "possible-offshore",
     "notes": "Possible offshore company: lists a New York address but also a Greek address (1 Alikis, 84004) with mostly Greek (+30) phone numbers.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "e857e1ca-3402-4220-a2ad-72ef8da4ab76",
@@ -2595,6 +2954,7 @@
       "countryCode": "FR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2612,7 +2972,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "2ef4b1b7-abd5-4574-8889-bfad8e63be6d",
@@ -2646,6 +3007,7 @@
         "countryCode": "IN"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2667,7 +3029,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "7845f92e-0b98-47eb-ad93-e1bfdd4db909",
@@ -2701,6 +3064,7 @@
         "countryCode": "FR"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2728,7 +3092,8 @@
     ],
     "locationFlag": null,
     "notes": "The monday.com profile says Netherlands, but the registered office is in Edegem, Belgium.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "fd296931-6ee6-499a-9ed9-ba4dd24888e5",
@@ -2762,6 +3127,20 @@
         "countryCode": "IL"
       }
     ],
+    "registrations": [
+      {
+        "register": "Israeli Registrar of Companies (data.gov.il)",
+        "jurisdiction": "Israeli Registrar of Companies (data.gov.il)",
+        "kind": "domestic",
+        "id": "511985764",
+        "name": "UNITASK LTD.",
+        "companyType": null,
+        "status": "פעילה",
+        "registeredAgent": null,
+        "registeredAddress": "שביל האקליפטוס 6 יגור 3006500",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22511985764%22%7D"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2779,11 +3158,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/unitask",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22511985764%22%7D",
+        "id": "511985764",
+        "label": "Israeli company no. 511985764"
       }
     ],
     "locationFlag": null,
     "notes": "Name and addresses transliterated from Hebrew.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "2c0cfd7b-dacc-40bd-8611-ae4ccd2e10dc",
@@ -2843,6 +3229,20 @@
         "countryCode": "IN"
       }
     ],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "39 159 555 889",
+        "name": "JACK TAYLOR GROUP PTY. LTD.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2609 ACT",
+        "url": "https://abr.business.gov.au/ABN/View/39159555889"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2860,11 +3260,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/alex-robinson",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/39159555889",
+        "id": "39 159 555 889",
+        "label": "ABN 39 159 555 889"
       }
     ],
     "locationFlag": null,
     "notes": "Same group and address as Luxie Tech (vendor 38) and upstream Apps (vendor 100000192). Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "f486bdf8-67c6-4feb-9ba7-d60a53729cb0",
@@ -2888,6 +3295,7 @@
       "countryCode": "NZ"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -2905,7 +3313,8 @@
     ],
     "locationFlag": null,
     "notes": "New Zealand (+64) phone numbers; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "d09f2b86-6ab2-40df-858a-3039139ae967",
@@ -2944,6 +3353,20 @@
         "countryCode": "AU"
       }
     ],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "94 642 869 798",
+        "name": "WORK PERFECT GROUP PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2000 NSW",
+        "url": "https://abr.business.gov.au/ABN/View/94642869798"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2971,7 +3394,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "7f1518d0-ea4e-48e1-b4d5-87ddb6104915",
@@ -2995,6 +3419,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3008,7 +3433,8 @@
     ],
     "locationFlag": null,
     "notes": "No address published; the site mentions Ireland. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "d9cde900-7386-4ad8-bd9b-1b964d4ffd30",
@@ -3037,6 +3463,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3058,7 +3485,8 @@
     ],
     "locationFlag": null,
     "notes": "Trades as Workflow Magic.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "8a9d6a78-3331-4c29-9062-c5eb13eba0cb",
@@ -3091,6 +3519,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3112,7 +3541,8 @@
     ],
     "locationFlag": "registered-agent",
     "notes": "Mixed: Delaware registered-agent address; the founders are in South Africa (Jeffreys Bay) and Portugal, the CEO is in Georgia, US.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "57933c99-1776-4183-87ac-748fc72ecd40",
@@ -3136,6 +3566,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3149,7 +3580,8 @@
     ],
     "locationFlag": null,
     "notes": "Only a CEP (postal code) is published; 04567 is in São Paulo.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "b9206817-b2c6-4dfa-bcc2-6b8118d91275",
@@ -3188,6 +3620,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3209,7 +3642,8 @@
     ],
     "locationFlag": null,
     "notes": "Netherlands per the monday.com profile; Xebia moved its global HQ to Atlanta in 2023. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "29b6b131-3652-426c-8994-cd9ab9c7e49b",
@@ -3243,6 +3677,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3264,7 +3699,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "4c799b86-07ce-4f11-956f-ad8294c7d82f",
@@ -3288,6 +3724,7 @@
       "countryCode": "IL"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3301,7 +3738,8 @@
     ],
     "locationFlag": null,
     "notes": "Israeli company; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "b6e5cf4f-53f6-47a5-9733-6bf97bf070ad",
@@ -3342,6 +3780,7 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3359,7 +3798,8 @@
     ],
     "locationFlag": null,
     "notes": "24 Luna is a brand of OPG One Productivity Group GmbH.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "e5084e17-63bc-496c-ac02-b8697c139e7e",
@@ -3383,6 +3823,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3396,7 +3837,8 @@
     ],
     "locationFlag": null,
     "notes": "Brazilian (+55) phone number; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "231d4d25-a5d0-43bd-9ec0-ba830e70c9d1",
@@ -3410,7 +3852,12 @@
     "legalName": "Adaptavist Group Ltd",
     "contactName": "Simon Haighton-Williams",
     "contactTitle": "CEO",
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Justin Shaw Haynes",
+        "contactTitle": "Director (Companies House)"
+      }
+    ],
     "address": {
       "street": "25 Wilton Road, Victoria",
       "city": "London",
@@ -3428,6 +3875,20 @@
         "postalCode": "EC2A 4NW",
         "country": "United Kingdom",
         "countryCode": "GB"
+      }
+    ],
+    "registrations": [
+      {
+        "register": "Companies House",
+        "jurisdiction": "Companies House",
+        "kind": "domestic",
+        "id": "06878779",
+        "name": "ADAPTAVIST GROUP LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "Adaptavist 25 Wilton Road, Victoria, London, United Kingdom, SW1V 1LW",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/06878779"
       }
     ],
     "sources": [
@@ -3452,7 +3913,8 @@
     ],
     "locationFlag": null,
     "notes": "The monday.com profile says US; the operating company is UK-registered (Adaptavist Group Ltd).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "24e7e1ee-dafd-4e76-b569-7e5911b7ea4c",
@@ -3486,6 +3948,7 @@
         "countryCode": "GB"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3503,7 +3966,8 @@
     ],
     "locationFlag": null,
     "notes": "Spanish arm of The Adaptavist Group; no Spanish address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "e7831dae-c76a-492f-a5f2-42c14148c93d",
@@ -3536,6 +4000,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3553,7 +4018,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "55c7e2e3-be39-4946-ac7e-17d9d520fc61",
@@ -3587,6 +4053,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3604,7 +4071,8 @@
     ],
     "locationFlag": null,
     "notes": "Latin American arm of CarbonWeb (US); Costa Rica per the monday.com profile; Ecuador (+593) phone numbers on the site. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "11c61ec8-ebeb-4166-8d01-da24df107537",
@@ -3647,6 +4115,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3664,7 +4133,8 @@
     ],
     "locationFlag": null,
     "notes": "Indian company that publishes only UK and US service addresses (128 City Road is a registered-office service; 8 The Green is a Delaware registered agent). Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "1c62d1df-1188-4acf-8feb-bd8108e3817b",
@@ -3707,6 +4177,7 @@
         "countryCode": "PL"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3728,7 +4199,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "b2fe3545-207e-48d2-be62-0cd5acd6a42b",
@@ -3752,6 +4224,7 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3769,7 +4242,8 @@
     ],
     "locationFlag": null,
     "notes": "The monday.com app vendor tmnxt (vendor 40) uses a demicon.de contact email.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "564dffba-699d-43e0-9697-536a7e26e5b2",
@@ -3793,6 +4267,7 @@
       "countryCode": "PL"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3820,7 +4295,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "39702dee-9de4-4ceb-820d-ca4016f00ed6",
@@ -3859,6 +4335,7 @@
         "countryCode": "DE"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3882,7 +4359,8 @@
     ],
     "locationFlag": null,
     "notes": "Singapore per the monday.com profile; the site's imprint is for the German GmbH. The terms page is unedited template text (AstroWind LLC). Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "349212ff-53fe-4f80-bf2d-67255dd9cedb",
@@ -3893,7 +4371,7 @@
     "email": "benjy@entrypoint.co.il",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "ENTRYPOINT LTD",
     "contactName": "Ohad Pettel",
     "contactTitle": "Founder & CEO",
     "alternativeContacts": [
@@ -3911,6 +4389,20 @@
       "countryCode": "IL"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Israeli Registrar of Companies (data.gov.il)",
+        "jurisdiction": "Israeli Registrar of Companies (data.gov.il)",
+        "kind": "domestic",
+        "id": "513820480",
+        "name": "ENTRYPOINT LTD",
+        "companyType": null,
+        "status": "מחוסלת מרצון",
+        "registeredAgent": null,
+        "registeredAddress": "אימבר 14 פתח תקווה",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22513820480%22%7D"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -3924,11 +4416,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/entrypoint",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22513820480%22%7D",
+        "id": "513820480",
+        "label": "Israeli company no. 513820480"
       }
     ],
     "locationFlag": null,
     "notes": "Israeli company; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "dd04ef5d-dd27-4af1-9546-0af7d35db915",
@@ -3952,6 +4451,7 @@
       "countryCode": "TW"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -3965,7 +4465,8 @@
     ],
     "locationFlag": null,
     "notes": "Taiwanese company (.com.tw); no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "52b03c3b-03c4-4937-a54b-24098d3c9d77",
@@ -3989,6 +4490,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4006,7 +4508,8 @@
     ],
     "locationFlag": null,
     "notes": "US-style LLC; Argentina per the monday.com profile, but the only published office is in São Paulo, Brazil. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "e92f4556-0c3c-4137-813c-cc30c2bfac16",
@@ -4030,6 +4533,7 @@
       "countryCode": "FR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4047,7 +4551,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "16290fb6-4637-41d5-a7f3-5bd9e0ccd31e",
@@ -4086,6 +4591,7 @@
         "countryCode": "AU"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4103,7 +4609,8 @@
     ],
     "locationFlag": null,
     "notes": "US arm of Fruition (Australia). Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "71515371-78d6-482c-a746-b99e02b7a07e",
@@ -4114,7 +4621,7 @@
     "email": "elijah@gaco.com.au",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "GACO",
     "contactName": "Elijah Noonan",
     "contactTitle": "Co-Founder & Head of Solutions",
     "alternativeContacts": [
@@ -4136,6 +4643,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "48 418 188 007",
+        "name": "GACO",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2081 NSW",
+        "url": "https://abr.business.gov.au/ABN/View/48418188007"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -4149,11 +4670,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/gaco",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/48418188007",
+        "id": "48 418 188 007",
+        "label": "ABN 48 418 188 007"
       }
     ],
     "locationFlag": null,
     "notes": "Great Automations Co (Australia); no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "4923749f-9974-4dae-8a68-327d714a972c",
@@ -4196,6 +4724,7 @@
         "countryCode": "FI"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4217,7 +4746,8 @@
     ],
     "locationFlag": null,
     "notes": "Part of Gapps Group Oy.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "f9d6e2a4-fa0f-49b0-a996-4b95a2e24ab1",
@@ -4246,6 +4776,7 @@
       "countryCode": "JP"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4263,7 +4794,8 @@
     ],
     "locationFlag": null,
     "notes": "Japanese company; names kept in Japanese as published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "3adefdc3-c514-4d0e-9f25-64a45a381f3f",
@@ -4274,7 +4806,7 @@
     "email": "duncan.moore@gro3.com",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "GRO3 PTY LTD",
     "contactName": "Duncan Moore",
     "contactTitle": null,
     "alternativeContacts": [],
@@ -4297,6 +4829,20 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "50 680 487 567",
+        "name": "GRO3 PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "3113 VIC",
+        "url": "https://abr.business.gov.au/ABN/View/50680487567"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -4310,11 +4856,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/gro3",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/50680487567",
+        "id": "50 680 487 567",
+        "label": "ABN 50 680 487 567"
       }
     ],
     "locationFlag": null,
     "notes": "City inferred from the street (Melbourne CBD). Contact name from the profile email duncan.moore@gro3.com.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "57d8518a-92e2-4fb2-8383-e62d685eecb9",
@@ -4343,6 +4896,7 @@
       "countryCode": "PH"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4360,7 +4914,8 @@
     ],
     "locationFlag": null,
     "notes": "Philippines per the profile; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "50266c20-6079-480e-8279-bdb15f48b93d",
@@ -4394,6 +4949,7 @@
         "countryCode": "IT"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4411,7 +4967,8 @@
     ],
     "locationFlag": null,
     "notes": "Street names truncated on the site.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "7ba6f835-6e8c-4821-bc9d-8e09644e6024",
@@ -4435,6 +4992,7 @@
       "countryCode": "PH"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4452,7 +5010,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "2309c7b0-887c-4b2f-ada6-4862def819c0",
@@ -4476,6 +5035,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "51 689 001 849",
+        "name": "IGNITION CONSULTING GROUP PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2046 NSW",
+        "url": "https://abr.business.gov.au/ABN/View/51689001849"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -4489,11 +5062,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/ignition-consulting-group",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/51689001849",
+        "id": "51 689 001 849",
+        "label": "ABN 51 689 001 849"
       }
     ],
     "locationFlag": null,
     "notes": "First name only, from the profile email chris@ignitioncg.com.au. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "23173c3b-a2e8-4c15-8f20-4eddce37b2ec",
@@ -4517,6 +5097,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4530,7 +5111,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "49d752be-fbab-4fc6-9db3-df5d7230ed05",
@@ -4554,6 +5136,7 @@
       "countryCode": "ES"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4567,7 +5150,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "f829e556-27dd-4b7c-a1af-8ab7cc63ec66",
@@ -4591,6 +5175,7 @@
       "countryCode": "MX"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4608,7 +5193,8 @@
     ],
     "locationFlag": null,
     "notes": "The site also lists Uruguay, Paraguay, Argentina and Chile phone numbers. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "d1c12786-ad59-4ae4-bdd8-1c876a9244d5",
@@ -4641,6 +5227,7 @@
       "countryCode": "CZ"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4658,7 +5245,8 @@
     ],
     "locationFlag": null,
     "notes": "Czech (+420) phone numbers; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "723c448f-4fb6-407a-9869-23af15277851",
@@ -4682,6 +5270,7 @@
       "countryCode": "RO"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4710,7 +5299,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "636ab73f-f5ed-4f30-8fa6-fa385d75c629",
@@ -4734,6 +5324,7 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4751,7 +5342,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "dcb3f4a5-beff-4542-a580-54b5859c003a",
@@ -4775,6 +5367,7 @@
       "countryCode": "TR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4788,7 +5381,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "ec6fec7c-2ab2-460a-a002-86eb2847ed2c",
@@ -4812,6 +5406,7 @@
       "countryCode": "AE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4825,7 +5420,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "f6af4686-be15-468e-ad3c-8c78691fde82",
@@ -4849,6 +5445,7 @@
       "countryCode": "KR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4872,7 +5469,8 @@
     ],
     "locationFlag": null,
     "notes": "South Korean company. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "ae01ba2c-bbf5-47bd-a155-6a979e005cdf",
@@ -4906,6 +5504,7 @@
         "countryCode": "ES"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4919,7 +5518,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "396b5f1a-28ea-49f0-ad7a-c08982016fe0",
@@ -4943,6 +5543,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "74 638 194 260",
+        "name": "QUIRK CONSULTING PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "3431 VIC",
+        "url": "https://abr.business.gov.au/ABN/View/74638194260"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -4952,11 +5566,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/quirk",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/74638194260",
+        "id": "74 638 194 260",
+        "label": "ABN 74 638 194 260"
       }
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "fb4528f3-15a2-4273-a42c-a7e5e39bb051",
@@ -4980,6 +5601,7 @@
       "countryCode": "CL"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -4993,7 +5615,8 @@
     ],
     "locationFlag": null,
     "notes": "Chilean arm of SEIDOR (Spain); no Chilean address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "a7f0436b-89a0-47a2-8418-d63c4de7ec59",
@@ -5017,6 +5640,7 @@
       "countryCode": "FR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5030,7 +5654,8 @@
     ],
     "locationFlag": null,
     "notes": "French arm of SEIDOR (Spain); no French address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "7e778e68-d9ed-4ee4-b296-505b9b1a1680",
@@ -5059,6 +5684,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5072,7 +5698,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "fd1120b2-2abe-44d3-b4f5-7212c5574255",
@@ -5096,6 +5723,7 @@
       "countryCode": "CO"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5109,7 +5737,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "0f8e22ad-fee6-4d08-9060-7a3abeb99bf5",
@@ -5143,6 +5772,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5160,7 +5790,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "7f45b40f-e3b3-4f37-b176-b88268bc0473",
@@ -5184,6 +5815,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "43 151 064 569",
+        "name": "WHITECROW DIGITAL PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2290 NSW",
+        "url": "https://abr.business.gov.au/ABN/View/43151064569"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -5201,11 +5846,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/workflow-power",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/43151064569",
+        "id": "43 151 064 569",
+        "label": "ABN 43 151 064 569"
       }
     ],
     "locationFlag": null,
     "notes": "Australian company; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "510698dc-064a-462e-a716-50d2672d084c",
@@ -5234,6 +5886,7 @@
       "countryCode": "NL"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5251,7 +5904,8 @@
     ],
     "locationFlag": null,
     "notes": "Trades as Ximble (formerly The Sales Studio); Dutch (+31) phone numbers, no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "b41edbc9-fa04-4e9a-b5a5-804643310009",
@@ -5265,16 +5919,39 @@
     "legalName": "A.A.Figueiredo Ltda.",
     "contactName": "Alexandre Figueiredo",
     "contactTitle": "Executive Director",
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Daniela Faggiani Almeida Figueiredo",
+        "contactTitle": "Sócio-Administrador (Receita Federal CNPJ (via BrasilAPI))"
+      },
+      {
+        "contactName": "Valdir Faggiani",
+        "contactTitle": "Sócio (Receita Federal CNPJ (via BrasilAPI))"
+      }
+    ],
     "address": {
-      "street": null,
-      "city": "Santo André",
+      "street": "RUA GONCALO FERNANDES 318 SALA 407",
+      "city": "Santo Andre",
       "region": "SP",
       "postalCode": "09041-410",
       "country": "Brazil",
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Receita Federal CNPJ (via BrasilAPI)",
+        "jurisdiction": "Receita Federal CNPJ (via BrasilAPI)",
+        "kind": "domestic",
+        "id": "18.307.776/0001-14",
+        "name": "A.A.FIGUEIREDO CONSULTORIA EMPRESARIAL LTDA",
+        "companyType": null,
+        "status": "ATIVA",
+        "registeredAgent": null,
+        "registeredAddress": "RUA GONCALO FERNANDES 318 SALA 407 JARDIM BELA VISTA SANTO ANDRE SP 09041410",
+        "url": "https://brasilapi.com.br/api/cnpj/v1/18307776000114"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -5284,11 +5961,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/aafigueiredo-ltda",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://brasilapi.com.br/api/cnpj/v1/18307776000114",
+        "id": "18.307.776/0001-14",
+        "label": "CNPJ 18.307.776/0001-14"
       }
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "bc1bc116-0acb-4018-aabb-6cfa92f9bb50",
@@ -5312,6 +5996,7 @@
       "countryCode": "JP"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5329,7 +6014,8 @@
     ],
     "locationFlag": null,
     "notes": "Japanese LLC (gōdō kaisha). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "8f50e2b5-03a0-4b58-a099-4fba07d533f9",
@@ -5353,6 +6039,7 @@
       "countryCode": "CA"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5370,7 +6057,8 @@
     ],
     "locationFlag": null,
     "notes": "The site footer also mentions Execute Strategy, Inc. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "05cfda6e-d97b-4391-b93f-3c6fca8dd278",
@@ -5413,6 +6101,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5434,7 +6123,8 @@
     ],
     "locationFlag": null,
     "notes": "India per the monday.com profile; the US company publishes a Bellevue, WA office. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "77cba23c-b145-4936-b8d5-77c0cd84da68",
@@ -5467,6 +6157,7 @@
       "countryCode": "IT"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5486,7 +6177,8 @@
     ],
     "locationFlag": null,
     "notes": "AllReady is a trading name of a sole proprietorship.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "8d068c2d-5e84-4334-a61b-44a615fe8c77",
@@ -5510,6 +6202,7 @@
       "countryCode": "CH"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5527,7 +6220,8 @@
     ],
     "locationFlag": null,
     "notes": "Swiss (+41) phone numbers; the town isn't shown next to the street.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "49a773a5-1be7-4ff0-97f6-4e864defb264",
@@ -5556,6 +6250,7 @@
       "countryCode": "MX"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5569,7 +6264,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "0f45b1b8-ab48-4227-bc7c-56f498d0cabe",
@@ -5593,6 +6289,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5606,7 +6303,8 @@
     ],
     "locationFlag": null,
     "notes": "US arm of Boost by Moveo (Israel); no US address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "619e22b6-23f3-4c5b-94b8-76b526eb244b",
@@ -5643,6 +6341,7 @@
       "countryCode": "SG"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5660,7 +6359,8 @@
     ],
     "locationFlag": null,
     "notes": "Group with entities in Korea, Australia, the UK and the US, and offices in Malaysia and Thailand.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "b1ba3816-5181-432c-b056-9d4a5275e4b5",
@@ -5684,6 +6384,7 @@
       "countryCode": "UA"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5697,7 +6398,8 @@
     ],
     "locationFlag": null,
     "notes": "Ukrainian (+380) phone numbers; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "47799713-4779-4ba5-82a7-8581b2b5148a",
@@ -5731,6 +6433,7 @@
         "countryCode": "AE"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5748,7 +6451,8 @@
     ],
     "locationFlag": null,
     "notes": "South African arm of Cloud Concept (Dubai). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "ebd28261-2d3b-4e98-b563-f00a4fc73fd5",
@@ -5772,6 +6476,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5785,7 +6490,8 @@
     ],
     "locationFlag": null,
     "notes": "US company; no address published. Contact email is on consultch.com. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "c40cd9ae-e424-4b5b-87a1-81e7974e3efd",
@@ -5819,6 +6525,7 @@
         "countryCode": "CN"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5836,7 +6543,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "ca5c3a1f-1a0f-4117-9a5b-b8fc56a3ceb5",
@@ -5847,19 +6555,33 @@
     "email": "zacharie@ellis-partners.com",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "ELLIS PARTNERS",
     "contactName": "Zacharie Lahmi",
     "contactTitle": "Founder",
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "6 RUE D'ARMAILLE",
+      "city": "PARIS",
       "region": null,
-      "postalCode": null,
+      "postalCode": "75017",
       "country": "France",
       "countryCode": "FR"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Annuaire des Entreprises (INSEE/RNE)",
+        "jurisdiction": "Annuaire des Entreprises (INSEE/RNE)",
+        "kind": "domestic",
+        "id": "999068547",
+        "name": "ELLIS PARTNERS",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "6 RUE D'ARMAILLE 75017 PARIS",
+        "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/999068547"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -5873,11 +6595,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/ellis-partner",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/999068547",
+        "id": "999068547",
+        "label": "SIREN 999068547"
       }
     ],
     "locationFlag": null,
     "notes": "French company; no address published (only the web host's address). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "1f863b5d-c759-4c72-9c05-ed125b561a1d",
@@ -5911,6 +6640,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5932,7 +6662,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "5ec60bbf-f8b5-47e6-a58e-16553546195f",
@@ -5956,6 +6687,7 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -5969,7 +6701,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "e1a1a686-8885-4b33-883c-6b1b71775dd4",
@@ -5993,6 +6726,7 @@
       "countryCode": "IT"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6010,7 +6744,8 @@
     ],
     "locationFlag": null,
     "notes": "Registered office (sede legale). The site footer also names Tecnostudi Ambiente S.r.l. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "6df41033-7fa1-485f-b2f8-0026d64d8886",
@@ -6024,7 +6759,12 @@
     "legalName": "FRUITION SERVICES LIMITED",
     "contactName": "Kevin Zhao",
     "contactTitle": "Director, UK",
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Joshua Jebathilak",
+        "contactTitle": "Director (Companies House)"
+      }
+    ],
     "address": {
       "street": "423 Linen Hall, 162-168 Regent Street",
       "city": "London",
@@ -6042,6 +6782,20 @@
         "postalCode": "2000",
         "country": "Australia",
         "countryCode": "AU"
+      }
+    ],
+    "registrations": [
+      {
+        "register": "Companies House",
+        "jurisdiction": "Companies House",
+        "kind": "domestic",
+        "id": "16033160",
+        "name": "FRUITION SERVICES LIMITED",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "C/O Gpc Financial Management 423 Linen Hall, 162 - 168 Regent Street, London, United Kingdom, W1B 5TE",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/16033160"
       }
     ],
     "sources": [
@@ -6062,7 +6816,8 @@
     ],
     "locationFlag": null,
     "notes": "UK arm of Fruition (Australia); registered c/o its accountants at Linen Hall. Directors: Joshua Jebathilak (lives in Australia) and Kevin Qi-Hao Zhao (lives in England).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "33364fb7-cfd0-4fe7-acfc-46202e3d0b4c",
@@ -6073,7 +6828,7 @@
     "email": "hello@fullcrm.com",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "FULLCRM PTY LTD",
     "contactName": "Helen Peterson",
     "contactTitle": "CEO / Co-Founder & Director",
     "alternativeContacts": [
@@ -6091,6 +6846,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "59 600 648 235",
+        "name": "FULLCRM PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2009 NSW",
+        "url": "https://abr.business.gov.au/ABN/View/59600648235"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -6114,7 +6883,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "e4119592-af93-432a-ac6c-714fcd0a0e8d",
@@ -6138,6 +6908,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6155,7 +6926,8 @@
     ],
     "locationFlag": null,
     "notes": "Trades as Get Efficient.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "7ab87c33-0aa9-4af8-92ad-af42137c07ba",
@@ -6216,6 +6988,7 @@
         "countryCode": "VN"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6237,7 +7010,8 @@
     ],
     "locationFlag": null,
     "notes": "Group holding company: GoPomelo Holding Pte. Ltd. (Singapore).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "49695e06-a663-45fc-a4c7-86915a0d595c",
@@ -6261,6 +7035,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6282,7 +7057,8 @@
     ],
     "locationFlag": null,
     "notes": "Founder surname from the profile slug (mark-anley).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "68e5151d-ef36-42b6-ad5c-3e0b7d6ee6c4",
@@ -6306,6 +7082,7 @@
       "countryCode": "ES"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6319,7 +7096,8 @@
     ],
     "locationFlag": null,
     "notes": "hiberus is headquartered in Zaragoza, Spain; no address scraped. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "5edc6aef-2b38-42d5-b84d-2da2f9c52243",
@@ -6330,7 +7108,7 @@
     "email": "info@inayahconsulting.com",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "INAYAH CONSULTING PTY LTD",
     "contactName": "Ahmed Malik",
     "contactTitle": "Founder",
     "alternativeContacts": [
@@ -6352,6 +7130,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "48 654 968 082",
+        "name": "INAYAH CONSULTING PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2000 NSW",
+        "url": "https://abr.business.gov.au/ABN/View/48654968082"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -6369,11 +7161,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/inayah-consulting",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/48654968082",
+        "id": "48 654 968 082",
+        "label": "ABN 48 654 968 082"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "53c1e074-115f-46c8-99c3-6809125c6db0",
@@ -6397,6 +7196,7 @@
       "countryCode": "ID"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6410,7 +7210,8 @@
     ],
     "locationFlag": null,
     "notes": "Asia-Pacific arm of the Dutch Incentro group; no address scraped. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "bb0091ad-1d94-49b9-b3e8-88c0aecd9675",
@@ -6434,6 +7235,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6451,7 +7253,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "5da12dbc-0a48-45f3-94f8-7e1721079e8b",
@@ -6485,6 +7288,7 @@
         "countryCode": "HK"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6502,7 +7306,8 @@
     ],
     "locationFlag": null,
     "notes": "Taiwan per the monday.com profile (igrouptaiwan.com email); only the Hong Kong address is published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "82d327f7-26bb-4a11-b76f-94098fc81020",
@@ -6526,6 +7331,7 @@
       "countryCode": "TH"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6543,7 +7349,8 @@
     ],
     "locationFlag": null,
     "notes": "Address transliterated from Thai (เลขที่ 635-637 ถนนเจริญรัถ แขวงคลองสาน เขตคลองสาน กรุงเทพมหานคร). Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "87ea1f46-d934-4633-b682-87ea172a9408",
@@ -6595,6 +7402,7 @@
         "countryCode": "TH"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6612,7 +7420,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "f15a1e41-9b5f-415d-9acb-bc208103c1be",
@@ -6623,7 +7432,7 @@
     "email": "info@jackadder.international",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "JACKADDER INTERNATIONAL PTY LTD",
     "contactName": "Lou Martini",
     "contactTitle": "CEO and Founder",
     "alternativeContacts": [],
@@ -6636,6 +7445,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "45 621 125 782",
+        "name": "JACKADDER INTERNATIONAL PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "0800 NT",
+        "url": "https://abr.business.gov.au/ABN/View/45621125782"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -6649,11 +7472,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/jackadder-international",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/45621125782",
+        "id": "45 621 125 782",
+        "label": "ABN 45 621 125 782"
       }
     ],
     "locationFlag": null,
     "notes": "Also lists offices in Darwin, Hobart, Brisbane, Adelaide and Perth.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "c4fa2dfe-4a29-4740-97b4-af410cbf1103",
@@ -6664,7 +7494,7 @@
     "email": "contact@kickconsulting.com.au",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "KICK CONSULTING",
     "contactName": "Elena Korolkova",
     "contactTitle": "Head of Delivery & Founder",
     "alternativeContacts": [],
@@ -6677,6 +7507,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "22 160 906 910",
+        "name": "KICK CONSULTING",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "3440 VIC",
+        "url": "https://abr.business.gov.au/ABN/View/22160906910"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -6690,11 +7534,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/kick-consulting",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/22160906910",
+        "id": "22 160 906 910",
+        "label": "ABN 22 160 906 910"
       }
     ],
     "locationFlag": null,
     "notes": "Australian company; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "c0071a8a-332f-4a1e-9a57-0aed97018a04",
@@ -6723,6 +7574,7 @@
       "countryCode": "JP"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6740,7 +7592,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "77e76a78-c399-4f81-96b1-42540e166a4d",
@@ -6764,6 +7617,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6781,7 +7635,8 @@
     ],
     "locationFlag": "registered-agent",
     "notes": "The only published address is a mailbox (PMB).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "7172a50e-470d-46b4-bd12-754a8e98047b",
@@ -6805,6 +7660,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6818,7 +7674,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped; Brazilian company (.com.br). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "51b679f3-b971-4262-bcc4-9d9dea122b35",
@@ -6842,6 +7699,7 @@
       "countryCode": "TW"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6855,7 +7713,8 @@
     ],
     "locationFlag": null,
     "notes": "Taiwanese (+886) phone numbers; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "6dbfb470-b028-483b-b418-90b82b469c28",
@@ -6884,6 +7743,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6897,7 +7757,8 @@
     ],
     "locationFlag": null,
     "notes": "Not the same company as Magic Apps (vendor 100000232). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "2e25a96a-d545-4520-aa4e-925a785aa5ea",
@@ -6921,6 +7782,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -6934,7 +7796,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "faa56f8e-b331-47a9-a7f3-8091f1dec0d2",
@@ -6977,6 +7840,20 @@
         "countryCode": "AU"
       }
     ],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "88 644 758 627",
+        "name": "MOTII PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2099 NSW",
+        "url": "https://abr.business.gov.au/ABN/View/88644758627"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -6994,11 +7871,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/motii",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/88644758627",
+        "id": "88 644 758 627",
+        "label": "ABN 88 644 758 627"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "fcab2d70-b395-4279-8824-30b447bf0a71",
@@ -7027,6 +7911,7 @@
       "countryCode": "PH"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7048,7 +7933,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "9c07552e-192f-457e-bd89-c87c4ae4188e",
@@ -7081,6 +7967,7 @@
       "countryCode": "GE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7098,7 +7985,8 @@
     ],
     "locationFlag": null,
     "notes": "Georgian LLC (the country). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "a0f554a1-0aae-40d8-9970-5e318002b261",
@@ -7122,6 +8010,7 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7139,7 +8028,8 @@
     ],
     "locationFlag": null,
     "notes": "Dmitry Rasin is also the contact for the marketplace vendor tmnxt (vendor 40, via a demicon.de email). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "87adfee4-b0fa-44d8-b1cf-d4d382dafdd3",
@@ -7168,6 +8058,7 @@
       "countryCode": "HK"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7181,7 +8072,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "0802959d-6e1d-408a-835b-f996c85554c7",
@@ -7205,6 +8097,7 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7222,7 +8115,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "b550bfe2-52a1-45c0-a08f-6f0fcde38688",
@@ -7251,6 +8145,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7264,7 +8159,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "a44cf233-f0d7-4a2f-a0b8-bf5882b07d87",
@@ -7288,6 +8184,20 @@
       "countryCode": "CH"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Zefix (Swiss commercial register)",
+        "jurisdiction": "Zefix (Swiss commercial register)",
+        "kind": "domestic",
+        "id": "CHE-316.584.413",
+        "name": "Partner IT SA",
+        "companyType": null,
+        "status": "EXISTIEREND",
+        "registeredAgent": null,
+        "registeredAddress": "Neuchâtel",
+        "url": "https://rcnet.ne.ch/extract?companyOfsUid=CHE-316.584.413"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -7301,11 +8211,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/partner-it",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://rcnet.ne.ch/extract?companyOfsUid=CHE-316.584.413",
+        "id": "CHE-316.584.413",
+        "label": "UID CHE-316.584.413"
       }
     ],
     "locationFlag": null,
     "notes": "Swiss (+41) phone numbers; the town isn't shown next to the street.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "bafd0c17-05cc-484e-9bab-8711de6b2f14",
@@ -7329,6 +8246,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7342,7 +8260,8 @@
     ],
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "931f0cff-95e8-4ac3-b174-1f1aeb3bb0d0",
@@ -7390,6 +8309,7 @@
         "countryCode": "GB"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7411,7 +8331,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "a94666f3-f2fc-452e-9f71-92d7b4a0800e",
@@ -7435,6 +8356,7 @@
       "countryCode": "VN"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7448,7 +8370,8 @@
     ],
     "locationFlag": null,
     "notes": "Vietnamese company (Rikkei group); no address scraped. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "9e604807-0033-48bc-ad57-203cb81c4545",
@@ -7472,6 +8395,7 @@
       "countryCode": "ES"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7485,7 +8409,8 @@
     ],
     "locationFlag": null,
     "notes": "SEIDOR is headquartered in Barcelona, Spain; no address scraped. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "a973cc66-1217-448a-998c-18bf0c4d9dc6",
@@ -7509,6 +8434,7 @@
       "countryCode": "MX"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7522,7 +8448,8 @@
     ],
     "locationFlag": null,
     "notes": "Mexican arm of SEIDOR (Spain); no address scraped. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "0e1a7081-f8aa-428a-96b4-68811c9b55d7",
@@ -7546,6 +8473,7 @@
       "countryCode": "SE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7563,7 +8491,8 @@
     ],
     "locationFlag": null,
     "notes": "Swedish AB; contact name from the profile slug and email (eddie@solosap.com). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "853adc4f-36f3-4704-9243-dd89d3bb9c8b",
@@ -7581,6 +8510,10 @@
       {
         "contactName": "Pascal Brunel",
         "contactTitle": "Co-founder & President"
+      },
+      {
+        "contactName": "Yann Mogno",
+        "contactTitle": "Directeur Général (Annuaire des Entreprises (INSEE/RNE))"
       }
     ],
     "address": {
@@ -7620,6 +8553,20 @@
         "countryCode": "FR"
       }
     ],
+    "registrations": [
+      {
+        "register": "Annuaire des Entreprises (INSEE/RNE)",
+        "jurisdiction": "Annuaire des Entreprises (INSEE/RNE)",
+        "kind": "domestic",
+        "id": "452487416",
+        "name": "SYNOLIA",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "59 RUE DE L'ABONDANCE 69003 LYON",
+        "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/452487416"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -7637,11 +8584,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/synolia",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/452487416",
+        "id": "452487416",
+        "label": "SIREN 452487416"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "4362167b-d04b-4242-b8fb-42a6d07e30cd",
@@ -7670,6 +8624,7 @@
       "countryCode": "JP"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7687,7 +8642,8 @@
     ],
     "locationFlag": null,
     "notes": "Japanese company; names kept in Japanese as published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "c235abda-c1ab-4cc1-abd1-d692c2d57a3d",
@@ -7726,6 +8682,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7747,7 +8704,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "81d8c456-f90e-4195-924f-3c9572b8611d",
@@ -7771,6 +8729,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "56 663 410 651",
+        "name": "TECHILA SERVICES PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "4208 QLD",
+        "url": "https://abr.business.gov.au/ABN/View/56663410651"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -7784,11 +8756,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/thecila-global-services-au",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/56663410651",
+        "id": "56 663 410 651",
+        "label": "ABN 56 663 410 651"
       }
     ],
     "locationFlag": null,
     "notes": "Australian arm of Techila; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "0eed90d9-d1b7-4f3b-b92a-b23a68244807",
@@ -7822,6 +8801,7 @@
         "countryCode": "ZA"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7839,7 +8819,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "b456a336-1c9e-4145-9098-92b80d62d93f",
@@ -7863,6 +8844,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -7880,7 +8862,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "90bef19a-d260-48cf-b274-7e6d2c63f4ad",
@@ -7914,6 +8897,20 @@
         "countryCode": "GB"
       }
     ],
+    "registrations": [
+      {
+        "register": "Companies House",
+        "jurisdiction": "Companies House",
+        "kind": "domestic",
+        "id": "15140608",
+        "name": "THE SAAS JEDI LIMITED",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "71-75 Shelton Street, Covent Garden, London, United Kingdom, WC2H 9JQ",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/15140608"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -7932,7 +8929,8 @@
     ],
     "locationFlag": "registered-agent",
     "notes": "Both published London addresses are virtual-office services (71-75 Shelton Street is also the Companies House registered office), but the director Stephen Miles MacLennan lives in the UK.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "1a135444-bcce-4cdf-9a35-13ac4b128723",
@@ -7983,6 +8981,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8004,7 +9003,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "bdca9a39-2e0c-4821-b36a-4fbe3ccc9847",
@@ -8033,6 +9033,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8046,7 +9047,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "11be3e95-af51-42a4-bc7d-af5aceac1217",
@@ -8093,6 +9095,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8116,7 +9119,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "1c00a999-0250-4cde-8c32-b2f3c2f838af",
@@ -8155,6 +9159,7 @@
         "countryCode": "GB"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8173,7 +9178,8 @@
     ],
     "locationFlag": null,
     "notes": "Latvian company with a UK shell: TOOLSTREK LTD is registered at 71-75 Shelton Street (a London virtual office), but its only director and controlling person, Dmitrijs Bebriss, lives in Latvia. City assumed to be Riga (unconfirmed).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "9fd79405-cf6b-4102-b807-698b02504ceb",
@@ -8210,6 +9216,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8227,7 +9234,8 @@
     ],
     "locationFlag": null,
     "notes": "Also Trundl India Pvt Ltd and Trundl Labs (Canada).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "3e6a1a01-f0ef-4e84-9de3-f4fb463319b4",
@@ -8256,6 +9264,7 @@
       "countryCode": "IL"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8269,7 +9278,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped; Israeli company (.co.il). Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "bced93d2-6a1a-40cd-ba3b-27186dc5cea4",
@@ -8298,6 +9308,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8315,7 +9326,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "04ad6f88-8d92-44c6-89c7-fff19537d309",
@@ -8349,6 +9361,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8366,7 +9379,8 @@
     ],
     "locationFlag": null,
     "notes": "South African arm of Workiflow; John-Paul Theron is based in Jeffreys Bay. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "0cfc2b14-8700-4451-9c0e-684b86a5c443",
@@ -8405,6 +9419,7 @@
         "countryCode": "BR"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8418,7 +9433,8 @@
     ],
     "locationFlag": null,
     "notes": "Site says 'Location: New Jersey USA | Sao Paulo Brazil'. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "d0d09004-c920-455d-aae7-272e670e6fd5",
@@ -8447,6 +9463,7 @@
       "countryCode": "MT"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8460,7 +9477,8 @@
     ],
     "locationFlag": null,
     "notes": "Malta per the monday.com profile; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "5399c02d-f5f4-413b-aabc-cb9f88ee7eac",
@@ -8484,6 +9502,7 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8501,7 +9520,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "a500bc40-7131-4c22-86fe-d8ad15a357e7",
@@ -8535,6 +9555,7 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8552,7 +9573,8 @@
     ],
     "locationFlag": null,
     "notes": "DACH arm of Xebia; no German address scraped. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "32da9dbe-e19e-4b76-9a81-a02b469bee35",
@@ -8576,6 +9598,7 @@
       "countryCode": "PH"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8593,7 +9616,8 @@
     ],
     "locationFlag": null,
     "notes": "Philippine (+63) phone numbers; no address scraped. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "e2963d88-cb77-44a3-8c68-99d9a1dfff5d",
@@ -8630,6 +9654,7 @@
       "countryCode": "SG"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8651,7 +9676,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "026ecf3b-4b95-4372-bf9e-b5f193949369",
@@ -8675,6 +9701,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "marketplace",
@@ -8684,7 +9711,8 @@
     ],
     "locationFlag": null,
     "notes": "No website listed on the profile. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "8da0f44f-a16e-4805-af41-5317ec781b08",
@@ -8713,6 +9741,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8730,7 +9759,8 @@
     ],
     "locationFlag": null,
     "notes": "Brazil per the monday.com profile; H&CO is a US-based (Miami) firm with offices across the Americas. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "c5f359d0-ca75-4a9b-82b1-dcce232235d9",
@@ -8759,6 +9789,7 @@
       "countryCode": "MX"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8772,7 +9803,8 @@
     ],
     "locationFlag": null,
     "notes": "Trades as IKONA. Surname from the profile slug; city inferred from the postcode (Costa de Oro, Boca del Río).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "1cb0dbf6-7169-4bbc-a1f3-10adcf32a343",
@@ -8796,6 +9828,7 @@
       "countryCode": "MX"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8809,7 +9842,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "a37ba3ee-253b-4708-b642-764237a091c9",
@@ -8838,6 +9872,7 @@
       "countryCode": "IL"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "marketplace",
@@ -8847,7 +9882,8 @@
     ],
     "locationFlag": null,
     "notes": "Trades as Kindaa; no website listed on the profile. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "8a7c001c-be9a-4da0-a86a-275a410127d3",
@@ -8876,6 +9912,7 @@
       "countryCode": "BG"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8893,7 +9930,8 @@
     ],
     "locationFlag": null,
     "notes": "Trades as Opsters; Bulgaria per the profile; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "9baf5f32-45c1-4640-820f-85fb6663ec30",
@@ -8904,7 +9942,7 @@
     "email": "contact@phoenixphos.com.au",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "PHOENIX PHOS",
     "contactName": null,
     "contactTitle": null,
     "alternativeContacts": [],
@@ -8917,6 +9955,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "71 320 452 144",
+        "name": "PHOENIX PHOS",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2048 NSW",
+        "url": "https://abr.business.gov.au/ABN/View/71320452144"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -8926,11 +9978,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/phoenix-phos",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/71320452144",
+        "id": "71 320 452 144",
+        "label": "ABN 71 320 452 144"
       }
     ],
     "locationFlag": null,
     "notes": "Australian company; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "dd25965f-cdfe-41f4-9d73-09074731e616",
@@ -8963,6 +10022,7 @@
       "countryCode": "IL"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -8976,7 +10036,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped; Israel per the profile. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "bd6477bc-cc39-40ab-90ed-089a757a8db2",
@@ -9000,6 +10061,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9013,7 +10075,8 @@
     ],
     "locationFlag": null,
     "notes": "Trades as Rota da Gestão; site could not be scraped. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "9a269351-5295-46cd-b434-1be44c9359cb",
@@ -9024,7 +10087,7 @@
     "email": "info@techtime-initiative.com.au",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "TECHTIME INITIATIVE AUSTRALIA PTY LTD",
     "contactName": "Irina Mosina",
     "contactTitle": "Founder, CEO",
     "alternativeContacts": [
@@ -9061,6 +10124,20 @@
         "countryCode": "NZ"
       }
     ],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "98 664 431 056",
+        "name": "TECHTIME INITIATIVE AUSTRALIA PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "4215 QLD",
+        "url": "https://abr.business.gov.au/ABN/View/98664431056"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -9074,11 +10151,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/techtime-initiative-group",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://abr.business.gov.au/ABN/View/98664431056",
+        "id": "98 664 431 056",
+        "label": "ABN 98 664 431 056"
       }
     ],
     "locationFlag": null,
     "notes": "The site lists Australian and New Zealand contact details; 10 Hutt Road may be in Petone, NZ (unconfirmed).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "6d04988f-75c3-49eb-ba99-28f88fcc647b",
@@ -9107,6 +10191,7 @@
       "countryCode": "AR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9120,7 +10205,8 @@
     ],
     "locationFlag": null,
     "notes": "Argentina per the profile; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "12223c40-4002-4949-809e-918d38ed83bc",
@@ -9149,6 +10235,20 @@
       "countryCode": "GB"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Companies House",
+        "jurisdiction": "Companies House",
+        "kind": "domestic",
+        "id": "14874318",
+        "name": "THE WORKFLOW PEOPLE LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "Building 1000 Cambridge Research Park, Waterbeach, England, CB25 9PD",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/14874318"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -9167,7 +10267,8 @@
     ],
     "locationFlag": null,
     "notes": "Companies House lists the director as Naomi Jane Pattis (UK-resident).",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "bfbbbfbd-95ab-4a6e-afc2-865f6abed34f",
@@ -9200,6 +10301,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9221,7 +10323,8 @@
     ],
     "locationFlag": null,
     "notes": "US company; the site also mentions India and Peru (delivery teams). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "c83ed185-962c-4687-9b10-0e8bfd4a2650",
@@ -9264,6 +10367,20 @@
         "countryCode": "US"
       }
     ],
+    "registrations": [
+      {
+        "register": "Israeli Registrar of Companies (data.gov.il)",
+        "jurisdiction": "Israeli Registrar of Companies (data.gov.il)",
+        "kind": "domestic",
+        "id": "515803914",
+        "name": "WEB3D GROUP LTD",
+        "companyType": null,
+        "status": "פעילה",
+        "registeredAgent": null,
+        "registeredAddress": "בר יהודה ישראל 300 חיפה",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22515803914%22%7D"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -9281,11 +10398,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/web3d",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22515803914%22%7D",
+        "id": "515803914",
+        "label": "Israeli company no. 515803914"
       }
     ],
     "locationFlag": null,
     "notes": "Israeli company (.co.il) with a New Jersey contact address. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "1795e794-c923-4dd8-8969-4f3fb7b4b22f",
@@ -9309,6 +10433,7 @@
       "countryCode": "CR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9322,7 +10447,8 @@
     ],
     "locationFlag": null,
     "notes": "Trades as Wikky; Costa Rica per the profile, with Costa Rican (+506) phone numbers. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "03ffe7e4-4823-4831-89ff-be41ed1c9f8a",
@@ -9346,6 +10472,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9359,7 +10486,8 @@
     ],
     "locationFlag": null,
     "notes": "US LLC per the profile; no address published, so where the team is based wasn't established. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "973c5bd0-b79c-479e-b47e-c89401634ea6",
@@ -9383,6 +10511,7 @@
       "countryCode": "BR"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9396,7 +10525,8 @@
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped; Brazil per the profile. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "d6d5ddd1-cee3-4782-b870-f0f96cf0e18f",
@@ -9420,6 +10550,7 @@
       "countryCode": "ES"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9433,7 +10564,8 @@
     ],
     "locationFlag": null,
     "notes": "Trades as CLAUMA (yourvirtualprojectmanager.com); Spain per the profile; no address published. Contact first name only. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "65967756-dc5d-402d-a8e6-04a04e431bc4",
@@ -9467,6 +10599,7 @@
         "countryCode": "PK"
       }
     ],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9488,7 +10621,8 @@
     ],
     "locationFlag": "possible-offshore",
     "notes": "Possible offshore company: no UK company of this name exists on Companies House, and the site lists a Pakistan office (Islamabad) with Pakistani (+92) phone numbers alongside the Birmingham address.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "98ec6f51-4b58-435d-b583-ee2e3b36d6c2",
@@ -9517,6 +10651,20 @@
       "countryCode": "GB"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "Companies House",
+        "jurisdiction": "Companies House",
+        "kind": "domestic",
+        "id": "13907813",
+        "name": "ENTLIX LIMITED",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "Beech House 23 Ladies Lane, Hindley, Wigan, United Kingdom, WN2 2QA",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/13907813"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -9535,7 +10683,8 @@
     ],
     "locationFlag": null,
     "notes": "Director UK-resident per Companies House.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "170bd8ab-e494-4a38-ac5a-862af11ebdc3",
@@ -9559,6 +10708,7 @@
       "countryCode": "CA"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9576,7 +10726,8 @@
     ],
     "locationFlag": null,
     "notes": "Canadian company; no address published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "0d5560be-a7cb-4c64-ae50-e71224b03664",
@@ -9600,6 +10751,20 @@
       "countryCode": "AU"
     },
     "alternativeAddresses": [],
+    "registrations": [
+      {
+        "register": "ABN Lookup (Australian Business Register)",
+        "jurisdiction": "ABN Lookup (Australian Business Register)",
+        "kind": "domestic",
+        "id": "13 629 524 572",
+        "name": "MINT CONSULTING AUSTRALIA PTY LTD",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "2141 NSW",
+        "url": "https://abr.business.gov.au/ABN/View/13629524572"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -9623,7 +10788,8 @@
     ],
     "locationFlag": null,
     "notes": "Contact name from the profile slug.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "f13b3d26-99c5-4f03-bacc-71e8a6135020",
@@ -9652,6 +10818,7 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9673,7 +10840,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "f0abc6e8-35fe-44e0-929d-325753ea358b",
@@ -9697,6 +10865,7 @@
       "countryCode": "GB"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9714,7 +10883,8 @@
     ],
     "locationFlag": null,
     "notes": "UK mobile (+44) number only; contact name from the profile slug; the site mentions the Netherlands. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "402f1ac4-b046-4a26-9a65-50e876dd62e1",
@@ -9738,6 +10908,7 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9759,7 +10930,8 @@
     ],
     "locationFlag": "registered-agent",
     "notes": "The only published address is a Wyoming registered-agent address; where the team is based wasn't established.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   },
   {
     "id": "495b4e24-8393-4ead-b9ce-22279f4fa2a0",
@@ -9783,6 +10955,7 @@
       "countryCode": "TH"
     },
     "alternativeAddresses": [],
+    "registrations": [],
     "sources": [
       {
         "type": "website",
@@ -9800,6 +10973,7 @@
     ],
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US profile: a US LLC, but the founder is based in Thailand (per the team page); Phuket address as for BeeLabX (vendor 10000044), the same company.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": null
   }
 ]

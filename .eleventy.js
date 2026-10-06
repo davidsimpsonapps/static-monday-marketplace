@@ -9,6 +9,14 @@ const { join } = require("path");
 const { minify } = require("terser");
 
 module.exports = async function (eleventyConfig) {
+  // Load local settings (e.g. SKIP_REVIEWS=true) from ./.env when present.
+  // .env is gitignored; in CI there's no file and nothing changes.
+  try {
+    process.loadEnvFile(); // Node 20.12+
+  } catch {
+    // no .env file
+  }
+
   // const { getName } = await import("country-list");
   const country = require("countryjs");
   // countryjs lacks a few newer codes (e.g. RS, ME), so fall back to the

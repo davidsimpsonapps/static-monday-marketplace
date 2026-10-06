@@ -53,6 +53,20 @@
           {% endfor %}
         </dd>
       {% endif %}
+      {% if details and details.registrations and details.registrations.length %}
+        <dt class="text-gray-500">Registrations</dt>
+        <dd class="space-y-1">
+          {% for reg in details.registrations %}
+            <div>
+              <a href="{{ reg.url }}" target="_blank" rel="nofollow noreferer noopener" class="text-blue-600 hover:text-blue-800">{{ reg.jurisdiction }}</a>
+              <span class="text-gray-600">({{ 'home' if reg.kind == 'domestic' else 'foreign registration' }})</span>
+              {% if reg.id %}· no. {{ reg.id }}{% endif %}{% if reg.companyType %} · {{ reg.companyType }}{% endif %}{% if reg.status %} · {{ reg.status }}{% endif %}
+              {% if reg.registeredAgent %}<br><span class="text-gray-600 text-xs">Registered agent: {{ reg.registeredAgent }}</span>{% endif %}
+              {% if reg.registeredAddress %}<br><span class="text-gray-600 text-xs">Registered address: {{ reg.registeredAddress }}</span>{% endif %}
+            </div>
+          {% endfor %}
+        </dd>
+      {% endif %}
       {% if website %}
         <dt class="text-gray-500">Website</dt>
         <dd><a href="{{ website }}" target="_blank" rel="nofollow noreferer noopener" class="text-blue-600 hover:text-blue-800 break-all">{{ website }}</a></dd>
