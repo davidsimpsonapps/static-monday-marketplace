@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:15:30.000Z
+updatedAt: 2026-10-06T13:31:28.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -12,7 +12,7 @@ The Developer Center is a one-stop-shop to manage your [monday apps](https://dev
 
 # Access the Developer Center
 
-1. Open your monday.com account or [sign up for a free developer account](https://developer.monday.com/api-reference/docs/developer-sandbox-account)!
+1. Open your monday.com account or [sign up for a free developer account](https://developer.monday.com/api-reference/docs/developer-sandbox)!
 2. Click your profile picture in the top right corner.
 3. Select **Developers**.
 4. This will open the Developer Center in a new tab.

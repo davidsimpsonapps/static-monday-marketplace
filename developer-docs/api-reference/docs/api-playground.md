@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:31:25.000Z
+updatedAt: 2026-10-06T13:31:28.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -12,7 +12,7 @@ The API playground is the best place to learn, develop, and test your GraphQL re
 
 # Access the playground
 
-If you're already logged into a monday.com account, you can access the playground without needing to re-authenticate. If you don't have an account yet, create a free [developer account](https://developer.monday.com/api-reference/docs/developer-sandbox-account) first.
+If you're already logged into a monday.com account, you can access the playground without needing to re-authenticate. If you don't have an account yet, create a free [developer account](https://developer.monday.com/api-reference/docs/developer-sandbox) first.
 
 1. Open the [Developer Center](https://developer.monday.com/api-reference/docs/the-developer-center#access-the-developer-center).
 2. Click **API playground** from the left-side menu.

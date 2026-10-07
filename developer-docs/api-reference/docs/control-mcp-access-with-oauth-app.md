@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-07T09:03:39.000Z
+updatedAt: 2026-10-06T13:36:19.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -26,8 +26,9 @@ The same credentials work with other MCP clients that support custom OAuth conne
 Instead of relying on monday.com's shared hosted connector, you:
 
 1. Register your own OAuth app in the monday.com developer platform and get a Client ID and Client Secret
-2. Turn off the hosted MCP connector for your account
-3. Give the app's credentials only to your approved users, who add monday.com as a custom connector in their AI agent, pointing at the same MCP endpoint
+2. Turn on **New OAuth flow** under **Build → OAuth & Permissions** — required to connect to MCP with a custom app
+3. Turn off the hosted MCP connector for your account
+4. Give the app's credentials only to your approved users, who add monday.com as a custom connector in their AI agent, pointing at the same MCP endpoint
 
 Your app now controls the connection — not the shared hosted integration.
 
@@ -60,8 +61,13 @@ The monday MCP server uses the standard **OAuth 2.0 Authorization Code Grant**, 
 ### Configure OAuth settings
 
 1. In the left sidebar under **Build**, click **OAuth & Permissions**
-2. On the **Scopes** tab, select only the [permission scopes](https://developer.monday.com/apps/docs/oauth#set-up-permission-scopes) your integration needs — these scopes cap what the MCP connection can do, even when the user has broader permissions in monday.com (add all during testing)
-3. Switch to the **Redirect URLs** tab and add your callback URL — the URL where monday.com sends authorization codes — then click **Save**
+2. Open **New OAuth flow** and switch the toggle **on**. You must turn this on to connect to MCP with a custom app — while the toggle is off, the app cannot authenticate to the MCP server
+3. On the **Scopes** tab, select only the [permission scopes](https://developer.monday.com/apps/docs/oauth#set-up-permission-scopes) your integration needs — these scopes cap what the MCP connection can do, even when the user has broader permissions in monday.com (add all during testing)
+4. Switch to the **Redirect URLs** tab and add your callback URL — the URL where monday.com sends authorization codes — then click **Save**
+
+<Callout icon="🚧" theme="warn">
+  **New OAuth flow must be on.** Find it on your app under **Build → OAuth & Permissions → New OAuth flow**. Switch the toggle on before you connect. A custom app cannot connect to MCP while this toggle is off.
+</Callout>
 
 ### Retrieve your credentials
 

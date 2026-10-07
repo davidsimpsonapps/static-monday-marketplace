@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:34:10.000Z
+updatedAt: 2026-09-29T12:13:31.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -28,10 +28,66 @@ An object containing the aggregation query to execute.
 
 An object containing the source table and its ID for the aggregation query.
 
-| Field | Type                        | Description                                           | Enum Values |
-| :---- | :-------------------------- | :---------------------------------------------------- | :---------- |
-| id    | `ID!`                       | The unique identifier of the source (e.g., board ID). |             |
-| type  | `AggregateFromElementType!` | The source type.                                      | `TABLE`     |
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Enum Values
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        id
+      </td>
+
+      <td>
+        `ID!`
+      </td>
+
+      <td>
+        The unique identifier of the source (e.g., board ID).
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        type
+      </td>
+
+      <td>
+        `AggregateFromElementType!`
+      </td>
+
+      <td>
+        The source type.
+      </td>
+
+      <td>
+        `TABLE`  
+        `DATA_VIEW` (version `2027-01` and later)
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## AggregateGroupByElementInput
 

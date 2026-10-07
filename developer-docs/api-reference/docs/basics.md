@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:31:25.000Z
+updatedAt: 2026-10-06T13:31:28.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -188,7 +188,7 @@ With the monday apps framework, developers can package their own web apps and in
 
 **Viewers**, users who have been deactivated or disabled, users with unconfirmed emails, or users on student accounts **cannot** access the API.
 
-For building and testing apps or API integrations without touching production data, use a free [developer account](https://developer.monday.com/api-reference/docs/developer-sandbox-account).
+For building and testing apps or API integrations without touching production data, use a free [developer account](https://developer.monday.com/api-reference/docs/developer-sandbox).
 
 # What monday products does the API support?
 
