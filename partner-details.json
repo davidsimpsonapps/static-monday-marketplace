@@ -1364,7 +1364,7 @@
     "locationFlag": null,
     "notes": "Site could not be scraped; legal name from the partner name. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "f41cbc1d-9501-4342-91f9-3fd742d34b55",
@@ -1638,7 +1638,7 @@
     "locationFlag": null,
     "notes": "Mexican arm of hiberus (Spanish group); no Mexican address published. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "8788c9d5-47e5-4216-9fdc-001dc07f8913",
@@ -1681,7 +1681,7 @@
     "locationFlag": null,
     "notes": "South Korea per the monday.com profile. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "4acd2b4c-d5d6-4216-a68e-0a59b013aded",
@@ -1759,7 +1759,7 @@
     "locationFlag": null,
     "notes": "African arm of the Dutch Incentro group; no address published. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "80c95b30-a445-4efd-a066-0997c5de40e4",
@@ -2735,7 +2735,7 @@
     "locationFlag": null,
     "notes": "Argentine company (profile and site content); only Mexico and Miami office addresses are published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "0f1dd31a-ece9-44bc-a608-f2a22e820c02",
@@ -3383,7 +3383,20 @@
         "countryCode": "FR"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Belgium)",
+        "jurisdiction": "Belgium",
+        "kind": "domestic",
+        "id": "0744742640",
+        "name": "Tryve Belgium",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/be/0744742640"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -3407,12 +3420,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/tryve",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/be/0744742640",
+        "id": "0744742640",
+        "label": "Belgium company no. 0744742640 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "The monday.com profile says Netherlands, but the registered office is in Edegem, Belgium.",
     "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "fd296931-6ee6-499a-9ed9-ba4dd24888e5",
@@ -4084,7 +4103,7 @@
     "locationFlag": null,
     "notes": "Netherlands per the monday.com profile; Xebia moved its global HQ to Atlanta in 2023. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "29b6b131-3652-426c-8994-cd9ab9c7e49b",
@@ -4631,7 +4650,7 @@
     "locationFlag": null,
     "notes": "Spanish arm of The Adaptavist Group; no Spanish address published. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "e7831dae-c76a-492f-a5f2-42c14148c93d",
@@ -4736,7 +4755,7 @@
     "locationFlag": null,
     "notes": "Latin American arm of CarbonWeb (US); Costa Rica per the monday.com profile; Ecuador (+593) phone numbers on the site. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "11c61ec8-ebeb-4166-8d01-da24df107537",
@@ -4753,9 +4772,9 @@
     "alternativeContacts": [],
     "address": {
       "street": null,
-      "city": null,
-      "region": null,
-      "postalCode": null,
+      "city": "Bengaluru",
+      "region": "Karnataka",
+      "postalCode": "560067",
       "country": "India",
       "countryCode": "IN"
     },
@@ -4779,7 +4798,20 @@
         "countryCode": "US"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (India)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72900KA2021PTC144740",
+        "name": "CLOUDCACHE CONSULTING PRIVATE LIMITED",
+        "companyType": "Company limited by Shares",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "FLAT NO C1, 2084 SOBHA AVENUE APARTMENT DODDABANAHALLI VILLAGE, KANNAMANGALA POS BANGALORE Bangalore KA 560067, India",
+        "url": "https://opencorporates.com/companies/in/U72900KA2021PTC144740"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -4793,12 +4825,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/cloudcache-consulting-pvt-ltd",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/in/U72900KA2021PTC144740",
+        "id": "U72900KA2021PTC144740",
+        "label": "India company no. U72900KA2021PTC144740 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Indian company that publishes only UK and US service addresses (128 City Road is a registered-office service; 8 The Green is a Delaware registered agent). Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "1c62d1df-1188-4acf-8feb-bd8108e3817b",
@@ -5168,7 +5206,7 @@
     "locationFlag": null,
     "notes": "Taiwanese company (.com.tw); no address published. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "52b03c3b-03c4-4937-a54b-24098d3c9d77",
@@ -5449,7 +5487,7 @@
       }
     ],
     "address": {
-      "street": "6th floor",
+      "street": "Työpajankatu 13 A, 6th floor",
       "city": "Helsinki",
       "region": null,
       "postalCode": "00580",
@@ -5467,7 +5505,20 @@
         "countryCode": "FI"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Finland)",
+        "jurisdiction": "Finland",
+        "kind": "domestic",
+        "id": "2348291-1",
+        "name": "Gapps Oy",
+        "companyType": "Osakeyhtiö",
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": "Työpajankatu 13 A, HELSINKI, 00580, Finland",
+        "url": "https://opencorporates.com/companies/fi/2348291-1"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -5485,12 +5536,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/gapps-oy",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/fi/2348291-1",
+        "id": "2348291-1",
+        "label": "Finland company no. 2348291-1 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Part of Gapps Group Oy.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "f9d6e2a4-fa0f-49b0-a996-4b95a2e24ab1",
@@ -5519,7 +5576,20 @@
       "countryCode": "JP"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Japan)",
+        "jurisdiction": "Japan",
+        "kind": "domestic",
+        "id": "2011201012260",
+        "name": "株式会社ギャプライズ",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/jp/2011201012260"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -5533,12 +5603,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/gaprise-inc",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/jp/2011201012260",
+        "id": "2011201012260",
+        "label": "Japan company no. 2011201012260 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Japanese company; names kept in Japanese as published. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "3adefdc3-c514-4d0e-9f25-64a45a381f3f",
@@ -5658,7 +5734,7 @@
     "locationFlag": null,
     "notes": "Philippines per the profile; no address published. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "50266c20-6079-480e-8279-bdb15f48b93d",
@@ -5711,7 +5787,7 @@
     "locationFlag": null,
     "notes": "Street names truncated on the site.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "7ba6f835-6e8c-4821-bc9d-8e09644e6024",
@@ -5754,7 +5830,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "2309c7b0-887c-4b2f-ada6-4862def819c0",
@@ -5894,7 +5970,7 @@
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "f829e556-27dd-4b7c-a1af-8ab7cc63ec66",
@@ -5937,7 +6013,7 @@
     "locationFlag": null,
     "notes": "The site also lists Uruguay, Paraguay, Argentina and Chile phone numbers. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "d1c12786-ad59-4ae4-bdd8-1c876a9244d5",
@@ -5970,7 +6046,20 @@
       "countryCode": "CZ"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Czech Republic)",
+        "jurisdiction": "Czech Republic",
+        "kind": "domestic",
+        "id": "27907147",
+        "name": "Intelligent Studios s.r.o.",
+        "companyType": "Společnost s ručením omezeným",
+        "status": "Aktivní",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/cz/27907147"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -5984,12 +6073,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/intelligent-studios",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/cz/27907147",
+        "id": "27907147",
+        "label": "Czech Republic company no. 27907147 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Czech (+420) phone numbers; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "723c448f-4fb6-407a-9869-23af15277851",
@@ -6043,7 +6138,7 @@
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "636ab73f-f5ed-4f30-8fa6-fa385d75c629",
@@ -6059,7 +6154,7 @@
     "contactTitle": "CEO (sole board member)",
     "alternativeContacts": [],
     "address": {
-      "street": null,
+      "street": "Unterfeldring 6",
       "city": "Vierkirchen",
       "region": null,
       "postalCode": "85256",
@@ -6067,7 +6162,20 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Germany)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "D5701V_HRB4866",
+        "name": "MicroNova AG",
+        "companyType": "Aktiengesellschaft",
+        "status": "Currently Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Bischof-Buchberger-Straße 23, 85305 Jetzendorf",
+        "url": "https://opencorporates.com/companies/de/D5701V_HRB4866"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -6081,12 +6189,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/micronova",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/de/D5701V_HRB4866",
+        "id": "D5701V_HRB4866",
+        "label": "Germany company no. D5701V_HRB4866 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "dcb3f4a5-beff-4542-a580-54b5859c003a",
@@ -6125,7 +6239,7 @@
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "ec6fec7c-2ab2-460a-a002-86eb2847ed2c",
@@ -6164,7 +6278,7 @@
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "f6af4686-be15-468e-ad3c-8c78691fde82",
@@ -6213,7 +6327,7 @@
     "locationFlag": null,
     "notes": "South Korean company. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "ae01ba2c-bbf5-47bd-a155-6a979e005cdf",
@@ -6262,7 +6376,7 @@
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "396b5f1a-28ea-49f0-ad7a-c08982016fe0",
@@ -6359,7 +6473,7 @@
     "locationFlag": null,
     "notes": "Chilean arm of SEIDOR (Spain); no Chilean address published. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "a7f0436b-89a0-47a2-8418-d63c4de7ec59",
@@ -6481,7 +6595,7 @@
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "0f8e22ad-fee6-4d08-9060-7a3abeb99bf5",
@@ -6648,7 +6762,7 @@
     "locationFlag": null,
     "notes": "Trades as Ximble (formerly The Sales Studio); Dutch (+31) phone numbers, no address published. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "b41edbc9-fa04-4e9a-b5a5-804643310009",
@@ -6758,7 +6872,7 @@
     "locationFlag": null,
     "notes": "Japanese LLC (gōdō kaisha). Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "8f50e2b5-03a0-4b58-a099-4fba07d533f9",
@@ -6801,7 +6915,7 @@
     "locationFlag": null,
     "notes": "The site footer also mentions Execute Strategy, Inc. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "05cfda6e-d97b-4391-b93f-3c6fca8dd278",

@@ -283,6 +283,7 @@ async function opencorporates(cc, name, { details = true, onlyNames = null, maxD
       rec.status = after("Status", 1) || rec.status;
       rec.companyType = after("Company Type", 1);
       rec.address = after("Registered Address");
+      if (rec.address && /\[\{:|=>/.test(rec.address)) rec.address = null; // raw Ruby hash from some CZ/SK records
       rec.agent = after("Agent Name", 1);
       rec.agentAddress = after("Agent Address");
       const branch = after("Branch", 2);

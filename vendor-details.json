@@ -896,9 +896,7 @@
     "vendorId": 10,
     "name": "DocuGen, Inc.",
     "tier": "Gold",
-    "partnerIds": [
-      "aa848b93-7648-4610-a195-3b35a36f9e49"
-    ],
+    "partnerIds": ["aa848b93-7648-4610-a195-3b35a36f9e49"],
     "legalName": "DocuGen, Inc.",
     "contactName": "Sami Caracand",
     "contactTitle": "Founder",
@@ -955,9 +953,7 @@
     "vendorId": 6,
     "name": "Omnidea S.r.l.",
     "tier": "Gold",
-    "partnerIds": [
-      "58d49bd9-6e08-4200-9ceb-e3d2a8ac0893"
-    ],
+    "partnerIds": ["58d49bd9-6e08-4200-9ceb-e3d2a8ac0893"],
     "legalName": "Omnidea S.r.l. a socio unico",
     "contactName": "Roberto Tremonti",
     "contactTitle": null,
@@ -1488,9 +1484,7 @@
     "vendorId": 10000016,
     "name": "Unitask Ltd",
     "tier": "Silver",
-    "partnerIds": [
-      "fd296931-6ee6-499a-9ed9-ba4dd24888e5"
-    ],
+    "partnerIds": ["fd296931-6ee6-499a-9ed9-ba4dd24888e5"],
     "legalName": "Unitask Ltd",
     "contactName": "Adar Rubin",
     "contactTitle": "CEO",
@@ -1553,9 +1547,7 @@
     "vendorId": 100000000,
     "name": "KPMG - Israel",
     "tier": "Silver",
-    "partnerIds": [
-      "158b0042-3499-41d1-8529-145fb4cb606a"
-    ],
+    "partnerIds": ["158b0042-3499-41d1-8529-145fb4cb606a"],
     "legalName": "KPMG Somekh Chaikin",
     "contactName": null,
     "contactTitle": null,
@@ -1931,9 +1923,7 @@
     "vendorId": 10000233,
     "name": "Mint Consulting Australia",
     "tier": "Bronze",
-    "partnerIds": [
-      "0d5560be-a7cb-4c64-ae50-e71224b03664"
-    ],
+    "partnerIds": ["0d5560be-a7cb-4c64-ae50-e71224b03664"],
     "legalName": "Mint Consulting Australia Pty Ltd",
     "contactName": "Bruce Gosk",
     "contactTitle": "monday.com Practice Lead",
@@ -2114,9 +2104,7 @@
     "vendorId": 10000208,
     "name": "The SaaSy People",
     "tier": "Bronze",
-    "partnerIds": [
-      "f4d1c571-a49f-493e-8488-caf8e37aeb21"
-    ],
+    "partnerIds": ["f4d1c571-a49f-493e-8488-caf8e37aeb21"],
     "legalName": "The SaaSy People Ltd",
     "contactName": "Reece Harry Couchman",
     "contactTitle": "Director",
@@ -2594,9 +2582,7 @@
     "vendorId": 10000164,
     "name": "Mediaposte Martech",
     "tier": "Bronze",
-    "partnerIds": [
-      "723c448f-4fb6-407a-9869-23af15277851"
-    ],
+    "partnerIds": ["723c448f-4fb6-407a-9869-23af15277851"],
     "legalName": "Mediaposte Martech SRL",
     "contactName": "Anca Racu",
     "contactTitle": "Head of Implementation",
@@ -2641,9 +2627,7 @@
     "vendorId": 10000162,
     "name": "Workflow Magic",
     "tier": "Bronze",
-    "partnerIds": [
-      "d9cde900-7386-4ad8-bd9b-1b964d4ffd30"
-    ],
+    "partnerIds": ["d9cde900-7386-4ad8-bd9b-1b964d4ffd30"],
     "legalName": "Monday Magic LLC",
     "contactName": "Lydia Abbott",
     "contactTitle": "Founder & CEO",
@@ -2908,9 +2892,7 @@
     "vendorId": 10000152,
     "name": "Tryve",
     "tier": "Bronze",
-    "partnerIds": [
-      "7845f92e-0b98-47eb-ad93-e1bfdd4db909"
-    ],
+    "partnerIds": ["7845f92e-0b98-47eb-ad93-e1bfdd4db909"],
     "legalName": "Localyse Workplace NV",
     "contactName": "Lorentz Verstraete",
     "contactTitle": "CEO",
@@ -3682,9 +3664,7 @@
     "vendorId": 10000073,
     "name": "Work Perfect",
     "tier": "Bronze",
-    "partnerIds": [
-      "d09f2b86-6ab2-40df-858a-3039139ae967"
-    ],
+    "partnerIds": ["d09f2b86-6ab2-40df-858a-3039139ae967"],
     "legalName": "Work Perfect Group Pty Ltd",
     "contactName": "Sha Bharadwaj",
     "contactTitle": "Managing Director",
@@ -3957,9 +3937,7 @@
     "vendorId": 10000044,
     "name": "BeeLabX",
     "tier": "Bronze",
-    "partnerIds": [
-      "495b4e24-8393-4ead-b9ce-22279f4fa2a0"
-    ],
+    "partnerIds": ["495b4e24-8393-4ead-b9ce-22279f4fa2a0"],
     "legalName": "WME Solutions Co., Ltd",
     "contactName": "Eddy Azoulay",
     "contactTitle": "Partner",
@@ -4376,9 +4354,7 @@
     "vendorId": 38,
     "name": "Luxie Tech",
     "tier": "Bronze",
-    "partnerIds": [
-      "2c0cfd7b-dacc-40bd-8611-ae4ccd2e10dc"
-    ],
+    "partnerIds": ["2c0cfd7b-dacc-40bd-8611-ae4ccd2e10dc"],
     "legalName": "Luxie Tech",
     "contactName": null,
     "contactTitle": null,
@@ -4427,9 +4403,7 @@
     "vendorId": 34,
     "name": "Deviniti Sp. z o.o.",
     "tier": "Bronze",
-    "partnerIds": [
-      "564dffba-699d-43e0-9697-536a7e26e5b2"
-    ],
+    "partnerIds": ["564dffba-699d-43e0-9697-536a7e26e5b2"],
     "legalName": "Deviniti Sp. z o.o.",
     "contactName": "Piotr Dorosz",
     "contactTitle": "CEO",
@@ -4476,9 +4450,7 @@
     "vendorId": 31,
     "name": "Eligeo CRM Inc",
     "tier": "Bronze",
-    "partnerIds": [
-      "d95d171a-ef1e-4c62-bb24-4ff38e9dc2d9"
-    ],
+    "partnerIds": ["d95d171a-ef1e-4c62-bb24-4ff38e9dc2d9"],
     "legalName": "Eligeo CRM Inc",
     "contactName": "Derek Major",
     "contactTitle": "Founder & CEO",
@@ -5108,9 +5080,7 @@
     "vendorId": 10000099,
     "name": "Lanum Tecnologia",
     "tier": null,
-    "partnerIds": [
-      "7172a50e-470d-46b4-bd12-754a8e98047b"
-    ],
+    "partnerIds": ["7172a50e-470d-46b4-bd12-754a8e98047b"],
     "legalName": "Lanum Tecnologia",
     "contactName": null,
     "contactTitle": null,
@@ -5756,9 +5726,7 @@
     "vendorId": 30,
     "name": "Polished Geek",
     "tier": null,
-    "partnerIds": [
-      "643cf228-253f-47be-9c0a-873e01cf3eb0"
-    ],
+    "partnerIds": ["643cf228-253f-47be-9c0a-873e01cf3eb0"],
     "legalName": "Polished Geek LLC",
     "contactName": "Deborah Cinkus",
     "contactTitle": "Manager/Member",
@@ -6189,9 +6157,7 @@
     "vendorId": 53,
     "name": "Synolia",
     "tier": null,
-    "partnerIds": [
-      "853adc4f-36f3-4704-9243-dd89d3bb9c8b"
-    ],
+    "partnerIds": ["853adc4f-36f3-4704-9243-dd89d3bb9c8b"],
     "legalName": "Synolia",
     "contactName": "Romain André",
     "contactTitle": "CEO of the Synolia Group",
@@ -6263,9 +6229,7 @@
     "vendorId": 40,
     "name": "tmnxt",
     "tier": null,
-    "partnerIds": [
-      "b2fe3545-207e-48d2-be62-0cd5acd6a42b"
-    ],
+    "partnerIds": ["b2fe3545-207e-48d2-be62-0cd5acd6a42b"],
     "legalName": "DEMICON GmbH",
     "contactName": "Dmitry Rasin",
     "contactTitle": null,
@@ -7925,9 +7889,7 @@
     "vendorId": 100000032,
     "name": "Transfunnel Consulting Pvt Ltd",
     "tier": null,
-    "partnerIds": [
-      "2ef4b1b7-abd5-4574-8889-bfad8e63be6d"
-    ],
+    "partnerIds": ["2ef4b1b7-abd5-4574-8889-bfad8e63be6d"],
     "legalName": "Transfunnel Consulting Private Limited",
     "contactName": null,
     "contactTitle": null,
@@ -7971,9 +7933,7 @@
     "vendorId": 10000218,
     "name": "Worktables",
     "tier": null,
-    "partnerIds": [
-      "0cfc2b14-8700-4451-9c0e-684b86a5c443"
-    ],
+    "partnerIds": ["0cfc2b14-8700-4451-9c0e-684b86a5c443"],
     "legalName": "Worktables",
     "contactName": null,
     "contactTitle": null,
@@ -8033,9 +7993,7 @@
     "vendorId": 10000036,
     "name": "iNet Process",
     "tier": null,
-    "partnerIds": [
-      "80c95b30-a445-4efd-a066-0997c5de40e4"
-    ],
+    "partnerIds": ["80c95b30-a445-4efd-a066-0997c5de40e4"],
     "legalName": "iNet Process",
     "contactName": null,
     "contactTitle": null,
@@ -9367,9 +9325,7 @@
     "vendorId": 10000088,
     "name": "Blinno GmbH",
     "tier": null,
-    "partnerIds": [
-      "c579cf25-d8de-4962-a6a0-0e66ed6fb1c7"
-    ],
+    "partnerIds": ["c579cf25-d8de-4962-a6a0-0e66ed6fb1c7"],
     "legalName": "Blinno GmbH",
     "contactName": null,
     "contactTitle": null,
@@ -9448,9 +9404,7 @@
     "vendorId": 10000270,
     "name": "mutherboard.com",
     "tier": null,
-    "partnerIds": [
-      "721a355c-03c8-4a7f-a298-bf3d2d97a8ce"
-    ],
+    "partnerIds": ["721a355c-03c8-4a7f-a298-bf3d2d97a8ce"],
     "legalName": "mutherboard.com Ltd.",
     "contactName": "Tania Benade",
     "contactTitle": "Managing Director",
@@ -11285,9 +11239,7 @@
     "vendorId": 10000131,
     "name": "AXANEXA",
     "tier": null,
-    "partnerIds": [
-      "3e02edf8-d4ad-4c4a-b5db-e9e04279c9ed"
-    ],
+    "partnerIds": ["3e02edf8-d4ad-4c4a-b5db-e9e04279c9ed"],
     "legalName": "AXANEXA LLC",
     "contactName": "John Hu",
     "contactTitle": "Founder & President",
@@ -11419,9 +11371,7 @@
     "vendorId": 10000261,
     "name": "Inteli-k",
     "tier": null,
-    "partnerIds": [
-      "d2b1e3df-a72e-4b3e-8cba-5a2c63500e79"
-    ],
+    "partnerIds": ["d2b1e3df-a72e-4b3e-8cba-5a2c63500e79"],
     "legalName": "Inteli-k",
     "contactName": null,
     "contactTitle": null,
@@ -11511,9 +11461,7 @@
     "vendorId": 10000084,
     "name": "CapabilitySource",
     "tier": null,
-    "partnerIds": [
-      "e7831dae-c76a-492f-a5f2-42c14148c93d"
-    ],
+    "partnerIds": ["e7831dae-c76a-492f-a5f2-42c14148c93d"],
     "legalName": "CapabilitySource Inc.",
     "contactName": "Glenn Coward",
     "contactTitle": null,
@@ -11787,9 +11735,7 @@
     "vendorId": 100000005,
     "name": "Access Lab, LLC",
     "tier": null,
-    "partnerIds": [
-      "bc1bc116-0acb-4018-aabb-6cfa92f9bb50"
-    ],
+    "partnerIds": ["bc1bc116-0acb-4018-aabb-6cfa92f9bb50"],
     "legalName": "Access Lab, LLC",
     "contactName": "Daisuke Okuda",
     "contactTitle": "Director & Founder",
@@ -12417,9 +12363,7 @@
     "vendorId": 100000125,
     "name": "Solo network",
     "tier": null,
-    "partnerIds": [
-      "fa90c2bb-99cf-42a1-a8a7-097d8f7f085d"
-    ],
+    "partnerIds": ["fa90c2bb-99cf-42a1-a8a7-097d8f7f085d"],
     "legalName": "Solo network",
     "contactName": "Tacisio Coelho",
     "contactTitle": null,
@@ -13166,9 +13110,7 @@
     "vendorId": 100000045,
     "name": "YEP Solutions LTD",
     "tier": null,
-    "partnerIds": [
-      "4c799b86-07ce-4f11-956f-ad8294c7d82f"
-    ],
+    "partnerIds": ["4c799b86-07ce-4f11-956f-ad8294c7d82f"],
     "legalName": "YEP Solutions LTD",
     "contactName": null,
     "contactTitle": null,
@@ -13408,9 +13350,7 @@
     "vendorId": 10000266,
     "name": "Quirk",
     "tier": null,
-    "partnerIds": [
-      "396b5f1a-28ea-49f0-ad7a-c08982016fe0"
-    ],
+    "partnerIds": ["396b5f1a-28ea-49f0-ad7a-c08982016fe0"],
     "legalName": "Quirk Consulting Pty Ltd.",
     "contactName": null,
     "contactTitle": null,
@@ -13672,9 +13612,7 @@
     "vendorId": 10000070,
     "name": "OBO",
     "tier": null,
-    "partnerIds": [
-      "eadb95a6-41fd-4c4d-8792-db8b9ee31c26"
-    ],
+    "partnerIds": ["eadb95a6-41fd-4c4d-8792-db8b9ee31c26"],
     "legalName": "The OBO Group",
     "contactName": "J. Skrzypczak",
     "contactTitle": null,
@@ -13847,9 +13785,7 @@
     "vendorId": 100000115,
     "name": "Enablen-apps ApS",
     "tier": null,
-    "partnerIds": [
-      "b175ed44-470a-4ef1-af7e-40a274280560"
-    ],
+    "partnerIds": ["b175ed44-470a-4ef1-af7e-40a274280560"],
     "legalName": "EnableN Consulting ApS",
     "contactName": null,
     "contactTitle": null,
@@ -13879,9 +13815,7 @@
     "vendorId": 100000111,
     "name": "Ified Inc",
     "tier": null,
-    "partnerIds": [
-      "8788c9d5-47e5-4216-9fdc-001dc07f8913"
-    ],
+    "partnerIds": ["8788c9d5-47e5-4216-9fdc-001dc07f8913"],
     "legalName": "IFIED, Inc.",
     "contactName": null,
     "contactTitle": null,
@@ -13915,9 +13849,7 @@
     "vendorId": 100000192,
     "name": "upstream Apps",
     "tier": null,
-    "partnerIds": [
-      "2c0cfd7b-dacc-40bd-8611-ae4ccd2e10dc"
-    ],
+    "partnerIds": ["2c0cfd7b-dacc-40bd-8611-ae4ccd2e10dc"],
     "legalName": "Jack Taylor Group Pty Ltd",
     "contactName": "Mitchell Hudson",
     "contactTitle": "Chief Technology Officer",
@@ -14010,9 +13942,7 @@
     "vendorId": 100000193,
     "name": "CloudCache Consulting pvt ltd",
     "tier": null,
-    "partnerIds": [
-      "11c61ec8-ebeb-4166-8d01-da24df107537"
-    ],
+    "partnerIds": ["11c61ec8-ebeb-4166-8d01-da24df107537"],
     "legalName": "Cloudcache Consulting Private Limited",
     "contactName": "Vivek Singh",
     "contactTitle": "Chief Technical Officer",
@@ -14065,9 +13995,7 @@
     "vendorId": 10000207,
     "name": "CXLABS",
     "tier": null,
-    "partnerIds": [
-      "1c62d1df-1188-4acf-8feb-bd8108e3817b"
-    ],
+    "partnerIds": ["1c62d1df-1188-4acf-8feb-bd8108e3817b"],
     "legalName": "CXLABS Sp. z o.o.",
     "contactName": "Artur Górniak",
     "contactTitle": "CEO + Founder",
@@ -14124,9 +14052,7 @@
     "vendorId": 10000256,
     "name": "Intelligent Studios s.r.o.",
     "tier": null,
-    "partnerIds": [
-      "d1c12786-ad59-4ae4-bdd8-1c876a9244d5"
-    ],
+    "partnerIds": ["d1c12786-ad59-4ae4-bdd8-1c876a9244d5"],
     "legalName": "Intelligent Studios s.r.o.",
     "contactName": "Martin Jaros",
     "contactTitle": "CEO",
@@ -14169,9 +14095,7 @@
     "vendorId": 100000066,
     "name": "Achievan",
     "tier": null,
-    "partnerIds": [
-      "8f50e2b5-03a0-4b58-a099-4fba07d533f9"
-    ],
+    "partnerIds": ["8f50e2b5-03a0-4b58-a099-4fba07d533f9"],
     "legalName": null,
     "contactName": "Amin Panjwani",
     "contactTitle": "Partner",
@@ -14205,9 +14129,7 @@
     "vendorId": 100000100,
     "name": "CopperHill",
     "tier": null,
-    "partnerIds": [
-      "ebd28261-2d3b-4e98-b563-f00a4fc73fd5"
-    ],
+    "partnerIds": ["ebd28261-2d3b-4e98-b563-f00a4fc73fd5"],
     "legalName": null,
     "contactName": null,
     "contactTitle": null,
@@ -14237,9 +14159,7 @@
     "vendorId": 100000257,
     "name": "The Automation Partner",
     "tier": null,
-    "partnerIds": [
-      "6d04988f-75c3-49eb-ba99-28f88fcc647b"
-    ],
+    "partnerIds": ["6d04988f-75c3-49eb-ba99-28f88fcc647b"],
     "legalName": null,
     "contactName": "Martín Meliendrez",
     "contactTitle": "CEO",
@@ -14274,9 +14194,7 @@
     "vendorId": 100000197,
     "name": "Codex Solutions International",
     "tier": null,
-    "partnerIds": [
-      "65967756-dc5d-402d-a8e6-04a04e431bc4"
-    ],
+    "partnerIds": ["65967756-dc5d-402d-a8e6-04a04e431bc4"],
     "legalName": "Codex Solutions International",
     "contactName": "Hamza",
     "contactTitle": "Chief Executive Officer",
@@ -14324,9 +14242,7 @@
     "vendorId": 10000283,
     "name": "MSquare Automation Solutions Pvt. Ltd.",
     "tier": null,
-    "partnerIds": [
-      "f13b3d26-99c5-4f03-bacc-71e8a6135020"
-    ],
+    "partnerIds": ["f13b3d26-99c5-4f03-bacc-71e8a6135020"],
     "legalName": "Msquare Automation Solutions Pvt. Ltd.",
     "contactName": "Mohamed Ali Jahar",
     "contactTitle": "CEO & Co-Founder",

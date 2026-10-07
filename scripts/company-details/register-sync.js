@@ -37,6 +37,8 @@ const LIMIT = Number(opt("--limit", 10));
 const RECHECK_DAYS = Number(opt("--recheck-days", 365));
 const ONLY = opt("--only", null) ? new Set(opt("--only").split(",")) : null;
 const TODAY = new Date().toISOString().slice(0, 10);
+// Local "YYYY-MM-DD HH:MM:SS" for the run's start/finish lines.
+const stamp = () => new Date().toLocaleString("sv-SE");
 const OVERRIDES_FILE = path.join(__dirname, "register-overrides.json");
 const OVERRIDES = fs.existsSync(OVERRIDES_FILE) ? JSON.parse(fs.readFileSync(OVERRIDES_FILE, "utf-8")) : {};
 
@@ -183,6 +185,8 @@ function apply(e, { registrations, home, people }) {
   const cutoff = Date.now() - RECHECK_DAYS * 864e5;
   const due = (e) => !e.registrationsCheckedAt || Date.parse(e.registrationsCheckedAt) < cutoff;
 
+  const startedAt = stamp();
+  console.log(`Started at ${startedAt}`);
   const all = files.flatMap((f) => f.data.map((e) => ({ f, e, key: f.key(e), cc: e.address?.countryCode }))).filter((x) => !ONLY || ONLY.has(x.key));
   const direct = all.filter((x) => x.cc && ADAPTERS[x.cc] && due(x.e));
   const oc = all
@@ -201,6 +205,7 @@ function apply(e, { registrations, home, people }) {
   const cache = new Map();
   const ambiguous = [];
   let stopped = false;
+  let processed = 0;
   for (const { e, key, cc } of queue) {
     try {
       let records = [];
@@ -223,6 +228,7 @@ function apply(e, { registrations, home, people }) {
       const changes = DRY ? (picked.registrations.length ? [`would add ${picked.registrations.length} registration(s)`] : []) : apply(e, picked);
       if (!DRY) e.registrationsCheckedAt = TODAY;
       console.log(`${key} [${cc}] ${e.name}: ${changes.join(", ") || "no match"}`);
+      processed++;
     } catch (err) {
       if (err instanceof OpenCorporatesRateLimited) {
         console.log(`OpenCorporates rate limit hit at ${key}; stopping. Remaining entries stay unchecked for the next run.`);
@@ -238,5 +244,6 @@ function apply(e, { registrations, home, people }) {
     ambiguous.forEach((a) => console.log(`  ${a}`));
   }
   if (!DRY) console.log("\nNext: npx prettier --write vendor-details.json partner-details.json && npm run validate:details");
+  console.log(`\nStarted at ${startedAt}, finished at ${stamp()}: ${processed} of ${queue.length} entries checked${stopped ? " (stopped on OpenCorporates rate limit)" : ""}`);
   process.exit(stopped ? 2 : 0);
 })();
