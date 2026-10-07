@@ -164,10 +164,17 @@ function commitBefore(time) {
   return commit;
 }
 
+// Apps usually appear in the data without categories days before they're
+// published, so an app counts as new once it gets its first category - not
+// when its id first shows up.
 function collectNewApps(base, tip) {
   const before = readJsonAt(base, MARKETPLACE_FILE);
   if (!before) return [];
-  const beforeIds = new Set(before.marketplace_apps.map((app) => app.id));
+  const listedBefore = new Set(
+    before.marketplace_apps
+      .filter((app) => (app.marketplace_category_ids || []).length > 0)
+      .map((app) => app.id),
+  );
   const vendorsById = new Map(
     (readJsonAt(tip, VENDORS_FILE).marketplace_developers || []).map((v) => [v.id, v]),
   );
@@ -175,7 +182,7 @@ function collectNewApps(base, tip) {
   return readJsonAt(tip, MARKETPLACE_FILE)
     .marketplace_apps.filter(
       (app) =>
-        !beforeIds.has(app.id) &&
+        !listedBefore.has(app.id) &&
         (app.marketplace_category_ids || []).length > 0 &&
         !vendorBlockList.includes(app.marketplace_developer_id),
     )
