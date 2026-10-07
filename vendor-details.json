@@ -244,7 +244,356 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "7962549",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": "Domestic Limited Liability Company",
+        "status": null,
+        "registeredAgent": "THE CORPORATION TRUST COMPANY",
+        "registeredAddress": "New Castle, DE, United States",
+        "url": "https://opencorporates.com/companies/us_de/7962549"
+      },
+      {
+        "register": "OpenCorporates (Tennessee (US))",
+        "jurisdiction": "Tennessee (US)",
+        "kind": "foreign",
+        "id": "001145212",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": "Foreign Limited Liability Company (LLC)",
+        "status": "Active",
+        "registeredAgent": "LEGALINC CORPORATE SERVICES INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_tn/001145212"
+      },
+      {
+        "register": "OpenCorporates (Hawaii (US))",
+        "jurisdiction": "Hawaii (US)",
+        "kind": "foreign",
+        "id": "315472C6",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": "Foreign Limited Liability Company (LLC)",
+        "status": "Active",
+        "registeredAgent": "LEGALINC CORPORATE SERVICES INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_hi/315472C6"
+      },
+      {
+        "register": "OpenCorporates (Kansas (US))",
+        "jurisdiction": "Kansas (US)",
+        "kind": "foreign",
+        "id": "2004753",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": "Foreign Limited Liability Company",
+        "status": "Active And In Good Standing",
+        "registeredAgent": "LEGALINC CORPORATE SERVICES INC",
+        "registeredAddress": "1500 District Ave, Burlington, 01803, MA",
+        "url": "https://opencorporates.com/companies/us_ks/2004753"
+      },
+      {
+        "register": "OpenCorporates (Oklahoma (US))",
+        "jurisdiction": "Oklahoma (US)",
+        "kind": "foreign",
+        "id": "3713146045",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": "Foreign Limited Liability Company",
+        "status": "Report Notice Sent",
+        "registeredAgent": "LEGALINC CORPORATE SERVICES INC",
+        "registeredAddress": "1500 DISTRICT AVE., BURLINGTON, 01803, MA",
+        "url": "https://opencorporates.com/companies/us_ok/3713146045"
+      },
+      {
+        "register": "OpenCorporates (New Jersey (US))",
+        "jurisdiction": "New Jersey (US)",
+        "kind": "foreign",
+        "id": "0450569962",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": "Foreign Limited Liability Company",
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": "BURLINGTON",
+        "url": "https://opencorporates.com/companies/us_nj/0450569962"
+      },
+      {
+        "register": "OpenCorporates (Missouri (US))",
+        "jurisdiction": "Missouri (US)",
+        "kind": "foreign",
+        "id": "FL001692861",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": "Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "LEGALINC CORPORATE SERVICES INC",
+        "registeredAddress": "12747 Olive Blvd, Suite 300A, Saint Louis, 63141, MO",
+        "url": "https://opencorporates.com/companies/us_mo/FL001692861"
+      },
+      {
+        "register": "OpenCorporates (Wisconsin (US))",
+        "jurisdiction": "Wisconsin (US)",
+        "kind": "foreign",
+        "id": "A104078",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_wi/A104078"
+      },
+      {
+        "register": "OpenCorporates (Indiana (US))",
+        "jurisdiction": "Indiana (US)",
+        "kind": "foreign",
+        "id": "202108121514578",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_in/202108121514578"
+      },
+      {
+        "register": "OpenCorporates (Connecticut (US))",
+        "jurisdiction": "Connecticut (US)",
+        "kind": "foreign",
+        "id": "2352559",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Inactive",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ct/2352559"
+      },
+      {
+        "register": "OpenCorporates (Arizona (US))",
+        "jurisdiction": "Arizona (US)",
+        "kind": "foreign",
+        "id": "23129848",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_az/23129848"
+      },
+      {
+        "register": "OpenCorporates (New York (US))",
+        "jurisdiction": "New York (US)",
+        "kind": "foreign",
+        "id": "6418340",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ny/6418340"
+      },
+      {
+        "register": "OpenCorporates (Ohio (US))",
+        "jurisdiction": "Ohio (US)",
+        "kind": "foreign",
+        "id": "4656048",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_oh/4656048"
+      },
+      {
+        "register": "OpenCorporates (Maryland (US))",
+        "jurisdiction": "Maryland (US)",
+        "kind": "foreign",
+        "id": "Z21792759",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Inactive",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_md/Z21792759"
+      },
+      {
+        "register": "OpenCorporates (Alaska (US))",
+        "jurisdiction": "Alaska (US)",
+        "kind": "foreign",
+        "id": "10195800",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ak/10195800"
+      },
+      {
+        "register": "OpenCorporates (Rhode Island (US))",
+        "jurisdiction": "Rhode Island (US)",
+        "kind": "foreign",
+        "id": "001728493",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ri/001728493"
+      },
+      {
+        "register": "OpenCorporates (Iowa (US))",
+        "jurisdiction": "Iowa (US)",
+        "kind": "foreign",
+        "id": "669746",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Inactive",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ia/669746"
+      },
+      {
+        "register": "OpenCorporates (California (US))",
+        "jurisdiction": "California (US)",
+        "kind": "foreign",
+        "id": "202025310061",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ca/202025310061"
+      },
+      {
+        "register": "OpenCorporates (Minnesota (US))",
+        "jurisdiction": "Minnesota (US)",
+        "kind": "foreign",
+        "id": "4acf68ac-62e1-ea11-91a0-00155d32b905",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_mn/4acf68ac-62e1-ea11-91a0-00155d32b905"
+      },
+      {
+        "register": "OpenCorporates (Arkansas (US))",
+        "jurisdiction": "Arkansas (US)",
+        "kind": "foreign",
+        "id": "811398024",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ar/811398024"
+      },
+      {
+        "register": "OpenCorporates (North Carolina (US))",
+        "jurisdiction": "North Carolina (US)",
+        "kind": "foreign",
+        "id": "2324968",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_nc/2324968"
+      },
+      {
+        "register": "OpenCorporates (Michigan (US))",
+        "jurisdiction": "Michigan (US)",
+        "kind": "foreign",
+        "id": "802524831",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_mi/802524831"
+      },
+      {
+        "register": "OpenCorporates (Washington (US))",
+        "jurisdiction": "Washington (US)",
+        "kind": "foreign",
+        "id": "604620165",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_wa/604620165"
+      },
+      {
+        "register": "OpenCorporates (Massachusetts (US))",
+        "jurisdiction": "Massachusetts (US)",
+        "kind": "foreign",
+        "id": "001457594",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ma/001457594"
+      },
+      {
+        "register": "OpenCorporates (Oregon (US))",
+        "jurisdiction": "Oregon (US)",
+        "kind": "foreign",
+        "id": "202201299",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_or/202201299"
+      },
+      {
+        "register": "OpenCorporates (New Hampshire (US))",
+        "jurisdiction": "New Hampshire (US)",
+        "kind": "foreign",
+        "id": "872257",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_nh/872257"
+      },
+      {
+        "register": "OpenCorporates (Florida (US))",
+        "jurisdiction": "Florida (US)",
+        "kind": "foreign",
+        "id": "M20000011682",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_fl/M20000011682"
+      },
+      {
+        "register": "OpenCorporates (Maine (US))",
+        "jurisdiction": "Maine (US)",
+        "kind": "foreign",
+        "id": "20210463FC",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_me/20210463FC"
+      },
+      {
+        "register": "OpenCorporates (Illinois (US))",
+        "jurisdiction": "Illinois (US)",
+        "kind": "foreign",
+        "id": "LLC_10645247",
+        "name": "APPFIRE TECHNOLOGIES, LLC",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_il/LLC_10645247"
+      }
+    ],
     "sources": [
       {
         "type": "press",
@@ -253,12 +602,18 @@
       {
         "type": "directory",
         "url": "https://clay.com/dossier/appfire-headquarters-office-locations"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/7962549",
+        "id": "7962549",
+        "label": "Delaware (US) company no. 7962549 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Matt Dircks has been CEO since January 2025 (founder Randall Ward is CEO Emeritus). Legal entity name comes from third-party profiles.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "Matt Dircks has been CEO since January 2025 (founder Randall Ward is CEO Emeritus). Legal entity confirmed in the Delaware register (7962549), with foreign registrations in 29 states.",
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000072,
@@ -426,7 +781,20 @@
       "countryCode": "NL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Netherlands)",
+        "jurisdiction": "Netherlands",
+        "kind": "domestic",
+        "id": "76632490",
+        "name": "Avisi Apps B.V.",
+        "companyType": "Besloten Vennootschap",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/nl/76632490"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -438,7 +806,7 @@
       },
       {
         "type": "business-register",
-        "url": null,
+        "url": "https://opencorporates.com/companies/nl/76632490",
         "id": "76632490",
         "label": "KvK 76632490"
       },
@@ -450,8 +818,8 @@
     ],
     "locationFlag": null,
     "notes": "KvK 76632490, VAT NL860713659B01. Avisi's founder is Gert-Jan van de Streek.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 100000022,
@@ -663,15 +1031,15 @@
     "registrations": [
       {
         "register": "Israeli Registrar of Companies (data.gov.il)",
-        "jurisdiction": "Israeli Registrar of Companies (data.gov.il)",
+        "jurisdiction": "Israel",
         "kind": "domestic",
-        "id": "516970480",
-        "name": "PIONEERA LTD",
-        "companyType": null,
-        "status": "מחוסלת מרצון",
+        "id": "516963691",
+        "name": "ALAYOF DIGITAL LTD",
+        "companyType": "Israeli private company",
+        "status": "Active",
         "registeredAgent": null,
-        "registeredAddress": "המסגר 39 תל אביב - יפו 4763322",
-        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516970480%22%7D"
+        "registeredAddress": "Nordau Blvd 38, Tel Aviv-Yafo 6259706",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516963691%22%7D"
       }
     ],
     "sources": [
@@ -689,13 +1057,13 @@
       },
       {
         "type": "business-register",
-        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516970480%22%7D",
-        "id": "516970480",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516963691%22%7D",
+        "id": "516963691",
         "label": "Israeli company no. 516970480"
       }
     ],
     "locationFlag": null,
-    "notes": "Company number 516963691 (Israeli Registrar of Companies). Remote team founded in 2023. No legal entity or postal address is published.",
+    "notes": "Company number 516963691 (Israeli Registrar of Companies) is Alayof Digital Ltd, the founder’s company, registered at Nordau Blvd 38, Tel Aviv. A separate PIONEERA LTD (516970480) was registered in 2024 but is in voluntary liquidation. Remote team founded in 2023; no postal address is published on the site.",
     "lastVerified": "2026-10-06",
     "registrationsCheckedAt": "2026-10-06"
   },
@@ -767,9 +1135,9 @@
       }
     ],
     "locationFlag": null,
-    "notes": "US LLC; no address is published. Search results named an 'Oliver Albrecht' as founder, but no primary source confirmed it, so it was left out.",
+    "notes": "US LLC; no address is published. Search results named an 'Oliver Albrecht' as founder, but no primary source confirmed it, so it was left out. Register search found an active Utah LLC (14678241-0160, Herriman) and a terminated Georgia LLC (23046600) named Plugin Genie; neither is confirmed as this vendor.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000059,
@@ -983,7 +1351,7 @@
     "locationFlag": null,
     "notes": "P.IVA IT03683000271. The contact name comes from the monday.com vendor email (roberto.tremonti@omnidea.it); his role isn't confirmed.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 100000048,
@@ -1085,7 +1453,7 @@
     "locationFlag": null,
     "notes": "The site is desktop-only/JS-rendered and no company details were found. Needs manual research.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000122,
@@ -1105,7 +1473,20 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (India)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72900GJ2020PTC114500",
+        "name": "BARUZOTECH PRIVATE LIMITED",
+        "companyType": "Company limited by Shares",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "608, 6TH FLOOR, LAXMI ENCLAVE - 2, KATARGAM, Katargam Surat City Surat GJ 395004, India",
+        "url": "https://opencorporates.com/companies/in/U72900GJ2020PTC114500"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -1114,12 +1495,18 @@
       {
         "type": "linkedin",
         "url": "https://www.linkedin.com/in/kevin-vaghasiya/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/in/U72900GJ2020PTC114500",
+        "id": "U72900GJ2020PTC114500",
+        "label": "India company no. U72900GJ2020PTC114500 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "No founder or director is named publicly.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "No founder or director is named on the company site.",
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000116,
@@ -1157,7 +1544,7 @@
     "locationFlag": null,
     "notes": "Established 2018-10-17. No CEO is named on the site. Also has DevSamurai Vietnam JSC in Ho Chi Minh City.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000114,
@@ -1256,7 +1643,7 @@
       }
     ],
     "locationFlag": "possible-offshore",
-    "notes": "US LLC per the privacy policy; no address or people are published. Possible offshore company: Dover, DE registered-agent address; the developer (lablab.ai profile Dmitry Perepelytsia) appears to be based outside the US. Unconfirmed.",
+    "notes": "Delaware LLC (7364609); no address or people are published. Possible offshore company: Dover, DE registered-agent address; the developer (lablab.ai profile Dmitry Perepelytsia) appears to be based outside the US. Unconfirmed.",
     "lastVerified": "2026-10-06",
     "registrationsCheckedAt": "2026-10-06"
   },
@@ -1288,7 +1675,7 @@
     "locationFlag": null,
     "notes": "HQ city is from a January 2026 press release dateline; no street address was confirmed. Offices are also in Reykjavík and Montreal. The monday.com vendor email is d.belevtsov@tempo.io.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000052,
@@ -1400,7 +1787,7 @@
     "locationFlag": null,
     "notes": "VAT IT06018240876. presago.com prints the CAP as 95052; the Atlassian listing gives 95030 (the Nicolosi CAP). No people are named publicly.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000034,
@@ -1468,17 +1855,36 @@
       "countryCode": "NL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Netherlands)",
+        "jurisdiction": "Netherlands",
+        "kind": "domestic",
+        "id": "67089216",
+        "name": "Software Defined Everything B.V.",
+        "companyType": "Besloten Vennootschap",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/nl/67089216"
+      }
+    ],
     "sources": [
       {
         "type": "about",
         "url": "https://www.collabsoft.com/about-us"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/nl/67089216",
+        "id": "67089216",
+        "label": "Netherlands company no. 67089216 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Dutch B.V.; the postal address and KvK number weren't published on the site.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "Dutch B.V. (KvK 67089216, via OpenCorporates); the postal address isn’t published on the site.",
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000016,
@@ -2756,7 +3162,7 @@
       }
     ],
     "locationFlag": null,
-    "notes": "Founded in 2022. No address published. Legal entity Monday Magic LLC (New York), which trades as Workflow Magic; registrations copied from the linked partner entry.",
+    "notes": "Founded in 2022. No address published on the site; the New York registered address (418 Broadway, Albany) is a registered-agent address. Legal entity Monday Magic LLC (New York), which trades as Workflow Magic; registrations copied from the linked partner entry.",
     "lastVerified": "2026-09-30",
     "registrationsCheckedAt": "2026-10-06"
   },
@@ -3058,7 +3464,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (California (US))",
+        "jurisdiction": "California (US)",
+        "kind": "foreign",
+        "id": "202359919292",
+        "name": "RAILSWARE PRODUCTS STUDIO LLC",
+        "companyType": "Limited Liability Company - Out of State",
+        "status": "Active",
+        "registeredAgent": "Yaroslav Lazor",
+        "registeredAddress": "117 E COLORADO BLVD, SUITE 600, OFFICE 650, PASADENA, 91105, CA",
+        "url": "https://opencorporates.com/companies/us_ca/202359919292"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -3077,12 +3496,18 @@
         "url": null,
         "id": "4461258",
         "label": "Delaware file no. 4461258"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_ca/202359919292",
+        "id": "202359919292",
+        "label": "California (US) company no. 202359919292 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "TitanApps is a Railsware product. Delaware LLC, reg. no. 4461258.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000134,
@@ -3485,7 +3910,20 @@
       "countryCode": "SG"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Singapore)",
+        "jurisdiction": "Singapore",
+        "kind": "domestic",
+        "id": "201626292E",
+        "name": "MOVE WORK FORWARD PTE. LTD.",
+        "companyType": "Local Company - EXEMPT PRIVATE COMPANY LIMITED BY SHARES",
+        "status": "Live Company",
+        "registeredAgent": null,
+        "registeredAddress": "10 ANSON ROAD, #20-05, INTERNATIONAL PLAZA, 079903, Singapore",
+        "url": "https://opencorporates.com/companies/sg/201626292E"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -3494,12 +3932,18 @@
       {
         "type": "about",
         "url": "https://www.moveworkforward.com/company"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/sg/201626292E",
+        "id": "201626292E",
+        "label": "Singapore company no. 201626292E (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Also has an EU data controller in Spain.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000086,
@@ -3991,7 +4435,7 @@
     "locationFlag": "offshore-moved",
     "notes": "Eddy Azoulay is based in Thailand - is this really a USA-based company?",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000032,
@@ -4069,8 +4513,8 @@
     "address": {
       "street": null,
       "city": null,
-      "region": null,
-      "postalCode": null,
+      "region": "VIC",
+      "postalCode": "3029",
       "country": "Australia",
       "countryCode": "AU"
     },
@@ -4106,7 +4550,7 @@
       }
     ],
     "locationFlag": null,
-    "notes": "'Global - with teams in ANZ, UK'. No address, ABN or people published. Vendor email is support@docotive.com (their Docotive product).",
+    "notes": "'Global - with teams in ANZ, UK'. The site publishes no address, ABN or people; ABN 26 612 602 445 and the postcode are from the Australian Business Register. Vendor email is support@docotive.com (their Docotive product).",
     "lastVerified": "2026-10-06",
     "registrationsCheckedAt": "2026-10-06"
   },
@@ -4150,7 +4594,7 @@
     "locationFlag": null,
     "notes": "No legal entity or address published.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000020,
@@ -4236,7 +4680,7 @@
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US address: the US address (Suite B-2, 2035 Sunset Lake Road, Newark, DE 19702) is a registered-agent address. ThoughtFlow is based in Belgaum (Belagavi), India, with an Indian entity Thoughtflow Technologies Private Limited (incorporated 2022), and is backed by Upekkha.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000004,
@@ -4334,7 +4778,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (New York (US))",
+        "jurisdiction": "New York (US)",
+        "kind": "domestic",
+        "id": "5761330",
+        "name": "BILLOW MYNDBEND INC",
+        "companyType": "DOMESTIC BUSINESS CORPORATION",
+        "status": "Active",
+        "registeredAgent": "UNITED STATES CORPORATION AGENTS, INC",
+        "registeredAddress": "7014 13TH AVENUE, Suite 202, BROOKLYN, 11228, NY",
+        "url": "https://opencorporates.com/companies/us_ny/5761330"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -4343,12 +4800,18 @@
       {
         "type": "linkedin",
         "url": "https://www.linkedin.com/company/billow-myndbend/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_ny/5761330",
+        "id": "5761330",
+        "label": "New York (US) company no. 5761330 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Mailing address from the privacy policy.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "Mailing address from the privacy policy. New York corporation (5761330); its registered agent is United States Corporation Agents, a commercial service, but its mailing address (a PO box) and the agent’s office are both in Brooklyn, so there’s no sign of an offshore company.",
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 38,
@@ -4444,7 +4907,7 @@
     "locationFlag": null,
     "notes": "KRS 0000223645, NIP 8971700419. The address comes from a KRS aggregator search result; the page itself returned 403.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 31,
@@ -4497,7 +4960,7 @@
     "locationFlag": null,
     "notes": "Also has offices in Calgary and Las Vegas. The CEO name comes from Crunchbase, not the company site.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 28,
@@ -4686,7 +5149,7 @@
     "locationFlag": null,
     "notes": "First name from the vendor email thusitha@serandibsoft.com. No country published; 'Serendib' is a historic name for Sri Lanka, which hints at a Sri Lankan developer, but that's unconfirmed.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 20,
@@ -4763,9 +5226,9 @@
       }
     ],
     "locationFlag": null,
-    "notes": "Country from the .nl domain and site content.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Country from the .nl domain and site content. An inactive Amsterdam registration named “Excellent Team” (KvK 34121817) exists but isn’t confirmed as this company.",
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000024,
@@ -4825,17 +5288,36 @@
       "countryCode": "FI"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Finland)",
+        "jurisdiction": "Finland",
+        "kind": "domestic",
+        "id": "2537244-1",
+        "name": "Screenful Oy",
+        "companyType": "Osakeyhtiö",
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": "Inarintie 16 B 22, HELSINKI, 00550, Finland",
+        "url": "https://opencorporates.com/companies/fi/2537244-1"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://screenful.com/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/fi/2537244-1",
+        "id": "2537244-1",
+        "label": "Finland company no. 2537244-1 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 27,
@@ -5074,7 +5556,7 @@
     "locationFlag": null,
     "notes": "Location from the same developer's Shopify app listing.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000099,
@@ -5171,24 +5653,43 @@
     "alternativeContacts": [],
     "address": {
       "street": null,
-      "city": null,
-      "region": null,
-      "postalCode": null,
+      "city": "Rasipuram",
+      "region": "Tamil Nadu",
+      "postalCode": "636301",
       "country": "India",
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (India)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72900TZ2020PTC033910",
+        "name": "ULGEBRAZ TECHNOLOGIES PRIVATE LIMITED",
+        "companyType": "Company limited by Shares",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "3/100, Anaipattiyan Colony, Thengalpayam Po, Rasipuram, Namakkal Namakkal TN 636301, India",
+        "url": "https://opencorporates.com/companies/in/U72900TZ2020PTC033910"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://apps.ulgebra.com/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/in/U72900TZ2020PTC033910",
+        "id": "U72900TZ2020PTC033910",
+        "label": "India company no. U72900TZ2020PTC033910 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Indian phone number (+91) on the site.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 51,
@@ -5660,7 +6161,7 @@
     "locationFlag": null,
     "notes": "Product: Checklist for Jira. HeroCoders' legal pages reference Okapya Software Solutions Inc.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 21,
@@ -5690,7 +6191,7 @@
     "locationFlag": null,
     "notes": "Jay Choi is listed as Chief Executive Officer on the site.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 100000003,
@@ -5700,27 +6201,51 @@
     "legalName": "Quickley, Inc.",
     "contactName": null,
     "contactTitle": null,
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Anton Golubev",
+        "contactTitle": "Registered agent (New York Department of State)"
+      }
+    ],
     "address": {
-      "street": null,
-      "city": null,
-      "region": null,
-      "postalCode": null,
+      "street": "1928 Kings Highway, Fl 2",
+      "city": "Brooklyn",
+      "region": "NY",
+      "postalCode": "11229",
       "country": "United States",
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (New York (US))",
+        "jurisdiction": "New York (US)",
+        "kind": "domestic",
+        "id": "5498425",
+        "name": "QUICKLEY INC",
+        "companyType": "DOMESTIC BUSINESS CORPORATION",
+        "status": "Active",
+        "registeredAgent": "ANTON GOLUBEV",
+        "registeredAddress": "1928 Kings Highway, Fl 2, Brooklyn, 11229, NY",
+        "url": "https://opencorporates.com/companies/us_ny/5498425"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://quickley.com"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_ny/5498425",
+        "id": "5498425",
+        "label": "New York (US) company no. 5498425 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Country inferred from the 'Inc.' form only; unconfirmed.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "New York corporation (5498425); address and registered agent from the New York register.",
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 30,

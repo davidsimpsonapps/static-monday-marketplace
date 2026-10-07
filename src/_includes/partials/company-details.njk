@@ -14,13 +14,18 @@
   <div class="my-8"></div>
   <div>
     <div class="flex items-baseline gap-2 mb-4">
-      <h2 id="contact" class="text-lg sm:text-2xl font-semibold">Company Details</h2>
+      <h2 id="company" class="text-lg sm:text-2xl font-semibold">Company Details</h2>
     </div>
     <dl class="grid grid-cols-1 sm:grid-cols-[10rem_1fr] gap-x-4 gap-y-2 text-sm">
-      {% if details and details.legalName %}
-        <dt class="text-gray-500">Legal Name</dt>
-        <dd>{{ details.legalName }}</dd>
-      {% endif %}
+      
+      <dt class="text-gray-500">Legal Name</dt>
+      <dd>
+        {% if details and details.legalName %}
+          {{ details.legalName }}
+        {% else %}
+          <em>Legal name not found.</em>
+        {% endif %}
+      </dd>
       {% if details and details.contactName %}
         <dt class="text-gray-500">Contact</dt>
         <dd>{{ details.contactName }}{% if details.contactTitle %}, <span class="text-gray-600">{{ details.contactTitle }}</span>{% endif %}</dd>
@@ -33,14 +38,16 @@
           {% endfor %}
         </dd>
       {% endif %}
-      {% if detailsAddress.length %}
-        <dt class="text-gray-500">Address</dt>
-        <dd>
+      <dt class="text-gray-500">Address</dt>
+      <dd>
+        {% if detailsAddress.length %}
           <address class="not-italic">
             {% for line in detailsAddress %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}
           </address>
-        </dd>
-      {% endif %}
+        {% else %}
+          <em>Address not found.</em>
+        {% endif %}
+      </dd>
       {% if details and details.alternativeAddresses and details.alternativeAddresses.length %}
         <dt class="text-gray-500">Other Addresses</dt>
         <dd class="space-y-2">
@@ -88,6 +95,12 @@
         <dt class="text-gray-500">{{ related.label }}</dt>
         <dd><a href="{{ related.href }}" class="text-blue-600 hover:text-blue-800">{{ related.text }} →</a></dd>
       {% endif %}
+
+      {% if details and details.notes %}
+        <dt class="text-gray-500">Notes</dt>
+        <dd>{{ details.notes }}</dd>
+      {% endif %}
+      
       {% if details and details.sources and details.sources.length %}
         <dt class="text-gray-500">Sources</dt>
         <dd>
@@ -100,6 +113,7 @@
           {% endfor %}
         </dd>
       {% endif %}
+
     </dl>
     {% if not details and emptyNote %}
       <p class="text-xs text-gray-500 mt-2">{{ emptyNote }}</p>
