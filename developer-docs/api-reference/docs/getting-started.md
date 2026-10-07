@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:15:30.000Z
+updatedAt: 2026-10-06T13:31:28.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -8,7 +8,7 @@ agentTools:
 
 # Setting up a monday.com account
 
-The first step is to sign up and create a trial <a href="https://auth.monday.com/users/sign_up_new?source=web_main&origin=hp_fullbg_page_header#soft_signup_from_step" target="_blank">account</a>. For building and testing apps or API integrations, use a [developer account](https://developer.monday.com/api-reference/docs/developer-sandbox-account) ([sign up](https://auth.monday.com/users/sign_up_new?developer=true\&utm_source=dev_documentation#soft_signup_from_step)). If you already have a monday.com account, skip to the next step!
+The first step is to sign up and create a trial <a href="https://auth.monday.com/users/sign_up_new?source=web_main&origin=hp_fullbg_page_header#soft_signup_from_step" target="_blank">account</a>. For building and testing apps or API integrations, use a [developer account](https://developer.monday.com/api-reference/docs/developer-sandbox) ([sign up](https://auth.monday.com/users/sign_up_new?developer=true\&utm_source=dev_documentation#soft_signup_from_step)). If you already have a monday.com account, skip to the next step!
 
 # Enable Developer mode
 

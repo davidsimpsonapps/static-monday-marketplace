@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:31:59.000Z
+updatedAt: 2026-10-06T13:36:19.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -86,6 +86,7 @@ For the full security architecture — tenant isolation, AI-layer risks, and OWA
 1. Verify your redirect URL matches exactly in both your app settings and authorization request
 2. Ensure your client ID and client secret are correct
 3. Check that the requested scopes are enabled on your app's **OAuth & Permissions** page
+4. Confirm **New OAuth flow** is switched on under **Build → OAuth & Permissions → New OAuth flow**. A custom app cannot connect to MCP while this toggle is off
 
 **Connection issues**
 

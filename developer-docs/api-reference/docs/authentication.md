@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:31:25.000Z
+updatedAt: 2026-10-06T13:31:28.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -12,7 +12,7 @@ The monday.com platform API utilizes **personal V2 API tokens** to authenticate 
 
 Personal tokens allow you to interact with the API using your own user account. Their permissions mirror what you can do in the monday.com UI, ensuring that API access is consistent with your platform-level permissions.
 
-If you don't have a monday.com account yet, create a free [developer account](https://developer.monday.com/api-reference/docs/developer-sandbox-account) to get an API token and start testing.
+If you don't have a monday.com account yet, create a free [developer account](https://developer.monday.com/api-reference/docs/developer-sandbox) to get an API token and start testing.
 
 # Token permissions
 

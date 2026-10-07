@@ -1,10 +1,10 @@
 ---
-updatedAt: 2026-09-06T08:15:30.000Z
+updatedAt: 2026-10-06T13:31:28.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
 
-# Developer/Sandbox Account
+# Developer Sandbox Account
 
 Sign up for a free monday.com developer account to build and test apps and API integrations in a sandbox separate from your production data.
 
