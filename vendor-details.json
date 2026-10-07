@@ -910,7 +910,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "6818502",
+        "name": "DOCUGEN, INC.",
+        "companyType": "Domestic Corporation",
+        "status": null,
+        "registeredAgent": "LEGALINC CORPORATE SERVICES INC",
+        "registeredAddress": "New Castle, DE, United States",
+        "url": "https://opencorporates.com/companies/us_de/6818502"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -923,12 +936,18 @@
       {
         "type": "directory",
         "url": "https://www.zoominfo.com/p/Sami-Caracand/1313346711"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/6818502",
+        "id": "6818502",
+        "label": "Delaware (US) company no. 6818502 (OpenCorporates)"
       }
     ],
     "locationFlag": "possible-offshore",
     "notes": "Founder listed only as 'Sami C.' on G2/TrustRadius; no full name confirmed. Linked to Cloud Concept (Dubai monday.com partner). Possible offshore company: the Beaverton, OR address may be a virtual office; DocuGen is linked to Cloud Concept, a Dubai-based monday.com partner.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 6,
@@ -1198,7 +1217,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "7364609",
+        "name": "GET REPORT LLC",
+        "companyType": "Domestic Limited Liability Company",
+        "status": null,
+        "registeredAgent": "A REGISTERED AGENT, INC",
+        "registeredAddress": "Kent, DE, United States",
+        "url": "https://opencorporates.com/companies/us_de/7364609"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -1215,12 +1247,18 @@
       {
         "type": "linkedin",
         "url": "https://linkedin.com/in/popchuk/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/7364609",
+        "id": "7364609",
+        "label": "Delaware (US) company no. 7364609 (OpenCorporates)"
       }
     ],
     "locationFlag": "possible-offshore",
     "notes": "US LLC per the privacy policy; no address or people are published. Possible offshore company: Dover, DE registered-agent address; the developer (lablab.ai profile Dmitry Perepelytsia) appears to be based outside the US. Unconfirmed.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 10000063,
@@ -2002,7 +2040,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "6464752",
+        "name": "WORKIFLOW LLC",
+        "companyType": "Domestic Limited Liability Company",
+        "status": null,
+        "registeredAgent": "LEGALINC CORPORATE SERVICES INC",
+        "registeredAddress": "New Castle, DE, United States",
+        "url": "https://opencorporates.com/companies/us_de/6464752"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -2011,12 +2062,18 @@
       {
         "type": "about",
         "url": "https://www.workiflow.com/about"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/6464752",
+        "id": "6464752",
+        "label": "Delaware (US) company no. 6464752 (OpenCorporates)"
       }
     ],
     "locationFlag": "registered-agent",
     "notes": "Delaware registered address. Founded in 2019 by brothers Keenan and John-Paul Theron, who are Managing Directors. Also a monday.com Platinum services partner. Mixed: the US address is a Delaware registered-agent address and the founders are in South Africa (Jeffreys Bay) and Portugal, but the CEO is based in Georgia, US, so it's left as a US company.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 10000214,
@@ -2571,7 +2628,7 @@
     "name": "Workflow Magic",
     "tier": "Bronze",
     "partnerIds": ["d9cde900-7386-4ad8-bd9b-1b964d4ffd30"],
-    "legalName": "Workflow Magic",
+    "legalName": "Monday Magic LLC",
     "contactName": "Lydia Abbott",
     "contactTitle": "Founder & CEO",
     "alternativeContacts": [],
@@ -2584,7 +2641,104 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (New York (US))",
+        "jurisdiction": "New York (US)",
+        "kind": "domestic",
+        "id": "6636536",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "DOMESTIC LIMITED LIABILITY COMPANY",
+        "status": "Active",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT LLC",
+        "registeredAddress": "418 Broadway STE N, Albany, 12207, NY",
+        "url": "https://opencorporates.com/companies/us_ny/6636536"
+      },
+      {
+        "register": "OpenCorporates (Florida (US))",
+        "jurisdiction": "Florida (US)",
+        "kind": "foreign",
+        "id": "M26000002735",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Foreign Limited Liability",
+        "status": "Active",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT LLC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_fl/M26000002735"
+      },
+      {
+        "register": "OpenCorporates (Idaho (US))",
+        "jurisdiction": "Idaho (US)",
+        "kind": "foreign",
+        "id": "0006568121",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Foreign Limited Liability Company",
+        "status": "Active Existing",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT LLC",
+        "registeredAddress": "3 ROUTE 217, HUDSON, 12534, NY",
+        "url": "https://opencorporates.com/companies/us_id/0006568121"
+      },
+      {
+        "register": "OpenCorporates (Massachusetts (US))",
+        "jurisdiction": "Massachusetts (US)",
+        "kind": "foreign",
+        "id": "001942959",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Foreign Limited Liability Company (LLC)",
+        "status": "Active",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT SERVICE INC",
+        "registeredAddress": "82 WENDELL AVE. STE 100, PITTSFIELD, 01201, MA",
+        "url": "https://opencorporates.com/companies/us_ma/001942959"
+      },
+      {
+        "register": "OpenCorporates (Illinois (US))",
+        "jurisdiction": "Illinois (US)",
+        "kind": "foreign",
+        "id": "LLC_15971614",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT SERVICE, INC",
+        "registeredAddress": "2501 CHATHAM RD SUITE N, SPRING, 62704, IL",
+        "url": "https://opencorporates.com/companies/us_il/LLC_15971614"
+      },
+      {
+        "register": "OpenCorporates (Louisiana (US))",
+        "jurisdiction": "Louisiana (US)",
+        "kind": "foreign",
+        "id": "46628021Q",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Limited Liability Company (Non-Louisiana)",
+        "status": "Active In Good Standing",
+        "registeredAgent": "NORTHWEST REGISTERED AGENT LLC",
+        "registeredAddress": "201 RUE BEAUREGARD, STE. 202, LAFAYETTE, 70508, LA",
+        "url": "https://opencorporates.com/companies/us_la/46628021Q"
+      },
+      {
+        "register": "OpenCorporates (Colorado (US))",
+        "jurisdiction": "Colorado (US)",
+        "kind": "foreign",
+        "id": "20258081928",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Foreign limited liability company",
+        "status": "Good Standing",
+        "registeredAgent": "Northwest Registered Agent LLC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_co/20258081928"
+      },
+      {
+        "register": "OpenCorporates (Arkansas (US))",
+        "jurisdiction": "Arkansas (US)",
+        "kind": "foreign",
+        "id": "811550141",
+        "name": "MONDAY MAGIC LLC",
+        "companyType": "Foreign Limited Liability Company",
+        "status": "Not Current",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ar/811550141"
+      }
+    ],
     "sources": [
       {
         "type": "about",
@@ -2593,12 +2747,18 @@
       {
         "type": "linkedin",
         "url": "https://linkedin.com/company/workflow-magic/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_ny/6636536",
+        "id": "6636536",
+        "label": "New York (US) company no. 6636536 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Founded in 2022. No address published.",
+    "notes": "Founded in 2022. No address published. Legal entity Monday Magic LLC (New York), which trades as Workflow Magic; registrations copied from the linked partner entry.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 10000161,
@@ -3052,17 +3212,36 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "7603804",
+        "name": "CLOSER INNOVATION LABS CORPORATION",
+        "companyType": "Domestic Corporation",
+        "status": null,
+        "registeredAgent": "RESIDENT AGENTS INC",
+        "registeredAddress": "Kent, DE, United States",
+        "url": "https://opencorporates.com/companies/us_de/7603804"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
         "url": "https://thepdfmaker.com/privacy-policy"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/7603804",
+        "id": "7603804",
+        "label": "Delaware (US) company no. 7603804 (OpenCorporates)"
       }
     ],
     "locationFlag": "possible-offshore",
     "notes": "Trades as The PDF Maker. Delaware registered-agent style address. Possible offshore company: Dover, DE registered-agent address; where the team is based wasn't established.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 10000107,
@@ -4514,7 +4693,7 @@
     "name": "Miro",
     "tier": null,
     "partnerIds": [],
-    "legalName": "RealtimeBoard, Inc. (Miro)",
+    "legalName": "RealtimeBoard, Inc.",
     "contactName": "Andrey Khusid",
     "contactTitle": "CEO and Co-founder",
     "alternativeContacts": [],
@@ -4527,17 +4706,36 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "6438916",
+        "name": "REALTIMEBOARD, INC.",
+        "companyType": "Corporation",
+        "status": null,
+        "registeredAgent": "INCORP SERVICES, INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_de/6438916"
+      }
+    ],
     "sources": [
       {
         "type": "about",
         "url": "https://miro.com/about/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/6438916",
+        "id": "6438916",
+        "label": "Delaware (US) company no. 6438916 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Address on the site shows 'Suite 900' and 94104 without a street.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Address on the site shows 'Suite 900' and 94104 without a street. RealtimeBoard, Inc. trades as Miro.",
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 15,
@@ -4607,7 +4805,7 @@
     "locationFlag": null,
     "notes": "Vendor email apps@moveoboost.com: the monday.com app is built/supported by Boost by Moveo.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 16,
@@ -4657,17 +4855,144 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (California (US))",
+        "jurisdiction": "California (US)",
+        "kind": "domestic",
+        "id": "3676764",
+        "name": "JOTFORM INC.",
+        "companyType": "Stock Corporation - CA - General",
+        "status": "Active",
+        "registeredAgent": "Katsu Matsuyama",
+        "registeredAddress": "4 EMBARCADERO CTR, STE 780, SAN FRANCISCO, 94111, CA",
+        "url": "https://opencorporates.com/companies/us_ca/3676764"
+      },
+      {
+        "register": "OpenCorporates (Maryland (US))",
+        "jurisdiction": "Maryland (US)",
+        "kind": "foreign",
+        "id": "F27334291",
+        "name": "JOTFORM INC",
+        "companyType": "FOREIGN CORPORATION",
+        "status": "Incorporated",
+        "registeredAgent": "REGISTERED AGENTS INC",
+        "registeredAddress": "4 EMBARCADERO CENTER SUITE 780, SAN FRANCISCO, 941114102, CA",
+        "url": "https://opencorporates.com/companies/us_md/F27334291"
+      },
+      {
+        "register": "OpenCorporates (New Jersey (US))",
+        "jurisdiction": "New Jersey (US)",
+        "kind": "foreign",
+        "id": "0450686569",
+        "name": "JOTFORM INC.",
+        "companyType": "Foreign For-Profit Corporation",
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": "SAN FRANCISCO, Data source and freshness, Last update from source, Last change recorded",
+        "url": "https://opencorporates.com/companies/us_nj/0450686569"
+      },
+      {
+        "register": "OpenCorporates (Massachusetts (US))",
+        "jurisdiction": "Massachusetts (US)",
+        "kind": "foreign",
+        "id": "001625718",
+        "name": "JOTFORM INC.",
+        "companyType": "Foreign Corporation",
+        "status": "Active",
+        "registeredAgent": "REGISTERED AGENTS INC",
+        "registeredAddress": "4 EMBARCADERO CTR, SUITE 780, SAN FRANCISCO, 94111, CA",
+        "url": "https://opencorporates.com/companies/us_ma/001625718"
+      },
+      {
+        "register": "OpenCorporates (West Virginia (US))",
+        "jurisdiction": "West Virginia (US)",
+        "kind": "foreign",
+        "id": "614064",
+        "name": "JOTFORM INC.",
+        "companyType": "Exempt Corporation (Foreign Profit)",
+        "status": "Active",
+        "registeredAgent": "JOTFORM ACCOUNTS RECEIVABLE",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_wv/614064"
+      },
+      {
+        "register": "OpenCorporates (Michigan (US))",
+        "jurisdiction": "Michigan (US)",
+        "kind": "foreign",
+        "id": "803257331",
+        "name": "JOTFORM INC.",
+        "companyType": "Foreign Profit Corporation",
+        "status": "Active",
+        "registeredAgent": "REGISTERED AGENTS INC",
+        "registeredAddress": "2222 W GRAND RIVER AVE STE A, OKEMOS, 48864, MI",
+        "url": "https://opencorporates.com/companies/us_mi/803257331"
+      },
+      {
+        "register": "OpenCorporates (North Carolina (US))",
+        "jurisdiction": "North Carolina (US)",
+        "kind": "foreign",
+        "id": "2962185",
+        "name": "JOTFORM INC.",
+        "companyType": "Business Corporation - Foreign",
+        "status": "Current Active",
+        "registeredAgent": "Registered Agents Inc",
+        "registeredAddress": "4030 Wake Forest Road, Ste 349, Raleigh, 27609, NC",
+        "url": "https://opencorporates.com/companies/us_nc/2962185"
+      },
+      {
+        "register": "OpenCorporates (Florida (US))",
+        "jurisdiction": "Florida (US)",
+        "kind": "foreign",
+        "id": "F26000004542",
+        "name": "JOTFORM INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_fl/F26000004542"
+      },
+      {
+        "register": "OpenCorporates (Wyoming (US))",
+        "jurisdiction": "Wyoming (US)",
+        "kind": "foreign",
+        "id": "2026-002089487",
+        "name": "Jotform Inc.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_wy/2026-002089487"
+      },
+      {
+        "register": "OpenCorporates (Georgia (US))",
+        "jurisdiction": "Georgia (US)",
+        "kind": "foreign",
+        "id": "24155258",
+        "name": "Jotform Inc.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ga/24155258"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://www.jotform.com/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_ca/3676764",
+        "id": "3676764",
+        "label": "California (US) company no. 3676764 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 36,
@@ -4682,25 +5007,44 @@
     "contactTitle": null,
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
-      "region": null,
-      "postalCode": null,
+      "street": "Arenavägen 47",
+      "city": "Johanneshov",
+      "region": "Stockholm",
+      "postalCode": "121 77",
       "country": "Sweden",
       "countryCode": "SE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Sweden)",
+        "jurisdiction": "Sweden",
+        "kind": "domestic",
+        "id": "559175-1663",
+        "name": "Omnitas Consulting AB",
+        "companyType": "Aktiebolag",
+        "status": "Registrerad",
+        "registeredAgent": null,
+        "registeredAddress": "Arenavägen 47, JOHANNESHOV, 12177, Sweden",
+        "url": "https://opencorporates.com/companies/se/559175-1663"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://omnitas.dev"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/se/559175-1663",
+        "id": "559175-1663",
+        "label": "Swedish org. no. 559175-1663 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Country from the Swedish 'AB' legal form.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 10000067,
@@ -4785,17 +5129,36 @@
       "countryCode": "CA"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Canada)",
+        "jurisdiction": "Canada",
+        "kind": "domestic",
+        "id": "8549729",
+        "name": "HOOTSUITE INC.",
+        "companyType": "Non-distributing corporation with more than 50 shareholders",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "111 EAST 5TH AVENUE, 3RD FLOOR, VANCOUVER, V5T 4L1, BC",
+        "url": "https://opencorporates.com/companies/ca/8549729"
+      }
+    ],
     "sources": [
       {
         "type": "about",
         "url": "https://www.hootsuite.com/about"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/ca/8549729",
+        "id": "8549729",
+        "label": "Canada company no. 8549729 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "The about page still lists founder Ryan Holmes as 'CEO and Founder', which may be out of date, so no contact is recorded. Country from the domain's WHOIS registrant record (British Columbia).",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000043,
@@ -4845,17 +5208,384 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "5047240",
+        "name": "PANDADOC, INC.",
+        "companyType": "Corporation",
+        "status": null,
+        "registeredAgent": "CORPORATION SERVICE COMPANY",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_de/5047240"
+      },
+      {
+        "register": "OpenCorporates (Maryland (US))",
+        "jurisdiction": "Maryland (US)",
+        "kind": "foreign",
+        "id": "F23260441",
+        "name": "PANDADOC, INC",
+        "companyType": "FOREIGN CORPORATION",
+        "status": "Incorporated",
+        "registeredAgent": "TELOS LEGAL CORP",
+        "registeredAddress": "3739 BALBOA ST, 1083, SAN FRANCISCO, 941212605, CA",
+        "url": "https://opencorporates.com/companies/us_md/F23260441"
+      },
+      {
+        "register": "OpenCorporates (Maine (US))",
+        "jurisdiction": "Maine (US)",
+        "kind": "foreign",
+        "id": "20230783F",
+        "name": "PANDADOC, INC.",
+        "companyType": "BUSINESS CORPORATION DOING BUSINESS IN MAINE",
+        "status": "Good Standing",
+        "registeredAgent": "TELOS LEGAL CORP",
+        "registeredAddress": "100 MORTLAND ROAD, SUITE 320, SEARSPORT, 04974, ME",
+        "url": "https://opencorporates.com/companies/us_me/20230783F"
+      },
+      {
+        "register": "OpenCorporates (New York (US))",
+        "jurisdiction": "New York (US)",
+        "kind": "foreign",
+        "id": "5920551",
+        "name": "PANDADOC, INC.",
+        "companyType": "FOREIGN BUSINESS CORPORATION",
+        "status": "Active",
+        "registeredAgent": "TELOS LEGAL CORP",
+        "registeredAddress": "5500 MAIN STREET, SUITE 345, WILLIAMSVILLE, 14221, NY",
+        "url": "https://opencorporates.com/companies/us_ny/5920551"
+      },
+      {
+        "register": "OpenCorporates (Arkansas (US))",
+        "jurisdiction": "Arkansas (US)",
+        "kind": "foreign",
+        "id": "811419928",
+        "name": "PANDADOC, INC.",
+        "companyType": "Foreign For Profit Corporation",
+        "status": "Good Standing",
+        "registeredAgent": "TELOS LEGAL CORP",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ar/811419928"
+      },
+      {
+        "register": "OpenCorporates (Michigan (US))",
+        "jurisdiction": "Michigan (US)",
+        "kind": "foreign",
+        "id": "802591313",
+        "name": "PANDADOC, INC.",
+        "companyType": "Foreign Profit Corporation",
+        "status": "Active",
+        "registeredAgent": "TELOS LEGAL CORP",
+        "registeredAddress": "186 N. MAIN STREET, 2ND FLOOR SUITE ONE, PLYMOUTH, 48170, MI",
+        "url": "https://opencorporates.com/companies/us_mi/802591313"
+      },
+      {
+        "register": "OpenCorporates (Ohio (US))",
+        "jurisdiction": "Ohio (US)",
+        "kind": "foreign",
+        "id": "5017154",
+        "name": "PANDADOC, INC.",
+        "companyType": "FOREIGN CORPORATION",
+        "status": "Active",
+        "registeredAgent": "TELOS LEGAL CORP",
+        "registeredAddress": "3739 BALBOA ST, 1083, SAN FRANCISCO, 94121, CA",
+        "url": "https://opencorporates.com/companies/us_oh/5017154"
+      },
+      {
+        "register": "OpenCorporates (Iowa (US))",
+        "jurisdiction": "Iowa (US)",
+        "kind": "foreign",
+        "id": "705592",
+        "name": "PANDADOC, INC.",
+        "companyType": "Code 490 Foreign Profit",
+        "status": "Inactive",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ia/705592"
+      },
+      {
+        "register": "OpenCorporates (Utah (US))",
+        "jurisdiction": "Utah (US)",
+        "kind": "foreign",
+        "id": "12433213-0143",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ut/12433213-0143"
+      },
+      {
+        "register": "OpenCorporates (South Carolina (US))",
+        "jurisdiction": "South Carolina (US)",
+        "kind": "foreign",
+        "id": "545989",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_sc/545989"
+      },
+      {
+        "register": "OpenCorporates (South Dakota (US))",
+        "jurisdiction": "South Dakota (US)",
+        "kind": "foreign",
+        "id": "FB204435",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_sd/FB204435"
+      },
+      {
+        "register": "OpenCorporates (Montana (US))",
+        "jurisdiction": "Montana (US)",
+        "kind": "foreign",
+        "id": "F1308777",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_mt/F1308777"
+      },
+      {
+        "register": "OpenCorporates (Louisiana (US))",
+        "jurisdiction": "Louisiana (US)",
+        "kind": "foreign",
+        "id": "44825956F",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Inactive",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_la/44825956F"
+      },
+      {
+        "register": "OpenCorporates (Nevada (US))",
+        "jurisdiction": "Nevada (US)",
+        "kind": "foreign",
+        "id": "E27996262022-8",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_nv/E27996262022-8"
+      },
+      {
+        "register": "OpenCorporates (Florida (US))",
+        "jurisdiction": "Florida (US)",
+        "kind": "foreign",
+        "id": "F17000002270",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_fl/F17000002270"
+      },
+      {
+        "register": "OpenCorporates (Mississippi (US))",
+        "jurisdiction": "Mississippi (US)",
+        "kind": "foreign",
+        "id": "1351802",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ms/1351802"
+      },
+      {
+        "register": "OpenCorporates (Missouri (US))",
+        "jurisdiction": "Missouri (US)",
+        "kind": "foreign",
+        "id": "F01421541",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_mo/F01421541"
+      },
+      {
+        "register": "OpenCorporates (Illinois (US))",
+        "jurisdiction": "Illinois (US)",
+        "kind": "foreign",
+        "id": "CORP_72859936",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Inactive",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_il/CORP_72859936"
+      },
+      {
+        "register": "OpenCorporates (Idaho (US))",
+        "jurisdiction": "Idaho (US)",
+        "kind": "foreign",
+        "id": "0004508484",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_id/0004508484"
+      },
+      {
+        "register": "OpenCorporates (North Carolina (US))",
+        "jurisdiction": "North Carolina (US)",
+        "kind": "foreign",
+        "id": "2580640",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_nc/2580640"
+      },
+      {
+        "register": "OpenCorporates (Oklahoma (US))",
+        "jurisdiction": "Oklahoma (US)",
+        "kind": "foreign",
+        "id": "2313779144",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ok/2313779144"
+      },
+      {
+        "register": "OpenCorporates (Indiana (US))",
+        "jurisdiction": "Indiana (US)",
+        "kind": "foreign",
+        "id": "202101081450442",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_in/202101081450442"
+      },
+      {
+        "register": "OpenCorporates (New Hampshire (US))",
+        "jurisdiction": "New Hampshire (US)",
+        "kind": "foreign",
+        "id": "894841",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_nh/894841"
+      },
+      {
+        "register": "OpenCorporates (Massachusetts (US))",
+        "jurisdiction": "Massachusetts (US)",
+        "kind": "foreign",
+        "id": "001411024",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ma/001411024"
+      },
+      {
+        "register": "OpenCorporates (California (US))",
+        "jurisdiction": "California (US)",
+        "kind": "foreign",
+        "id": "3689672",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ca/3689672"
+      },
+      {
+        "register": "OpenCorporates (Nebraska (US))",
+        "jurisdiction": "Nebraska (US)",
+        "kind": "foreign",
+        "id": "2208164799",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ne/2208164799"
+      },
+      {
+        "register": "OpenCorporates (Wisconsin (US))",
+        "jurisdiction": "Wisconsin (US)",
+        "kind": "foreign",
+        "id": "P087750",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_wi/P087750"
+      },
+      {
+        "register": "OpenCorporates (Alabama (US))",
+        "jurisdiction": "Alabama (US)",
+        "kind": "foreign",
+        "id": "001-012-384",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_al/001-012-384"
+      },
+      {
+        "register": "OpenCorporates (New Jersey (US))",
+        "jurisdiction": "New Jersey (US)",
+        "kind": "foreign",
+        "id": "0101057735",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_nj/0101057735"
+      },
+      {
+        "register": "OpenCorporates (Tennessee (US))",
+        "jurisdiction": "Tennessee (US)",
+        "kind": "foreign",
+        "id": "001161355",
+        "name": "PANDADOC, INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_tn/001161355"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://www.pandadoc.com/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/5047240",
+        "id": "5047240",
+        "label": "Delaware (US) company no. 5047240 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Site blocked automated fetches; country from general knowledge (San Francisco HQ).",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 13,
@@ -5112,7 +5842,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "5016585",
+        "name": "PIPEDRIVE INC.",
+        "companyType": "Corporation",
+        "status": null,
+        "registeredAgent": "CORPORATION SERVICE COMPANY",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_de/5016585"
+      }
+    ],
     "sources": [
       {
         "type": "contact",
@@ -5121,12 +5864,18 @@
       {
         "type": "about",
         "url": "https://www.pipedrive.com/en/about"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/5016585",
+        "id": "5016585",
+        "label": "Delaware (US) company no. 5016585 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Parent company is Pipedrive OÜ (Estonia).",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 37,
@@ -5176,7 +5925,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "5540641",
+        "name": "AIRCALL.IO, INC.",
+        "companyType": "Corporation",
+        "status": null,
+        "registeredAgent": "THE CORPORATION TRUST COMPANY",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_de/5540641"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -5185,12 +5947,18 @@
       {
         "type": "about",
         "url": "https://aircall.io/about/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/5540641",
+        "id": "5540641",
+        "label": "Delaware (US) company no. 5540641 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Group parent is Aircall SAS (France).",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 10000013,
@@ -5210,17 +5978,48 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "6115204",
+        "name": "BEAUTIFUL SLIDES, INC.",
+        "companyType": "Corporation",
+        "status": null,
+        "registeredAgent": "INCORPORATING SERVICES, LTD",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_de/6115204"
+      },
+      {
+        "register": "OpenCorporates (California (US))",
+        "jurisdiction": "California (US)",
+        "kind": "foreign",
+        "id": "3945500",
+        "name": "BEAUTIFUL SLIDES, INC.",
+        "companyType": "Stock Corporation - Out of State - Stock",
+        "status": "Active",
+        "registeredAgent": "Mitch Grasso",
+        "registeredAddress": "1556 SANCHEZ ST, SAN FRANCISCO, 94131-2328, CA",
+        "url": "https://opencorporates.com/companies/us_ca/3945500"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://www.beautiful.ai/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/6115204",
+        "id": "6115204",
+        "label": "Delaware (US) company no. 6115204 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 100000034,
@@ -5680,17 +6479,360 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "4861858",
+        "name": "FRESHWORKS INC.",
+        "companyType": "Corporation",
+        "status": null,
+        "registeredAgent": "HARVARD BUSINESS SERVICES, INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_de/4861858"
+      },
+      {
+        "register": "OpenCorporates (Nebraska (US))",
+        "jurisdiction": "Nebraska (US)",
+        "kind": "foreign",
+        "id": "2202045279",
+        "name": "FRESHWORKS INC",
+        "companyType": "Foreign Corp",
+        "status": "Active",
+        "registeredAgent": "CAPITOL CORPORATE SERVICES, INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ne/2202045279"
+      },
+      {
+        "register": "OpenCorporates (Minnesota (US))",
+        "jurisdiction": "Minnesota (US)",
+        "kind": "foreign",
+        "id": "c0b6c705-20a6-ec11-91b9-00155d32b93a",
+        "name": "FRESHWORKS INC",
+        "companyType": "Business Corporation (Foreign)",
+        "status": "Active",
+        "registeredAgent": "CAPITOL CORPORATE SERVICES, INC",
+        "registeredAddress": "1605 30th Avenue S., Suite A, Moorhead, 56560, MN",
+        "url": "https://opencorporates.com/companies/us_mn/c0b6c705-20a6-ec11-91b9-00155d32b93a"
+      },
+      {
+        "register": "OpenCorporates (Vermont (US))",
+        "jurisdiction": "Vermont (US)",
+        "kind": "foreign",
+        "id": "0405527",
+        "name": "FRESHWORKS INC",
+        "companyType": "Foreign Business Corporation",
+        "status": "Active In Good Standing",
+        "registeredAgent": "CAPITOL CORPORATE SERVICES INC",
+        "registeredAddress": "2950 S DELAWARE ST, STE 201, SAN MATEO, 94403, CA",
+        "url": "https://opencorporates.com/companies/us_vt/0405527"
+      },
+      {
+        "register": "OpenCorporates (Wyoming (US))",
+        "jurisdiction": "Wyoming (US)",
+        "kind": "foreign",
+        "id": "2022-001096954",
+        "name": "FRESHWORKS INC",
+        "companyType": "Profit Corporation",
+        "status": "Active",
+        "registeredAgent": "Capitol Corporate Services, Inc",
+        "registeredAddress": "2950 S Delaware Street, Suite 201, San Mateo, 94403, CA",
+        "url": "https://opencorporates.com/companies/us_wy/2022-001096954"
+      },
+      {
+        "register": "OpenCorporates (Rhode Island (US))",
+        "jurisdiction": "Rhode Island (US)",
+        "kind": "foreign",
+        "id": "001738010",
+        "name": "FRESHWORKS INC",
+        "companyType": "Foreign Corporation",
+        "status": "Active",
+        "registeredAgent": "CAPITOL CORPORATE SERVICES, INC",
+        "registeredAddress": "2950 S DELAWARE STREET, SUITE 201, SAN MATEO, 94403, CA",
+        "url": "https://opencorporates.com/companies/us_ri/001738010"
+      },
+      {
+        "register": "OpenCorporates (Colorado (US))",
+        "jurisdiction": "Colorado (US)",
+        "kind": "foreign",
+        "id": "20181939345",
+        "name": "FRESHWORKS INC.",
+        "companyType": "Foreign profit corporation",
+        "status": "Good Standing",
+        "registeredAgent": "CAPITOL CORPORATE SERVICES, INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_co/20181939345"
+      },
+      {
+        "register": "OpenCorporates (Michigan (US))",
+        "jurisdiction": "Michigan (US)",
+        "kind": "foreign",
+        "id": "802464436",
+        "name": "FRESHWORKS INC.",
+        "companyType": "Foreign Profit Corporation",
+        "status": "Active",
+        "registeredAgent": "CAPITOL CORPORATE SERVICES, INC",
+        "registeredAddress": "186 N MAIN ST FL 2 STE 1, PLYMOUTH, 48170, MI",
+        "url": "https://opencorporates.com/companies/us_mi/802464436"
+      },
+      {
+        "register": "OpenCorporates (Kentucky (US))",
+        "jurisdiction": "Kentucky (US)",
+        "kind": "foreign",
+        "id": "1191657",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ky/1191657"
+      },
+      {
+        "register": "OpenCorporates (New Jersey (US))",
+        "jurisdiction": "New Jersey (US)",
+        "kind": "foreign",
+        "id": "0101050538",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_nj/0101050538"
+      },
+      {
+        "register": "OpenCorporates (Massachusetts (US))",
+        "jurisdiction": "Massachusetts (US)",
+        "kind": "foreign",
+        "id": "001434084",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ma/001434084"
+      },
+      {
+        "register": "OpenCorporates (Missouri (US))",
+        "jurisdiction": "Missouri (US)",
+        "kind": "foreign",
+        "id": "F001331496",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_mo/F001331496"
+      },
+      {
+        "register": "OpenCorporates (Louisiana (US))",
+        "jurisdiction": "Louisiana (US)",
+        "kind": "foreign",
+        "id": "44792562F",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_la/44792562F"
+      },
+      {
+        "register": "OpenCorporates (Utah (US))",
+        "jurisdiction": "Utah (US)",
+        "kind": "foreign",
+        "id": "11042943-0143",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ut/11042943-0143"
+      },
+      {
+        "register": "OpenCorporates (Maine (US))",
+        "jurisdiction": "Maine (US)",
+        "kind": "foreign",
+        "id": "20230066F",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_me/20230066F"
+      },
+      {
+        "register": "OpenCorporates (Connecticut (US))",
+        "jurisdiction": "Connecticut (US)",
+        "kind": "foreign",
+        "id": "2534035",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ct/2534035"
+      },
+      {
+        "register": "OpenCorporates (Ohio (US))",
+        "jurisdiction": "Ohio (US)",
+        "kind": "foreign",
+        "id": "4300798",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_oh/4300798"
+      },
+      {
+        "register": "OpenCorporates (Wisconsin (US))",
+        "jurisdiction": "Wisconsin (US)",
+        "kind": "foreign",
+        "id": "F069243",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_wi/F069243"
+      },
+      {
+        "register": "OpenCorporates (Hawaii (US))",
+        "jurisdiction": "Hawaii (US)",
+        "kind": "foreign",
+        "id": "117578F1",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_hi/117578F1"
+      },
+      {
+        "register": "OpenCorporates (Kansas (US))",
+        "jurisdiction": "Kansas (US)",
+        "kind": "foreign",
+        "id": "2025519",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ks/2025519"
+      },
+      {
+        "register": "OpenCorporates (Iowa (US))",
+        "jurisdiction": "Iowa (US)",
+        "kind": "foreign",
+        "id": "705931",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ia/705931"
+      },
+      {
+        "register": "OpenCorporates (Illinois (US))",
+        "jurisdiction": "Illinois (US)",
+        "kind": "foreign",
+        "id": "CORP_72532392",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_il/CORP_72532392"
+      },
+      {
+        "register": "OpenCorporates (Oklahoma (US))",
+        "jurisdiction": "Oklahoma (US)",
+        "kind": "foreign",
+        "id": "2313007147",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ok/2313007147"
+      },
+      {
+        "register": "OpenCorporates (Texas (US))",
+        "jurisdiction": "Texas (US)",
+        "kind": "foreign",
+        "id": "0803185061",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_tx/0803185061"
+      },
+      {
+        "register": "OpenCorporates (Indiana (US))",
+        "jurisdiction": "Indiana (US)",
+        "kind": "foreign",
+        "id": "202202181567188",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_in/202202181567188"
+      },
+      {
+        "register": "OpenCorporates (Mississippi (US))",
+        "jurisdiction": "Mississippi (US)",
+        "kind": "foreign",
+        "id": "1334455",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ms/1334455"
+      },
+      {
+        "register": "OpenCorporates (Arkansas (US))",
+        "jurisdiction": "Arkansas (US)",
+        "kind": "foreign",
+        "id": "811356336",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ar/811356336"
+      },
+      {
+        "register": "OpenCorporates (Arizona (US))",
+        "jurisdiction": "Arizona (US)",
+        "kind": "foreign",
+        "id": "1952139",
+        "name": "FRESHWORKS INC.",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_az/1952139"
+      }
+    ],
     "sources": [
       {
         "type": "contact",
         "url": "https://www.freshworks.com/contact/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/4861858",
+        "id": "4861858",
+        "label": "Delaware (US) company no. 4861858 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Indian-founded (Chennai) but genuinely headquartered in the US (San Mateo), listed on NASDAQ. Vendor email spritlesupport@ suggests the app was built by Spritle Software.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "vendorId": 33,
@@ -5960,23 +7102,42 @@
     "address": {
       "street": null,
       "city": null,
-      "region": null,
+      "region": "WA",
       "postalCode": null,
       "country": "United States",
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Washington (US))",
+        "jurisdiction": "Washington (US)",
+        "kind": "domestic",
+        "id": "604936061",
+        "name": "INQUBYTE LLC",
+        "companyType": "WA LIMITED LIABILITY COMPANY",
+        "status": "Delinquent",
+        "registeredAgent": "GOVINDA KANDIPILLI",
+        "registeredAddress": "1706 221ST PL NE, SAMMAMISH, 98074-4160, WA",
+        "url": "https://opencorporates.com/companies/us_wa/604936061"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://www.Inqubyte.com"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_wa/604936061",
+        "id": "604936061",
+        "label": "Washington (US) company no. 604936061 (OpenCorporates)"
       }
     ],
-    "locationFlag": "possible-offshore",
-    "notes": "Possibly offshore: an 'LLC' with only a US phone number and no address; the team's location wasn't established. First name from the vendor email Krishna@inqubyte.com. US (+1 360) phone number on the site.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "locationFlag": null,
+    "notes": "First name from the vendor email Krishna@inqubyte.com. US (+1 360) phone number on the site. Washington LLC (no. 604936061, status Delinquent: overdue annual report) whose registered agent is an individual, Govinda Kandipilli, in Sammamish, WA, so it has a real US presence; the earlier possible-offshore flag was cleared.",
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 35,
@@ -6313,7 +7474,7 @@
     "locationFlag": "possible-offshore",
     "notes": "Possible offshore company: the US address is a registered-agent/virtual-office address (Sheridan, WY); where the team is based wasn't established. Wyoming address (likely registered agent).",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 10000145,
@@ -6629,17 +7790,36 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Wyoming (US))",
+        "jurisdiction": "Wyoming (US)",
+        "kind": "domestic",
+        "id": "2023-001219464",
+        "name": "FillFaster LLC",
+        "companyType": "Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "Registered Agents Inc",
+        "registeredAddress": "30 N Gould St Ste R, Sheridan, 82801, WY",
+        "url": "https://opencorporates.com/companies/us_wy/2023-001219464"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
         "url": "https://fillfaster.com/privacy-policy/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_wy/2023-001219464",
+        "id": "2023-001219464",
+        "label": "Wyoming (US) company no. 2023-001219464 (OpenCorporates)"
       }
     ],
     "locationFlag": "possible-offshore",
     "notes": "Possible offshore company: the US address is a registered-agent/virtual-office address (Sheridan, WY); the site's testimonials are mostly from Israeli businesses, so the team may be Israeli (unconfirmed). Wyoming registered-agent address.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 10000193,
@@ -8295,17 +9475,36 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Wyoming (US))",
+        "jurisdiction": "Wyoming (US)",
+        "kind": "domestic",
+        "id": "2023-001276837",
+        "name": "Interacti Digital LLC",
+        "companyType": "Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "Company Sage Agents LLC",
+        "registeredAddress": "1007 N Orange St. 4th Floor,2130, Wilmington, 19801, Delaware",
+        "url": "https://opencorporates.com/companies/us_wy/2023-001276837"
+      }
+    ],
     "sources": [
       {
         "type": "contact",
         "url": "https://www.interactidigital.com/contact"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_wy/2023-001276837",
+        "id": "2023-001276837",
+        "label": "Wyoming (US) company no. 2023-001276837 (OpenCorporates)"
       }
     ],
     "locationFlag": "possible-offshore",
     "notes": "Possible offshore company: the US address is a registered-agent/virtual-office address (1007 N Orange St, Wilmington, DE); where the team is based wasn't established.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 100000078,
@@ -9611,7 +10810,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (California (US))",
+        "jurisdiction": "California (US)",
+        "kind": "domestic",
+        "id": "201924010648",
+        "name": "MAPSLY LLC",
+        "companyType": "Limited Liability Company - CA",
+        "status": "Active",
+        "registeredAgent": "VIRTUAL POST SOLUTIONS, INC",
+        "registeredAddress": "440 N BARRANCA AVE, 4985, COVINA, 91723, CA",
+        "url": "https://opencorporates.com/companies/us_ca/201924010648"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -9620,12 +10832,18 @@
       {
         "type": "legal",
         "url": "https://mapsly.com/terms/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_ca/201924010648",
+        "id": "201924010648",
+        "label": "California (US) company no. 201924010648 (OpenCorporates)"
       }
     ],
     "locationFlag": "registered-agent",
     "notes": "The Covina, CA address is a mailbox (#4985). Mapsly was founded by Sergey Shurygin; there's also a Mapsly Europe Ltd. Where the team is based wasn't established. Also Mapsly Europe Ltd.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-06",
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 100000204,
@@ -10035,7 +11253,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Illinois (US))",
+        "jurisdiction": "Illinois (US)",
+        "kind": "domestic",
+        "id": "LLC_11618553",
+        "name": "AXANEXA LLC",
+        "companyType": "Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "REEDER CPA GROUP",
+        "registeredAddress": "1901 N ROSELLE ROAD SUITE 800, #598, SCHAUMBURG, 60195, IL",
+        "url": "https://opencorporates.com/companies/us_il/LLC_11618553"
+      }
+    ],
     "sources": [
       {
         "type": "about",
@@ -10044,12 +11275,18 @@
       {
         "type": "legal",
         "url": "https://axanexa.com/legal/privacy-policy"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_il/LLC_11618553",
+        "id": "LLC_11618553",
+        "label": "Illinois (US) company no. LLC_11618553 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Vendor email mbuckiewicz@axanexa.com.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "vendorId": 10000111,

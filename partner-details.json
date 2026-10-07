@@ -217,7 +217,7 @@
     "email": "info@aety.io",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "Aety ApS",
     "contactName": "Klaus Zoega Hansen",
     "contactTitle": "CEO & Consultant",
     "alternativeContacts": [
@@ -227,15 +227,28 @@
       }
     ],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "Sjæleboderne 2, 4",
+      "city": "København K",
       "region": null,
-      "postalCode": null,
+      "postalCode": "1122",
       "country": "Denmark",
       "countryCode": "DK"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Denmark)",
+        "jurisdiction": "Denmark",
+        "kind": "domestic",
+        "id": "39130114",
+        "name": "Aety ApS",
+        "companyType": "Anpartsselskab",
+        "status": "Normal",
+        "registeredAgent": null,
+        "registeredAddress": "Sjæleboderne 2, 4, København K, 1122, Denmark",
+        "url": "https://opencorporates.com/companies/dk/39130114"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -245,12 +258,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/aety",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/dk/39130114",
+        "id": "39130114",
+        "label": "Denmark company no. 39130114 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Danish phone numbers (+45) on the site; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "57d322d3-244e-4968-bc96-a402b4449518",
@@ -294,7 +313,7 @@
     "locationFlag": null,
     "notes": "The monday.com profile says US, but the site (.ca, French-language) says Agence Gro is a Québec channel partner, so the country is Canada. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "eafcf1a7-cc1c-4ea7-84a3-1d5a4881e7ba",
@@ -801,7 +820,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "7b5b300a-31be-461f-acbd-cf21ff817620",
@@ -840,7 +859,7 @@
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "aa848b93-7648-4610-a195-3b35a36f9e49",
@@ -883,7 +902,7 @@
     "locationFlag": null,
     "notes": "Registered address from the privacy notice. Cloud Concept built the DocuGen app (vendor 10); the site also mentions South Africa heavily.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "3cb2aa16-af9f-40a3-af95-cd3ed3456672",
@@ -1077,7 +1096,7 @@
     "locationFlag": null,
     "notes": "The monday.com profile says US, but Eligeo is headquartered in Vancouver, Canada. CEO from Crunchbase.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "709f6933-e6fa-4ff7-af61-9a091f7c20b8",
@@ -1216,7 +1235,20 @@
       "countryCode": "DK"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Denmark)",
+        "jurisdiction": "Denmark",
+        "kind": "domestic",
+        "id": "40326820",
+        "name": "EnableN-Consulting ApS",
+        "companyType": "Anpartsselskab",
+        "status": "Normal",
+        "registeredAgent": null,
+        "registeredAddress": "c/o Charlotte Søttrup af Sandeberg, Måløv Byvej 229, Måløv, 2760",
+        "url": "https://opencorporates.com/companies/dk/40326820"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1226,12 +1258,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/enablen-consulting-aps",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/dk/40326820",
+        "id": "40326820",
+        "label": "Denmark company no. 40326820 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Danish ApS per the name, but the website is .no with Norwegian (+47) phone numbers. Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "6c9485fc-f04e-4f75-9db4-55130b5a42ae",
@@ -1287,7 +1325,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "7868f792-7d4b-462d-b73f-12fed1a7c022",
@@ -1365,7 +1403,7 @@
     "locationFlag": null,
     "notes": "Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "a30470c3-554a-44ed-8401-2c7b37514414",
@@ -1503,7 +1541,7 @@
     "locationFlag": null,
     "notes": "Puerto Rico per the monday.com profile; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "024675e0-a5be-4aef-8275-3cf4a6abcbdc",
@@ -1514,20 +1552,33 @@
     "email": "monday.com@gorillaservices.nl",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "Gorilla Services B.V.",
     "contactName": null,
     "contactTitle": null,
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "Takkebijsters 3 A",
+      "city": "Breda",
       "region": null,
-      "postalCode": null,
+      "postalCode": "4817 BL",
       "country": "Netherlands",
       "countryCode": "NL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Netherlands)",
+        "jurisdiction": "Netherlands",
+        "kind": "domestic",
+        "id": "63707217",
+        "name": "Gorilla Services B.V.",
+        "companyType": "Besloten Vennootschap",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "Takkebijsters 3 A, Breda, 4817BL, Netherlands",
+        "url": "https://opencorporates.com/companies/nl/63707217"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1537,12 +1588,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/gorilla-services",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/nl/63707217",
+        "id": "63707217",
+        "label": "Netherlands company no. 63707217 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Dutch phone number (+31); no address or legal entity published. Not the same company as Gorilla Apps (vendor 10000114). Country self-reported on the monday.com partner profile.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "6fdc27b2-fec4-43b0-943b-cbf6f94b856a",
@@ -1663,7 +1720,7 @@
     "locationFlag": null,
     "notes": "Registered and administrative office (Sede Legale e Amministrativa).",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "f21c6c80-552f-48af-9909-dbbde9f4ac9f",
@@ -1818,7 +1875,7 @@
     "locationFlag": null,
     "notes": "No address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "158b0042-3499-41d1-8529-145fb4cb606a",
@@ -2029,7 +2086,7 @@
     "locationFlag": null,
     "notes": "Site could not be scraped; UAE per the monday.com profile. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "721a355c-03c8-4a7f-a298-bf3d2d97a8ce",
@@ -2173,7 +2230,7 @@
     "locationFlag": null,
     "notes": "Mexican arm of Nortrez (Brazil); no Mexican address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "58d49bd9-6e08-4200-9ceb-e3d2a8ac0893",
@@ -2222,7 +2279,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "88d6b78f-912a-432d-b71b-68ffe8b2a4c0",
@@ -2251,15 +2308,28 @@
       }
     ],
     "address": {
-      "street": null,
-      "city": null,
-      "region": null,
-      "postalCode": null,
+      "street": "Arenavägen 47",
+      "city": "Johanneshov",
+      "region": "Stockholm",
+      "postalCode": "121 77",
       "country": "Sweden",
       "countryCode": "SE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Sweden)",
+        "jurisdiction": "Sweden",
+        "kind": "domestic",
+        "id": "559175-1663",
+        "name": "Omnitas Consulting AB",
+        "companyType": "Aktiebolag",
+        "status": "Registrerad",
+        "registeredAgent": null,
+        "registeredAddress": "Arenavägen 47, JOHANNESHOV, 12177, Sweden",
+        "url": "https://opencorporates.com/companies/se/559175-1663"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2273,12 +2343,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/omnitas-consulting",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/se/559175-1663",
+        "id": "559175-1663",
+        "label": "Sweden company no. 559175-1663 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Swedish (+46) phone numbers; no street address published. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "1b2eb48d-bfdd-4bdc-99f2-08236fdb33e2",
@@ -2675,15 +2751,28 @@
     "contactTitle": null,
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
-      "region": null,
-      "postalCode": null,
+      "street": "Unit 1, The CHQ Building, Custom House Quay",
+      "city": "Dublin",
+      "region": "Dublin 1",
+      "postalCode": "D01 Y6H7",
       "country": "Ireland",
       "countryCode": "IE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Ireland)",
+        "jurisdiction": "Ireland",
+        "kind": "domestic",
+        "id": "462574",
+        "name": "PROVIDENT C.R.M. LIMITED",
+        "companyType": "LTD - Private Company Limited by Shares",
+        "status": "Normal",
+        "registeredAgent": null,
+        "registeredAddress": "UNIT 1, THE CHQ BUILDING, Custom House QUAY, Dublin 1, D01 Y6H7, Ireland, D01 Y6H7, Ireland, Annual Return Last Made Up Date, 2025-09-25",
+        "url": "https://opencorporates.com/companies/ie/462574"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2697,12 +2786,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/provident-crm",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/ie/462574",
+        "id": "462574",
+        "label": "Ireland company no. 462574 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Irish (+353) and UK (+44) phone numbers; related entity Provident Solutions Limited. No address published. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "1fa5eda4-f81f-4a1a-99b8-c5f50137686b",
@@ -2864,7 +2959,7 @@
     "locationFlag": null,
     "notes": "Mexican (+52) phone numbers; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "fa90c2bb-99cf-42a1-a8a7-097d8f7f085d",
@@ -2927,7 +3022,20 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (India)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "L22210MH1995PLC084781",
+        "name": "TATA CONSULTANCY SERVICES LIMITED",
+        "companyType": "Company limited by Shares",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "9TH FLOOR, NIRMAL BUILDING NARIMAN POINT NA MUMBAI MH 400021, India",
+        "url": "https://opencorporates.com/companies/in/L22210MH1995PLC084781"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2941,12 +3049,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/tcs",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/in/L22210MH1995PLC084781",
+        "id": "L22210MH1995PLC084781",
+        "label": "India company no. L22210MH1995PLC084781 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Global HQ is in Mumbai, India; the monday.com profile lists the US. The scraped leadership page lists N. Chandrasekaran as CEO & MD (now Chairman of Tata Sons) next to K. Krithivasan.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "f4d1c571-a49f-493e-8488-caf8e37aeb21",
@@ -8193,7 +8307,20 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Arizona (US))",
+        "jurisdiction": "Arizona (US)",
+        "kind": "domestic",
+        "id": "L21997883",
+        "name": "KOLME GROUP, LLC",
+        "companyType": "Domestic Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "KIM ESSENDRUP",
+        "registeredAddress": "6568 WEST ROBIN LANE, GLENDALE, 85310, AZ",
+        "url": "https://opencorporates.com/companies/us_az/L21997883"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -8207,12 +8334,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/kolme-group",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_az/L21997883",
+        "id": "L21997883",
+        "label": "Arizona (US) company no. L21997883 (OpenCorporates)"
       }
     ],
     "locationFlag": "registered-agent",
     "notes": "The only published address is a mailbox (PMB).",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "7172a50e-470d-46b4-bd12-754a8e98047b",
@@ -11507,7 +11640,7 @@
     "locationFlag": "registered-agent",
     "notes": "The only published address is a Wyoming registered-agent address; where the team is based wasn't established.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-06"
   },
   {
     "id": "495b4e24-8393-4ead-b9ce-22279f4fa2a0",

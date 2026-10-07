@@ -66,6 +66,9 @@
             </div>
           {% endfor %}
         </dd>
+      {% elif details and details.registrationsCheckedAt %}
+        <dt class="text-gray-500">Registrations</dt>
+        <dd class="text-gray-600">No matching registration found in official company registers (checked {{ details.registrationsCheckedAt | formatDate }})</dd>
       {% endif %}
       {% if website %}
         <dt class="text-gray-500">Website</dt>
