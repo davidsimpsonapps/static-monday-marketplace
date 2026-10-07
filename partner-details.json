@@ -3307,7 +3307,20 @@
         "countryCode": "IN"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (India)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U74999KA2017PTC103353",
+        "name": "TRANSFUNNEL CONSULTING PRIVATE LIMITED",
+        "companyType": "Company limited by Shares",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "DBS Office Business Center no.26 cunningham road bangalore Bangalore KA 560052, India",
+        "url": "https://opencorporates.com/companies/in/U74999KA2017PTC103353"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -3325,12 +3338,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/transfunnel-consulting",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/in/U74999KA2017PTC103353",
+        "id": "U74999KA2017PTC103353",
+        "label": "India company no. U74999KA2017PTC103353 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "7845f92e-0b98-47eb-ad93-e1bfdd4db909",
@@ -3392,7 +3411,7 @@
     ],
     "locationFlag": null,
     "notes": "The monday.com profile says Netherlands, but the registered office is in Edegem, Belgium.",
-    "lastVerified": "2026-10-06",
+    "lastVerified": "2026-10-07",
     "registrationsCheckedAt": null
   },
   {
@@ -3614,7 +3633,7 @@
     "locationFlag": null,
     "notes": "New Zealand (+64) phone numbers; no address published. Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "d09f2b86-6ab2-40df-858a-3039139ae967",
@@ -4444,7 +4463,7 @@
     "locationFlag": null,
     "notes": "24 Luna is a brand of OPG One Productivity Group GmbH.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "e5084e17-63bc-496c-ac02-b8697c139e7e",
@@ -4845,7 +4864,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "b2fe3545-207e-48d2-be62-0cd5acd6a42b",
@@ -4861,7 +4880,7 @@
     "contactTitle": null,
     "alternativeContacts": [],
     "address": {
-      "street": null,
+      "street": "Friedrichstraße 15",
       "city": "Stuttgart",
       "region": null,
       "postalCode": "70174",
@@ -4869,7 +4888,20 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Germany)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "B8534_HRB725118",
+        "name": "demicon GmbH",
+        "companyType": null,
+        "status": "Currently Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Friedrichstraße 15, 70174 Stuttgart., Germany",
+        "url": "https://opencorporates.com/companies/de/B8534_HRB725118"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -4883,12 +4915,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/demicon",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/de/B8534_HRB725118",
+        "id": "B8534_HRB725118",
+        "label": "Germany company no. B8534_HRB725118 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "The monday.com app vendor tmnxt (vendor 40) uses a demicon.de contact email.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "564dffba-699d-43e0-9697-536a7e26e5b2",
@@ -4941,7 +4979,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "39702dee-9de4-4ceb-820d-ca4016f00ed6",
@@ -4962,10 +5000,10 @@
       }
     ],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "16 New Industrial Road, #03-05, Hudson Technocentre",
+      "city": "Singapore",
       "region": null,
-      "postalCode": null,
+      "postalCode": "536204",
       "country": "Singapore",
       "countryCode": "SG"
     },
@@ -4980,7 +5018,20 @@
         "countryCode": "DE"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Singapore)",
+        "jurisdiction": "Singapore",
+        "kind": "domestic",
+        "id": "200712788E",
+        "name": "EASE SOLUTIONS PTE. LTD.",
+        "companyType": "Local Company - EXEMPT PRIVATE COMPANY LIMITED BY SHARES",
+        "status": "Live Company",
+        "registeredAgent": null,
+        "registeredAddress": "16 NEW INDUSTRIAL ROAD, #03-05, HUDSON TECHNOCENTRE, 536204, Singapore",
+        "url": "https://opencorporates.com/companies/sg/200712788E"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -5000,12 +5051,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/ease-solutions",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/sg/200712788E",
+        "id": "200712788E",
+        "label": "Singapore company no. 200712788E (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Singapore per the monday.com profile; the site's imprint is for the German GmbH. The terms page is unedited template text (AstroWind LLC). Country self-reported on the monday.com partner profile. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-07",
+    "registrationsCheckedAt": "2026-10-07"
   },
   {
     "id": "349212ff-53fe-4f80-bf2d-67255dd9cedb",
