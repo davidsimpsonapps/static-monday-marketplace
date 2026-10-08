@@ -1385,7 +1385,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000188,
@@ -1584,7 +1584,7 @@
     "locationFlag": null,
     "notes": "Co-managing director: Markus Müller. VAT ID DE815324806.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000104,
@@ -1652,7 +1652,7 @@
     "name": "Tempo Software",
     "tier": "Silver",
     "partnerIds": [],
-    "legalName": "Tempo Software",
+    "legalName": "Tempo Software Inc.",
     "contactName": "Vic Chynoweth",
     "contactTitle": "CEO",
     "alternativeContacts": [],
@@ -1665,17 +1665,36 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "6033254",
+        "name": "TEMPO SOFTWARE INC",
+        "companyType": "Corporation",
+        "status": null,
+        "registeredAgent": "AGENTS AND CORPORATIONS, INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_de/6033254"
+      }
+    ],
     "sources": [
       {
         "type": "press",
         "url": "https://www.tempo.io/news/tempo-strengthens-executive-leadership"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/6033254",
+        "id": "6033254",
+        "label": "Delaware (US) company no. 6033254 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "HQ city is from a January 2026 press release dateline; no street address was confirmed. Offices are also in Reykjavík and Montreal. The monday.com vendor email is d.belevtsov@tempo.io.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": "2026-10-07"
+    "notes": "HQ city is from a January 2026 press release dateline; no street address was confirmed. Offices are also in Reykjavík and Montreal. The monday.com vendor email is d.belevtsov@tempo.io. US entity Tempo Software Inc. is a Delaware corporation (6033254).",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000052,
@@ -2097,7 +2116,32 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "5222016",
+        "name": "VIRTENIA INC.",
+        "companyType": "Domestic Corporation",
+        "status": null,
+        "registeredAgent": "LEGALINC CORPORATE SERVICES INC",
+        "registeredAddress": "New Castle, DE, United States",
+        "url": "https://opencorporates.com/companies/us_de/5222016"
+      },
+      {
+        "register": "OpenCorporates (Missouri (US))",
+        "jurisdiction": "Missouri (US)",
+        "kind": "foreign",
+        "id": "F001432280",
+        "name": "VIRTENIA INC.",
+        "companyType": "Gen. Business - For Profit",
+        "status": "Good Standing",
+        "registeredAgent": "REGISTERED AGENT SOLUTIONS, INC",
+        "registeredAddress": "5661 Telegraph Rd Ste 4B, Saint Louis, 63129-4275, MO",
+        "url": "https://opencorporates.com/companies/us_mo/F001432280"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -2106,12 +2150,18 @@
       {
         "type": "linkedin",
         "url": "https://www.linkedin.com/company/virtenia/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/5222016",
+        "id": "5222016",
+        "label": "Delaware (US) company no. 5222016 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Co-founders: John Baur and Kyle Cordes.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000273,
@@ -2181,7 +2231,7 @@
     "locationFlag": null,
     "notes": "Sole proprietorship trading as Workflow Boost; no street address published.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000254,
@@ -2233,7 +2283,7 @@
     "locationFlag": "offshore-moved",
     "notes": "Wyoming registered-agent address for Delhi, India based Anish Jain.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000249,
@@ -2613,7 +2663,20 @@
       "countryCode": "NZ"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (New Zealand)",
+        "jurisdiction": "New Zealand",
+        "kind": "domestic",
+        "id": "9021995",
+        "name": "STABLE VARIANCE LIMITED",
+        "companyType": "NZ Limited Company",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Emson McLaughlin Limited, 1/34 Yaldhurst Road, Sockburn, Christchurch, 8042, NZ",
+        "url": "https://opencorporates.com/companies/nz/9021995"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -2626,12 +2689,18 @@
       {
         "type": "website",
         "url": "https://newzealand-company.com/co/stable-variance-limited"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/nz/9021995",
+        "id": "9021995",
+        "label": "New Zealand company no. 9021995 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Legal name from the site footer. Not on UK Companies House; the country is unknown (monday.com form region apse2 suggests Asia-Pacific).",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Legal name from the site footer. New Zealand company (Stable Variance Limited, NZBN register 9021995); the address is its registered office, which is at its accountants (Emson McLaughlin Limited) in Christchurch.",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000203,
@@ -2705,7 +2774,7 @@
     "locationFlag": null,
     "notes": "Deview Studios is owned by BuzzMaker Ltd. UIC 206569003. The city isn't stated in the policy (the street is in Sofia).",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000197,
@@ -2863,7 +2932,7 @@
     "locationFlag": null,
     "notes": "Nothing beyond the brand name is published.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000184,
@@ -3027,7 +3096,7 @@
     "locationFlag": null,
     "notes": "VAT RO40242453; Trade Registry J40/17243/2018. Vendor email is diana.angheluta@mediapost-martech.com (role unknown).",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000162,
@@ -3194,7 +3263,7 @@
     "locationFlag": null,
     "notes": "Setup Solution is a Georgian sole proprietorship.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000158,
@@ -3227,7 +3296,7 @@
     "locationFlag": null,
     "notes": "Xebia's Antwerp office address, not confirmed as the registered office. Vendor email lars@gcompany.nl (G-Company, acquired by Xebia).",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000157,
@@ -3312,7 +3381,20 @@
       "countryCode": "BE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Belgium)",
+        "jurisdiction": "Belgium",
+        "kind": "domestic",
+        "id": "0744742640",
+        "name": "Tryve Belgium",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/be/0744742640"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -3327,12 +3409,18 @@
         "url": null,
         "id": "BE 0744.742.640",
         "label": "Company number BE 0744.742.640"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/be/0744742640",
+        "id": "0744742640",
+        "label": "Belgium company no. 0744742640 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Trades as Tryve. Company number BE 0744.742.640.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000143,
@@ -3726,7 +3814,7 @@
     "locationFlag": null,
     "notes": "Full legal entity name not published.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000102,
@@ -4020,15 +4108,28 @@
     "contactTitle": "Founder and CEO",
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
-      "region": null,
-      "postalCode": null,
+      "street": "Office No. 401, B Zone, Baner",
+      "city": "Pune",
+      "region": "Maharashtra",
+      "postalCode": "411045",
       "country": "India",
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (India)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72900PN2013PTC146344",
+        "name": "MINIORANGE SECURITY SOFTWARE PRIVATE LIMITED",
+        "companyType": "Company limited by Shares",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "OFFICE NO.401, B ZONE BANNER, S. NO 36/1/1/1(P) 35/2/1, BANNER Baner Gaon Pune City Pune MH 411045, India",
+        "url": "https://opencorporates.com/companies/in/U72900PN2013PTC146344"
+      }
+    ],
     "sources": [
       {
         "type": "contact",
@@ -4037,12 +4138,18 @@
       {
         "type": "about",
         "url": "https://www.miniorange.com/about_us"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/in/U72900PN2013PTC146344",
+        "id": "U72900PN2013PTC146344",
+        "label": "India company no. U72900PN2013PTC146344 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Also trades as Xecurify, with offices in the USA and India (Pune); no street address published on the site.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "Also trades as Xecurify, with offices in the USA and India (Pune); the site publishes no street address, so the address shown is the registered office from the Indian register (Pune).",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000075,
@@ -4345,7 +4452,7 @@
     "locationFlag": null,
     "notes": "Full legal entity name not published. Also has an office at Za Rudkoju 33, Ternopil 46001, Ukraine.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000053,
@@ -4499,7 +4606,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000025,
@@ -4632,7 +4739,7 @@
     "locationFlag": null,
     "notes": "Antwerp office (also Gent and Hasselt); not confirmed as the registered office.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000011,
@@ -6412,25 +6519,44 @@
     "contactTitle": null,
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "Gen. Svobodu 376/50",
+      "city": "Vranov nad Topľou",
       "region": null,
-      "postalCode": null,
+      "postalCode": "093 01",
       "country": "Slovakia",
       "countryCode": "SK"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Slovakia)",
+        "jurisdiction": "Slovakia",
+        "kind": "domestic",
+        "id": "47675608",
+        "name": "HLS s.r.o.",
+        "companyType": "Spoločnosť s ručením obmedzeným",
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": "Gen. Svobodu 376/50, 093 01, Vranov nad Topľou, Slovakia",
+        "url": "https://opencorporates.com/companies/sk/47675608"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://eledo.online/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/sk/47675608",
+        "id": "47675608",
+        "label": "Slovakia company no. 47675608 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Contact name from the vendor email lubos.husivarga@gmail.com. Eledo is the product.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Contact name from the vendor email lubos.husivarga@gmail.com. Eledo is the product. Address is the registered office from the Slovak register.",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 100000001,
@@ -6586,7 +6712,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 26,
@@ -6623,30 +6749,49 @@
     "name": "Unito",
     "tier": null,
     "partnerIds": [],
-    "legalName": "Unito",
+    "legalName": "Unito Inc.",
     "contactName": "Marc Boscher",
     "contactTitle": "CEO",
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
-      "region": null,
-      "postalCode": null,
+      "street": "1265 Berri, Suite 7E",
+      "city": "Montreal",
+      "region": "QC",
+      "postalCode": "H2L 4X4",
       "country": "Canada",
       "countryCode": "CA"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Canada)",
+        "jurisdiction": "Canada",
+        "kind": "domestic",
+        "id": "11442279",
+        "name": "Unito Inc.",
+        "companyType": "Non-distributing corporation with 50 or fewer shareholders",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "7E-1265 Berri, Montreal, H2L 4X4, QC",
+        "url": "https://opencorporates.com/companies/ca/11442279"
+      }
+    ],
     "sources": [
       {
         "type": "about",
         "url": "https://unito.io/about-us/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/ca/11442279",
+        "id": "11442279",
+        "label": "Canada company no. 11442279 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "Unito is based in Montreal.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Unito is based in Montreal; address is the registered office from the Canadian federal register (Corporations Canada 11442279).",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 12,
@@ -6760,20 +6905,40 @@
     "contactTitle": null,
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "Friedrichstraße 15",
+      "city": "Stuttgart",
       "region": null,
-      "postalCode": null,
+      "postalCode": "70174",
       "country": "Germany",
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
-    "sources": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Germany)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "B8534_HRB725118",
+        "name": "demicon GmbH",
+        "companyType": null,
+        "status": "Currently Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Friedrichstraße 15, 70174 Stuttgart., Germany",
+        "url": "https://opencorporates.com/companies/de/B8534_HRB725118"
+      }
+    ],
+    "sources": [
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/de/B8534_HRB725118",
+        "id": "B8534_HRB725118",
+        "label": "Germany company no. B8534_HRB725118 (OpenCorporates)"
+      }
+    ],
     "locationFlag": null,
     "notes": "tmnxt.com is now a parked domain. Contact name and company from the vendor email dmitry.rasin@demicon.de.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 39,
@@ -6791,14 +6956,27 @@
     ],
     "address": {
       "street": "80A Hinemoa Street",
-      "city": null,
-      "region": null,
-      "postalCode": null,
+      "city": "Auckland",
+      "region": "Birkenhead",
+      "postalCode": "0626",
       "country": "New Zealand",
       "countryCode": "NZ"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (New Zealand)",
+        "jurisdiction": "New Zealand",
+        "kind": "domestic",
+        "id": "5543045",
+        "name": "PAGEPROOF.COM LIMITED",
+        "companyType": "NZ Limited Company",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "PageProof Group Limited, 80a Hinemoa Street, Birkenhead, Auckland, 0626, NZ",
+        "url": "https://opencorporates.com/companies/nz/5543045"
+      }
+    ],
     "sources": [
       {
         "type": "about",
@@ -6807,12 +6985,18 @@
       {
         "type": "website",
         "url": "https://pageproof.com/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/nz/5543045",
+        "id": "5543045",
+        "label": "New Zealand company no. 5543045 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Also PO Box 7117.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000159,
@@ -6925,17 +7109,36 @@
       "countryCode": "MY"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Malaysia)",
+        "jurisdiction": "Malaysia",
+        "kind": "domestic",
+        "id": "635856-K",
+        "name": "MICRO OCEAN TECHNOLOGIES SDN. BHD.",
+        "companyType": "Sendirian Berhad",
+        "status": "Existing",
+        "registeredAgent": null,
+        "registeredAddress": "KUALA LUMPUR, WILAYAH PERSEKUTUAN, Malaysia",
+        "url": "https://opencorporates.com/companies/my/635856-K"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
         "url": "https://moceanapi.com/legal/terms"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/my/635856-K",
+        "id": "635856-K",
+        "label": "Malaysia company no. 635856-K (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000015,
@@ -7538,12 +7741,16 @@
       {
         "type": "about",
         "url": "https://masterconcept.ai/about-master-concept/"
+      },
+      {
+        "type": "directory",
+        "url": "https://whub.io/startups/master-concept-hong-kong-limited"
       }
     ],
     "locationFlag": null,
-    "notes": "Co-founder Derek Chan. Offices also in Taipei and Kuala Lumpur.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Co-founder Derek Chan. Offices also in Taipei and Kuala Lumpur. Founded in Hong Kong in 2003; a startup directory names the company Master Concept (Hong Kong) Limited, which is unconfirmed. MASTER CONCEPT CORPORATION LIMITED (HK 2104063) is a different company.",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000213,
@@ -7613,7 +7820,7 @@
     "locationFlag": null,
     "notes": "Japanese company (.jp) with a Hanoi, Vietnam office: 5F Rainbow Building, 19/5 Street, Van Quan Ward, Ha Dong District.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000195,
@@ -7692,7 +7899,7 @@
     "locationFlag": null,
     "notes": "Country from the domain's WHOIS registrant record (New Mexico); may be a registered-agent/privacy address. Unconfirmed.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000002,
@@ -7712,17 +7919,36 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "5225683",
+        "name": "SEMRUSH INC.",
+        "companyType": "Corporation",
+        "status": null,
+        "registeredAgent": "RESIDENT AGENTS INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_de/5225683"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
         "url": "https://www.semrush.com/company/legal/privacy-policy/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/5225683",
+        "id": "5225683",
+        "label": "Delaware (US) company no. 5225683 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000112,
@@ -7756,7 +7982,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000018,
@@ -7899,17 +8125,36 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (India)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U74900WB2015PTC208997",
+        "name": "SINGLE DOOR TECHNO SOLUTIONS PRIVATE LIMITED",
+        "companyType": "Company limited by Shares",
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "199/3, GROUND FLOOR, EAST PART, NEAR CHANDI MANDIR HIJLI CO OPERATIVE, PASCHIM MIDNAPUR KHARAGPUR Midnapore WB 721306, India",
+        "url": "https://opencorporates.com/companies/in/U74900WB2015PTC208997"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
         "url": "https://satisfactiondrivers.com/terms-and-conditions/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/in/U74900WB2015PTC208997",
+        "id": "U74900WB2015PTC208997",
+        "label": "India company no. U74900WB2015PTC208997 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Trades as Satisfaction Drivers.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000109,
@@ -7959,17 +8204,60 @@
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Delaware (US))",
+        "jurisdiction": "Delaware (US)",
+        "kind": "domestic",
+        "id": "3551868",
+        "name": "PAGOS, INC.",
+        "companyType": "Corporation",
+        "status": null,
+        "registeredAgent": "HARVARD BUSINESS SERVICES, INC",
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_de/3551868"
+      },
+      {
+        "register": "OpenCorporates (Connecticut (US))",
+        "jurisdiction": "Connecticut (US)",
+        "kind": "foreign",
+        "id": "0998408",
+        "name": "PAGOS, INC.",
+        "companyType": "Stock",
+        "status": "Withdrawn",
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://opencorporates.com/companies/us_ct/0998408"
+      },
+      {
+        "register": "OpenCorporates (Massachusetts (US))",
+        "jurisdiction": "Massachusetts (US)",
+        "kind": "foreign",
+        "id": "510418584",
+        "name": "PAGOS, INC.",
+        "companyType": "Foreign Corporation",
+        "status": "Inactive",
+        "registeredAgent": null,
+        "registeredAddress": "75 SECOND AVENUE SUITE 605, NEEDHAM, 02494, MA",
+        "url": "https://opencorporates.com/companies/us_ma/510418584"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
         "url": "https://spreadsheetweb.com/terms-of-use/"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_de/3551868",
+        "id": "3551868",
+        "label": "Delaware (US) company no. 3551868 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Product: SpreadsheetWEB. Vendor email ukadakal@pagos.com.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000031,
@@ -8020,7 +8308,7 @@
       }
     ],
     "address": {
-      "street": null,
+      "street": "Viktoriastraße 15",
       "city": "Koblenz",
       "region": null,
       "postalCode": "56068",
@@ -8028,17 +8316,36 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Germany)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "T2210V_HRB7502",
+        "name": "Decadis AG",
+        "companyType": null,
+        "status": "Currently Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Viktoriastraße 15, 56068 Koblenz., Germany",
+        "url": "https://opencorporates.com/companies/de/T2210V_HRB7502"
+      }
+    ],
     "sources": [
       {
         "type": "imprint",
         "url": "https://www.decadis.de/rechtliches/impressum"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/de/T2210V_HRB7502",
+        "id": "T2210V_HRB7502",
+        "label": "Germany company no. T2210V_HRB7502 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
     "notes": "Board: Markus Hegemann, Christian Czaia, Julian Riedinger.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 100000002,
@@ -8068,7 +8375,7 @@
     "locationFlag": null,
     "notes": "Probably the Chemnitz-based CatchApp (founded 2013, integrates with Hootsuite and Google Drive); not confirmed that it owns catchapp.mobi.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000045,
@@ -8088,7 +8395,20 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Germany)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "M1906_HRB30164",
+        "name": "weweave UG (haftungsbeschränkt)",
+        "companyType": null,
+        "status": "Currently Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Alte Poststraße 8, 65510 Idstein., Germany",
+        "url": "https://opencorporates.com/companies/de/M1906_HRB30164"
+      }
+    ],
     "sources": [
       {
         "type": "imprint",
@@ -8103,12 +8423,18 @@
         "url": null,
         "id": "30164",
         "label": "HRB 30164"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/de/M1906_HRB30164",
+        "id": "M1906_HRB30164",
+        "label": "Germany company no. M1906_HRB30164 (OpenCorporates)"
       }
     ],
     "locationFlag": null,
-    "notes": "HRB 30164, Amtsgericht Wiesbaden.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "HRB 30164, Amtsgericht Wiesbaden. The register gives Alte Poststraße 8, Idstein as the registered office.",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000220,
@@ -8138,7 +8464,7 @@
     "locationFlag": null,
     "notes": "Individual developer; country from the .in domain and site content.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000176,
@@ -8168,7 +8494,7 @@
     "locationFlag": null,
     "notes": "Country inferred from the Russian (+7) WhatsApp support number; unconfirmed.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000133,
@@ -8374,7 +8700,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000017,

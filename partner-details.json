@@ -428,7 +428,9 @@
     "url": "https://www.axanexa.com/",
     "email": "kcarpenter@axanexa.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000131],
+    "vendorIds": [
+      10000131
+    ],
     "legalName": "AXANEXA LLC",
     "contactName": "John Hu",
     "contactTitle": "Founder & President",
@@ -494,7 +496,9 @@
     "url": "https://www.blinno.ch/",
     "email": "info@blinno.ch",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000088],
+    "vendorIds": [
+      10000088
+    ],
     "legalName": "Blinno GmbH",
     "contactName": "Matthias Tannò",
     "contactTitle": "Co-Founder",
@@ -565,7 +569,10 @@
     "url": "https://www.moveoboost.com",
     "email": "danak@moveoboost.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000231, 10000023],
+    "vendorIds": [
+      10000231,
+      10000023
+    ],
     "legalName": "Boost Moveo Ltd.",
     "contactName": "Matan Holi",
     "contactTitle": "CEO",
@@ -636,7 +643,10 @@
     "url": "https://www.moveoboost.com",
     "email": "contact@moveoboost.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000231, 10000023],
+    "vendorIds": [
+      10000231,
+      10000023
+    ],
     "legalName": "BOOST MOVEO UK LTD",
     "contactName": "Eyal Makover",
     "contactTitle": "Director",
@@ -710,7 +720,10 @@
     "url": "https://www.carbonweb.co/",
     "email": "max@carbonweb.co",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000052, 58],
+    "vendorIds": [
+      10000052,
+      58
+    ],
     "legalName": "Carbon Web Print LLC",
     "contactName": "Mitchell McLaughlin",
     "contactTitle": "Co-founder",
@@ -869,7 +882,9 @@
     "url": "https://cloudconceptgroup.com/",
     "email": "care@cloudconceptgroup.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10],
+    "vendorIds": [
+      10
+    ],
     "legalName": "Cloud Concept DMCC",
     "contactName": "Bryan Mackenzie",
     "contactTitle": "CEO",
@@ -1040,7 +1055,9 @@
     "url": "https://www.eligeo.com/",
     "email": "leticia.mendes@eligeo.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [31],
+    "vendorIds": [
+      31
+    ],
     "legalName": "Eligeo CRM Inc",
     "contactName": "Derek Major",
     "contactTitle": "Founder & CEO",
@@ -1106,7 +1123,9 @@
     "url": "https://www.empyra.com/",
     "email": "sales@empyra.com",
     "isMicrosoftPartner": true,
-    "vendorIds": [10000184],
+    "vendorIds": [
+      10000184
+    ],
     "legalName": "Empyra.com, Inc.",
     "contactName": "Shanthi Subramanyam",
     "contactTitle": "Founder & CEO",
@@ -1221,7 +1240,9 @@
     "url": "https://www.enablen.no/",
     "email": "kas@enablen-consulting.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [100000115],
+    "vendorIds": [
+      100000115
+    ],
     "legalName": "EnableN Consulting ApS",
     "contactName": null,
     "contactTitle": null,
@@ -1648,7 +1669,9 @@
     "url": "https://ifiedinc.com/",
     "email": "monday@ifiedinc.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [100000111],
+    "vendorIds": [
+      100000111
+    ],
     "legalName": "IFIED, Inc.",
     "contactName": null,
     "contactTitle": null,
@@ -1769,7 +1792,9 @@
     "url": "https://www.inetprocess.com/",
     "email": "lionel.fernandes@inetprocess.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000036],
+    "vendorIds": [
+      10000036
+    ],
     "legalName": "iNet Process",
     "contactName": "Lionel Fernandes",
     "contactTitle": "CEO & Founder",
@@ -1841,7 +1866,9 @@
     "url": "https://inteli-k.com/",
     "email": "monday@inteli-k.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000261],
+    "vendorIds": [
+      10000261
+    ],
     "legalName": null,
     "contactName": "Javier Vazquez",
     "contactTitle": "Founder and CEO",
@@ -1885,7 +1912,9 @@
     "url": "https://kpmg.com/il/en/home.html",
     "email": "nhinga@kpmg.com",
     "isMicrosoftPartner": true,
-    "vendorIds": [100000000],
+    "vendorIds": [
+      100000000
+    ],
     "legalName": "KPMG Somekh Chaikin",
     "contactName": "May Bitman",
     "contactTitle": "PS Director",
@@ -2096,7 +2125,9 @@
     "url": "https://mutherboard.com/",
     "email": "rory@mutherboard.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000270],
+    "vendorIds": [
+      10000270
+    ],
     "legalName": "mutherboard.com Ltd",
     "contactName": "Tania Benade",
     "contactTitle": "Managing Director",
@@ -2240,7 +2271,9 @@
     "url": "https://www.omnidea.it/",
     "email": "info@omnidea.it",
     "isMicrosoftPartner": false,
-    "vendorIds": [6],
+    "vendorIds": [
+      6
+    ],
     "legalName": "Omnidea S.r.l. a socio unico",
     "contactName": "Gilberto De Faveri",
     "contactTitle": "CEO",
@@ -2289,7 +2322,9 @@
     "url": "https://www.omnitas.com/",
     "email": "info@omnitas.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [36],
+    "vendorIds": [
+      36
+    ],
     "legalName": "Omnitas Consulting AB",
     "contactName": "Thomas M Karlsson",
     "contactTitle": "Co-Founder / CEO",
@@ -2364,7 +2399,9 @@
     "url": "https://www.omnitas.com/",
     "email": "gustaf@omnitas.se",
     "isMicrosoftPartner": false,
-    "vendorIds": [36],
+    "vendorIds": [
+      36
+    ],
     "legalName": "OMNITAS CONSULTING LTD",
     "contactName": "Thomas M Karlsson",
     "contactTitle": "Co-Founder / CEO",
@@ -2477,7 +2514,9 @@
     "url": "https://www.orangedotdigital.com/",
     "email": "jennifer@theobogroup.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000070],
+    "vendorIds": [
+      10000070
+    ],
     "legalName": "OutboundOps, LLC",
     "contactName": "Julia Hanold",
     "contactTitle": "Managing Director",
@@ -2564,7 +2603,9 @@
     "url": "https://polishedgeek.com/",
     "email": "deb@polishedgeek.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [30],
+    "vendorIds": [
+      30
+    ],
     "legalName": "Polished Geek LLC",
     "contactName": "Deb Cinkus, PMP",
     "contactTitle": "CEO and Founder",
@@ -2969,7 +3010,9 @@
     "url": "https://www.solonetwork.com.br/",
     "email": "paulo.leal@solonetwork.com.br",
     "isMicrosoftPartner": true,
-    "vendorIds": [100000125],
+    "vendorIds": [
+      100000125
+    ],
     "legalName": null,
     "contactName": null,
     "contactTitle": null,
@@ -3070,7 +3113,9 @@
     "url": "https://www.thesaasypeople.com/",
     "email": "michael.wagner@thesaasypeople.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000208],
+    "vendorIds": [
+      10000208
+    ],
     "legalName": "The SaaSy People Ltd",
     "contactName": "Reece Couchman",
     "contactTitle": "Founder and CEO",
@@ -3283,7 +3328,9 @@
     "url": "https://transfunnel.com/",
     "email": "mona@transfunnel.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [100000032],
+    "vendorIds": [
+      100000032
+    ],
     "legalName": "Transfunnel Consulting Private Limited",
     "contactName": "Mona Chopra",
     "contactTitle": "monday Practice Head, COO & Director",
@@ -3359,7 +3406,9 @@
     "url": "https://tryve.com/",
     "email": "nathalie.gobel@tryve.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000152],
+    "vendorIds": [
+      10000152
+    ],
     "legalName": "Localyse Workplace NV",
     "contactName": "Lorentz Verstraete",
     "contactTitle": "CEO",
@@ -3441,7 +3490,9 @@
     "url": "https://www.unitask-inc.com/",
     "email": "itay.n@unitask-inc.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000016],
+    "vendorIds": [
+      10000016
+    ],
     "legalName": "Unitask Ltd",
     "contactName": "Adar Rubin",
     "contactTitle": "CEO",
@@ -3517,7 +3568,10 @@
     "url": "https://www.upstreamtech.io/",
     "email": "alex@upstreamtech.io",
     "isMicrosoftPartner": false,
-    "vendorIds": [100000192, 38],
+    "vendorIds": [
+      100000192,
+      38
+    ],
     "legalName": "Jack Taylor Group Pty Ltd",
     "contactName": "Mitchell Hudson",
     "contactTitle": "Chief Technology Officer",
@@ -3662,7 +3716,9 @@
     "url": "https://workperfect.io/",
     "email": "contactus@workperefct.io",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000073],
+    "vendorIds": [
+      10000073
+    ],
     "legalName": "Work Perfect Group Pty Ltd",
     "contactName": "Sharang Bharadwaj",
     "contactTitle": "CEO",
@@ -3782,7 +3838,9 @@
     "url": "https://workflowmagic.co/",
     "email": "lydia@workflowmagic.co",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000162],
+    "vendorIds": [
+      10000162
+    ],
     "legalName": "Monday Magic LLC",
     "contactName": "Lydia Abbott",
     "contactTitle": "Founder & CEO",
@@ -3937,7 +3995,9 @@
     "url": "https://www.workiflow.com/",
     "email": "danny@workiflow.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000221],
+    "vendorIds": [
+      10000221
+    ],
     "legalName": "Workiflow LLC",
     "contactName": "Danilo Esquivel",
     "contactTitle": "CEO",
@@ -4051,7 +4111,9 @@
     "url": "https://www.xebia.com/",
     "email": "freek.vandegriendt@xebia.com",
     "isMicrosoftPartner": true,
-    "vendorIds": [10000158],
+    "vendorIds": [
+      10000158
+    ],
     "legalName": null,
     "contactName": "Anand Sahay",
     "contactTitle": "CEO & Executive Director",
@@ -4393,7 +4455,9 @@
     "url": "https://www.yepsolutions.io/",
     "email": "meytal@yepsolutions.io",
     "isMicrosoftPartner": false,
-    "vendorIds": [100000045],
+    "vendorIds": [
+      100000045
+    ],
     "legalName": "YEP Solutions LTD",
     "contactName": "Meytal Peleg",
     "contactTitle": "CEO",
@@ -4531,7 +4595,12 @@
     "url": "https://www.adaptavist.com/",
     "email": "hello@adaptavist.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000069, 10000174, 10000154, 10000100],
+    "vendorIds": [
+      10000069,
+      10000174,
+      10000154,
+      10000100
+    ],
     "legalName": "Adaptavist Group Ltd",
     "contactName": "Simon Haighton-Williams",
     "contactTitle": "CEO",
@@ -4607,7 +4676,12 @@
     "url": "https://www.adaptavist.com/",
     "email": "sales.spain@adaptavist.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000069, 10000174, 10000154, 10000100],
+    "vendorIds": [
+      10000069,
+      10000174,
+      10000154,
+      10000100
+    ],
     "legalName": "Adaptavist Group Ltd",
     "contactName": null,
     "contactTitle": null,
@@ -4660,7 +4734,9 @@
     "url": "https://capabilitysource.com/",
     "email": "solutions@capabilitysource.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000084],
+    "vendorIds": [
+      10000084
+    ],
     "legalName": "CapabilitySource Inc.",
     "contactName": "Glenn Coward",
     "contactTitle": "President",
@@ -4712,7 +4788,10 @@
     "url": "https://www.carbonweb.co/",
     "email": "jzevallos@carbonweb.co",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000052, 58],
+    "vendorIds": [
+      10000052,
+      58
+    ],
     "legalName": "Carbon Web Print LLC",
     "contactName": null,
     "contactTitle": null,
@@ -4765,7 +4844,9 @@
     "url": "https://cloudcacheconsulting.com/",
     "email": "vivek@cloudcacheconsulting.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [100000193],
+    "vendorIds": [
+      100000193
+    ],
     "legalName": "Cloudcache Consulting Private Limited",
     "contactName": "Vivek Singh",
     "contactTitle": "Chief Technical Officer",
@@ -4846,7 +4927,9 @@
     "url": "https://www.cxlabs.digital/",
     "email": "ago@cxlabs.digital",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000207],
+    "vendorIds": [
+      10000207
+    ],
     "legalName": "CXLABS Sp. z o.o.",
     "contactName": "Artur Górniak",
     "contactTitle": "CEO + Founder",
@@ -4912,7 +4995,9 @@
     "url": "https://demicon.com/",
     "email": "contact@demicon.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [40],
+    "vendorIds": [
+      40
+    ],
     "legalName": "demicon GmbH",
     "contactName": null,
     "contactTitle": null,
@@ -4974,7 +5059,9 @@
     "url": "https://deviniti.com/",
     "email": "jakub.szmanda@deviniti.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [34],
+    "vendorIds": [
+      34
+    ],
     "legalName": "Deviniti Sp. z o.o.",
     "contactName": "Piotr Dorosz",
     "contactTitle": "CEO",
@@ -6023,7 +6110,9 @@
     "url": "https://intelstudios.com/",
     "email": "monday@intelstudios.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000256],
+    "vendorIds": [
+      10000256
+    ],
     "legalName": "Intelligent Studios s.r.o.",
     "contactName": "Martin Jaros",
     "contactTitle": "CEO",
@@ -6094,7 +6183,9 @@
     "url": "https://www.mediaposte-martech.com/",
     "email": "contact@mediapost-martech.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000164],
+    "vendorIds": [
+      10000164
+    ],
     "legalName": "Mediaposte Martech SRL",
     "contactName": "Mihai Tudor",
     "contactTitle": "CTO",
@@ -6386,7 +6477,9 @@
     "url": "https://www.quirk.com.au/",
     "email": "brad@quirk.com.au",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000266],
+    "vendorIds": [
+      10000266
+    ],
     "legalName": "Quirk Consulting Pty Ltd",
     "contactName": "Brad Quirk",
     "contactTitle": "Founder / CEO",
@@ -6839,7 +6932,9 @@
     "url": "https://accesslab.co.jp/",
     "email": "info@accesslab.co.jp",
     "isMicrosoftPartner": false,
-    "vendorIds": [100000005],
+    "vendorIds": [
+      100000005
+    ],
     "legalName": "Access Lab, LLC",
     "contactName": "Daisuke Okuda",
     "contactTitle": "Director & Founder",
@@ -6882,7 +6977,9 @@
     "url": "https://www.achievan.com/",
     "email": "amin.panjwani@achievan.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [100000066],
+    "vendorIds": [
+      100000066
+    ],
     "legalName": null,
     "contactName": "Amin Panjwani",
     "contactTitle": "Partner",
@@ -7132,7 +7229,10 @@
     "url": "https://www.moveoboost.com/",
     "email": "yardenb@moveoboost.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000231, 10000023],
+    "vendorIds": [
+      10000231,
+      10000023
+    ],
     "legalName": null,
     "contactName": null,
     "contactTitle": null,
@@ -7338,7 +7438,9 @@
     "url": "https://www.copperhillconsulting.com/",
     "email": "danielle.duva@consultch.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [100000100],
+    "vendorIds": [
+      100000100
+    ],
     "legalName": null,
     "contactName": null,
     "contactTitle": null,
@@ -7496,7 +7598,9 @@
     "url": "https://www.empyra.com/",
     "email": "mkrishna@empyra.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000184],
+    "vendorIds": [
+      10000184
+    ],
     "legalName": "Empyra Software Solutions Private Limited",
     "contactName": "Manjula Krishna",
     "contactTitle": "Managing Director, India",
@@ -8606,7 +8710,9 @@
     "url": "https://www.lanum.com.br/",
     "email": "contato@lanum.com.br",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000099],
+    "vendorIds": [
+      10000099
+    ],
     "legalName": null,
     "contactName": "Igor",
     "contactTitle": "CEO",
@@ -9557,7 +9663,9 @@
     "url": "https://www.synolia.com/",
     "email": "contact@synolia.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [53],
+    "vendorIds": [
+      53
+    ],
     "legalName": "Synolia SAS",
     "contactName": "Romain André",
     "contactTitle": "CEO of the Synolia Group",
@@ -10468,7 +10576,9 @@
     "url": "https://www.workiflow.com/",
     "email": "john-paul@workiflow.co.za",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000221],
+    "vendorIds": [
+      10000221
+    ],
     "legalName": "Workiflow SA (Pty) Ltd",
     "contactName": "John-Paul Theron",
     "contactTitle": "Co-founder & Managing Director",
@@ -10521,7 +10631,9 @@
     "url": "https://worktables.io/",
     "email": "hello@worktables.io",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000218],
+    "vendorIds": [
+      10000218
+    ],
     "legalName": "WORKTABLES LLC",
     "contactName": "Michael Cimo",
     "contactTitle": "CEO",
@@ -10681,7 +10793,9 @@
     "url": "https://www.xebia.com/",
     "email": "wessel.dejong@xebia.com",
     "isMicrosoftPartner": true,
-    "vendorIds": [10000158],
+    "vendorIds": [
+      10000158
+    ],
     "legalName": null,
     "contactName": "Anand Sahay",
     "contactTitle": "CEO & Executive Director, Xebia",
@@ -11322,7 +11436,9 @@
     "url": "https://theautomationpartner.com/",
     "email": null,
     "isMicrosoftPartner": false,
-    "vendorIds": [100000257],
+    "vendorIds": [
+      100000257
+    ],
     "legalName": null,
     "contactName": "Martín Meliendrez",
     "contactTitle": "CEO",
@@ -11754,7 +11870,9 @@
     "url": "https://codexsolutionsint.com/",
     "email": "info@codexsolutionsint.com",
     "isMicrosoftPartner": false,
-    "vendorIds": [100000197],
+    "vendorIds": [
+      100000197
+    ],
     "legalName": "Codex Solutions International",
     "contactName": "Hamza",
     "contactTitle": "Chief Executive Officer",
@@ -11916,7 +12034,9 @@
     "url": "https://mintconsulting.org/",
     "email": "info@mintconsulting.org",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000233],
+    "vendorIds": [
+      10000233
+    ],
     "legalName": "Mint Consulting Australia Pty Ltd",
     "contactName": "Naveed Choudhury",
     "contactTitle": null,
@@ -11978,7 +12098,9 @@
     "url": "https://msquare.pro/",
     "email": "support@msquare.pro",
     "isMicrosoftPartner": false,
-    "vendorIds": [10000283],
+    "vendorIds": [
+      10000283
+    ],
     "legalName": "Msquare Automation Solutions Pvt. Ltd.",
     "contactName": "Mohamed Ali Jahar",
     "contactTitle": "CEO & Co-Founder",
@@ -12120,7 +12242,9 @@
     "url": "https://www.wme-solutions.com/",
     "email": null,
     "isMicrosoftPartner": false,
-    "vendorIds": [10000044],
+    "vendorIds": [
+      10000044
+    ],
     "legalName": "WME Consulting & Solutions LLC",
     "contactName": "Eddy Azoulay",
     "contactTitle": "Founder & CEO",

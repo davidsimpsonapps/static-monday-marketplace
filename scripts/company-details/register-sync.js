@@ -43,7 +43,7 @@ const OVERRIDES_FILE = path.join(__dirname, "register-overrides.json");
 const OVERRIDES = fs.existsSync(OVERRIDES_FILE) ? JSON.parse(fs.readFileSync(OVERRIDES_FILE, "utf-8")) : {};
 
 // Exact-name comparison that ignores only punctuation and legal-form words.
-const LEGAL = /\b(ltd|limited|llc|l l c|inc|incorporated|corp|corporation|co|company|pty|pvt|private|gmbh|ag|sas|sarl|sa|s a|srl|s r l|sro|s r o|ou|ab|bv|b v|nv|as|aps|oy|kft|sp z o o|sp|zoo|llp|plc|lp|bhd|sdn|pte|ltda|eireli|me|kk|gk|the)\b/g;
+const LEGAL = /\b(ltd|limited|llc|l l c|inc|incorporated|corp|corporation|co|company|pty|pvt|private|gmbh|ag|sas|sarl|sa|s a|srl|s r l|sro|s r o|ou|ab|bv|b v|nv|as|aps|oy|kft|sp z o o|sp|zoo|llp|plc|lp|bhd|sdn|pte|ltda|eireli|me|kk|gk|sia|uab|ug|haftungsbeschrankt|doo|d o o|ehf|the)\b/g;
 const strict = (s) =>
   (s || "")
     .toLowerCase()

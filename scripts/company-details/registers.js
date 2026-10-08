@@ -276,7 +276,7 @@ async function opencorporates(cc, name, { details = true, onlyNames = null, maxD
         const vals = [];
         for (const l of page.slice(i + 1, i + 1 + n)) {
           if (LABELS.test(l) && LABELS.exec(l)[0] === l) break; // a field label, not a value starting with one
-          if (/^(Data source and freshness|Last update from source|Last change recorded)/.test(l)) break; // provenance box
+          if (/^(Data source and freshness|Last update from source|Last change recorded|Inactive Directors)/.test(l)) break; // provenance box
           vals.push(l);
         }
         return vals.filter((v) => v !== "--" && !/please log in/i.test(v)).join(", ") || null;
