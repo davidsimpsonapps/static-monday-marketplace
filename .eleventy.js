@@ -542,9 +542,12 @@ module.exports = async function (eleventyConfig) {
     );
   });
 
-  // Plain text with `code spans` (report ledes) -> escaped HTML with <code>
+  // Plain text with `code spans` (report ledes) -> escaped HTML with <code>.
+  // Stray Markdown links and bold/italics are reduced to their text.
   eleventyConfig.addFilter("inlineCode", function (text) {
     const escaped = String(text ?? "")
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+      .replace(/(\*\*|__)(.+?)\1/g, "$2")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")

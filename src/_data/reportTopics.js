@@ -3,6 +3,7 @@
 // /daily/<slug>/. `dot` is the Tailwind class of the topic's colour marker.
 module.exports = [
   { slug: "developer-docs", label: "Developer docs", dot: "bg-indigo-500" },
+  { slug: "community", label: "Community", dot: "bg-sky-500" },
   { slug: "incidents", label: "Incidents", dot: "bg-orange-500" },
   { slug: "platform-status", label: "Platform status", dot: "bg-red-500" },
   { slug: "new-apps", label: "New apps", dot: "bg-emerald-500" },
