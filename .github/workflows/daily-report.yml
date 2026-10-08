@@ -38,6 +38,9 @@ jobs:
       - name: Build daily report
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Community news from our Slack channel - see the script's header for setup
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_NEWS_CHANNEL: ${{ vars.SLACK_NEWS_CHANNEL }}
         run: node scripts/build-daily-report.js
 
       - name: Commit and push report
