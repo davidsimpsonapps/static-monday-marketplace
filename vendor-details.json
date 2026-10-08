@@ -1582,7 +1582,7 @@
       }
     ],
     "locationFlag": null,
-    "notes": "Co-managing director: Markus Müller. VAT ID DE815324806.",
+    "notes": "Co-managing director: Markus Müller. VAT ID DE815324806. Kusterer & Müller GbR is a civil-law partnership: GbRs don’t have to register, and this one isn’t in the Unternehmensregister (not even as a voluntarily registered eGbR), so the VAT number is the only official identifier.",
     "lastVerified": "2026-09-30",
     "registrationsCheckedAt": "2026-10-08"
   },
@@ -3368,10 +3368,19 @@
     "name": "Tryve",
     "tier": "Bronze",
     "partnerIds": ["7845f92e-0b98-47eb-ad93-e1bfdd4db909"],
-    "legalName": "Localyse Workplace NV",
+    "legalName": "Tryve Belgium NV",
     "contactName": "Lorentz Verstraete",
     "contactTitle": "CEO",
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Mathijs Raes",
+        "contactTitle": "Director's permanent representative (Belgian register)"
+      },
+      {
+        "contactName": "Gerrit Van De Streek",
+        "contactTitle": "Director's permanent representative (Belgian register)"
+      }
+    ],
     "address": {
       "street": "Prins Boudewijnlaan 41",
       "city": "Edegem",
@@ -3383,16 +3392,16 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Belgium)",
+        "register": "KBO/BCE (Belgian Crossroads Bank for Enterprises)",
         "jurisdiction": "Belgium",
         "kind": "domestic",
         "id": "0744742640",
         "name": "Tryve Belgium",
-        "companyType": null,
-        "status": null,
+        "companyType": "Public limited company",
+        "status": "Active",
         "registeredAgent": null,
-        "registeredAddress": null,
-        "url": "https://opencorporates.com/companies/be/0744742640"
+        "registeredAddress": "Prins Boudewijnlaan 41 2650 Edegem",
+        "url": "https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=0744742640&lang=en"
       }
     ],
     "sources": [
@@ -3406,19 +3415,13 @@
       },
       {
         "type": "business-register",
-        "url": null,
-        "id": "BE 0744.742.640",
-        "label": "Company number BE 0744.742.640"
-      },
-      {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/be/0744742640",
+        "url": "https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=0744742640&lang=en",
         "id": "0744742640",
-        "label": "Belgium company no. 0744742640 (OpenCorporates)"
+        "label": "Enterprise no. 0744.742.640"
       }
     ],
     "locationFlag": null,
-    "notes": "Trades as Tryve. Company number BE 0744.742.640.",
+    "notes": "Tryve Belgium NV (enterprise no. 0744.742.640), named Localyse Workplace NV until December 2025. Its directors are companies whose permanent representatives are Lorentz Verstraete, Mathijs Raes and Gerrit van de Streek (KBO). A separate Bruges business called TRYVE (1014.796.578) is unrelated.",
     "lastVerified": "2026-10-08",
     "registrationsCheckedAt": "2026-10-08"
   },
@@ -4326,7 +4329,20 @@
       "countryCode": "PL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "KRS (Polish National Court Register)",
+        "jurisdiction": "Poland",
+        "kind": "domestic",
+        "id": "0001034827",
+        "name": "DOIT-BI SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+        "companyType": "Spółka Z Ograniczoną Odpowiedzialnością",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "PL. POWSTAŃCÓW ŚLĄSKICH 1/11, 53-329 Wrocław",
+        "url": "https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/0001034827?rejestr=P&format=json"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -4355,8 +4371,8 @@
     ],
     "locationFlag": null,
     "notes": "KRS 0001034827. Parent: DB HOLDCO Sp. z o.o. (KRS 0001182069), same address.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000055,
@@ -4987,16 +5003,24 @@
       "countryCode": "PL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "KRS (Polish National Court Register)",
+        "jurisdiction": "Poland",
+        "kind": "domestic",
+        "id": "0000223645",
+        "name": "DEVINITI SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+        "companyType": "Spółka Z Ograniczoną Odpowiedzialnością",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "UL. SUDECKA 153, 53-128 Wrocław",
+        "url": "https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/0000223645?rejestr=P&format=json"
+      }
+    ],
     "sources": [
       {
         "type": "about",
         "url": "https://deviniti.com/about-us"
-      },
-      {
-        "type": "business-register",
-        "url": "https://rejestr.io/krs/223645/deviniti",
-        "id": "223645"
       },
       {
         "type": "business-register",
@@ -5013,8 +5037,8 @@
     ],
     "locationFlag": null,
     "notes": "KRS 0000223645, NIP 8971700419. The address comes from a KRS aggregator search result; the page itself returned 403.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 31,
@@ -5424,16 +5448,16 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Finland)",
+        "register": "PRH (Finnish Trade Register)",
         "jurisdiction": "Finland",
         "kind": "domestic",
         "id": "2537244-1",
         "name": "Screenful Oy",
-        "companyType": "Osakeyhtiö",
-        "status": null,
+        "companyType": "Limited company",
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": "Inarintie 16 B 22, HELSINKI, 00550, Finland",
-        "url": "https://opencorporates.com/companies/fi/2537244-1"
+        "registeredAddress": "Inarintie 16 B 22, 00550 Helsinki",
+        "url": "https://tietopalvelu.ytj.fi/yritys/2537244-1"
       }
     ],
     "sources": [
@@ -5442,16 +5466,16 @@
         "url": "https://screenful.com/"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/fi/2537244-1",
+        "type": "business-register",
+        "url": "https://tietopalvelu.ytj.fi/yritys/2537244-1",
         "id": "2537244-1",
-        "label": "Finland company no. 2537244-1 (OpenCorporates)"
+        "label": "Business ID 2537244-1"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 27,
@@ -6556,16 +6580,16 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Slovakia)",
+        "register": "RPO (Slovak register of legal entities)",
         "jurisdiction": "Slovakia",
         "kind": "domestic",
         "id": "47675608",
         "name": "HLS s.r.o.",
         "companyType": "Spoločnosť s ručením obmedzeným",
-        "status": null,
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": "Gen. Svobodu 376/50, 093 01, Vranov nad Topľou, Slovakia",
-        "url": "https://opencorporates.com/companies/sk/47675608"
+        "registeredAddress": "Gen. Svobodu 376/50, 09301 Vranov nad Topľou",
+        "url": "https://www.orsr.sk/hladaj_ico.asp?ICO=47675608&SID=0"
       }
     ],
     "sources": [
@@ -6574,10 +6598,10 @@
         "url": "https://eledo.online/"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/sk/47675608",
+        "type": "business-register",
+        "url": "https://www.orsr.sk/hladaj_ico.asp?ICO=47675608&SID=0",
         "id": "47675608",
-        "label": "Slovakia company no. 47675608 (OpenCorporates)"
+        "label": "IČO 47675608"
       }
     ],
     "locationFlag": null,
@@ -6942,24 +6966,24 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Germany)",
+        "register": "Unternehmensregister (German company register)",
         "jurisdiction": "Germany",
         "kind": "domestic",
-        "id": "B8534_HRB725118",
+        "id": "HRB 725118 (Amtsgericht Stuttgart)",
         "name": "demicon GmbH",
         "companyType": null,
-        "status": "Currently Registered",
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": "Friedrichstraße 15, 70174 Stuttgart., Germany",
-        "url": "https://opencorporates.com/companies/de/B8534_HRB725118"
+        "registeredAddress": "Stuttgart, Baden-Württemberg",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEB8534.HRB725118"
       }
     ],
     "sources": [
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/de/B8534_HRB725118",
-        "id": "B8534_HRB725118",
-        "label": "Germany company no. B8534_HRB725118 (OpenCorporates)"
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEB8534.HRB725118",
+        "id": "HRB 725118 (Amtsgericht Stuttgart)",
+        "label": "HRB 725118, Amtsgericht Stuttgart"
       }
     ],
     "locationFlag": null,
@@ -8345,16 +8369,16 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Germany)",
+        "register": "Unternehmensregister (German company register)",
         "jurisdiction": "Germany",
         "kind": "domestic",
-        "id": "T2210V_HRB7502",
+        "id": "HRB 7502 (Amtsgericht Koblenz)",
         "name": "Decadis AG",
         "companyType": null,
-        "status": "Currently Registered",
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": "Viktoriastraße 15, 56068 Koblenz., Germany",
-        "url": "https://opencorporates.com/companies/de/T2210V_HRB7502"
+        "registeredAddress": "Koblenz, Rheinland-Pfalz",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DET2210V.HRB7502"
       }
     ],
     "sources": [
@@ -8363,10 +8387,10 @@
         "url": "https://www.decadis.de/rechtliches/impressum"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/de/T2210V_HRB7502",
-        "id": "T2210V_HRB7502",
-        "label": "Germany company no. T2210V_HRB7502 (OpenCorporates)"
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DET2210V.HRB7502",
+        "id": "HRB 7502 (Amtsgericht Koblenz)",
+        "label": "HRB 7502, Amtsgericht Koblenz"
       }
     ],
     "locationFlag": null,
@@ -8409,7 +8433,7 @@
     "name": "weweave UG (limited liability)",
     "tier": null,
     "partnerIds": [],
-    "legalName": "weweave UG (haftungsbeschränkt)",
+    "legalName": "weweave GmbH",
     "contactName": "Jan Jonas",
     "contactTitle": "Director",
     "alternativeContacts": [],
@@ -8424,16 +8448,16 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Germany)",
+        "register": "Unternehmensregister (German company register)",
         "jurisdiction": "Germany",
         "kind": "domestic",
-        "id": "M1906_HRB30164",
-        "name": "weweave UG (haftungsbeschränkt)",
+        "id": "HRB 30164 (Amtsgericht Wiesbaden)",
+        "name": "weweave GmbH",
         "companyType": null,
-        "status": "Currently Registered",
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": "Alte Poststraße 8, 65510 Idstein., Germany",
-        "url": "https://opencorporates.com/companies/de/M1906_HRB30164"
+        "registeredAddress": "Idstein, Hessen",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEM1906.HRB30164"
       }
     ],
     "sources": [
@@ -8447,19 +8471,13 @@
       },
       {
         "type": "business-register",
-        "url": null,
-        "id": "30164",
-        "label": "HRB 30164"
-      },
-      {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/de/M1906_HRB30164",
-        "id": "M1906_HRB30164",
-        "label": "Germany company no. M1906_HRB30164 (OpenCorporates)"
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEM1906.HRB30164",
+        "id": "HRB 30164 (Amtsgericht Wiesbaden)",
+        "label": "HRB 30164, Amtsgericht Wiesbaden"
       }
     ],
     "locationFlag": null,
-    "notes": "HRB 30164, Amtsgericht Wiesbaden. The register gives Alte Poststraße 8, Idstein as the registered office.",
+    "notes": "Now weweave GmbH (formerly weweave UG (haftungsbeschränkt)), HRB 30164, Amtsgericht Wiesbaden. The register gives the seat as Idstein; an older registered address was Alte Poststraße 8.",
     "lastVerified": "2026-10-08",
     "registrationsCheckedAt": "2026-10-08"
   },
@@ -9148,7 +9166,20 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Unternehmensregister (German company register)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "HRB 30588 (Amtsgericht Zweibrücken)",
+        "name": "resolution Reichert Network Solutions GmbH",
+        "companyType": null,
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Zweibrücken, Rheinland-Pfalz",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DET3403V.HRB30588"
+      }
+    ],
     "sources": [
       {
         "type": "imprint",
@@ -9160,15 +9191,15 @@
       },
       {
         "type": "business-register",
-        "url": null,
-        "id": "30588",
-        "label": "HRB 30588"
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DET3403V.HRB30588",
+        "id": "HRB 30588 (Amtsgericht Zweibrücken)",
+        "label": "HRB 30588, Amtsgericht Zweibrücken"
       }
     ],
     "locationFlag": null,
     "notes": "HRB 30588.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000026,
@@ -9630,7 +9661,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000264,
@@ -9689,17 +9720,36 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Unternehmensregister (German company register)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "HRB 11502 (Amtsgericht Wiesbaden)",
+        "name": "Seibert Group GmbH",
+        "companyType": null,
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Wiesbaden, Hessen",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEM1906.HRB11502"
+      }
+    ],
     "sources": [
       {
         "type": "imprint",
         "url": "https://go.seibert.group/recht/impressum"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEM1906.HRB11502",
+        "id": "HRB 11502 (Amtsgericht Wiesbaden)",
+        "label": "HRB 11502, Amtsgericht Wiesbaden"
       }
     ],
     "locationFlag": null,
     "notes": "Represented by Joachim Seibert, Martin Seibert and Sebastian Martini.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000210,
@@ -10051,29 +10101,48 @@
     "tier": null,
     "partnerIds": [],
     "legalName": "TinyFox Labs s. r. o.",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Kristián Goliaš",
+    "contactTitle": "Managing director (konateľ) (Slovak register)",
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "Južná trieda 2881/4B",
+      "city": "Košice - mestská časť Juh",
       "region": null,
-      "postalCode": null,
+      "postalCode": "04001",
       "country": "Slovakia",
       "countryCode": "SK"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "RPO (Slovak register of legal entities)",
+        "jurisdiction": "Slovakia",
+        "kind": "domestic",
+        "id": "56754922",
+        "name": "TinyFox Labs s. r. o.",
+        "companyType": "Spoločnosť s ručením obmedzeným",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Južná trieda 2881/4B, 04001 Košice - mestská časť Juh",
+        "url": "https://www.orsr.sk/hladaj_ico.asp?ICO=56754922&SID=0"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://tinyfoxlabs.com/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.orsr.sk/hladaj_ico.asp?ICO=56754922&SID=0",
+        "id": "56754922",
+        "label": "IČO 56754922"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000071,
@@ -10187,17 +10256,36 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Unternehmensregister (German company register)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "HRB 749557 (Amtsgericht Stuttgart)",
+        "name": "Filestage GmbH",
+        "companyType": null,
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Stuttgart, Baden-Württemberg",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEB8534.HRB749557"
+      }
+    ],
     "sources": [
       {
         "type": "imprint",
         "url": "https://filestage.io/imprint/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEB8534.HRB749557",
+        "id": "HRB 749557 (Amtsgericht Stuttgart)",
+        "label": "HRB 749557, Amtsgericht Stuttgart"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000088,
@@ -10412,7 +10500,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 100000037,
@@ -10554,7 +10642,7 @@
     "locationFlag": null,
     "notes": "Also a US office: 1700 7th Ave Suite 2100, Seattle, WA 98101.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 52,
@@ -10759,7 +10847,7 @@
     "locationFlag": null,
     "notes": "Site content also mentions Ukraine.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000172,
@@ -10839,7 +10927,20 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Unternehmensregister (German company register)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "HRB 109030 (Amtsgericht Frankfurt am Main)",
+        "name": "evolu software GmbH",
+        "companyType": null,
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Frankfurt am Main, Hessen",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEM1201.HRB109030"
+      }
+    ],
     "sources": [
       {
         "type": "imprint",
@@ -10847,15 +10948,15 @@
       },
       {
         "type": "business-register",
-        "url": null,
-        "id": "109030",
-        "label": "HRB 109030"
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEM1201.HRB109030",
+        "id": "HRB 109030 (Amtsgericht Frankfurt am Main)",
+        "label": "HRB 109030, Amtsgericht Frankfurt am Main"
       }
     ],
     "locationFlag": null,
     "notes": "HRB 109030, Frankfurt.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000182,
@@ -11559,7 +11660,7 @@
     "locationFlag": null,
     "notes": "Individual developer; country from site content.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000285,
@@ -12776,18 +12877,35 @@
       {
         "contactName": "Stanislav Hybášek",
         "contactTitle": "Founder, Innovation Lead"
+      },
+      {
+        "contactName": "Jan Rosenberg",
+        "contactTitle": "Authorised signatory (prokura) (Czech register)"
       }
     ],
     "address": {
-      "street": null,
+      "street": "Smetanova 1022/19",
       "city": "Brno",
       "region": null,
-      "postalCode": null,
+      "postalCode": "602 00",
       "country": "Czech Republic",
       "countryCode": "CZ"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "ARES (Czech business register)",
+        "jurisdiction": "Czechia",
+        "kind": "domestic",
+        "id": "27704424",
+        "name": "MoroSystems, s.r.o.",
+        "companyType": null,
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Smetanova 1022/19, Veveří, 60200 Brno",
+        "url": "https://ares.gov.cz/ekonomicke-subjekty?ico=27704424"
+      }
+    ],
     "sources": [
       {
         "type": "contact",
@@ -12802,12 +12920,18 @@
         "url": null,
         "id": "C 53303",
         "label": "Brno Commercial Register C 53303"
+      },
+      {
+        "type": "business-register",
+        "url": "https://ares.gov.cz/ekonomicke-subjekty?ico=27704424",
+        "id": "27704424",
+        "label": "IČO 27704424"
       }
     ],
     "locationFlag": null,
     "notes": "Commercial Register, Regional Court in Brno, Section C, File 53303.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 100000019,
@@ -12861,17 +12985,36 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Unternehmensregister (German company register)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "HRB 274798 (Amtsgericht Berlin (Charlottenburg))",
+        "name": "NANOS AI AG",
+        "companyType": null,
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Berlin, Berlin",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEF1103R.HRB274798B"
+      }
+    ],
     "sources": [
       {
         "type": "contact",
         "url": "https://nanos.ai/contact"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEF1103R.HRB274798B",
+        "id": "HRB 274798 (Amtsgericht Berlin (Charlottenburg))",
+        "label": "HRB 274798, Amtsgericht Berlin (Charlottenburg)"
       }
     ],
     "locationFlag": null,
     "notes": "Vendor name: Nanocorp AG.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 100000216,
@@ -12879,14 +13022,14 @@
     "tier": null,
     "partnerIds": [],
     "legalName": "CloudTalk s.r.o.",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Martin Malych",
+    "contactTitle": "Managing director (konateľ) (Slovak register)",
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "Tallerova 4",
+      "city": "Bratislava - mestská časť Staré Mesto",
       "region": null,
-      "postalCode": null,
+      "postalCode": "811 02",
       "country": "Slovakia",
       "countryCode": "SK"
     },
@@ -12910,7 +13053,20 @@
         "countryCode": "CA"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "RPO (Slovak register of legal entities)",
+        "jurisdiction": "Slovakia",
+        "kind": "domestic",
+        "id": "46817832",
+        "name": "CloudTalk s.r.o.",
+        "companyType": "Spoločnosť s ručením obmedzeným",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Tallerova 4, 811 02 Bratislava - mestská časť Staré Mesto",
+        "url": "https://www.orsr.sk/hladaj_ico.asp?ICO=46817832&SID=0"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -12919,12 +13075,18 @@
       {
         "type": "contact",
         "url": "https://www.cloudtalk.io/contact/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.orsr.sk/hladaj_ico.asp?ICO=46817832&SID=0",
+        "id": "46817832",
+        "label": "IČO 46817832"
       }
     ],
     "locationFlag": null,
     "notes": "US entity CloudTalk.io Inc. Offices include New York, London, Mexico City and Toronto (320 Bay Street).",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000167,
@@ -13783,7 +13945,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000029,
@@ -14001,7 +14163,7 @@
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US address: the privacy policy lists 201 Third Street, Suite 200, San Francisco, CA 94103, but Oboard is headquartered in Berlin with a remote team across Ukraine, Israel and the EU (founder and CEO Viktor Grekov).",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 100000045,
@@ -14676,7 +14838,7 @@
     "locationFlag": null,
     "notes": "Country from the domain's WHOIS registrant record.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 100000115,
@@ -14925,7 +15087,20 @@
         "countryCode": "PL"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "KRS (Polish National Court Register)",
+        "jurisdiction": "Poland",
+        "kind": "domestic",
+        "id": "0000891126",
+        "name": "CXLABS SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+        "companyType": "Spółka Z Ograniczoną Odpowiedzialnością",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "UL. POLNA 66, 87-100 Toruń",
+        "url": "https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/0000891126?rejestr=P&format=json"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -14938,12 +15113,18 @@
       {
         "type": "contact",
         "url": "https://www.cxlabs.digital/contact"
+      },
+      {
+        "type": "business-register",
+        "url": "https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/0000891126?rejestr=P&format=json",
+        "id": "0000891126",
+        "label": "KRS 0000891126"
       }
     ],
     "locationFlag": null,
     "notes": "Copied from the linked monday.com partner entry (CXLABS); added because the vendor is linked to a partner.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000256,
@@ -14961,18 +15142,35 @@
       {
         "contactName": "Joanna Schleifer",
         "contactTitle": "Sales Director - Poland"
+      },
+      {
+        "contactName": "Zbyněk Porš",
+        "contactTitle": "Member of the statutory body (Czech register)"
       }
     ],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "V parku 2294/2",
+      "city": "Praha",
       "region": null,
-      "postalCode": null,
+      "postalCode": "148 00",
       "country": "Czechia",
       "countryCode": "CZ"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "ARES (Czech business register)",
+        "jurisdiction": "Czechia",
+        "kind": "domestic",
+        "id": "27907147",
+        "name": "Intelligent Studios s.r.o.",
+        "companyType": null,
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "V parku 2294/2, Chodov, 14800 Praha 4",
+        "url": "https://ares.gov.cz/ekonomicke-subjekty?ico=27907147"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -14981,12 +15179,18 @@
       {
         "type": "contact",
         "url": "https://intelstudios.com/contact-us/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://ares.gov.cz/ekonomicke-subjekty?ico=27907147",
+        "id": "27907147",
+        "label": "IČO 27907147"
       }
     ],
     "locationFlag": null,
     "notes": "Copied from the linked monday.com partner entry (Intelligent Studios); added because the vendor is linked to a partner.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 100000066,

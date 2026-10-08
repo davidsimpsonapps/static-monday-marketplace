@@ -3379,10 +3379,19 @@
     "email": "nathalie.gobel@tryve.com",
     "isMicrosoftPartner": false,
     "vendorIds": [10000152],
-    "legalName": "Localyse Workplace NV",
+    "legalName": "Tryve Belgium NV",
     "contactName": "Lorentz Verstraete",
     "contactTitle": "CEO",
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Mathijs Raes",
+        "contactTitle": "Director's permanent representative (Belgian register)"
+      },
+      {
+        "contactName": "Gerrit Van De Streek",
+        "contactTitle": "Director's permanent representative (Belgian register)"
+      }
+    ],
     "address": {
       "street": "Prins Boudewijnlaan 41",
       "city": "Edegem",
@@ -3404,16 +3413,16 @@
     ],
     "registrations": [
       {
-        "register": "OpenCorporates (Belgium)",
+        "register": "KBO/BCE (Belgian Crossroads Bank for Enterprises)",
         "jurisdiction": "Belgium",
         "kind": "domestic",
         "id": "0744742640",
         "name": "Tryve Belgium",
-        "companyType": null,
-        "status": null,
+        "companyType": "Public limited company",
+        "status": "Active",
         "registeredAgent": null,
-        "registeredAddress": null,
-        "url": "https://opencorporates.com/companies/be/0744742640"
+        "registeredAddress": "Prins Boudewijnlaan 41 2650 Edegem",
+        "url": "https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=0744742640&lang=en"
       }
     ],
     "sources": [
@@ -3430,27 +3439,21 @@
         "url": "https://tryve.com/about/"
       },
       {
-        "type": "business-register",
-        "url": null,
-        "id": "BE 0744.742.640",
-        "label": "Company number BE 0744.742.640"
-      },
-      {
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/tryve",
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/be/0744742640",
+        "type": "business-register",
+        "url": "https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=0744742640&lang=en",
         "id": "0744742640",
-        "label": "Belgium company no. 0744742640 (OpenCorporates)"
+        "label": "Enterprise no. 0744.742.640"
       }
     ],
     "locationFlag": null,
-    "notes": "The monday.com profile says Netherlands, but the registered office is in Edegem, Belgium.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "notes": "Tryve Belgium NV (enterprise no. 0744.742.640), named Localyse Workplace NV until December 2025. Its directors are companies whose permanent representatives are Lorentz Verstraete, Mathijs Raes and Gerrit van de Streek (KBO). A separate Bruges business called TRYVE (1014.796.578) is unrelated.",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "fd296931-6ee6-499a-9ed9-ba4dd24888e5",
@@ -4501,7 +4504,20 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Unternehmensregister (German company register)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "HRB 215401 (Amtsgericht Berlin (Charlottenburg))",
+        "name": "OPG One Productivity Group GmbH",
+        "companyType": null,
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Berlin, Berlin",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEF1103R.HRB215401B"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -4515,12 +4531,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/24-luna-by-opg-gmbh",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEF1103R.HRB215401B",
+        "id": "HRB 215401 (Amtsgericht Berlin (Charlottenburg))",
+        "label": "HRB 215401, Amtsgericht Berlin (Charlottenburg)"
       }
     ],
     "locationFlag": null,
     "notes": "24 Luna is a brand of OPG One Productivity Group GmbH.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "e5084e17-63bc-496c-ac02-b8697c139e7e",
@@ -4917,7 +4939,20 @@
         "countryCode": "PL"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "KRS (Polish National Court Register)",
+        "jurisdiction": "Poland",
+        "kind": "domestic",
+        "id": "0000891126",
+        "name": "CXLABS SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+        "companyType": "Spółka Z Ograniczoną Odpowiedzialnością",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "UL. POLNA 66, 87-100 Toruń",
+        "url": "https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/0000891126?rejestr=P&format=json"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -4935,12 +4970,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/cxlabs",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/0000891126?rejestr=P&format=json",
+        "id": "0000891126",
+        "label": "KRS 0000891126"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "b2fe3545-207e-48d2-be62-0cd5acd6a42b",
@@ -4966,16 +5007,16 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Germany)",
+        "register": "Unternehmensregister (German company register)",
         "jurisdiction": "Germany",
         "kind": "domestic",
-        "id": "B8534_HRB725118",
+        "id": "HRB 725118 (Amtsgericht Stuttgart)",
         "name": "demicon GmbH",
         "companyType": null,
-        "status": "Currently Registered",
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": "Friedrichstraße 15, 70174 Stuttgart., Germany",
-        "url": "https://opencorporates.com/companies/de/B8534_HRB725118"
+        "registeredAddress": "Stuttgart, Baden-Württemberg",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEB8534.HRB725118"
       }
     ],
     "sources": [
@@ -4993,16 +5034,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/de/B8534_HRB725118",
-        "id": "B8534_HRB725118",
-        "label": "Germany company no. B8534_HRB725118 (OpenCorporates)"
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEB8534.HRB725118",
+        "id": "HRB 725118 (Amtsgericht Stuttgart)",
+        "label": "HRB 725118, Amtsgericht Stuttgart"
       }
     ],
     "locationFlag": null,
     "notes": "The monday.com app vendor tmnxt (vendor 40) uses a demicon.de contact email.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "564dffba-699d-43e0-9697-536a7e26e5b2",
@@ -5026,7 +5067,20 @@
       "countryCode": "PL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "KRS (Polish National Court Register)",
+        "jurisdiction": "Poland",
+        "kind": "domestic",
+        "id": "0000223645",
+        "name": "DEVINITI SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+        "companyType": "Spółka Z Ograniczoną Odpowiedzialnością",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "UL. SUDECKA 153, 53-128 Wrocław",
+        "url": "https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/0000223645?rejestr=P&format=json"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -5054,8 +5108,8 @@
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "39702dee-9de4-4ceb-820d-ca4016f00ed6",
@@ -5545,16 +5599,16 @@
     ],
     "registrations": [
       {
-        "register": "OpenCorporates (Finland)",
+        "register": "PRH (Finnish Trade Register)",
         "jurisdiction": "Finland",
         "kind": "domestic",
         "id": "2348291-1",
         "name": "Gapps Oy",
-        "companyType": "Osakeyhtiö",
-        "status": null,
+        "companyType": "Limited company",
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": "Työpajankatu 13 A, HELSINKI, 00580, Finland",
-        "url": "https://opencorporates.com/companies/fi/2348291-1"
+        "registeredAddress": "Työpajankatu 13 A, 00580 Helsinki",
+        "url": "https://tietopalvelu.ytj.fi/yritys/2348291-1"
       }
     ],
     "sources": [
@@ -5576,16 +5630,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/fi/2348291-1",
+        "type": "business-register",
+        "url": "https://tietopalvelu.ytj.fi/yritys/2348291-1",
         "id": "2348291-1",
-        "label": "Finland company no. 2348291-1 (OpenCorporates)"
+        "label": "Business ID 2348291-1"
       }
     ],
     "locationFlag": null,
     "notes": "Part of Gapps Group Oy.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "f9d6e2a4-fa0f-49b0-a996-4b95a2e24ab1",
@@ -6073,29 +6127,33 @@
       {
         "contactName": "Joanna Schleifer",
         "contactTitle": "Sales Director - Poland"
+      },
+      {
+        "contactName": "Zbyněk Porš",
+        "contactTitle": "Member of the statutory body (Czech register)"
       }
     ],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "V parku 2294/2",
+      "city": "Praha",
       "region": null,
-      "postalCode": null,
+      "postalCode": "148 00",
       "country": "Czechia",
       "countryCode": "CZ"
     },
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Czech Republic)",
-        "jurisdiction": "Czech Republic",
+        "register": "ARES (Czech business register)",
+        "jurisdiction": "Czechia",
         "kind": "domestic",
         "id": "27907147",
         "name": "Intelligent Studios s.r.o.",
-        "companyType": "Společnost s ručením omezeným",
-        "status": "Aktivní",
+        "companyType": null,
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": null,
-        "url": "https://opencorporates.com/companies/cz/27907147"
+        "registeredAddress": "V parku 2294/2, Chodov, 14800 Praha 4",
+        "url": "https://ares.gov.cz/ekonomicke-subjekty?ico=27907147"
       }
     ],
     "sources": [
@@ -6113,16 +6171,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/cz/27907147",
+        "type": "business-register",
+        "url": "https://ares.gov.cz/ekonomicke-subjekty?ico=27907147",
         "id": "27907147",
-        "label": "Czech Republic company no. 27907147 (OpenCorporates)"
+        "label": "IČO 27907147"
       }
     ],
     "locationFlag": null,
     "notes": "Czech (+420) phone numbers; no address published. Country confirmed by the company register. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "723c448f-4fb6-407a-9869-23af15277851",
@@ -6202,16 +6260,16 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Germany)",
+        "register": "Unternehmensregister (German company register)",
         "jurisdiction": "Germany",
         "kind": "domestic",
-        "id": "D5701V_HRB4866",
+        "id": "HRB 4866 (Amtsgericht Ingolstadt)",
         "name": "MicroNova AG",
-        "companyType": "Aktiengesellschaft",
-        "status": "Currently Registered",
+        "companyType": null,
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": "Bischof-Buchberger-Straße 23, 85305 Jetzendorf",
-        "url": "https://opencorporates.com/companies/de/D5701V_HRB4866"
+        "registeredAddress": "Jetzendorf, Bayern",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DED5701V.HRB4866"
       }
     ],
     "sources": [
@@ -6229,16 +6287,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/de/D5701V_HRB4866",
-        "id": "D5701V_HRB4866",
-        "label": "Germany company no. D5701V_HRB4866 (OpenCorporates)"
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DED5701V.HRB4866",
+        "id": "HRB 4866 (Amtsgericht Ingolstadt)",
+        "label": "HRB 4866, Amtsgericht Ingolstadt"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "dcb3f4a5-beff-4542-a580-54b5859c003a",
@@ -7645,16 +7703,16 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Germany)",
+        "register": "Unternehmensregister (German company register)",
         "jurisdiction": "Germany",
         "kind": "domestic",
-        "id": "B8534_HRB766874",
+        "id": "HRB 766874 (Amtsgericht Stuttgart)",
         "name": "Ergoman Communication GmbH",
         "companyType": null,
-        "status": "Currently Registered",
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": "Schorndorfer Straße 42, 71638 Ludwigsburg., Germany",
-        "url": "https://opencorporates.com/companies/de/B8534_HRB766874"
+        "registeredAddress": "Ludwigsburg, Baden-Württemberg",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEB8534.HRB766874"
       }
     ],
     "sources": [
@@ -7668,16 +7726,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/de/B8534_HRB766874",
-        "id": "B8534_HRB766874",
-        "label": "Germany company no. B8534_HRB766874 (OpenCorporates)"
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEB8534.HRB766874",
+        "id": "HRB 766874 (Amtsgericht Stuttgart)",
+        "label": "HRB 766874, Amtsgericht Stuttgart"
       }
     ],
     "locationFlag": null,
     "notes": "Site could not be scraped. Country confirmed by the company register. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "e1a1a686-8885-4b33-883c-6b1b71775dd4",
@@ -9065,7 +9123,7 @@
     "locationFlag": null,
     "notes": "Dmitry Rasin is also the contact for the marketplace vendor tmnxt (vendor 40, via a demicon.de email). Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-07"
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "87adfee4-b0fa-44d8-b1cf-d4d382dafdd3",
@@ -9154,16 +9212,16 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Germany)",
+        "register": "Unternehmensregister (German company register)",
         "jurisdiction": "Germany",
         "kind": "domestic",
-        "id": "D3310V_HRB35594",
+        "id": "HRB 805064 (Amtsgericht Stuttgart)",
         "name": "OAC Analytics AG",
-        "companyType": "Aktiengesellschaft",
-        "status": "Currently Registered",
+        "companyType": null,
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": "Hofstettener Weg 1, 91154 Roth",
-        "url": "https://opencorporates.com/companies/de/D3310V_HRB35594"
+        "registeredAddress": "Stuttgart, Baden-Württemberg",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEB8534.HRB805064"
       }
     ],
     "sources": [
@@ -9181,16 +9239,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/de/D3310V_HRB35594",
-        "id": "D3310V_HRB35594",
-        "label": "Germany company no. D3310V_HRB35594 (OpenCorporates)"
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEB8534.HRB805064",
+        "id": "HRB 805064 (Amtsgericht Stuttgart)",
+        "label": "HRB 805064, Amtsgericht Stuttgart"
       }
     ],
     "locationFlag": null,
-    "notes": null,
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "notes": "Now registered at Amtsgericht Stuttgart (HRB 805064); its earlier registration in Bavaria (HRB 35594, Roth) is outdated.",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "b550bfe2-52a1-45c0-a08f-6f0fcde38688",
@@ -10245,7 +10303,20 @@
         "countryCode": "US"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Unternehmensregister (German company register)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "HRB 26029 (Amtsgericht Kiel)",
+        "name": "Till Freitag Consulting GmbH",
+        "companyType": null,
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Norderstedt, Schleswig-Holstein",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEX1517R.HRB26029KI"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -10256,21 +10327,21 @@
         "url": "https://till-freitag.com/impressum"
       },
       {
-        "type": "business-register",
-        "url": null,
-        "id": "HRB 26029",
-        "label": "HRB 26029 (Amtsgericht Kiel)"
-      },
-      {
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/till-freitag-consulting-gmbh",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DEX1517R.HRB26029KI",
+        "id": "HRB 26029 (Amtsgericht Kiel)",
+        "label": "HRB 26029, Amtsgericht Kiel"
       }
     ],
     "locationFlag": null,
-    "notes": null,
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-07"
+    "notes": "Registered seat is Norderstedt (HRB 26029, Amtsgericht Kiel); the office is in Berlin.",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "1c00a999-0250-4cde-8c32-b2f3c2f838af",
@@ -10709,7 +10780,20 @@
       "countryCode": "DE"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Unternehmensregister (German company register)",
+        "jurisdiction": "Germany",
+        "kind": "domestic",
+        "id": "HRB 109190 (Amtsgericht Düsseldorf)",
+        "name": "WORSY Work Easy GmbH",
+        "companyType": null,
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Düsseldorf, Nordrhein-Westfalen",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DER1101.HRB109190"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -10723,12 +10807,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/worsy",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.unternehmensregister.de/en/search/register-information?companyEuid=DER1101.HRB109190",
+        "id": "HRB 109190 (Amtsgericht Düsseldorf)",
+        "label": "HRB 109190, Amtsgericht Düsseldorf"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "a500bc40-7131-4c22-86fe-d8ad15a357e7",
@@ -10781,7 +10871,7 @@
     "locationFlag": null,
     "notes": "DACH arm of Xebia; no German address scraped. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-07"
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "id": "32da9dbe-e19e-4b76-9a81-a02b469bee35",

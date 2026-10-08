@@ -206,13 +206,19 @@ Work in this order; each step usually fills in more than the last.
    | GB | Companies House (`companies-house.js`): also officers' residence and nationality | yes |
    | FR | Annuaire des Entreprises / recherche-entreprises API (SIREN) | yes |
    | NO | Brønnøysund Register Centre (org. no. + roles API) | yes |
+   | DE | [Unternehmensregister](https://www.unternehmensregister.de/en) (legal name, seat, register court + HRB/HRA number, EUID, former names; links open the search prefilled with the EUID). Addresses and officers are only in the register documents, behind a captcha. GbRs (civil-law partnerships) usually aren't registered; since 2024 they can register voluntarily as an eGbR | no |
    | NL | KvK Dutch Business Register (the JSON API behind [kvk.nl/en/search](https://www.kvk.nl/en/search/); KvK number, legal form, visiting address, registered activity, trade names) | no (needs a paid extract) |
+   | CZ | ARES (Czech government register API): IČO, address, and directors from its public-register endpoint | yes |
+   | SK | RPO (Slovak Statistical Office register API): IČO, address, register court entry, *konateľ* (managing directors) | yes |
+   | FI | PRH / YTJ open data (Finnish Trade Register): business ID, address, company form, Finnish/English names | no |
+   | BE | KBO/BCE public search (enterprise number, registered seat, legal form). The company page lists directors and their permanent representatives. The name search is phonetic and misses recent renames, so an enterprise number or BE VAT number in the notes/sources/site is used first | yes |
+   | PL | KRS API (National Court Register). **Lookup by KRS number only**, which is taken from the site footer, notes or sources (Polish companies must publish it); board members' names are masked | no |
    | BR | Receita Federal CNPJ via BrasilAPI: needs the CNPJ, which is usually in the site footer | yes (partners) |
    | IL | Israeli Registrar of Companies, data.gov.il open dataset (company no., status, registered address) | no |
    | EE | e-Äriregister (registry code, legal address) | no (names hidden) |
    | CH | Zefix (UID, seat, link to the cantonal excerpt, which lists the board) | via the excerpt |
    | AU | ABN Lookup (ABN, state, postcode; directors need a paid ASIC search) | no |
-   | everything else | OpenCorporates: US by state, IN, DE, PL, CA, SG, … (company no., registered address; for US companies also the **registered agent**, a good offshore signal) | no (needs login) |
+   | everything else | OpenCorporates: US by state, IN, PL, CA, SG, … (company no., registered address; for US companies also the **registered agent**, a good offshore signal) | no (needs login) |
 
    Other registers worth checking by hand: Germany's handelsregister.de
    (Geschäftsführer, HRB) or North Data; the Netherlands' KvK (paid

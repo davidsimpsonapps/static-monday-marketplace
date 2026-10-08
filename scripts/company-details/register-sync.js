@@ -71,7 +71,18 @@ const personName = (n) => {
   const s = m ? `${m[2]} ${m[1]}` : n;
   return s.replace(/[A-ZÀ-Ý][A-ZÀ-Ý']+/g, (w) => w[0] + w.slice(1).toLowerCase()).trim();
 };
-const LEAD = /ceo|chief executive|managing director|geschäftsführer|daglig leder|président|presidente|directeur général|gerente|administrador|prezes|director|socio/i;
+const LEAD = /ceo|chief executive|managing director|geschäftsführer|daglig leder|président|presidente|directeur général|gerente|administrador|prezes|director|socio|konateľ|jednatel|statutárního orgánu|permanent representative/i;
+// register role names in English (the original in brackets)
+const ROLE_EN = [
+  [/^konateľ$/i, "Managing director (konateľ)"],
+  [/^jednatel$/i, "Managing director (jednatel)"],
+  [/^člen statutárního orgánu$/i, "Member of the statutory body"],
+  [/^předseda statutárního orgánu$/i, "Chair of the statutory body"],
+  [/^prokura$/i, "Authorised signatory (prokura)"],
+  [/^prokurista$/i, "Authorised signatory (prokurista)"],
+  [/^permanent representative$/i, "Director's permanent representative"],
+];
+const roleEn = (r) => (ROLE_EN.find(([re]) => re.test(r || "")) || [null, r])[1];
 const TIER_WEIGHT = { Platinum: 1e7, Gold: 5e6, Silver: 1e6, Bronze: 2e5, Authorized: 1e5 };
 
 function siteText(e) {
@@ -83,6 +94,23 @@ function siteText(e) {
   }
   return t;
 }
+
+// Registers that can only (PL) or best (BE) be searched by number: take the
+// number from the site, the notes or an existing source.
+const ID_PATTERNS = {
+  PL: /\bKRS[:\s]*(?:nr\.?|no\.?|number)?\s*(\d{10})\b/i,
+  BE: /\b(?:BE|enterprise (?:no\.?|number)|ondernemingsnummer|KBO|BCE|VAT)[:\s]*(?:BE)?\s?(0?[01]\d{3}[.\s]?\d{3}[.\s]?\d{3})\b/i,
+};
+function registerIdFromEntry(e, cc) {
+  const re = ID_PATTERNS[cc];
+  if (!re) return null;
+  const text = [e.notes, ...e.sources.map((s) => `${s.label || ""} ${s.type === "vat" ? "VAT" : ""} ${s.id || ""}`), siteText(e)].join("\n");
+  return (text.match(re) || [])[1] || null;
+}
+
+// the company number's digits, ignoring separators, prefixes and leading
+// zeros: "BE 0744.742.640" = "0744742640", "B8534_HRB725118" = "HRB 725118 (…)"
+const num = (id) => ((String(id || "").replace(/(\d)[.\s/-](?=\d)/g, "$1").match(/(\d{3,})\D*$/) || [])[1] || "").replace(/^0+/, "") || null;
 
 const toRegistration = (r) => ({
   register: r.register,
@@ -103,7 +131,7 @@ function choose(e, key, records, cc) {
   const ov = OVERRIDES[key];
   if (ov === null) return { registrations: [], ambiguous: null };
   const wanted = [e.legalName, e.name].filter(Boolean).map(strict).filter((x) => x.length > 1);
-  let exact = records.filter((r) => r.how === "cnpj-from-site" || wanted.includes(strict(r.name)) || [r.tradeName, ...(r.tradeNames || [])].some((t) => t && wanted.includes(strict(t))));
+  let exact = records.filter((r) => r.how === "cnpj-from-site" || r.how === "id-from-site" || wanted.includes(strict(r.name)) || [r.tradeName, ...(r.tradeNames || [])].some((t) => t && wanted.includes(strict(t))));
   if (ov) exact = records.filter((r) => r.id === ov);
   if (!exact.length) return { registrations: [], ambiguous: records.length ? `no exact name match among ${records.map((r) => `${r.name} (${r.id})`).join(" ; ")}` : null };
 
@@ -136,13 +164,25 @@ function apply(e, { registrations, home, people }) {
   if (!registrations.length) return changes;
   // replace earlier copies of the same registration (same URL, or the same
   // number in the same jurisdiction, e.g. an OpenCorporates copy of a KvK record)
-  const same = (a, b) => a.url === b.url || (a.id && a.id === b.id && a.jurisdiction === b.jurisdiction);
-  e.registrations = [...(e.registrations || []).filter((r) => !registrations.some((n) => same(r, n))), ...registrations];
+  // (OpenCorporates writes German numbers as "B8534_HRB725118", the register
+  // as "HRB 725118 (Amtsgericht Stuttgart)", so compare the trailing digits)
+  const same = (a, b) =>
+    a.url === b.url || (a.id && (a.id === b.id || (num(a.id) && num(a.id) === num(b.id) && (a.jurisdiction === b.jurisdiction || /opencorporates/.test(a.url)))));
+  const replaced = (e.registrations || []).filter((r) => registrations.some((n) => same(r, n)));
+  e.registrations = [...(e.registrations || []).filter((r) => !replaced.includes(r)), ...registrations];
+  // drop OpenCorporates sources that only pointed at a replaced registration
+  const gone = new Set(replaced.filter((r) => /opencorporates\.com/.test(r.url)).map((r) => r.url));
+  e.sources = e.sources.filter((s) => !(s.type === "opencorporates" && gone.has(s.url)));
   changes.push(`${registrations.length} registration(s)`);
 
   // cite the home registration as a source
   const type = home.sourceType === "opencorporates" ? "opencorporates" : home.sourceType;
-  const existing = e.sources.find((s) => (s.url && s.url === home.url) || (s.id && String(s.id).replace(/\s/g, "") === String(home.id).replace(/\s/g, "")));
+  const existing = e.sources.find(
+    (s) =>
+      (s.url && s.url === home.url) ||
+      (s.id && String(s.id).replace(/\s/g, "") === String(home.id).replace(/\s/g, "")) ||
+      (s.id && ["business-register", "opencorporates"].includes(s.type) && num(s.id) && num(s.id) === num(home.id)),
+  );
   if (existing && existing.type === "opencorporates" && type !== "opencorporates") {
     // prefer the official register over OpenCorporates' copy of it
     Object.assign(existing, { type, url: home.url, id: String(home.id) });
@@ -168,7 +208,8 @@ function apply(e, { registrations, home, people }) {
   // directors/board/partners only: company secretaries and corporate
   // officers (nominee companies) are not contacts
   const isPerson = (p) => p.name && !/\b(LTD|LIMITED|LLP|INC|SECRETARIES|NOMINEES)\b/.test(p.name) && !/secretary/i.test(p.role || "");
-  for (const p of (people || []).filter(isPerson)) {
+  for (const p0 of (people || []).filter(isPerson)) {
+    const p = { ...p0, role: roleEn(p0.role) };
     const nm = personName(p.name);
     const known = [e.contactName, ...e.alternativeContacts.map((c) => c.contactName)].filter(Boolean);
     if (known.some((k) => samePerson(k, nm))) continue;
@@ -216,7 +257,13 @@ function apply(e, { registrations, home, people }) {
   for (const { e, key, cc } of queue) {
     try {
       let records = [];
-      if (cc === "BR") {
+      const idHit = registerIdFromEntry(e, cc);
+      if (idHit) {
+        records = await lookup(cc, null, { id: idHit });
+      }
+      if (records.length) {
+        /* found by the number the company publishes */
+      } else if (cc === "BR") {
         const m = siteText(e).match(/\b\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}\b/);
         if (m) records = (await lookup("BR", null, { id: m[0] })).map((r) => ({ ...r, how: "cnpj-from-site" }));
       } else {

@@ -12,10 +12,10 @@
 // where a record is { register, id, name, status, url, address, people: [{name, role}] }.
 //
 // Registers with directors: GB (Companies House), FR (annuaire-entreprises),
-// NO (Brønnøysund), BR (CNPJ via BrasilAPI, needs the CNPJ).
+// NO (Brønnøysund), CZ (ARES), SK (RPO), BE (KBO), BR (CNPJ via BrasilAPI, needs the CNPJ).
 // Registers without directors: IL (Registrar of Companies, data.gov.il),
-// NL (KvK), EE (e-Äriregister), CH (Zefix), AU (ABN Lookup), and OpenCorporates for
-// everything else (US states, IN, DE, PL, CA, SG, ...; officers there
+// NL (KvK), DE (Unternehmensregister), FI (PRH), PL (KRS, by number), EE (e-Äriregister), CH (Zefix), AU (ABN Lookup), and OpenCorporates for
+// everything else (US states, IN, CA, SG, ...; officers there
 // need a login, but the registered agent is shown for US companies).
 // Be gentle: OpenCorporates is rate-limited, so calls are spaced out.
 
@@ -196,6 +196,255 @@ async function nl(name) {
   });
 }
 
+// Unternehmensregister (German company register). Its search page renders the
+// results server-side once it has a token from /api/search-token, and embeds
+// them as JSON in the Next.js flight data. Gives legal name, seat, register
+// court + number, EUID and name history; addresses and directors are only in
+// the register documents, which sit behind a captcha.
+const UR = "https://www.unternehmensregister.de";
+async function de(name) {
+  const tokenRes = await get(`${UR}/api/search-token`);
+  const cookie = (tokenRes.headers.getSetCookie?.() || []).map((c) => c.split(";")[0]).join("; ");
+  const { token } = await tokenRes.json();
+  const html = await (await get(`${UR}/en/registerPortal?companyName=${encodeURIComponent(name)}&searchToken=${encodeURIComponent(token)}`, { headers: cookie ? { Cookie: cookie } : {} })).text();
+  const flight = [...html.matchAll(/self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)/g)].map((m) => JSON.parse(m[1])).join("");
+  const i = flight.indexOf('"companies":[');
+  if (i < 0) return [];
+  let depth = 0, j = i + '"companies":'.length, k = j;
+  for (; k < flight.length; k++) {
+    if (flight[k] === "[") depth++;
+    else if (flight[k] === "]" && --depth === 0) break;
+  }
+  return JSON.parse(flight.slice(j, k + 1)).map((c) => {
+    const court = c.registerCourt?.name;
+    const number = `${c.registerType?.name || ""} ${c.registerNumber}`.trim();
+    const former = (c.companyHistory || []).map((h) => h.companyName).filter((n) => n !== c.name);
+    return {
+      register: "Unternehmensregister (German company register)",
+      sourceType: "business-register",
+      jurisdictionName: "Germany",
+      id: `${number}${court ? ` (Amtsgericht ${court})` : ""}`,
+      label: `${number}, Amtsgericht ${court}`,
+      name: c.name,
+      tradeNames: [...new Set(former)],
+      companyType: null,
+      status: c.deletedFlag ? "Deleted" : "Registered",
+      url: `${UR}/en/search/register-information?companyEuid=${encodeURIComponent(c.euid)}`,
+      address: [c.location, c.state?.name].filter(Boolean).join(", ") || null,
+      addressParts: null,
+      euid: c.euid,
+      people: [],
+    };
+  });
+}
+
+// ARES (Czech register of economic subjects); directors from its public
+// register (veřejný rejstřík) endpoint.
+const ARES = "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest";
+async function cz(name, { onlyNames = null } = {}) {
+  const d = await (await get(`${ARES}/ekonomicke-subjekty/vyhledat`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ obchodniJmeno: name, pocet: 10 }) })).json();
+  const out = [];
+  for (const s of d.ekonomickeSubjekty || []) {
+    let people = [];
+    let status = s.datumZaniku ? "Dissolved" : "Registered";
+    if ((!onlyNames || onlyNames(s.obchodniJmeno)) && s.seznamRegistraci?.stavZdrojeVr === "AKTIVNI") {
+      try {
+        const vr = (await (await get(`${ARES}/ekonomicke-subjekty-vr/${s.ico}`)).json()).zaznamy?.[0];
+        for (const o of vr?.statutarniOrgany || [])
+          for (const c of o.clenoveOrganu || [])
+            if (!c.datumVymazu && c.fyzickaOsoba)
+              people.push({ name: titleCase(`${c.fyzickaOsoba.jmeno} ${c.fyzickaOsoba.prijmeni}`), role: c.nazevAngazma || c.funkce || o.nazevOrganu });
+        people = people.filter((p, i, a) => a.findIndex((q) => q.name === p.name) === i);
+      } catch {
+        /* no public-register record */
+      }
+    }
+    const a = s.sidlo || {};
+    const street = [a.nazevUlice || a.nazevCastiObce, [a.cisloDomovni, a.cisloOrientacni].filter(Boolean).join("/")].filter(Boolean).join(" ") || null;
+    out.push({
+      register: "ARES (Czech business register)",
+      sourceType: "business-register",
+      jurisdictionName: "Czechia",
+      id: s.ico,
+      label: `IČO ${s.ico}`,
+      name: s.obchodniJmeno,
+      status,
+      url: `https://ares.gov.cz/ekonomicke-subjekty?ico=${s.ico}`,
+      address: a.textovaAdresa || null,
+      addressParts: street && { street, city: a.nazevObce || null, postalCode: a.psc ? String(a.psc).replace(/^(\d{3})(\d{2})$/, "$1 $2") : null },
+      people,
+    });
+  }
+  return out;
+}
+
+// RPO (Slovak register of legal entities, Statistical Office API).
+const RPO = "https://api.statistics.sk/rpo/v1";
+async function sk(name, { onlyNames = null } = {}) {
+  // the name search only matches without the legal form ("s.r.o.", "a.s.")
+  const q = name.replace(/,?\s*\b(s\.?\s?r\.?\s?o|a\.?\s?s|k\.?\s?s|v\.?\s?o\.?\s?s)\.?$/i, "").trim();
+  const d = await (await get(`${RPO}/search?fullName=${encodeURIComponent(q)}`)).json();
+  const current = (list) => (list || []).filter((x) => !x.validTo).slice(-1)[0] || (list || []).slice(-1)[0];
+  const out = [];
+  const hits = (d.results || []).filter((r) => !onlyNames || onlyNames(current(r.fullNames)?.value));
+  for (const r of hits.slice(0, 5)) {
+    const nm = current(r.fullNames)?.value;
+    let people = [];
+    let detail = r;
+    try {
+      detail = await (await get(`${RPO}/entity/${r.id}?showHistoricalData=false`)).json();
+      people = (detail.statutoryBodies || [])
+        .filter((b) => !b.validTo && b.personName)
+        .map((b) => ({ name: [...(b.personName.givenNames || []), ...(b.personName.familyNames || [])].join(" "), role: b.stakeholderType?.value }));
+    } catch (err) {
+      if (process.env.DEBUG_REGISTERS) console.error(err);
+      /* summary only */
+    }
+    const ico = current(r.identifiers)?.value;
+    const a = current(detail.addresses) || {};
+    const street = [a.street || a.municipality?.value, a.buildingNumber].filter(Boolean).join(" ") || null;
+    const reg = detail.sourceRegister || {};
+    out.push({
+      register: "RPO (Slovak register of legal entities)",
+      sourceType: "business-register",
+      jurisdictionName: "Slovakia",
+      id: ico,
+      label: `IČO ${ico}`,
+      name: nm,
+      tradeNames: (r.fullNames || []).map((n) => n.value),
+      companyType: current(detail.legalForms)?.value?.value || null,
+      status: detail.termination ? "Dissolved" : "Registered",
+      url: `https://www.orsr.sk/hladaj_ico.asp?ICO=${ico}&SID=0`,
+      address: [street, [(a.postalCodes || [])[0], a.municipality?.value].filter(Boolean).join(" ")].filter(Boolean).join(", ") || null,
+      addressParts: street && { street, city: a.municipality?.value || null, postalCode: (a.postalCodes || [])[0] || null },
+      registerEntry: [current(reg.registrationOffices)?.value, current(reg.registrationNumbers)?.value].filter(Boolean).join(", ") || null,
+      people,
+    });
+  }
+  return out;
+}
+
+// PRH / YTJ open data (Finnish Trade Register).
+async function fi(name) {
+  const d = await (await get(`https://avoindata.prh.fi/opendata-ytj-api/v3/companies?name=${encodeURIComponent(name)}`)).json();
+  const en = (descs) => (descs || []).find((x) => x.languageCode === "3")?.description || (descs || [])[0]?.description;
+  return (d.companies || []).slice(0, 10).map((c) => {
+    const names = (c.names || []).filter((n) => !n.endDate);
+    const a = (c.addresses || []).find((x) => x.type === 1) || (c.addresses || [])[0] || {};
+    const city = a.postOffices?.find((p) => p.languageCode === "1")?.city;
+    const street = [a.street, [a.buildingNumber, a.entrance, a.apartmentNumber].filter(Boolean).join(" ")].filter(Boolean).join(" ") || null;
+    return {
+      register: "PRH (Finnish Trade Register)",
+      sourceType: "business-register",
+      jurisdictionName: "Finland",
+      id: c.businessId.value,
+      label: `Business ID ${c.businessId.value}`,
+      name: (names.find((n) => n.type === "1") || names[0] || {}).name,
+      tradeNames: names.map((n) => n.name),
+      companyType: en(c.companyForms?.[0]?.descriptions) || null,
+      status: c.endDate || c.status === "3" ? "Dissolved" : "Registered",
+      url: `https://tietopalvelu.ytj.fi/yritys/${c.businessId.value}`,
+      address: [street, [a.postCode, city ? titleCase(city) : null].filter(Boolean).join(" ")].filter(Boolean).join(", ") || null,
+      addressParts: street && { street, city: city ? titleCase(city) : null, postalCode: a.postCode || null },
+      people: [],
+    };
+  });
+}
+
+// KBO/BCE (Belgian Crossroads Bank for Enterprises) public search; the
+// company page lists directors and their permanent representatives.
+const KBO = "https://kbopub.economie.fgov.be/kbopub";
+const kboText = (h) => T(h.replace(/&nbsp;/g, " ").replace(/<br\s*\/?>/g, " | "));
+async function kboDetail(nr) {
+  const h = await (await get(`${KBO}/toonondernemingps.html?ondernemingsnummer=${nr}&lang=en`)).text();
+  const t = kboText(h);
+  const field = (label, stop) => (t.match(new RegExp(`${label}:\\s*(.*?)\\s*(?:${stop})`)) || [])[1]?.replace(/\s*\|\s*/g, " ").trim() || null;
+  const people = [];
+  // natural persons only: "Director SURNAME , First" and "Permanent representative SURNAME , First (0505.716.230)"
+  for (const m of t.matchAll(/(Director|Manager|Permanent representative|Person in charge of daily management)\s+([A-ZÀ-Ýa-zà-ÿ' -]+?)\s*,\s*([A-ZÀ-Ýa-zà-ÿ' -]+?)\s*(?:\(\d|Since)/g))
+    people.push({ name: titleCase(`${m[3]} ${m[2]}`), role: m[1] });
+  return {
+    name: field("Name", "Name in |Since"),
+    status: field("Status", "Legal situation"),
+    companyType: field("Legal form", "Since"),
+    address: field("Registered seat's address", "Since"),
+    people,
+  };
+}
+async function be(name, { onlyNames = null, id = null } = {}) {
+  if (id) {
+    const nr = String(id).replace(/\D/g, "").padStart(10, "0");
+    const d = await kboDetail(nr);
+    if (!d.name) return [];
+    const fmt = nr.replace(/^(\d{4})(\d{3})(\d{3})$/, "$1.$2.$3");
+    return [{ register: "KBO/BCE (Belgian Crossroads Bank for Enterprises)", sourceType: "business-register", jurisdictionName: "Belgium", id: nr, label: `Enterprise no. ${fmt}`, url: `${KBO}/toonondernemingps.html?ondernemingsnummer=${nr}&lang=en`, how: "id-from-site", ...d }];
+  }
+  // the phonetic search misses names that include the legal form
+  const word = name.replace(/,?\s*\b(b\.?v\.?b\.?a|b\.?v|n\.?v|s\.?r\.?l|s\.?a|comm\.?v|v\.?o\.?f)\.?$/i, "").trim();
+  const q = new URLSearchParams({ searchWord: word, _oudeBenaming: "on", pstcdeNPRP: "", postgemeente1: "", ondNP: "true", _ondNP: "on", ondRP: "true", _ondRP: "on", rechtsvormFonetic: "ALL", _vest: "on", filterEnkelActieve: "true", _filterEnkelActieve: "on", actionNPRP: "Zoek", lang: "en" });
+  const h = await (await get(`${KBO}/zoeknaamfonetischform.html?${q}`)).text();
+  const seen = new Map();
+  for (const row of h.split(/<tr class="(?:odd|even)">/).slice(1)) {
+    const nr = (row.match(/ondernemingsnummer=(\d{10})/) || [])[1];
+    const nm = T((row.match(/class="benaming">([\s\S]*?)<\/td>/) || [])[1]);
+    if (nr && !seen.has(nr)) seen.set(nr, nm);
+  }
+  const out = [];
+  for (const [nr, nm] of [...seen].slice(0, 10)) {
+    const fmt = nr.replace(/^(\d{4})(\d{3})(\d{3})$/, "$1.$2.$3");
+    const rec = { register: "KBO/BCE (Belgian Crossroads Bank for Enterprises)", sourceType: "business-register", jurisdictionName: "Belgium", id: nr, label: `Enterprise no. ${fmt}`, name: nm, url: `${KBO}/toonondernemingps.html?ondernemingsnummer=${nr}&lang=en`, people: [] };
+    if (!onlyNames || onlyNames(nm)) {
+      try {
+        const d = await kboDetail(nr);
+        Object.assign(rec, { name: d.name || nm, tradeNames: [nm], status: d.status, companyType: d.companyType, address: d.address, people: d.people });
+      } catch {
+        /* search row only */
+      }
+    }
+    out.push(rec);
+  }
+  return out;
+}
+
+// KRS (Polish National Court Register) API: lookup by KRS number only (no
+// name search), so the number has to come from the company's site, where
+// Polish companies must publish it. Board members' names are masked.
+async function pl(_name, { id } = {}) {
+  if (!id) return [];
+  const nr = String(id).replace(/\D/g, "").padStart(10, "0");
+  for (const rejestr of ["P", "S"]) {
+    let d;
+    try {
+      d = (await (await get(`https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/${nr}?rejestr=${rejestr}&format=json`)).json()).odpis;
+    } catch {
+      continue;
+    }
+    const p = d.dane.dzial1.danePodmiotu;
+    const a = d.dane.dzial1.siedzibaIAdres?.adres || {};
+    const street = [a.ulica, [a.nrDomu, a.nrLokalu].filter(Boolean).join("/")].filter(Boolean).join(" ") || null;
+    return [
+      {
+        register: "KRS (Polish National Court Register)",
+        sourceType: "business-register",
+        jurisdictionName: "Poland",
+        id: nr,
+        label: `KRS ${nr}`,
+        name: p.nazwa,
+        companyType: p.formaPrawna ? titleCase(p.formaPrawna) : null,
+        status: "Registered",
+        how: "id-from-site",
+        url: `https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/${nr}?rejestr=${rejestr}&format=json`,
+        address: [street, [a.kodPocztowy, a.miejscowosc ? titleCase(a.miejscowosc) : null].filter(Boolean).join(" ")].filter(Boolean).join(", ") || null,
+        addressParts: street && { street: titleCase(street), city: a.miejscowosc ? titleCase(a.miejscowosc) : null, postalCode: a.kodPocztowy || null },
+        nip: p.identyfikatory?.nip,
+        regon: p.identyfikatory?.regon,
+        people: [],
+      },
+    ];
+  }
+  return [];
+}
+
 async function chZefix(name) {
   const d = await (
     await get("https://www.zefix.ch/ZefixREST/api/v1/firm/search.json", {
@@ -342,7 +591,7 @@ async function opencorporates(cc, name, { details = true, onlyNames = null, maxD
   return out;
 }
 
-const ADAPTERS = { GB: gb, FR: fr, IL: il, EE: ee, NO: no, NL: nl, CH: chZefix, AU: au, BR: br };
+const ADAPTERS = { GB: gb, FR: fr, IL: il, EE: ee, NO: no, NL: nl, DE: de, CZ: cz, SK: sk, FI: fi, BE: be, PL: pl, CH: chZefix, AU: au, BR: br };
 
 async function lookup(countryCode, name, opts = {}) {
   const cc = (countryCode || "").toUpperCase();
