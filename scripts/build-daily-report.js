@@ -43,6 +43,10 @@
 //                --skip-ai    don't call Claude; the articles are plain lists
 //                             of the selected facts (docs changes left out) -
 //                             for testing without an API key
+//                --print-input           print the facts sent to Claude and exit
+//                --articles-from=<file>  don't call Claude; use articles
+//                             written elsewhere ({"articles": [...]} JSON, see
+//                             ArticlesSchema) - e.g. to backfill past days
 
 const fs = require("fs");
 const path = require("path");
@@ -488,10 +492,15 @@ async function writeArticles(input) {
     throw new Error(`Claude returned no usable output (stop_reason: ${response.stop_reason}).`);
   }
 
-  // Keep one article per topic that actually has facts, in topic order.
+  return selectArticles(input, response.parsed_output.articles);
+}
+
+// Keeps one article per topic that actually has facts, in topic order, with
+// links outside the input turned into plain text.
+function selectArticles(input, articles) {
   const expected = topicsWithFacts(input);
   const byTopic = new Map();
-  for (const article of response.parsed_output.articles) {
+  for (const article of articles) {
     if (expected.includes(article.topic) && !byTopic.has(article.topic)) byTopic.set(article.topic, article);
   }
   for (const topic of expected) {
@@ -624,10 +633,19 @@ async function main() {
 
   const input = articleInput(data, windowStart);
   const skipAi = args.includes("--skip-ai");
+  const articlesFrom = args.find((a) => a.startsWith("--articles-from="));
+
+  if (args.includes("--print-input")) {
+    console.log(JSON.stringify({ topics: topicsWithFacts(input), input }, null, 2));
+    return;
+  }
 
   let articles = [];
   if (skipAi) {
     articles = listArticles(input, reportDate);
+  } else if (articlesFrom) {
+    const file = articlesFrom.slice("--articles-from=".length);
+    articles = selectArticles(input, ArticlesSchema.parse(JSON.parse(fs.readFileSync(file, "utf-8"))).articles);
   } else if (topicsWithFacts(input).length) {
     articles = await writeArticles(input);
   }
