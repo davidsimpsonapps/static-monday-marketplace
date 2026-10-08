@@ -14,8 +14,8 @@
 // Registers with directors: GB (Companies House), FR (annuaire-entreprises),
 // NO (Brønnøysund), BR (CNPJ via BrasilAPI, needs the CNPJ).
 // Registers without directors: IL (Registrar of Companies, data.gov.il),
-// EE (e-Äriregister), CH (Zefix), AU (ABN Lookup), and OpenCorporates for
-// everything else (US states, IN, DE, NL, PL, CA, SG, ...; officers there
+// NL (KvK), EE (e-Äriregister), CH (Zefix), AU (ABN Lookup), and OpenCorporates for
+// everything else (US states, IN, DE, PL, CA, SG, ...; officers there
 // need a login, but the registered agent is shown for US companies).
 // Be gentle: OpenCorporates is rate-limited, so calls are spaced out.
 
@@ -149,6 +149,51 @@ async function no(name) {
     });
   }
   return out;
+}
+
+// KvK (Dutch Business Register). Uses the JSON API behind kvk.nl/en/search;
+// the profileId is the public one from https://www.kvk.nl/config.env.js
+// (NEXT_PUBLIC_SEARCH_V2_GENERAL_SEARCH_PROFILE_ID). No directors without a
+// paid extract.
+const KVK_PROFILE_ID = "5C10A89D-635E-49CC-94B8-042DD533B64A";
+const kvkPostcode = (p) => (p || "").replace(/^(\d{4})\s*([A-Z]{2})$/i, "$1 $2");
+async function nl(name) {
+  const url = `https://web-api.kvk.nl/zoeken/v3/search?q=${encodeURIComponent(name)}&language=en&site=handelsregister&size=50&start=0`;
+  const d = await (await get(url, { headers: { profileId: KVK_PROFILE_ID, Origin: "https://www.kvk.nl", Referer: "https://www.kvk.nl/" } })).json();
+  // one row per KvK number: prefer the current main branch over the
+  // legal-entity row and over older (NMP) copies
+  const rank = (i) => (i.bron === "Actueel" ? 2 : 0) + (i.inschrijvingstype === "Hoofdvestiging" ? 1 : 0);
+  const byId = new Map();
+  for (const i of d.data?.items || []) {
+    const prev = byId.get(i.kvkNummer);
+    const tradeNames = [...new Set([...(prev?.tradeNames || []), i.naam, i.statutaireNaam, ...(i.huidigeHandelsNamen || [])].filter(Boolean))];
+    const best = !prev || rank(i) > rank(prev.raw) ? i : prev.raw;
+    // the legal-entity row carries the statutory name; branch rows carry a trade name
+    const legal = i.inschrijvingstype === "Rechtspersoon" ? i.naam : prev?.legal;
+    byId.set(i.kvkNummer, { raw: best, tradeNames, legal });
+  }
+  return [...byId.values()].map(({ raw: i, tradeNames, legal }) => {
+    const a = i.bezoeklocatie || i.postlocatie || {};
+    const street = [a.straat, [a.huisnummer, a.huisnummerToevoeging].filter(Boolean).join(" ")].filter(Boolean).join(" ") || null;
+    return {
+      register: "KvK (Dutch Business Register)",
+      sourceType: "business-register",
+      jurisdictionName: "Netherlands",
+      id: i.kvkNummer,
+      label: `KvK ${i.kvkNummer}`,
+      name: legal || i.statutaireNaam || i.naam,
+      tradeName: i.naam,
+      tradeNames,
+      companyType: i.rechtsvormOmschrijving || null,
+      status: i.actief ? "Registered" : "Inactive",
+      url: `https://www.kvk.nl/en/search/?source=all&q=${i.kvkNummer}&start=0&site=kvk2014`,
+      address: [street, [kvkPostcode(a.postcode), a.plaats].filter(Boolean).join(" ")].filter(Boolean).join(", ") || null,
+      addressParts: street && { street, city: a.plaats || null, postalCode: kvkPostcode(a.postcode) || null },
+      activity: (i.activiteitomschrijving || "").replace(/\s+/g, " ").trim() || null,
+      branch: i.vestigingsnummer || null,
+      people: [],
+    };
+  });
 }
 
 async function chZefix(name) {
@@ -297,7 +342,7 @@ async function opencorporates(cc, name, { details = true, onlyNames = null, maxD
   return out;
 }
 
-const ADAPTERS = { GB: gb, FR: fr, IL: il, EE: ee, NO: no, CH: chZefix, AU: au, BR: br };
+const ADAPTERS = { GB: gb, FR: fr, IL: il, EE: ee, NO: no, NL: nl, CH: chZefix, AU: au, BR: br };
 
 async function lookup(countryCode, name, opts = {}) {
   const cc = (countryCode || "").toUpperCase();

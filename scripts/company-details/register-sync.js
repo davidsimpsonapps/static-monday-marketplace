@@ -103,7 +103,7 @@ function choose(e, key, records, cc) {
   const ov = OVERRIDES[key];
   if (ov === null) return { registrations: [], ambiguous: null };
   const wanted = [e.legalName, e.name].filter(Boolean).map(strict).filter((x) => x.length > 1);
-  let exact = records.filter((r) => r.how === "cnpj-from-site" || wanted.includes(strict(r.name)) || (r.tradeName && wanted.includes(strict(r.tradeName))));
+  let exact = records.filter((r) => r.how === "cnpj-from-site" || wanted.includes(strict(r.name)) || [r.tradeName, ...(r.tradeNames || [])].some((t) => t && wanted.includes(strict(t))));
   if (ov) exact = records.filter((r) => r.id === ov);
   if (!exact.length) return { registrations: [], ambiguous: records.length ? `no exact name match among ${records.map((r) => `${r.name} (${r.id})`).join(" ; ")}` : null };
 
@@ -134,14 +134,21 @@ function choose(e, key, records, cc) {
 function apply(e, { registrations, home, people }) {
   const changes = [];
   if (!registrations.length) return changes;
-  const urls = new Set(registrations.map((r) => r.url));
-  e.registrations = [...(e.registrations || []).filter((r) => !urls.has(r.url)), ...registrations];
+  // replace earlier copies of the same registration (same URL, or the same
+  // number in the same jurisdiction, e.g. an OpenCorporates copy of a KvK record)
+  const same = (a, b) => a.url === b.url || (a.id && a.id === b.id && a.jurisdiction === b.jurisdiction);
+  e.registrations = [...(e.registrations || []).filter((r) => !registrations.some((n) => same(r, n))), ...registrations];
   changes.push(`${registrations.length} registration(s)`);
 
   // cite the home registration as a source
   const type = home.sourceType === "opencorporates" ? "opencorporates" : home.sourceType;
   const existing = e.sources.find((s) => (s.url && s.url === home.url) || (s.id && String(s.id).replace(/\s/g, "") === String(home.id).replace(/\s/g, "")));
-  if (existing) {
+  if (existing && existing.type === "opencorporates" && type !== "opencorporates") {
+    // prefer the official register over OpenCorporates' copy of it
+    Object.assign(existing, { type, url: home.url, id: String(home.id) });
+    if (home.label) existing.label = home.label;
+    changes.push("source");
+  } else if (existing) {
     if (!existing.url) existing.url = home.url;
     if (!existing.id) existing.id = String(home.id);
   } else {

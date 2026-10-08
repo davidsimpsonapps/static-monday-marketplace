@@ -783,16 +783,16 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Netherlands)",
+        "register": "KvK (Dutch Business Register)",
         "jurisdiction": "Netherlands",
         "kind": "domestic",
         "id": "76632490",
         "name": "Avisi Apps B.V.",
         "companyType": "Besloten Vennootschap",
-        "status": "Active",
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": null,
-        "url": "https://opencorporates.com/companies/nl/76632490"
+        "registeredAddress": "Nieuwe Stationsstraat 10, 6811 KS Arnhem",
+        "url": "https://www.kvk.nl/en/search/?source=all&q=76632490&start=0&site=kvk2014"
       }
     ],
     "sources": [
@@ -818,8 +818,8 @@
     ],
     "locationFlag": null,
     "notes": "KvK 76632490, VAT NL860713659B01. Avisi's founder is Gert-Jan van de Streek.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 100000022,
@@ -1866,26 +1866,26 @@
     "contactTitle": "Founder, Lead Developer",
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "De Ruijterstraat 36 A",
+      "city": "'s-Gravenhage",
       "region": null,
-      "postalCode": null,
+      "postalCode": "2518 AS",
       "country": "Netherlands",
       "countryCode": "NL"
     },
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (Netherlands)",
+        "register": "KvK (Dutch Business Register)",
         "jurisdiction": "Netherlands",
         "kind": "domestic",
         "id": "67089216",
         "name": "Software Defined Everything B.V.",
         "companyType": "Besloten Vennootschap",
-        "status": "Active",
+        "status": "Registered",
         "registeredAgent": null,
-        "registeredAddress": null,
-        "url": "https://opencorporates.com/companies/nl/67089216"
+        "registeredAddress": "De Ruijterstraat 36 A, 2518 AS 's-Gravenhage",
+        "url": "https://www.kvk.nl/en/search/?source=all&q=67089216&start=0&site=kvk2014"
       }
     ],
     "sources": [
@@ -1894,16 +1894,16 @@
         "url": "https://www.collabsoft.com/about-us"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/nl/67089216",
+        "type": "business-register",
+        "url": "https://www.kvk.nl/en/search/?source=all&q=67089216&start=0&site=kvk2014",
         "id": "67089216",
-        "label": "Netherlands company no. 67089216 (OpenCorporates)"
+        "label": "KvK 67089216"
       }
     ],
     "locationFlag": null,
-    "notes": "Dutch B.V. (KvK 67089216, via OpenCorporates); the postal address isn’t published on the site.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "notes": "Dutch B.V. (KvK 67089216). The site publishes no postal address; the address shown is from KvK.",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000016,
@@ -5313,29 +5313,56 @@
     "tier": null,
     "partnerIds": [],
     "legalName": "Excellent Team",
-    "contactName": null,
-    "contactTitle": null,
+    "contactName": "Bas de Bruin",
+    "contactTitle": "Owner",
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "Admiraliteitskade 77 J",
+      "city": "Rotterdam",
       "region": null,
-      "postalCode": null,
+      "postalCode": "3063 EE",
       "country": "Netherlands",
       "countryCode": "NL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "KvK (Dutch Business Register)",
+        "jurisdiction": "Netherlands",
+        "kind": "domestic",
+        "id": "69671435",
+        "name": "Excellent Team",
+        "companyType": "Eenmanszaak",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Admiraliteitskade 77 J, 3063 EE Rotterdam",
+        "url": "https://www.kvk.nl/en/search/?source=all&q=69671435&start=0&site=kvk2014"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://excellent-team.nl/forums"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/company/excellent-team/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/bas-de-bruin-babid/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.kvk.nl/en/search/?source=all&q=69671435",
+        "id": "69671435",
+        "label": "KvK 69671435"
       }
     ],
     "locationFlag": null,
-    "notes": "Country from the .nl domain and site content. An inactive Amsterdam registration named “Excellent Team” (KvK 34121817) exists but isn’t confirmed as this company.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "notes": "Sole proprietorship (eenmanszaak) registered with KvK as 69671435, main branch 000038008769. Its registered activity is developing and maintaining software for the monday.com platform. Other trade names: BA, Bid Management, Excellent Bid. An unrelated, inactive Amsterdam registration named “Excellent Team” (KvK 34121817) also exists.",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000024,
@@ -11117,7 +11144,7 @@
     "locationFlag": null,
     "notes": "Individual developer; country from the .nl email domain (leukenaardig.nl).",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 100000013,
@@ -13446,25 +13473,44 @@
     "contactTitle": null,
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
+      "street": "Van der Hoevenplein 334",
+      "city": "Rotterdam",
       "region": null,
-      "postalCode": null,
+      "postalCode": "3072 MK",
       "country": "Netherlands",
       "countryCode": "NL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "KvK (Dutch Business Register)",
+        "jurisdiction": "Netherlands",
+        "kind": "domestic",
+        "id": "56900406",
+        "name": "Webstablish",
+        "companyType": "Eenmanszaak",
+        "status": "Registered",
+        "registeredAgent": null,
+        "registeredAddress": "Van der Hoevenplein 334, 3072 MK Rotterdam",
+        "url": "https://www.kvk.nl/en/search/?source=all&q=56900406&start=0&site=kvk2014"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://webstablish.nl/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.kvk.nl/en/search/?source=all&q=56900406&start=0&site=kvk2014",
+        "id": "56900406",
+        "label": "KvK 56900406"
       }
     ],
     "locationFlag": null,
-    "notes": "Country from the .nl domain.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Sole proprietorship (eenmanszaak) registered with KvK as 56900406; the address is from KvK.",
+    "lastVerified": "2026-10-08",
+    "registrationsCheckedAt": "2026-10-08"
   },
   {
     "vendorId": 10000178,
