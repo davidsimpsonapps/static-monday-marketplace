@@ -206,9 +206,12 @@ function collectRemovals(base, tip) {
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
+// An episode's `id` is the app's id, shared by all of the app's episodes - so
+// an episode is identified by app, direction and start.
 function collectAnomalies(base, tip) {
-  const before = new Set((readJsonAt(base, ANOMALIES_FILE)?.episodes || []).map((e) => e.id));
-  return readJsonAt(tip, ANOMALIES_FILE).episodes.filter((e) => !before.has(e.id));
+  const key = (e) => `${e.app_id}:${e.direction}:${e.startDate}`;
+  const before = new Set((readJsonAt(base, ANOMALIES_FILE)?.episodes || []).map(key));
+  return readJsonAt(tip, ANOMALIES_FILE).episodes.filter((e) => !before.has(key(e)));
 }
 
 function parseIncidents(content) {
