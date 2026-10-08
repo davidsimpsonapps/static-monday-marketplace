@@ -16,6 +16,8 @@
 //   - Install anomalies   new episodes in anomalies.json
 //   - Outages             monday.com healthchecks that went unhealthy
 //   - Slowdowns           decreased-performance periods longer than 15 minutes
+//   - monday incidents    incidents on monday.com's own status page
+//                         (status.monday.com) with updates in the window
 //   - Incidents           incidents added to / resolved in src/status/incidents.njk
 //   - Developer docs      changes to developer-docs/ (see
 //                         scripts/crawl-developer-docs.js) - the one thing
@@ -76,6 +78,10 @@ const STATUS_HISTORY_URL = "https://status.getgorilla.app/api/healthchecks/histo
 // Only monday.com's own infrastructure - the same filter /status/ uses.
 const STATUS_HEALTHCHECK_PREFIX = "monday-";
 const MIN_DEGRADED_MINUTES = 15;
+// monday.com's official status page (Atlassian Statuspage) - the last 50
+// incidents with all their updates.
+const MONDAY_INCIDENTS_URL = "https://status.monday.com/api/v2/incidents.json";
+const MAX_UPDATE_CHARS = 400;
 
 // Commit message of the daily data update in .github/workflows/historic_installs.yml
 const DATA_UPDATE_COMMIT = "^Auto-update install data";
@@ -290,6 +296,44 @@ async function collectStatusPeriods(windowStart, windowEnd) {
     }));
 }
 
+// Incidents on status.monday.com with an update during the window, as they
+// stood at the end of the window (so past days can be re-run).
+async function collectMondayIncidents(windowStart, windowEnd) {
+  const response = await fetch(MONDAY_INCIDENTS_URL);
+  if (!response.ok) throw new Error(`monday.com status page responded with ${response.status}`);
+  const stamp = (time) => `${new Date(time).toISOString().slice(0, 16).replace("T", " ")} UTC`;
+
+  return ((await response.json()).incidents || [])
+    .map((incident) => {
+      const updates = incident.incident_updates
+        .filter((u) => new Date(u.display_at) <= windowEnd)
+        .sort((a, b) => new Date(a.display_at) - new Date(b.display_at));
+      return { incident, updates };
+    })
+    .filter(({ updates }) => updates.some((u) => new Date(u.display_at) > windowStart))
+    .map(({ incident, updates }) => {
+      const affected = new Set();
+      for (const u of updates) {
+        for (const c of u.affected_components || []) if (c.new_status !== "operational") affected.add(c.name);
+      }
+      const latest = updates[updates.length - 1];
+      return {
+        title: incident.name,
+        impact: incident.impact,
+        status: latest.status,
+        started: stamp(incident.started_at || incident.created_at),
+        resolved: latest.status === "resolved" ? stamp(latest.display_at) : null,
+        affectedComponents: [...affected].sort(),
+        updates: updates.map((u) => ({
+          time: stamp(u.display_at),
+          status: u.status,
+          text: stripHtml(u.body).slice(0, MAX_UPDATE_CHARS),
+        })),
+        url: incident.shortlink,
+      };
+    });
+}
+
 // Healthchecks of one service that failed together are one event for the
 // reader ("US: Board API, Storage API were unhealthy 02:12-02:13"), so
 // overlapping periods of the same service and status are merged.
@@ -383,7 +427,7 @@ You receive JSON with the day's facts, grouped by topic. Every fact in it has al
 Write exactly one article for each topic that has facts in the input, and none for topics without facts:
 - "developer-docs" (docsChanges): git diffs of monday.com's developer documentation (developer.monday.com), crawled as Markdown once a day. Only report changes that matter to someone building on the platform: new or removed API fields, queries, mutations, arguments, limits, deprecations, new features or guides, changed behavior, changed requirements for marketplace apps. Ignore typo and grammar fixes, rewording that doesn't change meaning, formatting, link or image changes, navigation, crawl noise and pages that aren't about building on the platform. Be specific: name the field, query or limit that changed, using Markdown code spans for API names, and link the docs page. Some diffs are omitted to keep the request small; for those pages, only report that a page was added or removed. If no change is worth reporting, write no developer-docs article at all.
 - "incidents" (incidents): entries from the site's list of monday.com platform problems that app developers ran into. "added" means newly reported, "resolved" means marked as fixed, "added-resolved" means recorded and resolved at the same time. Explain what is (or was) broken and who is affected; for resolved ones, how it was resolved. Link to links.incidents.
-- "platform-status" (outages, slowdowns): outages are monday.com infrastructure healthchecks that were unhealthy (failing); slowdowns are periods of decreased performance longer than 15 minutes. Give the time window in UTC, the region and the affected checks in plain words. Link to links.serviceStatus or links.infrastructure.
+- "platform-status" (mondayIncidents, outages, slowdowns): mondayIncidents are incidents monday.com itself posted on its official status page, with their updates and the components (by region) that were degraded; lead with these, say what was affected, when (UTC) and whether it is resolved, and link each one to its url. Outages are monday.com infrastructure healthchecks that were unhealthy (failing); slowdowns are periods of decreased performance longer than 15 minutes. Give the time window in UTC, the region and the affected checks in plain words. Link to links.serviceStatus or links.infrastructure.
 - "new-apps" (newApps): apps that appeared in the marketplace. Say in a sentence or two what each app does and who it is for, based on its description but without marketing language, superlatives or feature lists. Link the app name to its url on first mention.
 - "install-anomalies" (installAnomalies): apps whose weekly install rate doubled or halved. Give the before/after weekly installs. Link the app name.
 - "removed-apps" (removedApps): apps that were removed from, or archived in, the marketplace. Name them all, without commentary on individual apps, and don't link them. This article is short: the headline gives the number, the lede or a single paragraph lists the names.
@@ -424,6 +468,7 @@ function articleInput(data, windowStart) {
       weeklyInstallsBefore: e.beforeWeeklyInstalls,
       weeklyInstallsAfter: e.afterWeeklyInstalls,
     })),
+    mondayIncidents: data.mondayIncidents,
     outages: data.outages.map(describePeriod),
     slowdowns: data.slowdowns.map(describePeriod),
     incidents: data.incidents.map(({ change, title, start, end, description, resolution }) => ({
@@ -448,6 +493,7 @@ function allowedUrls(input) {
   return new Set([
     ...input.newApps.map((a) => a.url),
     ...input.installAnomalies.map((a) => a.url),
+    ...input.mondayIncidents.map((i) => i.url),
     ...input.docsChanges.filter((d) => d.status !== "removed").map((d) => d.url),
     ...Object.values(input.links),
   ]);
@@ -464,7 +510,7 @@ function topicsWithFacts(input) {
   const has = {
     "developer-docs": input.docsChanges.length > 0,
     incidents: input.incidents.length > 0,
-    "platform-status": input.outages.length + input.slowdowns.length > 0,
+    "platform-status": input.mondayIncidents.length + input.outages.length + input.slowdowns.length > 0,
     "new-apps": input.newApps.length > 0,
     "install-anomalies": input.installAnomalies.length > 0,
     "removed-apps": input.removedApps.length > 0,
@@ -561,11 +607,16 @@ function listArticles(input, reportDate) {
     articles.push(article("incidents", input.incidents.map((i) => `- **${i.change}: ${md(i.title)}**. ${i.description}`).join("\n")));
   }
   const periods = [...input.outages.map((p) => ({ ...p, kind: "outage" })), ...input.slowdowns.map((p) => ({ ...p, kind: "slowdown" }))];
-  if (periods.length) {
+  if (input.mondayIncidents.length || periods.length) {
     articles.push(
       article(
         "platform-status",
-        periods.map((p) => `- ${p.kind}: ${md(p.service)}, ${p.start} – ${p.end}: ${p.checks.map(md).join(", ")}`).join("\n"),
+        [
+          ...input.mondayIncidents.map(
+            (i) => `- [${md(i.title)}](${i.url}): ${i.status}, ${i.started} – ${i.resolved || "ongoing"}`,
+          ),
+          ...periods.map((p) => `- ${p.kind}: ${md(p.service)}, ${p.start} – ${p.end}: ${p.checks.map(md).join(", ")}`),
+        ].join("\n"),
       ),
     );
   }
@@ -617,6 +668,7 @@ async function main() {
     newApps: collectNewApps(base, tip),
     removals: collectRemovals(base, tip),
     anomalies: collectAnomalies(base, tip),
+    mondayIncidents: await collectMondayIncidents(windowStart, windowEnd),
     outages: groupPeriods(periods.filter((p) => p.status === "unhealthy")),
     slowdowns: groupPeriods(
       periods.filter((p) => p.status === "decreased_performance" && p.minutes > MIN_DEGRADED_MINUTES),
@@ -627,7 +679,7 @@ async function main() {
 
   console.log(
     `Found ${data.newApps.length} new apps, ${data.removals.length} removals, ${data.anomalies.length} anomalies, ` +
-      `${data.outages.length} outages, ${data.slowdowns.length} slowdowns, ${data.incidents.length} incident updates, ` +
+      `${data.mondayIncidents.length} monday incidents, ${data.outages.length} outages, ${data.slowdowns.length} slowdowns, ${data.incidents.length} incident updates, ` +
       `${data.docsChanges.length} changed docs pages.`,
   );
 
