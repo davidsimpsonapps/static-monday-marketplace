@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-06T13:36:19.000Z
+updatedAt: 2026-10-08T17:25:18.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -30,7 +30,7 @@ A custom OAuth app is the right choice when you need to:
 * **Revoke cleanly** — Remove one user, or rotate the Client Secret to cut off everyone, without disrupting unrelated integrations
 * **Keep a separate audit trail** — Authorized users and activity appear under *your* app in the developer platform
 
-This path is also appropriate while you're **developing** a private or org-internal MCP setup. Publicly available integrations should use [dynamic client registration](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration) instead.
+This path is also appropriate while you're **developing** a private or org-internal MCP setup. To let other monday.com accounts connect your client, use [dynamic client registration](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration). The customer's admin approves the additional connection and its redirect URIs through [dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors).
 
 ***
 

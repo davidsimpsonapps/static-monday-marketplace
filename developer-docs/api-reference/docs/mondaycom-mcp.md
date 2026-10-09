@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:31:59.000Z
+updatedAt: 2026-10-08T17:25:18.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -32,7 +32,11 @@ Connect using the hosted server. No local setup is required:
   </Card>
 
   <Card title="Integrate with the monday MCP server" href="https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp">
-    Choose an auth path — API token, OAuth app, or dynamic client registration for public integrations.
+    Choose an auth path — API token, your own OAuth app, or dynamic client registration.
+  </Card>
+
+  <Card title="Dynamic connectors" href="https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors">
+    Admins approve additional MCP connections and redirect URIs beyond the pre-approved third-party agents.
   </Card>
 
   <Card title="Platform MCP tools" href="https://developer.monday.com/api-reference/docs/platform-mcp-tools">

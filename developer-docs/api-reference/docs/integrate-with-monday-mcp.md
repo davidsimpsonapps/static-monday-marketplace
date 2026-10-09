@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-06T13:36:19.000Z
+updatedAt: 2026-10-08T17:25:18.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -30,11 +30,14 @@ The hosted MCP server is the recommended way to connect to monday.com. It requir
 
 How you authenticate depends on what you're building:
 
-| Use case                                                                                             | Guide                                                                                 | Registration required               |
-| :--------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ | :---------------------------------- |
-| Personal use and testing                                                                             | [Authenticate with an API token](https://developer.monday.com/api-reference/docs/mcp-api-token)                                   | No                                  |
-| Private / org-controlled access (who connects, which client, and **which scopes** limit MCP actions) | [Control MCP access with your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app)   | No                                  |
-| **Publicly available integration**                                                                   | [Make your integration publicly available (DCR)](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration) | **Yes — register your integration** |
+| Use case                                                                                             | Guide                                                                               | Before customers can connect                                                                                                 |
+| :--------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
+| Personal use and testing                                                                             | [Authenticate with an API token](https://developer.monday.com/api-reference/docs/mcp-api-token)                                 | Nothing else. No admin approval.                                                                                             |
+| Private / org-controlled access (who connects, which client, and **which scopes** limit MCP actions) | [Control MCP access with your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app) | You issue your own client credentials.                                                                                       |
+| Pre-approved third-party agents                                                                      | [Compatible MCP clients](https://developer.monday.com/api-reference/docs/compatible-mcp-clients)                                | Enabled by the hosted MCP permission. Usual connection flow.                                                                 |
+| Additional MCP client for other monday.com accounts                                                  | [Dynamic client registration](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration)                  | The customer's admin approves the connection and its redirect URIs through [dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors). |
+
+The hosted MCP permission covers the pre-approved third-party agents. Dynamic connectors let an account admin approve any additional connection and its redirect URIs.
 
 ***
 
@@ -95,6 +98,10 @@ For the full security architecture — tenant isolation, AI-layer risks, and OWA
 3. Verify the access token hasn't expired
 4. If your client config uses `mcp-remote` with an `/sse` URL, replace it with a direct Streamable HTTP config pointing at `https://mcp.monday.com/mcp`
 
+**Additional connection**
+
+A DCR client registers, then the user requests admin approval for the connection and its redirect URIs. See [Dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors).
+
 ***
 
 **Related resources:**
@@ -102,6 +109,7 @@ For the full security architecture — tenant isolation, AI-layer risks, and OWA
 * [Authenticate with an API token](https://developer.monday.com/api-reference/docs/mcp-api-token)
 * [Control MCP access with your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app)
 * [Make your integration publicly available (DCR)](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration)
+* [Dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors)
 * [Compatible MCP clients](https://developer.monday.com/api-reference/docs/compatible-mcp-clients)
 * [Platform MCP tools reference](https://developer.monday.com/api-reference/docs/platform-mcp-tools)
 * [MCP security overview](https://developer.monday.com/api-reference/docs/monday-mcp-security-overview)

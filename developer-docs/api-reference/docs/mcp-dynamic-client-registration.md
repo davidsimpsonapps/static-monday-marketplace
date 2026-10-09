@@ -1,26 +1,24 @@
 ---
-updatedAt: 2026-09-06T08:31:59.000Z
+updatedAt: 2026-10-08T17:25:18.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
 
 # Make your MCP integration publicly available
 
-Register your MCP integration with monday.com and authenticate publicly available clients with OAuth 2.0 dynamic client registration (DCR)
+Let monday.com customers connect your MCP client with OAuth 2.0 dynamic client registration. Admins approve additional connections and redirect URIs.
 
-A personal API token or an OAuth app is enough for personal use, internal tools, and testing. To distribute your MCP integration publicly — as a product feature, marketplace listing, or partner integration available to monday.com users — you must register it with monday.com and authenticate through dynamic client registration (DCR).
+A personal API token or an OAuth app is enough for personal use, internal tools, and testing. To let other monday.com accounts connect your MCP client — as a product feature, a custom integration, or a partner integration — authenticate through dynamic client registration (DCR).
+
+Any developer can use this path. Customers add your connection through [dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors): their account admin approves the connection and its redirect URIs before the connection is created.
+
+The **hosted MCP permission** enables a separate set of pre-approved third-party agents, including Claude, ChatGPT, and the other [compatible MCP clients](https://developer.monday.com/api-reference/docs/compatible-mcp-clients). Those agents use the standard authorization screen.
 
 <Callout icon="🚧" theme="warn">
-  **Registration is required for public availability.** Skip this guide if you're only building for yourself or your organization — use an [API token](https://developer.monday.com/api-reference/docs/mcp-api-token) or [your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app) instead.
+  **Building only for yourself or your organization?** Use an [API token](https://developer.monday.com/api-reference/docs/mcp-api-token) or [your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app). Those paths do not use dynamic connector approval.
 </Callout>
 
-# Step 1: Register your integration
-
-Submit your integration for review using the **[MCP integration registration form](https://forms.monday.com/forms/c2aedf208f6c156932392e3a786d4d41?r=use1)**. You'll be asked to provide details about your company, your integration, and how it uses the monday MCP server.
-
-Once approved, your integration can be made available to monday.com users, and may be featured in the [compatible MCP clients](https://developer.monday.com/api-reference/docs/compatible-mcp-clients) list.
-
-# Step 2: Authenticate with dynamic client registration (DCR)
+# Step 1: Authenticate with dynamic client registration (DCR)
 
 Publicly available MCP clients don't use a pre-created monday.com app. Instead, they authenticate through **[OAuth 2.0 Dynamic Client Registration](https://datatracker.ietf.org/doc/html/rfc7591)**, as defined by the [MCP authorization specification](https://modelcontextprotocol.io/specification/latest/basic/authorization): the client registers itself with the MCP server's registration endpoint, then runs the standard authorization code + PKCE flow.
 
@@ -36,9 +34,13 @@ The server publishes its OAuth metadata through standard discovery documents, so
 
 If you're building on an MCP SDK or framework that follows the MCP authorization specification, no additional OAuth setup is required — point your client at `https://mcp.monday.com/mcp` and the discovery, registration, and authorization flow happens automatically.
 
-# Step 3: User authorization (OAuth consent)
+# Step 2: User authorization (OAuth consent)
 
-When a user connects your MCP client to monday.com, your client opens the monday.com OAuth authorization screen. The user reviews the connection and clicks **Authorize** to grant access.
+When a user connects your MCP client to monday.com, your client opens the monday.com OAuth authorization screen.
+
+For an additional connection, the screen shows **Admin approval required** instead of completing the connection. The user requests approval, and an account admin approves the connector and its redirect URIs for that account. Nothing is connected while the request is pending. After approval, the user starts the connection again and selects **Authorize**. Follow [Dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors) for the approval steps, admin review, and early-access limitations.
+
+When the user is connecting a pre-approved third-party agent, or an admin has already approved the connector, the user reviews the connection and clicks **Authorize** to grant access.
 
 The consent screen shows your client name, a short description of the connection, and that the client inherits the user's existing monday.com permissions.
 
@@ -60,6 +62,7 @@ All MCP tool calls then run as that user, scoped to their monday.com permissions
 
 **Related resources:**
 
+* [Dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors)
 * [Integrate with the monday MCP server](https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp)
 * [Authenticate with an API token](https://developer.monday.com/api-reference/docs/mcp-api-token)
 * [Control MCP access with your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app)

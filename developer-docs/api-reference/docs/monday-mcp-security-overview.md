@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:31:59.000Z
+updatedAt: 2026-10-08T17:25:18.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -45,6 +45,12 @@ Data is accessible only in the same manner as when a user interacts with monday.
 * Access tokens are issued and managed through monday.com's standard OAuth flow.
 * Customers and AI clients (for example, Copilot Studio or Cursor) are responsible for secure token storage, refresh handling, and revocation, in accordance with their own security policies.
 * **The MCP Server does not store or log customer OAuth tokens.**
+
+## Account approval for additional connections
+
+The hosted MCP permission enables a set of pre-approved third-party agents. Dynamic connectors let an account admin approve additional connections and their redirect URIs before monday.com issues tokens. Approval allows that connection for the account. It does not grant a user access to the hosted MCP server, and it does not expand their monday.com permissions. See [Dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors).
+
+During early access, revoking a dynamic connector approval takes effect at the next token refresh. An existing access token can keep working until it expires, for up to 24 hours after revocation.
 
 ***
 
@@ -131,7 +137,7 @@ Organizations connecting to the MCP Server directly — rather than through a na
 
 1. **Secure OAuth tokens.** Apply appropriate secret management and lifecycle controls (storage, rotation, revocation).
 2. **Implement AI safeguards.** Enforce prompt validation, output filtering, and guardrails within the AI client or application layer.
-3. **Control access.** Restrict which users and systems are permitted to connect to the MCP endpoint.
+3. **Control access.** Restrict which users and systems are permitted to connect to the MCP endpoint. Review additional connections and their redirect URIs under **monday administration → Connectors → Dynamic Connectors** before approving them.
 4. **Apply least privilege.** Use monday.com's permission model to limit access to only necessary resources — for example, restrict MCP usage to specific workspaces or boards.
 5. **Monitor activity.** Maintain logging and monitoring within the AI systems that interact with MCP.
 

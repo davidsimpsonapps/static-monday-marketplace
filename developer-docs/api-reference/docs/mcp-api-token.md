@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:32:11.000Z
+updatedAt: 2026-10-08T12:51:08.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -57,4 +57,5 @@ Personal tokens mirror your UI permissions, so the MCP server can access everyth
 * [Integrate with the monday MCP server](https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp)
 * [Control MCP access with your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app)
 * [Make your integration publicly available (DCR)](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration)
+* [Dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors)
 * [Authentication](https://developer.monday.com/api-reference/docs/authentication)

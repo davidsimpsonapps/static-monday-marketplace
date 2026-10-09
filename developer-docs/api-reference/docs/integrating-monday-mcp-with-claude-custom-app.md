@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-06T13:36:19.000Z
+updatedAt: 2026-10-08T17:25:18.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -32,7 +32,7 @@ A custom OAuth app is the right choice when you need to:
   **Tradeoff:** Each user adds a custom connector and enters credentials. You're responsible for storing and rotating the Client Secret securely.
 </Callout>
 
-This path is also appropriate while you're **developing** a private or org-internal MCP setup. Publicly available integrations should use [dynamic client registration](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration) instead.
+This path is also appropriate while you're **developing** a private or org-internal MCP setup. To let other monday.com accounts connect your client, use [dynamic client registration](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration). The customer's admin approves the additional connection and its redirect URIs through [dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors).
 
 ***
 

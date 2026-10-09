@@ -1,12 +1,12 @@
 ---
-updatedAt: 2026-09-03T12:37:52.000Z
+updatedAt: 2026-10-08T17:25:18.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
 
 # Compatible MCP clients
 
-Connect monday.com to AI assistants and tools through the hosted MCP server — and learn how to get your own MCP client registered
+Connect monday.com to pre-approved third-party agents through the hosted MCP permission, or approve additional clients as dynamic connectors
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open standard that enables AI assistants to securely connect to external data sources and tools. The monday.com hosted MCP server lets you interact with your monday.com account through natural language — create items, query boards, build dashboards, and more — from your preferred AI platform.
 
@@ -22,7 +22,7 @@ The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open 
 
 # Featured integrations
 
-The monday MCP server works with these leading platforms. If your tool is listed here, follow the corresponding setup guide — no additional configuration is required.
+The hosted MCP permission enables these pre-approved third-party agents. If your tool is listed here, follow the corresponding setup guide.
 
 | Client                       | Description                                                   | Setup                                                                                                                                                                              |
 | :--------------------------- | :------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,18 +55,20 @@ Most MCP-compatible coding tools (Cursor, Claude Code, VS Code, Windsurf, etc.) 
 
 For authentication options, API version control, and advanced configuration, see [Integrate with the monday MCP server](https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp).
 
+Any other coding tool connects through [dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors). The account admin approves the connection and its redirect URIs before the connection is created.
+
 ***
 
 # Don't see your client?
 
 ## For end users
 
-If you're using an MCP client that isn't listed above, check with the app developer to see if they support the monday MCP server. They may need to register their integration with monday.com before it can connect on your behalf.
+You can connect an MCP client that is not listed above. Start the connection from the client. Your account admin approves the additional connection and its redirect URIs under **monday administration → Connectors → Dynamic Connectors**. See [Dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors).
 
 ## For developers and partners
 
-Building an MCP client or embedding the monday MCP server in your product? You can develop and test against the hosted MCP server right away using an [API token](https://developer.monday.com/api-reference/docs/mcp-api-token) or [your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app).
+You can develop and test against the hosted MCP server right away using an [API token](https://developer.monday.com/api-reference/docs/mcp-api-token) or [your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app).
 
-**To make your integration publicly available to monday.com users, you must register it** by submitting the [MCP integration registration form](https://forms.monday.com/forms/c2aedf208f6c156932392e3a786d4d41?r=use1). See [Make your MCP integration publicly available](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration) for the full walkthrough.
+To let other monday.com accounts connect your client, authenticate with [dynamic client registration](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration). Each customer's admin approves the connection and its redirect URIs through [dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors). The clients listed above are the pre-approved third-party agents enabled by the hosted MCP permission.
 
 > 📘 This list is updated periodically as new MCP clients are verified and approved. Company logos and names are trademarks of their respective owners.

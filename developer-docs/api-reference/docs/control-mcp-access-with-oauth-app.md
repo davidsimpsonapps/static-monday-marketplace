@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-06T13:36:19.000Z
+updatedAt: 2026-10-08T17:25:18.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -12,7 +12,7 @@ By default, connecting an AI assistant (like Claude) to monday.com uses our host
 
 If your organization needs tighter control — for example, allowing only Claude (not other AI tools), limiting access to a specific group of users, or restricting what the MCP connection is allowed to do — you can replace the hosted connector with your own OAuth app. This gives you the same MCP functionality, but with control over who connects, what connects, and which [permission scopes](https://developer.monday.com/apps/docs/oauth#set-up-permission-scopes) apply to the connection.
 
-This is also the right path while you're **developing** a user-facing MCP integration or distributing it privately inside your organization. Publicly available integrations should use [dynamic client registration](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration) instead.
+This is also the right path while you're **developing** a user-facing MCP integration or distributing it privately inside your organization. To let other monday.com accounts connect your client, use [dynamic client registration](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration). The customer's admin approves the additional connection and its redirect URIs through [dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors).
 
 This guide walks you through the setup. For client-specific walkthroughs, see:
 
@@ -150,6 +150,7 @@ You can use both across your organization — for example, hosted for general wo
 * [Integrate with the monday MCP server](https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp)
 * [Authenticate with an API token](https://developer.monday.com/api-reference/docs/mcp-api-token)
 * [Make your integration publicly available (DCR)](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration)
+* [Dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors)
 * [Compatible MCP clients](https://developer.monday.com/api-reference/docs/compatible-mcp-clients)
 * [MCP security overview](https://developer.monday.com/api-reference/docs/monday-mcp-security-overview)
 * [OAuth documentation](https://developer.monday.com/apps/docs/oauth)
