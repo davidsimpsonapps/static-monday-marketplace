@@ -30,11 +30,11 @@
 //
 // The report runs right after the daily data update (see
 // .github/workflows/daily-report.yml) and covers everything since the
-// previous data update - roughly 24 hours, but without gaps or overlaps
-// between consecutive reports when the update runs late. "What changed" for
-// repo files is answered with git: each file at the previous data update
-// commit is compared against HEAD (or the last commit before --now), so the
-// checkout needs a few days of history. Status data comes from the same
+// previous data update until the latest one - roughly 24 hours, but without
+// gaps or overlaps between consecutive reports when the update or the report
+// runs late. "What changed" for repo files is answered with git: each file at
+// the previous data update commit is compared against the latest one (the
+// last before --now), so the checkout needs a few days of history. Status data comes from the same
 // healthcheck API that powers /status/, for the same time window.
 //
 // Community news comes from a Slack channel where we post screenshots of
@@ -178,26 +178,27 @@ function formatTime(date) {
 
 // ---- data collection ----
 
-// The data update commit before the most recent one, i.e. where the previous
-// report left off.
-function previousDataUpdate(tip) {
-  const [, previous] = git(["log", "-2", "--format=%H %cI", `--grep=${DATA_UPDATE_COMMIT}`, tip])
+// The window between the last two data update commits before `time`. Both
+// ends are data updates, not the time of the run, so a report that runs late
+// (workflow_run can lag by hours) doesn't pick up commits - like the docs
+// crawl - that the next report covers again.
+function dataUpdateWindow(time) {
+  const [latest, previous] = git([
+    "log",
+    "-2",
+    "--format=%H %cI",
+    `--grep=${DATA_UPDATE_COMMIT}`,
+    `--before=${time.toISOString()}`,
+    "HEAD",
+  ])
     .trim()
     .split("\n");
   if (!previous) {
-    throw new Error("Couldn't find the previous data update commit - the checkout needs more history.");
+    throw new Error("Couldn't find the last two data update commits - the checkout needs more history.");
   }
-  const [base, date] = previous.split(" ");
-  return { base, windowStart: new Date(date) };
-}
-
-// The last commit before `time`.
-function commitBefore(time) {
-  const commit = git(["rev-list", "-1", `--before=${time.toISOString()}`, "HEAD"]).trim();
-  if (!commit) {
-    throw new Error(`No commit found before ${time.toISOString()} - the checkout needs more history.`);
-  }
-  return commit;
+  const [tip, end] = latest.split(" ");
+  const [base, start] = previous.split(" ");
+  return { base, tip, windowStart: new Date(start), windowEnd: new Date(end) };
 }
 
 // Apps usually appear in the data without categories days before they're
@@ -900,11 +901,10 @@ async function main() {
   const args = process.argv.slice(2);
   const dryRun = args.includes("--dry-run");
   const nowArg = args.find((a) => a.startsWith("--now="));
-  const windowEnd = nowArg ? new Date(nowArg.slice("--now=".length)) : new Date();
+  const now = nowArg ? new Date(nowArg.slice("--now=".length)) : new Date();
+  const { base, tip, windowStart, windowEnd } = dataUpdateWindow(now);
   const reportDate = windowEnd.toISOString().slice(0, 10);
 
-  const tip = commitBefore(windowEnd);
-  const { base, windowStart } = previousDataUpdate(tip);
   console.log(
     `Reporting on ${windowStart.toISOString()} - ${windowEnd.toISOString()} ` +
       `(changes ${base.slice(0, 11)}..${tip.slice(0, 11)}).`,
