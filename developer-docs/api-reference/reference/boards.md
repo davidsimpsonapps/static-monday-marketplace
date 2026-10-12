@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-02T13:46:41.000Z
+updatedAt: 2026-10-12T09:03:00.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -1552,6 +1552,373 @@ mutation {
 
       <td>
         When `true`, enables cross-product collaboration permissions for the board. **Only available in versions `2026-07` and later.**
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+## Update teams board role
+
+Updates the [board role](https://support.monday.com/hc/en-us/articles/115005315809-Board-permissions) for one or more teams that are already subscribed to the board. Returns [`UpdateTeamsBoardRoleResponse`](https://developer.monday.com/api-reference/reference/boards-other-types#updateteamsboardroleresponse).
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions `2026-10` and later**
+</Callout>
+
+<Callout icon="💡" theme="okay">
+  Teams must already be subscribed to the board — this mutation changes a team's role, it doesn't grant board access. Use [`add_teams_to_board`](https://developer.monday.com/api-reference/reference/teams#add-teams-to-board) first to subscribe a team.
+</Callout>
+
+```graphql GraphQL
+mutation {
+  update_teams_board_role(
+    board_id: 1234567890
+    team_ids: [11111111, 22222222]
+    role_name: editor
+  ) {
+    successful_team_ids
+    failed_teams {
+      team_id
+      error
+    }
+  }
+}
+```
+```javascript JavaScript
+import { ApiClient } from "@mondaydotcomorg/api";
+const mondayApiClient = new ApiClient({ token: myToken });
+const query = `mutation ($board: ID!, $teams: [ID!]!, $role: BoardBasicRoleName!) { update_teams_board_role(board_id: $board, team_ids: $teams, role_name: $role) { successful_team_ids failed_teams { team_id error } }}`
+const variables = {
+  board: 1234567890,
+  teams: ["11111111", "22222222"],
+  role: "editor"
+}
+const response = await mondayApiClient.request(query, variables);
+```
+
+### Arguments
+
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Argument
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Enum Values
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        board_id
+      </td>
+
+      <td>
+        `ID!`
+      </td>
+
+      <td>
+        The board's unique identifier.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        role_name
+      </td>
+
+      <td>
+        `BoardBasicRoleName!`
+      </td>
+
+      <td>
+        The role to assign to the teams. `assigned_contributor` is not yet supported. `member` is agent-user only, so it is not valid for a team.
+      </td>
+
+      <td>
+        `contributor` (can edit content)  
+        `editor` (can edit content and structure)  
+        `viewer` (read-only)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        team_ids
+      </td>
+
+      <td>
+        `[ID!]!`
+      </td>
+
+      <td>
+        The IDs of the teams to update. Teams not already subscribed to the board are returned in `failed_teams` rather than being granted access. Limited to 50 teams per call.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+### Fields
+
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Enum Values
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        successful_team_ids
+      </td>
+
+      <td>
+        `[ID!]!`
+      </td>
+
+      <td>
+        The IDs of the teams whose board role was successfully updated.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        failed_teams
+      </td>
+
+      <td>
+        [`[FailedTeamBoardRoleUpdate!]!`](https://developer.monday.com/api-reference/reference/boards-other-types#failedteamboardroleupdate)
+      </td>
+
+      <td>
+        The teams whose board role could not be updated, with the reason for each failure.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+## Update users board role
+
+Updates the [board role](https://support.monday.com/hc/en-us/articles/115005315809-Board-permissions) for one or more users that are already subscribed to the board. Returns [`UpdateUsersBoardRoleResponse`](https://developer.monday.com/api-reference/reference/boards-other-types#updateusersboardroleresponse).
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions `2026-10` and later**
+</Callout>
+
+<Callout icon="💡" theme="okay">
+  Users must already be subscribed to the board — this mutation changes a user's role, it doesn't grant board access. Use [`add_users_to_board`](https://developer.monday.com/api-reference/reference/users#add-users-to-board) first to subscribe a user.
+</Callout>
+
+```graphql GraphQL
+mutation {
+  update_users_board_role(
+    board_id: 1234567890
+    user_ids: [11111111, 22222222]
+    role_name: editor
+  ) {
+    successful_user_ids
+    failed_users {
+      user_id
+      error
+    }
+  }
+}
+```
+```javascript JavaScript
+import { ApiClient } from "@mondaydotcomorg/api";
+const mondayApiClient = new ApiClient({ token: myToken });
+const query = `mutation ($board: ID!, $users: [ID!]!, $role: BoardBasicRoleName!) { update_users_board_role(board_id: $board, user_ids: $users, role_name: $role) { successful_user_ids failed_users { user_id error } }}`
+const variables = {
+  board: 1234567890,
+  users: ["11111111", "22222222"],
+  role: "editor"
+}
+const response = await mondayApiClient.request(query, variables);
+```
+
+### Arguments
+
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Argument
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Enum Values
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        board_id
+      </td>
+
+      <td>
+        `ID!`
+      </td>
+
+      <td>
+        The board's unique identifier.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        role_name
+      </td>
+
+      <td>
+        `BoardBasicRoleName!`
+      </td>
+
+      <td>
+        The role to assign to the users. `assigned_contributor` is not yet supported. `member` is the default board role and can only be set for agent users.
+      </td>
+
+      <td>
+        `contributor` (can edit content)  
+        `editor` (can edit content and structure)  
+        `viewer` (read-only)  
+        `member` (default board role; agent users only)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        user_ids
+      </td>
+
+      <td>
+        `[ID!]!`
+      </td>
+
+      <td>
+        The IDs of the users to update. Limited to 200 users per call.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+### Fields
+
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Enum Values
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        successful_user_ids
+      </td>
+
+      <td>
+        `[ID!]!`
+      </td>
+
+      <td>
+        The IDs of the users whose board role was successfully updated.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        failed_users
+      </td>
+
+      <td>
+        [`[FailedUserBoardRoleUpdate!]!`](https://developer.monday.com/api-reference/reference/boards-other-types#faileduserboardroleupdate)
+      </td>
+
+      <td>
+        The users whose board role could not be updated, with the reason for each failure.
       </td>
 
       <td>

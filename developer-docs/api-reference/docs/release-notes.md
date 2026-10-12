@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-02T12:59:57.000Z
+updatedAt: 2026-10-12T09:06:25.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -79,8 +79,10 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
   * [`use_template`](https://developer.monday.com/api-reference/reference/templates#use-template) installs a template as a background job and returns a `process_id` to poll with `template_installation_status` (see the [Templates](https://developer.monday.com/api-reference/reference/templates) reference)
 * **Boards:**
   * New [`change_board_kind`](https://developer.monday.com/api-reference/reference/boards#change-board-kind) mutation — changes a board's privacy kind (public, private, or shareable)
+  * New [`update_teams_board_role`](https://developer.monday.com/api-reference/reference/boards#update-teams-board-role) mutation — updates the board role for one or more teams already subscribed to a board. Returns [`UpdateTeamsBoardRoleResponse`](https://developer.monday.com/api-reference/reference/boards-other-types#updateteamsboardroleresponse)
+  * New [`update_users_board_role`](https://developer.monday.com/api-reference/reference/boards#update-users-board-role) mutation — updates the board role for one or more users already subscribed to a board. Returns [`UpdateUsersBoardRoleResponse`](https://developer.monday.com/api-reference/reference/boards-other-types#updateusersboardroleresponse)
   * New `board_automations` query and `delete_board_automation` mutation — list account or board automations with pagination and delete an automation
-  * New `member` value on `BoardBasicRoleName` — the default board role; can only be used for agent users
+  * New `member` value on `BoardBasicRoleName` — the default board role; can only be used for agent users. `update_teams_board_role` rejects this value
   * New `would_create_mls_rollup_cycle` query — checks whether connecting two items would create a multi-level board rollup cycle
 * **Board views:**
   * New [`duplicate_view`](https://developer.monday.com/api-reference/reference/board-views#duplicate-view) and [`restore_view`](https://developer.monday.com/api-reference/reference/board-views#restore-view) mutations on board views
@@ -345,7 +347,7 @@ This section covers API versions that are deprecated and no longer supported. Th
 ### Hotfixes
 
 * **October 22nd, 2024**: The `item_id` argument on the `pin_to_top` and `unpin_from_top` mutations has changed from type `Int` to `ID` and is no longer required. Read more [about the item\_id argument change](https://developer.monday.com/api-reference/changelog/hotfix-item_id-argument-changed-on-pin_to_top-and-unpin_from_top-mutations).
-* **November 6th, 2024**: We made version `2024-10`backward compatible to resolve parsing errors. Read more [about the GraphQL parsing error fix](https://developer.monday.com/api-reference/changelog/hot-fix-errors-with-graphql-parsing).
+* **November 6th, 2024**: We made version `2024-10`backward compatible to resolve parsing errors.
 * **November 19th, 2024**: Updates should be returned in reverse chronological order instead of chronological order. Read more [about update ordering](https://developer.monday.com/api-reference/changelog/hotfix-updates-returned-in-reverse-chronological-order).
 * **February 24th, 2025**: The `create_webhook` mutation now returns descriptive errors. Read more [about descriptive create\_webhook errors](https://developer.monday.com/api-reference/changelog/hotfix-updated-create_webhook-errors).
 * **February 27th, 2025:** We've introduced changes to the `subitems` query to help increase performance and return consistent results. Read more [about the subitems query changes](https://developer.monday.com/api-reference/changelog/hotfix-changes-to-subitems-queries).

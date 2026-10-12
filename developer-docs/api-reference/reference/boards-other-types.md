@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-02T13:31:36.000Z
+updatedAt: 2026-10-12T09:03:00.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -108,6 +108,274 @@ An object containing the result of setting a board's permissions via the API.
 
       <td>
         Any actions that failed during the permission update process.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+***
+
+# UpdateTeamsBoardRoleResponse
+
+An object containing the result of the [`update_teams_board_role`](https://developer.monday.com/api-reference/reference/boards#update-teams-board-role) mutation.
+
+**Only available in API versions `2026-10` and later**
+
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Enum Values
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        successful_team_ids
+      </td>
+
+      <td>
+        `[ID!]!`
+      </td>
+
+      <td>
+        The IDs of the teams whose board role was successfully updated.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        failed_teams
+      </td>
+
+      <td>
+        [`[FailedTeamBoardRoleUpdate!]!`](#failedteamboardroleupdate)
+      </td>
+
+      <td>
+        The teams whose board role could not be updated, with the reason for each failure.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+***
+
+# FailedTeamBoardRoleUpdate
+
+Represents a single team that failed to have its board role updated by [`update_teams_board_role`](https://developer.monday.com/api-reference/reference/boards#update-teams-board-role).
+
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Enum Values
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        team_id
+      </td>
+
+      <td>
+        `ID!`
+      </td>
+
+      <td>
+        The ID of the team that could not be updated.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        error
+      </td>
+
+      <td>
+        `String!`
+      </td>
+
+      <td>
+        The reason the update failed for this team (e.g., the team isn't subscribed to the board).
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+***
+
+# UpdateUsersBoardRoleResponse
+
+An object containing the result of the [`update_users_board_role`](https://developer.monday.com/api-reference/reference/boards#update-users-board-role) mutation.
+
+**Only available in API versions `2026-10` and later**
+
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Enum Values
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        successful_user_ids
+      </td>
+
+      <td>
+        `[ID!]!`
+      </td>
+
+      <td>
+        The IDs of the users whose board role was successfully updated.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        failed_users
+      </td>
+
+      <td>
+        [`[FailedUserBoardRoleUpdate!]!`](#faileduserboardroleupdate)
+      </td>
+
+      <td>
+        The users whose board role could not be updated, with the reason for each failure.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+***
+
+# FailedUserBoardRoleUpdate
+
+Represents a single user that failed to have its board role updated by [`update_users_board_role`](https://developer.monday.com/api-reference/reference/boards#update-users-board-role).
+
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Enum Values
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        user_id
+      </td>
+
+      <td>
+        `ID!`
+      </td>
+
+      <td>
+        The ID of the user that could not be updated.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        error
+      </td>
+
+      <td>
+        `String!`
+      </td>
+
+      <td>
+        The reason the update failed for this user.
       </td>
 
       <td>
