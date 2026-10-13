@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-12T09:06:25.000Z
+updatedAt: 2026-10-12T14:03:10.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -18,8 +18,19 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
   **Release candidate.** `2027-01` may still change before it becomes the current version on January 15, 2027.
 </Callout>
 
+### Breaking changes
+
+* **Activity logs:**
+  * `Board.activity_logs` returns a `BoardActivityLogsPage` (`logs` and `cursor`) instead of a list of `ActivityLogType`. Select the entries under `logs` and read `cursor` to fetch the next page
+  * The `page` argument is removed. Paginate with the new `cursor` argument instead
+  * The `from` and `to` arguments are now `String` (previously `ISO8601DateTime`). `from` can be at most 90 days ago, and requests for older data return a validation error
+  * The `column_ids` and `group_ids` arguments are now `[ID!]` (previously `[String]`)
+  * The `limit` argument no longer declares a schema default of `25`. It accepts 1–1000 and the documented default is still 25
+
 ### Non-breaking changes
 
+* **Activity logs:**
+  * New `event_types`, `correlation_ids`, `cursor`, and `search` arguments on `Board.activity_logs` — filter by event type or correlation ID, page with a cursor, and prefix-search item names
 * **External agents:**
   * New `subscribe_users_to_agent` and `unsubscribe_users_from_agent` mutations — subscribe up to 200 users to an agent with an owner or member role, or unsubscribe up to 200 users from it
   * New [`agents`](https://developer.monday.com/api-reference/reference/agents#get-agents) query — retrieve agents and filter their user or team subscribers by type and role
