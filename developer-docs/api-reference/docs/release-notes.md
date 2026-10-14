@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-12T14:03:10.000Z
+updatedAt: 2026-10-13T10:31:14.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -95,6 +95,7 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
   * New `board_automations` query and `delete_board_automation` mutation — list account or board automations with pagination and delete an automation
   * New `member` value on `BoardBasicRoleName` — the default board role; can only be used for agent users. `update_teams_board_role` rejects this value
   * New `would_create_mls_rollup_cycle` query — checks whether connecting two items would create a multi-level board rollup cycle
+  * New `use_dataset_template` and `use_mls_template` arguments on `create_board` — set either to `true` to create the board from the dataset template or the MLS template; both default to `false`
 * **Board views:**
   * New [`duplicate_view`](https://developer.monday.com/api-reference/reference/board-views#duplicate-view) and [`restore_view`](https://developer.monday.com/api-reference/reference/board-views#restore-view) mutations on board views
   * New `context` and `conditional_formatting_settings` arguments on view mutations — `conditional_formatting_settings` replaces all existing conditions when supplied, and `context` sets the view's entity scope (currently only `BOARD`, the default)

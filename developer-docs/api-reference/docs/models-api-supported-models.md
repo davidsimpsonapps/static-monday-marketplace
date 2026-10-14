@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:33:47.000Z
+updatedAt: 2026-10-13T11:06:18.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -20,9 +20,9 @@ For **`POST /chat/completions`**, we **recommend** always passing one of these a
 
 | Alias             | Resolves to         | Notes                                              |
 | :---------------- | :------------------ | :------------------------------------------------- |
-| `monday-fast`     | `claude-haiku-4-5`  | Fast, cost efficient tier                          |
-| `monday-standard` | `claude-sonnet-4-6` | **Default** when you omit `model` from the request |
-| `monday-powerful` | `claude-opus-4-6`   | Highest capability tier                            |
+| `monday-fast`     | `claude-haiku-5-5`  | Fast, cost efficient tier                          |
+| `monday-standard` | `claude-sonnet-5-5` | **Default** when you omit `model` from the request |
+| `monday-powerful` | `claude-opus-5-5`   | Highest capability tier                            |
 
 You can still pass any supported **direct** Claude or OpenAI ID from the tables below; see the [overview](https://developer.monday.com/api-reference/docs/models-api-overview#pricing-and-metering) for how usage is metered.
 
@@ -38,11 +38,22 @@ You can still pass any supported **direct** Claude or OpenAI ID from the tables 
 | `gpt-5`             | OpenAI    |
 | `gpt-5-mini`        | OpenAI    |
 | `gpt-5-nano`        | OpenAI    |
+| `gpt-6-astra`       | OpenAI    |
+| `gpt-6.1-sol`       | OpenAI    |
+| `gpt-6-luna`        | OpenAI    |
+| `claude-fable-5`    | Anthropic |
+| `claude-opus-5-5`   | Anthropic |
+| `claude-opus-5`     | Anthropic |
+| `claude-opus-4-8`   | Anthropic |
+| `claude-opus-4-7`   | Anthropic |
 | `claude-opus-4-6`   | Anthropic |
 | `claude-opus-4-5`   | Anthropic |
+| `claude-sonnet-5-5` | Anthropic |
+| `claude-sonnet-5`   | Anthropic |
 | `claude-sonnet-4-6` | Anthropic |
 | `claude-sonnet-4-5` | Anthropic |
 | `claude-sonnet-4`   | Anthropic |
+| `claude-haiku-5-5`  | Anthropic |
 | `claude-haiku-4-5`  | Anthropic |
 | `claude-3-7-sonnet` | Anthropic |
 | `claude-3-5-sonnet` | Anthropic |
@@ -90,7 +101,7 @@ Voices and audio formats follow the same parameter names as the [OpenAI Speech A
 
 # Defaults
 
-If you omit `model` on **`/chat/completions`**, the Models API uses **`monday-standard`**, which resolves to **`claude-sonnet-4-6`**. For other endpoints, defaults vary; prefer **setting `model` explicitly** in production so upgrades to defaults never change your app behavior unexpectedly.
+If you omit `model` on **`/chat/completions`**, the Models API uses **`monday-standard`**, which resolves to **`claude-sonnet-5-5`**. For other endpoints, defaults vary; prefer **setting `model` explicitly** in production so upgrades to defaults never change your app behavior unexpectedly.
 
 # See also
 

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:33:47.000Z
+updatedAt: 2026-10-13T09:53:21.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -66,9 +66,9 @@ Together, these cover **text**, **embeddings**, **images**, and **audio** throug
 
 For **`/chat/completions`**, pass one of the **`monday-*` aliases** instead of hard coding a vendor model ID whenever you can:
 
-* `monday-fast` → `claude-haiku-4-5`
-* `monday-standard` → `claude-sonnet-4-6` (also used when **`model` is omitted**)
-* `monday-powerful` → `claude-opus-4-6`
+* `monday-fast` → `claude-haiku-5-5`
+* `monday-standard` → `claude-sonnet-5-5` (also used when **`model` is omitted**)
+* `monday-powerful` → `claude-opus-5-5`
 
 **Why aliases:** They are **more stable** for your product. monday controls how each alias maps to an underlying model, so improvements (for example switching to a newer Sonnet) do not require you to redeploy new model strings everywhere. See [Supported models](https://developer.monday.com/api-reference/docs/models-api-supported-models#recommended-chat-model-aliases) and [Pricing and metering](https://developer.monday.com/api-reference/docs/models-api-overview#pricing-and-metering).
 
