@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:31:25.000Z
+updatedAt: 2026-10-14T13:24:08.000Z
 agentTools:
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
@@ -349,29 +349,57 @@ import { SeamlessApiClient, Board } from '@mondaydotcomorg/api';
 
 const client = new SeamlessApiClient();
 
-const { boards } = await client.request<{ boards: Board[] }>(
+const res = await client.request<{ data: { data: { boards: Board[] } } }>(
   `query { boards(ids: [12345]) { id name } }`
 );
+const boards = res.data.data.boards;
 ```
 
 ### SeamlessApiClient constructor
 
-| Option       | Type     | Default                        | Description                      |
-| ------------ | -------- | ------------------------------ | -------------------------------- |
-| `apiVersion` | `string` | Current version at SDK release | API version to use for requests. |
+`new SeamlessApiClient(apiVersion?, options?)`
+
+| Option                | Type                          | Default                        | Description                                                                                             |
+| --------------------- | ----------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| `apiVersion`          | `string`                      | Current version at SDK release | API version to use for requests.                                                                        |
+| `options.errorPolicy` | `'none' \| 'ignore' \| 'all'` | `'none'`                       | What to do when the API replies with GraphQL errors. See "Error policies" below. Available from 14.3.0. |
 
 ### SeamlessApiClient.request()
 
-| Parameter   | Type                  | Required           | Description                       |
-| ----------- | --------------------- | ------------------ | --------------------------------- |
-| `query`     | `string`              | Yes                | GraphQL query or mutation string. |
-| `variables` | `Record<string, any>` | No                 | Query variables.                  |
-| `version`   | `string`              | No                 | Per-request API version override. |
-| `timeout`   | `number`              | No (default 60000) | Request timeout in ms.            |
+`client.request<T>(query, variables?, options?)`
+
+| Parameter                 | Type                          | Required           | Description                                                                          |
+| ------------------------- | ----------------------------- | ------------------ | ------------------------------------------------------------------------------------ |
+| `query`                   | `string`                      | Yes                | GraphQL query or mutation string.                                                    |
+| `variables`               | `Record<string, any>`         | No                 | Query variables.                                                                     |
+| `options.versionOverride` | `string`                      | No                 | Per-request API version override.                                                    |
+| `options.timeoutMs`       | `number`                      | No (default 60000) | Request timeout in ms.                                                               |
+| `options.headers`         | `Record<string, string>`      | No                 | Request headers. monday.com forwards only allowlisted headers and drops the rest.    |
+| `options.idempotencyKey`  | `string`                      | No                 | Sent as the `Idempotency-Key` header. Takes precedence over one passed in `headers`. |
+| `options.errorPolicy`     | `'none' \| 'ignore' \| 'all'` | No                 | Error policy for this request only. Overrides the client's `errorPolicy`.            |
+
+### Response
+
+The promise resolves with the reply from the monday.com host, and `T` describes that whole reply:
+
+| Field                 | Description                                                                                       |
+| --------------------- | ------------------------------------------------------------------------------------------------- |
+| `res.data.data`       | The GraphQL `data`.                                                                               |
+| `res.data.extensions` | GraphQL `extensions`, including `request_id`.                                                     |
+| `res.headers`         | A `Headers` object with the forwarded response headers, or `undefined` if none were forwarded.    |
+| `res.requestId`       | The SDK's internal ID for matching the reply to the request. This is not the platform request ID. |
+
+`res.headers` holds the response headers that monday.com forwards. Lookups are case-insensitive:
+
+```typescript
+const res = await client.request<{ headers?: Headers }>(`query { me { id } }`);
+console.log(res.headers?.get('x-request-id'));
+console.log(res.headers?.get('ratelimit'));
+```
 
 ### Error handling
 
-Errors from `SeamlessApiClient` are instances of `SeamlessApiClientError`:
+Errors from `SeamlessApiClient` are instances of `SeamlessApiClientError` (`instanceof` works from 14.3.0). `error.response` contains the GraphQL `errors`, any partial `data`, the `extensions` and the forwarded response `headers`:
 
 ```typescript
 import { SeamlessApiClient, SeamlessApiClientError } from '@mondaydotcomorg/api';
@@ -384,9 +412,35 @@ try {
   if (error instanceof SeamlessApiClientError) {
     console.error(error.message);
     console.error(error.response.errors);
+    console.error(error.response.data);                       // partial data, if any
+    console.error(error.response.extensions?.request_id);     // share this with monday.com support
+    console.error(error.response.headers?.get('retry-after'));
   }
 }
 ```
+
+### Error policies
+
+By default, `SeamlessApiClient` rejects on any GraphQL error. As with `ApiClient`, you can change this with `errorPolicy`, either on the client or per request:
+
+| Policy             | Behavior                                                                                                     |
+| ------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `'none'` (default) | Rejects with a `SeamlessApiClientError`.                                                                     |
+| `'ignore'`         | Resolves with whatever data came back. `res.data` holds `data` and `extensions`, and the errors are dropped. |
+| `'all'`            | Resolves with the data and the errors. `res.data` holds `errors`, `data` and `extensions`.                   |
+
+```typescript
+const client = new SeamlessApiClient(undefined, { errorPolicy: 'all' });
+
+const res = await client.request<{ data: { data?: unknown; errors?: unknown[] } }>(`query { ... }`);
+console.log(res.data.data);    // partial data (if any)
+console.log(res.data.errors);  // error details
+
+// Or for a single request:
+await client.request(`query { ... }`, undefined, { errorPolicy: 'ignore' });
+```
+
+Failures that have no GraphQL errors, such as a timeout or a request the platform rejects before running it, always reject, whatever the policy.
 
 > ⚠️ Browser only
 >
