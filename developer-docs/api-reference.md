@@ -1,5 +1,6 @@
 ---
 agentTools:
+  siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
 

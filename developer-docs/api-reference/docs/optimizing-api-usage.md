@@ -1,6 +1,7 @@
 ---
-updatedAt: 2026-09-06T08:33:35.000Z
+updatedAt: 2026-10-19T12:21:54.000Z
 agentTools:
+  siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
 
@@ -18,6 +19,8 @@ You can use this data to:
 
 * **Detect sudden spikes:** Spikes can be one indicator of a bug in an application. Bugs can cause the app to consume a disproportionate amount of the API budget.
 * **Evaluate app usage:** Sometimes, apps are no longer used but continue to run and use your API budget. This is often the cause of high API usage in companies with many applications. You can use these insights to evaluate which apps are consuming your API budget and determine whether or not they're still required.
+
+If needed you can purchase through the dashboard [the API add-on](https://developer.monday.com/api-reference/docs/api-analytics#how-to-purchase-api-add-on) and increase your daily call limit.
 
 The analytics dashboard is available to account admins on any plan with an active API usage add-on, as well as to all Enterprise accounts.
 

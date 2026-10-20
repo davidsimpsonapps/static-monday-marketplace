@@ -1,6 +1,7 @@
 ---
-updatedAt: 2026-09-06T08:33:23.000Z
+updatedAt: 2026-10-19T13:11:45.000Z
 agentTools:
+  siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
 
@@ -27,7 +28,10 @@ Remembering these limits when using the API is crucial to prevent workflow disru
 
 Complexity defines the load that each call puts on the API. This limit restricts the heaviness of each query to help prevent excessive load and maintain optimal performance. The limit will not affect most users—the quota is set sufficiently high to impact only users making requests that would compromise the stability of the API.
 
-You will receive a `ComplexityException` error if you hit the limit.
+If you hit a complexity limit, the API returns an error with one of the following codes:
+
+* **Individual query limit:** If a single query exceeds 5M complexity points, you will receive the `REQUEST_MAX_COMPLEXITY_EXCEEDED` error code. API version `2025-07` and earlier return the `maxComplexityExceeded` error code instead.
+* **Per-minute limits:** If you exhaust a per-minute complexity budget, you will receive the `COMPLEXITY_BUDGET_EXHAUSTED` error code.
 
 The limit varies based on how you're making the call:
 
@@ -83,7 +87,7 @@ The limit varies based on your [monday.com plan](https://monday.com/pricing):
 | Pro                 | 10,000                                    |
 | Enterprise          | 25,000                                    |
 
-You can request an increase through the [API analytics dashboard](https://developer.monday.com/api-reference/docs/api-analytics) if your account consistently exceeds this limit.
+You can increase your daily call limit by [purchasing the API add-on](https://developer.monday.com/api-reference/docs/api-analytics#how-to-purchase-api-add-on) through the [API analytics dashboard](https://developer.monday.com/api-reference/docs/api-analytics) if your account exceeds this limit.
 
 ### Exceptions
 

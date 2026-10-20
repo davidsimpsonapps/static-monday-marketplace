@@ -1,6 +1,7 @@
 ---
-updatedAt: 2026-09-06T08:36:28.000Z
+updatedAt: 2026-10-19T09:59:40.000Z
 agentTools:
+  siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
 
@@ -8,7 +9,7 @@ agentTools:
 
 Learn how to query an account's platform API daily usage
 
-All monday.com accounts are subject to the platform API [daily call limit](https://developer.monday.com/api-reference/docs/rate-limits#daily-call-limit). This limit restricts the number of calls made in a day to prevent excessive load from individual accounts, maintains the API service as a free feature across all plans, and controls operational costs to continue delivering value to all our users.
+All monday.com accounts are subject to the platform API [daily call limit](https://developer.monday.com/api-reference/docs/rate-limits#daily-call-limit). This limit restricts the number of calls made in a day to prevent excessive load from individual accounts and controls operational costs to continue delivering value to all our users. You can increase the limit by [purchasing the API add-on](https://developer.monday.com/api-reference/docs/api-analytics#how-to-purchase-api-add-on) through the [API analytics dashboard](https://developer.monday.com/api-reference/docs/api-analytics).
 
 :construction: Enterprise accounts can retrieve this data through the [API analytics dashboard](https://developer.monday.com/api-reference/docs/api-analytics) or by querying the `platform_api` endpoint.
 

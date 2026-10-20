@@ -1,3 +1,8 @@
+---
+agentTools:
+  projectIndex: https://developer.monday.com/llms.txt
+---
+
 # monday.com Developer Documentation
 
 [developer platform](#top)

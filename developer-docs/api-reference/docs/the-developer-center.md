@@ -1,6 +1,7 @@
 ---
-updatedAt: 2026-10-06T13:31:28.000Z
+updatedAt: 2026-10-19T09:59:40.000Z
 agentTools:
+  siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
 ---
 
@@ -32,4 +33,4 @@ You can view or regenerate your API [access token](https://developer.monday.com/
 
 ## API analytics
 
-The *API analytics* tab opens your [API analytics dashboard](https://developer.monday.com/api-reference/docs/api-analytics) where you can track your account's daily API usage, trends, and top contributors.
+The *API analytics* tab opens your [API analytics dashboard](https://developer.monday.com/api-reference/docs/api-analytics) where you can track your account's daily API usage, trends, and top contributors. You can also [purchase the API add-on](https://developer.monday.com/api-reference/docs/api-analytics#how-to-purchase-api-add-on) there to increase your daily call limit.

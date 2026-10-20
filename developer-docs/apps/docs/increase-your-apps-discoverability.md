@@ -1,6 +1,7 @@
 ---
 updatedAt: 2025-11-24T16:23:21.000Z
 agentTools:
+  siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/apps/llms.txt
 ---
 
