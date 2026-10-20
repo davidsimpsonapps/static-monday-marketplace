@@ -1,7 +1,2191 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-10-19",
+  "processedThrough": "2026-10-20",
   "events": [
+    {
+      "id": 10000181,
+      "app_id": 10055933,
+      "name": "DocQR",
+      "type": "archived",
+      "date": "2026-10-20",
+      "installs": null,
+      "app": {
+        "id": 10000181,
+        "marketplace_developer_id": 57,
+        "app_id": 10055933,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1678980094/monday-apps-marketplace/DocQR/qrdoc-1.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1678980094/monday-apps-marketplace/DocQR/qrdoc-2.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1678980094/monday-apps-marketplace/DocQR/qrdoc-3.png"
+          }
+        ],
+        "description": "<p>Easily create QR codes using text in your monday.com docs or any custom text using&nbsp;<strong>DocQR</strong></p><p><br></p><p>✅ Easily download and upload your generated QR codes into your monday.com Docs using drag and drop</p><p>✅ Generate real-time QR codes as you change your text</p><p><br></p><p><strong>Learn more using </strong><a href=\"https://docs.google.com/document/d/e/2PACX-1vSv5wStQX11qaEpYNtup_yXxPO8KWWipBkMzXpaA7_TzzPSUuLwYA4rQQzFlw82dCPdxqzf5PJuq0Fn/pub?embedded=true\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>this link</strong></a><strong>.</strong></p>",
+        "short_description": "Create QR codes right in monday.com Docs",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1678980100/monday-apps-marketplace/DocQR/generate-qr-codes-in-workdocs.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1678980093/monday-apps-marketplace/DocQR/docQR.png",
+        "feedback_url": "support@kolaai.com",
+        "privacy_policy_url": "https://kolaai.com/",
+        "featured": false,
+        "name": "DocQR",
+        "how_to_use_url": "https://docs.google.com/document/d/e/2PACX-1vSv5wStQX11qaEpYNtup_yXxPO8KWWipBkMzXpaA7_TzzPSUuLwYA4rQQzFlw82dCPdxqzf5PJuq0Fn/pub?embedded=true",
+        "external_pricing_url": null,
+        "keywords": " QR,QR code,docs",
+        "compliance_answers": [],
+        "created_at": "2023-03-16T15:31:07.000Z",
+        "updated_at": "2026-10-19T12:27:27.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "Free",
+        "label": null,
+        "app_values": [
+          "Work from everywhere"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": null,
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "",
+        "app_client_id": "d7b4bd31dce4bc74b7953bcd11bb8660",
+        "app_color": "#155C5F",
+        "plans": [
+          {
+            "id": "10055933-1-basic",
+            "appPlanId": "basic",
+            "name": "Basic",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "standard",
+              "monthly": 12,
+              "yearly": 10
+            },
+            "versionState": "live",
+            "appId": 10055933,
+            "description": "Unlimited QR codes in WorkDocs",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 12,
+              "yearlyFee": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2024-03-24T08:47:09.729Z",
+          "id": 10081935
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Work from everywhere"
+          ],
+          "pricing_data": "Free",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000310,
+      "app_id": 10025525,
+      "name": "Multidimensional Table",
+      "type": "archived",
+      "date": "2026-10-20",
+      "installs": null,
+      "app": {
+        "id": 10000310,
+        "marketplace_developer_id": 10000020,
+        "app_id": 10025525,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1696164408/monday-apps-marketplace/Multidimensional%20Table/Monday1_2.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1696164406/monday-apps-marketplace/Multidimensional%20Table/Monday2_3.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1696164472/monday-apps-marketplace/Multidimensional%20Table/Monday3_3.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1696164413/monday-apps-marketplace/Multidimensional%20Table/Monday4_2.png"
+          }
+        ],
+        "description": "<p>Our&nbsp;<strong>multidimensional table</strong>&nbsp;is designed to optimize the way you manage and visualize data. Therefore, the table is able to represent&nbsp;<strong>different sub-rows per row</strong>, making it two-dimensional.</p><ul><li>One of the most common uses of our multidimensional table is for workforce planning. For instance, if you're managing a workforce across multiple buildings, our application can help you plan and schedule tasks efficiently.You can create a table with columns representing different days of the week and 2 dimensional rows representing different buildings with their assigned tasks or employees. This allows you to get a clear overview of who is doing what and when, making it easier to identify gaps in your schedule or areas where resources may be underutilized.</li><li>Another use case is for project management. You can use the multidimensional table to track the progress of various projects, with different dimensions representing different aspects of the project such as tasks, deadlines, and team members. This can help you keep track of everything in one place, making it easier to manage multiple projects simultaneously.</li></ul><p><br></p><p>In conclusion, our multidimensional table application is a versatile and powerful tool that can help you manage and visualize complex data sets with ease.&nbsp;<strong>Whether you're planning a workforce, managing a project, or just trying to make sense of a large amount of data, our application has got you covered.</strong></p><p>Feel free to contact us:&nbsp;<a href=\"https://www.unikoo.be/en/contact\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.unikoo.be/en/contact</a></p>",
+        "short_description": "Multidimensional table for data visualization and management",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1696164404/monday-apps-marketplace/Multidimensional%20Table/App_card_5.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1696164403/monday-apps-marketplace/Multidimensional%20Table/Multidimensional_table_icon.png",
+        "feedback_url": "support@unikoo.be",
+        "privacy_policy_url": "https://www.unikoo.be/en/privacy",
+        "featured": false,
+        "name": "Multidimensional Table",
+        "how_to_use_url": "https://docs-monday.unikoo.be/Multidimensional%20Table%20-%20Guidelines.pdf",
+        "external_pricing_url": null,
+        "keywords": "Multidimensional table, visualisation, workforce planning, different dimensions,3d",
+        "compliance_answers": [],
+        "created_at": "2023-10-01T12:48:55.000Z",
+        "updated_at": "2026-10-19T09:31:24.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Make data-driver decisions"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://unikoo.s3.eu-central-1.amazonaws.com/pdf/Unikoo_AV_onepager.pdf",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,me:read,boards:write",
+        "app_client_id": "3aefda9cef66071c6254f02386f8d34b",
+        "app_color": {
+          "hsl": {
+            "h": 214.28571428571414,
+            "s": 0.3684210526315793,
+            "l": 0.9627450980392156,
+            "a": 1
+          },
+          "hex": "#f2f5f9",
+          "rgb": {
+            "r": 242,
+            "g": 245,
+            "b": 249,
+            "a": 1
+          },
+          "hsv": {
+            "h": 214.28571428571414,
+            "s": 0.0281124497991968,
+            "v": 0.9764705882352941,
+            "a": 1
+          },
+          "oldHue": 214.28571428571414,
+          "source": "hex"
+        },
+        "plans": [
+          {
+            "id": "10025525-1-10025525_T1",
+            "appPlanId": "10025525_T1",
+            "name": "Up to 3",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 5,
+              "yearly": 4,
+              "maxSeats": 3
+            },
+            "versionState": "live",
+            "appId": 10025525,
+            "description": "Up to 3 seats",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 5,
+              "yearlyFee": 4,
+              "maxSeats": 3
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10025525-1-10025525_T2",
+            "appPlanId": "10025525_T2",
+            "name": "Up to 10",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 15,
+              "yearly": 13,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10025525,
+            "description": "Up to 10 seats",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 15,
+              "yearlyFee": 13,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10025525-1-10025525_T3",
+            "appPlanId": "10025525_T3",
+            "name": "Up to 25",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 50,
+              "yearly": 42,
+              "maxSeats": 25
+            },
+            "versionState": "live",
+            "appId": 10025525,
+            "description": "Up to 25 seats",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 50,
+              "yearlyFee": 42,
+              "maxSeats": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10025525-1-10025525_T4",
+            "appPlanId": "10025525_T4",
+            "name": "Up to 50",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 75,
+              "yearly": 68,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10025525,
+            "description": "Up to 50 seats",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 75,
+              "yearlyFee": 68,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10025525-1-10025525_T5",
+            "appPlanId": "10025525_T5",
+            "name": "Up to 100",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 120,
+              "yearly": 102,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10025525,
+            "description": "Up to 100 seat",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 120,
+              "yearlyFee": 102,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10025525-1-10025525_T6",
+            "appPlanId": "10025525_T6",
+            "name": "Over 100",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 200,
+              "yearly": 170,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10025525,
+            "description": "Over 100 seats (Unlimited)",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 200,
+              "yearlyFee": 170,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2024-03-24T08:52:48.609Z",
+          "id": 10168722
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Make data-driver decisions"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://unikoo.s3.eu-central-1.amazonaws.com/pdf/Unikoo_AV_onepager.pdf",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000619,
+      "app_id": 10180909,
+      "name": "Deep Links For Contact",
+      "type": "archived",
+      "date": "2026-10-20",
+      "installs": null,
+      "app": {
+        "id": 10000619,
+        "marketplace_developer_id": 10000254,
+        "app_id": 10180909,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000619/10000619_2024_8_29_13_38_40_lw3bw6c.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000619/10000619_2024_8_29_13_38_43_8cmj41p.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000619/10000619_2024_8_29_13_38_46_nkiism5.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p><strong>Supercharge Your Client Outreach with Deep Link for Contacts</strong></p><p><br></p><p>Deep Link for Contacts transforms how you connect with clients directly from your&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;boards, making personalized outreach effortless and efficient.</p><p><br></p><p><strong>What Deep Link for Contacts Offers:</strong></p><p>• Adds a “Send a Message” column to your&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;boards</p><p>• Automatically extracts phone numbers from your designated Phone column</p><p>• Creates instant deep links to various messaging platforms</p><p>• Supports WhatsApp, Telegram, Viber, Apple Messages, and more</p><p><br></p><p><strong>Key Benefits:</strong></p><p>•&nbsp;<strong>Instant Connection:</strong>&nbsp;Reach out to contacts with a single click</p><p>•&nbsp;<strong>Personalized Approach:</strong>&nbsp;Use each prospect’s preferred communication channel</p><p>•&nbsp;<strong>Seamless Workflow:</strong>&nbsp;Communicate without leaving your&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;environment</p><p>•&nbsp;<strong>Improved Productivity:</strong>&nbsp;Eliminate manual steps in your outreach process</p><p><br></p><p><strong>Ideal for Professionals in:</strong></p><p>• Sales and Lead Generation</p><p>• Customer Relationship Management</p><p>• Recruitment and Talent Acquisition</p><p>• Project Coordination</p><p><br></p><p><strong>Real-World Application:</strong></p><p>As a business developer, you spot a hot lead in your board. Instead of copying their number and switching apps, you simply click the Deep Link button. Your chosen messaging app launches instantly, ready for you to send that crucial first contact. It’s swift, professional, and personalized.</p><p><br></p><p><strong>Ready to Elevate Your Outreach Strategy?</strong></p><p><a href=\"https://calendly.com/helloanishjain/deep-link-can-streamline-your-communication-workflow\" rel=\"noopener noreferrer\" target=\"_blank\">Book a Demo</a>&nbsp;and discover how Deep Link for Contacts can streamline your communication workflow.</p><p><br></p><p><strong>Get in Touch</strong></p><p>Have questions or want to learn more about deeplink? Feel free to reach out to us at&nbsp;<a href=\"mailto:hello@appstronauts.shop\" rel=\"noopener noreferrer\" target=\"_blank\">Contact Us</a>.</p><p><br></p><p>You can also book a demo by following this link:&nbsp;<a href=\"https://calendly.com/helloanishjain/deep-link-can-streamline-your-communication-workflow\" rel=\"noopener noreferrer\" target=\"_blank\">Book a demo</a></p><p><br></p><p>We’d be happy to discuss how deeplink can streamline your communication workflow and enhance your productivity on&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>.</p>",
+        "short_description": "Click to message contacts via preferred apps",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000619/10000619_2024_8_29_13_38_36_6dknf66.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000619/10000619_2024_8_29_13_38_31_v4ct47c.png",
+        "feedback_url": "hello@appstronauts.shop",
+        "privacy_policy_url": "https://appstronauts.shop/deeplink/privacy-policy",
+        "featured": false,
+        "name": "Deep Links For Contact",
+        "how_to_use_url": "https://appstronauts.shop/deeplink/how-to-use",
+        "external_pricing_url": null,
+        "keywords": "Deeplinks for contacts, \nSend a Message, \nMessaging automation, \nContact management, \nProductivity tool, \nWhatsApp integration, \nCustomer outreach, \nCRM enhancement",
+        "compliance_answers": [
+          {
+            "questionId": 15,
+            "shortAnswer": false,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 14,
+            "shortAnswer": true,
+            "detailedAnswer": "helloanisjain@gmail.com"
+          },
+          {
+            "questionId": 13,
+            "shortAnswer": false,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 12,
+            "shortAnswer": false,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 11,
+            "shortAnswer": false,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 2,
+            "shortAnswer": false,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 1,
+            "shortAnswer": true,
+            "detailedAnswer": "I am not even saving any monday user data"
+          }
+        ],
+        "created_at": "2024-09-29T13:37:44.000Z",
+        "updated_at": "2026-10-19T12:27:43.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "Free",
+        "label": null,
+        "app_values": [
+          "Popular with CRM users"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://appstronauts.shop/deeplink/terms-of-service",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read",
+        "app_client_id": "9534c6d7f425569b245af6b862cdf01d",
+        "app_color": {
+          "hsl": {
+            "h": 0,
+            "s": 0.01885256580270859,
+            "l": 0.06936170608537898,
+            "a": 1
+          },
+          "hex": "#121111",
+          "rgb": {
+            "r": 18,
+            "g": 17,
+            "b": 17,
+            "a": 1
+          },
+          "hsv": {
+            "h": 0,
+            "s": 0.037007446289062426,
+            "v": 0.07066935221354172,
+            "a": 1
+          },
+          "oldHue": 1.7045454545454546,
+          "source": "rgb"
+        },
+        "plans": null,
+        "app_live_version": {
+          "updated_at": "2025-01-12T07:09:50.107Z",
+          "id": 10517102
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "none",
+          "hasFreePlan": false,
+          "hasPaidPlan": false,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Popular with CRM users"
+          ],
+          "pricing_data": "Free",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://appstronauts.shop/deeplink/terms-of-service",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000671,
+      "app_id": 10231555,
+      "name": "Lookup Sync",
+      "type": "archived",
+      "date": "2026-10-20",
+      "installs": null,
+      "app": {
+        "id": 10000671,
+        "marketplace_developer_id": 10000184,
+        "app_id": 10231555,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000671/10000671_2024_10_21_15_32_42_zbt0ud3.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000671/10000671_2024_10_21_15_32_49_m6gf8ro.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000671/10000671_2024_10_21_15_32_56_xyc05dd.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p><strong>Are you tired of manually updating data and searching for the right information across multiple boards? </strong>The <strong>LookupSync</strong> app is here to revolutionize the way you manage data on monday.com!</p><p>The <strong>LookupSync</strong> app simplifies real-time data synchronization across your monday.com boards, ensuring consistent, connected, and always up-to-date information. Designed for teams managing projects, CRM, and beyond, Lookup Sync scales with your needs, eliminating the hassle of manual searching and linking and providing real-time, reliable information on <strong>item </strong>and<strong> sub-item</strong> levels exactly when you need it.</p><p><br></p><p><strong>Popular Features for Effortless Lookup and SYnc</strong></p><ul><li><strong>Cross-Board Syncing</strong>: Keep your data accurate in real-time by syncing seamlessly across multiple boards.</li><li><strong>Item &amp; Subitem Sync</strong>: Effortlessly link and update item and subitem data across different boards.</li><li><strong>Custom Multi-Column Mapping</strong>: Precisely map data using multiple reference columns for smarter synchronization.</li><li><strong>Dynamic Data Updates</strong>: Automatically update multiple columns to keep information consistent and up-to-date.</li><li><strong>Sync Existing Records</strong>: Instantly sync all existing records with a simple toggle, no outdated data, no hassle.</li><li><strong>Change Logs</strong>: Track every update with detailed logs on changes, timestamps, and user actions for complete transparency.</li></ul><p><strong>Discover all the features in action! </strong><a href=\"https://www.appserve.ai/get-a-demo?utm_source=marketplace_page&amp;utm_medium=app_listing&amp;utm_campaign=Lookup_Sync\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>Schedule your free demo today</strong></a></p><p><br></p><p><strong>Why Choose LookupSync?</strong></p><ul><li><strong>Enhanced Visibility &amp; Control</strong>: Gain a unified view of all your synced data<strong> </strong>with full control over mapping and updates.</li><li><strong>Real-Time Data Retrieval</strong>: Instantly access the exact information you need without manually searching multiple boards.</li><li><strong>24/7 Support:</strong> Round-the-clock assistance for <strong>setup</strong>, <strong>troubleshooting</strong>, and <strong>configuration</strong>.</li></ul><p><br></p><p><strong>Get started fast!</strong> Explore our <a href=\"https://docs-appserve-ai.scrollhelp.site/lookupsync-app\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>app documentation</strong></a> and <a href=\"https://docs-appserve-ai.scrollhelp.site/lookupsync-app/demo-video\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>demo video</strong></a>.</p><p><br></p><p><a href=\"http://appserve.ai/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>appserve.ai</strong></a> delivers high-performance apps that empower teams worldwide to tackle complex challenges efficiently.</p>",
+        "short_description": "Sync Smarter, Not Harder – Automate Your Lookups with Ease!",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000671/10000671_2024_10_21_15_30_32_81d58vs.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000671/10000671_2024_10_21_15_27_24_pg0lbtoi.png",
+        "feedback_url": "https://wkf.ms/3C3G3Vc",
+        "privacy_policy_url": "https://www.appserve.ai/privacy-policy",
+        "featured": false,
+        "name": "Lookup Sync",
+        "how_to_use_url": "https://docs-appserve-ai.scrollhelp.site/LookupSync/",
+        "external_pricing_url": null,
+        "keywords": "Data Sync,  Cross-Board Sync,  monday.com - Your go-to work platform ,  Real-Time Updates,  Workflow Automation , Scalable Synchronization , Multi-Board Management  , Data Consistency,  Task Alignment , Effortless Setup",
+        "compliance_answers": [
+          {
+            "questionId": 19,
+            "shortAnswer": true,
+            "detailedAnswer": "The app does not send any data outside of monday.com."
+          },
+          {
+            "questionId": 18,
+            "detailedAnswer": "The app stores log data securely on our server. Access to these logs is restricted to authorized personnel and is used solely for monitoring, debugging, and ensuring the proper functioning of the application.",
+            "logHostingProvider": "monday"
+          },
+          {
+            "questionId": 17,
+            "detailedAnswer": "The app stores all application data securely on our server. Access is restricted to authorized personnel, and the data is protected using appropriate security measures to ensure confidentiality and integrity.",
+            "dataHostingProvider": "DB"
+          },
+          {
+            "questionId": 14,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, we have a dedicated security and privacy point of contact for such issues or questions."
+          },
+          {
+            "questionId": 11,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 10,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, the app does not forward to any unapproved destinations."
+          },
+          {
+            "questionId": 9,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, the app protects against mass parameter assignment attacks. Only explicitly allowed fields are bound to data models or database operations. Input is whitelisted or validated server-side, and sensitive fields such as roles, permissions, and internal IDs are never exposed to the client or modifiable via user input."
+          },
+          {
+            "questionId": 8,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, the developer ensures that application logs do not contain secrets or personally identifiable information (PII). All console and log statements are reviewed before deployment to confirm that no confidential or sensitive data is included in the logs."
+          },
+          {
+            "questionId": 7,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, we enforce multi-factor authentication (MFA) for all employee access to systems that may process customer data. MFA is enabled for signing in to our servers, ensuring that access requires both a password and a second authentication factor to enhance security."
+          },
+          {
+            "questionId": 6,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, access to customer data is protected based on the principle of least privilege. Employees and services are granted only the minimum level of access necessary to perform their specific roles. Access controls are reviewed periodically to ensure that permissions remain appropriate and unnecessary access is promptly removed."
+          },
+          {
+            "questionId": 5,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, the app performs input sanitization and output encoding to protect against Cross-Site Scripting (XSS) attacks. We ensure that any user-supplied input is validated and sanitized before processing or storing, and HTML encoding is applied when displaying user data in the frontend. We also use secure libraries/frameworks that automatically escape outputs in templates and prevent script injection."
+          },
+          {
+            "questionId": 4,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, all state-changing actions are protected against Cross-Site Request Forgery (CSRF). The app implements CSRF tokens for all forms and API endpoints that modify state. These tokens are validated server-side, and only requests with valid, trusted tokens are processed."
+          },
+          {
+            "questionId": 3,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, we have a mechanism to notify monday.com in the event of a security breach."
+          },
+          {
+            "questionId": 2,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, the developer follows a defined process for regularly applying application-level updates and security patches. This includes:\n\nMonitoring official sources (e.g., package managers, vendor advisories) for updates.\n\nPeriodically updating software packages, libraries, and dependencies.\n\nApplying database security patches in coordination with the infrastructure team.\n\nUsing automated tools (e.g., Dependabot, npm audit, pip-audit, etc.) to detect vulnerabilities.\n\nTesting updates in a staging environment before deployment to production."
+          },
+          {
+            "questionId": 1,
+            "shortAnswer": true,
+            "detailedAnswer": "Yes, customer data is logically segregated from the data of other customers. This is achieved through the use of unique identifiers (IDs) for each customer, ensuring that their data is kept separate and secure."
+          }
+        ],
+        "created_at": "2024-11-21T15:24:49.000Z",
+        "updated_at": "2026-10-19T12:26:56.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial pricing",
+        "label": null,
+        "app_values": [
+          "Everyday tasks"
+        ],
+        "security": true,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://www.appserve.ai/term-of-use",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": "G-5HWSSRV22H",
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read,boards:read,boards:write,workspaces:read,users:read,account:read,notifications:write,webhooks:write,webhooks:read",
+        "app_client_id": "9d5c92bb48a407c5a4b03858179d1708",
+        "app_color": {
+          "hsl": {
+            "h": 317.99999999999994,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 317.99999999999994,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 317.99999999999994,
+          "source": "hex"
+        },
+        "plans": [
+          {
+            "id": "10231555-1-Paid",
+            "appPlanId": "Paid",
+            "name": "Enterprise",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "standard",
+              "monthly": 65,
+              "yearly": 65
+            },
+            "versionState": "live",
+            "appId": 10231555,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "Ability to Sync Data Across Boards.",
+                "Ability to define conditions for syncing columns.",
+                "Abitility to add upto 10 column comparison conditions."
+              ],
+              "monthlyFee": 65,
+              "yearlyFee": 65
+            },
+            "isFree": false,
+            "isRecommended": true,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2026-05-15T14:33:19.604Z",
+          "id": 14714825
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": true,
+          "app_values": [
+            "Everyday tasks"
+          ],
+          "pricing_data": "14 days trial pricing",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://www.appserve.ai/term-of-use",
+          "available_for_products": [],
+          "google_analytics_tag_id": "G-5HWSSRV22H"
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000683,
+      "app_id": 10211041,
+      "name": "EasyNotify Integration",
+      "type": "archived",
+      "date": "2026-10-20",
+      "installs": null,
+      "app": {
+        "id": 10000683,
+        "marketplace_developer_id": 10000284,
+        "app_id": 10211041,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000683/10000683_2024_11_9_13_2_15_b2e664h.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000683/10000683_2024_11_9_13_2_18_rytmdtvh.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000683/10000683_2024_11_9_13_2_22_kx102ca.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p>Introducing EasyNotify Integration</p><p><br></p><p>EasyNotify Integration is a messenger notification app for monday.com.</p><p><br></p><p>You can connect LINE, Telegram and Slack.</p><p>You can receive messages without missing important updates or changes.</p><p><br></p><p>EasyNotify Integration allows you to automate sending messages to LINE or Telegram using the automation feature of \"\"monday.com\"\".</p><p>EasyNotify Integration allows you to set triggers to automatically send messages to clients, business partners, or other contacts.</p><p>This program is useful for sending standardized messages such as notifications, schedule confirmations, automatic responses, status updates, etc.</p><p><br></p><p>EasyNotify Integration supports various integration recipes, so you can use the notification function easily.</p><p><br></p><p>You can use various templates that have already been configured.</p><p><br></p><p>EasyNotify Integration helps customers optimize their workflow, increase efficiency, and improve customer satisfaction.</p><p>EasyNotify Integration automates message sending tasks and provides template messages to improve workflow efficiency and save users' time and effort.</p><p><br></p><p>The following requirements must be met before using EasyNotify Integration.</p><p>1. You must have a monday.com account in use.</p><p>2. You must have an account (LINE, Telegram, Slack) in use for each message you want to connect.</p><p><br></p><p>Main functions / features</p><p><br></p><p>- Multi-channel support: LINE, Telegram, Slack.</p><p>- Pre-made recipes: Quickly set up with pre-configured integration options.</p><p>- Custom workflows: Tailor notifications to your specific needs.</p><p>- Instant updates: Keep everyone connected with real-time notifications.</p><p>- Easy integration: Connect to monday.com with a simple setup.</p>",
+        "short_description": "EasyNotify Integration sends messages to multiple channels",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000683/10000683_2024_11_9_13_1_51_xlzqg0j.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000683/10000683_2024_11_9_13_1_22_kglwbq3.png",
+        "feedback_url": "cs@oculuslabs.co.kr",
+        "privacy_policy_url": "https://msg.oculuslabs.co.kr/monday/privacy",
+        "featured": false,
+        "name": "EasyNotify Integration",
+        "how_to_use_url": "https://msg.oculuslabs.co.kr/monday/howtouse",
+        "external_pricing_url": null,
+        "keywords": "Line, Telegram, Slack, Integration, Notification, Alarm, Message, Productivity, Efficiency, Messenger",
+        "compliance_answers": [],
+        "created_at": "2024-12-09T13:00:34.000Z",
+        "updated_at": "2026-10-19T09:31:07.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Work from everywhere"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://msg.oculuslabs.co.kr/monday/terms",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "notifications:write,boards:read,users:read,me:read",
+        "app_client_id": "5181f8ca4223c6956d7527876b4c025a",
+        "app_color": {
+          "hsl": {
+            "h": 50.23255813953489,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 50.23255813953489,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 50.23255813953489,
+          "source": "rgb"
+        },
+        "plans": [
+          {
+            "id": "10211041-1-notification_total_seat_100",
+            "appPlanId": "notification_total_seat_100",
+            "name": "Plan with up to 100 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 50,
+              "yearly": 40,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10211041,
+            "description": "Available for accounts of up to 100 users",
+            "extraData": {
+              "bullets": [
+                "Support for multiple messenger services",
+                "Simple setup",
+                "Easy to use"
+              ],
+              "monthlyFee": 50,
+              "yearlyFee": 40,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10211041-1-notification_total_seat_001",
+            "appPlanId": "notification_total_seat_001",
+            "name": "Plan with up to 1 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 0,
+              "yearly": 0,
+              "maxSeats": 1
+            },
+            "versionState": "live",
+            "appId": 10211041,
+            "description": "Available for accounts of up to 1 users",
+            "extraData": {
+              "bullets": [
+                "Support for multiple messenger services",
+                "Simple setup",
+                "Easy to use"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0,
+              "maxSeats": 1
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10211041-1-notification_total_seat_010",
+            "appPlanId": "notification_total_seat_010",
+            "name": "Plan with up to 10 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 5,
+              "yearly": 4,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10211041,
+            "description": "Available for accounts of up to 10 users",
+            "extraData": {
+              "bullets": [
+                "Support for multiple messenger services",
+                "Simple setup",
+                "Easy to use"
+              ],
+              "monthlyFee": 5,
+              "yearlyFee": 4,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": true,
+            "currency": "USD"
+          },
+          {
+            "id": "10211041-1-notification_total_seat_015",
+            "appPlanId": "notification_total_seat_015",
+            "name": "Plan with up to 15 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 8,
+              "yearly": 6,
+              "maxSeats": 15
+            },
+            "versionState": "live",
+            "appId": 10211041,
+            "description": "Available for accounts of up to 15 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 8,
+              "yearlyFee": 6,
+              "maxSeats": 15
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10211041-1-notification_total_seat_020",
+            "appPlanId": "notification_total_seat_020",
+            "name": "Plan with up to 20 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 10,
+              "yearly": 8,
+              "maxSeats": 20
+            },
+            "versionState": "live",
+            "appId": 10211041,
+            "description": "Available for accounts of up to 20 users",
+            "extraData": {
+              "bullets": [
+                "Support for multiple messenger services",
+                "Simple setup",
+                "Easy to use"
+              ],
+              "monthlyFee": 10,
+              "yearlyFee": 8,
+              "maxSeats": 20
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10211041-1-notification_total_seat_025",
+            "appPlanId": "notification_total_seat_025",
+            "name": "Plan with up to 25 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 13,
+              "yearly": 10,
+              "maxSeats": 25
+            },
+            "versionState": "live",
+            "appId": 10211041,
+            "description": "Available for accounts of up to 25 users",
+            "extraData": {
+              "bullets": [
+                "Support for multiple messenger services",
+                "Simple setup",
+                "Easy to use"
+              ],
+              "monthlyFee": 13,
+              "yearlyFee": 10,
+              "maxSeats": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10211041-1-notification_total_seat_030",
+            "appPlanId": "notification_total_seat_030",
+            "name": "Plan with up to 30 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 15,
+              "yearly": 12,
+              "maxSeats": 30
+            },
+            "versionState": "live",
+            "appId": 10211041,
+            "description": "Available for accounts of up to 30 users",
+            "extraData": {
+              "bullets": [
+                "Support for multiple messenger services",
+                "Simple setup",
+                "Easy to use"
+              ],
+              "monthlyFee": 15,
+              "yearlyFee": 12,
+              "maxSeats": 30
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10211041-1-notification_total_seat_050",
+            "appPlanId": "notification_total_seat_050",
+            "name": "Plan with up to 50 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 25,
+              "yearly": 20,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10211041,
+            "description": "Available for accounts of up to 50 users",
+            "extraData": {
+              "bullets": [
+                "Support for multiple messenger services",
+                "Simple setup",
+                "Easy to use"
+              ],
+              "monthlyFee": 25,
+              "yearlyFee": 20,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10211041-1-notification_total_seat_200",
+            "appPlanId": "notification_total_seat_200",
+            "name": "Plan with up to 200 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 70,
+              "yearly": 50,
+              "maxSeats": 200
+            },
+            "versionState": "live",
+            "appId": 10211041,
+            "description": "Available for accounts of up to 200 users",
+            "extraData": {
+              "bullets": [
+                "Support for multiple messenger services",
+                "Simple setup",
+                "Easy to use"
+              ],
+              "monthlyFee": 70,
+              "yearlyFee": 50,
+              "maxSeats": 200
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10211041-1-notification_total_seat_Unlimited",
+            "appPlanId": "notification_total_seat_Unlimited",
+            "name": "Plan with unlimited seats",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 250,
+              "yearly": 200,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10211041,
+            "description": "Available for accounts of up to 200 or more users",
+            "extraData": {
+              "bullets": [
+                "Support for multiple messenger services",
+                "Simple setup",
+                "Easy to use"
+              ],
+              "monthlyFee": 250,
+              "yearlyFee": 200,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-01-06T05:51:11.759Z",
+          "id": 10505134
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Work from everywhere"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://msg.oculuslabs.co.kr/monday/terms",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000803,
+      "app_id": 10395063,
+      "name": "Capable PBXware",
+      "type": "archived",
+      "date": "2026-10-20",
+      "installs": null,
+      "app": {
+        "id": 10000803,
+        "marketplace_developer_id": 10000142,
+        "app_id": 10395063,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000803/10000803_2025_4_12_8_1_43_tottvkd.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000803/10000803_2025_4_12_8_1_47_8fx23a7.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000803/10000803_2025_4_12_8_1_50_hbcioso.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000803/10000803_2025_4_12_8_1_54_u84cqoy.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p>📞 Seamlessly Integrate, 🔄 Automate, and 📈 Optimise your team’s communication with the Capable PBXware Integration for&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>.</p><p><br></p><p>Easily connect your Bicom Systems PBXware phone system to&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>, enabling your team to manage calls, track communications, and capture insights directly within your workflows.</p><p><br></p><p><strong>🌟 Key Capabilities</strong></p><ul><li>📞 Number Prefixing - Tailor your call routing with per-board number prefixing rules via our board automation</li></ul><p><strong>🚀 Coming Soon:</strong></p><ul><li>🔗 Track calls and messages in&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;Automatically. log all inbound and outbound calls, including call details like duration, time, and who made the call, directly to your&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;board</li><li>📊 Insightful reporting - Track call activity metrics and generate reports within&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>.</li><li>🔔 Stay notified - Trigger automations based on call activities, like notifying team members when a key contact calls or updating task statuses after calls.</li><li>🔄 Keep everything up to date - Real-time syncing ensures that all data between PBXware and&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;stays consistent, reducing manual data entry and errors.</li></ul><p><strong>⏱️ Get started in seconds:</strong></p><p>With just a few quick setup steps, you’ll be ready to enhance your communication management by connecting your Bicom Systems PBXware phone system with&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>.</p><p><br></p><p>👉 For any questions send an email to support@capablekoala.co</p><p><br></p><p>Brought to you by&nbsp;<a href=\"https://capablekoala.co/\" rel=\"noopener noreferrer\" target=\"_blank\">Capable Koala Co 🐨</a></p>",
+        "short_description": "Create prefixed phone numbers for your PBXware phone system",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000803/10000803_2025_4_12_8_1_12_hb13lvfk.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000803/10000803_2025_4_12_8_0_47_iqr0ez5f.png",
+        "feedback_url": "support@capablekoala.co",
+        "privacy_policy_url": "https://capablekoala.co/privacy/",
+        "featured": false,
+        "name": "Capable PBXware",
+        "how_to_use_url": "https://help.capablekoala.co/capable-pbxware/",
+        "external_pricing_url": null,
+        "keywords": "PBXware, bicom systems, phone integration, call logging",
+        "compliance_answers": [],
+        "created_at": "2025-05-12T07:30:06.000Z",
+        "updated_at": "2026-10-19T12:27:05.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 day free trial",
+        "label": null,
+        "app_values": [
+          "Everyday tasks"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://capablekoala.co/terms/",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write,account:read",
+        "app_client_id": "bd2e56077052752fd7d980841d6a9458",
+        "app_color": {
+          "hsl": {
+            "h": 227.3076923076923,
+            "s": 0.7027027027027026,
+            "l": 0.1450980392156863,
+            "a": 1
+          },
+          "hex": "#0b163f",
+          "rgb": {
+            "r": 11,
+            "g": 22,
+            "b": 63,
+            "a": 1
+          },
+          "hsv": {
+            "h": 227.3076923076923,
+            "s": 0.8253968253968254,
+            "v": 0.24705882352941178,
+            "a": 1
+          },
+          "oldHue": 215.27272727272725,
+          "source": "hex"
+        },
+        "plans": [
+          {
+            "id": "10395063-1-up_to_50",
+            "appPlanId": "up_to_50",
+            "name": "Up to 50 users",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 49,
+              "yearly": 41,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10395063,
+            "description": "Use all features of the Capable PBXware app with up to 50 users in your monday account",
+            "extraData": {
+              "bullets": [
+                "Access to all utilities such as number prefixing for call routing"
+              ],
+              "monthlyFee": 49,
+              "yearlyFee": 41,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10395063-1-up_to_100",
+            "appPlanId": "up_to_100",
+            "name": "Up to 100 users",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 99,
+              "yearly": 82,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10395063,
+            "description": "Use all features of the Capable PBXware app with up to 100 users in your monday account",
+            "extraData": {
+              "bullets": [
+                "Access to all utilities such as number prefixing for call routing"
+              ],
+              "monthlyFee": 99,
+              "yearlyFee": 82,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10395063-1-above_100",
+            "appPlanId": "above_100",
+            "name": "More than 100 users",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 149,
+              "yearly": 123,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10395063,
+            "description": "Use all features of the Capable PBXware app with unlimited users in your monday account",
+            "extraData": {
+              "bullets": [
+                "Access to all utilities such as number prefixing for call routing"
+              ],
+              "monthlyFee": 149,
+              "yearlyFee": 123,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-05-13T06:44:01.071Z",
+          "id": 10769475
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Everyday tasks"
+          ],
+          "pricing_data": "14 day free trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://capablekoala.co/terms/",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000880,
+      "app_id": 10451775,
+      "name": "Deleted Item Alerts",
+      "type": "archived",
+      "date": "2026-10-20",
+      "installs": null,
+      "app": {
+        "id": 10000880,
+        "marketplace_developer_id": 10000021,
+        "app_id": 10451775,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000880/10000880_2025_6_30_9_35_47_ufsqx8gl.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000880/10000880_2025_6_30_9_35_50_fzyknkj.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000880/10000880_2025_6_30_9_35_53_zl6el7dj.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p>🚨 NEVER LOSE TRACK OF DELETED ITEMS AGAIN! 🚨</p><p>😱 Has someone accidentally deleted a critical task? Did an important item mysteriously disappear? With Deleted Item Alerts, you'll know INSTANTLY when items meeting your conditions get removed from your&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;boards!</p><p>✅ Why You Need This:</p><p>🛡️ Catch accidental deletions before they become disasters</p><p>🔒 Detect unauthorized removals by team members</p><p>📊 Maintain data integrity across all your boards</p><p>⚡ Get real-time notifications via email, Slack, or in-app alerts</p><p>🎯 Perfect For:</p><p>👨‍💼 Project Managers protecting critical milestones</p><p>👩‍💻 Team Leads monitoring workflow changes</p><p>🔧 Admins safeguarding company data</p><p>💼 Anyone who can't afford to lose important items</p><p>🚀 Smart Features:</p><p>🎛️ Custom condition builder (status, assignee, priority, dates, custom fields)</p><p>📱 Multiple notification channels</p><p>📈 Deletion logs and reporting</p><p>🔄 Easy setup in minutes</p><p>💡 Real Examples:</p><p>Get alerted when high-priority bugs are deleted</p><p>Monitor if sales leads disappear unexpectedly</p><p>Track removal of approved budget items</p><p>Catch deletion of completed project deliverables</p><p>🎁 READY TO PROTECT YOUR BOARDS?</p><p>Contact us today for a FREE DEMO and see how Deleted Item Alerts transforms your workflow security!</p><p>Don't let important work vanish without a trace! 🔥</p>",
+        "short_description": "Deletion alerts to catch mistakes & prevent abuse 🗑️",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000880/10000880_2025_6_30_9_35_10_8i3wruy.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000880/10000880_2025_6_30_9_35_7_87hxuk2.png",
+        "feedback_url": "support@spicytab.com",
+        "privacy_policy_url": "https://www.spicytab.com/privacy-policy",
+        "featured": false,
+        "name": "Deleted Item Alerts",
+        "how_to_use_url": "https://www.spicytab.com/how-to-use/deleted-item-alerts",
+        "external_pricing_url": null,
+        "keywords": "deleted item, \ndeleted item alerts, \ndeleted alerts, \nitem alerts, \nalerts, \ndeleted item notification, \ndeleted notification",
+        "compliance_answers": [],
+        "created_at": "2025-07-30T09:31:25.000Z",
+        "updated_at": "2026-10-19T12:27:55.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Customized views"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://www.spicytab.com/terms-of-service",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,users:read,notifications:write,webhooks:read,webhooks:write,workspaces:read,account:read,me:read",
+        "app_client_id": "72d000c4b3d71e25a46930a0e91346c7",
+        "app_color": {
+          "hsl": {
+            "h": 135.2173913043478,
+            "s": 0.6330275229357798,
+            "l": 0.42745098039215684,
+            "a": 1
+          },
+          "hex": "#28b24b",
+          "rgb": {
+            "r": 40,
+            "g": 178,
+            "b": 75,
+            "a": 1
+          },
+          "hsv": {
+            "h": 135.2173913043478,
+            "s": 0.7752808988764045,
+            "v": 0.6980392156862745,
+            "a": 1
+          },
+          "oldHue": 217.94117647058823,
+          "source": "hex"
+        },
+        "plans": [
+          {
+            "id": "10451775-1-basic",
+            "appPlanId": "basic",
+            "name": "Basic",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "standard",
+              "monthly": 16,
+              "yearly": 11
+            },
+            "versionState": "live",
+            "appId": 10451775,
+            "description": "Complete deletion protection for your monday.com boards",
+            "extraData": {
+              "bullets": [
+                "Unlimited alerts and monitoring",
+                "Configurable conditions and rules",
+                "Secure your important work",
+                "Unlimited customer support"
+              ],
+              "monthlyFee": 16,
+              "yearlyFee": 11
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-07-30T08:07:19.202Z",
+          "id": 10971611
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Customized views"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://www.spicytab.com/terms-of-service",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000988,
+      "app_id": 10587890,
+      "name": "Sales AI Agent",
+      "type": "archived",
+      "date": "2026-10-20",
+      "installs": null,
+      "app": {
+        "id": 10000988,
+        "marketplace_developer_id": 10000273,
+        "app_id": 10587890,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000988/10000988_2025_11_3_11_31_0_103axaq.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000988/10000988_2025_11_3_11_31_8_spphrtx.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000988/10000988_2025_11_3_11_31_15_uvj4ila.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000988/10000988_2025_11_3_11_31_23_9zjrrrk.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p><strong>Sales AI Agent: Your Automated Closing Partner on&nbsp;</strong><a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>monday.com</strong></a></p><p>Sales AI Agent is the ultimate solution that transforms your&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;board into a powerful, predictive sales engine. Stop wasting hours on manual research and generic outreach—let AI handle the heavy lifting.</p><p>Why it matters: Boost team efficiency, increase personalization, and shorten your sales cycle by integrating cutting-edge AI directly into your workflow.</p><p><a href=\"https://calendly.com/atul31gupta\" rel=\"noopener noreferrer\" target=\"_blank\">Schedule a demo</a>&nbsp;to see how Sales AI Agent can transform your sales board.</p><p><strong>🔑 Key Benefits: Three Core AI Agents</strong></p><p>🔎 Research Agent</p><ul><li>Instant Insights: Automatically pull and summarize critical company and prospect data for up to 200 leads(at a time) directly into your item card.</li><li>Informed Selling: Eliminate manual web searches and ensure every conversation is built on actionable intelligence.</li></ul><p>✍️ Email Drafting Agent</p><ul><li>Personalized Outreach: AI crafts high-converting, personalized email drafts based on the item's data and the research generated.</li></ul><p>⚙️ Sequencing Agent</p><ul><li>Automated Follow-ups: Create and manage multi-step, personalized sequences that trigger automatically based on status changes or other board activity.</li></ul><p><strong>👥 Who It's For</strong></p><ul><li>Sales Development Reps (SDRs): Automate prospecting research and initial cold email drafting.</li><li>Account Executives (AEs): Ensure follow-up sequences run smoothly and consistently.</li><li>Sales Managers: Gain visibility into outreach effectiveness and sequence performance.</li></ul><p>Sales AI Agent is the future of automated, intelligent selling on&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>.</p><p>📖&nbsp;<a href=\"https://store.cloudvandana.com/sales-ai-agent/\" rel=\"noopener noreferrer\" target=\"_blank\">View full documentation</a></p><p>💬 Contact us:&nbsp;<a href=\"mailto:apps@cloudvandana.com\" rel=\"noopener noreferrer\" target=\"_blank\">apps@cloudvandana.com</a></p>",
+        "short_description": "Automate research, drafting emails, and execute sequences",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000988/10000988_2025_11_3_11_30_24_a64mceq.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000988/10000988_2025_11_3_11_29_50_3e5ki2bi.png",
+        "feedback_url": "apps@cloudvandana.com",
+        "privacy_policy_url": "https://cloudvandana.com/privacy-policy/",
+        "featured": false,
+        "name": "Sales AI Agent",
+        "how_to_use_url": "https://store.cloudvandana.com/sales-ai-agent/",
+        "external_pricing_url": null,
+        "keywords": "ai,ai agent,sales ai agent,sales agent,agent,email ai agent,email drafting agent,email sequencing agent,ai sdr,automate sales",
+        "compliance_answers": [],
+        "created_at": "2025-12-03T11:29:15.000Z",
+        "updated_at": "2026-10-19T09:31:15.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "Free Plan Available",
+        "label": null,
+        "app_values": [
+          "Works with AI Assistant"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://cloudvandana.com/terms-of-service/",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": "G-7EDBKYY3WS",
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write,users:read,account:read",
+        "app_client_id": "088eb3386df36d32170b57030ac2b558",
+        "app_color": {
+          "hsl": {
+            "h": 260,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 260,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 260,
+          "source": "rgb"
+        },
+        "plans": [
+          {
+            "id": "10587890-1-salesaiagent_upto100",
+            "appPlanId": "salesaiagent_upto100",
+            "name": "PLAN 100",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "100 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-1-salesaiagent_upto500",
+            "appPlanId": "salesaiagent_upto500",
+            "name": "PLAN 500",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 13,
+              "yearly": 12
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "500 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 13,
+              "yearlyFee": 12
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-1-salesaiagent_upto1000",
+            "appPlanId": "salesaiagent_upto1000",
+            "name": "PLAN 1000",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 25,
+              "yearly": 24
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "1000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 25,
+              "yearlyFee": 24
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-1-salesaiagent_upto2500",
+            "appPlanId": "salesaiagent_upto2500",
+            "name": "PLAN 2500",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 63,
+              "yearly": 61
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "2500 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 63,
+              "yearlyFee": 61
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-1-salesaiagent_upto5000",
+            "appPlanId": "salesaiagent_upto5000",
+            "name": "PLAN 5000",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 125,
+              "yearly": 122
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "5000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 125,
+              "yearlyFee": 122
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-1-salesaiagent_upto7500",
+            "appPlanId": "salesaiagent_upto7500",
+            "name": "PLAN 7500",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 185,
+              "yearly": 181
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "7500 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 185,
+              "yearlyFee": 181
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-1-salesaiagent_upto10000",
+            "appPlanId": "salesaiagent_upto10000",
+            "name": "PLAN 10000",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 245,
+              "yearly": 241
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "10000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 245,
+              "yearlyFee": 241
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-1-salesaiagent_upto15000",
+            "appPlanId": "salesaiagent_upto15000",
+            "name": "PLAN 15000",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 370,
+              "yearly": 365
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "15000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 370,
+              "yearlyFee": 365
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-1-salesaiagent_upto25000",
+            "appPlanId": "salesaiagent_upto25000",
+            "name": "PLAN 25000",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 615,
+              "yearly": 610
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "25000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 615,
+              "yearlyFee": 610
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-1-salesaiagent_upto50000",
+            "appPlanId": "salesaiagent_upto50000",
+            "name": "PLAN 50000",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 1200,
+              "yearly": 1190
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "50000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 1200,
+              "yearlyFee": 1190
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-2-salesaiagent_upto100",
+            "appPlanId": "salesaiagent_upto100",
+            "name": "PLAN 100",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "One time 100 credits.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-2-salesaiagent_upto500",
+            "appPlanId": "salesaiagent_upto500",
+            "name": "PLAN 500",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 13,
+              "yearly": 12
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "500 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 13,
+              "yearlyFee": 12
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-2-salesaiagent_upto1000",
+            "appPlanId": "salesaiagent_upto1000",
+            "name": "PLAN 1000",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 25,
+              "yearly": 24
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "1000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 25,
+              "yearlyFee": 24
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-2-salesaiagent_upto2500",
+            "appPlanId": "salesaiagent_upto2500",
+            "name": "PLAN 2500",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 63,
+              "yearly": 61
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "2500 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 63,
+              "yearlyFee": 61
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-2-salesaiagent_upto5000",
+            "appPlanId": "salesaiagent_upto5000",
+            "name": "PLAN 5000",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 125,
+              "yearly": 122
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "5000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 125,
+              "yearlyFee": 122
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-2-salesaiagent_upto7500",
+            "appPlanId": "salesaiagent_upto7500",
+            "name": "PLAN 7500",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 185,
+              "yearly": 181
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "7500 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 185,
+              "yearlyFee": 181
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-2-salesaiagent_upto10000",
+            "appPlanId": "salesaiagent_upto10000",
+            "name": "PLAN 10000",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 245,
+              "yearly": 241
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "10000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 245,
+              "yearlyFee": 241
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-2-salesaiagent_upto15000",
+            "appPlanId": "salesaiagent_upto15000",
+            "name": "PLAN 15000",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 370,
+              "yearly": 365
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "15000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 370,
+              "yearlyFee": 365
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-2-salesaiagent_upto25000",
+            "appPlanId": "salesaiagent_upto25000",
+            "name": "PLAN 25000",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 615,
+              "yearly": 610
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "25000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 615,
+              "yearlyFee": 610
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10587890-2-salesaiagent_upto50000",
+            "appPlanId": "salesaiagent_upto50000",
+            "name": "PLAN 50000",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 1200,
+              "yearly": 1190
+            },
+            "versionState": "live",
+            "appId": 10587890,
+            "description": "50000 credits per month.",
+            "extraData": {
+              "bullets": [
+                "Access to the Full Functionality of the app.",
+                "Full use of this app for all team members."
+              ],
+              "monthlyFee": 1200,
+              "yearlyFee": 1190
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-12-01T12:59:42.532Z",
+          "id": 11888402
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Works with AI Assistant"
+          ],
+          "pricing_data": "Free Plan Available",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://cloudvandana.com/terms-of-service/",
+          "available_for_products": [],
+          "google_analytics_tag_id": "G-7EDBKYY3WS"
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000154,
       "app_id": 10048678,
