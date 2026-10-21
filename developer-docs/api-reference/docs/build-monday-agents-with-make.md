@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-15T10:21:14.000Z
+updatedAt: 2026-10-20T11:09:36.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -58,7 +58,7 @@ The agent exists, but it has no logic yet. The next step attaches a Make scenari
 
 ### 2. Start from the template
 
-From the same screen in monday.com, open the [**Monday Agent template**](https://developer.monday.com/api-reference/docs/build-monday-agents-with-make). This opens Make, where you can click **Start guided setup** or **Create new scenario from template**.
+From the same screen in monday.com, open the [Monday Agent template](https://www.make.com/en/integration/19985-monday-agent?templatePublicId=20019). This opens Make, where you can click **Start guided setup** or **Create new scenario from template**.
 
 ![](https://files.readme.io/301f03aee7d912f4aa33d0cab226d73ea2c5b14799714bc9e69f29d67add2386-image.png)
 

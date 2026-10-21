@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-08T17:38:08.000Z
+updatedAt: 2026-10-20T13:34:29.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -21,7 +21,7 @@ The monday MCP server lets AI assistants, agents, and other MCP clients work wit
 
 The **hosted MCP permission** enables a set of pre-approved third-party agents, such as Claude and ChatGPT. Those agents connect through their usual flow. See [Compatible MCP clients](https://developer.monday.com/api-reference/docs/compatible-mcp-clients).
 
-![](https://files.readme.io/c240f60f3435be1ad77a98a140dffb85679253cb7aca60ca55bf7993c699ab48-image.png)
+![](https://files.readme.io/066a1829991554809e1952d3cb32a6942da4f0abebe41e33999be91615d84ebb-image.png)
 
 **Dynamic connectors** let an account admin approve additional connections and their redirect URIs. Some of these clients use **dynamic client registration (DCR)** to register an OAuth client automatically when connecting.&#x20;
 
