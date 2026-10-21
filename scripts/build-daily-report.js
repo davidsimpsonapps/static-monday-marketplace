@@ -126,6 +126,10 @@ const MAX_OUTPUT_TOKENS = 3000;
 const MAX_DESCRIPTION_CHARS = 1500;
 const MAX_DIFF_CHARS_PER_FILE = 4000;
 const MAX_DIFF_CHARS_TOTAL = 30000;
+// Pages with the same added and removed lines (e.g. a frontmatter field added
+// to every page) are sent as one example page with a count, if there are at
+// least this many.
+const SAME_CHANGE_MIN_PAGES = 5;
 const OMITTED_DIFF = "[diff omitted to stay within the daily budget - the page changed, but the details aren't available]";
 
 const SITE_URL = require("../src/_data/site.json").url;
@@ -518,16 +522,11 @@ function collectDocsChanges(base, tip) {
       return { status: status[0], file, previousFile: files.length > 1 ? files[0] : null };
     });
 
-  let total = 0;
-  return changes.map((change) => {
+  const diffs = changes.map((change) => {
     let diff = git(["diff", "--find-renames", base, tip, "--", ...[change.previousFile, change.file].filter(Boolean)]);
     if (diff.length > MAX_DIFF_CHARS_PER_FILE) {
       diff = `${diff.slice(0, MAX_DIFF_CHARS_PER_FILE)}\n[diff truncated - ${diff.length} characters in total]`;
     }
-    if (total + diff.length > MAX_DIFF_CHARS_TOTAL) {
-      diff = OMITTED_DIFF;
-    }
-    total += diff.length;
     return {
       key: change.file,
       status: { A: "added", D: "removed", R: "renamed", M: "modified" }[change.status] || "modified",
@@ -535,6 +534,30 @@ function collectDocsChanges(base, tip) {
       diff,
     };
   });
+
+  let total = 0;
+  return groupSameChanges(diffs).map((change) => {
+    if (total + change.diff.length > MAX_DIFF_CHARS_TOTAL) {
+      change.diff = OMITTED_DIFF;
+    }
+    total += change.diff.length;
+    return change;
+  });
+}
+
+// Replaces pages that share the same added and removed lines with the first
+// of them, counting the others in sameChangeOnOtherPages.
+function groupSameChanges(changes) {
+  const groups = new Map();
+  for (const change of changes) {
+    const lines = change.diff.split("\n").filter((line) => /^[+-]/.test(line) && !/^(\+\+\+|---) /.test(line));
+    const signature = `${change.status}\n${lines.join("\n")}`;
+    if (!groups.has(signature)) groups.set(signature, []);
+    groups.get(signature).push(change);
+  }
+  return [...groups.values()].flatMap((group) =>
+    group.length < SAME_CHANGE_MIN_PAGES ? group : [{ ...group[0], sameChangeOnOtherPages: group.length - 1 }],
+  );
 }
 
 // ---- Claude ----
@@ -582,7 +605,7 @@ const SYSTEM_PROMPT = `You write the daily news on apps-for-monday.com, a public
 You receive JSON with the day's facts, grouped by topic. Every fact in it has already been selected as worth reporting - cover all of them, except developer docs changes, which you filter yourself (see below). Don't add facts, causes, numbers or speculation that aren't in the input, and never mention what didn't happen ("no outages", "everything else was quiet").
 
 Write exactly one article for each topic that has facts in the input, and none for topics without facts:
-- "developer-docs" (docsChanges): git diffs of monday.com's developer documentation (developer.monday.com), crawled as Markdown once a day. Only report changes that matter to someone building on the platform: new or removed API fields, queries, mutations, arguments, limits, deprecations, new features or guides, changed behavior, changed requirements for marketplace apps. Ignore typo and grammar fixes, rewording that doesn't change meaning, formatting, link or image changes, navigation, crawl noise and pages that aren't about building on the platform. Be specific: name the field, query or limit that changed, using Markdown code spans for API names, and link the docs page. Some diffs are omitted to keep the request small; for those pages, only report that a page was added or removed. If no change is worth reporting, write no developer-docs article at all.
+- "developer-docs" (docsChanges): git diffs of monday.com's developer documentation (developer.monday.com), crawled as Markdown once a day. Only report changes that matter to someone building on the platform: new or removed API fields, queries, mutations, arguments, limits, deprecations, new features or guides, changed behavior, changed requirements for marketplace apps. Ignore typo and grammar fixes, rewording that doesn't change meaning, formatting, link or image changes, navigation, crawl noise and pages that aren't about building on the platform. Be specific: name the field, query or limit that changed, using Markdown code spans for API names, and link the docs page. Some diffs are omitted to keep the request small; for those pages, only report that a page was added or removed. An entry with sameChangeOnOtherPages stands for the same change on that many more pages; it's usually a site-wide template or crawl change. If no change is worth reporting, write no developer-docs article at all.
 - "incidents" (incidents): entries from the site's list of monday.com platform problems that app developers ran into. "added" means newly reported, "resolved" means marked as fixed, "added-resolved" means recorded and resolved at the same time. Explain what is (or was) broken and who is affected; for resolved ones, how it was resolved. Link to links.incidents.
 - "platform-status" (mondayIncidents, outages, slowdowns): mondayIncidents are incidents monday.com itself posted on its official status page, with their updates and the components (by region) that were degraded; lead with these, say what was affected, when (UTC) and whether it is resolved, and link each one to its url. Outages are monday.com infrastructure healthchecks that were unhealthy (failing); slowdowns are periods of decreased performance longer than 15 minutes. Give the time window in UTC, the region and the affected checks in plain words. Link to links.serviceStatus.
 - "new-apps" (newApps): apps that appeared in the marketplace. Say in a sentence or two what each app does and who it is for, based on its description but without marketing language, superlatives or feature lists. Link the app name to its url on first mention.
@@ -645,7 +668,13 @@ function articleInput(data, windowStart) {
       description,
       resolution,
     })),
-    docsChanges: data.docsChanges.map(({ key, status, url, diff }) => ({ page: key, status, url, diff })),
+    docsChanges: data.docsChanges.map(({ key, status, url, diff, sameChangeOnOtherPages }) => ({
+      page: key,
+      status,
+      url,
+      diff,
+      ...(sameChangeOnOtherPages && { sameChangeOnOtherPages }),
+    })),
     // Screenshots are sent separately (see communityContent)
     slackPosts: data.slackPosts.map(({ images, replies, ...post }) => ({
       ...post,
