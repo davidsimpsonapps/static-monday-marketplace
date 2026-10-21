@@ -1,7 +1,229 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-10-20",
+  "processedThrough": "2026-10-21",
   "events": [
+    {
+      "id": 10001132,
+      "app_id": 10989624,
+      "name": "AI Workflow Builder",
+      "type": "archived",
+      "date": "2026-10-21",
+      "installs": null,
+      "app": {
+        "id": 10001132,
+        "marketplace_developer_id": 100000188,
+        "app_id": 10989624,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10001132/10001132_2026_3_6_6_22_54_44phtue.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001132/10001132_2026_3_6_6_23_3_cs4t00m.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001132/10001132_2026_3_6_6_23_12_jrad3oj.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001132/10001132_2026_3_6_6_23_19_djtzm55.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001132/10001132_2026_3_6_6_23_26_6qgzad6k.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001132/10001132_2026_3_6_6_23_48_la4yrv4.mp4",
+            "type": "video"
+          }
+        ],
+        "description": "<p>Describe what you want in plain English — AI Workflow Builder turns it into a working automation. No templates, no code.</p><p><br></p><p><strong>What you can automate&nbsp;&nbsp;&nbsp;&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>- When an item is created → create it on another board with the same values</p><p>- When a column changes → sync the change to another board instantly</p><p>- When status matches a group name → move the item to that group automatically</p><p>- When all subitems are done → update the parent item status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>- When status changes → notify the owner, assign a person, update multiple columns</p><p>- Archive or delete items when they reach a specific status</p><p>- Chain multiple actions from a single trigger — no limits on steps&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;</p><p><strong>Works with items, subitems, and cross-board connections. If you can describe it, AI Workflow Builder can automate it.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p><strong>Problems it solves</strong></p><p><br></p><p>- Teams waste time on repetitive manual actions that should run automatically</p><p>- Native automations can't handle multi-step or cross-board workflows</p><p>- Most tools are too technical — non-engineers can't build or maintain them</p><p>- Automations fail silently with no way to know what went wrong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>- Connecting multiple apps requires separate tools and manual workarounds</p><p><br></p><p><strong>What it does</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>- Chat-based setup — describe the automation, AI builds it</p><p>- Verified before going live — you confirm it works before it runs on real data</p><p>- Fires instantly on webhook triggers the moment conditions are met&nbsp;&nbsp;&nbsp;&nbsp;</p><p>- Full execution logs with trace IDs on every run&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>- Automatic failure diagnostics with suggested fixes</p><p><br></p><p>&nbsp;Book a call: <a href=\"https://www.centworks.io/#contact\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.centworks.io/#contact</a></p>",
+        "short_description": "AI-powered automation builder for monday.com workflows",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10001132/10001132_2026_3_6_6_22_19_zflmcet.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10001132/10001132_2026_3_6_6_22_0_xgq8boz.png",
+        "feedback_url": "support@centworks.io",
+        "privacy_policy_url": "https://www.centworks.io/friday-ai/privacy-policy.html",
+        "featured": false,
+        "name": "AI Workflow Builder",
+        "how_to_use_url": "https://www.centworks.io/friday-ai/how-to-use.html",
+        "external_pricing_url": null,
+        "keywords": "automation,workflow automation,AI automation,automations builder,task automation,AI automation,workflow builder,status automation,cross-board sync,subitem automation",
+        "compliance_answers": [],
+        "created_at": "2026-04-06T06:21:42.000Z",
+        "updated_at": "2026-10-20T06:33:43.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "Free plan available",
+        "label": null,
+        "app_values": [
+          "Works with AI Assistant"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://www.centworks.io/friday-ai/terms-of-service.html",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read,boards:read,webhooks:write,webhooks:read,boards:write,workspaces:read,workspaces:write,users:read,account:read,notifications:write,updates:read,updates:write",
+        "app_client_id": "6be972821f7ed51bd3943ff74b406c9d",
+        "app_color": "#307E7E",
+        "plans": [
+          {
+            "id": "10989624-1-free",
+            "appPlanId": "free",
+            "name": "Free ",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10989624,
+            "description": "Try Friday AI free. Build up to 3 AI-powered automations and see how it transforms your workflows.",
+            "extraData": {
+              "bullets": [
+                "3 active automations",
+                "50 successful runs/month",
+                "AI-guided automation setup (chat-based builder)",
+                "Subitems support",
+                "And all core features"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10989624-1-basic",
+            "appPlanId": "basic",
+            "name": "Basic",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 19,
+              "yearly": 15
+            },
+            "versionState": "live",
+            "appId": 10989624,
+            "description": "Perfect for small teams. Run up to 15 automations and 500 times per month - more power, same simplicity",
+            "extraData": {
+              "bullets": [
+                "15 active automations",
+                "500 successful runs/month",
+                "All features included"
+              ],
+              "monthlyFee": 19,
+              "yearlyFee": 15
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10989624-1-standard",
+            "appPlanId": "standard",
+            "name": "Standard",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 49,
+              "yearly": 39
+            },
+            "versionState": "live",
+            "appId": 10989624,
+            "description": "For teams that run on automation. Scale to 50 automations and 2,000 monthly runs with advanced workflow logic.",
+            "extraData": {
+              "bullets": [
+                "50 active automations",
+                "2,000 successful runs/month",
+                "All features included"
+              ],
+              "monthlyFee": 49,
+              "yearlyFee": 39
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10989624-1-enterprise",
+            "appPlanId": "enterprise",
+            "name": "Enterprise",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 199,
+              "yearly": 159
+            },
+            "versionState": "live",
+            "appId": 10989624,
+            "description": "Unlimited automations. Unlimited runs. Built for organizations that can't afford to be capped.",
+            "extraData": {
+              "bullets": [
+                "Unlimited active automations",
+                "Unlimited monthly runs",
+                "All features included"
+              ],
+              "monthlyFee": 199,
+              "yearlyFee": 159
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2026-05-17T12:39:14.058Z",
+          "id": 14733220
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Works with AI Assistant"
+          ],
+          "pricing_data": "Free plan available",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://www.centworks.io/friday-ai/terms-of-service.html",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000181,
       "app_id": 10055933,
