@@ -28,3 +28,20 @@
     </svg>
 </span>
 {% endmacro %}
+
+{# Shown on cards/pages for a company that presents itself as based in one
+   country but is based in another (see the offshoreStatus filter).
+   status.level is "confirmed" (red) or "possible" (orange). #}
+{% macro offshoreBadge(status, srText = true) %}
+{% if status %}
+<span data-toggle="tooltip" title="{{ status.text }}" data-offshore="{{ status.level }}">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon_a812034417 Rv7UF clickable_e41bd603c6" data-testid="icon">
+        <circle cx="10" cy="10" r="7.25" stroke="{{ '#E2445C' if status.level == 'confirmed' else '#FDAB3D' }}" stroke-width="1.5"></circle>
+        <path d="M2.75 10h14.5M10 2.75c1.9 2 2.9 4.4 2.9 7.25S11.9 15.25 10 17.25M10 2.75C8.1 4.75 7.1 7.15 7.1 10s1 5.25 2.9 7.25" stroke="{{ '#E2445C' if status.level == 'confirmed' else '#FDAB3D' }}" stroke-width="1.2"></path>
+        <circle cx="15.5" cy="4.5" r="3.5" fill="{{ '#E2445C' if status.level == 'confirmed' else '#FDAB3D' }}"></circle>
+        <path d="M15.5 2.8v2M15.5 6.1v.05" stroke="#fff" stroke-width="1.3" stroke-linecap="round"></path>
+    </svg>
+    {% if srText %}<span class="sr-only">{{ status.text }}</span>{% endif %}
+</span>
+{% endif %}
+{% endmacro %}

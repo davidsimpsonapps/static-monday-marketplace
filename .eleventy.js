@@ -176,13 +176,22 @@ module.exports = async function (eleventyConfig) {
   // Add custom filter to find monday.com partners (from the live partners
   // API data) by a list of ids, used to link vendor pages to their partner
   // pages. Highest partner tier first.
-  const partnerTierRank = { PLATINUM: 0, GOLD: 1, SILVER: 2, BRONZE: 3, AUTHORIZED: 4 };
+  const partnerTierRank = {
+    PLATINUM: 0,
+    GOLD: 1,
+    SILVER: 2,
+    BRONZE: 3,
+    AUTHORIZED: 4,
+  };
   eleventyConfig.addFilter("findPartnersByIds", function (partners, ids) {
     if (!Array.isArray(partners) || !Array.isArray(ids)) return [];
     return ids
       .map((id) => partners.find((partner) => partner.id === id))
       .filter(Boolean)
-      .sort((a, b) => (partnerTierRank[a.tier] ?? 9) - (partnerTierRank[b.tier] ?? 9));
+      .sort(
+        (a, b) =>
+          (partnerTierRank[a.tier] ?? 9) - (partnerTierRank[b.tier] ?? 9),
+      );
   });
 
   // Add custom filter to find marketplace vendors (from the live vendors API
@@ -221,7 +230,9 @@ module.exports = async function (eleventyConfig) {
     if (source.label) return source.label;
     let label = sourceTypeLabels[source.type] ?? "Source";
     if (source.type === "linkedin" && source.url) {
-      label = source.url.includes("/in/") ? "LinkedIn profile" : "LinkedIn company page";
+      label = source.url.includes("/in/")
+        ? "LinkedIn profile"
+        : "LinkedIn company page";
     }
     return source.id ? `${label} ${source.id}` : label;
   });
@@ -229,6 +240,67 @@ module.exports = async function (eleventyConfig) {
   // Add custom filter to find a vendor's contact name / legal name / postal
   // address record (from our own separately-maintained vendor-details.json)
   // by the vendor's monday.com marketplace developer id
+  // Offshore check for a vendor-details / partner-details entry: a company
+  // that presents itself as based in one country but is based in another.
+  //   confirmed: locationFlag "offshore-moved"; the main address is where it
+  //     is really based, and the country it presents as is the partner
+  //     profile's country (listedCountryCode) or the moved address.
+  //   possible: locationFlag "possible-offshore" (unconfirmed).
+  // "registered-agent" alone gets no badge: plenty of genuine local
+  // companies publish a registered-agent address.
+  eleventyConfig.addFilter(
+    "offshoreStatus",
+    function (details, listedCountryCode) {
+      if (!details?.locationFlag) return null;
+      const countryName = eleventyConfig.getFilter("countryName");
+      const name = (code) => {
+        const n = countryName(code);
+        return /^(United |Netherlands|Philippines|Czech Republic|Bahamas)/.test(
+          n,
+        )
+          ? `the ${n}`
+          : n;
+      };
+      // "UK address (…)" stays as-is; "Registered-agent address" -> "registered-agent address"
+      const lowerFirst = (t) =>
+        /^[A-Z][a-z]/.test(t) ? t.charAt(0).toLowerCase() + t.slice(1) : t;
+      const actual = details.address?.countryCode;
+      if (details.locationFlag === "offshore-moved" && actual) {
+        const moved = (details.alternativeAddresses || []).find(
+          (a) => a.countryCode && a.countryCode !== actual,
+        );
+        const claimed =
+          listedCountryCode && listedCountryCode !== actual
+            ? listedCountryCode
+            : moved?.countryCode;
+        if (!claimed) return null;
+        const via =
+          moved?.countryCode === claimed && moved.label
+            ? ` with a ${lowerFirst(moved.label.replace(/\s*\((.*)\)$/, ", $1"))}`
+            : "";
+        return {
+          level: "confirmed",
+          claimed,
+          actual,
+          text: `Presents as based in ${name(claimed)}${via}, but appears to be based in ${name(actual)}`,
+        };
+      }
+      if (details.locationFlag === "possible-offshore") {
+        const first = (details.notes || "")
+          .split(/(?<=\.)\s/)[0]
+          .replace(/^Possible offshore company:\s*/i, "")
+          .replace(/\.$/, "");
+        return {
+          level: "possible",
+          claimed: actual,
+          actual: null,
+          text: `Possible offshore company${first ? `: ${lowerFirst(first)}` : ""}`,
+        };
+      }
+      return null;
+    },
+  );
+
   eleventyConfig.addFilter("findVendorDetailsById", function (list, id) {
     if (!Array.isArray(list)) return null;
     return list.find((entry) => entry.vendorId === id) ?? null;
@@ -501,15 +573,21 @@ module.exports = async function (eleventyConfig) {
   // newest day first and, within a day, in topic order (reportTopics.js).
   // Hand-written samples (`sample: true`) are for local development only and
   // are left out of production builds.
-  const reportTopicOrder = require("./src/_data/reportTopics.js").map((t) => t.slug);
+  const reportTopicOrder = require("./src/_data/reportTopics.js").map(
+    (t) => t.slug,
+  );
   const getReports = (collection) =>
     collection
       .getFilteredByGlob("./src/reports/*.md")
-      .filter((report) => !(report.data.sample && process.env.NODE_ENV === "production"))
+      .filter(
+        (report) =>
+          !(report.data.sample && process.env.NODE_ENV === "production"),
+      )
       .sort(
         (a, b) =>
           b.date - a.date ||
-          reportTopicOrder.indexOf(a.data.topic) - reportTopicOrder.indexOf(b.data.topic),
+          reportTopicOrder.indexOf(a.data.topic) -
+            reportTopicOrder.indexOf(b.data.topic),
       );
   eleventyConfig.addCollection("reports", getReports);
 
@@ -518,7 +596,8 @@ module.exports = async function (eleventyConfig) {
     const days = [];
     for (const report of getReports(collection)) {
       const day = report.date.toISOString().slice(0, 10);
-      if (days.at(-1)?.day !== day) days.push({ day, date: report.date, reports: [] });
+      if (days.at(-1)?.day !== day)
+        days.push({ day, date: report.date, reports: [] });
       days.at(-1).reports.push(report);
     }
     return days;
@@ -526,7 +605,13 @@ module.exports = async function (eleventyConfig) {
 
   // A topic from reportTopics.js by slug
   eleventyConfig.addFilter("reportTopic", function (slug) {
-    return require("./src/_data/reportTopics.js").find((t) => t.slug === slug) || { slug, label: slug, dot: "" };
+    return (
+      require("./src/_data/reportTopics.js").find((t) => t.slug === slug) || {
+        slug,
+        label: slug,
+        dot: "",
+      }
+    );
   });
 
   // Daily articles of one topic
@@ -538,7 +623,8 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter("sameDayExcept", function (reports, date, url) {
     const day = new Date(date).toISOString().slice(0, 10);
     return reports.filter(
-      (report) => report.url !== url && report.date.toISOString().slice(0, 10) === day,
+      (report) =>
+        report.url !== url && report.date.toISOString().slice(0, 10) === day,
     );
   });
 
@@ -552,7 +638,10 @@ module.exports = async function (eleventyConfig) {
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
-    return escaped.replace(/`([^`]+)`/g, '<code class="rounded bg-gray-100 px-1 py-0.5 text-[0.9em]">$1</code>');
+    return escaped.replace(
+      /`([^`]+)`/g,
+      '<code class="rounded bg-gray-100 px-1 py-0.5 text-[0.9em]">$1</code>',
+    );
   });
 
   eleventyConfig.addCollection("appPages", function (collection) {

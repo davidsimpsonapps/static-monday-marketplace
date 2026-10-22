@@ -4,7 +4,7 @@ title: monday.com partners
 ---
 
 {% from "partials/microsoft-badge.njk" import microsoftBadge %}
-{% from "partials/cross-badges.njk" import vendorBadge %}
+{% from "partials/cross-badges.njk" import vendorBadge, offshoreBadge %}
 
 <style>
 [data-person-title] > span,
@@ -99,6 +99,7 @@ title: monday.com partners
               {% if partnerSite and partnerSite.vendorIds and partnerSite.vendorIds.length %}
                 {{ vendorBadge() }}
               {% endif %}
+              {{ offshoreBadge(partnerSite | offshoreStatus(partner.countryCode)) }}
             </h2>
             <div class="text-sm my-2">
               {{ partner.countryCode | countryName }} •

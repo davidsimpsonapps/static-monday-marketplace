@@ -21,7 +21,7 @@ eleventyComputed:
 {% from "partials/service-card.njk" import serviceCard %}
 {% from "partials/microsoft-badge.njk" import microsoftBadge %}
 {% from "partials/company-details.njk" import companyDetails %}
-{% from "partials/cross-badges.njk" import vendorBadge %}
+{% from "partials/cross-badges.njk" import vendorBadge, offshoreBadge %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.36.4/tocbot.css" integrity="sha512-nJwmkYKmBxqHBZfKnXTiVA2YVIrRULgO+gn6m70r4vqSMCRtQKmRSfd9LozVxcOR7V9/LV0TWLqkmspIHhr1KA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -115,7 +115,15 @@ eleventyComputed:
                 {% if linkedVendors.length %}
                     {{ vendorBadge(linkedVendors[0].name) }}
                 {% endif %}
+                {% set offshore = partnerSite | offshoreStatus(partner.countryCode) %}
+                
               </h1>
+              {% if offshore %}
+                <p class="text-sm mb-1 {{ 'text-red-700' if offshore.level == 'confirmed' else 'text-amber-700' }}" data-offshore-note="{{ offshore.level }}">
+                  {{ offshoreBadge(offshore, false) }}
+                  {{ offshore.text }}. <a href="#company" class="underline">Company details</a>
+                </p>
+              {% endif %}
               {% if linkedVendors.length %}
                 <p class="text-sm text-gray-600 mb-1">
                   Also a marketplace vendor:

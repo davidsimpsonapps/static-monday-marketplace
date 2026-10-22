@@ -2,7 +2,7 @@
 layout: base.njk
 title: monday.com marketplace vendors
 ---
-{% from "partials/cross-badges.njk" import partnerBadge %}
+{% from "partials/cross-badges.njk" import partnerBadge, offshoreBadge %}
 
 <style>
 /* hide for now - we haven't calculated this data */
@@ -94,6 +94,7 @@ title: monday.com marketplace vendors
               {% if cardPartners.length %}
                 {{ partnerBadge(cardPartners[0].tier, cardPartners[0].name) }}
               {% endif %}
+              {{ offshoreBadge(vendorDetail | offshoreStatus(cardPartners[0].countryCode if cardPartners.length else null)) }}
             </h2>
 
             {% if vendorCountryCode %}

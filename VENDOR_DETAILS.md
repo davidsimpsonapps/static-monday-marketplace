@@ -166,6 +166,17 @@ type from a URL; set `id`/`label` by hand for registry numbers.
 
 `validate.js` warns when the note prefix and the flag disagree.
 
+On the site, the `offshoreStatus` filter (`.eleventy.js`) turns the flag into a
+globe badge (`offshoreBadge` in `src/_includes/partials/cross-badges.njk`) on
+vendor/partner cards and pages, plus a sentence under the page heading:
+
+- `offshore-moved` → red badge: "Presents as based in *the partner profile's
+  country or the moved address's country* (with a *moved-address label*), but
+  is based in *`address` country*".
+- `possible-offshore` → orange badge quoting the first sentence of the notes.
+- `registered-agent` → no badge (many genuine local companies publish a
+  registered-agent address).
+
 ## 1. Check what's missing or stale
 
 ```bash

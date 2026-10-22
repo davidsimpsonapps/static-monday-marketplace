@@ -17,7 +17,7 @@ eleventyComputed:
 
 {% from "partials/app-card.njk" import appCard %}
 {% from "partials/company-details.njk" import companyDetails %}
-{% from "partials/cross-badges.njk" import partnerBadge %}
+{% from "partials/cross-badges.njk" import partnerBadge, offshoreBadge %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.css">
 
@@ -25,6 +25,7 @@ eleventyComputed:
 {% set vendorCountryCode = details.address.countryCode if details else null %}
 {% set vendorRegion = vendorCountryCode | regionName if vendorCountryCode else '' %}
 {% set linkedPartners = partners | findPartnersByIds(details.partnerIds) if details else [] %}
+{% set offshore = details | offshoreStatus(linkedPartners[0].countryCode if linkedPartners.length else null) %}
 
 <div class="mx-auto">
   <div class="breadcrumb">
@@ -99,6 +100,12 @@ eleventyComputed:
                   {{ partnerBadge(linkedPartners[0].tier, linkedPartners[0].name) }}
                 {% endif %}
               </h1>
+              {% if offshore %}
+                <p class="text-sm mb-1 {{ 'text-red-700' if offshore.level == 'confirmed' else 'text-amber-700' }}" data-offshore-note="{{ offshore.level }}">
+                  {{ offshoreBadge(offshore, false) }}
+                  {{ offshore.text }}. <a href="#company" class="underline">Company details</a>
+                </p>
+              {% endif %}
               {% if linkedPartners.length %}
                 <p class="text-sm text-gray-600 mb-1">
                   Also a monday.com partner:
