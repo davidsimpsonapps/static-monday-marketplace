@@ -256,11 +256,12 @@ const anchoredHeadings = () => {
   headings.forEach((heading) => {
     // Create the link icon
     const linkIcon = document.createElement("span");
-    linkIcon.textContent = "🔗"; // You can use an SVG or a better icon
+    linkIcon.textContent = "#"; // You can use an SVG or a better icon
     linkIcon.style.cursor = "pointer";
     linkIcon.style.marginLeft = "8px";
     linkIcon.style.opacity = "0";
     linkIcon.style.transition = "opacity 0.2s";
+    linkIcon.style.color = "#999";
 
     // Show icon on hover
     heading.addEventListener(
