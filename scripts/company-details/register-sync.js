@@ -25,7 +25,7 @@
 const fs = require("fs");
 const path = require("path");
 const L = require("./lib");
-const { lookup, openCorporatesAvailable, ADAPTERS, OpenCorporatesRateLimited } = require("./registers");
+const { lookup, openCorporatesAvailable, ADAPTERS, OpenCorporatesRateLimited, RegisterRateLimited } = require("./registers");
 
 const args = process.argv.slice(2);
 const flag = (f) => args.includes(f);
@@ -43,7 +43,7 @@ const OVERRIDES_FILE = path.join(__dirname, "register-overrides.json");
 const OVERRIDES = fs.existsSync(OVERRIDES_FILE) ? JSON.parse(fs.readFileSync(OVERRIDES_FILE, "utf-8")) : {};
 
 // Exact-name comparison that ignores only punctuation and legal-form words.
-const LEGAL = /\b(ltd|limited|llc|l l c|inc|incorporated|corp|corporation|co|company|pty|pvt|private|gmbh|ag|sas|sarl|sa|s a|srl|s r l|sro|s r o|ou|ab|bv|b v|nv|as|aps|oy|kft|sp z o o|sp|zoo|llp|plc|lp|bhd|sdn|pte|ltda|eireli|me|kk|gk|sia|uab|ug|haftungsbeschrankt|doo|d o o|ehf|the)\b/g;
+const LEGAL = /\b(ltd|limited|llc|l l c|inc|incorporated|corp|corporation|co|company|pty|pvt|private|gmbh|ag|sas|sarl|sa|s a|srl|s r l|sro|s r o|ou|ab|bv|b v|nv|as|aps|oy|kft|sp z o o|sp|zoo|llp|plc|lp|bhd|sdn|pte|ltda|eireli|me|kk|gk|sia|uab|ug|haftungsbeschrankt|smc|doo|d o o|ehf|the)\b/g;
 const strict = (s) =>
   (s || "")
     .toLowerCase()
@@ -169,6 +169,11 @@ function apply(e, { registrations, home, people }) {
   const same = (a, b) =>
     a.url === b.url || (a.id && (a.id === b.id || (num(a.id) && num(a.id) === num(b.id) && (a.jurisdiction === b.jurisdiction || /opencorporates/.test(a.url)))));
   const replaced = (e.registrations || []).filter((r) => registrations.some((n) => same(r, n)));
+  // keep details the earlier copy had and the new record lacks (e.g. a
+  // search-only record when the register's detail page was unavailable)
+  for (const n of registrations)
+    for (const r of replaced.filter((r) => same(r, n)))
+      for (const f of ["companyType", "status", "registeredAgent", "registeredAddress"]) if (n[f] == null && r[f] != null) n[f] = r[f];
   e.registrations = [...(e.registrations || []).filter((r) => !replaced.includes(r)), ...registrations];
   // drop OpenCorporates sources that only pointed at a replaced registration
   const gone = new Set(replaced.filter((r) => /opencorporates\.com/.test(r.url)).map((r) => r.url));
@@ -271,7 +276,9 @@ function apply(e, { registrations, home, people }) {
           const ck = `${cc}:${strict(q)}`;
           if (!cache.has(ck)) {
             const wanted = [e.legalName, e.name].filter(Boolean).map(strict);
-            cache.set(ck, await lookup(cc, q, { onlyNames: (n) => wanted.includes(strict(n)) }));
+            // a pinned registration may have a different name, so fetch details for every hit
+            const pinned = typeof OVERRIDES[key] === "string";
+            cache.set(ck, await lookup(cc, q, pinned ? { maxDetails: 10 } : { onlyNames: (n) => wanted.includes(strict(n)) }));
           }
           records = cache.get(ck);
           if (records.some((r) => [e.legalName, e.name].filter(Boolean).map(strict).includes(strict(r.name)))) break;
@@ -284,6 +291,11 @@ function apply(e, { registrations, home, people }) {
       console.log(`${key} [${cc}] ${e.name}: ${changes.join(", ") || "no match"}`);
       processed++;
     } catch (err) {
+      if (err instanceof RegisterRateLimited) {
+        console.log(`${err.message}; stopping at ${key}. Remaining entries stay unchecked for the next run.`);
+        stopped = true;
+        break;
+      }
       if (err instanceof OpenCorporatesRateLimited) {
         console.log(`OpenCorporates rate limit hit at ${key}; stopping. Remaining entries stay unchecked for the next run.`);
         stopped = true;

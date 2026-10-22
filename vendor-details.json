@@ -1475,7 +1475,7 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (India)",
+        "register": "MCA company master data (via Falconebiz)",
         "jurisdiction": "India",
         "kind": "domestic",
         "id": "U72900GJ2020PTC114500",
@@ -1484,7 +1484,7 @@
         "status": "Active",
         "registeredAgent": null,
         "registeredAddress": "608, 6TH FLOOR, LAXMI ENCLAVE - 2, KATARGAM, Katargam Surat City Surat GJ 395004, India",
-        "url": "https://opencorporates.com/companies/in/U72900GJ2020PTC114500"
+        "url": "https://www.falconebiz.com/company/BARUZOTECH-PRIVATE-LIMITED-U72900GJ2020PTC114500"
       }
     ],
     "sources": [
@@ -1497,16 +1497,16 @@
         "url": "https://www.linkedin.com/in/kevin-vaghasiya/"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/in/U72900GJ2020PTC114500",
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/BARUZOTECH-PRIVATE-LIMITED-U72900GJ2020PTC114500",
         "id": "U72900GJ2020PTC114500",
-        "label": "India company no. U72900GJ2020PTC114500 (OpenCorporates)"
+        "label": "CIN U72900GJ2020PTC114500"
       }
     ],
     "locationFlag": null,
     "notes": "No founder or director is named on the company site.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000116,
@@ -2191,17 +2191,36 @@
         "countryCode": "US"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72200DL2016PTC290830",
+        "name": "CLOUDVANDANA SOLUTIONS PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/CLOUDVANDANA-SOLUTIONS-PRIVATE-LIMITED-U72200DL2016PTC290830"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://www.cloudvandana.com/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/CLOUDVANDANA-SOLUTIONS-PRIVATE-LIMITED-U72200DL2016PTC290830",
+        "id": "U72200DL2016PTC290830",
+        "label": "CIN U72200DL2016PTC290830"
       }
     ],
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US address: the US address (600 N Broad Street, Suite 5 #845, Middletown, DE 19709) is a Delaware registered-agent address; the team and India office are in New Delhi. Legal entity suffix not published.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000265,
@@ -2261,7 +2280,20 @@
         "countryCode": "US"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U62099KA2023PTC172639",
+        "name": "APPSTRONAUTS IT SOLUTIONS PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/APPSTRONAUTS-IT-SOLUTIONS-PRIVATE-LIMITED-U62099KA2023PTC172639"
+      }
+    ],
     "sources": [
       {
         "type": "about",
@@ -2278,12 +2310,18 @@
       {
         "type": "website",
         "url": "https://www.anishjain.xyz/resume.pdf"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/APPSTRONAUTS-IT-SOLUTIONS-PRIVATE-LIMITED-U62099KA2023PTC172639",
+        "id": "U62099KA2023PTC172639",
+        "label": "CIN U62099KA2023PTC172639"
       }
     ],
     "locationFlag": "offshore-moved",
     "notes": "Wyoming registered-agent address for Delhi, India based Anish Jain.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": "2026-10-08"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000249,
@@ -2842,7 +2880,7 @@
     "locationFlag": null,
     "notes": "Momentum Apps is 'operated by Backtick Infotech LLP'. No address or partners published.",
     "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000190,
@@ -4121,7 +4159,7 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (India)",
+        "register": "MCA company master data (via Falconebiz)",
         "jurisdiction": "India",
         "kind": "domestic",
         "id": "U72900PN2013PTC146344",
@@ -4130,7 +4168,7 @@
         "status": "Active",
         "registeredAgent": null,
         "registeredAddress": "OFFICE NO.401, B ZONE BANNER, S. NO 36/1/1/1(P) 35/2/1, BANNER Baner Gaon Pune City Pune MH 411045, India",
-        "url": "https://opencorporates.com/companies/in/U72900PN2013PTC146344"
+        "url": "https://www.falconebiz.com/company/MINIORANGE-SECURITY-SOFTWARE-PRIVATE-LIMITED-U72900PN2013PTC146344"
       }
     ],
     "sources": [
@@ -4143,16 +4181,16 @@
         "url": "https://www.miniorange.com/about_us"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/in/U72900PN2013PTC146344",
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/MINIORANGE-SECURITY-SOFTWARE-PRIVATE-LIMITED-U72900PN2013PTC146344",
         "id": "U72900PN2013PTC146344",
-        "label": "India company no. U72900PN2013PTC146344 (OpenCorporates)"
+        "label": "CIN U72900PN2013PTC146344"
       }
     ],
     "locationFlag": null,
     "notes": "Also trades as Xecurify, with offices in the USA and India (Pune); the site publishes no street address, so the address shown is the registered office from the Indian register (Pune).",
-    "lastVerified": "2026-10-08",
-    "registrationsCheckedAt": "2026-10-08"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000075,
@@ -4803,7 +4841,7 @@
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US address: the US address (Suite B-2, 2035 Sunset Lake Road, Newark, DE 19702) is a registered-agent address. ThoughtFlow is based in Belgaum (Belagavi), India, with an Indian entity Thoughtflow Technologies Private Limited (incorporated 2022), and is backed by Upekkha.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": "2026-10-07"
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000004,
@@ -5820,7 +5858,7 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (India)",
+        "register": "MCA company master data (via Falconebiz)",
         "jurisdiction": "India",
         "kind": "domestic",
         "id": "U72900TZ2020PTC033910",
@@ -5829,7 +5867,7 @@
         "status": "Active",
         "registeredAgent": null,
         "registeredAddress": "3/100, Anaipattiyan Colony, Thengalpayam Po, Rasipuram, Namakkal Namakkal TN 636301, India",
-        "url": "https://opencorporates.com/companies/in/U72900TZ2020PTC033910"
+        "url": "https://www.falconebiz.com/company/ULGEBRAZ-TECHNOLOGIES-PRIVATE-LIMITED-U72900TZ2020PTC033910"
       }
     ],
     "sources": [
@@ -5838,16 +5876,16 @@
         "url": "https://apps.ulgebra.com/"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/in/U72900TZ2020PTC033910",
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/ULGEBRAZ-TECHNOLOGIES-PRIVATE-LIMITED-U72900TZ2020PTC033910",
         "id": "U72900TZ2020PTC033910",
-        "label": "India company no. U72900TZ2020PTC033910 (OpenCorporates)"
+        "label": "CIN U72900TZ2020PTC033910"
       }
     ],
     "locationFlag": null,
     "notes": "Indian phone number (+91) on the site.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 51,
@@ -6731,7 +6769,12 @@
     "legalName": "Fortimus Technologies LLP",
     "contactName": "Arnav Ghatage",
     "contactTitle": null,
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Anahita Girish Ghatage",
+        "contactTitle": "Designated Partner (MCA company master data (via Falconebiz))"
+      }
+    ],
     "address": {
       "street": "SNO 1415 A-11 S.NO 14, Comfort Zone Balewadi, Baner Gaon, Haveli",
       "city": "Pune",
@@ -6741,7 +6784,20 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "ACV-0357",
+        "name": "FORTIMUS TECHNOLOGIES LLP",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "Sno 1415 A-11 S.no 14, Comfort Zone Balewadi, Baner Gaon, Haveli, Pune, Maharashtra, India 411045",
+        "url": "https://www.falconebiz.com/LLP/FORTIMUS-TECHNOLOGIES-LLP-ACV-0357"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -6758,12 +6814,18 @@
       {
         "type": "about",
         "url": "https://qorpiq.com/company/fortimus-technologies-llp/ACV-0357"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/LLP/FORTIMUS-TECHNOLOGIES-LLP-ACV-0357",
+        "id": "ACV-0357",
+        "label": "LLPIN ACV-0357"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": "2026-10-08"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 26,
@@ -8138,7 +8200,20 @@
         "countryCode": "US"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72900UP2020FTC139075",
+        "name": "SAAS LABS SOFTWARE PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/SAAS-LABS-SOFTWARE-PRIVATE-LIMITED-U72900UP2020FTC139075"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -8151,12 +8226,18 @@
       {
         "type": "press",
         "url": "https://yourstory.com/2021/10/automation-startup-saas-labs/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/SAAS-LABS-SOFTWARE-PRIVATE-LIMITED-U72900UP2020FTC139075",
+        "id": "U72900UP2020FTC139075",
+        "label": "CIN U72900UP2020FTC139075"
       }
     ],
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US address: the US address (355 Bryant Street, #403, San Francisco, CA 94107) is a numbered unit. SaaS Labs (JustCall) was founded in India in 2016 by Gaurav Sharma; reports place it in Noida or Gurugram.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 100000026,
@@ -8178,7 +8259,7 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (India)",
+        "register": "MCA company master data (via Falconebiz)",
         "jurisdiction": "India",
         "kind": "domestic",
         "id": "U74900WB2015PTC208997",
@@ -8187,7 +8268,7 @@
         "status": "Active",
         "registeredAgent": null,
         "registeredAddress": "199/3, GROUND FLOOR, EAST PART, NEAR CHANDI MANDIR HIJLI CO OPERATIVE, PASCHIM MIDNAPUR KHARAGPUR Midnapore WB 721306, India",
-        "url": "https://opencorporates.com/companies/in/U74900WB2015PTC208997"
+        "url": "https://www.falconebiz.com/company/SINGLE-DOOR-TECHNO-SOLUTIONS-PRIVATE-LIMITED-U74900WB2015PTC208997"
       }
     ],
     "sources": [
@@ -8196,16 +8277,16 @@
         "url": "https://satisfactiondrivers.com/terms-and-conditions/"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/in/U74900WB2015PTC208997",
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/SINGLE-DOOR-TECHNO-SOLUTIONS-PRIVATE-LIMITED-U74900WB2015PTC208997",
         "id": "U74900WB2015PTC208997",
-        "label": "India company no. U74900WB2015PTC208997 (OpenCorporates)"
+        "label": "CIN U74900WB2015PTC208997"
       }
     ],
     "locationFlag": null,
     "notes": "Trades as Satisfaction Drivers.",
-    "lastVerified": "2026-10-08",
-    "registrationsCheckedAt": "2026-10-08"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000109,
@@ -8509,7 +8590,7 @@
     "locationFlag": null,
     "notes": "Individual developer; country from the .in domain and site content.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": "2026-10-08"
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000176,
@@ -8809,7 +8890,20 @@
         "countryCode": "IN"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U74999KA2017PTC103353",
+        "name": "TRANSFUNNEL CONSULTING PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/TRANSFUNNEL-CONSULTING-PRIVATE-LIMITED-U74999KA2017PTC103353"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -8818,12 +8912,18 @@
       {
         "type": "about",
         "url": "https://transfunnel.com/about-us/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/TRANSFUNNEL-CONSULTING-PRIVATE-LIMITED-U74999KA2017PTC103353",
+        "id": "U74999KA2017PTC103353",
+        "label": "CIN U74999KA2017PTC103353"
       }
     ],
     "locationFlag": null,
     "notes": "Also an office in Jaipur.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000218,
@@ -9323,7 +9423,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 32,
@@ -9993,17 +10093,36 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72200AP2022PTC121138",
+        "name": "TANUJA TECHNOLOGIES PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/TANUJA-TECHNOLOGIES-PRIVATE-LIMITED-U72200AP2022PTC121138"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://tanuja.tech/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/TANUJA-TECHNOLOGIES-PRIVATE-LIMITED-U72200AP2022PTC121138",
+        "id": "U72200AP2022PTC121138",
+        "label": "CIN U72200AP2022PTC121138"
       }
     ],
     "locationFlag": null,
     "notes": "Indian phone number (+91) on the site.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 55,
@@ -10560,7 +10679,7 @@
     "locationFlag": null,
     "notes": "Country from site content.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000040,
@@ -10704,7 +10823,7 @@
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US address: the US address (2261 Market Street, STE 22625, San Francisco, CA 94114) is a virtual-mailbox suite. SurveySparrow's offices are in India: Kochi (shown), Chennai and Bangalore.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000014,
@@ -11105,7 +11224,16 @@
     "legalName": "Apprely Technologies LLP",
     "contactName": "Onkar",
     "contactTitle": null,
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Prasad Avadhut Kandalgaonkar",
+        "contactTitle": "Designated Partner (MCA company master data (via Falconebiz))"
+      },
+      {
+        "contactName": "Saket Suresh Mokate",
+        "contactTitle": "Designated Partner (MCA company master data (via Falconebiz))"
+      }
+    ],
     "address": {
       "street": null,
       "city": null,
@@ -11115,17 +11243,36 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "AAE-7074",
+        "name": "APPRELY TECHNOLOGIES LLP",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "302 Vastushree Emrald Shivtirth Nagar Paud Road, Pune, Pune, Maharashtra, India 411038",
+        "url": "https://www.falconebiz.com/LLP/APPRELY-TECHNOLOGIES-LLP-AAE-7074"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://apprely.com/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/LLP/APPRELY-TECHNOLOGIES-LLP-AAE-7074",
+        "id": "AAE-7074",
+        "label": "LLPIN AAE-7074"
       }
     ],
     "locationFlag": null,
     "notes": "First name from the vendor email onkarv@apprely.com. Country from the Indian 'LLP' form; unconfirmed.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000008,
@@ -11185,7 +11332,7 @@
     "locationFlag": null,
     "notes": "Country from the .in domain.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 100000040,
@@ -11902,17 +12049,36 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U62099DL2024OPC429913",
+        "name": "CLEVER EXTENSIONS (OPC) PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/CLEVER-EXTENSIONS-OPC-PRIVATE-LIMITED-U62099DL2024OPC429913"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://cleverextensions.com/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/CLEVER-EXTENSIONS-OPC-PRIVATE-LIMITED-U62099DL2024OPC429913",
+        "id": "U62099DL2024OPC429913",
+        "label": "CIN U62099DL2024OPC429913"
       }
     ],
     "locationFlag": null,
     "notes": "Country from the Indian '(OPC) Private Ltd' legal form.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 100000038,
@@ -11952,7 +12118,16 @@
     "legalName": "Inception Software LLP",
     "contactName": null,
     "contactTitle": null,
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Nitesh Singh",
+        "contactTitle": "Designated Partner (MCA company master data (via Falconebiz))"
+      },
+      {
+        "contactName": "Suman Singh",
+        "contactTitle": "Designated Partner (MCA company master data (via Falconebiz))"
+      }
+    ],
     "address": {
       "street": null,
       "city": null,
@@ -11962,17 +12137,36 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "AAI-1669",
+        "name": "INCEPTION SOFTWARE LLP",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "P2/04, Tower 2, Silver City Apartment Sector 93a, Gautam Buddha Nagar, Noida, Uttar Pradesh, India 201304",
+        "url": "https://www.falconebiz.com/LLP/INCEPTION-SOFTWARE-LLP-AAI-1669"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://inceptionsoftware.org"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/LLP/INCEPTION-SOFTWARE-LLP-AAI-1669",
+        "id": "AAI-1669",
+        "label": "LLPIN AAI-1669"
       }
     ],
     "locationFlag": null,
     "notes": "Country inferred from the 'LLP' form; unconfirmed.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000200,
@@ -12504,7 +12698,16 @@
     "legalName": "Appitsimple Technologies LLP",
     "contactName": null,
     "contactTitle": null,
-    "alternativeContacts": [],
+    "alternativeContacts": [
+      {
+        "contactName": "Suhasini Dudhwewala",
+        "contactTitle": "Designated Partner (MCA company master data (via Falconebiz))"
+      },
+      {
+        "contactName": "Ankit Kumar Dudhwewala",
+        "contactTitle": "Designated Partner (MCA company master data (via Falconebiz))"
+      }
+    ],
     "address": {
       "street": null,
       "city": null,
@@ -12514,17 +12717,36 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "AAW-4945",
+        "name": "APPITSIMPLE TECHNOLOGIES LLP",
+        "companyType": null,
+        "status": "Active",
+        "registeredAgent": null,
+        "registeredAddress": "D/3 Signature Ii Sarkhej Sanand Road, Ahmedabad, Ahmedabad, Gujarat, India 382210",
+        "url": "https://www.falconebiz.com/LLP/APPITSIMPLE-TECHNOLOGIES-LLP-AAW-4945"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://controlhippo.com/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/LLP/APPITSIMPLE-TECHNOLOGIES-LLP-AAW-4945",
+        "id": "AAW-4945",
+        "label": "LLPIN AAW-4945"
       }
     ],
     "locationFlag": null,
     "notes": "ControlHippo is operated by Appitsimple Technologies LLP; Indian phone numbers (+91) on the site.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000281,
@@ -13130,7 +13352,7 @@
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US address: the site also lists Miamisburg, Ohio 45342, but the team, phone number (+91) and Bengaluru office are Indian. Now part of Esko (Esko-Graphics BV).",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000124,
@@ -13239,7 +13461,7 @@
     "locationFlag": null,
     "notes": "Indian (+91) and Singapore (+65) phone numbers; Spritle is based in Chennai.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000169,
@@ -13288,7 +13510,7 @@
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US address: the US address (651 N Broad St, Suite 201, Middletown, DE 19709) is a registered-agent address; the site says 'Built in Tamil Nadu' (founder Ravi Gandhi, CTO Pranesh).",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000250,
@@ -13397,7 +13619,7 @@
     "locationFlag": "possible-offshore",
     "notes": "Country from the .co.in domain; the 'LLC' form suggests a US registration as well. Possible offshore company.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 100000125,
@@ -13447,17 +13669,36 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72900PN2017PTC170045",
+        "name": "AMOEBOIDS TECHNOLOGIES PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/AMOEBOIDS-TECHNOLOGIES-PRIVATE-LIMITED-U72900PN2017PTC170045"
+      }
+    ],
     "sources": [
       {
         "type": "contact",
         "url": "https://amoeboids.com/company/contact/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/AMOEBOIDS-TECHNOLOGIES-PRIVATE-LIMITED-U72900PN2017PTC170045",
+        "id": "U72900PN2017PTC170045",
+        "label": "CIN U72900PN2017PTC170045"
       }
     ],
     "locationFlag": null,
     "notes": "First name from the vendor email anand@amoeboids.com.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000246,
@@ -13915,7 +14156,7 @@
     "locationFlag": "offshore-moved",
     "notes": "Offshore company with a US address: the site lists US offices (8155 Mercury Ct, Suite 120, San Diego, CA 92111, plus Los Angeles and Los Altos), but its delivery offices are in Pune and Indore, India, with Indian (+91) phone numbers. Contact name from the vendor email deepak.kumar@synergytop.com.",
     "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 100000006,
@@ -14105,7 +14346,20 @@
         "countryCode": "AU"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72900DL2010PTC209922",
+        "name": "BARGAIN TECHNOLOGIES PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/BARGAIN-TECHNOLOGIES-PRIVATE-LIMITED-U72900DL2010PTC209922"
+      }
+    ],
     "sources": [
       {
         "type": "about",
@@ -14114,12 +14368,18 @@
       {
         "type": "contact",
         "url": "https://www.vantagecircle.com/contact-us/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/BARGAIN-TECHNOLOGIES-PRIVATE-LIMITED-U72900DL2010PTC209922",
+        "id": "U72900DL2010PTC209922",
+        "label": "CIN U72900DL2010PTC209922"
       }
     ],
     "locationFlag": null,
     "notes": "Trades as Vantage Circle. Lists offices in Plano TX, Calgary and Sydney; the company is Indian (Guwahati/Bengaluru).",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 100000028,
@@ -14764,7 +15024,20 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U62090TN2024PTC171241",
+        "name": "STRIVE SAAS LABS PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/STRIVE-SAAS-LABS-PRIVATE-LIMITED-U62090TN2024PTC171241"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
@@ -14773,12 +15046,18 @@
       {
         "type": "about",
         "url": "https://strivelabs.ai/company/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/STRIVE-SAAS-LABS-PRIVATE-LIMITED-U62090TN2024PTC171241",
+        "id": "U62090TN2024PTC171241",
+        "label": "CIN U62090TN2024PTC171241"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000168,
@@ -15034,7 +15313,20 @@
         "countryCode": "US"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72900KA2021PTC144740",
+        "name": "CLOUDCACHE CONSULTING PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/CLOUDCACHE-CONSULTING-PRIVATE-LIMITED-U72900KA2021PTC144740"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -15043,12 +15335,18 @@
       {
         "type": "contact",
         "url": "https://cloudcacheconsulting.com/contactus"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/CLOUDCACHE-CONSULTING-PRIVATE-LIMITED-U72900KA2021PTC144740",
+        "id": "U72900KA2021PTC144740",
+        "label": "CIN U72900KA2021PTC144740"
       }
     ],
     "locationFlag": null,
     "notes": "Copied from the linked monday.com partner entry (CloudCache Consulting Pvt Ltd); added because the vendor is linked to a partner.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000207,
@@ -15296,30 +15594,43 @@
     "name": "Codex Solutions International",
     "tier": null,
     "partnerIds": ["65967756-dc5d-402d-a8e6-04a04e431bc4"],
-    "legalName": "Codex Solutions International",
-    "contactName": "Hamza",
+    "legalName": "Codex Solutions International (SMC-Private) Limited",
+    "contactName": "Hamza Irshad",
     "contactTitle": "Chief Executive Officer",
     "alternativeContacts": [],
     "address": {
-      "street": "674 Washwood Heath Road",
-      "city": "Birmingham",
-      "region": "West Midlands",
-      "postalCode": "B8 2HQ",
-      "country": "United Kingdom",
-      "countryCode": "GB"
+      "street": "FF-01 (First Floor, above Meezan Bank), Phase 5, Ghauri Town",
+      "city": "Islamabad",
+      "region": null,
+      "postalCode": null,
+      "country": "Pakistan",
+      "countryCode": "PK"
     },
     "alternativeAddresses": [
       {
-        "label": "Pakistan office",
-        "street": "FF-01 (First Floor, above Meezan Bank), Phase 5, Ghauri Town",
-        "city": "Islamabad",
-        "region": null,
-        "postalCode": null,
-        "country": "Pakistan",
-        "countryCode": "PK"
+        "label": "UK address (no UK company registered)",
+        "street": "674 Washwood Heath Road",
+        "city": "Birmingham",
+        "region": "West Midlands",
+        "postalCode": "B8 2HQ",
+        "country": "United Kingdom",
+        "countryCode": "GB"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "SECP (Securities and Exchange Commission of Pakistan)",
+        "jurisdiction": "Pakistan",
+        "kind": "domestic",
+        "id": "0156097",
+        "name": "CODEX SOLUTIONS INTERNATIONAL (SMC-PRIVATE) LIMITED",
+        "companyType": "Single-member private limited company",
+        "status": "Incorporated",
+        "registeredAgent": null,
+        "registeredAddress": "Islamabad (registry office)",
+        "url": "https://eservices.secp.gov.pk/eServices/NameSearch.jsp"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -15332,12 +15643,23 @@
       {
         "type": "about",
         "url": "https://codexsolutionsint.com/about-us/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://eservices.secp.gov.pk/eServices/NameSearch.jsp",
+        "id": "0156097",
+        "label": "SECP registration no. 0156097"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/hamza-irshad-automation-expert/",
+        "label": "LinkedIn: Hamza Irshad (CEO), located in Pakistan"
       }
     ],
-    "locationFlag": "possible-offshore",
-    "notes": "Copied from the linked monday.com partner entry (Codex Solutions International); added because the vendor is linked to a partner.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-06"
+    "locationFlag": "offshore-moved",
+    "notes": "Offshore company with a UK address: Codex Solutions International (SMC-Private) Limited is a Pakistani single-member company registered with the SECP in Islamabad (no. 0156097, 2020), and the CEO (Hamza Irshad, whose LinkedIn location is Pakistan), office and +92 phone numbers are in Islamabad. The Birmingham address (674 Washwood Heath Road) has no UK company behind it: there is no company of this name on Companies House. Same company as the linked monday.com partner entry.",
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "vendorId": 10000283,
@@ -15362,7 +15684,20 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72900MH2022PTC376214",
+        "name": "MSQUARE AUTOMATION SOLUTIONS PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/MSQUARE-AUTOMATION-SOLUTIONS-PRIVATE-LIMITED-U72900MH2022PTC376214"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -15375,11 +15710,17 @@
       {
         "type": "about",
         "url": "https://msquare.pro/about-us/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/MSQUARE-AUTOMATION-SOLUTIONS-PRIVATE-LIMITED-U72900MH2022PTC376214",
+        "id": "U72900MH2022PTC376214",
+        "label": "CIN U72900MH2022PTC376214"
       }
     ],
     "locationFlag": null,
     "notes": "Copied from the linked monday.com partner entry (Msquare Automation); added because the vendor is linked to a partner.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": null
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   }
 ]

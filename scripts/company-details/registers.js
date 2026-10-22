@@ -12,10 +12,10 @@
 // where a record is { register, id, name, status, url, address, people: [{name, role}] }.
 //
 // Registers with directors: GB (Companies House), FR (annuaire-entreprises),
-// NO (Brønnøysund), CZ (ARES), SK (RPO), BE (KBO), BR (CNPJ via BrasilAPI, needs the CNPJ).
+// NO (Brønnøysund), CZ (ARES), SK (RPO), BE (KBO), IN (MCA data via Falconebiz), BR (CNPJ via BrasilAPI, needs the CNPJ).
 // Registers without directors: IL (Registrar of Companies, data.gov.il),
-// NL (KvK), DE (Unternehmensregister), FI (PRH), PL (KRS, by number), EE (e-Äriregister), CH (Zefix), AU (ABN Lookup), and OpenCorporates for
-// everything else (US states, IN, CA, SG, ...; officers there
+// NL (KvK), DE (Unternehmensregister), FI (PRH), PL (KRS, by number), PK (SECP), EE (e-Äriregister), CH (Zefix), AU (ABN Lookup), and OpenCorporates for
+// everything else (US states, CA, SG, ...; officers there
 // need a login, but the registered agent is shown for US companies).
 // Be gentle: OpenCorporates is rate-limited, so calls are spaced out.
 
@@ -445,6 +445,93 @@ async function pl(_name, { id } = {}) {
   return [];
 }
 
+// SECP (Securities and Exchange Commission of Pakistan) company name search.
+// A plain form post; gives name, status, registry office (CRO), registration
+// number and date. No addresses or directors without an eServices login.
+const SECP = "https://eservices.secp.gov.pk/eServices";
+async function pk(name) {
+  const body = new URLSearchParams({ request_id: "SEARCH_NAME", requesterProcess: "", searchName: name.toUpperCase(), searchOption: "Including Exact String" });
+  const h = await (await get(`${SECP}/ControllerServlet`, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body })).text();
+  const out = [];
+  for (const row of h.split(/<tr[^>]*>/i).slice(1)) {
+    // the result table leaves some <TD>s unclosed, so split on the opening tags
+    const cells = row.split(/<td[^>]*>/i).slice(1).map((c) => T(c.replace(/<\/td>[\s\S]*$/i, "").replace(/&nbsp;/g, " ")));
+    if (cells.length < 6 || !/^\d+$/.test(cells[0]) || !/^\d{5,}$/.test(cells[4])) continue;
+    const [, nm, status, cro, regNo, regDate] = cells;
+    out.push({
+      register: "SECP (Securities and Exchange Commission of Pakistan)",
+      sourceType: "business-register",
+      jurisdictionName: "Pakistan",
+      id: regNo,
+      label: `SECP registration no. ${regNo}`,
+      name: nm,
+      companyType: /SMC-PRIVATE/i.test(nm) ? "Single-member private limited company" : /PRIVATE|PVT/i.test(nm) ? "Private limited company" : null,
+      status,
+      url: `${SECP}/NameSearch.jsp`,
+      address: cro ? `${cro.replace(/^CRO /, "")} (registry office)` : null,
+      registrationDate: regDate.split(" ")[0],
+      people: [],
+    });
+  }
+  return out;
+}
+
+// India: the official MCA portal sits behind a captcha, so this uses
+// Falconebiz, a free mirror of the MCA company master data (CIN/LLPIN,
+// status, RoC, incorporation date, registered address, directors with DINs).
+// Its search needs a session cookie and ser_len = the length of the term.
+const FB = "https://www.falconebiz.com";
+const FB_UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36";
+async function inMca(name, { onlyNames = null, maxDetails = 3 } = {}) {
+  const home = await get(`${FB}/company`, { headers: { "User-Agent": FB_UA } });
+  const cookie = (home.headers.getSetCookie?.() || []).map((c) => c.split(";")[0]).join("; ");
+  const term = name.slice(0, 60);
+  const hits = await (
+    await get(`${FB}/company/models/search-company.php`, {
+      method: "POST",
+      headers: { "User-Agent": FB_UA, "Content-Type": "application/x-www-form-urlencoded", "X-Requested-With": "XMLHttpRequest", Referer: `${FB}/company`, Origin: FB, ...(cookie && { Cookie: cookie }) },
+      body: new URLSearchParams({ search: term, ser_len: String(term.length) }),
+    })
+  ).json();
+  const out = [];
+  let fetched = 0;
+  for (const h of (hits || []).filter((x) => x.value && x.path)) {
+    const rec = {
+      register: "MCA company master data (via Falconebiz)",
+      sourceType: "business-register",
+      jurisdictionName: "India",
+      id: h.value,
+      label: `${/^[A-Z]{3}-\d{4}$/.test(h.value) ? "LLPIN" : "CIN"} ${h.value}`,
+      name: h.label,
+      url: `${FB}/${h.path}`,
+      people: [],
+    };
+    if (fetched < maxDetails && (!onlyNames || onlyNames(h.label))) {
+      fetched++;
+      try {
+        const html = await (await get(rec.url, { headers: { "User-Agent": FB_UA, ...(cookie && { Cookie: cookie }) } })).text();
+        // after a few dozen lookups Falconebiz shows a captcha instead of the company
+        if (/SOLVE CAPTCHA TO PROCEED/i.test(html)) throw new RegisterRateLimited("Falconebiz is showing a captcha (rate limit); try again later");
+        const t = T(html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, " ").replace(/<sup>[^<]*<\/sup>/g, "").replace(/<[^>]+>/g, " | ")).replace(/(\s*\|\s*)+/g, " | ");
+        const field = (label) => (t.match(new RegExp(`\\| ${label} \\| ([^|]+)`)) || [])[1]?.trim() || null;
+        rec.status = field("Company Status") || field("LLP Status");
+        rec.roc = field("RoC");
+        rec.incorporated = field("Date of Incorporation");
+        rec.companyType = [field("Class of company"), field("Company Category")].filter(Boolean).join(", ") || null;
+        const addr = (t.match(/\| Address \| ([^|]+)\|\s*(\d{6})?/) || []);
+        rec.address = addr[1] ? `${addr[1].replace(/,\s*$/, "").trim()}${addr[2] ? ` ${addr[2]}` : ""}` : null;
+        for (const m of html.matchAll(/data-label="Name"><strong><a[^>]*>([^<]+)<\/a>[\s\S]*?data-label="Designation">([^<]+)</g))
+          rec.people.push({ name: titleCase(m[1].trim()), role: m[2].trim() });
+      } catch (err) {
+        if (err instanceof RegisterRateLimited) throw err;
+        /* search row only */
+      }
+    }
+    out.push(rec);
+  }
+  return out;
+}
+
 async function chZefix(name) {
   const d = await (
     await get("https://www.zefix.ch/ZefixREST/api/v1/firm/search.json", {
@@ -513,6 +600,7 @@ async function br(_name, { id } = {}) {
 // Anonymous use is rate-limited (it starts answering 429 after a few dozen
 // requests), so requests are spaced out and a 429 is surfaced as
 // OpenCorporatesRateLimited for callers to stop and try again another day.
+class RegisterRateLimited extends Error {}
 class OpenCorporatesRateLimited extends Error {}
 let lastOC = 0;
 const OC_GAP_MS = 6000;
@@ -591,7 +679,7 @@ async function opencorporates(cc, name, { details = true, onlyNames = null, maxD
   return out;
 }
 
-const ADAPTERS = { GB: gb, FR: fr, IL: il, EE: ee, NO: no, NL: nl, DE: de, CZ: cz, SK: sk, FI: fi, BE: be, PL: pl, CH: chZefix, AU: au, BR: br };
+const ADAPTERS = { GB: gb, FR: fr, IL: il, EE: ee, NO: no, NL: nl, DE: de, CZ: cz, SK: sk, FI: fi, BE: be, PL: pl, PK: pk, IN: inMca, CH: chZefix, AU: au, BR: br };
 
 async function lookup(countryCode, name, opts = {}) {
   const cc = (countryCode || "").toUpperCase();
@@ -611,7 +699,7 @@ async function openCorporatesAvailable() {
   }
 }
 
-module.exports = { lookup, opencorporates, openCorporatesAvailable, ADAPTERS, OpenCorporatesRateLimited };
+module.exports = { lookup, opencorporates, openCorporatesAvailable, ADAPTERS, OpenCorporatesRateLimited, RegisterRateLimited };
 
 if (require.main === module) {
   const [cc, ...rest] = process.argv.slice(2);

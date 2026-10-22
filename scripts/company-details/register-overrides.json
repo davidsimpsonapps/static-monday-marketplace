@@ -2,8 +2,6 @@
   "p:fruition-uk": "16033160",
   "p:naomi-coe": "14874318",
   "v:100000025": "53 102 443 916",
-  "v:100000197": null,
-  "p:rehan-abdul-qayyum": null,
   "v:100000037": null,
   "v:100000048": null,
   "v:10000072": null,
@@ -27,7 +25,7 @@
   "p:boost-us": null,
   "p:inovus-technologies": null,
   "p:ergoman-communication-gmbh": "HRB 766874 (Amtsgericht Stuttgart)",
-  "p:tech-profuse-private-limited": "U72200TG2009PTC062811",
+  "p:tech-profuse-private-limited": "U72100TG2009PTC062811",
   "p:trundl": "0804727067",
   "v:15": "69671435",
   "v:10000063": "6033254",
@@ -38,5 +36,7 @@
   "v:10000093": "U72900UP2020FTC139075",
   "v:10000171": "5590357",
   "p:evero": "87403757",
-  "p:xebia": "32102575"
+  "p:xebia": "32102575",
+  "v:10000273": "U72200DL2016PTC290830",
+  "v:10000254": "U62099KA2023PTC172639"
 }

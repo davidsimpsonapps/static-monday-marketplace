@@ -1325,7 +1325,7 @@
     "locationFlag": null,
     "notes": null,
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-06"
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "7868f792-7d4b-462d-b73f-12fed1a7c022",
@@ -3043,7 +3043,7 @@
     "alternativeAddresses": [],
     "registrations": [
       {
-        "register": "OpenCorporates (India)",
+        "register": "MCA company master data (via Falconebiz)",
         "jurisdiction": "India",
         "kind": "domestic",
         "id": "L22210MH1995PLC084781",
@@ -3052,7 +3052,7 @@
         "status": "Active",
         "registeredAgent": null,
         "registeredAddress": "9TH FLOOR, NIRMAL BUILDING NARIMAN POINT NA MUMBAI MH 400021, India",
-        "url": "https://opencorporates.com/companies/in/L22210MH1995PLC084781"
+        "url": "https://www.falconebiz.com/company/TATA-CONSULTANCY-SERVICES-LIMITED-L22210MH1995PLC084781"
       }
     ],
     "sources": [
@@ -3070,16 +3070,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/in/L22210MH1995PLC084781",
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/TATA-CONSULTANCY-SERVICES-LIMITED-L22210MH1995PLC084781",
         "id": "L22210MH1995PLC084781",
-        "label": "India company no. L22210MH1995PLC084781 (OpenCorporates)"
+        "label": "CIN L22210MH1995PLC084781"
       }
     ],
     "locationFlag": null,
     "notes": "Global HQ is in Mumbai, India; the monday.com profile lists the US. The scraped leadership page lists N. Chandrasekaran as CEO & MD (now Chairman of Tata Sons) next to K. Krithivasan.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-06"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "f4d1c571-a49f-493e-8488-caf8e37aeb21",
@@ -3328,7 +3328,7 @@
     ],
     "registrations": [
       {
-        "register": "OpenCorporates (India)",
+        "register": "MCA company master data (via Falconebiz)",
         "jurisdiction": "India",
         "kind": "domestic",
         "id": "U74999KA2017PTC103353",
@@ -3337,7 +3337,7 @@
         "status": "Active",
         "registeredAgent": null,
         "registeredAddress": "DBS Office Business Center no.26 cunningham road bangalore Bangalore KA 560052, India",
-        "url": "https://opencorporates.com/companies/in/U74999KA2017PTC103353"
+        "url": "https://www.falconebiz.com/company/TRANSFUNNEL-CONSULTING-PRIVATE-LIMITED-U74999KA2017PTC103353"
       }
     ],
     "sources": [
@@ -3359,16 +3359,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/in/U74999KA2017PTC103353",
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/TRANSFUNNEL-CONSULTING-PRIVATE-LIMITED-U74999KA2017PTC103353",
         "id": "U74999KA2017PTC103353",
-        "label": "India company no. U74999KA2017PTC103353 (OpenCorporates)"
+        "label": "CIN U74999KA2017PTC103353"
       }
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "7845f92e-0b98-47eb-ad93-e1bfdd4db909",
@@ -4860,7 +4860,7 @@
     ],
     "registrations": [
       {
-        "register": "OpenCorporates (India)",
+        "register": "MCA company master data (via Falconebiz)",
         "jurisdiction": "India",
         "kind": "domestic",
         "id": "U72900KA2021PTC144740",
@@ -4869,7 +4869,7 @@
         "status": "Active",
         "registeredAgent": null,
         "registeredAddress": "FLAT NO C1, 2084 SOBHA AVENUE APARTMENT DODDABANAHALLI VILLAGE, KANNAMANGALA POS BANGALORE Bangalore KA 560067, India",
-        "url": "https://opencorporates.com/companies/in/U72900KA2021PTC144740"
+        "url": "https://www.falconebiz.com/company/CLOUDCACHE-CONSULTING-PRIVATE-LIMITED-U72900KA2021PTC144740"
       }
     ],
     "sources": [
@@ -4887,16 +4887,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/in/U72900KA2021PTC144740",
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/CLOUDCACHE-CONSULTING-PRIVATE-LIMITED-U72900KA2021PTC144740",
         "id": "U72900KA2021PTC144740",
-        "label": "India company no. U72900KA2021PTC144740 (OpenCorporates)"
+        "label": "CIN U72900KA2021PTC144740"
       }
     ],
     "locationFlag": null,
     "notes": "Indian company that publishes only UK and US service addresses (128 City Road is a registered-office service; 8 The Green is a Delaware registered agent). The Indian register gives a residential registered office in Bengaluru, so only the city is shown. Country confirmed by the company register. Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "1c62d1df-1188-4acf-8feb-bd8108e3817b",
@@ -7096,7 +7096,7 @@
     "locationFlag": null,
     "notes": "India per the monday.com profile; the US company publishes a Bellevue, WA office. Country self-reported on the monday.com partner profile.",
     "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-07"
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "77cba23c-b145-4936-b8d5-77c0cd84da68",
@@ -7637,7 +7637,7 @@
     ],
     "registrations": [
       {
-        "register": "OpenCorporates (India)",
+        "register": "MCA company master data (via Falconebiz)",
         "jurisdiction": "India",
         "kind": "domestic",
         "id": "U72900KA2014PTC074327",
@@ -7646,7 +7646,7 @@
         "status": "Active",
         "registeredAgent": null,
         "registeredAddress": "#1119, 1st block, Banashankari 6th Stage Bangalore Bangalore KA 560098, India",
-        "url": "https://opencorporates.com/companies/in/U72900KA2014PTC074327"
+        "url": "https://www.falconebiz.com/company/EMPYRA-SOFTWARE-SOLUTIONS-PRIVATE-LIMITED-U72900KA2014PTC074327"
       }
     ],
     "sources": [
@@ -7668,16 +7668,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/in/U72900KA2014PTC074327",
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/EMPYRA-SOFTWARE-SOLUTIONS-PRIVATE-LIMITED-U72900KA2014PTC074327",
         "id": "U72900KA2014PTC074327",
-        "label": "India company no. U72900KA2014PTC074327 (OpenCorporates)"
+        "label": "CIN U72900KA2014PTC074327"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "5ec60bbf-f8b5-47e6-a58e-16553546195f",
@@ -9854,16 +9854,16 @@
     ],
     "registrations": [
       {
-        "register": "OpenCorporates (India)",
+        "register": "MCA company master data (via Falconebiz)",
         "jurisdiction": "India",
         "kind": "domestic",
-        "id": "U72200TG2009PTC062811",
+        "id": "U72100TG2009PTC062811",
         "name": "TECH PROFUSE PRIVATE LIMITED",
         "companyType": "Company limited by Shares",
         "status": "Active",
         "registeredAgent": null,
         "registeredAddress": "FLAT NO-401,H.NO-7-1-19/5,JYOYHI BHOPAL CHAMBERS OPP COUNTRY CLUB,BEGUMPET, HYDERABAD Hyderabad TG 500016, India",
-        "url": "https://opencorporates.com/companies/in/U72200TG2009PTC062811"
+        "url": "https://www.falconebiz.com/company/TECH-PROFUSE-PRIVATE-LIMITED-U72100TG2009PTC062811"
       }
     ],
     "sources": [
@@ -9885,16 +9885,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/in/U72200TG2009PTC062811",
-        "id": "U72200TG2009PTC062811",
-        "label": "India company no. U72200TG2009PTC062811 (OpenCorporates)"
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/TECH-PROFUSE-PRIVATE-LIMITED-U72100TG2009PTC062811",
+        "id": "U72100TG2009PTC062811",
+        "label": "CIN U72100TG2009PTC062811"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "81d8c456-f90e-4195-924f-3c9572b8611d",
@@ -10172,7 +10172,7 @@
     ],
     "registrations": [
       {
-        "register": "OpenCorporates (India)",
+        "register": "MCA company master data (via Falconebiz)",
         "jurisdiction": "India",
         "kind": "domestic",
         "id": "U74999PN2016PTC164761",
@@ -10181,7 +10181,7 @@
         "status": "Active",
         "registeredAgent": null,
         "registeredAddress": "ADHI SHUM, MADHUBAN CLY.28/2B/19 BORA HAPPY P. NILAKH PUNE Pune MH 411027, India",
-        "url": "https://opencorporates.com/companies/in/U74999PN2016PTC164761"
+        "url": "https://www.falconebiz.com/company/THINQLOUD-SOLUTIONS-PRIVATE-LIMITED-U74999PN2016PTC164761"
       }
     ],
     "sources": [
@@ -10203,16 +10203,16 @@
         "label": "monday.com partner profile"
       },
       {
-        "type": "opencorporates",
-        "url": "https://opencorporates.com/companies/in/U74999PN2016PTC164761",
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/THINQLOUD-SOLUTIONS-PRIVATE-LIMITED-U74999PN2016PTC164761",
         "id": "U74999PN2016PTC164761",
-        "label": "India company no. U74999PN2016PTC164761 (OpenCorporates)"
+        "label": "CIN U74999PN2016PTC164761"
       }
     ],
     "locationFlag": null,
     "notes": "Contact from the monday.com partner profile's team list.",
-    "lastVerified": "2026-10-07",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "bdca9a39-2e0c-4821-b36a-4fbe3ccc9847",
@@ -11619,7 +11619,7 @@
       }
     ],
     "locationFlag": null,
-    "notes": "US company; the site also mentions India and Peru (delivery teams). Country self-reported on the monday.com partner profile.",
+    "notes": "US company; the site also mentions India and Peru (delivery teams). Country self-reported on the monday.com partner profile. An Indian company, Valere Labs Private Limited (CIN U72900MP2020PTC051634, Indore; directors Anmol Upadhyay and Dipali Radheyshyam Vyas), is probably its Indian delivery arm. This is unconfirmed: none of its directors is a known Valere contact.",
     "lastVerified": "2026-10-06",
     "registrationsCheckedAt": "2026-10-07"
   },
@@ -11902,30 +11902,43 @@
     "email": "info@codexsolutionsint.com",
     "isMicrosoftPartner": false,
     "vendorIds": [100000197],
-    "legalName": "Codex Solutions International",
-    "contactName": "Hamza",
+    "legalName": "Codex Solutions International (SMC-Private) Limited",
+    "contactName": "Hamza Irshad",
     "contactTitle": "Chief Executive Officer",
     "alternativeContacts": [],
     "address": {
-      "street": "674 Washwood Heath Road",
-      "city": "Birmingham",
-      "region": "West Midlands",
-      "postalCode": "B8 2HQ",
-      "country": "United Kingdom",
-      "countryCode": "GB"
+      "street": "FF-01 (First Floor, above Meezan Bank), Phase 5, Ghauri Town",
+      "city": "Islamabad",
+      "region": null,
+      "postalCode": null,
+      "country": "Pakistan",
+      "countryCode": "PK"
     },
     "alternativeAddresses": [
       {
-        "label": "Pakistan office",
-        "street": "FF-01 (First Floor, above Meezan Bank), Phase 5, Ghauri Town",
-        "city": "Islamabad",
-        "region": null,
-        "postalCode": null,
-        "country": "Pakistan",
-        "countryCode": "PK"
+        "label": "UK address (no UK company registered)",
+        "street": "674 Washwood Heath Road",
+        "city": "Birmingham",
+        "region": "West Midlands",
+        "postalCode": "B8 2HQ",
+        "country": "United Kingdom",
+        "countryCode": "GB"
       }
     ],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "SECP (Securities and Exchange Commission of Pakistan)",
+        "jurisdiction": "Pakistan",
+        "kind": "domestic",
+        "id": "0156097",
+        "name": "CODEX SOLUTIONS INTERNATIONAL (SMC-PRIVATE) LIMITED",
+        "companyType": "Single-member private limited company",
+        "status": "Incorporated",
+        "registeredAgent": null,
+        "registeredAddress": "Islamabad (registry office)",
+        "url": "https://eservices.secp.gov.pk/eServices/NameSearch.jsp"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -11943,12 +11956,23 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/rehan-abdul-qayyum",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://eservices.secp.gov.pk/eServices/NameSearch.jsp",
+        "id": "0156097",
+        "label": "SECP registration no. 0156097"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/hamza-irshad-automation-expert/",
+        "label": "LinkedIn: Hamza Irshad (CEO), located in Pakistan"
       }
     ],
-    "locationFlag": "possible-offshore",
-    "notes": "Possible offshore company: no UK company of this name exists on Companies House, and the site lists a Pakistan office (Islamabad) with Pakistani (+92) phone numbers alongside the Birmingham address.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-06"
+    "locationFlag": "offshore-moved",
+    "notes": "Offshore company with a UK address: Codex Solutions International (SMC-Private) Limited is a Pakistani single-member company registered with the SECP in Islamabad (no. 0156097, 2020), and the CEO (Hamza Irshad, whose LinkedIn location is Pakistan), office and +92 phone numbers are in Islamabad. The Birmingham address (674 Washwood Heath Road) has no UK company behind it: there is no company of this name on Companies House.",
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "98ec6f51-4b58-435d-b583-ee2e3b36d6c2",
@@ -12144,7 +12168,20 @@
       "countryCode": "IN"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "MCA company master data (via Falconebiz)",
+        "jurisdiction": "India",
+        "kind": "domestic",
+        "id": "U72900MH2022PTC376214",
+        "name": "MSQUARE AUTOMATION SOLUTIONS PRIVATE LIMITED",
+        "companyType": null,
+        "status": null,
+        "registeredAgent": null,
+        "registeredAddress": null,
+        "url": "https://www.falconebiz.com/company/MSQUARE-AUTOMATION-SOLUTIONS-PRIVATE-LIMITED-U72900MH2022PTC376214"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -12162,12 +12199,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/mohamad-jahar",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://www.falconebiz.com/company/MSQUARE-AUTOMATION-SOLUTIONS-PRIVATE-LIMITED-U72900MH2022PTC376214",
+        "id": "U72900MH2022PTC376214",
+        "label": "CIN U72900MH2022PTC376214"
       }
     ],
     "locationFlag": null,
     "notes": null,
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-07"
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "f0abc6e8-35fe-44e0-929d-325753ea358b",
@@ -12221,20 +12264,43 @@
     "email": "info@protogroup.co",
     "isMicrosoftPartner": false,
     "vendorIds": [],
-    "legalName": null,
+    "legalName": "Proto IT Consultants (Private) Limited",
     "contactName": "Muhammad Sameer Sheikh",
     "contactTitle": "Founder and MD",
     "alternativeContacts": [],
     "address": {
-      "street": "30 N Gould St, Ste 42809",
-      "city": "Sheridan",
-      "region": "WY",
-      "postalCode": "82801",
-      "country": "United States",
-      "countryCode": "US"
+      "street": "35 Street 2, G-15/1",
+      "city": "Islamabad",
+      "region": null,
+      "postalCode": null,
+      "country": "Pakistan",
+      "countryCode": "PK"
     },
-    "alternativeAddresses": [],
-    "registrations": [],
+    "alternativeAddresses": [
+      {
+        "label": "US registered-agent address",
+        "street": "30 N Gould St, Ste 42809",
+        "city": "Sheridan",
+        "region": "WY",
+        "postalCode": "82801",
+        "country": "United States",
+        "countryCode": "US"
+      }
+    ],
+    "registrations": [
+      {
+        "register": "SECP (Securities and Exchange Commission of Pakistan)",
+        "jurisdiction": "Pakistan",
+        "kind": "domestic",
+        "id": "0225675",
+        "name": "PROTO IT CONSULTANTS (PRIVATE) LIMITED",
+        "companyType": "Private limited company",
+        "status": "Incorporated",
+        "registeredAgent": null,
+        "registeredAddress": "Islamabad (registry office)",
+        "url": "https://eservices.secp.gov.pk/eServices/NameSearch.jsp"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -12252,12 +12318,18 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/muhammed-sameer-sheikh",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "business-register",
+        "url": "https://eservices.secp.gov.pk/eServices/NameSearch.jsp",
+        "id": "0225675",
+        "label": "SECP registration no. 0225675"
       }
     ],
-    "locationFlag": "registered-agent",
-    "notes": "The only published address is a Wyoming registered-agent address; where the team is based wasn't established.",
-    "lastVerified": "2026-10-06",
-    "registrationsCheckedAt": "2026-10-06"
+    "locationFlag": "offshore-moved",
+    "notes": "Offshore company with a US address: Proto IT Consultants (Private) Limited is registered with the SECP in Islamabad (no. 0225675), and the site footer gives an Islamabad office (35 St. 2, G-15/1) alongside 30 N Gould St, Sheridan, WY, a Wyoming registered-agent address. The US phone number (+1 229) and EST working hours are presented to US customers.",
+    "lastVerified": "2026-10-22",
+    "registrationsCheckedAt": "2026-10-22"
   },
   {
     "id": "495b4e24-8393-4ead-b9ce-22279f4fa2a0",
