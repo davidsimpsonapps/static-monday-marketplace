@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-20T13:34:29.000Z
+updatedAt: 2026-10-22T13:30:31.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -12,7 +12,7 @@ Let account admins approve additional MCP connections and their redirect URIs, b
 Let users request admin approval when an external service tries to connect to their monday.com account as an additional connection. When admin approval is required, nothing is connected until an admin approves the request.
 
 <Callout icon="🚧" theme="warn">
-  **Early access.** This flow is in early access. Existing access tokens may continue working for up to **24 hours** after an admin revokes approval. Admins do not receive email notifications for new requests. Check **monday administration → Connectors → Dynamic Connectors** manually.
+  **Early access.** This flow is in early access. Existing access tokens may continue working for up to **24 hours** after an admin revokes approval.
 </Callout>
 
 # Overview
@@ -60,10 +60,6 @@ Review the authorization screen and select **Authorize** to finish connecting.
 
 Nothing is connected while the request is pending. After an admin approves it, reconnect and complete authorization.
 
-<Callout icon="📘" theme="info">
-  **No email notifications during early access.** Submitting a request adds it to the administration page. Admins open **monday administration → Connectors → Dynamic Connectors → Pending requests** to review it.
-</Callout>
-
 If **Request approval** is unavailable for your role, contact your admin. Your role's request permission determines whether you can submit a new request. It does not prevent you from using a connector that is already approved, provided you have the required MCP and data permissions.
 
 For accounts with no user request approval, the screen will look like below<br />
@@ -80,7 +76,7 @@ Review the connector and its redirect URL before authorizing. If an admin previo
 
 # Review and manage connectors
 
-Open **monday administration → Connectors → Dynamic Connectors**.
+Open **monday administration → Connectors → Dynamic Connectors**. Admins also receive an email notification for any new connector requests.
 
 ## Review pending requests
 
@@ -151,10 +147,6 @@ When an admin revokes a previously granted connector approval, existing access t
 Approval is checked again at the next token refresh. If the connector is no longer allowed by the account's policy, the refresh is denied. An existing access token can continue working until it expires, for up to **24 hours** after revocation.
 
 For example, if an admin revokes approval just after a token is issued, the connector may continue using that token for almost another 24 hours. During early access, treat revocation as taking effect at token refresh.
-
-## Admins must check requests manually
-
-There is currently no email notification for a new approval request. Admins check **monday administration → Connectors → Dynamic Connectors → Pending requests**, including new callback URLs on existing connections.
 
 # For MCP client developers
 
