@@ -287,20 +287,27 @@ module.exports = async function (eleventyConfig) {
       let level = null;
       let claimed = null;
       if (details.locationFlag === "offshore-moved" && actual) {
-        const moved = (details.alternativeAddresses || []).find(
+        // every country it presents itself in: the partner profile's
+        // country, then each moved (foreign) address
+        const moved = (details.alternativeAddresses || []).filter(
           (a) => a.countryCode && a.countryCode !== actual,
         );
-        claimed =
-          listedCountryCode && listedCountryCode !== actual
-            ? listedCountryCode
-            : moved?.countryCode;
-        if (claimed) {
-          const via =
-            moved?.countryCode === claimed && moved.label
-              ? ` with a ${lowerFirst(moved.label.replace(/\s*\((.*)\)$/, ", $1"))}`
-              : "";
+        const claims = [];
+        if (listedCountryCode && listedCountryCode !== actual)
+          claims.push({ code: listedCountryCode });
+        for (const a of moved) {
+          const c = claims.find((x) => x.code === a.countryCode);
+          if (c) c.label ??= a.label;
+          else claims.push({ code: a.countryCode, label: a.label });
+        }
+        claimed = claims[0]?.code || null;
+        if (claims.length) {
+          const parts = claims.map(
+            (c) =>
+              `${name(c.code)}${c.label ? ` with a ${lowerFirst(c.label.replace(/\s*\((.*)\)$/, ", $1"))}` : ""}`,
+          );
           reasons.push(
-            `Presents as based in ${name(claimed)}${via}, but appears to be based in ${name(actual)}`,
+            `Presents as based in ${parts.join(" and in ")}, but appears to be based in ${name(actual)}`,
           );
           level = "confirmed";
         }

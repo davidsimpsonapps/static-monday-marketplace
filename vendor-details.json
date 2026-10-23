@@ -1310,10 +1310,15 @@
         "url": "https://opencorporates.com/companies/us_de/6818502",
         "id": "6818502",
         "label": "Delaware (US) company no. 6818502 (OpenCorporates)"
+      },
+      {
+        "type": "other",
+        "url": "https://www.legalzoom.com/business/business-operations/lz-virtual-mail-addresses/or/beaverton.html",
+        "label": "9450 SW Gemini Dr is a virtual-mail address (LegalZoom)"
       }
     ],
     "locationFlag": "possible-offshore",
-    "notes": "Founder listed only as 'Sami C.' on G2/TrustRadius; no full name confirmed. Linked to Cloud Concept (Dubai monday.com partner). Possible offshore company: the Beaverton, OR address may be a virtual office; DocuGen is linked to Cloud Concept, a Dubai-based monday.com partner.",
+    "notes": "Possible offshore company: the only published address, 9450 SW Gemini Dr, Beaverton, OR, is the virtual-mailbox address of Earth Class Mail (also sold by LegalZoom), and DocuGen is linked to Cloud Concept, a Dubai-based monday.com partner. DocuGen, Inc. is a Delaware corporation (agent LegalInc). Founder listed only as 'Sami C.' on G2/TrustRadius; no full name confirmed.",
     "lastVerified": "2026-10-06",
     "registrationsCheckedAt": "2026-10-06"
   },
@@ -10602,7 +10607,7 @@
       }
     ],
     "locationFlag": "possible-offshore",
-    "notes": "Possible offshore company: the US address is a registered-agent/virtual-office address (1007 N Orange St, Wilmington, DE); where the team is based wasn't established.",
+    "notes": "Possible offshore company: the only published address of this Wyoming LLC (Interacti Digital LLC) is a virtual office in Delaware (1007 N Orange St, 4th Floor, Wilmington); no team, phone number or office location is published, so where the team is based wasn't established.",
     "lastVerified": "2026-10-06",
     "registrationsCheckedAt": "2026-10-06"
   },
@@ -13571,8 +13576,8 @@
         "url": "https://krispcall.com/contact-us/"
       }
     ],
-    "locationFlag": null,
-    "notes": "Co-CEO/co-founder Dr. Rajendra Dangol. Singapore is the real base; the US entity KrispCall Communications Inc. uses 8 The Green STE A, Dover, DE 19901 (a registered-agent address).",
+    "locationFlag": "offshore-moved",
+    "notes": "Offshore company with a US address: KrispCall presents itself as US-based, but its US company, KrispCall Communications Inc., uses 8 The Green, STE A, Dover, DE, a registered-agent mailbox, and the company is based in Singapore (KrispCall Pte. Ltd., 20 Cecil Street). Co-founders and co-CEOs Dinesh Silwal and Dr. Rajendra Dangol.",
     "lastVerified": "2026-10-01",
     "registrationsCheckedAt": null
   },
@@ -15358,8 +15363,8 @@
         "label": "CIN U72900KA2021PTC144740"
       }
     ],
-    "locationFlag": null,
-    "notes": "Copied from the linked monday.com partner entry (CloudCache Consulting Pvt Ltd); added because the vendor is linked to a partner.",
+    "locationFlag": "offshore-moved",
+    "notes": "Offshore company with a US address: CloudCache Consulting Private Limited is an Indian company (CIN U72900KA2021PTC144740, Bengaluru), but its site publishes only a US address (8 The Green, Dover, DE, a registered-agent mailbox) and a UK one (128 City Road, London, a registered-office service). Same company as the linked monday.com partner entry.",
     "lastVerified": "2026-10-22",
     "registrationsCheckedAt": "2026-10-22"
   },

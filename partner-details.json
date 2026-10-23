@@ -4893,8 +4893,8 @@
         "label": "CIN U72900KA2021PTC144740"
       }
     ],
-    "locationFlag": null,
-    "notes": "Indian company that publishes only UK and US service addresses (128 City Road is a registered-office service; 8 The Green is a Delaware registered agent). The Indian register gives a residential registered office in Bengaluru, so only the city is shown. Country confirmed by the company register. Contact from the monday.com partner profile's team list.",
+    "locationFlag": "offshore-moved",
+    "notes": "Offshore company with a US address: CloudCache Consulting Private Limited is an Indian company (CIN U72900KA2021PTC144740, Bengaluru), but its site publishes only a US address (8 The Green, Dover, DE, a registered-agent mailbox) and a UK one (128 City Road, London, a registered-office service). Contact from the monday.com partner profile's team list.",
     "lastVerified": "2026-10-22",
     "registrationsCheckedAt": "2026-10-22"
   },
