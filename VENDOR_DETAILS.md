@@ -176,6 +176,10 @@ vendor/partner cards and pages, plus a sentence under the page heading:
 - `possible-offshore` → orange badge quoting the first sentence of the notes.
 - `registered-agent` → no badge (many genuine local companies publish a
   registered-agent address).
+- Any entry whose `address` or an `alternativeAddresses` street is on the
+  filter's `HIGH_RISK` list (currently 30 N Gould St, Sheridan, WY) → red
+  badge whatever its flag, with a link to an article about the address. Add
+  that article as a `press` source on each such entry.
 
 ## 1. Check what's missing or stale
 

@@ -12324,10 +12324,15 @@
         "url": "https://eservices.secp.gov.pk/eServices/NameSearch.jsp",
         "id": "0225675",
         "label": "SECP registration no. 0225675"
+      },
+      {
+        "type": "press",
+        "url": "https://malwaretips.com/blogs/30-n-gould-st-sheridan-wy-scams-exposed/",
+        "label": "About the 30 N Gould St registered-agent address"
       }
     ],
     "locationFlag": "offshore-moved",
-    "notes": "Offshore company with a US address: Proto IT Consultants (Private) Limited is registered with the SECP in Islamabad (no. 0225675), and the site footer gives an Islamabad office (35 St. 2, G-15/1) alongside 30 N Gould St, Sheridan, WY, a Wyoming registered-agent address. The US phone number (+1 229) and EST working hours are presented to US customers.",
+    "notes": "Offshore company with a US address: Proto IT Consultants (Private) Limited is registered with the SECP in Islamabad (no. 0225675), and the site footer gives an Islamabad office (35 St. 2, G-15/1) alongside 30 N Gould St, Sheridan, WY, the mailbox address of Registered Agents Inc., a commercial registered agent shared by hundreds of unrelated companies. The US phone number (+1 229) and EST working hours are presented to US customers.",
     "lastVerified": "2026-10-22",
     "registrationsCheckedAt": "2026-10-22"
   },

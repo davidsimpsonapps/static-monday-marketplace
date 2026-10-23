@@ -103,7 +103,7 @@ eleventyComputed:
               {% if offshore %}
                 <p class="text-sm mb-1 {{ 'text-red-700' if offshore.level == 'confirmed' else 'text-amber-700' }}" data-offshore-note="{{ offshore.level }}">
                   {{ offshoreBadge(offshore, false) }}
-                  {{ offshore.text }}. <a href="#company" class="underline">Company details</a>
+                  {% for reason in offshore.reasons %}{{ reason }}. {% endfor %}{% if offshore.url %} <a href="{{ offshore.url }}" target="_blank" rel="nofollow noreferrer noopener" class="underline">Read about this address</a> ·{% endif %} <a href="#company" class="underline">Company details</a>
                 </p>
               {% endif %}
               {% if linkedPartners.length %}

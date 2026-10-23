@@ -251,7 +251,24 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter(
     "offshoreStatus",
     function (details, listedCountryCode) {
-      if (!details?.locationFlag) return null;
+      if (!details) return null;
+      // Addresses so widely used by shell companies that any company giving
+      // one as its address gets the red badge, even when where it is really
+      // based is unconfirmed.
+      const HIGH_RISK = [
+        {
+          re: /\b30 N\.? Gould St/i,
+          label:
+            "30 N Gould St, Sheridan, WY, a registered-agent mailbox shared by hundreds of unrelated companies",
+          url: "https://malwaretips.com/blogs/30-n-gould-st-sheridan-wy-scams-exposed/",
+        },
+      ];
+      const risky = HIGH_RISK.filter((h) =>
+        [details.address, ...(details.alternativeAddresses || [])].some((a) =>
+          h.re.test(a?.street || ""),
+        ),
+      );
+      if (!details.locationFlag && !risky.length) return null;
       const countryName = eleventyConfig.getFilter("countryName");
       const name = (code) => {
         const n = countryName(code);
@@ -265,39 +282,52 @@ module.exports = async function (eleventyConfig) {
       const lowerFirst = (t) =>
         /^[A-Z][a-z]/.test(t) ? t.charAt(0).toLowerCase() + t.slice(1) : t;
       const actual = details.address?.countryCode;
+      // every reason that applies, each shown as its own sentence
+      const reasons = [];
+      let level = null;
+      let claimed = null;
       if (details.locationFlag === "offshore-moved" && actual) {
         const moved = (details.alternativeAddresses || []).find(
           (a) => a.countryCode && a.countryCode !== actual,
         );
-        const claimed =
+        claimed =
           listedCountryCode && listedCountryCode !== actual
             ? listedCountryCode
             : moved?.countryCode;
-        if (!claimed) return null;
-        const via =
-          moved?.countryCode === claimed && moved.label
-            ? ` with a ${lowerFirst(moved.label.replace(/\s*\((.*)\)$/, ", $1"))}`
-            : "";
-        return {
-          level: "confirmed",
-          claimed,
-          actual,
-          text: `Presents as based in ${name(claimed)}${via}, but appears to be based in ${name(actual)}`,
-        };
+        if (claimed) {
+          const via =
+            moved?.countryCode === claimed && moved.label
+              ? ` with a ${lowerFirst(moved.label.replace(/\s*\((.*)\)$/, ", $1"))}`
+              : "";
+          reasons.push(
+            `Presents as based in ${name(claimed)}${via}, but appears to be based in ${name(actual)}`,
+          );
+          level = "confirmed";
+        }
       }
-      if (details.locationFlag === "possible-offshore") {
+      for (const r of risky) {
+        reasons.push(`Gives ${r.label}, as its US address`);
+        level = "confirmed";
+      }
+      if (!level && details.locationFlag === "possible-offshore") {
         const first = (details.notes || "")
           .split(/(?<=\.)\s/)[0]
           .replace(/^Possible offshore company:\s*/i, "")
           .replace(/\.$/, "");
-        return {
-          level: "possible",
-          claimed: actual,
-          actual: null,
-          text: `Possible offshore company${first ? `: ${lowerFirst(first)}` : ""}`,
-        };
+        reasons.push(
+          `Possible offshore company${first ? `: ${lowerFirst(first)}` : ""}`,
+        );
+        level = "possible";
       }
-      return null;
+      if (!level) return null;
+      return {
+        level,
+        claimed: claimed || (risky.length ? "US" : actual),
+        actual: level === "confirmed" && claimed ? actual : null,
+        reasons,
+        text: reasons.join(". "),
+        url: risky[0]?.url,
+      };
     },
   );
 
