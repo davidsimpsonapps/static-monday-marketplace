@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-08T17:25:18.000Z
+updatedAt: 2026-10-19T07:46:29.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -37,6 +37,7 @@ How you authenticate depends on what you're building:
 | Private / org-controlled access (who connects, which client, and **which scopes** limit MCP actions) | [Control MCP access with your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app) | You issue your own client credentials.                                                                                       |
 | Pre-approved third-party agents                                                                      | [Compatible MCP clients](https://developer.monday.com/api-reference/docs/compatible-mcp-clients)                                | Enabled by the hosted MCP permission. Usual connection flow.                                                                 |
 | Additional MCP client for other monday.com accounts                                                  | [Dynamic client registration](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration)                  | The customer's admin approves the connection and its redirect URIs through [dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors). |
+| Org-wide access through your identity provider (currently Claude with Okta)                          | [Enterprise managed auth](https://developer.monday.com/api-reference/docs/mcp-enterprise-managed-auth)                          | Your IdP admin and AI client admin set it up once. Members connect with no consent screen.                                   |
 
 The hosted MCP permission covers the pre-approved third-party agents. Dynamic connectors let an account admin approve any additional connection and its redirect URIs.
 
@@ -85,21 +86,21 @@ For the full security architecture — tenant isolation, AI-layer risks, and OWA
 
 # Common issues
 
-**Authentication failures**
+## Authentication failures
 
 1. Verify your redirect URL matches exactly in both your app settings and authorization request
 2. Ensure your client ID and client secret are correct
 3. Check that the requested scopes are enabled on your app's **OAuth & Permissions** page
 4. Confirm **New OAuth flow** is switched on under **Build → OAuth & Permissions → New OAuth flow**. A custom app cannot connect to MCP while this toggle is off
 
-**Connection issues**
+## Connection issues
 
 1. Verify the MCP server URL is `https://mcp.monday.com/mcp` (not `https://mcp.monday.com/sse` — SSE is deprecated and unsupported)
 2. Check that you're including a valid access token or API token in the `Authorization` header
 3. Verify the access token hasn't expired
 4. If your client config uses `mcp-remote` with an `/sse` URL, replace it with a direct Streamable HTTP config pointing at `https://mcp.monday.com/mcp`
 
-**Additional connection**
+## Additional connection
 
 A DCR client registers, then the user requests admin approval for the connection and its redirect URIs. See [Dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors).
 
@@ -110,6 +111,7 @@ A DCR client registers, then the user requests admin approval for the connection
 * [Authenticate with an API token](https://developer.monday.com/api-reference/docs/mcp-api-token)
 * [Control MCP access with your own OAuth app](https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app)
 * [Make your integration publicly available (DCR)](https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration)
+* [Enterprise managed auth](https://developer.monday.com/api-reference/docs/mcp-enterprise-managed-auth)
 * [Dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors)
 * [Compatible MCP clients](https://developer.monday.com/api-reference/docs/compatible-mcp-clients)
 * [Platform MCP tools reference](https://developer.monday.com/api-reference/docs/platform-mcp-tools)
