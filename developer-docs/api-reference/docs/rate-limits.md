@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-19T13:11:45.000Z
+updatedAt: 2026-10-28T08:37:36.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -81,11 +81,12 @@ You will receive a `DAILY_LIMIT_EXCEEDED` error if you hit the limit.
 
 The limit varies based on your [monday.com plan](https://monday.com/pricing):
 
-| Tier                | Daily call limit (resets at midnight UTC) |
-| :------------------ | :---------------------------------------- |
-| Free/Standard/Basic | 1,000                                     |
-| Pro                 | 10,000                                    |
-| Enterprise          | 25,000                                    |
+| Tier           | Daily call limit (resets at midnight UTC) |
+| :------------- | :---------------------------------------- |
+| Free           | 200                                       |
+| Standard/Basic | 1,000                                     |
+| Pro/Trial      | 10,000                                    |
+| Enterprise     | 25,000                                    |
 
 You can increase your daily call limit by [purchasing the API add-on](https://developer.monday.com/api-reference/docs/api-analytics#how-to-purchase-api-add-on) through the [API analytics dashboard](https://developer.monday.com/api-reference/docs/api-analytics) if your account exceeds this limit.
 
