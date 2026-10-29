@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-08T17:25:18.000Z
+updatedAt: 2026-10-28T20:05:10.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -57,6 +57,10 @@ Most MCP-compatible coding tools (Cursor, Claude Code, VS Code, Windsurf, etc.) 
 For authentication options, API version control, and advanced configuration, see [Integrate with the monday MCP server](https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp).
 
 Any other coding tool connects through [dynamic connectors](https://developer.monday.com/api-reference/docs/mcp-dynamic-connectors). The account admin approves the connection and its redirect URIs before the connection is created.
+
+<Callout icon="📘" theme="info">
+  **Prefer to delegate tasks to an agent instead of calling tools?** The monday.com Platform Agent is also available over the Agent2Agent (A2A) protocol. See [Connect to the Platform Agent over A2A](https://developer.monday.com/api-reference/docs/connect-to-the-platform-agent-over-a2a).
+</Callout>
 
 ***
 

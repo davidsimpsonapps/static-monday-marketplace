@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:31:25.000Z
+updatedAt: 2026-10-28T20:05:10.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -17,7 +17,7 @@ monday.com is a customizable AI work platform covering project management, CRM, 
 
 # Architecture overview
 
-monday.com provides two MCP servers covering different parts of the developer lifecycle, plus direct API access for advanced use cases.
+monday.com provides two MCP servers covering different parts of the developer lifecycle, plus direct API access for advanced use cases. The Platform Agent is also available over the [A2A protocol](https://developer.monday.com/api-reference/docs/connect-to-the-platform-agent-over-a2a).
 
 |                  | Platform MCP                                                              | Apps MCP                                                                        |
 | :--------------- | :------------------------------------------------------------------------ | :------------------------------------------------------------------------------ |
@@ -65,6 +65,16 @@ Connected agents:
 * Have admin-configurable access to workspaces and boards
 * Consume AI credits tracked under the account's usage dashboard
 * Are governed by account-level permissions that admins control
+
+## Platform Agent (A2A)
+
+The monday.com Platform Agent can also be connected to over the Agent2Agent (A2A) protocol, an open standard for agent-to-agent communication. Use A2A to delegate tasks to the Platform Agent in natural language from any A2A-compatible client or agent.
+
+* **Agent card:** `https://api.monday.com/platform-ai-gateway/a2a/platform-agent/.well-known/agent-card.json`
+* **Endpoint (JSON-RPC):** `https://api.monday.com/platform-ai-gateway/a2a/platform-agent/jsonrpc`
+* **Auth:** OAuth 2.1 with PKCE (user access token)
+
+See [Connect to the Platform Agent over A2A](https://developer.monday.com/api-reference/docs/connect-to-the-platform-agent-over-a2a) for setup, a request example, and optional settings.
 
 ## Platform MCP
 
