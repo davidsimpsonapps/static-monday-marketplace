@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-01-06T16:00:50.000Z
+updatedAt: 2026-10-29T14:42:50.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/apps/llms.txt
@@ -37,6 +37,7 @@ $ mapps init -t <SECRET_TOKEN>
 * [`mapps app:promote`](https://developer.monday.com/apps/docs/command-line-interface-cli#mapps-apppromote)
 * [`mapps app:scaffold [DESTINATION] [PROJECT]`](https://developer.monday.com/apps/docs/command-line-interface-cli#mapps-appscaffold-destination-project)
 * [`mapps autocomplete [SHELL]`](https://developer.monday.com/apps/docs/command-line-interface-cli#mapps-autocomplete-shell)
+* [`mapps code:delete`](https://developer.monday.com/apps/docs/command-line-interface-cli#mapps-codedelete)
 * [`mapps code:env`](https://developer.monday.com/apps/docs/command-line-interface-cli#mapps-codeenv)
 * [`mapps code:logs`](https://developer.monday.com/apps/docs/command-line-interface-cli#mapps-codelogs)
 * [`mapps code:push`](https://developer.monday.com/apps/docs/command-line-interface-cli#mapps-codepush)
@@ -374,6 +375,23 @@ The `mapps autocomplete [SHELL]` command displays the autocomplete installation 
 
 ```shell Terminal
 $ mapps autocomplete bash
+```
+
+## `mapps code:delete`
+
+The `mapps code:delete` command permanently deletes the monday code deployments of an app in all regions, without deleting the app. This cannot be undone, but you can always deploy the app again with `mapps code:push`.
+
+### Flags
+
+| Short Flag | Long Flag | Description                    |
+| :--------- | :-------- | :----------------------------- |
+| `-f`       | `--force` | Skips the confirmation prompt. |
+| `-i`       | `--appId` | The app's ID.                  |
+
+### Example
+
+```shell Terminal
+$ mapps code:delete -i <APP_ID>
 ```
 
 ## `mapps code:env`
