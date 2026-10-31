@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-23T16:42:43.000Z
+updatedAt: 2026-10-30T14:49:37.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -139,6 +139,8 @@ The `search` query itself takes no arguments. Arguments are passed to each entit
 
 **`search.items` arguments:**
 
+Search for items. All provided filters must be satisfied (AND).
+
 <Table align={["left","left","left"]}>
   <thead>
     <tr>
@@ -161,7 +163,7 @@ The `search` query itself takes no arguments. Arguments are passed to each entit
     <tr>
       <td>date_range</td>
       <td>[`CrossEntityDateRangeInput`](https://developer.monday.com/api-reference/reference/search-other-types#crossentitydaterangeinput)</td>
-      <td>Optional. Filter results by creation or update timestamps.</td>
+      <td>Optional. Filter: restricts results to a creation and/or last-update time window. Bounds are inclusive ISO 8601 date-times; omitted bounds are open. All provided bounds and all other provided filters must be satisfied (AND).</td>
     </tr>
     <tr>
       <td>strategy</td>
@@ -171,12 +173,37 @@ The `search` query itself takes no arguments. Arguments are passed to each entit
     <tr>
       <td>board_ids</td>
       <td>`[ID!]`</td>
-      <td>Optional. Filter items to specific board IDs.</td>
+      <td>Optional. Filter: items on at least one of the given board IDs. Values in this list are alternatives (any of). All provided filters must be satisfied (AND).</td>
     </tr>
     <tr>
       <td>workspace_ids</td>
       <td>`[ID!]`</td>
-      <td>Optional. Filter items to specific workspace IDs.</td>
+      <td>Optional. Filter: items in at least one of the given workspace IDs. Values in this list are alternatives (any of). All provided filters must be satisfied (AND).</td>
+    </tr>
+    <tr>
+      <td>person_ids</td>
+      <td>`[ID!]`</td>
+      <td>Optional. Filter items that have at least one of the given user IDs assigned in any of their people columns. Every people column of the item is checked, not one specific column. Maximum: `50` unique IDs in total across `person_ids` and `team_ids`. **Only available in versions `2027-01` and later.**</td>
+    </tr>
+    <tr>
+      <td>team_ids</td>
+      <td>`[ID!]`</td>
+      <td>Optional. Filter items that have at least one of the given team IDs assigned in any of their people columns. Every people column of the item is checked, not one specific column. Maximum: `50` unique IDs in total across `person_ids` and `team_ids`. **Only available in versions `2027-01` and later.**</td>
+    </tr>
+    <tr>
+      <td>status_labels</td>
+      <td>`[String!]`</td>
+      <td>Optional. Filter items where any of their status columns has one of the given labels. Every status column of the item is checked, not one specific column. Labels match the whole label text, ignoring case. Maximum: `10` labels, each up to `64` characters. **Only available in versions `2027-01` and later.**</td>
+    </tr>
+    <tr>
+      <td>tag_names</td>
+      <td>`[String!]`</td>
+      <td>Optional. Filter items tagged with at least one of the given tag names, for example `"bug"`. Every tags column of the item is checked, not one specific column. Tag names match the whole name, ignoring case, and a leading `#` is ignored. Maximum: `10` tags, each up to `64` characters. **Only available in versions `2027-01` and later.**</td>
+    </tr>
+    <tr>
+      <td>creator_ids</td>
+      <td>`[ID!]`</td>
+      <td>Optional. Filter items created by at least one of the given user IDs. **Only available in versions `2027-01` and later.**</td>
     </tr>
   </tbody>
 </Table>
@@ -205,7 +232,7 @@ The `search` query itself takes no arguments. Arguments are passed to each entit
     <tr>
       <td>date_range</td>
       <td>[`CrossEntityDateRangeInput`](https://developer.monday.com/api-reference/reference/search-other-types#crossentitydaterangeinput)</td>
-      <td>Optional. Filter results by creation or update timestamps.</td>
+      <td>Optional. Filter: restricts results to a creation and/or last-update time window. Bounds are inclusive ISO 8601 date-times; omitted bounds are open. All provided bounds and all other provided filters must be satisfied (AND).</td>
     </tr>
     <tr>
       <td>strategy</td>
@@ -249,7 +276,7 @@ The `search` query itself takes no arguments. Arguments are passed to each entit
     <tr>
       <td>date_range</td>
       <td>[`CrossEntityDateRangeInput`](https://developer.monday.com/api-reference/reference/search-other-types#crossentitydaterangeinput)</td>
-      <td>Optional. Filter results by creation or update timestamps.</td>
+      <td>Optional. Filter: restricts results to a creation and/or last-update time window. Bounds are inclusive ISO 8601 date-times; omitted bounds are open. All provided bounds and all other provided filters must be satisfied (AND).</td>
     </tr>
     <tr>
       <td>strategy</td>
@@ -297,7 +324,7 @@ The `search` query itself takes no arguments. Arguments are passed to each entit
     <tr>
       <td>date_range</td>
       <td>[`CrossEntityDateRangeInput`](https://developer.monday.com/api-reference/reference/search-other-types#crossentitydaterangeinput)</td>
-      <td>Optional. Filter results by creation or update timestamps.</td>
+      <td>Optional. Filter: restricts results to a creation and/or last-update time window. Bounds are inclusive ISO 8601 date-times; omitted bounds are open. All provided bounds and all other provided filters must be satisfied (AND).</td>
     </tr>
     <tr>
       <td>strategy</td>
@@ -331,7 +358,7 @@ The `search` query itself takes no arguments. Arguments are passed to each entit
     <tr>
       <td>date_range</td>
       <td>[`CrossEntityDateRangeInput`](https://developer.monday.com/api-reference/reference/search-other-types#crossentitydaterangeinput)</td>
-      <td>Optional. Filter results by creation or update timestamps.</td>
+      <td>Optional. Filter: restricts results to a creation and/or last-update time window. Bounds are inclusive ISO 8601 date-times; omitted bounds are open. All provided bounds and all other provided filters must be satisfied (AND).</td>
     </tr>
     <tr>
       <td>strategy</td>
@@ -369,7 +396,7 @@ The `search` query itself takes no arguments. Arguments are passed to each entit
     <tr>
       <td>date_range</td>
       <td>[`CrossEntityDateRangeInput`](https://developer.monday.com/api-reference/reference/search-other-types#crossentitydaterangeinput)</td>
-      <td>Optional. Filter results by creation or update timestamps.</td>
+      <td>Optional. Filter: restricts results to a creation and/or last-update time window. Bounds are inclusive ISO 8601 date-times; omitted bounds are open. All provided bounds and all other provided filters must be satisfied (AND).</td>
     </tr>
     <tr>
       <td>strategy</td>
@@ -417,7 +444,7 @@ The `search` query itself takes no arguments. Arguments are passed to each entit
     <tr>
       <td>date_range</td>
       <td>[`CrossEntityDateRangeInput`](https://developer.monday.com/api-reference/reference/search-other-types#crossentitydaterangeinput)</td>
-      <td>Optional. Filter results by creation or update timestamps.</td>
+      <td>Optional. Filter: restricts results to a creation and/or last-update time window. Bounds are inclusive ISO 8601 date-times; omitted bounds are open. All provided bounds and all other provided filters must be satisfied (AND).</td>
     </tr>
     <tr>
       <td>strategy</td>

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:37:17.000Z
+updatedAt: 2026-10-29T09:44:10.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -337,7 +337,7 @@ An object containing details about a single subscription discount.
       </td>
 
       <td>
-
+        **Breaking change in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later:** the type changes from `Int!` to `Float!`, so the value can be a decimal number.
       </td>
     </tr>
   </tbody>

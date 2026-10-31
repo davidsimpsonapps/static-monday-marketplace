@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:35:49.000Z
+updatedAt: 2026-10-18T07:15:33.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -473,6 +473,40 @@ The `settings` field returns document-level settings. You can view a sample payl
   "showTableOfContent": true // true or false
 }
 ```
+
+## Get board view docs
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later**
+</Callout>
+
+* **Required scope: `docs:read`**
+* Returns an array containing the docs that are rendered as views of a board
+* Can only be queried directly at the root; can't be nested within another query
+
+```graphql GraphQL
+query {
+  board_view_docs(
+    board_id: 1234567890
+    view_id: 9876543210
+  ) {
+    id
+    object_id
+    name
+  }
+}
+```
+
+### Arguments
+
+| Argument  | Type  | Description                                                                                              |
+| :-------- | :---- | :------------------------------------------------------------------------------------------------------- |
+| board\_id | `ID!` | The unique identifier of the board that holds the doc views.                                             |
+| view\_id  | `ID`  | The unique identifier of a single doc board view. When omitted, every doc view of the board is returned. |
+
+### Fields
+
+The query returns [`Document`](https://developer.monday.com/api-reference/docs/docs#fields) objects, with the same fields as the [`docs`](#get-docs) query.
 
 # Mutations
 

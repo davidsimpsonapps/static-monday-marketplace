@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:36:14.000Z
+updatedAt: 2026-10-29T09:46:08.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -38,7 +38,8 @@ To read archived or deleted items by ID, use the root [`items`](https://develope
 ## Get items page
 
 * Returns an object containing metadata about a collection of items filtered by the specified criteria
-* Can't be queried at the root; must be nested within a [`boards`](https://developer.monday.com/api-reference/docs/boards#queries) or [`groups`](https://developer.monday.com/api-reference/reference/groups) query
+* Before API version [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01), can't be queried at the root; must be nested within a [`boards`](https://developer.monday.com/api-reference/docs/boards#queries) or [`groups`](https://developer.monday.com/api-reference/reference/groups) query
+* From `2027-01`, it can also be queried at the root. See [Get items page at the root](#get-items-page-at-the-root)
 
 ```graphql GraphQL
 query {
@@ -173,11 +174,69 @@ query {
 | cursor | `String`                                                                 | An opaque cursor that represents the position in the list after the last returned item. Use this cursor for pagination to fetch the next set of items. If the cursor is `null`, there are no more items to fetch. |
 | items  | [`[Item!]!`](https://developer.monday.com/api-reference/reference/items) | The cursor's corresponding item.                                                                                                                                                                                  |
 
+## Get items page at the root
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later**
+</Callout>
+
+* Retrieves a paginated page of items from a board. Provide `input` for the first page, or `cursor` for subsequent pages
+* Queried directly at the root, not nested within a `boards` or `groups` query
+* Returns [`ItemsPageResult`](https://developer.monday.com/api-reference/reference/items-page-other-types#itemspageresult) rather than the nested `items_page` object described above
+
+```graphql GraphQL
+query {
+  items_page(input: { board_id: 1234567890, limit: 25 }) {
+    cursor
+    items {
+      id
+      name
+      column_values {
+        id
+        text
+      }
+    }
+  }
+}
+```
+
+To fetch the next page, pass the returned `cursor`:
+
+```graphql GraphQL
+query {
+  items_page(cursor: "CURSOR_FROM_PREVIOUS_RESPONSE") {
+    cursor
+    items {
+      id
+      name
+    }
+  }
+}
+```
+
+### Arguments
+
+| Argument | Type                                                                                                           | Description                                                                                                                                 |
+| :------- | :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
+| `input`  | [`ItemsPageInput`](https://developer.monday.com/api-reference/reference/items-page-other-types#itemspageinput) | The items page query input (for the first page).                                                                                            |
+| `cursor` | `String`                                                                                                       | Opaque pagination cursor from a previous `items_page` response (for subsequent pages).                                                      |
+| `limit`  | `Int`                                                                                                          | Page size override (default 25, max 2000). This cap applies to the root query; the nested `items_page` under `boards` has a maximum of 500. |
+
+### Fields
+
+| Field          | Type                                                                                                      | Description                                                         |
+| :------------- | :-------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------ |
+| `cursor`       | `String`                                                                                                  | Opaque pagination token, `null` if there are no more pages.         |
+| `items`        | [`[ItemResult!]`](https://developer.monday.com/api-reference/reference/items-page-other-types#itemresult) | The items in this page of results.                                  |
+| `linked_items` | [`[ItemResult!]`](https://developer.monday.com/api-reference/reference/items-page-other-types#itemresult) | Linked items (relations, dependencies, subitems from other boards). |
+
 # Cursor-based pagination using `next_items_page`
 
 `items_page` utilizes cursor-based pagination to help return smaller sets of items from a large data set. When querying `items_page`, you can return the `cursor` argument that represents the next page of items.
 
 After returning the cursor, you can keep paginating through the data set using the [`next_items_page`](https://developer.monday.com/api-reference/reference/next-items-page) object. This object allows you to retrieve the next page of items while avoiding the complexity cost of nesting `items_page` within a `boards` query. It takes the `cursor` argument, so you can specify where in the data set you want to start from.
+
+From API version `2027-01`, the [root `items_page` query](#get-items-page-at-the-root) also returns a `cursor` on `ItemsPageResult`. Pass it back as the root `cursor` argument to fetch the next page.
 
 # Use cases
 

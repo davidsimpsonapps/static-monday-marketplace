@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:36:41.000Z
+updatedAt: 2026-10-30T13:39:18.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -246,11 +246,23 @@ Board data stored in the search index. Returned in the `indexed_data` field of [
 
 Document data stored in the search index. Returned in the `indexed_data` field of [`SearchDocResult`](#searchdocresult).
 
-| Field         | Type      | Description                                   |
-| :------------ | :-------- | :-------------------------------------------- |
-| id            | `ID!`     | Document ID.                                  |
-| name          | `String!` | Document name.                                |
-| workspace\_id | `ID`      | ID of the workspace containing this document. |
+| Field         | Type                                          | Description                                                                                                                     |
+| :------------ | :-------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
+| id            | `ID!`                                         | Document ID.                                                                                                                    |
+| name          | `String!`                                     | Document name.                                                                                                                  |
+| workspace\_id | `ID`                                          | ID of the workspace containing this document.                                                                                   |
+| highlights    | [`SearchDocHighlights`](#searchdochighlights) | Matched text snippets per searchable field. `null` for non-lexical results. **Only available in versions `2026-10` and later.** |
+
+***
+
+# SearchDocHighlights
+
+Matched text snippets per searchable document field. Returned in the `highlights` field of [`SearchIndexedDoc`](#searchindexeddoc).
+
+| Field   | Type        | Description                                                                                                                |
+| :------ | :---------- | :------------------------------------------------------------------------------------------------------------------------- |
+| name    | `[String!]` | Highlighted fragments from the document name with `<em>` tags around matched terms. Non-empty only for lexical matches.    |
+| content | `[String!]` | Highlighted fragments from the document content with `<em>` tags around matched terms. Non-empty only for lexical matches. |
 
 ***
 
@@ -334,14 +346,14 @@ Timeline item data stored in the search index. Returned in the `indexed_data` fi
 
 # CrossEntityDateRangeInput
 
-Optional date range filter available on all entity fields (`items`, `boards`, `docs`, `users`, `workspaces`, `updates`, `timeline_items`). All fields are optional — provide any combination to narrow results by creation or update timestamps.
+Filter for a creation and last-update time window, available on all entity fields (`items`, `boards`, `docs`, `users`, `workspaces`, `updates`, `timeline_items`). All fields are optional — provide any combination. All provided bounds must be satisfied (AND).
 
-| Field           | Type              | Description                                                               |
-| :-------------- | :---------------- | :------------------------------------------------------------------------ |
-| created\_before | `ISO8601DateTime` | Filter results created before this date (e.g., `"2026-03-16T08:00:00Z"`). |
-| created\_after  | `ISO8601DateTime` | Filter results created after this date.                                   |
-| updated\_before | `ISO8601DateTime` | Filter results updated before this date.                                  |
-| updated\_after  | `ISO8601DateTime` | Filter results updated after this date.                                   |
+| Field           | Type              | Description                                                                               |
+| :-------------- | :---------------- | :---------------------------------------------------------------------------------------- |
+| created\_before | `ISO8601DateTime` | Filter: created at or before this date-time (inclusive) (e.g., `"2026-03-16T08:00:00Z"`). |
+| created\_after  | `ISO8601DateTime` | Filter: created at or after this date-time (inclusive).                                   |
+| updated\_before | `ISO8601DateTime` | Filter: last updated at or before this date-time (inclusive).                             |
+| updated\_after  | `ISO8601DateTime` | Filter: last updated at or after this date-time (inclusive).                              |
 
 ***
 

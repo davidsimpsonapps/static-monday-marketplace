@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-10T08:20:05.000Z
+updatedAt: 2026-10-22T08:55:28.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -159,6 +159,24 @@ const response = await mondayApiClient.request(query, variables);
 
       <td>
         The view's unique identifier.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        is_pinned
+      </td>
+
+      <td>
+        `Boolean`
+      </td>
+
+      <td>
+        Whether the view is pinned. **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later.**
       </td>
 
       <td>
@@ -719,6 +737,24 @@ mutation {
 
     <tr>
       <td>
+        is_pinned
+      </td>
+
+      <td>
+        `Boolean`
+      </td>
+
+      <td>
+        Pins or unpins the view for all board members. Requires board owner or admin. **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later.**
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
         name
       </td>
 
@@ -856,17 +892,18 @@ mutation {
 
 ### Arguments
 
-| Argument         | Type                                                                                                                            | Description                              |
-| :--------------- | :------------------------------------------------------------------------------------------------------------------------------ | :--------------------------------------- |
-| board\_id        | `ID!`                                                                                                                           | The board's unique identifier.           |
-| filter           | [`ItemsQueryGroup`](https://developer.monday.com/api-reference/reference/board-views-other-types#itemsquerygroup)               | The table view's filters.                |
-| filter\_user\_id | `ID`                                                                                                                            | The user ID to filter by.                |
-| filter\_team\_id | `ID`                                                                                                                            | The team ID to filter by.                |
-| name             | `String`                                                                                                                        | The table view's name.                   |
-| settings         | [`TableViewSettingsInput`](https://developer.monday.com/api-reference/reference/board-views-other-types#tableviewsettingsinput) | The table view's configuration settings. |
-| sort             | [`[ItemsQueryOrderBy!]`](https://developer.monday.com/api-reference/reference/board-views-other-types#itemsqueryorderby)        | The table view's sort order.             |
-| tags             | `[String!]`                                                                                                                     | The table view's tags.                   |
-| view\_id         | `ID!`                                                                                                                           | The view's unique identifier.            |
+| Argument         | Type                                                                                                                            | Description                                                                                                                                                                                                          |
+| :--------------- | :------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| board\_id        | `ID!`                                                                                                                           | The board's unique identifier.                                                                                                                                                                                       |
+| filter           | [`ItemsQueryGroup`](https://developer.monday.com/api-reference/reference/board-views-other-types#itemsquerygroup)               | The table view's filters.                                                                                                                                                                                            |
+| filter\_user\_id | `ID`                                                                                                                            | The user ID to filter by.                                                                                                                                                                                            |
+| filter\_team\_id | `ID`                                                                                                                            | The team ID to filter by.                                                                                                                                                                                            |
+| is\_pinned       | `Boolean`                                                                                                                       | Pins or unpins the table view for all board members. Requires board owner or admin. **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later.** |
+| name             | `String`                                                                                                                        | The table view's name.                                                                                                                                                                                               |
+| settings         | [`TableViewSettingsInput`](https://developer.monday.com/api-reference/reference/board-views-other-types#tableviewsettingsinput) | The table view's configuration settings.                                                                                                                                                                             |
+| sort             | [`[ItemsQueryOrderBy!]`](https://developer.monday.com/api-reference/reference/board-views-other-types#itemsqueryorderby)        | The table view's sort order.                                                                                                                                                                                         |
+| tags             | `[String!]`                                                                                                                     | The table view's tags.                                                                                                                                                                                               |
+| view\_id         | `ID!`                                                                                                                           | The view's unique identifier.                                                                                                                                                                                        |
 
 ## Delete view
 

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:34:10.000Z
+updatedAt: 2026-10-30T11:53:29.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -29,8 +29,12 @@ Query board-scoped and user-scoped activity logs with the GraphQL platform API
 ## Get board activity logs
 
 * **Required scope: `boards:read`**
-* Nested only under a [`boards`](https://developer.monday.com/api-reference/docs/boards#queries) query — see **[Board activity logs](https://developer.monday.com/api-reference/docs/board-activity-logs)** for full **arguments**, **field** definitions, and the `ActivityLog` shape for this path.
+* Nested only under a [`boards`](https://developer.monday.com/api-reference/docs/boards#queries) query — see **[Board activity logs](https://developer.monday.com/api-reference/reference/activity-logs)** for full **arguments**, **field** definitions, and the `ActivityLog` shape for this path.
 * **Pagination:** `page` and `limit` (default **25** rows); up to **10,000** log rows per query.
+
+<Callout icon="🚧" theme="warn">
+  **This API changes starting from version [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01).** From `2027-01`, board activity logs include more entities, are limited to events from the last 90 days, and use `cursor` pagination instead of `page`. The pagination note above applies to versions before `2027-01`. See [Board activity logs](https://developer.monday.com/api-reference/reference/activity-logs#get-board-activity-logs-in-2027-01-and-later).
+</Callout>
 
 ```graphql GraphQL
 query {
@@ -152,15 +156,15 @@ query UserActivityNextPage(
 
 ### `ActivityLog` fields (user activity path)
 
-| Field        | Type     | Description                                                                                                                                                                                                                                              |
-| :----------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`         | `ID`     | Unique log row ID.                                                                                                                                                                                                                                       |
-| `account_id` | `ID`     | Account for the event.                                                                                                                                                                                                                                   |
-| `user_id`    | `ID`     | User associated with the event.                                                                                                                                                                                                                          |
-| `event`      | `String` | Event name/type.                                                                                                                                                                                                                                         |
-| `entity`     | `String` | Entity the event refers to.                                                                                                                                                                                                                              |
-| `data`       | `String` | Event payload (structure depends on `event`).                                                                                                                                                                                                            |
-| `created_at` | `String` | Event time. On **board** logs, `created_at` uses the **17-digit** format documented under [Board activity logs](https://developer.monday.com/api-reference/docs/board-activity-logs); on **user** logs the string format may differ — parse defensively. |
+| Field        | Type     | Description                                                                                                                                                                                                                                                                          |
+| :----------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`         | `ID`     | Unique log row ID.                                                                                                                                                                                                                                                                   |
+| `account_id` | `ID`     | Account for the event.                                                                                                                                                                                                                                                               |
+| `user_id`    | `ID`     | User associated with the event.                                                                                                                                                                                                                                                      |
+| `event`      | `String` | Event name/type.                                                                                                                                                                                                                                                                     |
+| `entity`     | `String` | Entity the event refers to.                                                                                                                                                                                                                                                          |
+| `data`       | `String` | Event payload (structure depends on `event`).                                                                                                                                                                                                                                        |
+| `created_at` | `String` | Event time. On **board** logs in versions before `2027-01`, `created_at` uses the **17-digit** format documented under [Board activity logs](https://developer.monday.com/api-reference/reference/activity-logs); on **user** logs the string format may differ — parse defensively. |
 
 ***
 
@@ -190,10 +194,10 @@ On failure, `activity_logs` may be **`null`** for that user while other fields s
 
 ## Choosing board vs user logs
 
-| Topic                 | Board `activity_logs`                      | User `activity_logs`                                                                        |
-| :-------------------- | :----------------------------------------- | :------------------------------------------------------------------------------------------ |
-| **You have**          | Board ID(s)                                | User ID(s)                                                                                  |
-| **Pagination**        | `page` + `limit`                           | `cursor` + `limit` (max 200)                                                                |
-| **Default rows/page** | 25                                         | 50                                                                                          |
-| **Strong filters**    | Column, group, item, user (on that board)  | Board list, event types                                                                     |
-| **API version**       | Dated stable versions (e.g. **`2026-07`**) | **`2026-07`** when released to dated API; see warning — **not for production** until stable |
+| Topic                 | Board `activity_logs`                                | User `activity_logs`                                                                        |
+| :-------------------- | :--------------------------------------------------- | :------------------------------------------------------------------------------------------ |
+| **You have**          | Board ID(s)                                          | User ID(s)                                                                                  |
+| **Pagination**        | `page` + `limit` (`cursor` + `limit` from `2027-01`) | `cursor` + `limit` (max 200)                                                                |
+| **Default rows/page** | 25                                                   | 50                                                                                          |
+| **Strong filters**    | Column, group, item, user (on that board)            | Board list, event types                                                                     |
+| **API version**       | Dated stable versions (e.g. **`2026-07`**)           | **`2026-07`** when released to dated API; see warning — **not for production** until stable |

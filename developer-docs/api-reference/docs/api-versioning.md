@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:31:59.000Z
+updatedAt: 2026-10-26T13:11:32.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -45,15 +45,15 @@ The current versions are:
 
 <div class="columns-container">
   <div class="column">
-    <div class="column-text">2026-04</div>
+    <div class="column-text">2026-07</div>
     Maintenance
   </div>
   <div class="column">
-    <div class="column-text">2026-07</div>
+    <div class="column-text">2026-10</div>
     Current
   </div>
     <div class="column">
-    <div class="column-text">2026-10</div>
+    <div class="column-text">2027-01</div>
     Release candidate
   </div>
 </div>
@@ -140,18 +140,18 @@ New RCs are gradually released every three months at the start of each quarter a
 
 Version names are not semantic but instead refer to the year and month in which they become the default/current version. **For example**, the July/Q3 2024 current version would be called `2024-07`.
 
-| Version name  | RC                 | Current (default)  | Maintenance        | Deprecated            |
-| :------------ | :----------------- | :----------------- | :----------------- | :-------------------- |
-| `2024-10`     | July 1st, 2024     | October 1st, 2024  | January 15th, 2025 | February 15th, 2026   |
-| `2025-01`     | October 1st, 2024  | January 15th, 2025 | April 1st, 2025    | February 15th, 2026   |
-| `2025-04`     | January 15th, 2025 | April 1st, 2025    | July 1st, 2025     | *Not yet announced\** |
-| `2025-07`     | April 1st, 2025    | July 1st, 2025     | October 1st, 2025  | *Not yet announced\** |
-| `2025-10`     | July 1st, 2025     | October 1st, 2025  | January 15th, 2026 | *Not yet announced\** |
-| `2026-01`     | October 1st, 2025  | January 15th, 2026 | April 1st, 2026    | *Not yet announced\** |
-| `2026-04`     | January 15th, 2026 | April 1st, 2026    | July 1st, 2026     | *Not yet announced\** |
-| **`2026-07`** | April 1st, 2026    | **July 1st, 2026** | October 1st, 2026  | *Not yet announced\** |
-| `2026-10`     | July 1st, 2026     | October 1st, 2026  | January 15th, 2027 | *Not yet announced\** |
-| `2027-01`     | October 1st, 2026  | January 15th, 2027 | April 1st, 2027    | *Not yet announced\** |
+| Version name  | RC                 | Current (default)      | Maintenance        | Deprecated            |
+| :------------ | :----------------- | :--------------------- | :----------------- | :-------------------- |
+| `2024-10`     | July 1st, 2024     | October 1st, 2024      | January 15th, 2025 | February 15th, 2026   |
+| `2025-01`     | October 1st, 2024  | January 15th, 2025     | April 1st, 2025    | February 15th, 2026   |
+| `2025-04`     | January 15th, 2025 | April 1st, 2025        | July 1st, 2025     | *Not yet announced\** |
+| `2025-07`     | April 1st, 2025    | July 1st, 2025         | October 1st, 2025  | *Not yet announced\** |
+| `2025-10`     | July 1st, 2025     | October 1st, 2025      | January 15th, 2026 | *Not yet announced\** |
+| `2026-01`     | October 1st, 2025  | January 15th, 2026     | April 1st, 2026    | *Not yet announced\** |
+| `2026-04`     | January 15th, 2026 | April 1st, 2026        | July 1st, 2026     | *Not yet announced\** |
+| `2026-07`     | April 1st, 2026    | July 1st, 2026         | October 1st, 2026  | *Not yet announced\** |
+| **`2026-10`** | July 1st, 2026     | **October 26th, 2026** | January 15th, 2027 | *Not yet announced\** |
+| `2027-01`     | October 1st, 2026  | January 15th, 2027     | April 1st, 2027    | *Not yet announced\** |
 
 *\*Each version deprecation will be announced at least six months in advance!*
 
@@ -173,7 +173,7 @@ fetch ("https://api.monday.com/v2", {
   headers: {
     'Content-Type': 'application/json',
     'Authorization' : 'YOUR_API_KEY_HERE',
-    'API-Version' : '2026-07'
+    'API-Version' : '2026-10'
    },
    body: JSON.stringify({
      'query' : 'query{version {kind value} }'
@@ -182,7 +182,7 @@ fetch ("https://api.monday.com/v2", {
 ```
 ```curl
 curl --location --request POST 'https://api.monday.com/v2' \
---header 'API-Version: 2026-07' \
+--header 'API-Version: 2026-10' \
 --header 'Authorization: YOUR_API_KEY_HERE' \
 --header 'Content-Type: application/json' \
 --data-raw '{"query":"query { version { kind value } }"}'
@@ -199,14 +199,14 @@ import { ApiClient } from "@mondaydotcomorg/api";
 
 const monday = new ApiClient({
   token: process.env.MONDAY_API_TOKEN,  // required
-  version: "2026-07"                    // sets default API version
+  version: "2026-10"                    // sets default API version
 });
 ```
 ```javascript Specific Call
 const query = `query { me { id } }`;
 
 const data = await monday.request(query, {
-  version: "2026-07"
+  version: "2026-10"
 });
 ```
 

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:36:01.000Z
+updatedAt: 2026-10-29T09:44:13.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -988,6 +988,24 @@ mutation {
         When using this argument, you must specify the mapping for **all** columns. You can select the target as `null` for any columns you don't want to map, but doing so will lose the column's data.
 
         If you omit this argument, the columns will be mapped based on the best match.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        parent_item_id
+      </td>
+
+      <td>
+        `ID`
+      </td>
+
+      <td>
+        The unique identifier of the parent item. When provided, the item is moved to become a subitem of this item. `board_id` must be the parent item's board. `group_id` is still required by the schema, but its value is ignored when `parent_item_id` is provided.
+
+        `columns_mapping` maps the source columns to the columns of the board the item lands on (the parent's subitems board, or the main board for multi-level boards), and is not allowed on a same-board move. `subitems_columns_mapping` is not allowed.
+
+        **Only available in versions `2027-01` and later.**
       </td>
     </tr>
   </tbody>

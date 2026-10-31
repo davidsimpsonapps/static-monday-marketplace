@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:34:23.000Z
+updatedAt: 2026-10-15T07:12:12.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -25,9 +25,10 @@ Returns an AI-generated answer based on monday.com developer documentation.
 
 ### Arguments
 
-| Argument | Type      | Description                       |
-| :------- | :-------- | :-------------------------------- |
-| `query`  | `String!` | The question or topic to look up. |
+| Argument         | Type      | Description                                                                                                                                                                 |
+| :--------------- | :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `query`          | `String!` | The question or topic to look up.                                                                                                                                           |
+| `retrieval_only` | `Boolean` | When `true`, returns the most relevant content directly from the documentation without summarization. Default: `false`. **Only available in versions `2026-10` and later.** |
 
 ### Returns
 

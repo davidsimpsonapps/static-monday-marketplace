@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:34:59.000Z
+updatedAt: 2026-10-30T16:07:34.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -421,16 +421,16 @@ const response = await axios.request(config);
 
 The mutation returns an [`Asset`](https://developer.monday.com/api-reference/reference/assets) object. You can request these fields:
 
-| Field           | Type                                                                  | Description                                 |
-| :-------------- | :-------------------------------------------------------------------- | :------------------------------------------ |
-| id              | `ID!`                                                                 | The file's unique identifier.               |
-| name            | `String!`                                                             | The file's name.                            |
-| url             | `String!`                                                             | URL to view the asset.                      |
-| public\_url     | `String!`                                                             | Public URL to the asset (valid for 1 hour). |
-| file\_extension | `String!`                                                             | The file's extension (e.g., `png`, `pdf`).  |
-| file\_size      | `Int!`                                                                | The file's size in bytes.                   |
-| uploaded\_by    | [`User!`](https://developer.monday.com/api-reference/reference/users) | The user who uploaded the file.             |
-| url\_thumbnail  | `String`                                                              | Thumbnail URL (images only).                |
+| Field           | Type                                                                                                                                                                                   | Description                                                                                                        |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| id              | `ID!`                                                                                                                                                                                  | The file's unique identifier.                                                                                      |
+| name            | `String!`                                                                                                                                                                              | The file's name.                                                                                                   |
+| url             | `String!`                                                                                                                                                                              | URL to view the asset.                                                                                             |
+| public\_url     | `String!`                                                                                                                                                                              | Public URL to the asset (valid for 1 hour).                                                                        |
+| file\_extension | `String!`                                                                                                                                                                              | The file's extension (e.g., `png`, `pdf`).                                                                         |
+| file\_size      | `Int!`                                                                                                                                                                                 | The file's size in bytes.                                                                                          |
+| uploaded\_by    | [`User!`](https://developer.monday.com/api-reference/reference/users) (pre `2027-04`) <br /> [`User`](https://developer.monday.com/api-reference/reference/users) (`2027-04` or later) | The user who uploaded the file. In versions `2027-04` and later, returns `null` if the uploader can't be resolved. |
+| url\_thumbnail  | `String`                                                                                                                                                                               | Thumbnail URL (images only).                                                                                       |
 
 <Callout icon="📘" theme="info">
   Each uploaded file is added to the column. The `add_file_to_column` mutation does not replace existing files — it appends to them. To replace all files, clear the column first and then upload the new file.

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-12T09:03:00.000Z
+updatedAt: 2026-10-30T14:28:15.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -531,10 +531,15 @@ Optional metadata supplied explicitly for a board.
 # BoardActivityLogsPage
 
 <Callout icon="🚧">
-  **Only available in API versions [`2026-10`](https://developer.monday.com/api-reference/docs/release-notes#2026-10) and later**
+  **Returned by [`Board.activity_logs`](https://developer.monday.com/api-reference/reference/activity-logs#get-board-activity-logs-in-2027-01-and-later) from API version [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01)**
 </Callout>
 
-Returned by [`activity_log`](https://developer.monday.com/api-reference/reference/boards#fields) on [`Board`](https://developer.monday.com/api-reference/reference/boards). Fields are not yet documented here.
+Returned by [`activity_logs`](https://developer.monday.com/api-reference/reference/activity-logs#get-board-activity-logs-in-2027-01-and-later) on [`Board`](https://developer.monday.com/api-reference/reference/boards). A page of the board's activity log entries.
+
+| Field  | Type             | Description                                                                 |
+| :----- | :--------------- | :-------------------------------------------------------------------------- |
+| logs   | `[ActivityLog!]` | The activity log entries for this page.                                     |
+| cursor | `String`         | The cursor to pass to fetch the next page. `null` if this is the last page. |
 
 ***
 
@@ -726,3 +731,67 @@ Structured reason an async board export job failed. Used by [`ExportJobStatusInf
 | `INVALID_REQUEST`     | No        | The request was rejected during validation — for example, an unsupported combination of export options. Fix the request before retrying. |
 | `NOT_FOUND`           | No        | The board, or something it referenced, could not be found.                                                                               |
 | `INTERNAL_ERROR`      | Yes       | An unexpected internal error occurred. Retrying the mutation is reasonable.                                                              |
+
+***
+
+# BoardDependencyCyclesResult
+
+<Callout icon="🚧">
+  **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later**
+</Callout>
+
+The dependency cycles found on a board. Returned by [`board_dependency_cycles`](https://developer.monday.com/api-reference/reference/boards#get-board-dependency-cycles).
+
+| Field     | Type                 | Description                                                               |
+| :-------- | :------------------- | :------------------------------------------------------------------------ |
+| board\_id | `ID`                 | The ID of the board.                                                      |
+| cycles    | `[DependencyCycle!]` | The cycles found. An empty list means the board was checked and is clean. |
+| truncated | `Boolean`            | Returns `true` when more cycles exist than the reporting cap allows.      |
+
+***
+
+# DependencyCycle
+
+<Callout icon="🚧">
+  **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later**
+</Callout>
+
+A single cycle in the board dependency graph. Used by [`BoardDependencyCyclesResult.cycles`](https://developer.monday.com/api-reference/reference/boards-other-types#boarddependencycyclesresult).
+
+| Field | Type           | Description                          |
+| :---- | :------------- | :----------------------------------- |
+| path  | `[CycleEdge!]` | The ordered items forming the cycle. |
+
+***
+
+# CycleEdge
+
+<Callout icon="🚧">
+  **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later**
+</Callout>
+
+One item in a cycle, with the predecessor that links to it. Used by [`DependencyCycle.path`](https://developer.monday.com/api-reference/reference/boards-other-types#dependencycycle).
+
+| Field           | Type            | Description                                                              |
+| :-------------- | :-------------- | :----------------------------------------------------------------------- |
+| item\_id        | `ID`            | The item that is part of the cycle.                                      |
+| predecessor\_id | `ID`            | The item that this item depends on within the cycle.                     |
+| type            | `CycleEdgeType` | The link type. Returns `null` when the stored edge type is unrecognized. |
+
+***
+
+# CycleEdgeType
+
+<Callout icon="🚧">
+  **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later**
+</Callout>
+
+The type of link between two items inside a cycle. Used by [`CycleEdge.type`](https://developer.monday.com/api-reference/reference/boards-other-types#cycleedge).
+
+| Value       | Description                                                                |
+| :---------- | :------------------------------------------------------------------------- |
+| `FS`        | Finish to Start: the item can start only after its predecessor finishes.   |
+| `SS`        | Start to Start: the item can start only after its predecessor starts.      |
+| `FF`        | Finish to Finish: the item can finish only after its predecessor finishes. |
+| `SF`        | Start to Finish: the item can finish only after its predecessor starts.    |
+| `HIERARCHY` | A parent/subitem link rather than a dependency.                            |

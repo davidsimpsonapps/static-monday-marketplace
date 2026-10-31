@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:35:36.000Z
+updatedAt: 2026-10-21T10:05:36.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -84,7 +84,8 @@ An object containing a column's calculated capability settings.
         `MIN`  
         `MIN_MAX`  
         `NONE`  
-        `SUM`
+        `SUM`  
+        `UNIQUE_VALUES` (version `2027-01` and later)
       </td>
     </tr>
   </tbody>
@@ -153,7 +154,8 @@ An enum containing the functions used to calculate column values within column c
         `MIN` (minimum value)  
         `MIN_MAX` (both minimum and maximum values)  
         `NONE`  
-        `SUM` (sum of all values)
+        `SUM` (sum of all values)  
+        `UNIQUE_VALUES` (collects the unique values; version `2027-01` and later)
       </td>
     </tr>
   </tbody>

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-12T09:03:00.000Z
+updatedAt: 2026-10-30T16:12:34.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -266,24 +266,6 @@ const response = await mondayApiClient.request(query);
 
     <tr>
       <td>
-        activity_log
-      </td>
-
-      <td>
-        [`BoardActivityLogsPage`](https://developer.monday.com/api-reference/reference/boards-other-types#boardactivitylogspage)
-      </td>
-
-      <td>
-        Returns a page of the board's activity log events. **Only available in versions `2026-10` and later.**
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
         activity_logs
       </td>
 
@@ -292,7 +274,7 @@ const response = await mondayApiClient.request(query);
       </td>
 
       <td>
-        The activity log events for the queried board(s).
+        The activity log events for the queried board(s). Starting from version `2027-01`, this field changes: it returns a [`BoardActivityLogsPage`](https://developer.monday.com/api-reference/reference/boards-other-types#boardactivitylogspage) that includes more entities and is limited to events from the last 90 days. See [Board activity logs](https://developer.monday.com/api-reference/reference/activity-logs).
       </td>
 
       <td>
@@ -380,11 +362,12 @@ const response = await mondayApiClient.request(query);
       </td>
 
       <td>
-        [`User!`](https://developer.monday.com/api-reference/reference/users#fields)
+        [`User!`](https://developer.monday.com/api-reference/reference/users#fields) (pre `2027-04`)  
+        [`User`](https://developer.monday.com/api-reference/reference/users#fields) (`2027-04` or later)
       </td>
 
       <td>
-        The board's creator.
+        The board's creator. In versions `2027-04` and later, returns `null` if the creator can't be resolved.
       </td>
 
       <td>
@@ -630,6 +613,24 @@ const response = await mondayApiClient.request(query);
         `all`  
         `archived`  
         `deleted`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        subitem_columns
+      </td>
+
+      <td>
+        [`[Column]`](https://developer.monday.com/api-reference/docs/columns)
+      </td>
+
+      <td>
+        The board's subitem columns. **Only available in versions `2027-01` and later.**
+      </td>
+
+      <td>
+
       </td>
     </tr>
 
@@ -978,6 +979,73 @@ Back off between polls rather than polling in a tight loop; every call counts ag
 <Callout icon="⚠️" theme="warn">
   **A `null` result does not mean the job failed.** This query returns `null` for a `job_id` that does not exist *and* for one that belongs to a different account — the two are deliberately indistinguishable, so an ID that leaks cannot be used to probe for other accounts' exports. If you get `null` for an ID you just received, check that you are querying with the same account's token.
 </Callout>
+
+## Get board dependency cycles
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later**
+</Callout>
+
+* Returns the dependency cycles found on a board as a [`BoardDependencyCyclesResult`](https://developer.monday.com/api-reference/reference/boards-other-types#boarddependencycyclesresult)
+* A cycle is a chain of items that depend on each other in a loop, so no item in the chain can be scheduled first
+* An empty `cycles` list means the board was checked and has no cycles
+
+```graphql GraphQL
+query {
+  board_dependency_cycles(board_id: 1234567890) {
+    board_id
+    truncated
+    cycles {
+      path {
+        item_id
+        predecessor_id
+        type
+      }
+    }
+  }
+}
+```
+
+```javascript JavaScript
+import { ApiClient } from "@mondaydotcomorg/api";
+const mondayApiClient = new ApiClient({ token: myToken });
+
+const query = `query ($boardId: ID!) {
+  board_dependency_cycles(board_id: $boardId) {
+    board_id
+    truncated
+    cycles {
+      path {
+        item_id
+        predecessor_id
+        type
+      }
+    }
+  }
+}`;
+const variables = {
+  boardId: 1234567890
+};
+const response = await mondayApiClient.request(query, variables);
+```
+
+### Arguments
+
+| Argument  | Type  | Description                            |
+| :-------- | :---- | :------------------------------------- |
+| board\_id | `ID!` | The ID of the board to find cycles on. |
+
+### Fields
+
+You can use the following [fields](https://graphql.org/learn/queries/#fields) to specify what information the query returns. See [`BoardDependencyCyclesResult`](https://developer.monday.com/api-reference/reference/boards-other-types#boarddependencycyclesresult) for the full type definitions.
+
+| Field                                                                                                                  | Description                                                               |
+| :--------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| board\_id `ID`                                                                                                         | The ID of the board.                                                      |
+| cycles [`[DependencyCycle!]`](https://developer.monday.com/api-reference/reference/boards-other-types#dependencycycle) | The cycles found. An empty list means the board was checked and is clean. |
+| truncated `Boolean`                                                                                                    | Returns `true` when more cycles exist than the reporting cap allows.      |
+
+***
 
 # Mutations
 
