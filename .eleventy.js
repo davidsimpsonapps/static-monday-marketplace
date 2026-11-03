@@ -246,6 +246,8 @@ module.exports = async function (eleventyConfig) {
   //     is really based, and the country it presents as is the partner
   //     profile's country (listedCountryCode) or the moved address.
   //   possible: locationFlag "possible-offshore" (unconfirmed).
+  //   untraceable: a Gold/Platinum company in a country whose register we
+  //     search, with no registration found and no street address (red).
   // "registered-agent" alone gets no badge: plenty of genuine local
   // companies publish a registered-agent address.
   eleventyConfig.addFilter(
@@ -268,7 +270,23 @@ module.exports = async function (eleventyConfig) {
           h.re.test(a?.street || ""),
         ),
       );
-      if (!details.locationFlag && !risky.length) return null;
+      // A Gold or Platinum vendor or partner in a country whose official
+      // register we search, whose registers have been checked but show no
+      // live registration, and that publishes no street address, also gets
+      // the red badge. Regional arms of a group (the notes name the parent)
+      // are skipped: the group is usually registered elsewhere.
+      const SEARCHED_REGISTERS = new Set(["GB", "FR", "IL", "EE", "NO", "NL", "DE", "CH", "AU", "CZ", "SK", "FI", "BE", "PL", "PK", "IN"]);
+      const deadStatus =
+        /dissolved|inactive|deleted|struck|withdrawn|forfeit|revoked|terminated|liquidat|closed|removed|ceased/i;
+      const groupArm = /\b(arm|subsidiary|branch|regional office) of\b/i.test(details.notes || "");
+      const untraceable =
+        /^(platinum|gold)$/i.test(details.tier || "") &&
+        SEARCHED_REGISTERS.has(details.address?.countryCode) &&
+        !groupArm &&
+        !!details.registrationsCheckedAt &&
+        !(details.registrations || []).some((r) => !deadStatus.test(r.status || "")) &&
+        !details.address?.street;
+      if (!details.locationFlag && !risky.length && !untraceable) return null;
       const countryName = eleventyConfig.getFilter("countryName");
       const name = (code) => {
         const n = countryName(code);
@@ -314,6 +332,12 @@ module.exports = async function (eleventyConfig) {
       }
       for (const r of risky) {
         reasons.push(`Gives ${r.label}, as its US address`);
+        level = "confirmed";
+      }
+      if (untraceable) {
+        reasons.push(
+          `Has a ${details.tier[0].toUpperCase()}${details.tier.slice(1).toLowerCase()} badge, but no company registration was found in official registers and no physical address is published`,
+        );
         level = "confirmed";
       }
       if (!level && details.locationFlag === "possible-offshore") {

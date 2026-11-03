@@ -180,6 +180,15 @@ vendor/partner cards and pages, plus a sentence under the page heading:
   filter's `HIGH_RISK` list (currently 30 N Gould St, Sheridan, WY) → red
   badge whatever its flag, with a link to an article about the address. Add
   that article as a `press` source on each such entry.
+- A **Gold or Platinum** vendor/partner in a country whose official register
+  we search (`SEARCHED_REGISTERS`: GB, FR, IL, EE, NO, NL, DE, CH, AU, CZ, SK,
+  FI, BE, PL, PK, IN; not BR, which needs a CNPJ) that has been checked
+  (`registrationsCheckedAt`), has no live registration and no street
+  `address` → red badge: "Has a Platinum badge, but no company registration
+  was found in official registers and no physical address is published".
+  Regional arms of a group are skipped when the notes say so ("arm of",
+  "subsidiary of", "branch of", "regional office of"). To clear the badge, add
+  the registration or the street address.
 
 ## 1. Check what's missing or stale
 

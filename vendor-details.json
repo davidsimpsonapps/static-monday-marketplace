@@ -1115,15 +1115,28 @@
     "contactTitle": null,
     "alternativeContacts": [],
     "address": {
-      "street": null,
-      "city": null,
-      "region": null,
+      "street": "12162 S. Dagger Flat Circle",
+      "city": "Herriman",
+      "region": "UT",
       "postalCode": null,
       "country": "United States",
       "countryCode": "US"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "OpenCorporates (Utah (US))",
+        "jurisdiction": "Utah (US)",
+        "kind": "domestic",
+        "id": "14678241-0160",
+        "name": "Plugin Genie LLC",
+        "companyType": "Domestic Limited Liability Company",
+        "status": "Active",
+        "registeredAgent": "Dennis M Astill",
+        "registeredAddress": "12162 S. Dagger Flat Circle, Herriman, UT",
+        "url": "https://opencorporates.com/companies/us_ut/14678241-0160"
+      }
+    ],
     "sources": [
       {
         "type": "website",
@@ -1132,12 +1145,17 @@
       {
         "type": "marketplace",
         "url": "https://learn.microsoft.com/connectors/monday"
+      },
+      {
+        "type": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_ut/14678241-0160",
+        "id": "14678241-0160"
       }
     ],
     "locationFlag": null,
-    "notes": "US LLC; no address is published. Search results named an 'Oliver Albrecht' as founder, but no primary source confirmed it, so it was left out. Register search found an active Utah LLC (14678241-0160, Herriman) and a terminated Georgia LLC (23046600) named Plugin Genie; neither is confirmed as this vendor.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": "2026-10-07"
+    "notes": "Plugin Genie LLC is an active Utah LLC (14678241-0160) with its registered address in Herriman, UT; its registered agent is Dennis M Astill (South Jordan, UT), an individual rather than an agent service. Founded by Oliver Albrecht, who has since sold the company. A terminated Georgia LLC of the same name (23046600) is unrelated.",
+    "lastVerified": "2026-11-03",
+    "registrationsCheckedAt": "2026-11-03"
   },
   {
     "vendorId": 10000059,
