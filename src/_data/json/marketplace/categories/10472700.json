@@ -2559,6 +2559,13 @@
     {
       "date": "2026-11-02",
       "marketplace_category_ids": []
+    },
+    {
+      "date": "2026-11-03",
+      "marketplace_category_ids": [
+        8,
+        6
+      ]
     }
   ]
 }
