@@ -275,16 +275,37 @@ module.exports = async function (eleventyConfig) {
       // live registration, and that publishes no street address, also gets
       // the red badge. Regional arms of a group (the notes name the parent)
       // are skipped: the group is usually registered elsewhere.
-      const SEARCHED_REGISTERS = new Set(["GB", "FR", "IL", "EE", "NO", "NL", "DE", "CH", "AU", "CZ", "SK", "FI", "BE", "PL", "PK", "IN"]);
+      const SEARCHED_REGISTERS = new Set([
+        "GB",
+        "FR",
+        "IL",
+        "EE",
+        "NO",
+        "NL",
+        "DE",
+        "CH",
+        "AU",
+        "CZ",
+        "SK",
+        "FI",
+        "BE",
+        "PL",
+        "PK",
+        "IN",
+      ]);
       const deadStatus =
         /dissolved|inactive|deleted|struck|withdrawn|forfeit|revoked|terminated|liquidat|closed|removed|ceased/i;
-      const groupArm = /\b(arm|subsidiary|branch|regional office) of\b/i.test(details.notes || "");
+      const groupArm = /\b(arm|subsidiary|branch|regional office) of\b/i.test(
+        details.notes || "",
+      );
       const untraceable =
         /^(platinum|gold)$/i.test(details.tier || "") &&
         SEARCHED_REGISTERS.has(details.address?.countryCode) &&
         !groupArm &&
         !!details.registrationsCheckedAt &&
-        !(details.registrations || []).some((r) => !deadStatus.test(r.status || "")) &&
+        !(details.registrations || []).some(
+          (r) => !deadStatus.test(r.status || ""),
+        ) &&
         !details.address?.street;
       if (!details.locationFlag && !risky.length && !untraceable) return null;
       const countryName = eleventyConfig.getFilter("countryName");
@@ -336,7 +357,7 @@ module.exports = async function (eleventyConfig) {
       }
       if (untraceable) {
         reasons.push(
-          `Has a ${details.tier[0].toUpperCase()}${details.tier.slice(1).toLowerCase()} badge, but no company registration was found in official registers and no physical address is published`,
+          `No company registration was found in official registers and no physical address is published`,
         );
         level = "confirmed";
       }
