@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:36:53.000Z
+updatedAt: 2026-11-03T12:19:28.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -27,7 +27,7 @@ query {
     limit: 50 
     to_date: "2025-06-04" 
     from_date: "2025-01-01"
-	) {
+  ) {
     body
       id
       created_at
@@ -97,13 +97,13 @@ mutation {
 
 ### Arguments
 
-| Argument                 | Type                                                                                                 | Description                                                                                                       |
-| :----------------------- | :--------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- |
-| body                     | `String!`                                                                                            | The update's text.                                                                                                |
-| item\_id                 | `ID`                                                                                                 | The item's unique identifier. You don't need to use this argument if you're replying to a post using `parent_id`. |
-| mentions\_list           | [`[UpdateMention]`](https://developer.monday.com/api-reference/reference/other-types#update-mention) | The user, team, or board to mention in an update.                                                                 |
-| original\_creation\_date | `String`                                                                                             | The update's original creation date. Follows DD-MM-YYYY format.                                                   |
-| parent\_id               | `ID`                                                                                                 | The parent updates's unique identifier. This can be used to create a reply to an update.                          |
+| Argument                 | Type                                                                                                 | Description                                                                                                                                               |
+| :----------------------- | :--------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| body                     | `String!`                                                                                            | The update's text.                                                                                                                                        |
+| item\_id                 | `ID`                                                                                                 | The item's unique identifier. You don't need to use this argument if you're replying to a post using `parent_id`.                                         |
+| mentions\_list           | [`[UpdateMention]`](https://developer.monday.com/api-reference/reference/other-types#update-mention) | The user, team, or board to mention in an update.                                                                                                         |
+| original\_creation\_date | `String`                                                                                             | The update's original creation date. Use ISO 8601 format (`YYYY-MM-DD` or `YYYY-MM-DDTHH:mm:ssZ`). Future dates and dates before 2012-01-01 are rejected. |
+| parent\_id               | `ID`                                                                                                 | The parent updates's unique identifier. This can be used to create a reply to an update.                                                                  |
 
 ## Like update
 
@@ -151,7 +151,7 @@ mutation {
   edit_update(
     id: 1234567890
     body: "The updated text!"
-	) {
+  ) {
     creator_id
     item_id
   }
@@ -174,7 +174,7 @@ mutation {
   pin_to_top(
     id: 1234567890
     item_id: 9876543210
-	) {
+  ) {
     creator_id
     body
   }
