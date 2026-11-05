@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:36:14.000Z
+updatedAt: 2026-10-26T10:09:26.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -72,19 +72,20 @@ query {
 
 ## Fields on `Meeting`
 
-| Field                | Type                                                                                                              | Description                                           |
-| :------------------- | :---------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------- |
-| `title`              | `String`                                                                                                          | Meeting title.                                        |
-| `start_time`         | `String`                                                                                                          | Meeting start time.                                   |
-| `end_time`           | `String`                                                                                                          | Meeting end time.                                     |
-| `recording_duration` | `Int`                                                                                                             | Recording length in milliseconds.                     |
-| `summary`            | `String`                                                                                                          | Meeting summary (markdown).                           |
-| `access_type`        | [`MeetingAccess`](https://developer.monday.com/api-reference/reference/notetaker-other-types#meetingaccess)       | How the current user relates to the meeting.          |
-| `meeting_link`       | `String`                                                                                                          | Link to the meeting.                                  |
-| `participants`       | [`[Participant]`](https://developer.monday.com/api-reference/reference/notetaker-other-types#participant)         | People associated with the meeting.                   |
-| `topics`             | [`[Topic]`](https://developer.monday.com/api-reference/reference/notetaker-other-types#topic)                     | Discussion topics and talking points.                 |
-| `action_items`       | [`[ActionItem]`](https://developer.monday.com/api-reference/reference/notetaker-other-types#actionitem)           | Action items captured from the meeting.               |
-| `transcript`         | [`[TranscriptEntry]`](https://developer.monday.com/api-reference/reference/notetaker-other-types#transcriptentry) | Transcript segments with timing and speaker metadata. |
+| Field                | Type                                                                                                              | Description                                                                                                                                                                        |
+| :------------------- | :---------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`              | `String`                                                                                                          | Meeting title.                                                                                                                                                                     |
+| `start_time`         | `String`                                                                                                          | Meeting start time.                                                                                                                                                                |
+| `end_time`           | `String`                                                                                                          | Meeting end time.                                                                                                                                                                  |
+| `recording_duration` | `Int`                                                                                                             | Recording length in milliseconds.                                                                                                                                                  |
+| `summary`            | `String`                                                                                                          | Meeting summary (markdown).                                                                                                                                                        |
+| `access_type`        | [`MeetingAccess`](https://developer.monday.com/api-reference/reference/notetaker-other-types#meetingaccess)       | How the current user relates to the meeting.                                                                                                                                       |
+| `meeting_link`       | `String`                                                                                                          | Link to the meeting.                                                                                                                                                               |
+| `series_id`          | `ID`                                                                                                              | ID of the recurring calendar series the meeting belongs to. `null` for one-off meetings and meetings without a calendar event. **Only available in versions `2027-01` and later.** |
+| `participants`       | [`[Participant]`](https://developer.monday.com/api-reference/reference/notetaker-other-types#participant)         | People associated with the meeting.                                                                                                                                                |
+| `topics`             | [`[Topic]`](https://developer.monday.com/api-reference/reference/notetaker-other-types#topic)                     | Discussion topics and talking points.                                                                                                                                              |
+| `action_items`       | [`[ActionItem]`](https://developer.monday.com/api-reference/reference/notetaker-other-types#actionitem)           | Action items captured from the meeting.                                                                                                                                            |
+| `transcript`         | [`[TranscriptEntry]`](https://developer.monday.com/api-reference/reference/notetaker-other-types#transcriptentry) | Transcript segments with timing and speaker metadata.                                                                                                                              |
 
 `TalkingPoint` objects under `topics` expose **`content` only** — they do **not** include a `start_time` field (confirmed via API testing).
 

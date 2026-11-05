@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-30T14:49:37.000Z
+updatedAt: 2026-11-04T11:55:41.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -292,6 +292,11 @@ Search for items. All provided filters must be satisfied (AND).
       <td>workspace_ids</td>
       <td>`[ID!]`</td>
       <td>Optional. Filter documents to specific workspace IDs.</td>
+    </tr>
+    <tr>
+      <td>ids</td>
+      <td>`[ID!]`</td>
+      <td>Optional. Filter results to specific document IDs. **Only available in versions `2026-10` and later.**</td>
     </tr>
   </tbody>
 </Table>

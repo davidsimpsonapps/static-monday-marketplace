@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-07T10:20:13.000Z
+updatedAt: 2026-11-04T13:46:58.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -35,28 +35,29 @@ At a high level, the custom agent flow looks like this:
 
 ```text
 monday.com  ──(signed POST: "agent_triggered")──▶  your callback URL
-your service ──(SSE stream / JSON response)──────▶  monday.com   (the reply)
+your service ──(HTTP 200 ack)────────────────────▶  monday.com   (within 30s)
+your service ──(send_custom_agent_message)───────▶  monday.com   (chat reply)
 your service ──(GraphQL with the agent's token)──▶  monday.com   (actions on items)
 ```
 
 You receive two credentials **once** at setup:
 
-| Credential       | Purpose                                                                                                                           |
-| :--------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
-| `signing_secret` | Verify that incoming webhooks really came from monday.com (HMAC). Rotated whenever you set or update `callback_url`.              |
-| `api_token`      | Act **as the agent** when calling the monday.com GraphQL API. Required for runtime replies that use GraphQL (mention / assigned). |
+| Credential       | Purpose                                                                                                                                   |
+| :--------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| `signing_secret` | Verify that incoming webhooks really came from monday.com (HMAC). Rotated whenever you set or update `callback_url`.                      |
+| `api_token`      | Act **as the agent** when calling the monday.com GraphQL API. Required for `send_custom_agent_message` and for mention / assigned writes. |
 
 ### Who sees what
 
 monday waits up to \~**30 seconds** on the webhook request. What the user sees depends on the trigger:
 
-| Trigger    | What monday waits for on the webhook     | What the user sees in monday                                         |
-| :--------- | :--------------------------------------- | :------------------------------------------------------------------- |
-| `chat`     | HTTP 200 body within \~30s (SSE or JSON) | That HTTP body **is** the chat reply                                 |
-| `mention`  | HTTP 200 ack (body not shown in UI)      | Threaded update you post via GraphQL with the agent token            |
-| `assigned` | HTTP 200 ack (body not shown in UI)      | Update (or other mutation) you post via GraphQL with the agent token |
+| Trigger    | What monday waits for on the webhook | What the user sees in monday                                                                                                                                                            |
+| :--------- | :----------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `chat`     | HTTP 200 ack within \~30s            | [`send_custom_agent_message`](#reply-in-chat-after-the-webhook) using the opaque `payload.conversationId`. The HTTP body can be the reply instead, when it is ready inside the timeout. |
+| `mention`  | HTTP 200 ack (body not shown in UI)  | Threaded update you post via GraphQL with the agent token                                                                                                                               |
+| `assigned` | HTTP 200 ack (body not shown in UI)  | Update (or other mutation) you post via GraphQL with the agent token                                                                                                                    |
 
-For `mention` / `assigned`, acknowledge the HTTP request quickly, then do the visible work via GraphQL. For `chat`, keep the request open until your reply is ready — GraphQL cannot render agent chat replies.
+For `chat`, acknowledge the webhook, then deliver the visible message with `send_custom_agent_message`. For `mention` / `assigned`, acknowledge the HTTP request quickly, then do the visible work via GraphQL.
 
 ***
 
@@ -261,7 +262,7 @@ mutation {
 
 # Receive triggers (the webhook)
 
-When the agent is triggered, monday.com sends a **signed POST** to your callback URL and waits for your reply **on the same request**. There is no separate reply token or reply URL — the request is synchronous.
+When the agent is triggered, monday.com sends a **signed POST** to your callback URL and waits up to **30 seconds** for HTTP 200. For chat, that response is the acknowledgement. Deliver the visible reply with `send_custom_agent_message`.
 
 ## Headers
 
@@ -302,19 +303,22 @@ The body always has the same shape; only `payload` varies by trigger type.
 
 ### `chat`
 
-The user typed a message in the agent chat. The payload is minimal and contains **no IDs** — only text. This is why a chat reply *must* be returned in the HTTP response: there is nothing to call back to.
+The user typed a message in the agent chat. The payload includes the user's text and a `conversationId` for later replies.
 
 ```json
 {
   "event": "agent_triggered",
   "triggerType": "chat",
-  "payload": { "text": "sent this message through agent chat" },
+  "payload": {
+    "text": "sent this message through agent chat",
+    "conversationId": "v1.example-conversation-token"
+  },
   "timestamp": "2026-06-24T18:43:43.754Z",
   "stream": true
 }
 ```
 
-The chat request may include a **`stream`** flag (defaults to `true`). See [Respond to triggers](#respond-to-triggers).
+`conversationId` is an opaque string — pass it through unchanged. The request may include a **`stream`** flag (defaults to `true`). See [Respond to triggers](#respond-to-triggers). Deliver the chat reply with [`send_custom_agent_message`](#reply-in-chat-after-the-webhook), passing `payload.conversationId` as `conversation_id`.
 
 ### `assigned`
 
@@ -407,12 +411,12 @@ app.use(express.json({
 
 # Respond to triggers
 
-monday reads the agent's reply **synchronously from the HTTP response**. Behavior differs by trigger — see [Who sees what](#who-sees-what).
+Acknowledge the webhook with HTTP 200 within 30 seconds. What the user sees depends on the trigger — see [Who sees what](#who-sees-what).
 
-| Trigger                | Recommended HTTP behavior                                                                                         |
-| :--------------------- | :---------------------------------------------------------------------------------------------------------------- |
-| `chat`                 | Keep the request open; return SSE or JSON (below). This is the only way to reply in agent chat.                   |
-| `mention` / `assigned` | Return HTTP 200 quickly with an empty SSE ack (or empty JSON if `stream: false`), then continue work via GraphQL. |
+| Trigger                | Recommended HTTP behavior                                                                                                                                                                                     |
+| :--------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `chat`                 | Return HTTP 200 within 30 seconds (empty SSE `data: [DONE]`, or `{ "success": true }` when `stream` is `false`), then deliver the reply with [`send_custom_agent_message`](#reply-in-chat-after-the-webhook). |
+| `mention` / `assigned` | Return HTTP 200 quickly with an empty SSE ack (or empty JSON if `stream: false`), then continue work via GraphQL.                                                                                             |
 
 Empty SSE acknowledgement (for mention / assigned):
 
@@ -481,7 +485,46 @@ If the request body has `stream: false`, return a single JSON object:
 
 * Respond within **30 seconds**, with body **≤ 1 MB** and status **200**. The whole window — including a full SSE stream — must complete in time, or the run fails with a timeout and cannot be answered afterward.
 * `event-stream` events are separated by a blank line (`\n\n`).
-* For `chat`, generate `replyText` with your LLM and return it in the HTTP body. For `mention` / `assigned`, ack the HTTP request and do the visible work via the API.
+* For `chat`, acknowledge the webhook, then [deliver the reply](#reply-in-chat-after-the-webhook) with `send_custom_agent_message`. An inline HTTP body is only for a reply that is ready inside the 30-second window. For `mention` / `assigned`, ack the HTTP request and do the visible work via the API.
+
+## Reply in chat after the webhook
+
+Acknowledge the chat webhook with HTTP 200, then deliver the message with `send_custom_agent_message`. Authorize with the agent's `api_token`. `payload.conversationId` is an opaque string — pass it through unchanged as `conversation_id`.
+
+A successful call returns `delivered: true` and the chat `message_id`. That ID stays valid for up to 7 days and can be used for as many messages as you need. Changing the callback URL or reconnecting the agent invalidates it.
+
+```graphql GraphQL
+mutation ($input: SendCustomAgentMessageInput!) {
+  send_custom_agent_message(input: $input) {
+    delivered
+    message_id
+  }
+}
+```
+
+```json
+{
+  "input": {
+    "conversation_id": "v1.example-conversation-token",
+    "message": "The project is 62% complete — 3 tasks remain in the backlog."
+  }
+}
+```
+
+```javascript
+await mondayApi(agentApiToken, `
+  mutation ($input: SendCustomAgentMessageInput!) {
+    send_custom_agent_message(input: $input) {
+      delivered
+      message_id
+    }
+  }`, {
+  input: {
+    conversation_id: payload.conversationId,
+    message: replyText,
+  },
+});
+```
 
 ***
 
@@ -605,7 +648,36 @@ app.post('/agent/webhook', async (req, res) => {
     return res.status(401).json({ error: 'invalid signature' });
   }
 
-  // --- chat: keep the request open and return the reply in the HTTP body ---
+  // --- chat: ack, then deliver the reply with send_custom_agent_message ---
+  if (normalized === 'chat' && payload.conversationId && creds?.apiToken) {
+    if (wantsStream) {
+      res.status(200);
+      res.setHeader('Content-Type', 'text/event-stream');
+      res.setHeader('Cache-Control', 'no-cache');
+      res.setHeader('Connection', 'keep-alive');
+      res.flushHeaders?.();
+      res.write('data: [DONE]\n\n');
+      res.end();
+    } else {
+      res.status(200).json({ success: true });
+    }
+
+    const replyText = 'The project is 62% complete — 3 tasks remain in the backlog.';
+    await mondayApi(creds.apiToken, `
+      mutation ($input: SendCustomAgentMessageInput!) {
+        send_custom_agent_message(input: $input) {
+          delivered
+          message_id
+        }
+      }`, {
+      input: {
+        conversation_id: payload.conversationId,
+        message: replyText,
+      },
+    });
+    return;
+  }
+
   if (normalized === 'chat') {
     const replyText = `Hi! I'm ${creds?.name || 'the agent'}. You said: "${payload.text || ''}"`;
     if (!wantsStream) return res.status(200).json({ message: replyText });
@@ -676,19 +748,19 @@ If you host the agent on [monday-code](https://developer.monday.com/apps/docs/ho
 
 # Troubleshooting
 
-| Symptom                                           | Cause / Fix                                                                                                                                                                                          |
-| :------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *"Something went wrong while running the agent."* | You returned a plain JSON body for a `chat` trigger. **Respond with SSE** (`text/event-stream`, `{type:"text",content:…}` chunks, `data: [DONE]`).                                                   |
-| Chat reply never appears                          | GraphQL cannot render chat — the HTTP response body is the reply. Also honor `stream` (SSE vs `{ "message": "..." }`).                                                                               |
-| Mention reply uses the wrong text                 | Prefer `payload.updateBody` (user's update). `payload.text` is often monday's instruction prompt.                                                                                                    |
-| Webhook never arrives                             | Callback points at an unreachable host — `*.run.app` (returns 403), `localhost`, or an `http` URL. Use a public HTTPS `*.monday.app` host.                                                           |
-| Signature verification fails                      | HMAC must be over `${timestamp}.${rawBody}` with the **raw** body and the **`signing_secret`** (not `api_token`). After updating `callback_url`, use the **new** `signing_secret` from the response. |
-| Auth error on agent-token `update_custom_agent`   | Omit `agent_id` when using the agent token. Pass `agent_id` only with the owner token.                                                                                                               |
-| Stored signing secret wiped after rename          | Name-only updates return `signing_secret: null` — only overwrite your stored secret when a non-null value is returned.                                                                               |
-| Agent "has access but can't edit items"           | Grant `READ_WRITE` via `add_agent_resource_access` — your own access doesn't carry over.                                                                                                             |
-| Agent never runs                                  | It's inactive — call `activate_agent`.                                                                                                                                                               |
-| Secrets lost                                      | `api_token` is shown once at connect. To rotate `signing_secret`, call `update_custom_agent` with a new `callback_url`. To rotate both, `disconnect_external_agent` and reconnect.                   |
-| `connect_external_agent_sync` times out           | It's synchronous (\~25s). Set client timeout ≥ 40s.                                                                                                                                                  |
+| Symptom                                           | Cause / Fix                                                                                                                                                                                                                                                              |
+| :------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *"Something went wrong while running the agent."* | You returned a plain JSON body for a `chat` trigger. **Respond with SSE** (`text/event-stream`, `{type:"text",content:…}` chunks, `data: [DONE]`).                                                                                                                       |
+| Chat reply never appears                          | For a later reply, call `send_custom_agent_message` with `payload.conversationId` and the agent `api_token`. A sync reply must honor `stream` (SSE vs `{ "message": "..." }`). The conversation ID is invalidated if you change the callback URL or reconnect the agent. |
+| Mention reply uses the wrong text                 | Prefer `payload.updateBody` (user's update). `payload.text` is often monday's instruction prompt.                                                                                                                                                                        |
+| Webhook never arrives                             | Callback points at an unreachable host — `*.run.app` (returns 403), `localhost`, or an `http` URL. Use a public HTTPS `*.monday.app` host.                                                                                                                               |
+| Signature verification fails                      | HMAC must be over `${timestamp}.${rawBody}` with the **raw** body and the **`signing_secret`** (not `api_token`). After updating `callback_url`, use the **new** `signing_secret` from the response.                                                                     |
+| Auth error on agent-token `update_custom_agent`   | Omit `agent_id` when using the agent token. Pass `agent_id` only with the owner token.                                                                                                                                                                                   |
+| Stored signing secret wiped after rename          | Name-only updates return `signing_secret: null` — only overwrite your stored secret when a non-null value is returned.                                                                                                                                                   |
+| Agent "has access but can't edit items"           | Grant `READ_WRITE` via `add_agent_resource_access` — your own access doesn't carry over.                                                                                                                                                                                 |
+| Agent never runs                                  | It's inactive — call `activate_agent`.                                                                                                                                                                                                                                   |
+| Secrets lost                                      | `api_token` is shown once at connect. To rotate `signing_secret`, call `update_custom_agent` with a new `callback_url`. To rotate both, `disconnect_external_agent` and reconnect.                                                                                       |
+| `connect_external_agent_sync` times out           | It's synchronous (\~25s). Set client timeout ≥ 40s.                                                                                                                                                                                                                      |
 
 ***
 
@@ -704,13 +776,16 @@ IDENTITY me { id name kind email }                                          → 
 
 WEBHOOK  POST {callback_url}
          headers: x-monday-agent-id, x-monday-signature, x-monday-timestamp
-         body:    { event:"agent_triggered", triggerType, payload:{text, ...}, timestamp, stream? }
+         body:    { event:"agent_triggered", triggerType, payload:{text, conversationId?, ...}, timestamp, stream? }
          verify:  HMAC-SHA256(signing_secret, `${timestamp}.${rawBody}`) === x-monday-signature
-         chat:    SSE  data: {"type":"text","content":"..."}\n\n  ...  data: [DONE]\n\n
+         chat:    ack HTTP 200, then send_custom_agent_message(conversation_id: payload.conversationId, message)
+                  sync alternative: SSE  data: {"type":"text","content":"..."}\n\n  ...  data: [DONE]\n\n
                   (or  { "message": "..." }  when stream:false)
          mention/assigned: ack with empty SSE/[DONE] (or { "message": "" }), then GraphQL as agent
 
 ACT      POST https://api.monday.com/v2   Authorization: {api_token}   API-Version: dev   [act as the agent]
+         chat:    send_custom_agent_message(input:{ conversation_id: payload.conversationId, message })
+                  conversation_id is reusable for 7 days; invalidated by callback URL change or reconnect
          mention: create_update(item_id, body, parent_id=updateId) — prefer payload.updateBody for user text
          assigned: create_update(item_id, body)
 ```

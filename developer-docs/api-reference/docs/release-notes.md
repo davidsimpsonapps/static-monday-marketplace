@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-30T14:09:26.000Z
+updatedAt: 2026-11-05T10:06:14.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -12,6 +12,19 @@ agentTools:
 This document lists the actively supported API versions in reverse chronological order, allowing you to quickly view the latest features, fixes, and changes.
 
 Versions earlier than `2025-04` are deprecated and no longer supported, but we’ve kept them in a [Deprecated versions](https://developer.monday.com/api-reference/docs/release-notes#deprecated-versions) section at the bottom for migration and troubleshooting reference.
+
+## `2027-04`
+
+<Callout icon="🚧" theme="warn">
+  **Release candidate.** `2027-04` is a release candidate and may still change before it becomes the current version on April 1, 2027.
+</Callout>
+
+### Breaking changes
+
+* **Boards:**
+  * `Board.creator` is now nullable (`User` instead of `User!`). It returns `null` when the creator can't be resolved, so handle a `null` value in clients that assumed it is always present
+* **Assets:**
+  * `Asset.uploaded_by` is now nullable (`User` instead of `User!`). It returns `null` when the uploader can't be resolved, so handle a `null` value in clients that assumed it is always present
 
 ## `2027-01`
 
@@ -56,7 +69,7 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
   * New `parent_item_id` argument on [`move_item_to_board`](https://developer.monday.com/api-reference/reference/items#move-item-to-board) — move an item to be a subitem of the given parent item. `board_id` must be the parent item's board and `group_id` is ignored. `columns_mapping` maps to the columns of the board the item lands on, and is not allowed on a same-board move. `subitems_columns_mapping` is not allowed with `parent_item_id`
 * **Meetings:**
   * New `series_id` field on `Meeting` — returns the ID of the recurring calendar series the meeting belongs to, or `null` for one-off meetings and meetings without a calendar event
-* New [`include_project_board_link`](https://developer.monday.com/api-reference/reference/boards-other-types#createboardexportoptionsinput) input on [`create_board_export`](https://developer.monday.com/api-reference/reference/boards#create-board-export) — add a trailing `Project Board` column with the first linked project board ID to CSV exports, or a blank value when no project is linked; the column is only added on accounts where this capability is enabled
+* New [`include_project_board_link`](https://developer.monday.com/api-reference/docs/board-export-other-types#createboardexportoptionsinput) input on [`create_board_export`](https://developer.monday.com/api-reference/docs/board-export-api-reference#create-board-export) — add a trailing `Project Board` column with the first linked project board ID to CSV exports, or a blank value when no project is linked; the column is only added on accounts where this capability is enabled
 * New `DATA_VIEW` source for [`aggregate`](https://developer.monday.com/api-reference/reference/aggregate) — aggregate from a data view ID as well as a table ID
 * New `subitem_columns` field on `Board` — returns the board's subitem columns
 
@@ -118,8 +131,8 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
   * New [`duplicate_view`](https://developer.monday.com/api-reference/reference/board-views#duplicate-view) and [`restore_view`](https://developer.monday.com/api-reference/reference/board-views#restore-view) mutations on board views
   * New `context` and `conditional_formatting_settings` arguments on view mutations — `conditional_formatting_settings` replaces all existing conditions when supplied, and `context` sets the view's entity scope (currently only `BOARD`, the default)
 * **Board exports:**
-  * New [`create_board_export`](https://developer.monday.com/api-reference/reference/boards#create-board-export) mutation — exports a board's items to a CSV file. Returns [`ExportResult`](https://developer.monday.com/api-reference/reference/boards-other-types#exportresult), a union of [`ExportFile`](https://developer.monday.com/api-reference/reference/boards-other-types#exportfile) (the export finished during the request, so the download URL is ready) and [`ExportAsyncJob`](https://developer.monday.com/api-reference/reference/boards-other-types#exportasyncjob) (the export is still running, so poll for it). The server chooses the branch from board size and current load, so select both and switch on `__typename`. Accepts `time_zone` to format date values, and an optional [`CreateBoardExportOptionsInput`](https://developer.monday.com/api-reference/reference/boards-other-types#createboardexportoptionsinput) covering subitems, header format, per-column-type value formatting, and `columns_order` to select and order the exported columns. Requires the `boards:read` scope and is only available for **Enterprise plans**
-  * New [`export_job_status`](https://developer.monday.com/api-reference/reference/boards#get-export-job-status) query — polls an asynchronous board export by `job_id`. Returns [`ExportJobStatusInfo`](https://developer.monday.com/api-reference/reference/boards-other-types#exportjobstatusinfo) with an [`ExportJobStatus`](https://developer.monday.com/api-reference/reference/boards-other-types#exportjobstatus), the download URL once the export completes, and an [`ExportFailureReason`](https://developer.monday.com/api-reference/reference/boards-other-types#exportfailurereason) if it fails. Requires the `boards:read` scope and is only available for **Enterprise plans**
+  * New [`create_board_export`](https://developer.monday.com/api-reference/docs/board-export-api-reference#create-board-export) mutation — exports a board's items to a CSV file. Returns [`ExportResult`](https://developer.monday.com/api-reference/docs/board-export-other-types#exportresult), a union of [`ExportFile`](https://developer.monday.com/api-reference/docs/board-export-other-types#exportfile) (the export finished during the request, so the download URL is ready) and [`ExportAsyncJob`](https://developer.monday.com/api-reference/docs/board-export-other-types#exportasyncjob) (the export is still running, so poll for it). The server chooses the branch from board size and current load, so select both and switch on `__typename`. Accepts `time_zone` to format date values, and an optional [`CreateBoardExportOptionsInput`](https://developer.monday.com/api-reference/docs/board-export-other-types#createboardexportoptionsinput) covering subitems, header format, per-column-type value formatting, and `columns_order` to select and order the exported columns. Requires the `boards:read` scope and is only available for **Enterprise plans**. See the [Board Export](https://developer.monday.com/api-reference/docs/board-export) reference for the full workflow
+  * New [`export_job_status`](https://developer.monday.com/api-reference/docs/board-export-api-reference#get-export-job-status) query — polls an asynchronous board export by `job_id`. Returns [`ExportJobStatusInfo`](https://developer.monday.com/api-reference/docs/board-export-other-types#exportjobstatusinfo) with an [`ExportJobStatus`](https://developer.monday.com/api-reference/docs/board-export-other-types#exportjobstatus), the download URL once the export completes, and an [`ExportFailureReason`](https://developer.monday.com/api-reference/docs/board-export-other-types#exportfailurereason) if it fails. Requires the `boards:read` scope and is only available for **Enterprise plans**
 * New [Availability APIs](https://developer.monday.com/api-reference/reference/availability) to manage work schedules, company time off, resource assignments, and personal time off (PTO). Includes `work_schedules`, `time_offs`, `resources_availability`, `account_availability_defaults`, and `user_pto` queries plus matching create, update, delete, assign, and unassign mutations. See the [Availability](https://developer.monday.com/api-reference/reference/availability) reference
 
 ## `2026-07`

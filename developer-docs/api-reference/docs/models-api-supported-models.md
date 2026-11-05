@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-13T11:06:18.000Z
+updatedAt: 2026-11-04T14:23:08.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -39,6 +39,8 @@ You can still pass any supported **direct** Claude or OpenAI ID from the tables 
 | `gpt-5`             | OpenAI    |
 | `gpt-5-mini`        | OpenAI    |
 | `gpt-5-nano`        | OpenAI    |
+| `gpt-5.6-sol`       | OpenAI    |
+| `gpt-5.6-luna`      | OpenAI    |
 | `gpt-6-astra`       | OpenAI    |
 | `gpt-6.1-sol`       | OpenAI    |
 | `gpt-6-luna`        | OpenAI    |
@@ -73,19 +75,16 @@ You can still pass any supported **direct** Claude or OpenAI ID from the tables 
 
 | Model ID      | Vendor |
 | :------------ | :----- |
-| `dall-e-3`    | OpenAI |
-| `dall-e-2`    | OpenAI |
-| `gpt-image-1` | OpenAI |
+| `gpt-image-2` | OpenAI |
+
+`gpt-image-2` is the only supported image model and the default when `model` is omitted.
 
 ## Typical `size` values
 
-Exact availability depends on the model; common values include:
-
-| `size` values (reference)                  |
-| :----------------------------------------- |
-| `256x256`, `512x512`, `1024x1024`          |
-| `1024x1792`, `1792x1024` (where supported) |
-| `auto` (where supported for a given model) |
+| `size` values (reference)             |
+| :------------------------------------ |
+| `1024x1024`, `1024x1536`, `1536x1024` |
+| `auto`                                |
 
 Validate sizes in your integration against live API behavior—unsupported combinations may return an error with no usage charged.
 
@@ -98,7 +97,7 @@ Validate sizes in your integration against live API behavior—unsupported combi
 | `gpt-4o-mini-tts` | OpenAI |
 | `gpt-4o-tts`      | OpenAI |
 
-Voices and audio formats follow the same parameter names as the [OpenAI Speech API](https://platform.openai.com/docs/api-reference/audio/createSpeech) (for example `voice`, `response_format`, `speed`).
+Voices and audio formats follow the same parameter names as the [OpenAI Speech API](https://developers.openai.com/api/reference/resources/audio/subresources/speech/methods/create) (for example `voice`, `response_format`, `speed`).
 
 # Defaults
 

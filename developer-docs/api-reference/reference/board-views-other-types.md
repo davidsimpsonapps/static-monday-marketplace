@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:34:23.000Z
+updatedAt: 2026-11-04T14:05:10.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -9,7 +9,7 @@ agentTools:
 
 Learn about other types supported by the views APIs
 
-The monday.com [views](https://developer.monday.com/api-reference/reference/views) APIs enable you to create, read, update, and delete board views.
+The monday.com [views](https://developer.monday.com/api-reference/reference/board-views) APIs enable you to create, read, update, and delete board views.
 
 The types below are used by the views queries and mutations, and are not independently queryable.
 
@@ -326,3 +326,140 @@ The direction and type of sort.
     </tr>
   </tbody>
 </Table>
+
+***
+
+# ViewContext
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2026-10`](https://developer.monday.com/api-reference/docs/release-notes#2026-10) and later**
+</Callout>
+
+The view's entity scope, passed to [`create_view`](https://developer.monday.com/api-reference/reference/board-views#create-view), [`create_view_table`](https://developer.monday.com/api-reference/reference/board-views#create-view-table), [`update_view`](https://developer.monday.com/api-reference/reference/board-views#update-view), and [`update_view_table`](https://developer.monday.com/api-reference/reference/board-views#update-view-table) via the `context` argument. The default is `BOARD`.
+
+| Enum value | Description                         |
+| :--------- | :---------------------------------- |
+| `BOARD`    | Associates the view with the board. |
+
+***
+
+# ConditionalFormattingConditionInput
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2026-10`](https://developer.monday.com/api-reference/docs/release-notes#2026-10) and later**
+</Callout>
+
+A conditional formatting condition, passed to [`create_view`](https://developer.monday.com/api-reference/reference/board-views#create-view), [`create_view_table`](https://developer.monday.com/api-reference/reference/board-views#create-view-table), [`update_view`](https://developer.monday.com/api-reference/reference/board-views#update-view), and [`update_view_table`](https://developer.monday.com/api-reference/reference/board-views#update-view-table) via the `conditional_formatting_settings` argument. Each condition pairs a set of rules with a target and a highlight color: when an item matches the rules, the target cells or row are highlighted.
+
+Passing `conditional_formatting_settings` replaces all existing conditions on the view. Pass an empty array to clear them.
+
+| Field      | Type                                                                                                                                                           | Description                                                       |
+| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
+| formatting | [`ConditionalFormattingFormattingInput`](https://developer.monday.com/api-reference/reference/board-views-other-types#conditionalformattingformattinginput)    | The formatting to apply when the condition matches.               |
+| id         | `String`                                                                                                                                                       | The condition's unique identifier. Generate a GUID on the client. |
+| rules      | [`[ConditionalFormattingRuleBucketInput!]`](https://developer.monday.com/api-reference/reference/board-views-other-types#conditionalformattingrulebucketinput) | The rules that trigger the condition.                             |
+| target     | [`ConditionalFormattingTargetInput`](https://developer.monday.com/api-reference/reference/board-views-other-types#conditionalformattingtargetinput)            | What to highlight when the condition matches.                     |
+
+The example below highlights the entire row in `dark_red` when the `status` column is set to the label with index `2`.
+
+```graphql
+mutation {
+  create_view_table(
+    board_id: 1234567890
+    name: "Stuck items"
+    conditional_formatting_settings: [
+      {
+        id: "3f2b9c1e-8a4d-4f6e-9b2a-7c5d1e0f4a3b"
+        rules: [
+          {
+            type: "RULE"
+            operator: "ANY_OF"
+            rule: {
+              type: "BOARD_COLUMN"
+              context: {
+                board_id: 1234567890
+                column_id: "status"
+                column_type: "color"
+              }
+              compare_value: [2]
+            }
+          }
+        ]
+        target: { entire_row: true }
+        formatting: { highlight_color: ["dark_red"] }
+      }
+    ]
+  ) {
+    id
+    name
+  }
+}
+```
+
+## ConditionalFormattingRuleBucketInput
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2026-10`](https://developer.monday.com/api-reference/docs/release-notes#2026-10) and later**
+</Callout>
+
+A bucket of conditional formatting rules, referenced by [`ConditionalFormattingConditionInput`](#conditionalformattingconditioninput).
+
+| Field    | Type                                                                                                                                            | Description                                         |
+| :------- | :---------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------- |
+| operator | `String`                                                                                                                                        | The logical operator, such as `ANY_OF` or `ALL_OF`. |
+| rule     | [`ConditionalFormattingRuleInput`](https://developer.monday.com/api-reference/reference/board-views-other-types#conditionalformattingruleinput) | The rule definition.                                |
+| type     | `String`                                                                                                                                        | The bucket type, such as `RULE`.                    |
+
+### ConditionalFormattingRuleInput
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2026-10`](https://developer.monday.com/api-reference/docs/release-notes#2026-10) and later**
+</Callout>
+
+A conditional formatting rule, referenced by [`ConditionalFormattingRuleBucketInput`](#conditionalformattingrulebucketinput).
+
+| Field          | Type                                                                                                                                                          | Description                                                                                           |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------- |
+| compare\_value | `JSON`                                                                                                                                                        | The values to match against. For status columns, pass an array of label indexes (for example, `[2]`). |
+| context        | [`ConditionalFormattingRuleContextInput`](https://developer.monday.com/api-reference/reference/board-views-other-types#conditionalformattingrulecontextinput) | The column the rule evaluates.                                                                        |
+| type           | `String`                                                                                                                                                      | The rule type, such as `BOARD_COLUMN`.                                                                |
+
+#### ConditionalFormattingRuleContextInput
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2026-10`](https://developer.monday.com/api-reference/docs/release-notes#2026-10) and later**
+</Callout>
+
+The column a conditional formatting rule evaluates, referenced by [`ConditionalFormattingRuleInput`](#conditionalformattingruleinput).
+
+| Field              | Type     | Description                                               |
+| :----------------- | :------- | :-------------------------------------------------------- |
+| board\_id          | `ID`     | The unique identifier of the board the column belongs to. |
+| column\_id         | `String` | The unique identifier of the column to evaluate.          |
+| column\_type       | `String` | The column's type, such as `color`, `text`, or `date`.    |
+| compare\_attribute | `String` | The column attribute to compare against.                  |
+
+## ConditionalFormattingTargetInput
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2026-10`](https://developer.monday.com/api-reference/docs/release-notes#2026-10) and later**
+</Callout>
+
+What a conditional formatting condition highlights, referenced by [`ConditionalFormattingConditionInput`](#conditionalformattingconditioninput).
+
+| Field       | Type        | Description                                         |
+| :---------- | :---------- | :-------------------------------------------------- |
+| column\_ids | `[String!]` | The unique identifiers of the columns to highlight. |
+| entire\_row | `Boolean`   | Whether to highlight the entire row.                |
+
+## ConditionalFormattingFormattingInput
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2026-10`](https://developer.monday.com/api-reference/docs/release-notes#2026-10) and later**
+</Callout>
+
+The formatting a conditional formatting condition applies, referenced by [`ConditionalFormattingConditionInput`](#conditionalformattingconditioninput).
+
+| Field            | Type        | Description                                                                              |
+| :--------------- | :---------- | :--------------------------------------------------------------------------------------- |
+| highlight\_color | `[String!]` | The color names to highlight with, such as `["orange"]` or `["dark_red", "done-green"]`. |

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-28T20:05:10.000Z
+updatedAt: 2026-11-04T13:46:58.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -57,7 +57,7 @@ Supported connection modes:
 
 **Managed provider (e.g. Claude Managed Agent)** - Provide your API key and agent ID. monday.com orchestrates calls to the provider and gives the agent access to platform tools (boards, items, updates, etc.) - the same capabilities available to built-in agents.
 
-**Custom agent (webhook)** - Provide a callback URL. monday.com posts event payloads to your endpoint to trigger the agent (via automation or assignment). Your agent processes the payload and responds with actions. See the [Build an external agent](https://developer.monday.com/api-reference/docs/build-an-external-agent) guide for the full webhook, signature-verification, and chat-reply flow.
+**Custom agent (webhook)** - Provide a callback URL. monday.com posts event payloads to your endpoint to trigger the agent (via automation, assignment, or chat). Acknowledge the webhook, then reply in chat with `send_custom_agent_message` using `payload.conversationId`. See the [Build an external agent](https://developer.monday.com/api-reference/docs/build-an-external-agent) guide for the full webhook, signature-verification, and chat-reply flow.
 
 Connected agents:
 

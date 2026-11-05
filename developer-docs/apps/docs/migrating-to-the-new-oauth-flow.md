@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-23T10:12:45.000Z
+updatedAt: 2026-11-05T10:38:34.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/apps/llms.txt
@@ -9,14 +9,15 @@ agentTools:
 
 Migrate your monday app from the legacy OAuth flow to the new OAuth 2.1 flow with expiring tokens, refresh tokens, and token revocation.
 
-The new OAuth 2.1 flow introduces several important changes to how your app handles authentication tokens. This guide covers only what you need to change in your existing integration - the authorization request (step 1 of the [OAuth flow](https://developer.monday.com/apps/docs/oauth#the-oauth-flow)) remains unchanged.
+The new OAuth 2.1 flow introduces several important changes to how your app handles authentication tokens. This guide covers only what you need to change in your existing integration - the authorization request (step 1 of the [OAuth flow](https://developer.monday.com/apps/docs/oauth#the-oauth-flow)) remains the same URL, with PKCE parameters required for the new flow.
 
 The key differences in the new flow are:
 
-* **Access tokens now expire** - you must handle token expiration and refresh.
-* **Refresh tokens** - use them to obtain new access tokens without user re-authorization.
+* **Access tokens now expire** - decode the JWT and read the `exp` claim to know when to refresh.
+* **Refresh tokens** - use them to obtain new access tokens without user re-authorization. Refresh tokens rotate on every use and are single-use; they also carry an `exp` claim.
 * **Token revocation** - explicitly revoke tokens when they are no longer needed.
 * **New token endpoint URL** - token exchange uses a different endpoint.
+* **PKCE is required** - every authorization request and token exchange in the new flow must use PKCE (`S256`).
 
 > 📘 New to OAuth?
 >
@@ -35,13 +36,17 @@ Before migrating, enable the new OAuth flow for your app version in the [Develop
 
 <Image align="center" alt="Enable the New OAuth flow toggle in the OAuth & permissions tab of the Developer Center" caption="The New OAuth flow toggle in the OAuth & permissions tab" border={true} src="https://dapulse-res.cloudinary.com/image/upload/v1783411870/app%20features/new-oauth-opt-in-89d4a0cdfac2c6fa456a6c6de3c3a49c.png" className="border" />
 
+<Callout icon="📘">
+Enabling the toggle does **not** expire tokens already issued under the legacy flow. Existing installs keep their non-expiring tokens until the user re-authorizes or you migrate those tokens with [`/oauth/migrate`](#6-migrate-legacy-api-tokens). Only **new** authorization-code exchanges after the toggle use the new token URL and expiring access/refresh tokens.
+</Callout>
+
 # 2. Update your token endpoint URL
 
-The authorize endpoint stays unchanged:
+The authorize endpoint stays at the same URL:
 
 `GET https://auth.monday.com/oauth2/authorize`
 
-It now supports PKCE, which adds the following query parameters:
+For the new flow it requires PKCE, which adds the following query parameters:
 
 | Parameter               | Description                                                                                                                                                                  | Required |
 | :---------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- |
@@ -56,11 +61,11 @@ The token exchange endpoint **has changed**:
 
 Update your backend code to use the new URL when exchanging authorization codes for tokens.
 
-To support PKCE, the token exchange request accepts an additional parameter:
+The token exchange request also requires the PKCE verifier:
 
-| Parameter      | Description                                                                                                                                                                              | Required |
-| :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- |
-| code\_verifier | The original PKCE code verifier string (43–128 characters). Required if `code_challenge` was sent during authorization. See the [PKCE](#pkce-proof-key-for-code-exchange) section below. | Required |
+| Parameter      | Description                                                                                                                                                                             | Required |
+| :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- |
+| code\_verifier | The original PKCE code verifier string (43–128 characters). Must match the `code_challenge` sent during authorization. See the [PKCE](#pkce-proof-key-for-code-exchange) section below. | Required |
 
 ## Updated token exchange request
 
@@ -72,7 +77,8 @@ curl -X POST https://auth.monday.com/oauth_ms/oauth/token \
     "client_id": "YOUR_CLIENT_ID",
     "client_secret": "YOUR_CLIENT_SECRET",
     "code": "AUTHORIZATION_CODE",
-    "redirect_uri": "https://yourapp.com/callback"
+    "redirect_uri": "https://yourapp.com/callback",
+    "code_verifier": "YOUR_CODE_VERIFIER"
   }'
 ```
 
@@ -82,7 +88,7 @@ curl -X POST https://auth.monday.com/oauth_ms/oauth/token \
 
 ## Updated token exchange response
 
-The response now includes a `refresh_token`, and the access token has an expiration:
+The response now includes a `refresh_token` and a space-separated `scope` list. Access and refresh tokens are JWTs — decode them and read the `exp` claim for expiry. Do not hard-code lifetimes; they can change.
 
 ```json
 {
@@ -93,12 +99,12 @@ The response now includes a `refresh_token`, and the access token has an expirat
 }
 ```
 
-| Key            | Change from old flow                                                                                                                                  |
-| :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access\_token  | Now expires. Decode the JWT to check the `exp` field for the expiration timestamp. Previously, tokens were valid until the user uninstalled your app. |
-| refresh\_token | New. Use this to obtain a new access token when the current one expires.                                                                              |
-| token\_type    | No change. Always `Bearer`.                                                                                                                           |
-| scope          | A space-separated list of granted scopes.                                                                                                             |
+| Key            | Change from old flow                                                                                                                                                                           |
+| :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access\_token  | Now expires. Decode the JWT and read `exp` for the expiration timestamp. Previously, tokens were valid until the user uninstalled your app.                                                    |
+| refresh\_token | New. Use this to obtain a new access token when the current one expires. Also a JWT with an `exp` claim. Rotates on every refresh — see [Implement token refresh](#3-implement-token-refresh). |
+| token\_type    | No change. Always `Bearer`.                                                                                                                                                                    |
+| scope          | Now a **space-separated** list of granted scopes (the legacy flow returned a comma-separated list).                                                                                            |
 
 # 3. Implement token refresh
 
@@ -128,19 +134,24 @@ The response returns a new access token and a new refresh token:
 }
 ```
 
-> 🚧 Store the latest refresh token
->
-> Each refresh returns a new `refresh_token`. Always store the latest refresh token and discard the old one.
+<Callout icon="🚧" theme="warn">
+**Refresh tokens rotate and are single-use**
+
+Every successful refresh returns a **new** `refresh_token`. Persist it immediately and discard the previous one.
+
+Reusing an old refresh token returns `invalid_grant`. Concurrent refreshes that present the same token within a short retry window are treated as retries and receive the same successor pair; after that window, reuse can revoke the entire token family and force the user to re-authorize.
+</Callout>
 
 ## Recommended refresh strategy
 
-* Decode the `access_token` JWT and read the `exp` claim to know when it expires.
-* Refresh the token proactively before it expires-for example, when less than 5 minutes remain.
-* If an API call returns a `401 Unauthorized`, attempt a token refresh and retry the request.
+* Decode the access token JWT and read the `exp` claim to know when it expires. Do the same for the refresh token when you need its lifetime.
+* Refresh the access token proactively before `exp` — for example, when less than 5 minutes remain.
+* If an API call returns `401 Unauthorized`, attempt one token refresh and retry the request.
+* On `invalid_grant` from the refresh endpoint (expired or reused refresh token), send the user through the authorization flow again. Do not retry refresh in a loop.
 
 # 4. Revoke tokens
 
-You can now explicitly revoke tokens when they are no longer needed-for example, when a user disconnects your app.
+You can explicitly revoke tokens when they are no longer needed.
 
 `POST https://auth.monday.com/oauth_ms/oauth/revoke`
 
@@ -251,6 +262,7 @@ curl -X POST https://auth.monday.com/oauth_ms/oauth/token \
     "client_id": "YOUR_CLIENT_ID",
     "client_secret": "YOUR_CLIENT_SECRET",
     "code": "AUTHORIZATION_CODE",
+    "redirect_uri": "https://yourapp.com/callback",
     "code_verifier": "YOUR_CODE_VERIFIER"
   }'
 ```
@@ -265,11 +277,11 @@ The server verifies that `SHA256(code_verifier)` matches the `code_challenge` se
 
 The following parts of the OAuth flow are unchanged and do not require any modifications:
 
-* **Authorization URL**: `GET https://auth.monday.com/oauth2/authorize` (same URL, same parameters).
-* **Permission scopes**: Same scope definitions and configuration in the Developer Center.
+* **Authorization URL**: `GET https://auth.monday.com/oauth2/authorize` (same URL; add the required PKCE query parameters for the new flow).
+* **Permission scopes**: Same scope definitions and configuration in the Developer Center. The token response delimiter changes from commas to spaces — see [Updated token exchange response](#updated-token-exchange-response).
 * **Redirect URLs**: Same configuration and validation rules.
-* **Redirect callback**: Same parameters-`code`, `state`, and `status`. Check `status` to confirm the user approved the authorization.
-* **Authorization code**: Still valid for 10 minutes, with the same exchange process (just a different endpoint URL).
+* **Redirect callback**: Same parameters — `code`, `state`, and `status`. Check `status` to confirm the user approved the authorization.
+* **Authorization code**: Still valid for 10 minutes, with the same exchange process (just a different endpoint URL, plus `code_verifier`).
 * **Client credentials**: Same `client_id` and `client_secret` from the Developer Center.
 
 # 6. Migrate legacy API tokens
@@ -278,16 +290,16 @@ The following parts of the OAuth flow are unchanged and do not require any modif
 This endpoint is **temporary** and will be removed once the OAuth 2.1 migration is complete. Do not use it as a permanent authentication strategy.
 </Callout>
 
-If you have existing integrations using a legacy monday app tokens, you can exchange them for an OAuth 2.1 access/refresh token pair using the migration endpoint - without requiring the user to go through the OAuth consent flow again.
+If you have existing integrations using legacy monday app API tokens, you can exchange them for an OAuth 2.1 access/refresh token pair using the migration endpoint — without requiring the user to go through the OAuth consent flow again.
 
 <Callout icon="📘">
-Only app old API tokens can be migrated.
+Only legacy **app** API tokens can be migrated. Personal API tokens are not supported.
 </Callout>
 
 `POST https://auth.monday.com/oauth_ms/oauth/migrate`
 
 This endpoint is **rate-limited**. Avoid calling it repeatedly or in bulk. It is intended for a one-time migration per token.
-If you receive a `429` status code, wait 5 minutes before retrying. Build exponential backoff into any migration script - do not retry immediately.
+If you receive a `429` status code, wait 5 minutes before retrying. Build exponential backoff into any migration script — do not retry immediately.
 
 ## Request
 
@@ -316,7 +328,6 @@ On success, the response contains a new OAuth 2.1 access token and refresh token
   "access_token": "eyJhbGciOi...",
   "refresh_token": "eyJhbGciOi...",
   "token_type": "Bearer",
-  "expires_in": 3600,
   "already_migrated": false,
   "migrated_from": {
     "api_token_id": 12345678
@@ -324,17 +335,20 @@ On success, the response contains a new OAuth 2.1 access token and refresh token
 }
 ```
 
-| Field             | Description                                                                                                                    |
-| :---------------- | :----------------------------------------------------------------------------------------------------------------------------- |
-| access\_token     | The new OAuth 2.1 access token. Use this for all subsequent API calls.                                                         |
-| refresh\_token    | Use this to obtain a new access token when the current one expires. See [Implement token refresh](#3-implement-token-refresh). |
-| token\_type       | Always `Bearer`.                                                                                                               |
-| expires\_in       | Access token lifetime in seconds.                                                                                              |
-| migrated\_from    | Contains the `api_token_id` of the original token that was exchanged.                                                          |
-| already\_migrated | `true` if this token was already migrated in a previous call. No new token was created; the existing one is returned.          |
+| Field             | Description                                                                                                                                                            |
+| :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| access\_token     | The new OAuth 2.1 access token. Decode the JWT and read `exp` for expiry. Use this for all subsequent API calls.                                                       |
+| refresh\_token    | Use this to obtain a new access token when the current one expires. Also a JWT with an `exp` claim. See [Implement token refresh](#3-implement-token-refresh).         |
+| token\_type       | Always `Bearer`.                                                                                                                                                       |
+| migrated\_from    | Contains the `api_token_id` of the original token that was exchanged.                                                                                                  |
+| already\_migrated | `true` if this token was already migrated in a previous call. No new token was created; the existing pair is returned — read `exp` on the JWTs for remaining lifetime. |
 
 <Callout icon="📘">
-This endpoint is idempotent per token. Calling it multiple times for the same token is safe - it returns the existing OAuth token with `already_migrated: true` with same expiration!
+This endpoint is idempotent per token. Calling it multiple times for the same token is safe — it returns the existing OAuth token with `already_migrated: true` and the remaining lifetime.
+</Callout>
+
+<Callout icon="🚧" theme="warn">
+Migration issues a **new** OAuth access/refresh pair and leaves the legacy API token in place for a transition period. After a successful migration, store the new pair and use it for all API calls. The legacy token will stop working eventually, so treat the migration as the moment to retire it.
 </Callout>
 
 After migration, store the `access_token` and `refresh_token` and use the standard [token refresh](#3-implement-token-refresh) flow going forward.
@@ -353,6 +367,15 @@ After migration, store the `access_token` and `refresh_token` and use the standa
 | 403    | `invalid_request`               | Token migration is currently disabled.                                          |
 | 429    | `too_many_requests`             | Rate limit exceeded. Wait 5 minutes before retrying.                            |
 | 500    | —                               | Unexpected server error.                                                        |
+
+# Migration checklist
+
+1. Enable **New OAuth Flow** on a draft app version and set it **Active for me**.
+2. Switch your token URL to `https://auth.monday.com/oauth_ms/oauth/token` and send PKCE (`code_challenge` / `code_verifier`, `S256` only).
+3. Persist both `access_token` and `refresh_token`; treat refresh tokens as rotating and single-use.
+4. Refresh proactively from the access token JWT `exp`; on API `401`, refresh once and retry; on refresh `invalid_grant`, re-authorize the user.
+5. If you store legacy app API tokens, call `/oauth/migrate` once per token, then stop using the legacy token.
+6. Promote the draft version to live after verifying the flow.
 
 > 📘 Join our developer community!
 >

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-14T13:24:08.000Z
+updatedAt: 2026-10-29T09:46:33.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -15,7 +15,7 @@ A companion package (`@mondaydotcomorg/setup-api`) scaffolds a GraphQL codegen p
 
 | Package                                                                                  | Purpose                                 | Latest version |
 | ---------------------------------------------------------------------------------------- | --------------------------------------- | -------------- |
-| [`@mondaydotcomorg/api`](https://www.npmjs.com/package/@mondaydotcomorg/api)             | API client, types, pre-built operations | 14.0.0         |
+| [`@mondaydotcomorg/api`](https://www.npmjs.com/package/@mondaydotcomorg/api)             | API client, types, pre-built operations | 14.3.1         |
 | [`@mondaydotcomorg/setup-api`](https://www.npmjs.com/package/@mondaydotcomorg/setup-api) | GraphQL codegen scaffolding CLI         | 2.1.1          |
 
 ***
@@ -356,14 +356,16 @@ const res = await client.request<{ data: { data: { boards: Board[] } } }>(
 const boards = res.data.data.boards;
 ```
 
+`T` describes the whole reply from the monday.com host, not only the GraphQL data. That is why the boards are at `res.data.data.boards` here, while `ApiClient.request<{ boards: Board[] }>()` returns them as `res.boards`.
+
 ### SeamlessApiClient constructor
 
 `new SeamlessApiClient(apiVersion?, options?)`
 
-| Option                | Type                          | Default                        | Description                                                                                             |
-| --------------------- | ----------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| `apiVersion`          | `string`                      | Current version at SDK release | API version to use for requests.                                                                        |
-| `options.errorPolicy` | `'none' \| 'ignore' \| 'all'` | `'none'`                       | What to do when the API replies with GraphQL errors. See "Error policies" below. Available from 14.3.0. |
+| Option                | Type                          | Default                        | Description                                                                                                                                            |
+| --------------------- | ----------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `apiVersion`          | `string`                      | Current version at SDK release | API version to use for requests.                                                                                                                       |
+| `options.errorPolicy` | `'none' \| 'ignore' \| 'all'` | `'none'`                       | What to do when the API replies with GraphQL errors. See [SeamlessApiClient error policies](#seamlessapiclient-error-policies). Available from 14.3.0. |
 
 ### SeamlessApiClient.request()
 
@@ -420,7 +422,7 @@ try {
 }
 ```
 
-### Error policies
+### SeamlessApiClient error policies
 
 By default, `SeamlessApiClient` rejects on any GraphQL error. As with `ApiClient`, you can change this with `errorPolicy`, either on the client or per request:
 
@@ -836,3 +838,9 @@ import { ColumnType, BoardKind, State, WorkspaceKind, BoardObjectType } from '@m
 | `operations.changeSimpleColumnValueOp()`    | `({ boardId, itemId, columnId, value: string }) => Promise`                                                       | Set a column's simple string value.                                                   |
 | `operations.changeColumnValueOp()`          | `({ boardId, itemId, columnId, value: JSON }) => Promise`                                                         | Set a column's JSON value.                                                            |
 | `operations.changeMultipleColumnValuesOp()` | `({ boardId, itemId, columnValues: JSON }) => Promise`                                                            | Set multiple column values.                                                           |
+
+## SeamlessApiClient method reference
+
+| Method         | Signature                                                                                                                                             | Description                                                                                                                                                                                                                                                        |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request<T>()` | `(query: string, variables?: Record<string, any>, options?: { versionOverride?, timeoutMs?, headers?, idempotencyKey?, errorPolicy? }) => Promise<T>` | Send a GraphQL query/mutation through the monday.com host. `T` is the whole host reply: GraphQL data is at `res.data.data`, plus `res.data.extensions` and `res.headers`. With the default `errorPolicy`, rejects with `SeamlessApiClientError` on GraphQL errors. |
