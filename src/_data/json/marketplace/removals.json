@@ -1,7 +1,289 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-11-04",
+  "processedThrough": "2026-11-05",
   "events": [
+    {
+      "id": 10000820,
+      "app_id": 10377451,
+      "name": "Calendar Pro",
+      "type": "archived",
+      "date": "2026-11-05",
+      "installs": null,
+      "app": {
+        "id": 10000820,
+        "marketplace_developer_id": 100000036,
+        "app_id": 10377451,
+        "app_type": "app",
+        "security_info": null,
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000820/10000820_2025_4_27_9_34_9_mo2iflm.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000820/10000820_2025_4_27_9_34_16_ipsi7csk.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000820/10000820_2025_4_27_9_34_23_g91s6wr.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000820/10000820_2025_4_27_9_35_41_bb9q46v.mp4",
+            "type": "video"
+          }
+        ],
+        "description": "<p><strong>Centralize every calendar your team uses</strong>—<strong>Google Calendar (GCal) , Zoho, TeamUp, directly in monday</strong>. With&nbsp;<em>unlimited calendar embedding</em>&nbsp;and&nbsp;<em>zero per-user fees</em>, our&nbsp;<em>flat-rate</em>&nbsp;solution eliminates costly subscriptions and complex integrations.</p><p><strong>What You Will Get ?</strong></p><ul><li><strong>Unlimited Calendars :</strong>&nbsp;Embed unlimited team, project, and external calendars (Google Calendar, Zoho, Teamup ). No more tab switching.</li><li><strong>One Simple Flat Fee :</strong>&nbsp;Replace fragmented calendar tools with a single hub—no per-seat charges or hidden costs.</li><li><strong>Centralized Calendar Hub:</strong>&nbsp;Instantly embed Google , TeamUp or Zoho calendars into&nbsp;<em>boards, dashboards, or items views</em>&nbsp;with 2 clicks.</li><li><strong>Secure &amp; Scalable:</strong>&nbsp;Hosted on monday code. Reliable and Secure infrastructure, your data do not leave monday servers.</li></ul><p><strong>User Cases</strong></p><ol><li><strong>Unify Campaign Calendars in One Place</strong>Embed&nbsp;<strong>all marketing campaigns</strong>&nbsp;(social media, email, ads) into a single, team-accessible block. Eliminate tab-switching chaos and streamline cross-channel planning with real-time updates.</li><li><strong>Centralize HR &amp; Employee Events</strong>Never miss HR meetings, performance reviews, or employee birthdays. Embed&nbsp;<strong>HR calendars</strong>&nbsp;and&nbsp;<strong>birthday calendars</strong>&nbsp;directly into monday, ensuring deadlines and celebrations stay visible to everyone.</li><li><strong>Manage Multiple Clients Effortlessly</strong>Working with 10+ clients? Embed&nbsp;<strong>unlimited calendars</strong>&nbsp;(client meetings, deliverables, milestones) side by side. Organize by project, team, or priority—no more scattered schedules.</li></ol><p><strong>Need a demo :&nbsp;</strong><a href=\"https://loomilab.zohobookings.com/#/4776990000000042054\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>Click here to book a free demo.</strong></a></p><p><strong>More FAQs:&nbsp;</strong><a href=\"https://www.loomilab.com/calendar-pro/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>Our website</strong></a></p>",
+        "short_description": "Embed 10+ Calendars. One Flat Fee. Pay Zero Extra Per User.",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000820/10000820_2025_4_27_9_32_59_lgvvy95.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000820/10000820_2025_4_27_9_32_33_4ii6exd.png",
+        "feedback_url": "support@mail.loomilab.com",
+        "privacy_policy_url": "https://www.loomilab.com/privacy-policy/",
+        "featured": null,
+        "name": "Calendar Pro",
+        "how_to_use_url": "https://blog.loomilab.com/calendar-pro-guide/",
+        "external_pricing_url": null,
+        "keywords": "calendar, calendars, google calendar, google calendar embed, calendar google embed, embed gcal, embed calendar, zoho calendar, Low-cost calendar, calendar embed",
+        "compliance_answers": [],
+        "created_at": "2025-05-26T08:35:24.000Z",
+        "updated_at": "2025-10-31T16:40:25.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 day trial",
+        "label": null,
+        "app_values": [
+          "Built for scalability"
+        ],
+        "security": true,
+        "display_in_template_store": null,
+        "acquisition_source": "No touch",
+        "is_connector": null,
+        "show_connections": null,
+        "terms_of_service_url": "https://www.loomilab.com/term-of-service/",
+        "available_for_tiers": null,
+        "available_for_products": null,
+        "google_analytics_tag_id": "G-HNJKJR80TJ",
+        "is_solution": null,
+        "cta_override": null,
+        "app_scope_str": "",
+        "app_client_id": "c2befb266c9064e64add725941b0a1f2",
+        "app_color": "#1E3968",
+        "plans": [
+          {
+            "id": "10377451-1-business_plan_calendar_pro",
+            "appPlanId": "business_plan_calendar_pro",
+            "name": "Business Plan",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "standard",
+              "monthly": 3,
+              "yearly": 3
+            },
+            "versionState": "live",
+            "appId": 10377451,
+            "description": "Access All Your Calendars With In monday. No More Tab Switching.",
+            "extraData": {
+              "bullets": [
+                "Embed all your calendars.",
+                "Private/Public access control.",
+                "View your calendars in dashboards , items and board views.",
+                "Flat fee."
+              ],
+              "monthlyFee": 3,
+              "yearlyFee": 3
+            },
+            "isFree": false,
+            "isRecommended": true,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-06-01T05:27:38.852Z",
+          "id": 10814867
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": true,
+          "app_values": [
+            "Built for scalability"
+          ],
+          "pricing_data": "14 day trial",
+          "acquisition_source": "No touch"
+        },
+        "data": {
+          "terms_of_service_url": "https://www.loomilab.com/term-of-service/",
+          "google_analytics_tag_id": "G-HNJKJR80TJ"
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10001252,
+      "app_id": 11417473,
+      "name": "SimplyTrigger",
+      "type": "archived",
+      "date": "2026-11-05",
+      "installs": null,
+      "app": {
+        "id": 10001252,
+        "marketplace_developer_id": 100000242,
+        "app_id": 11417473,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10001252/10001252_2026_6_28_7_22_2_fnuvjzi.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001252/10001252_2026_6_28_7_22_8_8me1mggf.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001252/10001252_2026_6_28_7_22_12_zusfben.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001252/10001252_2026_6_28_7_22_15_1bmrt4u.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001252/10001252_2026_6_28_7_22_18_52rqoxi.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p>The <a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a> formula column is powerful — but it stops short. It calculates beautifully.  Days between dates, fuel usage, budget variance, percentages — the formula column works it all out. But then the result just sits there.</p><p><br></p><p>1. You can't trigger anything from it.</p><p>2. You can't change a status when a number crosses a line.</p><p><br></p><p>The insight is on the board, but it doesn't do anything.</p><p><br></p><p>SimplyTrigger fixes that.</p><p><br></p><p>SimplyTrigger adds a simple automation recipe to <a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>'s native automation builder. You set a threshold on any numeric formula column — and when the formula result crosses it, the status changes automatically.</p><p><br></p><p><strong>How it works:</strong> </p><p><br></p><p>Open your automation centre, choose the SimplyTrigger recipe, and set your rule: when a formula column is greater than, greater than or equal to, equal to, less than or equal to, or less than a value you choose, change a status column to the status you want. </p><p>That's it. It lives inside <a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>'s automation builder, so it feels exactly like a native automation.</p><p><br></p><p><strong>Key features:</strong> </p><p><br></p><p>- Works with any numeric formula column on your board </p><p>- Five comparison operators for precise threshold control </p><p>- Change any status column to any status value </p><p>- Unlimited automations — no per-board caps, no feature gates </p><p>- Built entirely within <a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a> — no external servers, no data leaves the platform </p><p>- Native automation builder integration — nothing new to learn </p><p><br></p><p><strong>Perfect for: </strong></p><p><br></p><p>- Flagging overdue or at-risk items based on calculated dates </p><p>- Fuel, budget, or usage monitoring against thresholds </p><p>- Travel and booking limits — trip duration, length of stay </p><p>- Any workflow where a calculated number should drive a status </p><p><br></p><p><strong>Set the threshold. Trigger the action. Done.</strong></p><p><br></p><p><strong>📄 </strong><a href=\"https://www.astrodigital.ai/userguide-trigger\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>View Documentation</strong></a></p><p><strong>✉️ </strong><a href=\"mailto:support@astrodigital.ai\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>Contact Support</strong></a></p>",
+        "short_description": "Turn formula results into status changes. Automatically.",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10001252/10001252_2026_6_28_7_21_49_93unutv.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10001252/10001252_2026_6_28_7_21_45_j3zo6t9.png",
+        "feedback_url": "support@astrodigital.ai",
+        "privacy_policy_url": "https://astrodigital.ai/privacy",
+        "featured": false,
+        "name": "SimplyTrigger",
+        "how_to_use_url": "https://www.astrodigital.ai/userguide-trigger",
+        "external_pricing_url": null,
+        "keywords": "monday formula, column,workflow,threshold,automation,status,trigger,formula,simplytrigger,simply trigger",
+        "compliance_answers": [],
+        "created_at": "2026-07-28T07:21:18.000Z",
+        "updated_at": "2026-09-14T08:01:12.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": null,
+        "label": null,
+        "app_values": [
+          "Everyday tasks"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://astrodigital.ai/terms",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write,webhooks:write,webhooks:read",
+        "app_client_id": "86f14a0488f356706998b9361f6f8963",
+        "app_color": {
+          "hsl": {
+            "h": 27.610619469026542,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 27.610619469026542,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 27.610619469026542,
+          "source": "rgb"
+        },
+        "plans": [
+          {
+            "id": "11417473-1-professional",
+            "appPlanId": "professional",
+            "name": "Professional",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "standard",
+              "monthly": 15,
+              "yearly": 11
+            },
+            "versionState": "live",
+            "appId": 11417473,
+            "description": "Everything you need to turn formula results into real board actions.",
+            "extraData": {
+              "bullets": [
+                "Unlimited automations",
+                "Unlimited seats",
+                "Five comparison operators",
+                "Access to all app features"
+              ],
+              "monthlyFee": 15,
+              "yearlyFee": 11
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2026-07-14T16:20:36.910Z",
+          "id": 15922654
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Everyday tasks"
+          ],
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://astrodigital.ai/terms",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000496,
       "app_id": 10136179,
