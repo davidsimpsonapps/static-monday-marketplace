@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-29T09:46:33.000Z
+updatedAt: 2026-11-05T12:18:50.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -130,10 +130,11 @@ const { boards } = await client.request<{ boards: Board[] }>(
 
 The third parameter to `request()` accepts:
 
-| Option            | Type     | Description                                                                                          |
-| ----------------- | -------- | ---------------------------------------------------------------------------------------------------- |
-| `versionOverride` | `string` | Override the API version for this single request. Same validation rules as the constructor.          |
-| `timeoutMs`       | `number` | Request timeout in milliseconds (max 60,000). The request aborts if the API doesn't respond in time. |
+| Option            | Type     | Description                                                                                                                                                                                                      |
+| ----------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `versionOverride` | `string` | Override the API version for this single request. Same validation rules as the constructor.                                                                                                                      |
+| `timeoutMs`       | `number` | Request timeout in milliseconds (max 60,000). The request aborts if the API doesn't respond in time.                                                                                                             |
+| `idempotencyKey`  | `string` | Sent as the `Idempotency-Key` header. Takes precedence over one passed in `headers`; an empty string is rejected before sending. See [Idempotency](https://developer.monday.com/api-reference/docs/idempotency). |
 
 ```typescript
 const result = await client.request(
@@ -385,12 +386,12 @@ const boards = res.data.data.boards;
 
 The promise resolves with the reply from the monday.com host, and `T` describes that whole reply:
 
-| Field                 | Description                                                                                       |
-| --------------------- | ------------------------------------------------------------------------------------------------- |
-| `res.data.data`       | The GraphQL `data`.                                                                               |
-| `res.data.extensions` | GraphQL `extensions`, including `request_id`.                                                     |
-| `res.headers`         | A `Headers` object with the forwarded response headers, or `undefined` if none were forwarded.    |
-| `res.requestId`       | The SDK's internal ID for matching the reply to the request. This is not the platform request ID. |
+| Field                 | Description                                                                                                                                                                    |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `res.data.data`       | The GraphQL `data`.                                                                                                                                                            |
+| `res.data.extensions` | GraphQL `extensions`, including `request_id`.                                                                                                                                  |
+| `res.headers`         | A `Headers` object with the forwarded response headers (`api-version`, `ratelimit`, `ratelimit-policy`, `retry-after`, `x-request-id`), or `undefined` if none were forwarded. |
+| `res.requestId`       | The SDK's internal ID for matching the reply to the request. This is not the platform request ID.                                                                              |
 
 `res.headers` holds the response headers that monday.com forwards. Lookups are case-insensitive:
 

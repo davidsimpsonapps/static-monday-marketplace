@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-01T09:07:30.000Z
+updatedAt: 2026-11-04T14:58:34.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/apps/llms.txt
@@ -11,16 +11,16 @@ Review the resource limits for your monday code instances
 
 monday code limits are designed to maintain system stability while ensuring fair resource allocation for all users. These limits help you manage your app's resource consumption, contributing to optimal performance across the platform.
 
-| Category                      | Limit/specification                             |
-| :---------------------------- | :---------------------------------------------- |
-| CPU allocation                | 1 virtual CPU                                   |
-| Memory allocation             | 512 MiB RAM                                     |
-| Concurrent requests           | Up to 80 concurrent requests per instance       |
-| Request timeout               | 300 seconds                                     |
-| Scaling limit                 | Maximum of 10 instances per region (EU, US, AU) |
-| Storage API concurrency limit | 12 requests per second (per JWT token)          |
-| Secrets API concurrency limit | 7 requests per second                           |
-| Daily runtime execution limit | See the section below\*                         |
+| Category                      | Limit/specification                                 |
+| :---------------------------- | :-------------------------------------------------- |
+| CPU allocation                | 1 virtual CPU                                       |
+| Memory allocation             | 512 MiB RAM                                         |
+| Concurrent requests           | Up to 80 concurrent requests per instance           |
+| Request timeout               | 300 seconds                                         |
+| Scaling limit                 | Maximum of 10 instances per region (EU, US, AU, IL) |
+| Storage API concurrency limit | 12 requests per second (per JWT token)              |
+| Secrets API concurrency limit | 7 requests per second                               |
+| Daily runtime execution limit | See the section below\*                             |
 
 # Daily runtime execution limit\*
 
@@ -81,7 +81,7 @@ For example, if your daily execution limit is 14,400 minutes and your app proces
 
 ### Scenario 2: Multi-region deployment
 
-For multi-region deployments, the daily execution limit is shared across all regions your app is deployed to. If your calculated limit is 14,400 minutes, this applies globally to your entire app, not separately per region. Even if you scale up to 10 instances in each of the three regions (US, EU, and AU), the combined execution minutes across all of them must still stay within the total daily limit.
+For multi-region deployments, the daily execution limit is shared across all regions your app is deployed to. If your calculated limit is 14,400 minutes, this applies globally to your entire app, not separately per region. Even if you scale up to 10 instances in each of the four regions (US, EU, AU, and IL), the combined execution minutes across all of them must still stay within the total daily limit.
 
 ### Scenario 3: High concurrency impact
 

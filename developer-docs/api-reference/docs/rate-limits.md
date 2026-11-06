@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-28T08:37:36.000Z
+updatedAt: 2026-11-05T12:39:26.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -42,7 +42,7 @@ The limit varies based on how you're making the call:
 | Using API playground to access the API      | Reads and writes are limited to 5M complexity points per minute\* each or 1M for trial/free accounts       |
 | Using personal API tokens to access the API | Reads and writes have a combined budget of 10M points per minute\* or 1M for trial, NGO, and free accounts |
 
-*\*Per-minute budgets follow a sliding window and reset 60 seconds after the first API call was made*
+*\*Per-minute budgets follow a sliding window and reset 60 seconds after the first API call was made.*
 
 ### Calculating complexity
 
@@ -242,7 +242,7 @@ Every API response includes two HTTP headers that report the current state of yo
 
 Declares the server's active rate limit policies, including the quota (`q`), time window (`w`), and unit (`qu`). This header stays constant for a given account tier and tells you the maximum allowed values.
 
-```
+```text
 RateLimit-Policy: "minuteRate";q=100;w=60, "concurrency";q=40;qu="concurrent-requests", "complexityMinute";q=1000000;w=60;qu="content-bytes"
 ```
 
@@ -250,7 +250,7 @@ RateLimit-Policy: "minuteRate";q=100;w=60, "concurrency";q=40;qu="concurrent-req
 
 Reports the current state of each limit, including the remaining quota (`r`) and, when the limit is exceeded or a reset time is available, the number of seconds until the quota resets (`t`).
 
-```
+```text
 RateLimit: "minuteRate";r=90, "concurrency";r=35, "complexityMinute";r=800000;t=45
 ```
 
@@ -272,14 +272,14 @@ Both headers can report up to three policies simultaneously. Each policy corresp
 
 Here's an example of what the headers look like when all three limits are active and the account is under its limits:
 
-```
+```text
 RateLimit-Policy: "minuteRate";q=5000;w=60, "concurrency";q=250;qu="concurrent-requests", "complexityMinute";q=5000000;w=60;qu="content-bytes"
 RateLimit: "minuteRate";r=4999, "concurrency";r=249, "complexityMinute";r=4950000;t=45
 ```
 
 When a limit is exceeded, the remaining value drops to `0` and a `t` parameter appears:
 
-```
+```text
 RateLimit: "minuteRate";r=0;t=38, "concurrency";r=249, "complexityMinute";r=4950000;t=45
 ```
 

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:31:59.000Z
+updatedAt: 2026-11-05T12:44:49.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -15,8 +15,8 @@ When network failures or timeouts occur, retrying a mutation can accidentally cr
 
 Send a unique `Idempotency-Key` header with any mutation request. The API uses this key to deduplicate retries:
 
-1. **First request**: Executes normally and caches the response for 30 minutes.
-2. **Retry with same key**: Returns the cached response with an `Idempotency-Replayed: true` header — no duplicate side effect occurs.
+1. **First request**: Executes normally. If the response is successful (2xx), it's stored for 30 minutes, subject to the [rules below](#rules-and-constraints).
+2. **Retry with same key**: Returns the stored response with an `Idempotency-Replayed: true` header — no duplicate side effect occurs.
 3. **Concurrent duplicate**: Returns `409 Conflict` with a `Retry-After` header indicating when to retry.
 
 > 👍 Best practice
@@ -37,7 +37,7 @@ fetch("https://api.monday.com/v2", {
     "Idempotency-Key": "YOUR_UNIQUE_IDEMPOTENCY_KEY"
   },
   body: JSON.stringify({
-    query: `mutation { create_item(board_id: 123456, item_name: "New item") { id } }`
+    query: `mutation CreateItem { create_item(board_id: 123456, item_name: "New item") { id } }`
   })
 });
 ```
@@ -48,25 +48,86 @@ curl -X POST 'https://api.monday.com/v2' \
 -H "Content-Type:application/json" \
 -H "API-Version:2025-07" \
 -H "Idempotency-Key:YOUR_UNIQUE_IDEMPOTENCY_KEY" \
---data-raw '{"query":"mutation { create_item(board_id: 123456, item_name: \"New item\") { id } }"}'
+--data-raw '{"query":"mutation CreateItem { create_item(board_id: 123456, item_name: \"New item\") { id } }"}'
 ```
+
+# Using the monday SDK
+
+In `@mondaydotcomorg/api`, `ApiClient` (from 14.1.0) and `SeamlessApiClient` (from 14.2.0) send the `Idempotency-Key` header for you when you pass `idempotencyKey` in the options of `request()`:
+
+```typescript
+import { ApiClient } from '@mondaydotcomorg/api';
+
+const client = new ApiClient({ token: '<YOUR_API_TOKEN>' });
+
+await client.request(
+  `mutation CreateItem { create_item(board_id: 123456, item_name: "New item") { id } }`,
+  undefined,
+  { idempotencyKey: 'YOUR_UNIQUE_IDEMPOTENCY_KEY' }
+);
+```
+
+In an app, `SeamlessApiClient` takes the same option:
+
+```typescript
+import { SeamlessApiClient } from '@mondaydotcomorg/api';
+
+const client = new SeamlessApiClient();
+
+await client.request(
+  `mutation CreateItem { create_item(board_id: 123456, item_name: "New item") { id } }`,
+  undefined,
+  { idempotencyKey: 'YOUR_UNIQUE_IDEMPOTENCY_KEY' }
+);
+```
+
+If you also pass an `Idempotency-Key` in `headers`, the `idempotencyKey` option wins. An empty string (`""`) is rejected before the request is sent. See the [JavaScript SDK](https://developer.monday.com/api-reference/docs/javascript-sdk) page for all request options.
+
+## In an app iframe
+
+When your app runs in a monday.com iframe and uses `SeamlessApiClient`, only some response headers reach your app (see [Response](https://developer.monday.com/api-reference/docs/javascript-sdk#response) on the JavaScript SDK page). `Idempotency-Replayed` isn't one of them, so an app in an iframe can't tell a replayed response from a fresh one.
+
+Errors arrive without an HTTP status, so you can't check for `409`. Read the error code from `error.response.errors[0].extensions.code` and the wait time from the `Retry-After` header. For a concurrent duplicate (this example needs 14.3.0 or later, where `instanceof SeamlessApiClientError` works):
+
+```typescript
+import { SeamlessApiClient, SeamlessApiClientError } from '@mondaydotcomorg/api';
+
+const client = new SeamlessApiClient();
+
+try {
+  await client.request(mutation, variables, { idempotencyKey });
+} catch (error) {
+  if (
+    error instanceof SeamlessApiClientError &&
+    error.response.errors?.[0]?.extensions?.code === 'IDEMPOTENCY_CONFLICT'
+  ) {
+    const waitSeconds = Number(error.response.headers?.get('retry-after') ?? 1);
+    // wait, then retry with the same idempotencyKey
+  }
+}
+```
+
+If you set `errorPolicy` to `'all'` or `'ignore'`, the call resolves instead of rejecting, so check the response for errors yourself. See [SeamlessApiClient error policies](https://developer.monday.com/api-reference/docs/javascript-sdk#seamlessapiclient-error-policies).
 
 # Response headers
 
-| Header                 | Description                                                                                                   |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `Idempotency-Replayed` | Set to `true` when the response is served from cache (i.e., this is a replayed retry, not a fresh execution). |
+| Header                 | Description                                                                                                                                                                                                                                                                           |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Idempotency-Replayed` | Set to `true` when the response is served from storage (i.e., this is a replayed retry, not a fresh execution). The mutation already ran; the replay still counts against [rate limits](https://developer.monday.com/api-reference/docs/rate-limits). To run it again, use a new key. |
 
 # Rules and constraints
 
-| Rule              | Detail                                                                                                                                                    |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mutations only    | The header is ignored on queries (reads are inherently idempotent).                                                                                       |
-| POST only         | Only applies to POST requests.                                                                                                                            |
-| Cache duration    | Cached responses expire after 30 minutes. After expiration, the same key will execute fresh.                                                              |
-| Key format        | Any non-empty string. We recommend UUIDs.                                                                                                                 |
-| Per-user budget   | Each user+app combination has a memory budget for cached responses. If the budget is exceeded, new responses will execute but won't be cached for replay. |
-| Max response size | Responses larger than 1 MB are not cached.                                                                                                                |
+| Rule              | Detail                                                                                                                                                                                                                      |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mutations only    | Queries ignore the header. Sending it on a query has no effect and returns no error.                                                                                                                                        |
+| POST only         | Only applies to POST requests.                                                                                                                                                                                              |
+| What is stored    | Only successful (2xx) responses. Any other status frees the key, so a retry with the same key runs again. A `200` response that carries GraphQL `errors`, partial or full, is stored and replayed for the whole 30 minutes. |
+| Key reuse         | Use a unique `Idempotency-Key` for every unique operation. Reuse a key only when retrying that exact same request.                                                                                                          |
+| Storage duration  | A response is stored for 30 minutes from the moment it's stored. The window is fixed and replays don't extend it. After it expires, the same key executes fresh.                                                            |
+| API version       | No minimum version. Idempotency keys work on every API version.                                                                                                                                                             |
+| Key format        | Any non-empty string, not validated. We recommend UUIDs.                                                                                                                                                                    |
+| Per-user budget   | Each user and app combination has a storage budget over a fixed 30-minute window. If the budget is exceeded, the response is returned but not stored, so a retry with the same key runs again.                              |
+| Max response size | Responses with an empty body, or larger than 1 MB, are not stored, so a retry runs again.                                                                                                                                   |
 
 # Error responses
 
@@ -87,7 +148,7 @@ If a request with the same idempotency key is already being processed, the API r
 }
 ```
 
-The response includes a `Retry-After` header. Wait the indicated time and retry — the cached response will then be available.
+The response includes a `Retry-After` header. Wait the indicated time, then retry with the same key. If the first request's response was stored, the retry returns it. If the first request returned a non-2xx status, the key is freed and the retry runs as a new request.
 
 # When to use idempotency keys
 

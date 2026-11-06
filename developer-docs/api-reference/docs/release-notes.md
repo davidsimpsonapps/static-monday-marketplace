@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-05T10:06:14.000Z
+updatedAt: 2026-11-05T15:52:15.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -37,11 +37,14 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
 * **Activity logs:**
   * `Board.activity_logs` returns a `BoardActivityLogsPage` (`logs` and `cursor`) instead of a list of `ActivityLogType`. Select the entries under `logs` and read `cursor` to fetch the next page
   * The `page` argument is removed. Paginate with the new `cursor` argument instead
-  * The `from` and `to` arguments are now `String` (previously `ISO8601DateTime`). `from` can be at most 90 days ago, and requests for older data return a validation error
+  * The `from` and `to` arguments are now `String` (previously `ISO8601DateTime`)
   * The `column_ids` and `group_ids` arguments are now `[ID!]` (previously `[String]`)
   * The `limit` argument no longer declares a schema default of `25`. It accepts 1–1000 and the documented default is still 25
 * **App subscriptions:**
   * The `value` field on [`SubscriptionDiscount`](https://developer.monday.com/api-reference/reference/app-subscriptions-other-types#subscriptiondiscount), returned in the `discounts` list of an app subscription, is now `Float!` (previously `Int!`). Update any client that parses it as an integer
+* **Apps:**
+  * The `input` argument of [`create_app`](https://developer.monday.com/api-reference/reference/app#create-app) is now `CreateAppInputV2!` (previously `CreateAppInput!`), and the `input` argument of [`update_app`](https://developer.monday.com/api-reference/reference/app#update-app) is now `UpdateAppInputV2!` (previously `UpdateAppInput!`). `CreateAppInputV2` and `UpdateAppInputV2` are new input types, and the old `CreateAppInput` and `UpdateAppInput` are removed. Update any query that declares a variable with the old input type
+  * The `permissions` field on the new inputs is `[String!]` (previously `[AppPermission!]`), so pass permission scopes as strings. The `AppPermission` enum is no longer used by any app input
 * **Columns:**
   * **Dangerous change:** New `UNIQUE_VALUES` value on the [`CalculatedFunction`](https://developer.monday.com/api-reference/reference/columns-other-types#calculated-function) enum, which a column's `capabilities { calculated { function } }` can return. Clients that handle the enum values exhaustively must handle `UNIQUE_VALUES`
 
@@ -51,7 +54,7 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
   * New `event_types`, `correlation_ids`, `cursor`, and `search` arguments on `Board.activity_logs` — filter by event type or correlation ID, page with a cursor, and prefix-search item names
 * **External agents:**
   * New [`agents`](https://developer.monday.com/api-reference/reference/agents#get-agents) query — retrieve agents and filter their user or team subscribers by type and role
-  * New `subscribers` field on the `Agent` type — lists the users and teams subscribed to an agent and their owner or member role
+  * New `subscribers` field on the `Agent` type — lists the users and teams subscribed to an agent and their owner, editor, or member role
   * New `EXTERNAL_AGENT_MEMBER` and `EXTERNAL_AGENT_DETACHED_MEMBER` values on `BaseRoleName` — assign external-agent roles with `update_users_role`
 * **Typed item pages:**
   * New root-level [`items_page`](https://developer.monday.com/api-reference/reference/items-page#get-items-page-at-the-root) query, separate from the nested `boards { items_page }` field — query a board or data view by ID with filters, hierarchy options, and cursor pagination
@@ -67,8 +70,11 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
   * New `is_pinned` field on `BoardView` — returns whether the view is pinned
 * **Items:**
   * New `parent_item_id` argument on [`move_item_to_board`](https://developer.monday.com/api-reference/reference/items#move-item-to-board) — move an item to be a subitem of the given parent item. `board_id` must be the parent item's board and `group_id` is ignored. `columns_mapping` maps to the columns of the board the item lands on, and is not allowed on a same-board move. `subitems_columns_mapping` is not allowed with `parent_item_id`
+  * New `group_id` and `item_name` arguments on [`duplicate_item`](https://developer.monday.com/api-reference/reference/items#duplicate-item) — add the copy to a given group (it defaults to the original item's group, and `group_id` is not supported for subitems) and name it. A name different from the original is used as given; the original name, or no name, still gets the `(copy)` suffix
 * **Meetings:**
   * New `series_id` field on `Meeting` — returns the ID of the recurring calendar series the meeting belongs to, or `null` for one-off meetings and meetings without a calendar event
+  * New `workspaces` field on `Meeting` — returns the workspaces (`id` and `name`) the meeting is linked to that the current user can open
+  * New `dynamics` field on `Meeting` — returns speaker and turn-taking statistics computed from the transcript, or `null` when the meeting has no transcript or the statistics have not been computed yet. The `MeetingDynamics` object includes total talk time, turn switches per minute, the interruption count, the longest monologue (`speaker`, `duration_seconds`, `start_time_seconds`), attendees who did not speak, and per-speaker stats (`speaker`, `talk_time_seconds`, `talk_time_percentage`, `questions_asked`) sorted by talk time
 * New [`include_project_board_link`](https://developer.monday.com/api-reference/docs/board-export-other-types#createboardexportoptionsinput) input on [`create_board_export`](https://developer.monday.com/api-reference/docs/board-export-api-reference#create-board-export) — add a trailing `Project Board` column with the first linked project board ID to CSV exports, or a blank value when no project is linked; the column is only added on accounts where this capability is enabled
 * New `DATA_VIEW` source for [`aggregate`](https://developer.monday.com/api-reference/reference/aggregate) — aggregate from a data view ID as well as a table ID
 * New `subitem_columns` field on `Board` — returns the board's subitem columns

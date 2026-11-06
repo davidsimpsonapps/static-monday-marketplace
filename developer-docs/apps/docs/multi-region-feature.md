@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-01-08T14:19:38.000Z
+updatedAt: 2026-11-04T14:58:34.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/apps/llms.txt
@@ -76,7 +76,7 @@ The feature can only be enabled in a draft version, so [create a new one](https:
 
 ## Step 3: Connect your app to monday code in each region
 
-1. In the General tab, click **Connect to monday code** for either Europe or Australia.
+1. In the General tab, click **Connect to monday code** for Europe, Australia, or Israel.
 2. [Deploy your app](https://developer.monday.com/apps/docs/command-line-interface-cli#mapps-appdeploy) using the region flag:
 
 | Long flag  | Short flag | Description             | Accepted values        |

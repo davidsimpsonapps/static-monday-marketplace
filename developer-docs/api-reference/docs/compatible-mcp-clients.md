@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-28T20:05:10.000Z
+updatedAt: 2026-11-03T09:00:30.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -25,18 +25,19 @@ The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open 
 
 The hosted MCP permission enables these pre-approved third-party agents. If your tool is listed here, follow the corresponding setup guide.
 
-| Client                       | Description                                                   | Setup                                                                                                                                                                              |
-| :--------------------------- | :------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Claude**                   | Anthropic's AI assistant                                      | [Connect monday MCP with Claude](https://support.monday.com/hc/en-us/articles/28515704603666-Connect-monday-MCP-with-Claude)                                                       |
-| **ChatGPT**                  | monday connector in OpenAI's ChatGPT                          | [Connect monday MCP with ChatGPT](https://support.monday.com/hc/en-us/articles/29491695661458-Connect-monday-MCP-with-ChatGPT)                                                     |
-| **Cursor**                   | AI-first code editor                                          | [Connect monday MCP with Cursor](https://support.monday.com/hc/en-us/articles/28583658774034-Connect-monday-MCP-with-Cursor)                                                       |
-| **Microsoft Copilot**        | Managing work with monday.com and Copilot                     | [Copilot integration overview](https://monday.com/blog/product/from-managing-work-with-monday-com-and-microsoft-copilot/)                                                          |
-| **Microsoft Copilot Studio** | Build custom copilots with monday data                        | [Connect monday MCP with Microsoft Copilot Studio](https://support.monday.com/hc/en-us/articles/28584426338322-Connect-monday-MCP-with-Microsoft-Copilot-Studio)                   |
-| **Gemini CLI**               | Google's agentic coding tool                                  | [Connect monday MCP with Gemini CLI](https://support.monday.com/hc/en-us/articles/30989881853842-Connect-monday-MCP-with-Gemini-CLI)                                               |
-| **Gemini Enterprise**        | monday Platform Agent inside Google Cloud's Gemini Enterprise | [Connecting Google Cloud's Gemini Enterprise to monday.com](https://support.monday.com/hc/en-us/articles/34252818614290-Connecting-Google-Cloud-s-Gemini-Enterprise-to-monday-com) |
-| **Mistral (le Chat)**        | monday MCP in Mistral's le Chat                               | [Connect monday MCP with Mistral AI's le Chat](https://support.monday.com/hc/en-us/articles/29643990370066-Connect-monday-MCP-with-Mistral-AI-s-le-Chat)                           |
-| **Perplexity**               | AI-powered answer engine                                      | Native integration available                                                                                                                                                       |
-| **Figma Make**               | AI-powered design and prototyping                             | [Connect monday MCP with Figma Make](https://support.monday.com/hc/en-us/articles/31743772154770-Connect-monday-MCP-with-Figma-Make)                                               |
+| Client                       | Description                                                                  | Setup                                                                                                                                                                              |
+| :--------------------------- | :--------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Claude**                   | Anthropic's AI assistant                                                     | [Connect monday MCP with Claude](https://support.monday.com/hc/en-us/articles/28515704603666-Connect-monday-MCP-with-Claude)                                                       |
+| **ChatGPT**                  | monday connector in OpenAI's ChatGPT                                         | [Connect monday MCP with ChatGPT](https://support.monday.com/hc/en-us/articles/29491695661458-Connect-monday-MCP-with-ChatGPT)                                                     |
+| **Cursor**                   | AI-first code editor                                                         | [Connect monday MCP with Cursor](https://support.monday.com/hc/en-us/articles/28583658774034-Connect-monday-MCP-with-Cursor)                                                       |
+| **Microsoft Copilot**        | Managing work with monday.com and Copilot                                    | [Copilot integration overview](https://monday.com/blog/product/from-managing-work-with-monday-com-and-microsoft-copilot/)                                                          |
+| **Microsoft Copilot Studio** | Build custom copilots with monday data                                       | [Connect monday MCP with Microsoft Copilot Studio](https://support.monday.com/hc/en-us/articles/28584426338322-Connect-monday-MCP-with-Microsoft-Copilot-Studio)                   |
+| **Gemini CLI**               | Google's agentic coding tool                                                 | [Connect monday MCP with Gemini CLI](https://support.monday.com/hc/en-us/articles/30989881853842-Connect-monday-MCP-with-Gemini-CLI)                                               |
+| **Gemini Enterprise**        | monday Platform Agent inside Google Cloud's Gemini Enterprise                | [Connecting Google Cloud's Gemini Enterprise to monday.com](https://support.monday.com/hc/en-us/articles/34252818614290-Connecting-Google-Cloud-s-Gemini-Enterprise-to-monday-com) |
+| **Mistral (le Chat)**        | monday MCP in Mistral's le Chat                                              | [Connect monday MCP with Mistral AI's le Chat](https://support.monday.com/hc/en-us/articles/29643990370066-Connect-monday-MCP-with-Mistral-AI-s-le-Chat)                           |
+| **Perplexity**               | AI-powered answer engine                                                     | Native integration available                                                                                                                                                       |
+| **Figma Make**               | AI-powered design and prototyping                                            | [Connect monday MCP with Figma Make](https://support.monday.com/hc/en-us/articles/31743772154770-Connect-monday-MCP-with-Figma-Make)                                               |
+| **Glean**                    | Enterprise AI assistant. An admin connects monday once for the organization. | Set up by a Glean admin                                                                                                                                                            |
 
 ***
 

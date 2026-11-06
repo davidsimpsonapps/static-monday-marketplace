@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-29T14:42:50.000Z
+updatedAt: 2026-11-04T14:58:34.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/apps/llms.txt
@@ -623,7 +623,7 @@ The `mapps scheduler:create` command creates a new [scheduled cron job](https://
 | `-s`       | `--schedule`           | The scheduled job's cron expression.                                             | Relative to UTC. Use a cron expression generator to ensure proper format (e.g., [Cronhub](https://crontab.cronhub.io/) ). |
 | `-t`       | `--timeout`            | The job execution timeout.                                                       | The value should be in seconds. Optional.                                                                                 |
 | `-u`       | `--targetUrl`          | The job's target URL path.                                                       | This must start with "/". It will be relative to /mndy-cronjob.                                                           |
-| `-z`       | `--region`             | The region to use: `us`, `au`, or `eu`.                                          |                                                                                                                           |
+| `-z`       | `--region`             | The region to use: `us`, `au`, `eu`, or `il`.                                    |                                                                                                                           |
 
 ### Example
 
@@ -637,11 +637,11 @@ The `mapps scheduler:delete` command deletes a [scheduled cron job](https://deve
 
 ### Flags
 
-| Short Flag | Long Flag  | Description                             |
-| :--------- | :--------- | :-------------------------------------- |
-| `-a`       | `--appId`  | The app's unique identifier.            |
-| `-n`       | `--name`   | Scheduled job name                      |
-| `-z`       | `--region` | The region to use: `us`, `au`, or `eu`. |
+| Short Flag | Long Flag  | Description                                   |
+| :--------- | :--------- | :-------------------------------------------- |
+| `-a`       | `--appId`  | The app's unique identifier.                  |
+| `-n`       | `--name`   | Scheduled job name                            |
+| `-z`       | `--region` | The region to use: `us`, `au`, `eu`, or `il`. |
 
 ### Example
 
@@ -655,9 +655,10 @@ The `mapps scheduler:list` command lists all [scheduled cron jobs](https://devel
 
 ### Flags
 
-| Short Flag | Long Flag | Description                  |
-| :--------- | :-------- | :--------------------------- |
-| `-a`       | `--appId` | The app's unique identifier. |
+| Short Flag | Long Flag  | Description                                   |
+| :--------- | :--------- | :-------------------------------------------- |
+| `-a`       | `--appId`  | The app's unique identifier.                  |
+| `-z`       | `--region` | The region to use: `us`, `au`, `eu`, or `il`. |
 
 ### Example
 
@@ -671,11 +672,11 @@ The `mapps scheduler:run` command runs a [scheduled cron job](https://developer.
 
 ### Flags
 
-| Short Flag | Long Flag  | Description                             |
-| :--------- | :--------- | :-------------------------------------- |
-| `-a`       | `--appId`  | The app's unique identifier.            |
-| `-n`       | `--name`   | Scheduled job name                      |
-| `-z`       | `--region` | The region to use: `us`, `au`, or `eu`. |
+| Short Flag | Long Flag  | Description                                   |
+| :--------- | :--------- | :-------------------------------------------- |
+| `-a`       | `--appId`  | The app's unique identifier.                  |
+| `-n`       | `--name`   | Scheduled job name                            |
+| `-z`       | `--region` | The region to use: `us`, `au`, `eu`, or `il`. |
 
 ### Example
 
@@ -699,7 +700,7 @@ The `mapps scheduler:update` command updates a [scheduled cron job](https://deve
 | `-s`       | `--schedule`           | The scheduled job's cron expression.                                             | Relative to UTC. Use a cron expression generator to ensure proper format (e.g., [Cronhub](https://crontab.cronhub.io/)). |
 | `-t`       | `--timeout`            | The job execution timeout.                                                       | The value should be in seconds. Optional.                                                                                |
 | `-u`       | `--targetUrl`          | The job's target URL path.                                                       | This must start with "/". It will be relative to /mndy-cronjob.                                                          |
-| `-z`       | `--region`             | The region to use: `us`, `au`, or `eu`.                                          |                                                                                                                          |
+| `-z`       | `--region`             | The region to use: `us`, `au`, `eu`, or `il`.                                    |                                                                                                                          |
 
 ### Example
 

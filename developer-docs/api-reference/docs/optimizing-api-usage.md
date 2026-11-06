@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-19T12:21:54.000Z
+updatedAt: 2026-11-05T12:33:21.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -112,7 +112,7 @@ mutation {
 
 Errors, rate limit responses, and unsuccessful calls all contribute to your daily call limit. You can avoid wasting these calls by retrying your calls only after the required amount of time and properly handling errors.
 
-> Example: If you hit the [minute limit](https://developer.monday.com/api-reference/docs/rate-limits#minute-limit), utilize the `Retry-After` header to determine how long you need to wait before retrying your call.
+> Example: If you hit the [minute limit](https://developer.monday.com/api-reference/docs/rate-limits#minute-limit), use the `Retry-After` header to determine how long you need to wait before retrying your call.
 
 ## Employ fragments
 
@@ -134,7 +134,7 @@ Consider implementing caching for repeated reads of the same data where live upd
 
 ## Safe mutation retries with idempotency keys
 
-When retrying mutations after network failures or timeouts, include an `Idempotency-Key` header to prevent duplicate side effects. The API caches the response and replays it on retry instead of executing the mutation again.
+When retrying mutations after network failures or timeouts, include an `Idempotency-Key` header to prevent duplicate side effects. The API stores a successful response and replays it on retry instead of executing the mutation again.
 
 This is especially important for create operations (`create_item`, `create_board`, etc.) where a retry could produce duplicates.
 

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-07-08T07:51:39.000Z
+updatedAt: 2026-11-04T14:58:34.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/apps/llms.txt
@@ -16,11 +16,7 @@ The monday code scheduler is a key tool that enables you to create apps with sch
 Each app can have up to **five scheduled jobs per region**:
 
 * Single-region apps: **up to 5 jobs total**
-* Multi-region apps (US, EU, AU): **up to 15 jobs total (5 per region, excluding IL)**
-
-<Callout icon="❗️">
-  The scheduler is not supported in the new IL region. 
-</Callout>
+* Multi-region apps (US, EU, AU, IL): **up to 20 jobs total (5 per region)**
 
 The scheduler is region-specific, so you must specify the region in which it should run when creating a new job. Scheduled jobs **do not automatically replicate** across regions. You must manually configure each job per region, if needed.
 
