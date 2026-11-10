@@ -1,7 +1,748 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-11-09",
+  "processedThrough": "2026-11-10",
   "events": [
+    {
+      "id": 114,
+      "app_id": 34640,
+      "name": "SpreadsheetWeb",
+      "type": "archived",
+      "date": "2026-11-10",
+      "installs": null,
+      "app": {
+        "id": 114,
+        "marketplace_developer_id": 50,
+        "app_id": 34640,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1618387452/monday-apps-marketplace/SpreadsheetWeb/Trigger_calculations_automatically_on_your_board.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1618387452/monday-apps-marketplace/SpreadsheetWeb/Embed_complex_calculations_into_your_board.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1618387452/monday-apps-marketplace/SpreadsheetWeb/Turn_spreadsheet_calculations_into_monday.com_apps.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/video/upload/v1618387480/monday-apps-marketplace/SpreadsheetWeb/monday.mp4",
+            "type": "video"
+          }
+        ],
+        "description": "<p>SpreadsheetWeb can turn complex spreadsheet calculations into web applications! Now, you can embed those calculations into your monday.com boards and create widgets.</p><p>Sales quoting tools, ROI calculators, product configurators, rules engines are only a few examples of such applications. You can either execute your applications as a widget and save calculated results from your spreadsheet as a record. You can also trigger same calculations directly inside your board. Simply update your input columns, the columns mapped to your spreadsheet formulas will update automatically.</p>",
+        "short_description": "Turn spreadsheet calculations into monday.com applications",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1618387451/monday-apps-marketplace/SpreadsheetWeb/SpreadsheetWeb-Card.jpg",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1618387448/monday-apps-marketplace/SpreadsheetWeb/SpreadsheetWeb-Developer-Icon.png",
+        "feedback_url": "support@spreadsheetweb.com",
+        "privacy_policy_url": "https://www.spreadsheetweb.com/privacy-policy/",
+        "featured": false,
+        "name": "SpreadsheetWeb",
+        "how_to_use_url": "https://help.spreadsheetweb.com/kb/monday-spreadsheetweb/",
+        "external_pricing_url": "https://www.spreadsheetweb.com/pricing/",
+        "keywords": "Spreadsheet,web applications",
+        "compliance_answers": [],
+        "created_at": "2021-04-14T08:10:28.000Z",
+        "updated_at": "2026-11-09T13:39:27.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Built for scalability"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "Existing legacy",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": null,
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read,boards:read,boards:write,webhooks:write",
+        "app_client_id": "0ad7a688e600e5f5a70d2634484294a4",
+        "app_color": "#A1E3F6",
+        "plans": null,
+        "app_live_version": {
+          "updated_at": "2024-03-24T08:41:17.377Z",
+          "id": 37847
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "external",
+          "hasFreePlan": false,
+          "hasPaidPlan": false,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Built for scalability"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "Existing legacy",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 118,
+      "app_id": 26658,
+      "name": "Data Clean",
+      "type": "archived",
+      "date": "2026-11-10",
+      "installs": null,
+      "app": {
+        "id": 118,
+        "marketplace_developer_id": 53,
+        "app_id": 26658,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1619343551/monday-apps-marketplace/Data%20Clean/01-data-clean-identify.jpg"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1619343551/monday-apps-marketplace/Data%20Clean/02-data-clean-merge.jpg"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1619343551/monday-apps-marketplace/Data%20Clean/03-data-clean-merge.jpg"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1619343551/monday-apps-marketplace/Data%20Clean/04-data-clean-save-time.jpg"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/video/upload/v1620835988/monday-apps-marketplace/Data%20Clean/v2/DataClean_app_monday_by_Synolia.mp4",
+            "type": "video"
+          }
+        ],
+        "description": "<p>Data Quality directly impacts your company growth. Feedback from our Customers showed that large boards accumulate Duplicate items. These can prove quite difficult to remove without losing time or pertinent data. Synolia's Data Clean App allows you to quickly track and merge Duplicates items.</p><p><br></p><p>Yes, with Data Clean you can:</p><ul><li>Select a few columns and let the App identify and regroup Duplicates</li><li>Merge your items and keep most/last recent non-empty data in just one click</li><li>Select Status column to automatically change statuses and start automation</li><li>Edit items values if you need to straighten up the data before the merge</li><li>Sort items by Modification Date in each group of Duplicates</li><li>Filter items to compare with the monday.com feature (view filters)</li></ul><p><br></p><p>This easy to use App should help boosting your KPI reliability. This is especially true if you get Data from external sources (Spreadsheets, Connectors, …).</p>",
+        "short_description": "Easily track, merge & remove duplicates from a board",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1619343550/monday-apps-marketplace/Data%20Clean/dataClean_app_card.jpg",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1619343550/monday-apps-marketplace/Data%20Clean/dataCleanApp-icon.jpg",
+        "feedback_url": "supportmondayapp@synolia.com",
+        "privacy_policy_url": "https://static.synolia.com/sugarmodules/Licences/License_for_Synolia_Add-On.pdf",
+        "featured": false,
+        "name": "Data Clean",
+        "how_to_use_url": "https://webiframes-monday.synocloud.com/how-to-iframe_data-clean.html",
+        "external_pricing_url": null,
+        "keywords": "merge,duplicate,item,data cleaning,datacleaning,datacleansing,delete,free,data,cleansing",
+        "compliance_answers": [],
+        "created_at": "2021-04-25T09:45:07.000Z",
+        "updated_at": "2026-11-09T13:31:52.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "Free",
+        "label": null,
+        "app_values": [
+          "Perfect for automations"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "Existing legacy",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": null,
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write",
+        "app_client_id": "1c91cf6ff63bb58bdf7ceb263601d6c6",
+        "app_color": {
+          "hsl": {
+            "h": 323.37662337662334,
+            "s": 0.7000000000000001,
+            "l": 0.4313725490196078,
+            "a": 1
+          },
+          "hex": "#bb217f",
+          "rgb": {
+            "r": 187,
+            "g": 33,
+            "b": 127,
+            "a": 1
+          },
+          "hsv": {
+            "h": 323.37662337662334,
+            "s": 0.8235294117647058,
+            "v": 0.7333333333333333,
+            "a": 1
+          },
+          "oldHue": 323.37662337662334,
+          "source": "hex"
+        },
+        "plans": null,
+        "app_live_version": {
+          "updated_at": "2026-06-16T08:33:45.614Z",
+          "id": 15398398
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "none",
+          "hasFreePlan": false,
+          "hasPaidPlan": false,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Perfect for automations"
+          ],
+          "pricing_data": "Free",
+          "acquisition_source": "Existing legacy",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000958,
+      "app_id": 10406309,
+      "name": "Subitem Template Builder",
+      "type": "archived",
+      "date": "2026-11-10",
+      "installs": null,
+      "app": {
+        "id": 10000958,
+        "marketplace_developer_id": 100000113,
+        "app_id": 10406309,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000958/10000958_2025_9_22_7_45_51_fa7c85o.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000958/10000958_2025_9_22_7_45_55_0des9zv.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000958/10000958_2025_9_22_7_45_59_kxe25as.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000958/10000958_2025_9_22_7_46_3_3dnqmu3f.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000958/10000958_2025_9_22_7_46_6_j9c3orj.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000958/10000958_2025_10_18_18_55_41_88p4qpo.mp4",
+            "type": "video"
+          }
+        ],
+        "description": "<p><strong>Build Smart Subitem Templates that scale with your team</strong></p><p>Stop&nbsp;recreating the same subitems over and over. Build reusable templates with pre-filled data and apply them instantly to any item. The only subitem template app with advanced sharing controls—perfect for teams that need consistency without losing flexibility.&nbsp;</p><p><br></p><p>&nbsp;<strong>🎯 What makes</strong>&nbsp;<strong>us different:</strong></p><ul><li><strong>Advanced template sharing &amp; permissions</strong>: Share templates with your entire team, keep them private, or share with specific people only. Control who can edit your templates while others can still use them.</li><li><strong>Instant bulk application</strong>: Apply multiple templates at once with real-time progress tracking</li><li><strong>Smart</strong>&nbsp;<strong>column handling</strong>: Automatically matches columns or guides you through mapping. Creates missing columns when needed.</li><li><strong>Works in Item View</strong>: No need to leave your workflow—templates appear right where you're already working</li></ul><p><br></p><p><strong>💪 Perfect</strong>&nbsp;for teams who:</p><ul><li><strong>Repeat the same subitems</strong>&nbsp;across multiple items (projects, clients, sprints)</li><li><strong>Need consistency</strong>&nbsp;in how work gets structured and assigned</li><li><strong>Want to share</strong>&nbsp;best practices across team members without losing control</li><li><strong>Scale processes</strong>&nbsp;as the team grows</li></ul><p><br></p><p><strong>🔥 Real-world examples:</strong></p><ul><li><strong>Client</strong>&nbsp;<strong>onboarding</strong>: Share your proven 15-step onboarding template with the whole sales team, but only let managers edit it</li><li><strong>Sprint</strong>&nbsp;<strong>planning</strong>: Let developers use your standard story breakdown templates, while keeping the original structure protected</li><li><strong>Employee onboarding</strong>: HR creates comprehensive checklists that department heads can use but not accidentally modify</li></ul><p><br></p><p><strong>✨ Key benefits</strong>:</p><ul><li><strong>Save</strong>&nbsp;hours per week on repetitive setup tasks</li><li><strong>Ensure nothing gets missed</strong> with standardized processes</li><li><strong>Scale</strong>&nbsp;your best practices across the entire organization</li><li><strong>Maintain control</strong>&nbsp;over who sees and edits your templates</li></ul><p><br></p><p><strong>Start Free Today&nbsp;</strong>Ready to eliminate repetitive subitem creation forever? Jump in with our&nbsp;<strong>free plan</strong>—create unlimited templates with all column types, template permissions, smart column mapping, and apply up to 5 templates per month.</p><p><br></p><p><strong>Need Help?</strong></p><p>Book a demo:</p><p><a href=\"https://calendly.com/janrem-lenoapps/demo\" rel=\"noopener noreferrer\" target=\"_blank\">https://calendly.com/janrem-lenoapps/demo</a></p>",
+        "short_description": "Create and apply subitem templates in seconds",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000958/10000958_2025_9_22_7_45_36_bhsfekk.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000958/10000958_2025_9_22_7_45_34_0vr3ssk.png",
+        "feedback_url": null,
+        "privacy_policy_url": "https://lenoapps.com/privacy",
+        "featured": false,
+        "name": "Subitem Template Builder",
+        "how_to_use_url": "https://lenoapps.com/docs-complete.html",
+        "external_pricing_url": null,
+        "keywords": "team productivity,item view,task templates,project management,bulk,collaboration,workflows,subitems,automation,templates",
+        "compliance_answers": [
+          {
+            "questionId": 20,
+            "shortAnswer": false,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 19,
+            "shortAnswer": false,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 18,
+            "detailedAnswer": "",
+            "logHostingProvider": "monday"
+          },
+          {
+            "questionId": 17,
+            "detailedAnswer": "",
+            "dataHostingProvider": "monday"
+          },
+          {
+            "questionId": 15,
+            "shortAnswer": false,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 14,
+            "shortAnswer": true,
+            "detailedAnswer": "Any security or privacy issues can be sent to support@lenoapps.com."
+          },
+          {
+            "questionId": 12,
+            "shortAnswer": false,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 11,
+            "shortAnswer": true,
+            "detailedAnswer": "The app is designed to meet GDPR requirements by minimising personal data, avoiding unnecessary storage, and supporting data access/deletion requests (with data primarily processed via monday.com)."
+          },
+          {
+            "questionId": 10,
+            "shortAnswer": true,
+            "detailedAnswer": "The app has no redirects to any other destinations."
+          },
+          {
+            "questionId": 9,
+            "shortAnswer": true,
+            "detailedAnswer": "Server endpoints enforce strict allow‑listing and process only approved fields from requests, preventing mass assignment."
+          },
+          {
+            "questionId": 8,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 7,
+            "shortAnswer": true,
+            "detailedAnswer": "Access to customer data is strictly limited the team lead, ensuring that only authorised personnel with essential responsibilities can access this information."
+          },
+          {
+            "questionId": 6,
+            "shortAnswer": true,
+            "detailedAnswer": "Access to customer data is strictly restricted to authorised personnel, in accordance with the principle of least privilege."
+          },
+          {
+            "questionId": 5,
+            "shortAnswer": true,
+            "detailedAnswer": "We clean and safely display all user input (using DOMPurify), so malicious scripts can’t run."
+          },
+          {
+            "questionId": 4,
+            "shortAnswer": true,
+            "detailedAnswer": "We use tokens (not cookies) for actions, so cross‑site requests can’t make changes."
+          },
+          {
+            "questionId": 3,
+            "shortAnswer": true,
+            "detailedAnswer": "If we discover a security breach, we will immediately notify the monday.com support team."
+          },
+          {
+            "questionId": 2,
+            "shortAnswer": true,
+            "detailedAnswer": "Before deploying updates or patches, we test for compatibility and stability in staging; after deployment, we verify the updates were applied correctly and confirm the app functions as expected."
+          },
+          {
+            "questionId": 1,
+            "shortAnswer": true,
+            "detailedAnswer": "We use the monday storage SDK which handle the separation of data."
+          }
+        ],
+        "created_at": "2025-10-22T07:45:02.000Z",
+        "updated_at": "2026-11-09T13:36:49.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": null,
+        "label": null,
+        "app_values": [
+          "Everyday tasks"
+        ],
+        "security": true,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://lenoapps.com/terms",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write,me:read,users:read",
+        "app_client_id": "34854162b78c25e82b95f9366d0d66cd",
+        "app_color": {
+          "hsl": {
+            "h": 146.55737704918036,
+            "s": 0.488,
+            "l": 0.24509803921568626,
+            "a": 1
+          },
+          "hex": "#205d3b",
+          "rgb": {
+            "r": 32,
+            "g": 93,
+            "b": 59,
+            "a": 1
+          },
+          "hsv": {
+            "h": 146.55737704918036,
+            "s": 0.6559139784946236,
+            "v": 0.36470588235294116,
+            "a": 1
+          },
+          "oldHue": 11.523178807947021,
+          "source": "hex"
+        },
+        "plans": [
+          {
+            "id": "10406309-1-free",
+            "appPlanId": "free",
+            "name": "Free",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10406309,
+            "description": "Get started with the subitem template builder app, apply up to 5 templates per month at no cost",
+            "extraData": {
+              "bullets": [
+                "Save unlimited subitem templates with text, numbers, dates, dropdowns, people, connected boards, status, and timeline columns",
+                "Unlimited users",
+                "Template permission controls",
+                "Smart column mapping for mismatches",
+                "Apply up to 5 subitem templates per month"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10406309-1-starter",
+            "appPlanId": "starter",
+            "name": "Starter",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 5,
+              "yearly": 5
+            },
+            "versionState": "live",
+            "appId": 10406309,
+            "description": "Perfect for small teams getting organized, apply up to 40 subitem templates per month",
+            "extraData": {
+              "bullets": [
+                "Save unlimited subitem templates with text, numbers, dates, dropdowns, people, connected boards, status, and timeline columns",
+                "Unlimited users",
+                "Template permission controls",
+                "Smart column mapping for mismatches",
+                "Apply up to 40 subitem templates per month"
+              ],
+              "monthlyFee": 5,
+              "yearlyFee": 5
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10406309-1-growth",
+            "appPlanId": "growth",
+            "name": "Growth",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 20,
+              "yearly": 17
+            },
+            "versionState": "live",
+            "appId": 10406309,
+            "description": "Ideal for growing teams, apply up to 80 subitem templates per month",
+            "extraData": {
+              "bullets": [
+                "Save unlimited subitem templates with text, numbers, dates, dropdowns, people, connected boards, status, and timeline columns",
+                "Unlimited users",
+                "Template permission controls'",
+                "Smart column mapping for mismatches",
+                "Apply up to 80 subitem templates per month"
+              ],
+              "monthlyFee": 20,
+              "yearlyFee": 17
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10406309-1-scale",
+            "appPlanId": "scale",
+            "name": "Scale",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 40,
+              "yearly": 34
+            },
+            "versionState": "live",
+            "appId": 10406309,
+            "description": "Unlimited power with no restrictions",
+            "extraData": {
+              "bullets": [
+                "Save unlimited subitem templates with text, numbers, dates, dropdowns, people, connected boards, status, and timeline columns",
+                "Unlimited users",
+                "Template permission controls",
+                "Smart column mapping for mismatches",
+                "Apply unlimited subitem templates per month"
+              ],
+              "monthlyFee": 40,
+              "yearlyFee": 34
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-10-19T17:28:03.911Z",
+          "id": 11510044
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": true,
+          "app_values": [
+            "Everyday tasks"
+          ],
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://lenoapps.com/terms",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10001010,
+      "app_id": 10434473,
+      "name": "Checkmarks Customer Onboarding",
+      "type": "archived",
+      "date": "2026-11-10",
+      "installs": null,
+      "app": {
+        "id": 10001010,
+        "marketplace_developer_id": 100000135,
+        "app_id": 10434473,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10001010/10001010_2025_11_29_15_8_50_ma40sh9.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001010/10001010_2025_11_29_15_8_54_8qe0w6n.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001010/10001010_2025_11_29_15_8_57_osmnkbe.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p>Stop juggling scattered emails, documents, and tools during customer onboarding. Checkmarks transforms your&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;workspace into a&nbsp;<strong>complete onboarding command center</strong>&nbsp;where every customer journey is organized, automated, and trackable.</p><p>Create personalized onboarding plans as&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;items, add tasks as subitems, and give customers a beautiful portal to access everything they need.</p><p><strong>Key Benefits:</strong></p><p>•&nbsp;<strong>All-in-one client portal</strong>&nbsp;- Customers access tasks, documents, forms, and meetings through one simple link</p><p>•&nbsp;<strong>Native&nbsp;</strong><a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>monday.com</strong></a><strong>&nbsp;integration</strong>&nbsp;- Manage onboarding plans as board items with full automation support</p><p>•&nbsp;<strong>Eliminate email chaos</strong>&nbsp;- Replace scattered threads with organized, trackable workflows</p><p>•<strong>&nbsp;Automated progress tracking</strong>&nbsp;- Trigger status updates, send reminders, and notify teams automatically</p><p>•&nbsp;<strong>Template-based efficiency</strong>&nbsp;- Create reusable onboarding blueprints for different customer types</p><p><strong>What You Can Ask Customers To Do:</strong></p><p>•&nbsp;<strong>Complete forms</strong>&nbsp;- Collect information, preferences, and requirements through custom forms</p><p>•&nbsp;<strong>Sign contracts</strong>&nbsp;- Capture digital signatures for agreements and legal documents</p><p>•&nbsp;<strong>Book meetings&nbsp;</strong>- Schedule kickoff calls, training sessions, or check-ins</p><p>•&nbsp;<strong>Upload files&nbsp;</strong>- Submit required documents or assets with drag-and-drop simplicity</p><p>•&nbsp;<strong>Download resources</strong>&nbsp;- Access guides, templates, and other helpful materials</p><p>•&nbsp;<strong>Watch videos</strong>&nbsp;- View training content, product demos, or instructional materials</p><p>•&nbsp;<strong>Work through checklists</strong>&nbsp;- Complete multi-step processes with clear, trackable progress</p><p>•&nbsp;<strong>Access documentation</strong>&nbsp;- View embedded help content or external resources</p><p>Give Checkmarks a try and simplify your next onboarding.</p>",
+        "short_description": "Onboard customers faster and stay organized",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10001010/10001010_2025_11_29_15_7_51_fnhm00q.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10001010/10001010_2025_11_29_15_7_27_rcr6lpc.png",
+        "feedback_url": "help@checkmarks.app",
+        "privacy_policy_url": "https://checkmarks.app/privacy-policy",
+        "featured": false,
+        "name": "Checkmarks Customer Onboarding",
+        "how_to_use_url": "https://checkmarks.app/monday-help",
+        "external_pricing_url": null,
+        "keywords": "Customer Onboarding,Client Onboarding,Customer Success,Client Portal,Onboarding Automation,Customer Experience,Onboarding Templates,Client Management,Workflow Automation,CRM",
+        "compliance_answers": [],
+        "created_at": "2025-12-29T15:02:28.000Z",
+        "updated_at": "2026-11-09T13:21:19.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Centralize your work on monday.com"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://checkmarks.app/terms-of-service",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": "G-FLRMXM0TR7",
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read,boards:read,boards:write,notifications:write,updates:write,webhooks:write,webhooks:read",
+        "app_client_id": "f5aa929ad9e3127e5880523821ba4359",
+        "app_color": {
+          "hsl": {
+            "h": 123.48837209302326,
+            "s": 0.583299999999999,
+            "l": 0.9529000000000001,
+            "a": 1
+          },
+          "hex": "#ecfaed",
+          "rgb": {
+            "r": 236,
+            "g": 250,
+            "b": 237,
+            "a": 1
+          },
+          "hsv": {
+            "h": 123.48837209302326,
+            "s": 0.05604686777363991,
+            "v": 0.98037343,
+            "a": 1
+          },
+          "oldHue": 123.48837209302326,
+          "source": "hsl"
+        },
+        "plans": [
+          {
+            "id": "10434473-1-free",
+            "appPlanId": "free",
+            "name": "Free",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10434473,
+            "description": "The first 5 onboarding plans are free. All features included. No time limit, no user limit.",
+            "extraData": {
+              "bullets": [
+                "Create and manage customer onboarding plans",
+                "All features",
+                "Unlimited actions",
+                "Unlimited users"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10434473-1-pro",
+            "appPlanId": "pro",
+            "name": "Pro",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 29,
+              "yearly": 22
+            },
+            "versionState": "live",
+            "appId": 10434473,
+            "description": "Create and manage customer onboarding lans directly on monday.com",
+            "extraData": {
+              "bullets": [
+                "Unlimited onboarding plans",
+                "Unlimited users",
+                "Unlimited actions",
+                "All features"
+              ],
+              "monthlyFee": 29,
+              "yearlyFee": 22
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2026-09-24T09:06:58.273Z",
+          "id": 16675204
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Centralize your work on monday.com"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://checkmarks.app/terms-of-service",
+          "available_for_products": [],
+          "google_analytics_tag_id": "G-FLRMXM0TR7"
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000820,
       "app_id": 10377451,
