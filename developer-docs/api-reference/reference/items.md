@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-29T09:44:13.000Z
+updatedAt: 2026-11-06T10:08:02.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -451,7 +451,7 @@ mutation {
     group_id: "group_one" 
     item_name: "new item" 
     column_values: "{\"date\":\"2023-05-25\"}"
-	) {
+ ) {
     id
   }
 }
@@ -631,13 +631,34 @@ mutation {
 }
 ```
 
+To place the copy in a specific group and give it a new name, pass `group_id` and `item_name`. This example works in versions `2027-01` and later.
+
+```graphql GraphQL
+mutation {
+  duplicate_item(
+    board_id: 1234567890
+    item_id: 9876543210
+    group_id: "group_two"
+    item_name: "Q4 launch plan"
+  ) {
+    id
+    name
+    group {
+      id
+    }
+  }
+}
+```
+
 ### Arguments
 
-| Argument      | Type      | Description                                |
-| :------------ | :-------- | :----------------------------------------- |
-| board\_id     | `ID!`     | The board's unique identifier.             |
-| item\_id      | `ID`      | The item's unique identifier. Required.    |
-| with\_updates | `Boolean` | Duplicates the item with existing updates. |
+| Argument      | Type      | Description                                                                                                                                                                                                                              |
+| :------------ | :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| board\_id     | `ID!`     | The board's unique identifier.                                                                                                                                                                                                           |
+| group\_id     | `ID`      | The unique identifier of the group the new item is added to. Defaults to the original item's group. Not supported for subitems. **Only available in versions `2027-01` and later.**                                                      |
+| item\_id      | `ID`      | The item's unique identifier. Required.                                                                                                                                                                                                  |
+| item\_name    | `String`  | The new item's name. A name different from the original item's name is used as given. If you pass the original name, or no name, the new item's name still gets the `(copy)` suffix. **Only available in versions `2027-01` and later.** |
+| with\_updates | `Boolean` | Duplicates the item with existing updates.                                                                                                                                                                                               |
 
 ## Change an item's position
 
@@ -853,7 +874,7 @@ mutation {
   move_item_to_group(
     item_id: 1234567890, 
     group_id: "group_one"
-	) {
+ ) {
     id
   }
 }
@@ -1025,13 +1046,13 @@ mutation {
   ]
   ```
 
-  * `source` — column ID on the board the item is moving **from**
-  * `target` — column ID on the destination board, or `null` to drop the column's data
-  * When you include `columns_mapping`, map **every** column (use `target: null` for columns you don't want to copy)
-  * Formula columns cannot be mapped
-  * If you omit `columns_mapping`, columns are matched automatically by type and title
+* `source` — column ID on the board the item is moving **from**
+* `target` — column ID on the destination board, or `null` to drop the column's data
+* When you include `columns_mapping`, map **every** column (use `target: null` for columns you don't want to copy)
+* Formula columns cannot be mapped
+* If you omit `columns_mapping`, columns are matched automatically by type and title
 
-  A `Columns mapping is not in the expected format` error usually means the value is not an array, uses wrong field names, or is missing required mappings.
+A `Columns mapping is not in the expected format` error usually means the value is not an array, uses wrong field names, or is missing required mappings.
 </Callout>
 
 ## Archive item
@@ -1060,7 +1081,7 @@ Clears all updates on a specific item, including replies and likes. Returns [`It
 mutation {
   clear_item_updates(
     item_id: 1234567890
-	) {
+ ) {
     id
   }
 }
@@ -1080,7 +1101,7 @@ Deletes an item (or subitem) and its nested subitems. Returns [`Item`](https://d
 mutation {
   delete_item(
     item_id: 1234567890
-	) {
+ ) {
     id
   }
 }
