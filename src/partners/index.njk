@@ -77,7 +77,7 @@ title: monday.com partners
             {% set partnerSite = partnerDetails | findPartnerDetailsById(partner.id) %}
             {% if  partner.profilePictureUrl %}
               <img {% if loop.index0 >= 20 %}loading="lazy"{% endif %}
-                src="{{ partner.profilePictureUrl }}" alt="{{ partner.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg object-cover">
+                src="{{ partner.profilePictureUrl }}" alt="{{ partner.name }} logo" class="w-8 h-8 sm:w-10 sm:h-10 mb-4 rounded-lg object-contain">
             {% endif %}
             <h2 class="text-xl font-semibold mt-4 mb-2 flex gap-1">
               <span class="anchor">{{ partner.name }}</span>
