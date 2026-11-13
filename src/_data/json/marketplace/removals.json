@@ -1,7 +1,341 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-11-12",
+  "processedThrough": "2026-11-13",
   "events": [
+    {
+      "id": 10000306,
+      "app_id": 10068378,
+      "name": "docutus",
+      "type": "archived",
+      "date": "2026-11-13",
+      "installs": null,
+      "app": {
+        "id": 10000306,
+        "marketplace_developer_id": 10000129,
+        "app_id": 10068378,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1695732312/monday-apps-marketplace/docotus/App-gallery1.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1695732310/monday-apps-marketplace/docotus/App-gallery2.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1695732308/monday-apps-marketplace/docotus/App-gallery3.png"
+          }
+        ],
+        "description": "<p>Easily create documents tailored to your unique templates from your monday.com boards.</p><p><br></p><p>■What \"docutus\" can do</p><p>1. automatically retrieve data from monday.com boards and export it in the desired format.</p><p>This allows marketers to save significant time and effort, enabling them to focus on more important tasks such as data analysis and strategy formulation.</p><p><br></p><p>2.It also plays a crucial role in maintaining the integrity and consistency of data.</p><p>While manual data transfer can lead to human errors, using \"\"docutus\"\" significantly reduces this risk.</p><p><br></p><p>3.it enables data customization and personalization.</p><p>Users can freely choose the type, format, and range of data to export, allowing them to create a data set that is optimal for specific projects or objectives.</p><p><br></p><p>■The real charm of \"docutus\"</p><p>The real charm of \"docutus\" lies in its ability to internalize the reflection of data into each company's standard business templates. This allows companies to directly reflect data into their business templates and visualize the results in real-time. This evolves data utilization and plays a crucial part in making business decisions more quickly and efficiently.</p>",
+        "short_description": "Create documents from monday.com using your templates.",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1695732306/monday-apps-marketplace/docotus/App-card_1.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1695732305/monday-apps-marketplace/docotus/icon_1_2.png",
+        "feedback_url": "sales@jp.opro.net",
+        "privacy_policy_url": "https://www.opro.net/en/privacy/",
+        "featured": false,
+        "name": "docutus",
+        "how_to_use_url": "https://www.opro.net/static/pdf/docutus_How-to-Use_Ver1.0.pdf",
+        "external_pricing_url": null,
+        "keywords": "Document generate,\nBusiness Template,\nDocuments,\noutput,\nWord Template,\nExcel Template,\nPowerPoint Template,\nExport",
+        "compliance_answers": [],
+        "created_at": "2023-09-26T12:47:09.000Z",
+        "updated_at": "2026-11-12T07:41:13.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "Free Plan Available",
+        "label": null,
+        "app_values": null,
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": false,
+        "terms_of_service_url": "https://www.opro.net/static/pdf/agreement_docutus_en.pdf",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write,account:read,me:read",
+        "app_client_id": "edf1f14e1ea8f874067432cd4345a581",
+        "app_color": {
+          "hsl": {
+            "h": 135.78947368421052,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 135.78947368421052,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 135.78947368421052,
+          "source": "rgb"
+        },
+        "plans": [
+          {
+            "id": "10068378-1-Free_100",
+            "appPlanId": "Free_100",
+            "name": "Free",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10068378,
+            "description": "Generate up to 100 documents per month free of charge",
+            "extraData": {
+              "bullets": [
+                "Unlimited users",
+                "Unlimited templates",
+                "Unlimited boards"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10068378-1-Starter_200",
+            "appPlanId": "Starter_200",
+            "name": "Starter",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 30,
+              "yearly": 30
+            },
+            "versionState": "live",
+            "appId": 10068378,
+            "description": "Generate up to 200 documents per month free of charge",
+            "extraData": {
+              "bullets": [
+                "Unlimited users",
+                "Unlimited templates",
+                "Unlimited boards",
+                "OPRO Support Service (Customer Support)"
+              ],
+              "monthlyFee": 30,
+              "yearlyFee": 30
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10068378-1-Standard_1000",
+            "appPlanId": "Standard_1000",
+            "name": "Standard 1000",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 100,
+              "yearly": 100
+            },
+            "versionState": "live",
+            "appId": 10068378,
+            "description": "Generate up to 1,000 documents per month free of charge",
+            "extraData": {
+              "bullets": [
+                "Unlimited users",
+                "Unlimited templates",
+                "Unlimited boards",
+                "OPRO Support Service (Customer Support)"
+              ],
+              "monthlyFee": 100,
+              "yearlyFee": 100
+            },
+            "isFree": false,
+            "isRecommended": true,
+            "currency": "USD"
+          },
+          {
+            "id": "10068378-1-Standard_3000",
+            "appPlanId": "Standard_3000",
+            "name": "Standard 3000",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 200,
+              "yearly": 200
+            },
+            "versionState": "live",
+            "appId": 10068378,
+            "description": "Generate up to 3,000 documents per month free of charge",
+            "extraData": {
+              "bullets": [
+                "Unlimited users",
+                "Unlimited templates",
+                "Unlimited boards",
+                "OPRO Support Service(Customer Support)"
+              ],
+              "monthlyFee": 200,
+              "yearlyFee": 200
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10068378-1-Standard_7000",
+            "appPlanId": "Standard_7000",
+            "name": "Standard 7000",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 400,
+              "yearly": 400
+            },
+            "versionState": "live",
+            "appId": 10068378,
+            "description": "Generate up to 7,000 documents per month free of charge",
+            "extraData": {
+              "bullets": [
+                "Unlimited users",
+                "Unlimited templates",
+                "Unlimited boards",
+                "OPRO Support Service(Customer Support)"
+              ],
+              "monthlyFee": 400,
+              "yearlyFee": 400
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10068378-2-Free_100",
+            "appPlanId": "Free_100",
+            "name": "Free",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10068378,
+            "description": "Generate up to 100 documents per month free of charge",
+            "extraData": {
+              "bullets": [
+                "Unlimited users",
+                "Unlimited templates",
+                "Unlimited boards"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10068378-3-Free_50",
+            "appPlanId": "Free_50",
+            "name": "Free",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10068378,
+            "description": "Generate up to 50 documents per month free of charge",
+            "extraData": {
+              "bullets": [
+                "Unlimited users",
+                "Unlimited templates",
+                "Unlimited boards"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10068378-4-Free_50",
+            "appPlanId": "Free_50",
+            "name": "Free",
+            "versionId": 4,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10068378,
+            "description": "Generate up to 50 documents per month free of charge",
+            "extraData": {
+              "bullets": [
+                "Unlimited users",
+                "Unlimited templates",
+                "Unlimited boards"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2026-03-04T07:24:24.305Z",
+          "id": 13204782
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": false,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "pricing_data": "Free Plan Available",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "cta_override": null,
+          "is_connector": false,
+          "show_connections": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://www.opro.net/static/pdf/agreement_docutus_en.pdf",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000383,
       "app_id": 10101956,
