@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-29T09:47:41.000Z
+updatedAt: 2026-11-09T08:06:13.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -433,6 +433,7 @@ A single item returned by the items\_page query.
 | `updated_at`    | `String`                                                             | ISO 8601 timestamp of when the item was last updated.                                                                                            |
 | `creator_id`    | `ID`                                                                 | The user ID of the item creator.                                                                                                                 |
 | `creator`       | [`User`](https://developer.monday.com/api-reference/reference/users) | The item's creator.                                                                                                                              |
+| `description`   | `ItemDescription`                                                    | The item's description.                                                                                                                          |
 | `column_values` | [`[ItemsPageColumnValue!]`](#itemspagecolumnvalue)                   | Structured column values. Arguments: `ids` (`[ID!]`), `types` (`[ItemsPageColumnTypeFilter!]`), `capabilities` (`[ItemsPageColumnCapability!]`). |
 | `subitems`      | [`[ItemResult!]`](#itemresult)                                       | Subitems of this item.                                                                                                                           |
 | `parent_item`   | [`ItemResult`](#itemresult)                                          | The parent item when this item is a subitem within the result set. Null for top-level items.                                                     |
