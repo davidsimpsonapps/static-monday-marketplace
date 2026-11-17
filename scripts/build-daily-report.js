@@ -110,16 +110,16 @@ const IMAGE_TYPES = ["image/png", "image/jpeg", "image/gif", "image/webp"];
 // Commit message of the daily data update in .github/workflows/historic_installs.yml
 const DATA_UPDATE_COMMIT = "^Auto-update install data";
 
-// Claude budget: at most ~5 cents per day. With Claude Sonnet 5.5 ($2 / $10
-// per million input / output tokens) that is ~10k input tokens (2 cents) plus
-// 3k output tokens for the article (3 cents). Quiet days don't call Claude.
+// Claude budget: at most ~15 cents per day. With Claude Sonnet 5.5 ($2 / $10
+// per million input / output tokens) that is ~30k input tokens (6 cents) plus
+// 9k output tokens for the article (9 cents). Quiet days don't call Claude.
 // Days with Slack posts add a second request of the same size per few
 // screenshots (~1,600 tokens each, at most MAX_SLACK_IMAGES).
 const MODEL = "claude-sonnet-5-5";
-const MAX_INPUT_TOKENS = 10000;
+const MAX_INPUT_TOKENS = 30000;
 // Includes thinking. Hitting it fails the run instead of publishing a
 // half-written report.
-const MAX_OUTPUT_TOKENS = 3000;
+const MAX_OUTPUT_TOKENS = 9000;
 // Caps on what is sent to Claude, so the request starts out close to the
 // token budget. Docs diffs are trimmed further, if needed, after counting
 // tokens (see fitToBudget).
@@ -837,8 +837,9 @@ function selectArticles(input, articles) {
 }
 
 // Counts the request's input tokens (free) and, while it is over budget,
-// replaces the longest docs diff with a placeholder. Fails if the request is
-// still too large without any diffs.
+// replaces the longest docs diff with a placeholder, then drops the longest
+// full app description (keeping the short one). Fails if the request is still
+// too large after that.
 async function fitToBudget(client, input) {
   const build = () => ({
     model: MODEL,
@@ -855,11 +856,26 @@ async function fitToBudget(client, input) {
     const longest = input.docsChanges
       .filter((d) => d.diff !== OMITTED_DIFF)
       .sort((a, b) => b.diff.length - a.diff.length)[0];
-    if (!longest) {
-      throw new Error(`Request is ${tokens} input tokens even without docs diffs (budget: ${MAX_INPUT_TOKENS}).`);
+    if (longest) {
+      console.warn(`Request is ${tokens} input tokens - omitting the diff of ${longest.page}.`);
+      longest.diff = OMITTED_DIFF;
+      continue;
     }
-    console.warn(`Request is ${tokens} input tokens - omitting the diff of ${longest.page}.`);
-    longest.diff = OMITTED_DIFF;
+
+    // Busy days for new apps (e.g. 20 at once): fall back to the short
+    // description, longest full description first.
+    const wordiest = input.newApps
+      .filter((a) => a.description)
+      .sort((a, b) => b.description.length - a.description.length)[0];
+    if (wordiest) {
+      console.warn(`Request is ${tokens} input tokens - sending only the short description of ${wordiest.name}.`);
+      delete wordiest.description;
+      continue;
+    }
+
+    throw new Error(
+      `Request is ${tokens} input tokens even without docs diffs and full app descriptions (budget: ${MAX_INPUT_TOKENS}).`,
+    );
   }
 }
 
