@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:34:10.000Z
+updatedAt: 2026-11-06T10:09:27.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -509,11 +509,13 @@ mutation {
 }
 ```
 
+This example uses the `2027-01` and later input. Before `2027-01`, pass enum values, for example `permissions: [DOCS_WRITE, ME_READ]`.
+
 ### Arguments
 
-| Argument | Type                                                                                                     | Description                                            |
-| :------- | :------------------------------------------------------------------------------------------------------- | :----------------------------------------------------- |
-| input    | [`CreateAppInput!`](https://developer.monday.com/api-reference/reference/app-other-types#createappinput) | An object containing the new app's configuration data. |
+| Argument | Type                                                                                                                                                                                                                                                              | Description                                            |
+| :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------- |
+| input    | [`CreateAppInput!`](https://developer.monday.com/api-reference/reference/app-other-types#createappinput) (pre `2027-01`) <br /> [`CreateAppInputV2!`](https://developer.monday.com/api-reference/reference/app-other-types#createappinputv2) (`2027-01` or later) | An object containing the new app's configuration data. |
 
 ## Update app
 
@@ -537,15 +539,15 @@ mutation {
       id
     }
   }
-}	
+} 
 ```
 
 ### Arguments
 
-| Argument | Type                                                                                                     | Description                                                |
-| :------- | :------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------- |
-| id       | `ID!`                                                                                                    | The unique identifier of the app to update.                |
-| input    | [`UpdateAppInput!`](https://developer.monday.com/api-reference/reference/app-other-types#updateappinput) | An object containing the updated app's configuration data. |
+| Argument | Type                                                                                                                                                                                                                                                              | Description                                                |
+| :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------- |
+| id       | `ID!`                                                                                                                                                                                                                                                             | The unique identifier of the app to update.                |
+| input    | [`UpdateAppInput!`](https://developer.monday.com/api-reference/reference/app-other-types#updateappinput) (pre `2027-01`) <br /> [`UpdateAppInputV2!`](https://developer.monday.com/api-reference/reference/app-other-types#updateappinputv2) (`2027-01` or later) | An object containing the updated app's configuration data. |
 
 ***
 

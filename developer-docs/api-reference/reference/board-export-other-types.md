@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-04T13:52:24.000Z
+updatedAt: 2026-11-10T15:43:32.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -197,7 +197,7 @@ Structured reason an async board export job failed. Used by [`ExportJobStatusInf
 | :-------------------- | :-------- | :--------------------------------------------------------------------------------------------------------------------------------------- |
 | `BOARD_UNAVAILABLE`   | No        | The board was deleted or archived.                                                                                                       |
 | `BOARD_INACCESSIBLE`  | No        | The caller lost permission to read the board.                                                                                            |
-| `ITEM_LIMIT_EXCEEDED` | No        | The board has more items than the export limit allows.                                                                                   |
+| `ITEM_LIMIT_EXCEEDED` | No        | The board has more than 100,000 items (subitems are not counted), which is the most a single export allows.                              |
 | `INVALID_REQUEST`     | No        | The request was rejected during validation — for example, an unsupported combination of export options. Fix the request before retrying. |
 | `NOT_FOUND`           | No        | The board, or something it referenced, could not be found.                                                                               |
 | `INTERNAL_ERROR`      | Yes       | An unexpected internal error occurred. Retrying the mutation is reasonable.                                                              |

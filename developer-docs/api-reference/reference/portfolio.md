@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:36:28.000Z
+updatedAt: 2026-11-12T07:30:07.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -21,6 +21,66 @@ The monday.com [portfolio solution](https://support.monday.com/hc/en-us/articles
 
   See the [Portfolio Agent Skills](https://developer.monday.com/api-reference/docs/portfolio-agent-skills) guide for multi-step workflows and implementation patterns.
 </Callout>
+
+# Queries
+
+**Required scope: `boards:read`**
+
+## Get portfolio bulk add status
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+Returns the progress of the bulk add that is currently running on a portfolio. Returns [`PortfolioBulkAddStatusResult`](https://developer.monday.com/api-reference/reference/portfolio-other-types#portfoliobulkaddstatusresult). Start a bulk add with [`add_existing_projects_to_portfolio`](#add-existing-projects-to-portfolio).
+
+```graphql GraphQL
+query {
+  portfolio_bulk_add_status(portfolio_id: 9876543210) {
+    state
+    total
+    completed
+    is_submitter
+  }
+}
+```
+
+### Arguments
+
+| Argument      | Type  | Description                                                             |
+| :------------ | :---- | :---------------------------------------------------------------------- |
+| portfolio\_id | `ID!` | The unique identifier of the portfolio to get the bulk add progress of. |
+
+## Get portfolio bulk add results
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+Returns the outcome of the last finished bulk add on a portfolio. Returns [`PortfolioBulkAddResultsResult`](https://developer.monday.com/api-reference/reference/portfolio-other-types#portfoliobulkaddresultsresult).
+
+```graphql GraphQL
+query {
+  portfolio_bulk_add_results(portfolio_id: 9876543210) {
+    batch_id
+    total
+    succeeded
+    failed
+    failed_items(page: 1, limit: 100) {
+      project_id
+      project_name
+      reason_code
+      is_retryable
+    }
+  }
+}
+```
+
+### Arguments
+
+| Argument      | Type  | Description                                                                 |
+| :------------ | :---- | :-------------------------------------------------------------------------- |
+| portfolio\_id | `ID!` | The unique identifier of the portfolio to get the last bulk add outcome of. |
 
 # Mutations
 
@@ -239,3 +299,64 @@ mutation {
 | portfolioBoardId | `ID!`    | The unique identifier of the portfolio board to connect.                                                                                                                                                                                                                          |
 | projectBoardId   | `ID!`    | The unique identifier of the project board to connect.                                                                                                                                                                                                                            |
 | callback\_url    | `String` | An HTTPS URL to receive the operation result asynchronously. When provided, the mutation returns immediately with a `process_id`; the callback receives `{ is_success, process_id, portfolio_item_id }` once the operation completes. Available from version `2026-07` and later. |
+
+## Add existing projects to portfolio
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+Starts adding existing projects to a portfolio in the background. Returns [`AddExistingProjectsToPortfolioResult`](https://developer.monday.com/api-reference/reference/portfolio-other-types#addexistingprojectstoportfolioresult).
+
+* You need permission to add items to the portfolio.
+* Only one bulk add can run on a portfolio at a time.
+* The whole request is refused when the projects would exceed the portfolio's structures limit.
+
+Track the progress with [`portfolio_bulk_add_status`](#get-portfolio-bulk-add-status), read the outcome with [`portfolio_bulk_add_results`](#get-portfolio-bulk-add-results), and stop the bulk add with [`halt_portfolio_bulk_add_batch`](#halt-portfolio-bulk-add).
+
+To follow a bulk add end to end:
+
+1. Call this mutation and keep the returned `batch_id`.
+2. Query `portfolio_bulk_add_status` to see the progress. A `state` of `IDLE` means no bulk add is running on the portfolio.
+3. Query `portfolio_bulk_add_results` and compare its `batch_id` with the one from step 1 to check that the results belong to your bulk add.
+
+```graphql GraphQL
+mutation {
+  add_existing_projects_to_portfolio(
+    portfolio_id: 9876543210
+    project_ids: [1234567890, 1234567891]
+  ) {
+    batch_id
+    total
+  }
+}
+```
+
+### Arguments
+
+| Argument      | Type     | Description                                                                                                   |
+| :------------ | :------- | :------------------------------------------------------------------------------------------------------------ |
+| portfolio\_id | `ID!`    | The unique identifier of the portfolio to add the projects to.                                                |
+| project\_ids  | `[ID!]!` | The unique identifiers of the projects to add to the portfolio. Duplicate IDs are added once. Maximum: 5,000. |
+
+## Halt portfolio bulk add
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+Halts the bulk add that is running on a portfolio. Only the user who started the bulk add can halt it, and projects that were already added stay in the portfolio. Returns [`HaltPortfolioBulkAddBatchResult`](https://developer.monday.com/api-reference/reference/portfolio-other-types#haltportfoliobulkaddbatchresult).
+
+```graphql GraphQL
+mutation {
+  halt_portfolio_bulk_add_batch(portfolio_id: 9876543210) {
+    halted
+  }
+}
+```
+
+### Arguments
+
+| Argument      | Type  | Description                                                            |
+| :------------ | :---- | :--------------------------------------------------------------------- |
+| portfolio\_id | `ID!` | The unique identifier of the portfolio whose running bulk add to halt. |

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:36:41.000Z
+updatedAt: 2026-11-12T07:24:02.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -10,6 +10,21 @@ agentTools:
 The monday.com [`portfolio`](https://developer.monday.com/api-reference/reference/form) API lets you create portfolio solution boards.
 
 Each object type described below represents a specific part of a portfolio solution. You can use these object types to supply metadata in mutations or to define which fields should be returned in your queries.
+
+# AddExistingProjectsToPortfolioResult
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+An object containing the result of starting a bulk add of existing projects to a portfolio.
+
+| Field          | Description                                         |
+| :------------- | :-------------------------------------------------- |
+| batch\_id `ID` | The unique identifier of the started batch.         |
+| total `Int`    | The number of distinct projects queued to be added. |
+
+***
 
 # ConnectProjectResult
 
@@ -274,5 +289,199 @@ An object containing the result of creating a project board via the API.
 | message `String`  | A message when the request succeeds.                                                                                                                                                                                                                                        |
 | process\_id `ID`  | A unique process identifier to track the request. Only returned when a `callback_url` is provided. This ID will be included in the callback payload for correlating the initial request with the completion notification. Returns `null` if no `callback_url` was provided. |
 | success `Boolean` | Whether the operation was successful.                                                                                                                                                                                                                                       |
+
+***
+
+# HaltPortfolioBulkAddBatchResult
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+An object containing the result of halting the bulk add that is running on a portfolio.
+
+| Field            | Description                           |
+| :--------------- | :------------------------------------ |
+| halted `Boolean` | Whether the running batch was halted. |
+
+***
+
+# PortfolioBulkAddFailedItem
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+An object describing a project that a bulk add did not attach to the portfolio.
+
+| Field                                                                                                                                                    | Description                                                                            |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
+| is\_retryable `Boolean`                                                                                                                                  | Whether adding the project again may succeed.                                          |
+| project\_id `ID`                                                                                                                                         | The unique identifier of the project.                                                  |
+| project\_name `String`                                                                                                                                   | The name of the project. Returns `null` when the bulk add was started through the API. |
+| reason\_code [`PortfolioBulkAddFailureReason`](https://developer.monday.com/api-reference/reference/portfolio-other-types#portfoliobulkaddfailurereason) | Why the project was not added.                                                         |
+
+***
+
+# PortfolioBulkAddFailureReason
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+An enum describing why a bulk add did not attach a project to the portfolio.
+
+| Enum Value                           | Description                                                                                |
+| :----------------------------------- | :----------------------------------------------------------------------------------------- |
+| `ACCOUNT_LIMIT_EXCEEDED`             | The account reached a limit of its plan.                                                   |
+| `ACCOUNT_NOT_ELIGIBLE`               | The plan or products of the account do not support adding projects.                        |
+| `ALREADY_CONNECTED_TO_PORTFOLIO`     | The project is already connected to a portfolio.                                           |
+| `BATCH_HALTED`                       | The bulk add was halted before the project was processed.                                  |
+| `CONNECTION_INCOMPLETE`              | An earlier connection of the project did not finish and must be fixed by hand.             |
+| `INVALID_PROJECT`                    | The board is not a valid project.                                                          |
+| `MULTI_LEVEL_SUBITEMS_NOT_SUPPORTED` | The project uses multi-level subitems, which portfolios do not support.                    |
+| `OWNER_REQUIRED`                     | The user is not allowed to add the project, for example because they do not own it.        |
+| `PORTFOLIO_ARCHIVED`                 | The portfolio is archived.                                                                 |
+| `PORTFOLIO_INVALID_STATE`            | The portfolio is not in a state that allows adding projects.                               |
+| `PORTFOLIO_ITEMS_LIMIT_REACHED`      | The portfolio reached its maximum number of items.                                         |
+| `PORTFOLIO_NOT_FOUND`                | The portfolio was not found.                                                               |
+| `PROJECT_ARCHIVED`                   | The project is archived.                                                                   |
+| `PROJECT_NOT_FOUND`                  | The project was not found.                                                                 |
+| `STRUCTURES_LIMIT_REACHED`           | Adding the project would exceed the portfolio's structures limit.                          |
+| `UNKNOWN`                            | An unexpected error. Check `is_retryable` to know if adding the project again may succeed. |
+
+***
+
+# PortfolioBulkAddResultsResult
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+An object containing the outcome of the last finished bulk add on a portfolio.
+
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Arguments
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        batch_id `ID`
+      </td>
+
+      <td>
+        The unique identifier of the last finished batch. Compare it with the `batch_id` returned by `add_existing_projects_to_portfolio` to check that the results belong to that bulk add.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        failed `Int`
+      </td>
+
+      <td>
+        The number of projects that failed or were skipped.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        failed_items [[`PortfolioBulkAddFailedItem!`](https://developer.monday.com/api-reference/reference/portfolio-other-types#portfoliobulkaddfaileditem)]!
+      </td>
+
+      <td>
+        One page of the projects that were not added, ordered by project ID. Use `failed` for the total. Returns an empty list when every project was added or the page is past the end.
+      </td>
+
+      <td>
+        `limit` `Int`: The number of projects per page. Default: `100`, minimum: `1`, maximum: `500`. Values above the maximum are treated as the maximum.  
+        `page` `Int`: The 1-based page number to return. Default: `1`, minimum: `1`.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        succeeded `Int`
+      </td>
+
+      <td>
+        The number of projects that were added.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        total `Int`
+      </td>
+
+      <td>
+        The number of projects in the batch.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+***
+
+# PortfolioBulkAddState
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+An enum describing the state of the bulk add on a portfolio.
+
+| Enum Value | Description                              |
+| :--------- | :--------------------------------------- |
+| `HALTING`  | The running bulk add is being halted.    |
+| `IDLE`     | No bulk add is running on the portfolio. |
+| `RUNNING`  | A bulk add is running on the portfolio.  |
+
+***
+
+# PortfolioBulkAddStatusResult
+
+<Callout icon="🚧" theme="warn">
+  **Only available in versions [`2027-04`](https://developer.monday.com/api-reference/docs/release-notes#2027-04) and later**
+</Callout>
+
+An object containing the progress of the bulk add that is currently running on a portfolio.
+
+| Field                                                                                                                             | Description                                                                        |
+| :-------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------- |
+| completed `Int`                                                                                                                   | The number of projects in the running batch that were already processed.           |
+| is\_submitter `Boolean`                                                                                                           | Whether the calling user started the running batch. Only that user can halt it.    |
+| state [`PortfolioBulkAddState`](https://developer.monday.com/api-reference/reference/portfolio-other-types#portfoliobulkaddstate) | The state of the bulk add on the portfolio.                                        |
+| total `Int`                                                                                                                       | The number of projects in the running batch. Returns `0` when no batch is running. |
 
 <br />

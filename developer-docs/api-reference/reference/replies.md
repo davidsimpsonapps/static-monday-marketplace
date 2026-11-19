@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:36:41.000Z
+updatedAt: 2026-11-09T14:24:04.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -16,6 +16,7 @@ On the monday.com platform, users can reply directly to [updates](https://suppor
 ## Get replies
 
 * Returns an array of metadata objects for replies to an update(s)
+* In versions `2027-01` and later, you can also get replies by their IDs
 * Can be queried directly at the root or nested within an [`updates`](https://developer.monday.com/api-reference/reference/updates) query
 
 ```graphql GraphQL
@@ -24,7 +25,7 @@ query {
     board_ids: [1234567890], 
     created_at_to: "2025-08-02", 
     created_at_from: "2025-01-01"
-	) {
+ ) {
     body
     created_at
     edited_at
@@ -38,13 +39,14 @@ query {
 
 ### Arguments
 
-| Argument          | Type     | Description                                                               |
-| :---------------- | :------- | :------------------------------------------------------------------------ |
-| board\_ids        | `[ID!]!` | The unique board identifier(s) to return replies from.                    |
-| created\_at\_from | `String` | Filters replies created on or after this ISO 8601 timestamp (inclusive).  |
-| created\_at\_to   | `String` | Filters replies created on or before this ISO 8601 timestamp (inclusive). |
-| limit             | `Int`    | The number of replies returned. The default is 25, and the max is 100.    |
-| page              | `Int`    | The page number to return. Starts at 1.                                   |
+| Argument          | Type                                                         | Description                                                                                                                                                                                                                                      |
+| :---------------- | :----------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| board\_ids        | `[ID!]!` (pre `2027-01`) <br /> `[ID!]` (`2027-01` or later) | The unique board identifier(s) to return replies from. In versions `2027-01` and later, you can't combine it with `ids`.                                                                                                                         |
+| created\_at\_from | `String`                                                     | Filters replies created on or after this ISO 8601 timestamp (inclusive).                                                                                                                                                                         |
+| created\_at\_to   | `String`                                                     | Filters replies created on or before this ISO 8601 timestamp (inclusive).                                                                                                                                                                        |
+| ids               | `[ID!]`                                                      | The unique identifier(s) of the replies to return (max 100). You can't combine it with `board_ids`, and `limit`, `page`, `created_at_from`, and `created_at_to` don't apply when you use it. **Only available in versions `2027-01` and later.** |
+| limit             | `Int`                                                        | The number of replies returned. The default is 25, and the max is 100.                                                                                                                                                                           |
+| page              | `Int`                                                        | The page number to return. Starts at 1.                                                                                                                                                                                                          |
 
 ### Fields
 
@@ -72,7 +74,7 @@ query {
   <tbody>
     <tr>
       <td>
-        assets 
+        assets
       </td>
 
       <td>
@@ -198,6 +200,24 @@ query {
 
     <tr>
       <td>
+        item_id
+      </td>
+
+      <td>
+        `ID`
+      </td>
+
+      <td>
+        The unique identifier of the item the reply's parent update belongs to. **Only available in versions `2027-01` and later.**
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
         kind
       </td>
 
@@ -234,6 +254,24 @@ query {
         id `ID!`  
         reaction_type `String`  
         updated_at `Date`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        parent_id
+      </td>
+
+      <td>
+        `ID!`
+      </td>
+
+      <td>
+        The unique identifier of the update the reply belongs to. **Only available in versions `2027-01` and later.**
+      </td>
+
+      <td>
+
       </td>
     </tr>
 

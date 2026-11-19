@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:33:59.000Z
+updatedAt: 2026-11-06T10:09:27.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -14,6 +14,10 @@ The monday.com [app](https://developer.monday.com/api-reference/reference/app) A
 The types below are used by app queries and mutations, and are not independently queryable.
 
 # CreateAppInput
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions before [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01).** In `2027-01` and later, use [`CreateAppInputV2`](#createappinputv2).
+</Callout>
 
 An object containing the new app's configuration data.
 
@@ -191,6 +195,10 @@ An object containing the new app's configuration data.
 
 # UpdateAppInput
 
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions before [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01).** In `2027-01` and later, use [`UpdateAppInputV2`](#updateappinputv2).
+</Callout>
+
 An object containing the app's updated configuration data.
 
 <Table align={["left","left","left","left"]}>
@@ -343,6 +351,46 @@ An object containing the app's updated configuration data.
     </tr>
   </tbody>
 </Table>
+
+***
+
+# CreateAppInputV2
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later**
+</Callout>
+
+An object containing the new app's configuration data and its permission scopes as strings. Used by the [`create_app`](https://developer.monday.com/api-reference/reference/app#create-app) mutation. In versions before `2027-01`, the mutation takes [`CreateAppInput`](#createappinput).
+
+| Field         | Type        | Description                                                                                                                                                                                                                                                                                                                                                   | Enum Values             |
+| :------------ | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------- |
+| collaborators | `[ID!]`     | An array of user IDs with access to the app.                                                                                                                                                                                                                                                                                                                  |                         |
+| description   | `String`    | The app's description.                                                                                                                                                                                                                                                                                                                                        |                         |
+| kind          | `AppKind`   | The app's visibility type.                                                                                                                                                                                                                                                                                                                                    | `PRIVATE`<br />`PUBLIC` |
+| name          | `String!`   | The app's display name.                                                                                                                                                                                                                                                                                                                                       |                         |
+| permissions   | `[String!]` | An array of the app's permission scopes as strings in the `resource:access` format, such as `boards:read` or `me:read`. See the [permission scopes](https://developer.monday.com/apps/docs/oauth#set-up-permission-scopes) your app can request. An unknown scope is rejected. In versions before `2027-01`, this field takes `[AppPermission!]` enum values. |                         |
+| slug          | `String`    | A URL-friendly identifier in `{account_slug}_{app_slug}` format. Must contain only letters, numbers, dashes, and underscores. Example: `account-slug_my-scheduler`.                                                                                                                                                                                           |                         |
+| webhook\_url  | `String`    | The app's webhook endpoint URL.                                                                                                                                                                                                                                                                                                                               |                         |
+
+***
+
+# UpdateAppInputV2
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later**
+</Callout>
+
+An object containing the app's updated configuration data and its permission scopes as strings. Used by the [`update_app`](https://developer.monday.com/api-reference/reference/app#update-app) mutation. If the app's latest version is live, a new draft version is created and updated. In versions before `2027-01`, the mutation takes [`UpdateAppInput`](#updateappinput).
+
+| Field         | Type        | Description                                                                                                                                                                                                                                                                                                       | Enum Values             |
+| :------------ | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------- |
+| collaborators | `[ID!]`     | An array of user IDs with access to the app. Replaces the existing collaborators.                                                                                                                                                                                                                                 |                         |
+| description   | `String`    | The app's description.                                                                                                                                                                                                                                                                                            |                         |
+| kind          | `AppKind`   | The app's visibility type.                                                                                                                                                                                                                                                                                        | `PRIVATE`<br />`PUBLIC` |
+| name          | `String`    | The app's display name.                                                                                                                                                                                                                                                                                           |                         |
+| permissions   | `[String!]` | An array of the app's permission scopes as strings in the `resource:access` format, such as `boards:read` or `me:read`. See the [permission scopes](https://developer.monday.com/apps/docs/oauth#set-up-permission-scopes) your app can request. An unknown scope is rejected. Replaces the existing permissions. |                         |
+| slug          | `String`    | A URL-friendly identifier. Can only be set if the app has no existing slug.                                                                                                                                                                                                                                       |                         |
+| webhook\_url  | `String`    | The app's webhook endpoint URL.                                                                                                                                                                                                                                                                                   |                         |
 
 ***
 

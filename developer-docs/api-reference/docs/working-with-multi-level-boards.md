@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:33:47.000Z
+updatedAt: 2026-11-18T09:51:23.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -18,6 +18,7 @@ This release introduces a new board type that enables **multiple levels of subit
 * **Rollup columns** are a new column capability for multi-level boards. They can contain both static and calculated values from child items.
 * By default, the API returns empty values for rollup columns. You must pass `capabilities: [CALCULATED]` to retrieve them.
 * Status rollup columns resolve to the `BatteryValue` type instead of `StatusValue` — including on leaf items.
+* **Dropdown** and **people** columns support rollup from API version `2027-01`. Unlike the other rollup column types, these are opt-in: you must enable them with the `UNIQUE_VALUES` function.
 * Mutations and filtering introduce new behaviors you'll need to handle when writing to or reading from multi-level boards.
 
 # Background
@@ -88,7 +89,7 @@ Understanding the structural difference between classic and multi-level boards i
 
 With multi-level boards in place, we also needed a way to summarize values across child items. This is where rollup columns come in.
 
-Rollup is a new capability that can be enabled on **number**, **date**, **timeline**, and **status** columns on multi-level boards.
+Rollup is a new capability that can be enabled on **number**, **date**, **timeline**, and **status** columns on multi-level boards. From API version `2027-01`, it can also be enabled on **dropdown** and **people** columns.
 
 Columns with rollup can summarize the data in their child items. An individual rollup cell will either contain static data or summarize (roll up) the data of items below it. If an item is a parent, the cell will contain the summary of its child items. If the item has no children, the cell will contain a static value.
 
@@ -133,10 +134,34 @@ Each column type supports specific rollup functions:
       <td>`COUNT_KEYS`, `NONE`</td>
       <td>`COUNT_KEYS`</td>
     </tr>
+
+    <tr>
+      <td>`dropdown` (`2027-01` and later)</td>
+      <td>`UNIQUE_VALUES`</td>
+      <td>`UNIQUE_VALUES` (opt-in, see below)</td>
+    </tr>
+
+    <tr>
+      <td>`people` (`2027-01` and later)</td>
+      <td>`UNIQUE_VALUES`</td>
+      <td>`UNIQUE_VALUES` (opt-in, see below)</td>
+    </tr>
   </tbody>
 </Table>
 
-The `NONE` function disables rollup calculation on the column, while still keeping the capability metadata.
+The `NONE` function disables rollup calculation on the column, while still keeping the capability metadata. It does not apply to `dropdown` or `people` columns, which accept only `UNIQUE_VALUES`.
+
+<Callout icon="📘" theme="info">
+  The `UNIQUE_VALUES` function is available in API version `2027-01` and later. It does not exist in earlier versions.
+</Callout>
+
+### How dropdown and people rollup work
+
+Dropdown and people rollup collect the **distinct** values of all the **leaf** items below a parent item, at every level.
+
+* Only leaf items are counted. The value in the parent's own cell and the values of middle-level parents are ignored.
+* Duplicate values are removed. Values follow the order of the leaf items (by item ID), not alphabetical order.
+* Dropdown and people rollup are **opt-in**. A new dropdown or people column on a multi-level board does **not** get a rollup by default. Pass `capabilities: { calculated: { function: UNIQUE_VALUES } }` when you create or update the column.
 
 ## Estimated timeline
 
@@ -253,6 +278,26 @@ With the rollout schedule in mind, let's walk through the specific API changes a
 
     <tr>
       <td>
+        Dropdown rollup columns keep the `DropdownValue` type
+      </td>
+
+      <td>
+        From API version `2027-01`, a dropdown column with the `UNIQUE_VALUES` rollup function returns `DropdownValue`, not `BatteryValue`. On a parent item, the `value` field contains the distinct dropdown label IDs of its leaf descendants, for example `{"ids":[1,2]}`. As with the other rollups, pass `capabilities: [CALCULATED]` on `column_values` to read the calculated value.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        People rollup columns keep the `PeopleValue` type
+      </td>
+
+      <td>
+        From API version `2027-01`, a people column with the `UNIQUE_VALUES` rollup function returns `PeopleValue`, not `BatteryValue`. On a parent item, the `persons_and_teams` field lists the distinct people and teams of its leaf descendants, and the `value` field contains them as `{"personsAndTeams":[{"id":1,"kind":"person"}]}`. As with the other rollups, pass `capabilities: [CALCULATED]` on `column_values` to read the calculated value.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
         The `is_leaf` field on column values
       </td>
 
@@ -287,9 +332,10 @@ With the rollout schedule in mind, let's walk through the specific API changes a
         If omitted, defaults apply:  
 
         • On multi-level boards, number, date, timeline, and status columns are created with the calculated capability enabled.
+        • Dropdown and people columns are **not** created with rollup enabled. Pass `capabilities: {calculated: {function: UNIQUE_VALUES}}` to opt in (`2027-01` and later).
         • In all other cases, no capabilities are applied.  
 
-        To disable rollup on a multi-level board, pass `capabilities: {calculated: {function: NONE}}`.
+        To disable rollup on a number, date, timeline, or status column on a multi-level board, pass `capabilities: {calculated: {function: NONE}}`. Dropdown and people columns do not accept `NONE`.
       </td>
     </tr>
 
@@ -309,7 +355,9 @@ With the rollout schedule in mind, let's walk through the specific API changes a
       </td>
 
       <td>
-        Use `hierarchy_scope_config: "allItems"` on `items_page` to search both parents and subitems. When a subitem matches a filter, its parent items are included in the response.
+        Use `hierarchy_scope_config: "allItems"` on `items_page` to search both parents and subitems. When a subitem matches a filter, its parent items are included in the response.  
+
+        For a rolled-up dropdown or people column, the filter checks the leaf items: a parent matches when any of its leaves matches.
       </td>
     </tr>
   </tbody>
@@ -763,6 +811,83 @@ mutation {
 }
 ```
 
+### Create a dropdown column with rollup
+
+Dropdown rollup is opt-in and available in API version `2027-01` and later. Pass the `UNIQUE_VALUES` function explicitly:
+
+```graphql GraphQL
+mutation {
+  create_column(
+    board_id: 1234567890
+    title: "Regions"
+    column_type: dropdown
+    capabilities: { calculated: { function: UNIQUE_VALUES } }
+  ) {
+    id
+    title
+  }
+}
+```
+
+To read the rolled-up value, pass `capabilities: [CALCULATED]` on `column_values`:
+
+```graphql GraphQL
+query {
+  items(ids: [1234567890]) {
+    id
+    column_values(capabilities: [CALCULATED]) {
+      id
+      is_leaf
+      ... on DropdownValue {
+        text
+        values {
+          id
+          label
+        }
+      }
+    }
+  }
+}
+```
+
+### Create a people column with rollup
+
+People rollup is opt-in and available in API version `2027-01` and later. Pass the `UNIQUE_VALUES` function explicitly:
+
+```graphql GraphQL
+mutation {
+  create_column(
+    board_id: 1234567890
+    title: "Owners"
+    column_type: people
+    capabilities: { calculated: { function: UNIQUE_VALUES } }
+  ) {
+    id
+    title
+  }
+}
+```
+
+To read the rolled-up value, pass `capabilities: [CALCULATED]` on `column_values`:
+
+```graphql GraphQL
+query {
+  items(ids: [1234567890]) {
+    id
+    column_values(capabilities: [CALCULATED]) {
+      id
+      is_leaf
+      ... on PeopleValue {
+        persons_and_teams {
+          id
+          kind
+        }
+      }
+    }
+  }
+}
+```
+
 ### Create a column without rollup
 
 To create a column on a multi-level board **without** rollup, pass `function: NONE`:
@@ -782,7 +907,7 @@ mutation {
 ```
 
 <Callout icon="🚧" theme="warn">
-  Passing an empty `capabilities: {}` does **not** disable rollup on multi-level boards — the column will still receive the default rollup function. You must explicitly pass `function: NONE` to disable it.
+  Passing an empty `capabilities: {}` does **not** disable rollup on multi-level boards — the column will still receive the default rollup function. You must explicitly pass `function: NONE` to disable it. This does not apply to `dropdown` or `people` columns, which have no rollup unless you enable it and do not accept `NONE`.
 </Callout>
 
 ### Status columns use a typed mutation
