@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:35:49.000Z
+updatedAt: 2026-11-11T07:34:08.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -70,7 +70,7 @@ An array containing the column style configuration.
 
 When a layout is created, the system automatically generates `column_count` child cell blocks, one for each column. The layout block itself acts as a container, and each cell has `parentBlockId === <layout-block-id>`, making it the direct parent for any content placed in that column. The creation response also includes an ordered list of generated cell IDs under `content[0].cells`, represented as a one-dimensional array from left to right.
 
-**Recommended workflow**
+**Recommended workflow:**
 
 1. Create the layout and capture its ID.
 2. Retrieve the cell block IDs from `content[0].cells` in the response (or by querying the layout block’s children).
@@ -314,7 +314,7 @@ When a table is created, the system automatically generates a grid of `row_count
 
 This matrix is row-major (`matrix[rowIndex][columnIndex]`). You should not rely on the order returned by `docs { blocks { ... } }` since that order is implementation-specific.
 
-**Recommended workflow**
+**Recommended workflow:**
 
 1. Create the table and capture its ID.
 2. Retrieve `content[0].cells` to get the cell ID matrix.
@@ -455,6 +455,16 @@ An object containing the input for creating video blocks.
 | parent\_block\_id | `String`  | The unique identifier of the parent block to create the new block under. |
 | raw\_url          | `String!` | The raw URL of the video.                                                |
 | width             | `Int`     | The width of the video.                                                  |
+
+***
+
+# DeletedDocBlock
+
+An object representing a document block that was successfully deleted. Returned by the [`delete_doc_blocks`](https://developer.monday.com/api-reference/reference/blocks#delete-doc-blocks) mutation.
+
+| Field | Type | Description                            |
+| :---- | :--- | :------------------------------------- |
+| id    | `ID` | The deleted block's unique identifier. |
 
 ***
 

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-04T13:52:24.000Z
+updatedAt: 2026-11-19T16:36:56.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -525,21 +525,6 @@ Optional metadata supplied explicitly for a board.
 | Field     | Type     | Description                            |
 | :-------- | :------- | :------------------------------------- |
 | board\_md | `String` | Markdown content describing the board. |
-
-***
-
-# BoardActivityLogsPage
-
-<Callout icon="🚧">
-  **Returned by [`Board.activity_logs`](https://developer.monday.com/api-reference/reference/activity-logs#get-board-activity-logs-in-2027-01-and-later) from API version [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01)**
-</Callout>
-
-Returned by [`activity_logs`](https://developer.monday.com/api-reference/reference/activity-logs#get-board-activity-logs-in-2027-01-and-later) on [`Board`](https://developer.monday.com/api-reference/reference/boards). A page of the board's activity log entries.
-
-| Field  | Type             | Description                                                                 |
-| :----- | :--------------- | :-------------------------------------------------------------------------- |
-| logs   | `[ActivityLog!]` | The activity log entries for this page.                                     |
-| cursor | `String`         | The cursor to pass to fetch the next page. `null` if this is the last page. |
 
 ***
 

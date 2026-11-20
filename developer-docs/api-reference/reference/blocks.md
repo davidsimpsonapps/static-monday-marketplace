@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:35:36.000Z
+updatedAt: 2026-11-11T07:34:08.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -89,43 +89,43 @@ The `content` field will return different information based on the block type. Y
 ```
 ```json List
 {
-	"id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
-	"type": "check list", // "bulleted list", "numbered list", or "check list"
-	"content": {
-		"alignment": "right", // "left", "right", or "center"
-		"direction": "rtl", // "ltr" or "rtl"
-		"deltaFormat": [{
-			"insert": "block 1"
-		}],
-		"indentation": 1,
-		"checked": true // checks or unchecks a box
-	}
+ "id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
+ "type": "check list", // "bulleted list", "numbered list", or "check list"
+ "content": {
+  "alignment": "right", // "left", "right", or "center"
+  "direction": "rtl", // "ltr" or "rtl"
+  "deltaFormat": [{
+   "insert": "block 1"
+  }],
+  "indentation": 1,
+  "checked": true // checks or unchecks a box
+ }
 }
 ```
 ```json Table and layout
 {
-	"id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
-	"type": "table", // "table" or "layout"
-	"content": {
-		"cells": [ // the table's rows
-			[{
-					"blockId": "7f8c145-989f-48bb-b7f8-dc8f91690g42" // ID of the child block
-				},
-				{
-					"blockId": "8g9d256-090g-59cc-c8g9-ed9g02701h53" // ID of the child block
-				}
-			]
-		],
-		"alignment": "right", // "left", "right", or "center"
-		"direction": "rtl", // "ltr" or "rtl"
-		"columnsStyle": [{ // size of the column by percent - the sum of these values has to be 100
-				"width": 50
-			},
-			{
-				"width": 50
-			}
-		]
-	}
+ "id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
+ "type": "table", // "table" or "layout"
+ "content": {
+  "cells": [ // the table's rows
+   [{
+     "blockId": "7f8c145-989f-48bb-b7f8-dc8f91690g42" // ID of the child block
+    },
+    {
+     "blockId": "8g9d256-090g-59cc-c8g9-ed9g02701h53" // ID of the child block
+    }
+   ]
+  ],
+  "alignment": "right", // "left", "right", or "center"
+  "direction": "rtl", // "ltr" or "rtl"
+  "columnsStyle": [{ // size of the column by percent - the sum of these values has to be 100
+    "width": 50
+   },
+   {
+    "width": 50
+   }
+  ]
+ }
 }
 ```
 ```json Notice box
@@ -133,97 +133,97 @@ The `content` field will return different information based on the block type. Y
   "id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
   "type": "notice box", 
   "content": {
-  	"theme": "info", // "tips", "warning", or "general"
-  	"direction": "ltr", // "ltr" or "rtl"
-  	"alignment": "left" // "left", "right", or "center"
+   "theme": "info", // "tips", "warning", or "general"
+   "direction": "ltr", // "ltr" or "rtl"
+   "alignment": "left" // "left", "right", or "center"
   }
 }
 ```
 ```json GIF
 {
-	"id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
-	"type": "gif",
-	"content": {
-		"id": "123abc456def",
-		"url": "https://media2.giphy.com/media/123abc456def/311x.gif?cid=1d9492h43&rid=200w.gif&ct=g",
-		"width": 278,
-		"alignment": "center", // "left", "right", or "center"
-		"direction": "ltr", // "ltr" or "rtl"
-		"aspectRatio": ""
-	}
+ "id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
+ "type": "gif",
+ "content": {
+  "id": "123abc456def",
+  "url": "https://media2.giphy.com/media/123abc456def/311x.gif?cid=1d9492h43&rid=200w.gif&ct=g",
+  "width": 278,
+  "alignment": "center", // "left", "right", or "center"
+  "direction": "ltr", // "ltr" or "rtl"
+  "aspectRatio": ""
+ }
 }
 ```
 ```json Image: monday asset
 {
-	"id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
-	"type": "image",
-	"content": {
-		"url": "https://monday.monday.com/test/resources/123456789/testimage.png",
-		"width": "900",
-		"assetId": 123456789,
-		"alignment": "center", // "left", "right", or "center"
-		"direction": "ltr", // "ltr" or "rtl"
-		"aspectRatio": "2380x1230"
-	}
+ "id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
+ "type": "image",
+ "content": {
+  "url": "https://monday.monday.com/test/resources/123456789/testimage.png",
+  "width": "900",
+  "assetId": 123456789,
+  "alignment": "center", // "left", "right", or "center"
+  "direction": "ltr", // "ltr" or "rtl"
+  "aspectRatio": "2380x1230"
+ }
 }
 ```
 ```json Image: public URL
 {
-	"id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
-	"type": "image",
-	"content": {
-		"width": 123, // changes the size of the image
-		"publicUrl": "https://www.test.com/static/download/testimage.png",
-		"direction": "rtl", // "ltr" or "rtl"
-		"alignment": "right" // "left", "right", or "center"
-	}
+ "id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
+ "type": "image",
+ "content": {
+  "width": 123, // changes the size of the image
+  "publicUrl": "https://www.test.com/static/download/testimage.png",
+  "direction": "rtl", // "ltr" or "rtl"
+  "alignment": "right" // "left", "right", or "center"
+ }
 }
 ```
 ```json Video: monday asset
 {
-	"id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
-	"type": "video",
-	"content": {
-		"url": "https://monday.monday.com/test/987654321/testvideo.mov",
-		"width": 613,
-		"assetId": 987654321,
-		"alignment": "center", // "left", "right", or "center"
-		"direction": "ltr", // "ltr" or "rtl"
-		"aspectRatio": null
-	}
+ "id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
+ "type": "video",
+ "content": {
+  "url": "https://monday.monday.com/test/987654321/testvideo.mov",
+  "width": 613,
+  "assetId": 987654321,
+  "alignment": "center", // "left", "right", or "center"
+  "direction": "ltr", // "ltr" or "rtl"
+  "aspectRatio": null
+ }
 }
 ```
 ```json Video: raw URL
 {
-	"id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
-	"type": "video",
-	"content": {
-		"url": null,
-		"width": 450,
-		"rawUrl": "https://www.youtube.com/watch?v=123abc",
-		"assetId": null,
-		"alignment": "left", // "left", "right", or "center"
-		"direction": "ltr", // "ltr" or "rtl"
-		"embedData": {
-			"embedlyData": {
-				"url": "https://www.youtube.com/watch?v=123abc",
-				"html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F123abc&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D123abc&image=http%3A%2F%2Fi.ytimg.com%2Fvi%2F123abc%2Fhqdefault.jpg&key=60f4bf4bdbb750b6b09783043556f314&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-				"type": "video",
-				"title": "Sample video title",
-				"width": 854,
-				"height": 480,
-				"version": "1.0",
-				"author_url": "https://www.youtube.com/monday.com",
-				"author_name": "monday.com",
-				"description": "This is a sample monday.com video",
-				"provider_url": "http://youtube.com",
-				"provider_name": "YouTube",
-				"thumbnail_url": "http://i.ytimg.com/vi/3lrXMmciw2N/hqdefault.jpg",
-				"thumbnail_width": 480,
-				"thumbnail_height": 360
-			}
-		}
-	}
+ "id": "7f8c145-989f-48bb-b7f8-dc8f91690g42",
+ "type": "video",
+ "content": {
+  "url": null,
+  "width": 450,
+  "rawUrl": "https://www.youtube.com/watch?v=123abc",
+  "assetId": null,
+  "alignment": "left", // "left", "right", or "center"
+  "direction": "ltr", // "ltr" or "rtl"
+  "embedData": {
+   "embedlyData": {
+    "url": "https://www.youtube.com/watch?v=123abc",
+    "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F123abc&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D123abc&image=http%3A%2F%2Fi.ytimg.com%2Fvi%2F123abc%2Fhqdefault.jpg&key=60f4bf4bdbb750b6b09783043556f314&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+    "type": "video",
+    "title": "Sample video title",
+    "width": 854,
+    "height": 480,
+    "version": "1.0",
+    "author_url": "https://www.youtube.com/monday.com",
+    "author_name": "monday.com",
+    "description": "This is a sample monday.com video",
+    "provider_url": "http://youtube.com",
+    "provider_name": "YouTube",
+    "thumbnail_url": "http://i.ytimg.com/vi/3lrXMmciw2N/hqdefault.jpg",
+    "thumbnail_width": 480,
+    "thumbnail_height": 360
+   }
+  }
+ }
 }
 ```
 
@@ -244,7 +244,7 @@ mutation {
     doc_id: 1234567, 
     after_block_id: "7f8c145-989f-48bb-b7f8-dc8f91690g42", 
     content: "{\"alignment\":\"left\",\"direction\":\"ltr\",\"deltaFormat\":[{\"insert\":\"new block\"}]}"
-	) {
+ ) {
     id
   }
 }
@@ -690,3 +690,21 @@ mutation {
 | Argument  | Type      | Description                    |
 | :-------- | :-------- | :----------------------------- |
 | block\_id | `String!` | The block's unique identifier. |
+
+## Delete doc blocks
+
+Deletes multiple doc blocks in a single operation. Returns an array of [`DeletedDocBlock`](https://developer.monday.com/api-reference/reference/doc-blocks-other-types#deleteddocblock) objects, one for each block that was deleted. You can delete a maximum of 100 blocks per request.
+
+```graphql GraphQL
+mutation {
+  delete_doc_blocks(block_ids: ["7f8c145-989f-48bb-b7f8-dc8f91690g42", "2a9d3e61-5b7c-4f08-9c1e-3d4b6a7f8e90"]) {
+    id
+  }
+}
+```
+
+### Arguments
+
+| Argument   | Type     | Description                                                                     |
+| :--------- | :------- | :------------------------------------------------------------------------------ |
+| block\_ids | `[ID!]!` | The unique identifiers of the blocks to delete. Maximum 100 blocks per request. |

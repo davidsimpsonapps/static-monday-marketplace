@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:34:35.000Z
+updatedAt: 2026-11-20T08:55:01.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -33,8 +33,9 @@ Board Relation, Date, Dropdown, Email, Link, Long Text, Number, People, Phone, S
 * Maximum file size: **150 MB**
 * Upload URL and report URL expiration: **10 minutes**
 * Required scope: `boards:write`
-* Optional [`on_match`](#on-match) for upsert or skip behavior on duplicate column values in regular item imports
+* Optional [`on_match`](#on_match) for upsert or skip behavior on duplicate column values in regular item imports
 * Counts toward the per-account hourly **item create/update budget** (19,000 items per hour)
+* Each board runs one import at a time and holds up to 100 imports in flight (running or waiting). In API version [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later, further imports are rejected with `BOARD_QUEUE_FULL`. See [Board queue full](#board-queue-full).
 * Supports create-only hierarchy imports on multi-level subitems boards. Use level columns from `name.l1` through `name.l5`; see the [Importing items in bulk](https://developer.monday.com/api-reference/docs/importing-items-in-bulk) guide for the full CSV format.
 * Supports Board Relation columns. See the [Importing items in bulk](https://developer.monday.com/api-reference/docs/importing-items-in-bulk#column-type-validation) guide for the CSV value format and limits.
 
@@ -117,6 +118,11 @@ query {
       <td>Approximate completion percentage (0–100).</td>
     </tr>
     <tr>
+      <td>queue_position</td>
+      <td>`Int`</td>
+      <td>Position of the job in its board queue while `status` is `QUEUED`, starting at `1` for the next job to run. `null` in any other state or when the position is unknown. Available from `2027-01`. Requires the `boards:read` scope.</td>
+    </tr>
+    <tr>
       <td>report_created</td>
       <td>`Boolean`</td>
       <td>Whether a downloadable report exists.</td>
@@ -174,6 +180,56 @@ mutation {
 
 Do not include `x-amz-checksum-crc32` as a request header when uploading to the pre-signed URL. The URL may include checksum query parameters, but forwarding the checksum as an unsigned request header can cause S3 to reject the upload with HTTP 403.
 
+## Cancel bulk import
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later**
+</Callout>
+
+Cancels a bulk import started with `ingest_items` or `backfill_items`. Pass the `job_id` those mutations returned. Returns [`ItemsJobStatus`](https://developer.monday.com/api-reference/reference/bulk-import-other-types#itemsjobstatus).
+
+The status can still read `QUEUED` or `PROCESSING` for a moment after the mutation returns. Poll [`fetch_job_status`](#fetch-job-status) and do not retry the cancel.
+
+* A queued import is removed from its board queue and ends `CANCELLED`.
+* A running import stops after it finishes the items it has already started, and ends `CANCELLED` with the counts so far.
+* A second call for a queued import in that window returns `IMPORT_NOT_CANCELLABLE` (HTTP 409).
+* An `ingest_items` or `backfill_items` job created on an API version older than `2027-01` returns `IMPORT_NOT_CANCELLABLE` (HTTP 409).
+
+```graphql GraphQL
+mutation {
+  cancel_bulk_import(import_id: "550e8400-e29b-41d4-a716-446655440000") {
+    status
+    progress_percentage
+    counts {
+      submitted
+      created
+      updated
+      failed
+    }
+  }
+}
+```
+
+Example response (illustrative values):
+
+```json
+{
+  "data": {
+    "cancel_bulk_import": {
+      "status": "CANCELLED",
+      "progress_percentage": 40,
+      "counts": { "submitted": 5000, "created": 2000, "updated": 0, "failed": 0 }
+    }
+  }
+}
+```
+
+### Arguments
+
+| Argument   | Type  | Description                                                                                  |
+| :--------- | :---- | :------------------------------------------------------------------------------------------- |
+| import\_id | `ID!` | The ID of the import to cancel: the `job_id` returned by `ingest_items` or `backfill_items`. |
+
 ***
 
 # `on_match`
@@ -220,6 +276,15 @@ Email, Phone, Text, Name, Numbers, Link, Date, Long text, and Status. Use the bo
 * If multiple rows of the input file share the same match value, only the **final** row for that value is used (earlier rows are ignored).
 * If more than one item on the board matches the match value, the update targets the **most recently created** item.
 * `group_id` is not part of the matching key.
+
+## Board queue full
+
+In API version `2027-01` and later, `BOARD_QUEUE_FULL` is returned in two ways:
+
+* **At the request:** `ingest_items` or `backfill_items` returns a GraphQL error with code `BOARD_QUEUE_FULL` and `status_code` `429`.
+* **After the job is created:** the job ends `REJECTED` with `failure_reason: BOARD_QUEUE_FULL`.
+
+To recover, retry with backoff after earlier imports on the board finish. To stay under the limit, send more rows per import instead of many small imports.
 
 ***
 

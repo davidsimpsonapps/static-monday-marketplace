@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:34:47.000Z
+updatedAt: 2026-11-20T08:55:01.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -21,15 +21,19 @@ The types below are used by [`backfill_items`](https://developer.monday.com/api-
 
 Enum returned in `failure_reason` when a job ends in `REJECTED` or `FAILED`.
 
-| Enum value                  | Description                                                                                                                                      |
-| :-------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ACCOUNT_CAPACITY_EXCEEDED` | Account capacity was exceeded (includes the ingest hourly item create/update budget check).                                                      |
-| `AUTHORIZATION_FAILED`      | Caller authentication or authorization failed.                                                                                                   |
-| `BOARD_CAPACITY_EXCEEDED`   | Board reached its maximum item capacity.                                                                                                         |
-| `FILE_TOO_LARGE`            | Uploaded file exceeded the 150 MB limit.                                                                                                         |
-| `INTERNAL_ERROR`            | Unexpected server error occurred.                                                                                                                |
-| `INVALID_UPLOAD`            | CSV parse or validation failed (for example bad header, wrong column separator, malformed rows, or invalid multi-level subitems hierarchy rows). |
-| `PERMISSION_DENIED`         | Caller lacks the required permission for the operation.                                                                                          |
+| Enum value                         | Description                                                                                                                                               |
+| :--------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ACCOUNT_CAPACITY_EXCEEDED`        | Account capacity was exceeded (includes the ingest hourly item create/update budget check).                                                               |
+| `AUTHORIZATION_FAILED`             | Caller authentication or authorization failed.                                                                                                            |
+| `BOARD_CAPACITY_EXCEEDED`          | Board reached its maximum item capacity.                                                                                                                  |
+| `BOARD_QUEUE_FULL`                 | The board already holds the maximum number of imports in flight (100). Retry with backoff after earlier imports finish. Available from `2027-01`.         |
+| `CANCELLED_BY_USER`                | The import was cancelled by a user. Available from `2027-01`.                                                                                             |
+| `FILE_TOO_LARGE`                   | Uploaded file exceeded the 150 MB limit.                                                                                                                  |
+| `HOURLY_ACCOUNT_CAPACITY_EXCEEDED` | The hourly account ingest capacity was exceeded. You can retry the import in the next hour. Available from `2027-01`.                                     |
+| `INTERNAL_ERROR`                   | Unexpected server error occurred.                                                                                                                         |
+| `INVALID_UPLOAD`                   | CSV parse or validation failed (for example bad header, wrong column separator, malformed rows, or invalid multi-level subitems hierarchy rows).          |
+| `PERMISSION_DENIED`                | Caller lacks the required permission for the operation.                                                                                                   |
+| `TIMED_OUT`                        | The import waited too long in the board queue for earlier imports to finish, and did not start (4 hours by default). Try again. Available from `2027-01`. |
 
 ***
 
@@ -39,11 +43,15 @@ Enum returned in `status` describing the current state of a job.
 
 | Enum value       | Description                                                               |
 | :--------------- | :------------------------------------------------------------------------ |
+| `CANCELLED`      | The import was cancelled. Available from `2027-01`.                       |
 | `COMPLETED`      | Processing finished. Check `counts` for partial failures.                 |
 | `FAILED`         | Job failed during processing. See `failure_reason` and `failure_message`. |
 | `PROCESSING`     | Job is processing rows.                                                   |
+| `QUEUED`         | Waiting in the queue of the board. Available from `2027-01`.              |
 | `REJECTED`       | Job was rejected before processing completed.                             |
 | `UPLOAD_PENDING` | Waiting for the CSV upload to `upload_url`, or upload still in flight.    |
+
+In API versions before `2027-01`, and in requests with no API version, the newer values read as older ones. In `status`, `QUEUED` reads as `PROCESSING` and `CANCELLED` reads as `FAILED`. In `failure_reason`, `BOARD_QUEUE_FULL` reads as `BOARD_CAPACITY_EXCEEDED`, and `TIMED_OUT` and `CANCELLED_BY_USER` read as `INTERNAL_ERROR`.
 
 ***
 
@@ -66,16 +74,17 @@ Per-stage row counters returned inside `ItemsJobStatus.counts`.
 
 Returned from [`fetch_job_status`](https://developer.monday.com/api-reference/reference/ingest-items-api-reference#fetch-job-status) through the [`JobStatus`](#jobstatus) union. The full field listing lives on the [Ingest items API reference](https://developer.monday.com/api-reference/reference/ingest-items-api-reference#fields-itemsjobstatus); a short summary follows.
 
-| Field                | Type                                                  | Description                                                  |
-| :------------------- | :---------------------------------------------------- | :----------------------------------------------------------- |
-| status               | [`BulkImportState`](#bulkimportstate)                 | Current job state.                                           |
-| counts               | [`ItemsJobItemCounts`](#itemsjobitemcounts)           | Per-stage row counters.                                      |
-| progress\_percentage | `Int`                                                 | Approximate completion percentage (0–100).                   |
-| failure\_reason      | [`BulkImportFailureReason`](#bulkimportfailurereason) | Machine-readable failure reason.                             |
-| failure\_message     | `String`                                              | Human-readable failure details. `null` for `INTERNAL_ERROR`. |
-| fully\_imported      | `Boolean`                                             | `true` only when `COMPLETED` and `counts.failed = 0`.        |
-| report\_created      | `Boolean`                                             | Whether a downloadable report exists.                        |
-| report\_url          | `String`                                              | Time-limited report URL (10-minute expiration).              |
+| Field                | Type                                                  | Description                                                                                                                                                                                                                        |
+| :------------------- | :---------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| status               | [`BulkImportState`](#bulkimportstate)                 | Current job state.                                                                                                                                                                                                                 |
+| counts               | [`ItemsJobItemCounts`](#itemsjobitemcounts)           | Per-stage row counters.                                                                                                                                                                                                            |
+| progress\_percentage | `Int`                                                 | Approximate completion percentage (0–100).                                                                                                                                                                                         |
+| failure\_reason      | [`BulkImportFailureReason`](#bulkimportfailurereason) | Machine-readable failure reason.                                                                                                                                                                                                   |
+| failure\_message     | `String`                                              | Human-readable failure details. `null` for `INTERNAL_ERROR`.                                                                                                                                                                       |
+| fully\_imported      | `Boolean`                                             | `true` only when `COMPLETED` and `counts.failed = 0`.                                                                                                                                                                              |
+| queue\_position      | `Int`                                                 | Position of the job in its board queue while `status` is `QUEUED`, starting at `1` for the next job to run. `null` in any other state or when the position is unknown. Available from `2027-01`. Requires the `boards:read` scope. |
+| report\_created      | `Boolean`                                             | Whether a downloadable report exists.                                                                                                                                                                                              |
+| report\_url          | `String`                                              | Time-limited report URL (10-minute expiration).                                                                                                                                                                                    |
 
 ***
 

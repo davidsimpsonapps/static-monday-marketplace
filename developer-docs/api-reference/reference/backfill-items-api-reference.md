@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:34:35.000Z
+updatedAt: 2026-11-19T21:27:16.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -120,6 +120,11 @@ query {
       <td>progress_percentage</td>
       <td>`Int`</td>
       <td>Approximate completion percentage (0–100).</td>
+    </tr>
+    <tr>
+      <td>queue_position</td>
+      <td>`Int`</td>
+      <td>Position of the job in its board queue while `status` is `QUEUED`, starting at `1` for the next job to run. `null` in any other state or when the position is unknown. Available from `2027-01`. Requires the `boards:read` scope.</td>
     </tr>
     <tr>
       <td>report_created</td>

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-04T13:52:24.000Z
+updatedAt: 2026-11-19T16:36:56.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -274,7 +274,7 @@ const response = await mondayApiClient.request(query);
       </td>
 
       <td>
-        The activity log events for the queried board(s). Starting from version `2027-01`, this field changes: it returns a [`BoardActivityLogsPage`](https://developer.monday.com/api-reference/reference/boards-other-types#boardactivitylogspage) that includes more entities and is limited to events from the last 90 days. See [Board activity logs](https://developer.monday.com/api-reference/reference/activity-logs).
+        The activity log events for the queried board(s). See [Board activity logs](https://developer.monday.com/api-reference/reference/activity-logs).
       </td>
 
       <td>
