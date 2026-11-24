@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-20T08:55:01.000Z
+updatedAt: 2026-11-24T12:56:03.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -21,19 +21,20 @@ The types below are used by [`backfill_items`](https://developer.monday.com/api-
 
 Enum returned in `failure_reason` when a job ends in `REJECTED` or `FAILED`.
 
-| Enum value                         | Description                                                                                                                                               |
-| :--------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ACCOUNT_CAPACITY_EXCEEDED`        | Account capacity was exceeded (includes the ingest hourly item create/update budget check).                                                               |
-| `AUTHORIZATION_FAILED`             | Caller authentication or authorization failed.                                                                                                            |
-| `BOARD_CAPACITY_EXCEEDED`          | Board reached its maximum item capacity.                                                                                                                  |
-| `BOARD_QUEUE_FULL`                 | The board already holds the maximum number of imports in flight (100). Retry with backoff after earlier imports finish. Available from `2027-01`.         |
-| `CANCELLED_BY_USER`                | The import was cancelled by a user. Available from `2027-01`.                                                                                             |
-| `FILE_TOO_LARGE`                   | Uploaded file exceeded the 150 MB limit.                                                                                                                  |
-| `HOURLY_ACCOUNT_CAPACITY_EXCEEDED` | The hourly account ingest capacity was exceeded. You can retry the import in the next hour. Available from `2027-01`.                                     |
-| `INTERNAL_ERROR`                   | Unexpected server error occurred.                                                                                                                         |
-| `INVALID_UPLOAD`                   | CSV parse or validation failed (for example bad header, wrong column separator, malformed rows, or invalid multi-level subitems hierarchy rows).          |
-| `PERMISSION_DENIED`                | Caller lacks the required permission for the operation.                                                                                                   |
-| `TIMED_OUT`                        | The import waited too long in the board queue for earlier imports to finish, and did not start (4 hours by default). Try again. Available from `2027-01`. |
+| Enum value                         | Description                                                                                                                                                                                  |
+| :--------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ACCOUNT_CAPACITY_EXCEEDED`        | Account capacity was exceeded. In API versions before `2027-01`, and in requests with no API version, this also covers the ingest hourly item create/update budget check.                    |
+| `AUTHORIZATION_FAILED`             | Caller authentication or authorization failed.                                                                                                                                               |
+| `BOARD_CAPACITY_EXCEEDED`          | Board reached its maximum item capacity.                                                                                                                                                     |
+| `BOARD_QUEUE_FULL`                 | The board already holds the maximum number of imports in flight (100). Retry with backoff after earlier imports finish. Available from `2027-01`.                                            |
+| `CANCELLED_BY_USER`                | The import was cancelled by a user. Available from `2027-01`.                                                                                                                                |
+| `FILE_TOO_LARGE`                   | Uploaded file exceeded the 150 MB limit.                                                                                                                                                     |
+| `HOURLY_ACCOUNT_CAPACITY_EXCEEDED` | The hourly account ingest capacity was exceeded. You can retry the import in the next hour. Available from `2027-01`. Earlier versions return `ACCOUNT_CAPACITY_EXCEEDED` for the same case. |
+| `INTERNAL_ERROR`                   | Unexpected server error occurred.                                                                                                                                                            |
+| `INVALID_UPLOAD`                   | CSV parse or validation failed (for example bad header, wrong column separator, malformed rows, or invalid multi-level subitems hierarchy rows).                                             |
+| `PERMISSION_DENIED`                | Caller lacks the required permission for the operation.                                                                                                                                      |
+| `TIMED_OUT`                        | The import waited too long in the board queue for earlier imports to finish, and did not start (4 hours by default). Try again. Available from `2027-01`.                                    |
+| `UPLOAD_NOT_FOUND`                 | The uploaded file was not found in storage. Available from `2027-01`.                                                                                                                        |
 
 ***
 
@@ -51,7 +52,7 @@ Enum returned in `status` describing the current state of a job.
 | `REJECTED`       | Job was rejected before processing completed.                             |
 | `UPLOAD_PENDING` | Waiting for the CSV upload to `upload_url`, or upload still in flight.    |
 
-In API versions before `2027-01`, and in requests with no API version, the newer values read as older ones. In `status`, `QUEUED` reads as `PROCESSING` and `CANCELLED` reads as `FAILED`. In `failure_reason`, `BOARD_QUEUE_FULL` reads as `BOARD_CAPACITY_EXCEEDED`, and `TIMED_OUT` and `CANCELLED_BY_USER` read as `INTERNAL_ERROR`.
+In API versions before `2027-01`, and in requests with no API version, the newer values read as older ones. In `status`, `QUEUED` reads as `PROCESSING` and `CANCELLED` reads as `FAILED`. In `failure_reason`, `BOARD_QUEUE_FULL` reads as `BOARD_CAPACITY_EXCEEDED`, and `TIMED_OUT` and `CANCELLED_BY_USER` read as `INTERNAL_ERROR`, and `HOURLY_ACCOUNT_CAPACITY_EXCEEDED` reads as `ACCOUNT_CAPACITY_EXCEEDED`.
 
 ***
 
@@ -106,10 +107,10 @@ Input object accepted by [`ingest_items`](https://developer.monday.com/api-refer
 
 Matching is evaluated across the whole board. The `group_id` argument on `ingest_items` controls where newly created items are inserted; it does not scope matching for updates or skips.
 
-| Field             | Type                                     | Description                                                             |
-| :---------------- | :--------------------------------------- | :---------------------------------------------------------------------- |
-| behaviour         | [`OnMatchBehaviour!`](#onmatchbehaviour) | Match strategy: `UPSERT` updates a matching item; `SKIP` skips the row. |
-| match\_column\_id | `String!`                                | Column ID used to detect matches.                                       |
+| Field             | Type                                     | Description                                                                                                                                                                                                     |
+| :---------------- | :--------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| behaviour         | [`OnMatchBehaviour!`](#onmatchbehaviour) | Match strategy: `UPSERT` updates a matching item; `SKIP` skips the row.                                                                                                                                         |
+| match\_column\_id | `String!`                                | Column ID used to detect matches. Use `item_id` to match on the monday item ID; see [Matching by item ID](https://developer.monday.com/api-reference/reference/ingest-items-api-reference#matching-by-item-id). |
 
 For supported match column types, see the [Ingest items API reference](https://developer.monday.com/api-reference/reference/ingest-items-api-reference#supported-match-column-types).
 

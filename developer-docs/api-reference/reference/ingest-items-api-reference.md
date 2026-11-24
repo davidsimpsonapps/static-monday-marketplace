@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-20T08:55:01.000Z
+updatedAt: 2026-11-24T10:11:58.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -246,10 +246,10 @@ For example, if `on_match` uses `match_column_id: "email"` and the same email ex
 
 ## OnMatchInput
 
-| Field             | Type                                                                                                                 | Description                                                                               |
-| :---------------- | :------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
-| behaviour         | [`OnMatchBehaviour!`](https://developer.monday.com/api-reference/reference/bulk-import-other-types#onmatchbehaviour) | `UPSERT` updates a matching item; `SKIP` skips the row when a match exists.               |
-| match\_column\_id | `String!`                                                                                                            | Column ID used to detect matches (for example `email`, `phone`, or any supported column). |
+| Field             | Type                                                                                                                 | Description                                                                                                                                                                              |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| behaviour         | [`OnMatchBehaviour!`](https://developer.monday.com/api-reference/reference/bulk-import-other-types#onmatchbehaviour) | `UPSERT` updates a matching item; `SKIP` skips the row when a match exists.                                                                                                              |
+| match\_column\_id | `String!`                                                                                                            | Column ID used to detect matches (for example `email`, `phone`, or any supported column). Use `item_id` to match on the monday item ID; see [Matching by item ID](#matching-by-item-id). |
 
 ## OnMatchBehaviour
 
@@ -270,9 +270,42 @@ In **UPSERT** mode, a data cell containing exactly the string `<NULL>` **clears*
 
 Email, Phone, Text, Name, Numbers, Link, Date, Long text, and Status. Use the board's column ID as `match_column_id`.
 
+To match on the item itself rather than a column value, use `item_id`. See [Matching by item ID](#matching-by-item-id).
+
+## Matching by item ID
+
+Set `match_column_id` to `item_id` to match each row to an existing item by its monday item ID. `item_id` is not a column on the board. Use the literal string `item_id`, not `id` or `pulse_id`.
+
+```graphql GraphQL
+mutation {
+  ingest_items(
+    board_id: "1234567890"
+    group_id: "topics"
+    on_match: { behaviour: UPSERT, match_column_id: "item_id" }
+  ) {
+    job_id
+    upload_url
+  }
+}
+```
+
+The CSV must include a column with the header `item_id` that holds the numeric item ID of each row:
+
+```csv
+name,status,item_id
+Task A,Done,9876543210
+Task B,Working on it,9876543211
+```
+
+* To get item IDs, export the board with [`create_board_export`](https://developer.monday.com/api-reference/reference/board-export-api-reference) and `include_item_identifiers: true`. The exported file has an `item_id` column. Board export is available on Enterprise plans only, and an export of a board without subitems can be re-imported with the same headers.
+* Rows with an empty `item_id` cell are not imported and are listed in the job report.
+* Values must be positive whole numbers. Other values are rejected as invalid.
+* If no item on the board has the ID, the row is treated as unmatched and created as a new item with a new item ID, with both `UPSERT` and `SKIP`. Matching only looks at the target board.
+* If the board has a real column whose ID is `item_id`, that column is matched by its value like any other column.
+
 ## Behavior notes
 
-* Rows whose match value is empty are treated as new items.
+* For column matching, rows whose match value is empty are treated as new items. With `item_id`, they are not imported; see [Matching by item ID](#matching-by-item-id).
 * If multiple rows of the input file share the same match value, only the **final** row for that value is used (earlier rows are ignored).
 * If more than one item on the board matches the match value, the update targets the **most recently created** item.
 * `group_id` is not part of the matching key.
@@ -297,7 +330,7 @@ For MLS file format and hierarchy rules, see the Multi-level subitems boards sec
 # Capacity and rate limits
 
 * **Jobs started per hour.** `ingest_items` and `backfill_items` share a per-account hourly limit of **100 successful start-job calls per hour**. Exceeding the limit returns `RATE_LIMIT_EXCEEDED` (HTTP 429) with `extensions.retryAfterMs`.
-* **Item create/update budget.** `ingest_items` reserves capacity against a per-account hourly budget of **19,000 items per hour**. If the job's valid row count would exceed the remaining budget, the job is rejected with `failure_reason: ACCOUNT_CAPACITY_EXCEEDED`. Capacity is released for rows that ultimately end up failed, skipped, or invalid.
+* **Item create/update budget.** `ingest_items` reserves capacity against a per-account hourly budget of **19,000 items per hour**. If the job's valid row count would exceed the remaining budget, the job is rejected. In API version [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later, `failure_reason` is `HOURLY_ACCOUNT_CAPACITY_EXCEEDED`; in earlier versions, and in requests with no API version, it is `ACCOUNT_CAPACITY_EXCEEDED`. Capacity is released for rows that ultimately end up failed, skipped, or invalid.
 
 ***
 

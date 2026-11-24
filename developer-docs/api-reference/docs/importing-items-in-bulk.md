@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:33:35.000Z
+updatedAt: 2026-11-24T10:05:06.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -106,7 +106,7 @@ Rows that include unsupported column types may fail validation. See [Column type
 | Maximum items per MLS hierarchy import    | 5,000                                       | 5,000                                       |
 | Maximum subitems per parent item          | Account subitem limit                       | Account subitem limit                       |
 
-**Notes**
+## Notes
 
 * File size is enforced after upload by the import service (not by the upload URL itself). Oversized files are rejected with `failure_reason: FILE_TOO_LARGE`.
 * Cancellation of a running job is not supported.
@@ -129,7 +129,7 @@ Rows that include unsupported column types may fail validation. See [Column type
 2. Call [`ingest_items`](https://developer.monday.com/api-reference/reference/ingest-items-api-reference#ingest-items) unless you specifically need a one-time admin-only initial load via [`backfill_items`](https://developer.monday.com/api-reference/reference/backfill-items-api-reference#backfill-items).
 3. Save the returned `job_id` and `upload_url`. The `upload_url` is only valid for 10 minutes.
 
-**Ingest example (default path)**
+### Ingest example (default path)
 
 ```graphql GraphQL
 mutation {
@@ -146,7 +146,7 @@ mutation {
 
 When `on_match` is provided, matching is evaluated across the whole board. `group_id` only controls where newly created rows are inserted; it does not scope matching or move matched items.
 
-**Backfill example (one-time initial load only)**
+### Backfill example (one-time initial load only)
 
 ```graphql GraphQL
 mutation {
@@ -170,7 +170,7 @@ Content-Type: text/csv
 
 A successful upload returns HTTP 200 with an `ETag` header.
 
-```
+```http
 HTTP/1.1 200 OK
 ETag: "abc123def456"
 ```
@@ -403,7 +403,7 @@ Rules for MLS hierarchy imports:
 5. Handle GraphQL errors from the API separately from HTTP errors from the file upload step.
 6. Download the report as soon as `report_created` is `true`.
 7. On `RATE_LIMIT_EXCEEDED`, wait using `extensions.retryAfterMs` instead of retrying immediately.
-8. For ingest, spread large volumes across the hour where possible to reduce `ACCOUNT_CAPACITY_EXCEEDED` rejections.
+8. For ingest, spread large volumes across the hour where possible to reduce `HOURLY_ACCOUNT_CAPACITY_EXCEEDED` rejections (`ACCOUNT_CAPACITY_EXCEEDED` in API versions before `2027-01`).
 9. For MLS hierarchy imports, order rows top-to-bottom so each child appears after its parent.
 10. For classic subitems imports, order rows so each subitem follows the item it belongs to.
 
@@ -457,7 +457,7 @@ Rules for MLS hierarchy imports:
     </tr>
     <tr>
       <td>Hourly capacity exceeded (ingest)</td>
-      <td>Status `REJECTED`, `failure_reason: ACCOUNT_CAPACITY_EXCEEDED`</td>
+      <td>Status `REJECTED`, `failure_reason: HOURLY_ACCOUNT_CAPACITY_EXCEEDED` in API version `2027-01` and later, or `ACCOUNT_CAPACITY_EXCEEDED` in earlier versions</td>
       <td>The job's valid row count would exceed the remaining 19,000 items-per-hour budget. Spread the load across the hour or wait for the budget to reset.</td>
     </tr>
     <tr>

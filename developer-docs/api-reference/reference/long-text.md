@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-09-06T08:35:10.000Z
+updatedAt: 2026-11-16T15:58:56.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -94,18 +94,57 @@ const variables = { itemIds: [1234567890, 9876543210] };
 const response = await mondayApiClient.request(query, variables);
 ```
 
+### Query rich text
+
+<Callout icon="🚧" theme="warn">
+  **Only available in API versions `2027-01` and later**
+</Callout>
+
+To read the column's content as HTML or markdown, use the `rich_text` field. The `format` argument is optional and defaults to `html`. Set it to `markdown` to get markdown instead.
+
+```graphql GraphQL
+query {
+  items(ids: [1234567890]) {
+    column_values {
+      ... on LongTextValue {
+        id
+        rich_text(format: html)
+      }
+    }
+  }
+}
+```
+
+To read the content as markdown, pass `format: markdown`.
+
+```graphql GraphQL
+query {
+  items(ids: [1234567890]) {
+    column_values {
+      ... on LongTextValue {
+        id
+        rich_text(format: markdown)
+      }
+    }
+  }
+}
+```
+
+Reading as markdown converts the stored HTML and drops underline, text alignment and line breaks inside headings.
+
 ## Fields
 
 You can use the following [fields](https://graphql.org/learn/queries/#fields) to specify what information your `LongTextValue` implementation will return.
 
-| Field              | Description                                                                                        |
-| :----------------- | :------------------------------------------------------------------------------------------------- |
-| column `Column!`   | The column the value belongs to.                                                                   |
-| id `ID!`           | The column's unique identifier.                                                                    |
-| text `String`      | The column's text content. Returns `""` if the column has an empty value.                          |
-| type `ColumnType!` | The column's type.                                                                                 |
-| updated\_at `Date` | The column's last updated date. Returns `null` if the column has never been set.                   |
-| value `JSON`       | The column's raw value as a JSON string. Returns `{"text": "..."}` when set, or `null` when empty. |
+| Field               | Description                                                                                                                                                                                               |
+| :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| column `Column!`    | The column the value belongs to.                                                                                                                                                                          |
+| id `ID!`            | The column's unique identifier.                                                                                                                                                                           |
+| rich\_text `String` | The column's rich text value in the requested format. Accepts an optional `format` argument (`RichTextFormat`: `html` or `markdown`, default `html`). **Only available in versions `2027-01` and later.** |
+| text `String`       | The column's text content. Returns `""` if the column has an empty value.                                                                                                                                 |
+| type `ColumnType!`  | The column's type.                                                                                                                                                                                        |
+| updated\_at `Date`  | The column's last updated date. Returns `null` if the column has never been set.                                                                                                                          |
+| value `JSON`        | The column's raw value as a JSON string. Returns `{"text": "..."}` when set, or `null` when empty.                                                                                                        |
 
 ## Example response
 
@@ -344,6 +383,8 @@ mutation {
 ## Update value
 
 You can update a long text column value using [`change_simple_column_value`](https://developer.monday.com/api-reference/reference/columns#change-simple-column-value) or [`change_multiple_column_values`](https://developer.monday.com/api-reference/reference/columns#change-multiple-column-values). The column accepts up to 2,000 characters.
+
+To keep the formatting when writing rich text (versions `2027-01` and later), send `rich_text` without `text`: a write that sends both keeps `text` and clears `rich_text`. When writing markdown, paragraphs, line breaks, headings (`#` to `######`), bold, italic, strikethrough, lists and links are supported. Any other markdown is kept as plain text.
 
 ### `change_simple_column_value`
 

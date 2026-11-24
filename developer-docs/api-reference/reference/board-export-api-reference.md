@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-04T13:52:24.000Z
+updatedAt: 2026-11-20T12:22:43.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -73,7 +73,7 @@ Poll until `status` is one of the terminal values — `COMPLETED`, `FAILED`, or 
 Back off between polls rather than polling in a tight loop; every call counts against your [rate limits](https://developer.monday.com/api-reference/docs/rate-limits). Large exports can take minutes, so set a timeout in your own client rather than polling indefinitely.
 
 <Callout icon="⚠️" theme="warn">
-  **A `null` result does not mean the job failed.** This query returns `null` for a `job_id` that does not exist *and* for one that belongs to a different account — the two are deliberately indistinguishable, so an ID that leaks cannot be used to probe for other accounts' exports. If you get `null` for an ID you just received, check that you are querying with the same account's token.
+  **A `null` result does not mean the job failed.** This query returns `null` for an unknown `job_id`. A job that failed reports the `FAILED` status instead. If you get `null` for an ID you just received, check that you are polling with the same account's token.
 </Callout>
 
 ***
