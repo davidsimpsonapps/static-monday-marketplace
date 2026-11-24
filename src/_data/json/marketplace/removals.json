@@ -1,7 +1,4422 @@
 {
   "description": "Apps removed from, or archived out of, the monday.com marketplace. 'archived' means the app is still present in marketplace.json but has no categories (matches appsWithoutCategories in .eleventy.js); 'removed' means it disappeared from marketplace.json entirely. Each entry keeps the last known full app JSON, and the last known full JSON for its vendor, from the day the change was detected (for removals, that's the day before it disappeared).",
-  "processedThrough": "2026-11-23",
+  "processedThrough": "2026-11-24",
   "events": [
+    {
+      "id": 10000159,
+      "app_id": 10051788,
+      "name": "Smart Embed View ",
+      "type": "archived",
+      "date": "2026-11-24",
+      "installs": null,
+      "app": {
+        "id": 10000159,
+        "marketplace_developer_id": 42,
+        "app_id": 10051788,
+        "app_type": null,
+        "security_info": null,
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000159/10000159_2024_7_8_7_11_52_eiw5m4n.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000159/10000159_2024_7_8_7_12_6_81hsvel.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000159/10000159_2024_7_8_7_12_15_j870xpa.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p>Smart Embed View&nbsp;let's you easily embed any cloud tools into your your monday.com boards, items and dashboards so you can access popular web-apps from one centralized place..</p><p><br></p><p>Get Smart Embed View&nbsp;now for</p><ul><li><strong>Centralized Access:</strong> Users can access all necessary tools in one place without switching between different applications, saving time and reducing distractions.</li><li><strong>Streamlined Workflow:</strong> Have seamless data flow between tools, improving efficiency and reducing the need for manual data entry.</li><li><strong>Unified Communication:</strong> Team members can communicate and collaborate within the same workspace, fostering better teamwork and faster decision-making.</li></ul><p><br></p><p>To learn more <a href=\"https://guest.getresponse.chat/?c=9de079a759ca5a1629330d1f86505a086e89008391e5b3664dce375d67\" rel=\"noopener noreferrer\" target=\"_blank\">Chat With Us</a> , <a href=\"https://calendar.app.google/86j14117GSV5enFZA\" rel=\"noopener noreferrer\" target=\"_blank\">Book a Meeting</a>, <a href=\"https://youtu.be/c17oxjgP-SQ?si=cPRGFpjQYK2CPUlw\" rel=\"noopener noreferrer\" target=\"_blank\">Watch a Demo</a></p><p><br></p><p>Simply create a new Smart Embed View&nbsp;and embed any page on the web:</p><p><br></p><ul><li>Embed <strong>Jira</strong> into your boards and views</li><li>Embed <strong>Canva</strong> nto your boards and views</li><li>Embed Google <strong>Calendar</strong> into your boards and views</li><li>Embed <strong>Microsoft</strong> Office 365 into your boards and views</li><li>Embed Google <strong>Sheets</strong>, Google <strong>Docs</strong>, Google <strong>Slides</strong> into your boards and views</li><li>Embed <strong>Figma</strong> into your boards and views</li></ul><p><br></p><p><br></p>",
+        "short_description": "Embed Microsoft 365, Google Sheets, Figma, Canva & more!",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1674661255/monday-apps-marketplace/Out-Menu/card_2_1.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000159/10000159_2024_6_26_11_12_45_hlhm0osj.png",
+        "feedback_url": "appsupport@jetpackapps.co",
+        "privacy_policy_url": "https://jetpackapps.co/privacy-notice/",
+        "featured": null,
+        "name": "Smart Embed View ",
+        "how_to_use_url": null,
+        "external_pricing_url": null,
+        "keywords": "Trello,Jira,office, sheets,iframe,Embed,google,Calendar",
+        "compliance_answers": [
+          {
+            "questionId": 18,
+            "detailedAnswer": "",
+            "logHostingProvider": "monday"
+          },
+          {
+            "questionId": 17,
+            "detailedAnswer": "",
+            "dataHostingProvider": "monday"
+          },
+          {
+            "questionId": 15,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 14,
+            "shortAnswer": true,
+            "detailedAnswer": "privacy@jetpackwork.com"
+          },
+          {
+            "questionId": 13,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 11,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 9,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 8,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 7,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 6,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 5,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 4,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 3,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 2,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 1,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          }
+        ],
+        "created_at": "2023-01-25T15:58:22.000Z",
+        "updated_at": "2025-10-31T16:37:34.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "Free",
+        "label": null,
+        "app_values": [
+          "Centralize your work on monday.com"
+        ],
+        "security": null,
+        "display_in_template_store": null,
+        "acquisition_source": "No touch",
+        "is_connector": null,
+        "show_connections": null,
+        "terms_of_service_url": null,
+        "available_for_tiers": null,
+        "available_for_products": null,
+        "google_analytics_tag_id": null,
+        "is_solution": null,
+        "cta_override": null,
+        "app_scope_str": "",
+        "app_client_id": "da79aa85e8af142520e7e7acdc80ab6b",
+        "app_color": {
+          "hsl": {
+            "h": 210.61728395061726,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 210.61728395061726,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 210.61728395061726,
+          "source": "rgb"
+        },
+        "plans": [
+          {
+            "id": "10051788-1-view-free",
+            "appPlanId": "view-free",
+            "name": "Free",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10051788,
+            "description": "Great for evaluating Smart Embed View",
+            "extraData": {
+              "bullets": [
+                "Up to one Embed view",
+                "Unlimited Users"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10051788-1-view-basic-19",
+            "appPlanId": "view-basic-19",
+            "name": "Basic",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 19,
+              "yearly": 17
+            },
+            "versionState": "live",
+            "appId": 10051788,
+            "description": "Great for small teams",
+            "extraData": {
+              "bullets": [
+                "Up to 5 Embed view",
+                "Unlimited Users"
+              ],
+              "monthlyFee": 19,
+              "yearlyFee": 17
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10051788-1-view-pro-39",
+            "appPlanId": "view-pro-39",
+            "name": "Essential",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 39,
+              "yearly": 35
+            },
+            "versionState": "live",
+            "appId": 10051788,
+            "description": "Great for multiple teams",
+            "extraData": {
+              "bullets": [
+                "Up to 10 Embed view",
+                "Unlimited Users"
+              ],
+              "monthlyFee": 39,
+              "yearlyFee": 35
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10051788-1-view-ultimate-49",
+            "appPlanId": "view-ultimate-49",
+            "name": "Pro",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 49,
+              "yearly": 44
+            },
+            "versionState": "live",
+            "appId": 10051788,
+            "description": "Great for growing teams",
+            "extraData": {
+              "bullets": [
+                "Up to 20 Embed view",
+                "Unlimited Users"
+              ],
+              "monthlyFee": 49,
+              "yearlyFee": 44
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10051788-1-view-ultimate-99",
+            "appPlanId": "view-ultimate-99",
+            "name": "Growth",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 99,
+              "yearly": 83
+            },
+            "versionState": "live",
+            "appId": 10051788,
+            "description": "Great for cost effective growing teams",
+            "extraData": {
+              "bullets": [
+                "Unlimited Embed views",
+                "Unlimited Users",
+                "Free access to ALL Smart Column Apps"
+              ],
+              "monthlyFee": 99,
+              "yearlyFee": 83
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10051788-2-view_free_1",
+            "appPlanId": "view_free_1",
+            "name": "Free",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 0,
+              "yearly": 0
+            },
+            "versionState": "live",
+            "appId": 10051788,
+            "description": "Great for evaluating Smart Embed View",
+            "extraData": {
+              "bullets": [
+                "Up to one Embed view",
+                "Unlimited Users"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10051788-2-view_basic_1",
+            "appPlanId": "view_basic_1",
+            "name": "Basic",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 19,
+              "yearly": 17
+            },
+            "versionState": "live",
+            "appId": 10051788,
+            "description": "Best for a basic workflow",
+            "extraData": {
+              "bullets": [
+                "Up to 5 Embed view",
+                "Unlimited Users"
+              ],
+              "monthlyFee": 19,
+              "yearlyFee": 17
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10051788-2-view_ess_1",
+            "appPlanId": "view_ess_1",
+            "name": "Essential",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 39,
+              "yearly": 35
+            },
+            "versionState": "live",
+            "appId": 10051788,
+            "description": "Best for a multiple basic workflows",
+            "extraData": {
+              "bullets": [
+                "Up to 10 Embed view",
+                "Unlimited Users"
+              ],
+              "monthlyFee": 39,
+              "yearlyFee": 35
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10051788-2-view_pro_1",
+            "appPlanId": "view_pro_1",
+            "name": "Pro",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 49,
+              "yearly": 44
+            },
+            "versionState": "live",
+            "appId": 10051788,
+            "description": "Best for multiple growing workflows",
+            "extraData": {
+              "bullets": [
+                "Up to 20 Embed view",
+                "Unlimited Users"
+              ],
+              "monthlyFee": 49,
+              "yearlyFee": 44
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10051788-2-view_gro_1",
+            "appPlanId": "view_gro_1",
+            "name": "Growth",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 99,
+              "yearly": 83
+            },
+            "versionState": "live",
+            "appId": 10051788,
+            "description": "Best for multiple scaling workflows",
+            "extraData": {
+              "bullets": [
+                "Unlimited Embed views",
+                "Unlimited Users",
+                "Free access to ALL Smart Column Apps"
+              ],
+              "monthlyFee": 99,
+              "yearlyFee": 83
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2026-08-11T08:01:27.317Z",
+          "id": 16790626
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "app_values": [
+            "Centralize your work on monday.com"
+          ],
+          "pricing_data": "Free",
+          "acquisition_source": "No touch"
+        },
+        "data": {
+          "terms_of_service_url": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000369,
+      "app_id": 10115959,
+      "name": "Capable Risk Register",
+      "type": "archived",
+      "date": "2026-11-24",
+      "installs": null,
+      "app": {
+        "id": 10000369,
+        "marketplace_developer_id": 10000142,
+        "app_id": 10115959,
+        "app_type": "app",
+        "security_info": null,
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1708864805/monday-apps-marketplace/Capable%20Risk%20Register/Feb%2024/risk_reg_1_1.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1708864806/monday-apps-marketplace/Capable%20Risk%20Register/Feb%2024/risk_reg_2_1.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1708864806/monday-apps-marketplace/Capable%20Risk%20Register/Feb%2024/risk_reg_3_1.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1708864807/monday-apps-marketplace/Capable%20Risk%20Register/Feb%2024/risk_reg_4_1.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1708864808/monday-apps-marketplace/Capable%20Risk%20Register/Feb%2024/risk_reg_5.png"
+          }
+        ],
+        "description": "<p>Set up in minutes. Keep it updated. Mitigate effectively. Perfect for project managers, risk officers, and compliance teams.</p><p><br></p><p>Capable Risk Register is a comprehensive risk management solution for monday.com. It provides a means to setup auto-updating risk columns so that you can get validated, correct risk level calculation. The app comes with templates for use and setup videos to help you get going in no time too.</p><p><br></p><p><strong>Why Capable Risk Register?</strong></p><p><br></p><ul><li>📋 Comprehensive Risk Management: Instantly create a clear, professional risk register to track and mitigate potential issues.</li><li>⚙️ Fully Customizable Solution: Tailor everything from impact and probability levels to risk categories, ensuring the tool fits your specific project needs.</li><li>👥 Collaborative Approach: Empower every team member to contribute, ensuring a comprehensive view of potential risks.</li><li>📊 Visualize with Ease: User-friendly risk matrix, pie charts, and bar charts provide a visual snapshot of all your risks.</li><li>🔐 Governance &amp; Compliance: Support for ISO14971, IEC60812, ISO27001, ISO 31000, PCI, and many more GRC programs requiring a risk register!</li></ul><p><br></p><p><strong>How It Works</strong></p><p><br></p><ol><li>Add your risks to our template, link mitigations and tasks as needed.</li><li>Capable Risk Register will validate and compute impact + auto-create your visual risk matrix.</li><li>Customize your view with risk categories and priorities.</li><li>Track and update risks throughout your project lifecycle—done!</li></ol><p><br></p><p><strong>Next steps:</strong></p><p><br></p><ul><li>📲 Click install/use app above</li><li>📚 Read more <a href=\"https://help.capablekoala.co/capable-risk-register/\" rel=\"noopener noreferrer\" target=\"_blank\">See the help guide</a></li><li>👉 For any questions send an email to support@capablekoala.co</li></ul><p><br></p><p>Brought to you by Capable Koala Co 🐨</p>",
+        "short_description": "Manage your company & project risks with ease ✅",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1703430762/monday-apps-marketplace/Capable%20Risk%20Register/risk_reg_card_3.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1703430762/monday-apps-marketplace/Capable%20Risk%20Register/icon.png",
+        "feedback_url": "support@capablekoala.co",
+        "privacy_policy_url": "https://capablekoala.co/privacy/",
+        "featured": null,
+        "name": "Capable Risk Register",
+        "how_to_use_url": "https://capablekoala.co/apps/monday_risk_register/",
+        "external_pricing_url": null,
+        "keywords": "risk register, risk management, project management, GRC",
+        "compliance_answers": [
+          {
+            "questionId": 19,
+            "shortAnswer": true,
+            "detailedAnswer": "Non-customer-submitted data may be sent to monitoring systems to track application errors."
+          },
+          {
+            "questionId": 18,
+            "detailedAnswer": "",
+            "logHostingProvider": "monday"
+          },
+          {
+            "questionId": 17,
+            "detailedAnswer": "",
+            "dataHostingProvider": "monday"
+          },
+          {
+            "questionId": 14,
+            "shortAnswer": true,
+            "detailedAnswer": "security@capablekoala.co"
+          },
+          {
+            "questionId": 11,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 10,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 9,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 8,
+            "shortAnswer": true,
+            "detailedAnswer": "Only the customer account ID, board id and item ids being used for logging. Sentry tracks minimal data and has PII scrubbers enabled."
+          },
+          {
+            "questionId": 7,
+            "shortAnswer": true,
+            "detailedAnswer": "Company policy is that all accounts for the company have MFA when supported.\n"
+          },
+          {
+            "questionId": 6,
+            "shortAnswer": true,
+            "detailedAnswer": "Customer data is only available to senior level employees who have been approved by the company directors."
+          },
+          {
+            "questionId": 5,
+            "shortAnswer": true,
+            "detailedAnswer": "\n"
+          },
+          {
+            "questionId": 4,
+            "shortAnswer": true,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 3,
+            "shortAnswer": true,
+            "detailedAnswer": "Monday would be contacted by the new support ticket mechanism upon discovery of a breach."
+          },
+          {
+            "questionId": 2,
+            "shortAnswer": true,
+            "detailedAnswer": "Vulnerabilities are monitored with github's dependabot and security vulnerabilities will be updated within 48 hours for critical, and 1 week for High or below."
+          },
+          {
+            "questionId": 1,
+            "shortAnswer": true,
+            "detailedAnswer": "All data is stored using monday.com provided key/value storage (which is segregated by customer by default), or in the customer's monday.com boards."
+          }
+        ],
+        "created_at": "2023-12-24T15:10:43.000Z",
+        "updated_at": "2025-12-09T15:15:15.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Make data-driver decisions"
+        ],
+        "security": null,
+        "display_in_template_store": null,
+        "acquisition_source": "No touch",
+        "is_connector": null,
+        "show_connections": null,
+        "terms_of_service_url": "https://capablekoala.co/terms/",
+        "available_for_tiers": null,
+        "available_for_products": null,
+        "google_analytics_tag_id": null,
+        "is_solution": null,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write,me:read,account:read",
+        "app_client_id": "38a27470090da3b9325a8b21ea314f59",
+        "app_color": {
+          "hsl": {
+            "h": 145.33333333333331,
+            "s": 0.40540540540540543,
+            "l": 0.21764705882352942,
+            "a": 1
+          },
+          "hex": "#214e34",
+          "rgb": {
+            "r": 33,
+            "g": 78,
+            "b": 52,
+            "a": 1
+          },
+          "hsv": {
+            "h": 145.33333333333331,
+            "s": 0.5769230769230769,
+            "v": 0.3058823529411765,
+            "a": 1
+          },
+          "oldHue": 152.54237288135593,
+          "source": "hex"
+        },
+        "plans": [
+          {
+            "id": "10115959-1-up_to_5",
+            "appPlanId": "up_to_5",
+            "name": "Up to 5 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 5,
+              "yearly": 4,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 5 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks"
+              ],
+              "monthlyFee": 5,
+              "yearlyFee": 4,
+              "maxSeats": 5
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-1-up_to_10",
+            "appPlanId": "up_to_10",
+            "name": "Up to 10 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 10,
+              "yearly": 8,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 10 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks"
+              ],
+              "monthlyFee": 10,
+              "yearlyFee": 8,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-1-up_to_25",
+            "appPlanId": "up_to_25",
+            "name": "Up to 25 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 25,
+              "yearly": 20,
+              "maxSeats": 25
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 25 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks"
+              ],
+              "monthlyFee": 25,
+              "yearlyFee": 20,
+              "maxSeats": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-1-up_to_50",
+            "appPlanId": "up_to_50",
+            "name": "Up to 50 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 50,
+              "yearly": 41,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 50 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks"
+              ],
+              "monthlyFee": 50,
+              "yearlyFee": 41,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-1-up_to_100",
+            "appPlanId": "up_to_100",
+            "name": "Up to 100 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 100,
+              "yearly": 83,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 100 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks"
+              ],
+              "monthlyFee": 100,
+              "yearlyFee": 83,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-1-up_to_250",
+            "appPlanId": "up_to_250",
+            "name": "Up to 250 seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 200,
+              "yearly": 166,
+              "maxSeats": 200
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 250 users",
+            "extraData": {
+              "bullets": [
+                "- Unlimited risk registers",
+                "- Unlimited risks"
+              ],
+              "monthlyFee": 200,
+              "yearlyFee": 166,
+              "maxSeats": 200
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-1-above_250",
+            "appPlanId": "above_250",
+            "name": "Unlimited seats",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 300,
+              "yearly": 250,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Unlimited number of users",
+            "extraData": {
+              "bullets": [
+                "- Unlimited risk registers",
+                "- Unlimited risks"
+              ],
+              "monthlyFee": 300,
+              "yearlyFee": 250,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-2-up_to_5",
+            "appPlanId": "up_to_5",
+            "name": "Up to 5 seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 5,
+              "yearly": 4,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 5 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks & mitigations"
+              ],
+              "monthlyFee": 5,
+              "yearlyFee": 4,
+              "maxSeats": 5
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-2-up_to_10",
+            "appPlanId": "up_to_10",
+            "name": "Up to 10 seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 10,
+              "yearly": 8,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 10 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks & mitigations"
+              ],
+              "monthlyFee": 10,
+              "yearlyFee": 8,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-2-up_to_25",
+            "appPlanId": "up_to_25",
+            "name": "Up to 25 seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 20,
+              "yearly": 16,
+              "maxSeats": 25
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 25 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks & mitigations"
+              ],
+              "monthlyFee": 20,
+              "yearlyFee": 16,
+              "maxSeats": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-2-up_to_50",
+            "appPlanId": "up_to_50",
+            "name": "Up to 50 seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 40,
+              "yearly": 32,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 50 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks & mitigations"
+              ],
+              "monthlyFee": 40,
+              "yearlyFee": 32,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-2-up_to_100",
+            "appPlanId": "up_to_100",
+            "name": "Up to 100 seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 80,
+              "yearly": 64,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 100 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks & mitigations"
+              ],
+              "monthlyFee": 80,
+              "yearlyFee": 64,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-2-up_to_250",
+            "appPlanId": "up_to_250",
+            "name": "Up to 250 seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 120,
+              "yearly": 96,
+              "maxSeats": 200
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Up to 250 users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks & mitigations"
+              ],
+              "monthlyFee": 120,
+              "yearlyFee": 96,
+              "maxSeats": 200
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10115959-2-above_250",
+            "appPlanId": "above_250",
+            "name": "Unlimited seats",
+            "versionId": 2,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 150,
+              "yearly": 120,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10115959,
+            "description": "Unlimited number of users",
+            "extraData": {
+              "bullets": [
+                "Unlimited risk registers",
+                "Unlimited risks & mitigations"
+              ],
+              "monthlyFee": 150,
+              "yearlyFee": 120,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-10-28T10:27:27.343Z",
+          "id": 10881754
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "app_values": [
+            "Make data-driver decisions"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch"
+        },
+        "data": {
+          "terms_of_service_url": "https://capablekoala.co/terms/"
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000451,
+      "app_id": 10142077,
+      "name": "Status Label Descriptions",
+      "type": "archived",
+      "date": "2026-11-24",
+      "installs": null,
+      "app": {
+        "id": 10000451,
+        "marketplace_developer_id": 10000179,
+        "app_id": 10142077,
+        "app_type": "app",
+        "security_info": null,
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000451/10000451_2024_4_10_17_59_17_ujp28wu.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000451/10000451_2024_4_10_17_59_25_lexv8dl.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000451/10000451_2024_4_10_17_59_36_hjezfcn.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p><strong>Status Label Directory (SLD) </strong>is a powerful tool designed to streamline standard operating procedure (SOP) documentation and enhance workflow management within monday.com. Tailored for teams seeking to optimize their processes and improve productivity, SLD offers a centralized hub where users can organize, document, and track SOPs associated with status labels in their monday.com boards.</p><p><br></p><p><strong>Features and Benefits:</strong></p><ul><li><strong>Effortless Organization&nbsp;</strong>✅<strong>&nbsp;-</strong>&nbsp;Easily list out labels of all status columns in a board in a separate board view, providing a comprehensive overview of workflow statuses and associated procedures.</li><li><strong>Customizable Notes and Links ✅ -</strong>&nbsp;Add detailed notes and links to each status label, enabling users to document specific actions, instructions, or references related to individual labels.</li><li><strong>Training and Onboarding Support ✅ -</strong>&nbsp;Facilitate training and onboarding processes by providing new team members with quick access to SOP documentation directly within the monday.com platform.</li><li><strong>Increased Efficiency ✅ -</strong>&nbsp;Save time and reduce errors by standardizing SOP documentation and providing clear guidance on workflow procedures, ensuring consistency and accuracy across teams.</li><li><strong>Improved Collaboration ✅ -</strong>&nbsp;Foster collaboration and knowledge sharing among team members by centralizing SOP documentation and enabling collaborative editing and feedback.</li></ul><p><strong>Examples of Use Cases:</strong></p><ul><li>A marketing team uses SLD to document standard procedures for campaign status updates, including specific tasks, timelines, and resource requirements.</li><li>A project management team utilizes SLD to outline SOPs for project milestones, providing detailed instructions and links to relevant project documents and resources.</li><li>A human resources department leverages SLD to enhance onboarding procedures for new employees.</li></ul><p><br></p><p>Questions?&nbsp;<a href=\"https://calendly.com/lovelysolutions/consultation\" rel=\"noopener noreferrer\" target=\"_blank\">Book a demo!</a></p>",
+        "short_description": "Automatically organize & define status labels in list format",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1714565119/monday-apps-marketplace/Status%20Label%20Directory/SLD_Card_Final.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000451/10000451_2024_4_10_17_57_51_w61lnsf.png",
+        "feedback_url": "liambailey131@outlook.com",
+        "privacy_policy_url": "https://www.lovelysolutions.co/legal",
+        "featured": null,
+        "name": "Status Label Descriptions",
+        "how_to_use_url": "https://mlinder10.github.io/HowToUseSLD/",
+        "external_pricing_url": null,
+        "keywords": "organize,document,SOP,status,Process,update,training,resource,stage,template",
+        "compliance_answers": [
+          {
+            "questionId": 1,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 2,
+            "shortAnswer": true,
+            "detailedAnswer": "We field support emails and evaluate said requests on a 1-5 scale and respond to them in a corresponding timeframe."
+          },
+          {
+            "questionId": 3,
+            "shortAnswer": true,
+            "detailedAnswer": "We would notify monday.com immediately via email."
+          },
+          {
+            "questionId": 4,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 5,
+            "shortAnswer": true,
+            "detailedAnswer": "It's handled by React."
+          },
+          {
+            "questionId": 6,
+            "shortAnswer": true,
+            "detailedAnswer": "CEO and CTO"
+          },
+          {
+            "questionId": 7,
+            "shortAnswer": true
+          },
+          {
+            "questionId": 8,
+            "shortAnswer": true,
+            "detailedAnswer": "We don't keep logs"
+          },
+          {
+            "questionId": 9,
+            "shortAnswer": false,
+            "detailedAnswer": "The app doesn't mutate monday.com data."
+          },
+          {
+            "questionId": 10,
+            "shortAnswer": false,
+            "detailedAnswer": "The app does not redirect to any other sites"
+          },
+          {
+            "questionId": 11,
+            "shortAnswer": true
+          },
+          {
+            "questionId": 12,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 13,
+            "shortAnswer": true
+          },
+          {
+            "questionId": 14,
+            "shortAnswer": true,
+            "detailedAnswer": "contact@lovelysolutions.co"
+          },
+          {
+            "questionId": 15,
+            "shortAnswer": true,
+            "detailedAnswer": "Bi-weekly"
+          }
+        ],
+        "created_at": "2024-05-01T12:08:19.000Z",
+        "updated_at": "2025-10-31T16:38:46.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Centralize your work on monday.com"
+        ],
+        "security": null,
+        "display_in_template_store": null,
+        "acquisition_source": "No touch",
+        "is_connector": null,
+        "show_connections": null,
+        "terms_of_service_url": "https://www.lovelysolutions.co/legal",
+        "available_for_tiers": null,
+        "available_for_products": null,
+        "google_analytics_tag_id": "G-F2SM7EPTHG",
+        "is_solution": null,
+        "cta_override": null,
+        "app_scope_str": "boards:read",
+        "app_client_id": "8121f847511946b234f84f1933539685",
+        "app_color": {
+          "hsl": {
+            "h": 25.170731707317078,
+            "s": 0.8154308296365982,
+            "l": 0.4822853116070851,
+            "a": 1
+          },
+          "hex": "#df6b17",
+          "rgb": {
+            "r": 223,
+            "g": 107,
+            "b": 23,
+            "a": 1
+          },
+          "hsv": {
+            "h": 25.170731707317078,
+            "s": 0.8983331298828126,
+            "v": 0.8755556233723958,
+            "a": 1
+          },
+          "oldHue": 25.170731707317078,
+          "source": "rgb"
+        },
+        "plans": [
+          {
+            "id": "10142077-1-plan1",
+            "appPlanId": "plan1",
+            "name": "Up to 3 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 4,
+              "yearly": 3,
+              "maxSeats": 3
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 3 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 4,
+              "yearlyFee": 3,
+              "maxSeats": 3
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-1-plan2",
+            "appPlanId": "plan2",
+            "name": "Up to 5 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 6,
+              "yearly": 5,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 5 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 6,
+              "yearlyFee": 5,
+              "maxSeats": 5
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-1-plan3",
+            "appPlanId": "plan3",
+            "name": "Up to 10 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 8,
+              "yearly": 6,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 10 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 8,
+              "yearlyFee": 6,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-1-plan4",
+            "appPlanId": "plan4",
+            "name": "Up to 15 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 12,
+              "yearly": 10,
+              "maxSeats": 15
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 15 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 12,
+              "yearlyFee": 10,
+              "maxSeats": 15
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-1-plan5",
+            "appPlanId": "plan5",
+            "name": "Up to 20 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 14,
+              "yearly": 12,
+              "maxSeats": 20
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 20 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 14,
+              "yearlyFee": 12,
+              "maxSeats": 20
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-1-plan6",
+            "appPlanId": "plan6",
+            "name": "Up to 25 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 16,
+              "yearly": 14,
+              "maxSeats": 25
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 25 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 16,
+              "yearlyFee": 14,
+              "maxSeats": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-1-plan7",
+            "appPlanId": "plan7",
+            "name": "Up to 30 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 18,
+              "yearly": 16,
+              "maxSeats": 30
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 30 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 18,
+              "yearlyFee": 16,
+              "maxSeats": 30
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-1-plan8",
+            "appPlanId": "plan8",
+            "name": "Up to 40 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 22,
+              "yearly": 20,
+              "maxSeats": 40
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 40 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 22,
+              "yearlyFee": 20,
+              "maxSeats": 40
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-1-plan9",
+            "appPlanId": "plan9",
+            "name": "Up to 50 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 25,
+              "yearly": 22,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 50 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 25,
+              "yearlyFee": 22,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-1-plan10",
+            "appPlanId": "plan10",
+            "name": "Up to 100 Seats",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 50,
+              "yearly": 40,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 100 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 50,
+              "yearlyFee": 40,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-1-plan11",
+            "appPlanId": "plan11",
+            "name": "Unlimited",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 100,
+              "yearly": 80,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with more than 100 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 100,
+              "yearlyFee": 80,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan1",
+            "appPlanId": "plan1",
+            "name": "Up to 3 Seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 3,
+              "yearly": 2,
+              "maxSeats": 3
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 3 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 3,
+              "yearlyFee": 2,
+              "maxSeats": 3
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan2",
+            "appPlanId": "plan2",
+            "name": "Up to 5 Seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 5,
+              "yearly": 4,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 5 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 5,
+              "yearlyFee": 4,
+              "maxSeats": 5
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan3",
+            "appPlanId": "plan3",
+            "name": "Up to 10 Seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 6,
+              "yearly": 5,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 10 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 6,
+              "yearlyFee": 5,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan4",
+            "appPlanId": "plan4",
+            "name": "Up to 15 Seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 8,
+              "yearly": 6,
+              "maxSeats": 15
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 15 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 8,
+              "yearlyFee": 6,
+              "maxSeats": 15
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan5",
+            "appPlanId": "plan5",
+            "name": "Up to 20 Seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 10,
+              "yearly": 8,
+              "maxSeats": 20
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 20 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 10,
+              "yearlyFee": 8,
+              "maxSeats": 20
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan6",
+            "appPlanId": "plan6",
+            "name": "Up to 25 Seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 12,
+              "yearly": 10,
+              "maxSeats": 25
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 25 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 12,
+              "yearlyFee": 10,
+              "maxSeats": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan7",
+            "appPlanId": "plan7",
+            "name": "Up to 30 Seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 15,
+              "yearly": 12,
+              "maxSeats": 30
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 30 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 15,
+              "yearlyFee": 12,
+              "maxSeats": 30
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan8",
+            "appPlanId": "plan8",
+            "name": "Up to 40 Seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 18,
+              "yearly": 16,
+              "maxSeats": 40
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 40 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 18,
+              "yearlyFee": 16,
+              "maxSeats": 40
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan9",
+            "appPlanId": "plan9",
+            "name": "Up to 50 Seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 20,
+              "yearly": 18,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 50 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 20,
+              "yearlyFee": 18,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan10",
+            "appPlanId": "plan10",
+            "name": "Up to 100 Seats",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 30,
+              "yearly": 25,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 100 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 30,
+              "yearlyFee": 25,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-2-plan11",
+            "appPlanId": "plan11",
+            "name": "Unlimited",
+            "versionId": 2,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 50,
+              "yearly": 40,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with more than 100 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 50,
+              "yearlyFee": 40,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-3-plan1",
+            "appPlanId": "plan1",
+            "name": "Up to 5 Seats",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 0,
+              "yearly": 0,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with 10 users or less",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 0,
+              "yearlyFee": 0,
+              "maxSeats": 5
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-3-plan2",
+            "appPlanId": "plan2",
+            "name": "Up to 10 Seats",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 4,
+              "yearly": 3,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with 10 users",
+            "extraData": {
+              "bullets": [],
+              "monthlyFee": 4,
+              "yearlyFee": 3,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-3-plan3",
+            "appPlanId": "plan3",
+            "name": "Up to 15 Seats",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 5,
+              "yearly": 4,
+              "maxSeats": 15
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 15 users",
+            "extraData": {
+              "bullets": [
+                "No different features"
+              ],
+              "monthlyFee": 5,
+              "yearlyFee": 4,
+              "maxSeats": 15
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-3-plan4",
+            "appPlanId": "plan4",
+            "name": "Up to 20 Seats",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 6,
+              "yearly": 5,
+              "maxSeats": 20
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 20 users",
+            "extraData": {
+              "bullets": [
+                "No different features"
+              ],
+              "monthlyFee": 6,
+              "yearlyFee": 5,
+              "maxSeats": 20
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-3-plan5",
+            "appPlanId": "plan5",
+            "name": "Up to 25 Seats",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 8,
+              "yearly": 6,
+              "maxSeats": 25
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 25 users",
+            "extraData": {
+              "bullets": [
+                "No different features"
+              ],
+              "monthlyFee": 8,
+              "yearlyFee": 6,
+              "maxSeats": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-3-plan6",
+            "appPlanId": "plan6",
+            "name": "Up to 30 Seats",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 10,
+              "yearly": 8,
+              "maxSeats": 30
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 30 users",
+            "extraData": {
+              "bullets": [
+                "No different features"
+              ],
+              "monthlyFee": 10,
+              "yearlyFee": 8,
+              "maxSeats": 30
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-3-plan7",
+            "appPlanId": "plan7",
+            "name": "Up to 40 Seats",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 12,
+              "yearly": 10,
+              "maxSeats": 40
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 40 users",
+            "extraData": {
+              "bullets": [
+                "No different features"
+              ],
+              "monthlyFee": 12,
+              "yearlyFee": 10,
+              "maxSeats": 40
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-3-plan8",
+            "appPlanId": "plan8",
+            "name": "Up to 50 Seats",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 15,
+              "yearly": 12,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 50 users",
+            "extraData": {
+              "bullets": [
+                "No different features"
+              ],
+              "monthlyFee": 15,
+              "yearlyFee": 12,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-3-plan9",
+            "appPlanId": "plan9",
+            "name": "Up to 100 Seats",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 16,
+              "yearly": 14,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with up to 100 users",
+            "extraData": {
+              "bullets": [
+                "No different features"
+              ],
+              "monthlyFee": 16,
+              "yearlyFee": 14,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-3-plan10",
+            "appPlanId": "plan10",
+            "name": "Unlimited",
+            "versionId": 3,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 20,
+              "yearly": 15,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with more than 100 users",
+            "extraData": {
+              "bullets": [
+                "No different features"
+              ],
+              "monthlyFee": 20,
+              "yearlyFee": 15,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-4-plan1",
+            "appPlanId": "plan1",
+            "name": "Free Plan",
+            "versionId": 4,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 0,
+              "yearly": 0,
+              "maxSeats": 999999
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "Free Plan",
+            "extraData": {
+              "bullets": [
+                "All Features"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0,
+              "maxSeats": 999999
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10142077-4-plan10",
+            "appPlanId": "plan10",
+            "name": "Unlimited Seats",
+            "versionId": 4,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 1,
+              "yearly": 1,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10142077,
+            "description": "For accounts with more than 100 users",
+            "extraData": {
+              "bullets": [
+                "No different features"
+              ],
+              "monthlyFee": 1,
+              "yearlyFee": 1,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-01-25T17:08:15.513Z",
+          "id": 10542261
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "app_values": [
+            "Centralize your work on monday.com"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch"
+        },
+        "data": {
+          "terms_of_service_url": "https://www.lovelysolutions.co/legal",
+          "google_analytics_tag_id": "G-F2SM7EPTHG"
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000455,
+      "app_id": 10126244,
+      "name": "Workflow Management",
+      "type": "archived",
+      "date": "2026-11-24",
+      "installs": null,
+      "app": {
+        "id": 10000455,
+        "marketplace_developer_id": 10000193,
+        "app_id": 10126244,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000455/10000455_2025_4_30_18_7_18_ggb4fi7.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000455/10000455_2025_4_30_18_7_27_myoz61d.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000455/10000455_2025_6_27_11_54_38_cczym8ak.png",
+            "type": "image"
+          }
+        ],
+        "description": "<p>Create, customize, and take full control of your processes effortlessly with the Workflow Management app for monday.com.</p><p><br></p><p>The Workflow Management app is a powerful tool that allows you to design and automate your business processes visually and intuitively.</p><p><br></p><p>Key features:</p><p>✔️&nbsp;Set up your custom workflow</p><p>✔️&nbsp;Easily adjust statuses to match your workflow stages</p><p>✔️&nbsp;Set required columns</p><p>✔️&nbsp;Control who can perform transitions</p><p>✔️&nbsp;Personalize permissions for board owners, ensuring team members can modify statuses without impacting the workflow structure</p>",
+        "short_description": "Visualize and automate your workflow. ",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1715004450/monday-apps-marketplace/Workflow%20Management/App_Card_4.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000455/10000455_2025_5_9_5_52_57_n37l1y.png",
+        "feedback_url": "skvgroupnet@gmail.com",
+        "privacy_policy_url": "https://www.skv-group.net/privacy/",
+        "featured": false,
+        "name": "Workflow Management",
+        "how_to_use_url": "https://www.skv-group.net/documentation/",
+        "external_pricing_url": null,
+        "keywords": "workflow, workflow automation, workflow management, task management, custom workflow, team workflow, status change, board management, status transition, status control",
+        "compliance_answers": [],
+        "created_at": "2024-05-06T14:07:57.000Z",
+        "updated_at": "2025-12-01T10:16:08.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "Free plan available",
+        "label": null,
+        "app_values": [
+          "Built for scalability"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": null,
+        "terms_of_service_url": "https://www.skv-group.net/terms/",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write,me:read,users:read,teams:read",
+        "app_client_id": "f3f1b943f3e05f6ccff9cd79a2ec3b22",
+        "app_color": {
+          "hsl": {
+            "h": 247.5,
+            "s": 0,
+            "l": 0.2,
+            "a": 1
+          },
+          "hex": "#333333",
+          "rgb": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          },
+          "hsv": {
+            "h": 247.5,
+            "s": 0,
+            "v": 0.2,
+            "a": 1
+          },
+          "oldHue": 247.5,
+          "source": "hex"
+        },
+        "plans": [
+          {
+            "id": "10126244-1-;\"dPY£0=Y|7'3Xg%+1f+1",
+            "appPlanId": ";\"dPY£0=Y|7'3Xg%+1f+1",
+            "name": "Free",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 0,
+              "yearly": 0,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "up to 5 users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0,
+              "maxSeats": 5
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-1-,8C$Af:z_2-nx_H64D{L+2",
+            "appPlanId": ",8C$Af:z_2-nx_H64D{L+2",
+            "name": "Medium",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 3,
+              "yearly": 2,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "from 6 to 50 users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 3,
+              "yearlyFee": 2,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": true,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-1-yL3Q&:H[I<33O9n5cKA7+3",
+            "appPlanId": "yL3Q&:H[I<33O9n5cKA7+3",
+            "name": "Enterprise (Unlimited)",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 2,
+              "yearly": 1,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": "",
+            "extraData": {
+              "bullets": [
+                "from 51 to an unlimited number of users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 2,
+              "yearlyFee": 1,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-2-0",
+            "appPlanId": "0",
+            "name": "Free",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 0,
+              "yearly": 0,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": " ",
+            "extraData": {
+              "bullets": [
+                "up to 5 users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0,
+              "maxSeats": 5
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-2-1",
+            "appPlanId": "1",
+            "name": "Small",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 15,
+              "yearly": 10,
+              "maxSeats": 20
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": " ",
+            "extraData": {
+              "bullets": [
+                "from 6 to 20 users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 15,
+              "yearlyFee": 10,
+              "maxSeats": 20
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-2-2",
+            "appPlanId": "2",
+            "name": "Medium",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 35,
+              "yearly": 25,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": " ",
+            "extraData": {
+              "bullets": [
+                "from 21 to 50 users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 35,
+              "yearlyFee": 25,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-2-3",
+            "appPlanId": "3",
+            "name": "Enterprise (Unlimited)",
+            "versionId": 2,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 75,
+              "yearly": 50,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": " ",
+            "extraData": {
+              "bullets": [
+                "from 51 to an unlimited number of users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 75,
+              "yearlyFee": 50,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-3-0",
+            "appPlanId": "0",
+            "name": "Free",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 0,
+              "yearly": 0,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": " ",
+            "extraData": {
+              "bullets": [
+                "up to 5 users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0,
+              "maxSeats": 5
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-3-1",
+            "appPlanId": "1",
+            "name": "Small",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 13,
+              "yearly": 9,
+              "maxSeats": 20
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": " ",
+            "extraData": {
+              "bullets": [
+                "from 6 to 20 users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 13,
+              "yearlyFee": 9,
+              "maxSeats": 20
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-3-2",
+            "appPlanId": "2",
+            "name": "Medium",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 35,
+              "yearly": 25,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": " ",
+            "extraData": {
+              "bullets": [
+                "from 21 to 50 users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 35,
+              "yearlyFee": 25,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-3-3",
+            "appPlanId": "3",
+            "name": "Enterprise (Unlimited)",
+            "versionId": 3,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 69,
+              "yearly": 49,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": " ",
+            "extraData": {
+              "bullets": [
+                "from 51 to an unlimited number of users",
+                "unlimited workflows",
+                "unlimited actions"
+              ],
+              "monthlyFee": 69,
+              "yearlyFee": 49,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-4-DEFAULT",
+            "appPlanId": "DEFAULT",
+            "name": "default",
+            "versionId": 4,
+            "isTrial": true,
+            "prices": {
+              "type": "bucket_based",
+              "buckets": {
+                "5": {
+                  "monthly": 0,
+                  "yearly": 0
+                },
+                "10": {
+                  "monthly": 9,
+                  "yearly": 7
+                },
+                "15": {
+                  "monthly": 14,
+                  "yearly": 11
+                },
+                "20": {
+                  "monthly": 18,
+                  "yearly": 15
+                },
+                "25": {
+                  "monthly": 23,
+                  "yearly": 18
+                },
+                "30": {
+                  "monthly": 27,
+                  "yearly": 22
+                },
+                "35": {
+                  "monthly": 32,
+                  "yearly": 26
+                },
+                "40": {
+                  "monthly": 36,
+                  "yearly": 30
+                },
+                "45": {
+                  "monthly": 41,
+                  "yearly": 33
+                },
+                "50": {
+                  "monthly": 45,
+                  "yearly": 37
+                },
+                "55": {
+                  "monthly": 49,
+                  "yearly": 41
+                },
+                "60": {
+                  "monthly": 54,
+                  "yearly": 44
+                },
+                "65": {
+                  "monthly": 58,
+                  "yearly": 48
+                },
+                "70": {
+                  "monthly": 63,
+                  "yearly": 51
+                },
+                "75": {
+                  "monthly": 67,
+                  "yearly": 55
+                },
+                "80": {
+                  "monthly": 71,
+                  "yearly": 59
+                },
+                "85": {
+                  "monthly": 76,
+                  "yearly": 62
+                },
+                "90": {
+                  "monthly": 80,
+                  "yearly": 66
+                },
+                "95": {
+                  "monthly": 85,
+                  "yearly": 69
+                },
+                "100": {
+                  "monthly": 89,
+                  "yearly": 73
+                },
+                "110": {
+                  "monthly": 98,
+                  "yearly": 80
+                },
+                "120": {
+                  "monthly": 106,
+                  "yearly": 87
+                },
+                "130": {
+                  "monthly": 115,
+                  "yearly": 94
+                },
+                "140": {
+                  "monthly": 123,
+                  "yearly": 101
+                },
+                "150": {
+                  "monthly": 132,
+                  "yearly": 108
+                },
+                "160": {
+                  "monthly": 140,
+                  "yearly": 115
+                },
+                "170": {
+                  "monthly": 149,
+                  "yearly": 122
+                },
+                "180": {
+                  "monthly": 157,
+                  "yearly": 129
+                },
+                "190": {
+                  "monthly": 166,
+                  "yearly": 136
+                },
+                "200": {
+                  "monthly": 174,
+                  "yearly": 143
+                },
+                "225": {
+                  "monthly": 195,
+                  "yearly": 160
+                },
+                "250": {
+                  "monthly": 217,
+                  "yearly": 178
+                },
+                "275": {
+                  "monthly": 237,
+                  "yearly": 194
+                },
+                "300": {
+                  "monthly": 258,
+                  "yearly": 211
+                },
+                "350": {
+                  "monthly": 299,
+                  "yearly": 245
+                },
+                "400": {
+                  "monthly": 340,
+                  "yearly": 278
+                },
+                "450": {
+                  "monthly": 381,
+                  "yearly": 312
+                },
+                "500": {
+                  "monthly": 422,
+                  "yearly": 346
+                },
+                "550": {
+                  "monthly": 460,
+                  "yearly": 377
+                },
+                "600": {
+                  "monthly": 499,
+                  "yearly": 409
+                },
+                "650": {
+                  "monthly": 537,
+                  "yearly": 440
+                },
+                "700": {
+                  "monthly": 576,
+                  "yearly": 472
+                },
+                "750": {
+                  "monthly": 614,
+                  "yearly": 504
+                },
+                "800": {
+                  "monthly": 653,
+                  "yearly": 535
+                },
+                "850": {
+                  "monthly": 691,
+                  "yearly": 567
+                },
+                "900": {
+                  "monthly": 730,
+                  "yearly": 598
+                },
+                "950": {
+                  "monthly": 768,
+                  "yearly": 630
+                },
+                "1000": {
+                  "monthly": 807,
+                  "yearly": 661
+                },
+                "1100": {
+                  "monthly": 879,
+                  "yearly": 720
+                },
+                "1200": {
+                  "monthly": 951,
+                  "yearly": 779
+                },
+                "1300": {
+                  "monthly": 1023,
+                  "yearly": 838
+                },
+                "1400": {
+                  "monthly": 1095,
+                  "yearly": 898
+                },
+                "1500": {
+                  "monthly": 1167,
+                  "yearly": 957
+                },
+                "1600": {
+                  "monthly": 1239,
+                  "yearly": 1016
+                },
+                "1700": {
+                  "monthly": 1311,
+                  "yearly": 1075
+                },
+                "1800": {
+                  "monthly": 1383,
+                  "yearly": 1134
+                },
+                "1900": {
+                  "monthly": 1455,
+                  "yearly": 1193
+                },
+                "2000": {
+                  "monthly": 1527,
+                  "yearly": 1252
+                },
+                "2250": {
+                  "monthly": 1707,
+                  "yearly": 1399
+                },
+                "2500": {
+                  "monthly": 1887,
+                  "yearly": 1547
+                },
+                "2750": {
+                  "monthly": 2067,
+                  "yearly": 1695
+                },
+                "3000": {
+                  "monthly": 2247,
+                  "yearly": 1842
+                },
+                "3250": {
+                  "monthly": 2427,
+                  "yearly": 1990
+                },
+                "3500": {
+                  "monthly": 2607,
+                  "yearly": 2137
+                },
+                "3750": {
+                  "monthly": 2787,
+                  "yearly": 2285
+                },
+                "4000": {
+                  "monthly": 2967,
+                  "yearly": 2433
+                },
+                "4250": {
+                  "monthly": 3147,
+                  "yearly": 2580
+                },
+                "4500": {
+                  "monthly": 3327,
+                  "yearly": 2728
+                },
+                "4750": {
+                  "monthly": 3507,
+                  "yearly": 2875
+                },
+                "5000": {
+                  "monthly": 3687,
+                  "yearly": 3023
+                },
+                "6000": {
+                  "monthly": 4337,
+                  "yearly": 3556
+                },
+                "7000": {
+                  "monthly": 4987,
+                  "yearly": 4089
+                },
+                "8000": {
+                  "monthly": 5637,
+                  "yearly": 4622
+                },
+                "9000": {
+                  "monthly": 6287,
+                  "yearly": 5155
+                },
+                "10000": {
+                  "monthly": 6937,
+                  "yearly": 5688
+                },
+                "12500": {
+                  "monthly": 8187,
+                  "yearly": 6713
+                },
+                "15000": {
+                  "monthly": 9437,
+                  "yearly": 7738
+                },
+                "17500": {
+                  "monthly": 10687,
+                  "yearly": 8763
+                },
+                "20000": {
+                  "monthly": 11937,
+                  "yearly": 9788
+                },
+                "25000": {
+                  "monthly": 13687,
+                  "yearly": 11223
+                },
+                "30000": {
+                  "monthly": 15437,
+                  "yearly": 12658
+                },
+                "35000": {
+                  "monthly": 15487,
+                  "yearly": 12699
+                },
+                "40000": {
+                  "monthly": 15537,
+                  "yearly": 12740
+                },
+                "45000": {
+                  "monthly": 15587,
+                  "yearly": 12781
+                },
+                "50000": {
+                  "monthly": 15637,
+                  "yearly": 12822
+                },
+                "60000": {
+                  "monthly": 15737,
+                  "yearly": 12904
+                },
+                "70000": {
+                  "monthly": 15837,
+                  "yearly": 12986
+                },
+                "80000": {
+                  "monthly": 15937,
+                  "yearly": 13068
+                },
+                "90000": {
+                  "monthly": 16037,
+                  "yearly": 13150
+                },
+                "100000": {
+                  "monthly": 16137,
+                  "yearly": 13232
+                },
+                "1000000": {
+                  "monthly": 16137,
+                  "yearly": 13232
+                }
+              }
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": "All features",
+            "extraData": {
+              "bullets": [
+                "unlimited workflows",
+                "unlimited actions",
+                "required columns",
+                "permissions"
+              ],
+              "monthlyFee": null,
+              "yearlyFee": null
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10126244-5-DEFAULT",
+            "appPlanId": "DEFAULT",
+            "name": "default",
+            "versionId": 5,
+            "isTrial": true,
+            "prices": {
+              "type": "bucket_based",
+              "buckets": {
+                "5": {
+                  "monthly": 0,
+                  "yearly": 0
+                },
+                "10": {
+                  "monthly": 6,
+                  "yearly": 5
+                },
+                "15": {
+                  "monthly": 9,
+                  "yearly": 7
+                },
+                "20": {
+                  "monthly": 12,
+                  "yearly": 10
+                },
+                "25": {
+                  "monthly": 15,
+                  "yearly": 12
+                },
+                "30": {
+                  "monthly": 18,
+                  "yearly": 15
+                },
+                "35": {
+                  "monthly": 21,
+                  "yearly": 17
+                },
+                "40": {
+                  "monthly": 24,
+                  "yearly": 20
+                },
+                "45": {
+                  "monthly": 27,
+                  "yearly": 22
+                },
+                "50": {
+                  "monthly": 30,
+                  "yearly": 25
+                },
+                "55": {
+                  "monthly": 33,
+                  "yearly": 27
+                },
+                "60": {
+                  "monthly": 36,
+                  "yearly": 30
+                },
+                "65": {
+                  "monthly": 39,
+                  "yearly": 32
+                },
+                "70": {
+                  "monthly": 42,
+                  "yearly": 34
+                },
+                "75": {
+                  "monthly": 45,
+                  "yearly": 37
+                },
+                "80": {
+                  "monthly": 48,
+                  "yearly": 39
+                },
+                "85": {
+                  "monthly": 51,
+                  "yearly": 42
+                },
+                "90": {
+                  "monthly": 54,
+                  "yearly": 44
+                },
+                "95": {
+                  "monthly": 57,
+                  "yearly": 47
+                },
+                "100": {
+                  "monthly": 60,
+                  "yearly": 49
+                },
+                "110": {
+                  "monthly": 66,
+                  "yearly": 54
+                },
+                "120": {
+                  "monthly": 72,
+                  "yearly": 59
+                },
+                "130": {
+                  "monthly": 78,
+                  "yearly": 64
+                },
+                "140": {
+                  "monthly": 84,
+                  "yearly": 69
+                },
+                "150": {
+                  "monthly": 90,
+                  "yearly": 74
+                },
+                "160": {
+                  "monthly": 96,
+                  "yearly": 79
+                },
+                "170": {
+                  "monthly": 102,
+                  "yearly": 84
+                },
+                "180": {
+                  "monthly": 108,
+                  "yearly": 89
+                },
+                "190": {
+                  "monthly": 114,
+                  "yearly": 93
+                },
+                "200": {
+                  "monthly": 120,
+                  "yearly": 98
+                },
+                "225": {
+                  "monthly": 135,
+                  "yearly": 111
+                },
+                "250": {
+                  "monthly": 150,
+                  "yearly": 123
+                },
+                "275": {
+                  "monthly": 165,
+                  "yearly": 135
+                },
+                "300": {
+                  "monthly": 180,
+                  "yearly": 148
+                },
+                "350": {
+                  "monthly": 210,
+                  "yearly": 172
+                },
+                "400": {
+                  "monthly": 240,
+                  "yearly": 197
+                },
+                "450": {
+                  "monthly": 270,
+                  "yearly": 221
+                },
+                "500": {
+                  "monthly": 300,
+                  "yearly": 246
+                },
+                "550": {
+                  "monthly": 330,
+                  "yearly": 271
+                },
+                "600": {
+                  "monthly": 360,
+                  "yearly": 295
+                },
+                "650": {
+                  "monthly": 390,
+                  "yearly": 320
+                },
+                "700": {
+                  "monthly": 420,
+                  "yearly": 344
+                },
+                "750": {
+                  "monthly": 450,
+                  "yearly": 369
+                },
+                "800": {
+                  "monthly": 480,
+                  "yearly": 394
+                },
+                "850": {
+                  "monthly": 510,
+                  "yearly": 418
+                },
+                "900": {
+                  "monthly": 540,
+                  "yearly": 443
+                },
+                "950": {
+                  "monthly": 570,
+                  "yearly": 467
+                },
+                "1000": {
+                  "monthly": 600,
+                  "yearly": 492
+                },
+                "1100": {
+                  "monthly": 650,
+                  "yearly": 533
+                },
+                "1200": {
+                  "monthly": 700,
+                  "yearly": 574
+                },
+                "1300": {
+                  "monthly": 750,
+                  "yearly": 615
+                },
+                "1400": {
+                  "monthly": 800,
+                  "yearly": 656
+                },
+                "1500": {
+                  "monthly": 850,
+                  "yearly": 697
+                },
+                "1600": {
+                  "monthly": 900,
+                  "yearly": 738
+                },
+                "1700": {
+                  "monthly": 950,
+                  "yearly": 779
+                },
+                "1800": {
+                  "monthly": 1000,
+                  "yearly": 820
+                },
+                "1900": {
+                  "monthly": 1050,
+                  "yearly": 861
+                },
+                "2000": {
+                  "monthly": 1100,
+                  "yearly": 902
+                },
+                "2250": {
+                  "monthly": 1225,
+                  "yearly": 1005
+                },
+                "2500": {
+                  "monthly": 1350,
+                  "yearly": 1107
+                },
+                "2750": {
+                  "monthly": 1475,
+                  "yearly": 1210
+                },
+                "3000": {
+                  "monthly": 1600,
+                  "yearly": 1312
+                },
+                "3250": {
+                  "monthly": 1725,
+                  "yearly": 1415
+                },
+                "3500": {
+                  "monthly": 1850,
+                  "yearly": 1517
+                },
+                "3750": {
+                  "monthly": 1975,
+                  "yearly": 1620
+                },
+                "4000": {
+                  "monthly": 2100,
+                  "yearly": 1722
+                },
+                "4250": {
+                  "monthly": 2225,
+                  "yearly": 1825
+                },
+                "4500": {
+                  "monthly": 2350,
+                  "yearly": 1927
+                },
+                "4750": {
+                  "monthly": 2475,
+                  "yearly": 2030
+                },
+                "5000": {
+                  "monthly": 2600,
+                  "yearly": 2132
+                },
+                "6000": {
+                  "monthly": 3100,
+                  "yearly": 2542
+                },
+                "7000": {
+                  "monthly": 3600,
+                  "yearly": 2952
+                },
+                "8000": {
+                  "monthly": 4100,
+                  "yearly": 3362
+                },
+                "9000": {
+                  "monthly": 4600,
+                  "yearly": 3772
+                },
+                "10000": {
+                  "monthly": 5100,
+                  "yearly": 4182
+                },
+                "12500": {
+                  "monthly": 6350,
+                  "yearly": 5207
+                },
+                "15000": {
+                  "monthly": 7600,
+                  "yearly": 6232
+                },
+                "17500": {
+                  "monthly": 8850,
+                  "yearly": 7257
+                },
+                "20000": {
+                  "monthly": 10100,
+                  "yearly": 8282
+                },
+                "25000": {
+                  "monthly": 11850,
+                  "yearly": 9717
+                },
+                "30000": {
+                  "monthly": 13600,
+                  "yearly": 11152
+                },
+                "35000": {
+                  "monthly": 13650,
+                  "yearly": 11193
+                },
+                "40000": {
+                  "monthly": 13700,
+                  "yearly": 11234
+                },
+                "45000": {
+                  "monthly": 13750,
+                  "yearly": 11275
+                },
+                "50000": {
+                  "monthly": 13800,
+                  "yearly": 11316
+                },
+                "60000": {
+                  "monthly": 13900,
+                  "yearly": 11398
+                },
+                "70000": {
+                  "monthly": 14000,
+                  "yearly": 11480
+                },
+                "80000": {
+                  "monthly": 14100,
+                  "yearly": 11562
+                },
+                "90000": {
+                  "monthly": 14200,
+                  "yearly": 11644
+                },
+                "100000": {
+                  "monthly": 14300,
+                  "yearly": 11726
+                },
+                "1000000": {
+                  "monthly": 14300,
+                  "yearly": 11726
+                }
+              }
+            },
+            "versionState": "live",
+            "appId": 10126244,
+            "description": "No limitations",
+            "extraData": {
+              "bullets": [
+                "unlimited workflows",
+                "unlimited actions",
+                "required columns",
+                "permission control"
+              ],
+              "monthlyFee": null,
+              "yearlyFee": null
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-11-08T13:49:28.475Z",
+          "id": 11668863
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Built for scalability"
+          ],
+          "pricing_data": "Free plan available",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "is_connector": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://www.skv-group.net/terms/",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000505,
+      "app_id": 10140945,
+      "name": "Webflow Sync",
+      "type": "archived",
+      "date": "2026-11-24",
+      "installs": null,
+      "app": {
+        "id": 10000505,
+        "marketplace_developer_id": 10000217,
+        "app_id": 10140945,
+        "app_type": "app",
+        "security_info": null,
+        "gallery_assets": [
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1718291822/monday-apps-marketplace/Webflow%20Sync/Gallery_Image_Example_5-2.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1718291822/monday-apps-marketplace/Webflow%20Sync/Gallery_Image_Example_7.png"
+          },
+          {
+            "url": "https://dapulse-res.cloudinary.com/image/upload/v1718291823/monday-apps-marketplace/Webflow%20Sync/Gallery_Image_Example_8.png"
+          }
+        ],
+        "description": "<p>Streamline your project management workflow with seamless integration between Webflow and monday.com. Our app automates data transfer, saving time and ensuring accuracy for teams of all sizes.</p><p><br></p><ul><li><strong>Effortless Workflow Integration:</strong>&nbsp;Sync Webflow forms and e-commerce orders directly to your monday.com boards, eliminating manual data entry.</li><li><strong>Boosted Efficiency:</strong>&nbsp;Save time and resources by automating repetitive tasks, ensuring projects stay on track with minimal intervention.</li><li><strong>Real-Time Updates:</strong>&nbsp;Keep your team in the loop with instant updates on monday.com boards as data flows in from Webflow.</li><li><strong>Easy Setup:</strong>&nbsp;Configure the integration in minutes without technical expertise.</li><li><strong>Dedicated Support:</strong>&nbsp;Our team is here to assist you every step of the way, ensuring a smooth integration experience.</li></ul><p><strong>What problems are you solving for our users?</strong></p><p>Our app solves the challenge of manual data entry and the need for seamless integration between Webflow and monday.com. It streamlines workflow processes, saving time and ensuring accuracy for project management teams.</p><p><br></p><p><strong>What are the benefits or potential results users will receive from using your app?</strong></p><ul><li>Increased efficiency and productivity in project management tasks.</li><li>Reduced errors and improved accuracy in data transfer.</li><li>Real-time visibility into project updates and status.</li><li>Simplified workflow automation for smoother operations.</li><li>Enhanced collaboration among team members.</li></ul><p><strong>Specific examples or use cases :</strong></p><ul><li>Automatically populate monday.com boards with new form submissions from Webflow.</li><li>Sync e-commerce orders directly to your project management boards for streamlined order processing.</li><li>Set up automated workflows to assign tasks, track progress, and notify team members of updates in real-time.</li></ul><p><strong>About your company:</strong></p><p>At VB Investment Holdings, we're dedicated to simplifying project management processes and empowering teams to achieve their goals with ease. Our integration between Webflow and monday.com is just one example of how we're helping businesses streamline their workflows and drive success.</p><p><strong>Try the app risk free today!</strong></p>",
+        "short_description": "Sync Webflow Form Submissions & eCommerce Orders to monday",
+        "thumbnail_url": "https://dapulse-res.cloudinary.com/image/upload/v1718291814/monday-apps-marketplace/Webflow%20Sync/Gallery_Image_Example_11-2.png",
+        "logo_url": "https://dapulse-res.cloudinary.com/image/upload/v1718291814/monday-apps-marketplace/Webflow%20Sync/Artboard.png",
+        "feedback_url": "support@vb-holdings.com",
+        "privacy_policy_url": "https://www.vb-holdings.com/privacy-policy",
+        "featured": null,
+        "name": "Webflow Sync",
+        "how_to_use_url": "https://www.vb-holdings.com/how-to",
+        "external_pricing_url": null,
+        "keywords": "Webflow, \nForms, \nForm Submissions, \neCommcerce Orders,  \nContact Forms, \nOnline Orders,\nContact us",
+        "compliance_answers": [
+          {
+            "questionId": 1,
+            "shortAnswer": true,
+            "detailedAnswer": "We store all customer data in monday storage."
+          },
+          {
+            "questionId": 2,
+            "shortAnswer": true,
+            "detailedAnswer": "Application-level updates and security patches will be implemented and deployed by our in house tech team. Critical will be handled within 1 business day of discovery. High within 5 business days of discovery. Medium and Low and will be handled with routine maintenance. "
+          },
+          {
+            "questionId": 3,
+            "shortAnswer": true,
+            "detailedAnswer": "In the case of any security breach that impacts monday.com we would reach out via email."
+          },
+          {
+            "questionId": 4,
+            "shortAnswer": true,
+            "detailedAnswer": "We use and verify CSRF tokens on each request."
+          },
+          {
+            "questionId": 5,
+            "shortAnswer": true,
+            "detailedAnswer": "We would do this, but this app does not take any user input."
+          },
+          {
+            "questionId": 6,
+            "shortAnswer": true,
+            "detailedAnswer": "Only the two co-founders have access to customer data."
+          },
+          {
+            "questionId": 7,
+            "shortAnswer": true,
+            "detailedAnswer": "All customer data is housed in monday storage. Two factor authentication is enabled for all user's to log into their monday.com accounts."
+          },
+          {
+            "questionId": 8,
+            "shortAnswer": true,
+            "detailedAnswer": "We check all log lines in our application to make sure no PII or secrets are ever printed."
+          },
+          {
+            "questionId": 9,
+            "shortAnswer": false,
+            "detailedAnswer": "We have no user input fields. So this is not relavant."
+          },
+          {
+            "questionId": 10,
+            "shortAnswer": true,
+            "detailedAnswer": "All redirects must be must be listed on partner applications."
+          },
+          {
+            "questionId": 11,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 12,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 13,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 14,
+            "shortAnswer": true,
+            "detailedAnswer": "William Vernon - support@vb-holdings.com"
+          },
+          {
+            "questionId": 15,
+            "shortAnswer": false
+          },
+          {
+            "questionId": 17,
+            "dataHostingProvider": "monday"
+          },
+          {
+            "questionId": 18,
+            "logHostingProvider": "monday"
+          }
+        ],
+        "created_at": "2024-06-13T15:17:39.000Z",
+        "updated_at": "2025-10-31T16:39:02.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Centralize your work on monday.com"
+        ],
+        "security": null,
+        "display_in_template_store": null,
+        "acquisition_source": "No touch",
+        "is_connector": true,
+        "show_connections": null,
+        "terms_of_service_url": "https://www.termsfeed.com/live/27c00bf5-5c53-402b-a961-ffe76e9fd114",
+        "available_for_tiers": null,
+        "available_for_products": null,
+        "google_analytics_tag_id": null,
+        "is_solution": null,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write",
+        "app_client_id": "786b8b64e2d83350fc4fec89b3d6bf7c",
+        "app_color": {
+          "hsl": {
+            "h": 209.4392523364486,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 209.4392523364486,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 209.4392523364486,
+          "source": "rgb"
+        },
+        "plans": [
+          {
+            "id": "10140945-1-startup_plan",
+            "appPlanId": "startup_plan",
+            "name": "Startup",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 5,
+              "yearly": 4
+            },
+            "versionState": "live",
+            "appId": 10140945,
+            "description": "Up to 150 Orders/Submissions per Month",
+            "extraData": {
+              "bullets": [
+                "Up to 150 Orders/Submissions per Month",
+                "Webflow Form Sync ",
+                "Webflow eCommerce Order Sync ",
+                "Email Support"
+              ],
+              "monthlyFee": 5,
+              "yearlyFee": 4
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10140945-1-professional_plan",
+            "appPlanId": "professional_plan",
+            "name": "Professional",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "standard",
+              "monthly": 15,
+              "yearly": 14
+            },
+            "versionState": "live",
+            "appId": 10140945,
+            "description": "Up to 500 Orders/Submissions per Month",
+            "extraData": {
+              "bullets": [
+                "Up to 500 Orders/Submissions per Month",
+                "Webflow Form Sync",
+                "Webflow eCommerce Order Sync",
+                "Email Support",
+                "Chat Support"
+              ],
+              "monthlyFee": 15,
+              "yearlyFee": 14
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10140945-1-business_plan",
+            "appPlanId": "business_plan",
+            "name": "Business",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "standard",
+              "monthly": 40,
+              "yearly": 37
+            },
+            "versionState": "live",
+            "appId": 10140945,
+            "description": "Unlimited Orders/Submissions per Month",
+            "extraData": {
+              "bullets": [
+                "Unlimited Orders/Submissions per Month ",
+                "Webflow Form Sync ",
+                "Webflow eCommerce Order Sync",
+                "Email Support",
+                "Chat Support"
+              ],
+              "monthlyFee": 40,
+              "yearlyFee": 37
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2024-06-05T14:57:08.713Z",
+          "id": 10254406
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "app_values": [
+            "Centralize your work on monday.com"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch"
+        },
+        "data": {
+          "is_connector": true,
+          "terms_of_service_url": "https://www.termsfeed.com/live/27c00bf5-5c53-402b-a961-ffe76e9fd114"
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000726,
+      "app_id": 10268893,
+      "name": "VisionControl",
+      "type": "archived",
+      "date": "2026-11-24",
+      "installs": null,
+      "app": {
+        "id": 10000726,
+        "marketplace_developer_id": 100000015,
+        "app_id": 10268893,
+        "app_type": "app",
+        "security_info": null,
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000726/10000726_2025_0_27_18_51_52_t39vwtl.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000726/10000726_2025_0_27_18_51_56_618ntpd.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000726/10000726_2025_0_27_18_52_0_o3t1pkgl.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000726/10000726_2025_0_27_18_52_4_62pb291.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000726/10000726_2025_1_17_19_31_7_iz3tl9m.mp4",
+            "type": "video"
+          }
+        ],
+        "description": "<p>Take your monday.com experience to the next level with <strong>VisionControl</strong> – the ultimate platform for managing boards and users at scale. Simplify board operations, optimize permissions, and gain actionable insights, all while saving valuable time. With VisionControl, every action you need in monday.com is faster, easier, and designed to help your team thrive.</p><p><br></p><p><strong>What You’ll Get:</strong></p><ul><li><strong>Bulk User Management</strong> – Add multiple users to multiple boards in just one click.</li><li><strong>Smart Permission Controls</strong> – Easily grant, revoke, or adjust access for any user or board.</li><li><strong>Board Automation Tools</strong> – Quickly duplicate, delete, or customize boards to fit your needs.</li><li><strong>Advanced Dashboard Insights</strong> – View key data on boards, users, and activities in a single place.</li><li><strong>Workspace Customization</strong> – Manage workspaces, users, and boards with tailored workflows.</li></ul><p><br></p><p><strong>Key Benefits:</strong></p><p>✅ <strong>Save Time:</strong> Automate repetitive tasks and reduce admin time by up to 60%.</p><p>✅ <strong>Enhanced Security:</strong> Minimize risks with granular permission and user controls.</p><p>✅ <strong>Boost Productivity:</strong> Simplify complex workflows and help your team focus on what matters.</p><p>✅ <strong>Actionable Insights:</strong> Make data-driven decisions with clear, real-time analytics.</p><p><br></p><p><strong>Why VisionControl?</strong></p><ul><li><strong>Intuitive Interface:</strong> Easy to use, with no steep learning curve.</li><li><strong>Full Integration:</strong> Works seamlessly with your existing monday.com setup.</li><li><strong>Customizable Design:</strong> Light/Dark mode and workspace tailoring for your unique style.</li><li><strong>Fast and Flexible:</strong> Designed to handle everything monday.com offers – but smarter.</li></ul><p><strong>Ready to Take Control?</strong></p><p>Try VisionControl today with a free trial and see the difference for yourself.</p><p><br></p><p>📧 <strong>Need help? Contact us</strong>: support@visionapps.io</p><p><br></p><p>VisionControl is here to revolutionize the way you manage your monday.com workspace. Don't wait – start working smarter today!</p>",
+        "short_description": "Efficiently manage boards and users on monday.com.",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000726/10000726_2025_0_26_13_29_8_g07ew2y.jpeg",
+        "logo_url": "https://cdn.monday.com/marketplace/10000726/10000726_2025_1_17_19_31_38_iv470wm.png",
+        "feedback_url": "support@visionapps.io",
+        "privacy_policy_url": "https://www.visionapps.io/privacy-policy",
+        "featured": null,
+        "name": "VisionControl",
+        "how_to_use_url": "https://scintillating-zabaione-86388e.netlify.app/",
+        "external_pricing_url": null,
+        "keywords": "Board Management, User Permissions, Board Automation, User Profiles, Board Customization, User Roles, User Activity,Invite Users,Bulk User Management,Boards Customization",
+        "compliance_answers": [
+          {
+            "questionId": 19,
+            "shortAnswer": false,
+            "detailedAnswer": ""
+          },
+          {
+            "questionId": 18,
+            "detailedAnswer": "",
+            "logHostingProvider": "monday"
+          },
+          {
+            "questionId": 17,
+            "detailedAnswer": "",
+            "dataHostingProvider": "monday"
+          }
+        ],
+        "created_at": "2025-01-26T13:27:07.000Z",
+        "updated_at": "2025-10-31T16:39:59.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Everyday tasks"
+        ],
+        "security": null,
+        "display_in_template_store": null,
+        "acquisition_source": "No touch",
+        "is_connector": null,
+        "show_connections": null,
+        "terms_of_service_url": "https://www.visionapps.io/terms-and-conditions",
+        "available_for_tiers": null,
+        "available_for_products": null,
+        "google_analytics_tag_id": "G-V6700JL9WC",
+        "is_solution": null,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write,me:read,users:read,users:write,workspaces:read,workspaces:write",
+        "app_client_id": "37760478383ca2cd0d7522858a2ddcee",
+        "app_color": "#2A878B",
+        "plans": [
+          {
+            "id": "10268893-1-basic_1",
+            "appPlanId": "basic_1",
+            "name": "Solo",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 44,
+              "yearly": 35,
+              "maxSeats": 1
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Perfect for individual users who need comprehensive access to our system. The Essential Solo plan provides access for a single user with all available features, ensuring you have everything you need to manage your tasks efficiently.",
+            "extraData": {
+              "bullets": [
+                "Full system access",
+                "Basic support",
+                "Regular updates"
+              ],
+              "monthlyFee": 44,
+              "yearlyFee": 35,
+              "maxSeats": 1
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-1-tier_3",
+            "appPlanId": "tier_3",
+            "name": "Triple Team",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 84,
+              "yearly": 66,
+              "maxSeats": 3
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Designed for small teams, the Essential Team plan accommodates up to 3 users. This plan ensures seamless collaboration and access to all features, enabling your team to work together effectively.",
+            "extraData": {
+              "bullets": [
+                "All basic features",
+                "Extended support",
+                "Team management"
+              ],
+              "monthlyFee": 84,
+              "yearlyFee": 66,
+              "maxSeats": 3
+            },
+            "isFree": false,
+            "isRecommended": true,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-1-tier_15",
+            "appPlanId": "tier_15",
+            "name": "Business",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 180,
+              "yearly": 140,
+              "maxSeats": 15
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Suitable for businesses, the Business plan supports up to 15 users. Access all features to streamline your operations and foster effective teamwork.",
+            "extraData": {
+              "bullets": [
+                "All basic features",
+                "Extended support",
+                "Team management"
+              ],
+              "monthlyFee": 180,
+              "yearlyFee": 140,
+              "maxSeats": 15
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-1-tier_5",
+            "appPlanId": "tier_5",
+            "name": "Starter Plus",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 120,
+              "yearly": 90,
+              "maxSeats": 5
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Ideal for growing teams, Starter Plus supports up to 5 users. Enjoy full access to all features, facilitating better collaboration and productivity as your team expands.",
+            "extraData": {
+              "bullets": [
+                "All basic features",
+                "Extended support",
+                "Team management"
+              ],
+              "monthlyFee": 120,
+              "yearlyFee": 90,
+              "maxSeats": 5
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-1-tier_10",
+            "appPlanId": "tier_10",
+            "name": "Team Pro",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 152,
+              "yearly": 120,
+              "maxSeats": 10
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Tailored for professional teams, Team Pro accommodates up to 10 users. Benefit from complete feature access, enhancing your team's ability to manage projects efficiently.",
+            "extraData": {
+              "bullets": [
+                "All basic features",
+                "Extended support",
+                "Team management"
+              ],
+              "monthlyFee": 152,
+              "yearlyFee": 120,
+              "maxSeats": 10
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-1-tier_25",
+            "appPlanId": "tier_25",
+            "name": "Enterprise",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 204,
+              "yearly": 162,
+              "maxSeats": 25
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Designed for larger organizations, the Enterprise plan accommodates up to 25 users. Utilize all available features to manage complex projects and enhance collaboration across your team.",
+            "extraData": {
+              "bullets": [
+                "All basic features",
+                "Extended support",
+                "Team management"
+              ],
+              "monthlyFee": 204,
+              "yearlyFee": 162,
+              "maxSeats": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-1-tier_35",
+            "appPlanId": "tier_35",
+            "name": "Enterprise Plus",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 224,
+              "yearly": 175,
+              "maxSeats": 35
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "For expanding organizations, Enterprise Plus supports up to 35 users. Gain full access to all features, ensuring your team has the tools needed for optimal performance.",
+            "extraData": {
+              "bullets": [
+                "All basic features",
+                "Extended support",
+                "Team management"
+              ],
+              "monthlyFee": 224,
+              "yearlyFee": 175,
+              "maxSeats": 35
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-1-tier_50",
+            "appPlanId": "tier_50",
+            "name": "Ultimate",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 240,
+              "yearly": 192,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Crafted for substantial teams, the Ultimate plan accommodates up to 50 users. Enjoy unrestricted access to all features, maximizing your team's efficiency and project management capabilities.",
+            "extraData": {
+              "bullets": [
+                "All basic features",
+                "Extended support",
+                "Team management"
+              ],
+              "monthlyFee": 240,
+              "yearlyFee": 192,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-1-tier_100",
+            "appPlanId": "tier_100",
+            "name": "Premium",
+            "versionId": 1,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 252,
+              "yearly": 198,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Geared towards larger teams, the Premium plan supports up to 100 users. Access all features to facilitate seamless collaboration and effective project execution.",
+            "extraData": {
+              "bullets": [
+                "All basic features",
+                "Extended support",
+                "Team management"
+              ],
+              "monthlyFee": 252,
+              "yearlyFee": 198,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-1-tier_Unlimited",
+            "appPlanId": "tier_Unlimited",
+            "name": "Elite",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 260,
+              "yearly": 200,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Our Elite plan represents the pinnacle of our offerings, supporting unlimited  users. This plan provides complete access to all features, ensuring your largest teams operate at peak performance with the highest level of support.",
+            "extraData": {
+              "bullets": [
+                "All basic features",
+                "Extended support",
+                "Team management"
+              ],
+              "monthlyFee": 260,
+              "yearlyFee": 200,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-2-basic_1",
+            "appPlanId": "basic_1",
+            "name": "Team Pro",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 45,
+              "yearly": 35,
+              "maxSeats": 25
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Designed for small-mid organizations, the Team Pro plan accommodates up to 25 users. Utilize all available features to manage complex projects and enhance collaboration across your team.",
+            "extraData": {
+              "bullets": [
+                "All App Features Available",
+                "24/7 Support"
+              ],
+              "monthlyFee": 45,
+              "yearlyFee": 35,
+              "maxSeats": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-2-tier_3",
+            "appPlanId": "tier_3",
+            "name": "Enterprise Plus",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 140,
+              "yearly": 110,
+              "maxSeats": 100
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Geared towards larger teams, the Enterprise Plus plan supports up to 100 users. Access all features to facilitate seamless collaboration and effective project execution.",
+            "extraData": {
+              "bullets": [
+                "All Features Available",
+                "24/7 Support"
+              ],
+              "monthlyFee": 140,
+              "yearlyFee": 110,
+              "maxSeats": 100
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-2-tier_5",
+            "appPlanId": "tier_5",
+            "name": "Elite",
+            "versionId": 2,
+            "isTrial": true,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 300,
+              "yearly": 250,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Our Elite plan represents the pinnacle of our offerings, supporting unlimited users. This plan provides complete access to all features, ensuring your largest teams operate at peak performance with the highest level of support.",
+            "extraData": {
+              "bullets": [
+                "All Features Available",
+                "24/7 Support"
+              ],
+              "monthlyFee": 300,
+              "yearlyFee": 250,
+              "maxSeats": 1000000
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-2-tier_2",
+            "appPlanId": "tier_2",
+            "name": "Enterprise",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 80,
+              "yearly": 60,
+              "maxSeats": 50
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Tailored for professional teams, Team Pro accommodates up to 50 users. Benefit from complete feature access, enhancing your team's ability to manage projects efficiently.",
+            "extraData": {
+              "bullets": [
+                "All Features Available",
+                "24/7 Support"
+              ],
+              "monthlyFee": 80,
+              "yearlyFee": 60,
+              "maxSeats": 50
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-2-tier_4",
+            "appPlanId": "tier_4",
+            "name": "Ultimate",
+            "versionId": 2,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 250,
+              "yearly": 200,
+              "maxSeats": 200
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Designed for larger organizations, the Ultimate plan accommodates up to 200 users. Utilize all available features to manage complex projects and enhance collaboration across your team.",
+            "extraData": {
+              "bullets": [
+                "All Features Available",
+                "24/7 Support"
+              ],
+              "monthlyFee": 250,
+              "yearlyFee": 200,
+              "maxSeats": 200
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          },
+          {
+            "id": "10268893-3-3",
+            "appPlanId": "3",
+            "name": "VisionX – Free Edition",
+            "versionId": 3,
+            "isTrial": false,
+            "prices": {
+              "type": "seat_based",
+              "monthly": 0,
+              "yearly": 0,
+              "maxSeats": 1000000
+            },
+            "versionState": "live",
+            "appId": 10268893,
+            "description": "Enjoy full control with zero cost. This is not a trial — it's our way of saying welcome.  100% free. No limits. No catch.",
+            "extraData": {
+              "bullets": [
+                "Full system access",
+                "Basic support",
+                "Regular updates"
+              ],
+              "monthlyFee": 0,
+              "yearlyFee": 0,
+              "maxSeats": 1000000
+            },
+            "isFree": true,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2025-02-18T18:45:48.401Z",
+          "id": 10585647
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": true,
+          "hasPaidPlan": false,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "app_values": [
+            "Everyday tasks"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch"
+        },
+        "data": {
+          "terms_of_service_url": "https://www.visionapps.io/terms-and-conditions",
+          "google_analytics_tag_id": "G-V6700JL9WC"
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10000974,
+      "app_id": 10511249,
+      "name": "Custom Calendar Colors",
+      "type": "archived",
+      "date": "2026-11-24",
+      "installs": null,
+      "app": {
+        "id": 10000974,
+        "marketplace_developer_id": 100000121,
+        "app_id": 10511249,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10000974/10000974_2025_10_9_13_3_50_g7nee34i.jpg",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000974/10000974_2025_10_9_13_3_54_1wf2xlk.jpg",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000974/10000974_2025_10_9_13_3_57_mpb1he1.jpg",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10000974/10000974_2025_10_9_13_4_1_czb4s6p.jpg",
+            "type": "image"
+          }
+        ],
+        "description": "<p>Bring clarity and personality to your calendars with&nbsp;<strong>Custom Calendar Colors</strong>, a simple but powerful dashboard widget designed to make your calendar readable even when it's cluttered with events.</p><p>When you’re working with multiple boards, dozens of items, and large team calendars, it’s easy for important information to get lost in the crowd. This is especially true during team meetings on Zoom or Teams, where screen quality makes small or overlapping text difficult to read.&nbsp;<strong>Custom Calendar Colors</strong>&nbsp;ensures your team never struggles to follow along.</p><p>With this app, you can:</p><ul><li><strong>Set custom background colors</strong>&nbsp;for calendar items to make them stand out.</li><li><strong>Adjust text color</strong>&nbsp;for maximum contrast and readability.</li><li><strong>Change text size</strong>&nbsp;to ensure clarity, even when presenting a large calendar.</li><li><strong>Unify multiple boards</strong>&nbsp;into one clean, easy-to-read calendar.</li><li><strong>Improve visibility in meetings</strong>&nbsp;by making sure all participants can quickly see what matters most.</li></ul><p><strong>Use cases include:</strong></p><ul><li>Team leads presenting busy calendars to remote teams.</li><li>Project managers coordinating multiple boards with overlapping deadlines.</li><li>Educators or trainers showing schedules where clarity is critical.</li><li>Large organizations where visual accessibility and readability are a priority.</li></ul><p>Whether you’re managing projects, events, or team schedules,&nbsp;<strong>Custom Calendar Colors</strong>&nbsp;helps you take control of your calendar’s appearance so that information is not only visible but easy to understand.</p><p>Bring focus back to what matters most (your work!) by making your calendars more accessible, professional, and team-friendly.</p>",
+        "short_description": "Customize the color and size of the events on your calendar",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10000974/10000974_2025_10_9_13_3_29_z5p9naz.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10000974/10000974_2025_10_9_13_4_18_ma8rpct.png",
+        "feedback_url": "contact@stargateapps.io",
+        "privacy_policy_url": "https://www.stargateapps.io/privacy-policy",
+        "featured": false,
+        "name": "Custom Calendar Colors",
+        "how_to_use_url": "https://www.stargateapps.io/how-to-use-custom-colors-calendar",
+        "external_pricing_url": null,
+        "keywords": "multiple boards,presentation,visual accessibility,project management,calendar colors,readability,customize,calendar",
+        "compliance_answers": [],
+        "created_at": "2025-11-09T13:03:01.000Z",
+        "updated_at": "2026-01-27T12:12:46.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": null,
+        "label": null,
+        "app_values": [
+          "Customized views"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": null,
+        "terms_of_service_url": "https://www.stargateapps.io/terms",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "boards:read,boards:write",
+        "app_client_id": "669dcd9afd39633753ae9a5812dfe1e1",
+        "app_color": {
+          "hsl": {
+            "h": 16.235294117647058,
+            "s": 0,
+            "l": 1,
+            "a": 1
+          },
+          "hex": "#ffffff",
+          "rgb": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1
+          },
+          "hsv": {
+            "h": 16.235294117647058,
+            "s": 0,
+            "v": 1,
+            "a": 1
+          },
+          "oldHue": 16.235294117647058,
+          "source": "hsv"
+        },
+        "plans": null,
+        "app_live_version": {
+          "updated_at": "2026-11-12T16:30:46.073Z",
+          "id": 20026311
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "none",
+          "hasFreePlan": false,
+          "hasPaidPlan": false,
+          "hasTrialPlan": false
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Customized views"
+          ],
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "is_connector": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://www.stargateapps.io/terms",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
+    {
+      "id": 10001035,
+      "app_id": 10684868,
+      "name": "AuditSentry SIEM",
+      "type": "archived",
+      "date": "2026-11-24",
+      "installs": null,
+      "app": {
+        "id": 10001035,
+        "marketplace_developer_id": 100000122,
+        "app_id": 10684868,
+        "app_type": "app",
+        "security_info": {},
+        "gallery_assets": [
+          {
+            "url": "https://cdn.monday.com/marketplace/10001035/10001035_2026_0_26_8_11_42_7b6c1ca.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001035/10001035_2026_0_26_8_11_49_wvpllqg.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001035/10001035_2026_0_26_8_11_58_nxffphf.png",
+            "type": "image"
+          },
+          {
+            "url": "https://cdn.monday.com/marketplace/10001035/10001035_2026_0_26_8_12_48_x9skll.mp4",
+            "type": "video"
+          }
+        ],
+        "description": "<p><strong>AuditSentry SIEM</strong>&nbsp;strengthens your&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;enterprise security by centralizing audit logs, security events, and risk signals into a single, actionable security intelligence platform.</p><p>Modern&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;accounts generate vast amounts of activity data - user actions, permission changes, authentication events, and administrative operations. Without proper visibility, critical security signals can be missed. AuditSentry SIEM gives security and IT teams full transparency into account activity, helping them detect anomalies, investigate incidents, and demonstrate compliance with confidence.</p><p>By transforming raw audit logs into structured insights, AuditSentry SIEM enables proactive security monitoring and faster incident response - without external tools or complex integrations.</p><p><strong>🔐 Key Features</strong></p><p><strong>Centralized audit log visibility</strong></p><p>View all&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;audit log events in one unified dashboard.</p><p><strong>Advanced event filtering &amp; search</strong></p><p>Quickly filter by user, action type, timeframe, or risk category.</p><p><strong>Security-focused dashboards</strong></p><p>Visualize sensitive actions such as permission changes, admin activity, and login events.</p><p><strong>Anomaly &amp; risk detection</strong></p><p>Identify unusual behavior patterns and potentially risky actions.</p><p><strong>Incident investigation readiness</strong></p><p>Drill down into detailed event timelines for fast root-cause analysis.</p><p><strong>Compliance support</strong></p><p>Maintain audit trails to support SOC 2, ISO 27001, GDPR, and internal governance requirements.</p><p><strong>Enterprise-ready access</strong></p><p>Built specifically for Enterprise accounts with access to&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;Audit Logs.</p><p><strong>Fast setup, no complexity</strong></p><p>Activate within minutes - no agents, no external SIEM required.</p><p>Whether you’re securing sensitive data, preparing for compliance audits, or strengthening internal governance,&nbsp;<strong>AuditSentry SIEM</strong>&nbsp;gives you the visibility and control needed to protect your&nbsp;<a href=\"http://monday.com/\" rel=\"noopener noreferrer\" target=\"_blank\">monday.com</a>&nbsp;environment with confidence.</p><p>👉&nbsp;<strong>Book a live demo:</strong></p><p><a href=\"https://calendar.app.google/JBSzSk6HLQKnW6nN7\" rel=\"noopener noreferrer\" target=\"_blank\">https://calendar.app.google/JBSzSk6HLQKnW6nN7</a></p><p>Only available to&nbsp;<strong>admin users</strong>&nbsp;on&nbsp;<strong>Enterprise accounts</strong>&nbsp;with the Audit Log feature enabled.</p>",
+        "short_description": "Real-time security dashboards for your monday.com workspace",
+        "thumbnail_url": "https://cdn.monday.com/marketplace/10001035/10001035_2026_0_26_8_11_10_yq0gnlj.png",
+        "logo_url": "https://cdn.monday.com/marketplace/10001035/10001035_2026_0_26_8_10_9_8ws9cu3.png",
+        "feedback_url": "support@user-sentry.com",
+        "privacy_policy_url": "https://user-sentry.com/privacypolicy",
+        "featured": false,
+        "name": "AuditSentry SIEM",
+        "how_to_use_url": "https://user-sentry.com/mondaysiemdocs",
+        "external_pricing_url": null,
+        "keywords": "Security Monitoring,Threat Detection,Audit Logs,User Activity Tracking,Failed Login Alerts,Automated Security Actions,Compliance Reporting,Workspace Security,Real-Time Dashboards,High-Risk Event Detection",
+        "compliance_answers": [],
+        "created_at": "2026-01-26T08:09:40.000Z",
+        "updated_at": "2026-01-26T08:13:22.000Z",
+        "automation_app_id": null,
+        "marketplace_category_ids": [],
+        "pinned_for_categories_ids": [],
+        "featured_for_categories_ids": [],
+        "pricing_data": "14 days trial",
+        "label": null,
+        "app_values": [
+          "Everyday tasks"
+        ],
+        "security": false,
+        "display_in_template_store": false,
+        "acquisition_source": "No touch",
+        "is_connector": false,
+        "show_connections": null,
+        "terms_of_service_url": "https://user-sentry.com/termsofservice",
+        "available_for_tiers": [],
+        "available_for_products": [],
+        "google_analytics_tag_id": null,
+        "is_solution": false,
+        "cta_override": null,
+        "app_scope_str": "me:read",
+        "app_client_id": "2a6e938a25d7e96f5e5c104e4a7ca05d",
+        "app_color": "#037f4c",
+        "plans": [
+          {
+            "id": "10684868-1-monitor",
+            "appPlanId": "monitor",
+            "name": "Monitor",
+            "versionId": 1,
+            "isTrial": true,
+            "prices": {
+              "type": "standard",
+              "monthly": 30,
+              "yearly": 25
+            },
+            "versionState": "live",
+            "appId": 10684868,
+            "description": "Monitor security activity with custom dashboards and advanced filtering",
+            "extraData": {
+              "bullets": [
+                "Security dashboard",
+                "Filters & saved views",
+                "Custom dashboards"
+              ],
+              "monthlyFee": 30,
+              "yearlyFee": 25
+            },
+            "isFree": false,
+            "isRecommended": false,
+            "currency": "USD"
+          }
+        ],
+        "app_live_version": {
+          "updated_at": "2026-01-11T23:48:36.569Z",
+          "id": 12267662
+        },
+        "pricing_model": null,
+        "monetization": {
+          "monetizationType": "monday",
+          "hasFreePlan": false,
+          "hasPaidPlan": true,
+          "hasTrialPlan": true
+        },
+        "badges_data": {
+          "security": false,
+          "app_values": [
+            "Everyday tasks"
+          ],
+          "pricing_data": "14 days trial",
+          "acquisition_source": "No touch",
+          "display_in_template_store": false
+        },
+        "data": {
+          "is_solution": false,
+          "is_connector": false,
+          "available_for_tiers": [],
+          "terms_of_service_url": "https://user-sentry.com/termsofservice",
+          "available_for_products": [],
+          "google_analytics_tag_id": null
+        },
+        "display": null
+      },
+      "vendor": null
+    },
     {
       "id": 10000306,
       "app_id": 10068378,
