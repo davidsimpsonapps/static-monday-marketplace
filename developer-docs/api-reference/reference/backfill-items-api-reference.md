@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-19T21:27:16.000Z
+updatedAt: 2026-11-24T11:20:40.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -189,7 +189,8 @@ For MLS file format and hierarchy rules, see the Multi-level subitems boards sec
 
 # Capacity and rate limits
 
-* **Start-job calls.** `backfill_items` and `ingest_items` share a per-account hourly limit of **100 successful start-job calls per hour**. Exceeding the limit returns `RATE_LIMIT_EXCEEDED` (HTTP 429) with `extensions.retryAfterMs`.
+* **Columns per file.** A CSV file can have at most **100 columns**, counted from the header row and including the item name column. A file with more columns fails with `status: REJECTED` and `failure_reason: INVALID_UPLOAD`. The `failure_message` gives the count, for example: "Your import file has 101 columns. The maximum is 100."
+* **Start-job calls.** `backfill_items` and `ingest_items` share a per-account limit of **500 start-job calls per hour**. Exceeding the limit returns `RATE_LIMIT_EXCEEDED` (HTTP 429) with `extensions.retryAfterMs`.
 * **Item create/update budget.** Backfill does **not** consume the 19,000-item-per-hour budget that `ingest_items` uses.
 * **File size.** Files over 150 MB are rejected with `failure_reason: FILE_TOO_LARGE`.
 

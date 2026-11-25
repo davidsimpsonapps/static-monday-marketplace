@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-24T10:05:06.000Z
+updatedAt: 2026-11-24T12:56:17.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -98,9 +98,10 @@ Rows that include unsupported column types may fail validation. See [Column type
 | :---------------------------------------- | :------------------------------------------ | :------------------------------------------ |
 | Maximum rows per file                     | 20,000                                      | 10,000                                      |
 | Maximum file size                         | 150 MB                                      | 150 MB                                      |
+| Maximum columns per file                  | 100                                         | 100                                         |
 | Upload URL expiration                     | 10 minutes                                  | 10 minutes                                  |
 | Report URL expiration                     | 10 minutes                                  | 10 minutes                                  |
-| Jobs started per account per hour         | 100 (shared with `ingest_items`)            | 100 (shared with `backfill_items`)          |
+| Jobs started per account per hour         | 500 (shared with `ingest_items`)            | 500 (shared with `backfill_items`)          |
 | Item create/update budget per hour        | Not consumed                                | 19,000 items per account                    |
 | Maximum items per classic subitems import | 20,000 (parent items and subitems combined) | 10,000 (parent items and subitems combined) |
 | Maximum items per MLS hierarchy import    | 5,000                                       | 5,000                                       |
@@ -111,6 +112,7 @@ Rows that include unsupported column types may fail validation. See [Column type
 * File size is enforced after upload by the import service (not by the upload URL itself). Oversized files are rejected with `failure_reason: FILE_TOO_LARGE`.
 * Cancellation of a running job is not supported.
 * Hierarchy import item caps apply in addition to the maximum rows per file.
+* The column limit counts every column in the header row, including the item name column. Files with more than 100 columns are rejected with `failure_reason: INVALID_UPLOAD`. The `failure_message` gives the count, for example: "Your import file has 101 columns. The maximum is 100."
 * The per-parent subitem limit varies by plan and matches the limit that applies in the UI. An item whose subitems exceed it is rejected along with its subitem rows.
 
 ***

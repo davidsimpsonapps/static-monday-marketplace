@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-24T10:11:58.000Z
+updatedAt: 2026-11-24T12:56:17.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -329,7 +329,8 @@ For MLS file format and hierarchy rules, see the Multi-level subitems boards sec
 
 # Capacity and rate limits
 
-* **Jobs started per hour.** `ingest_items` and `backfill_items` share a per-account hourly limit of **100 successful start-job calls per hour**. Exceeding the limit returns `RATE_LIMIT_EXCEEDED` (HTTP 429) with `extensions.retryAfterMs`.
+* **Columns per file.** A CSV file can have at most **100 columns**, counted from the header row and including the item name column. A file with more columns fails with `status: REJECTED` and `failure_reason: INVALID_UPLOAD`. The `failure_message` gives the count, for example: "Your import file has 101 columns. The maximum is 100."
+* **Jobs started per hour.** `ingest_items` and `backfill_items` share a per-account limit of **500 start-job calls per hour**. Exceeding the limit returns `RATE_LIMIT_EXCEEDED` (HTTP 429) with `extensions.retryAfterMs`.
 * **Item create/update budget.** `ingest_items` reserves capacity against a per-account hourly budget of **19,000 items per hour**. If the job's valid row count would exceed the remaining budget, the job is rejected. In API version [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later, `failure_reason` is `HOURLY_ACCOUNT_CAPACITY_EXCEEDED`; in earlier versions, and in requests with no API version, it is `ACCOUNT_CAPACITY_EXCEEDED`. Capacity is released for rows that ultimately end up failed, skipped, or invalid.
 
 ***

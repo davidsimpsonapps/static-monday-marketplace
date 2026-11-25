@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-05T15:52:15.000Z
+updatedAt: 2026-11-16T07:20:20.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -25,6 +25,14 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
   * `Board.creator` is now nullable (`User` instead of `User!`). It returns `null` when the creator can't be resolved, so handle a `null` value in clients that assumed it is always present
 * **Assets:**
   * `Asset.uploaded_by` is now nullable (`User` instead of `User!`). It returns `null` when the uploader can't be resolved, so handle a `null` value in clients that assumed it is always present
+
+### Non-breaking changes
+
+* **Portfolio:**
+  * New `add_existing_projects_to_portfolio` mutation — start adding existing projects to a portfolio in the background. Pass `portfolio_id` and `project_ids` (up to 5000; duplicate IDs are added once). It returns the `batch_id` and the `total` number of projects queued. Only one bulk add can run on a portfolio at a time, and the whole request is refused when the projects would exceed the portfolio's structures limit. Requires the `boards:write` scope
+  * New `portfolio_bulk_add_status` query — returns the progress of the bulk add running on a portfolio: its `state` (`IDLE`, `RUNNING`, or `HALTING`), the `total` and `completed` project counts, and `is_submitter`, which tells whether you started it. Requires the `boards:read` scope
+  * New `portfolio_bulk_add_results` query — returns the outcome of the last finished bulk add: its `batch_id` (compare it with the one the mutation returned), the `total`, `succeeded`, and `failed` counts, and a page of `failed_items`. Each failed item has the `project_id`, the `project_name` (`null` when the bulk add was started through the API), a `reason_code`, and `is_retryable`, which tells you whether adding the project again may succeed. `reason_code` is one of `PORTFOLIO_ITEMS_LIMIT_REACHED`, `STRUCTURES_LIMIT_REACHED`, `PORTFOLIO_NOT_FOUND`, `PORTFOLIO_ARCHIVED`, `PORTFOLIO_INVALID_STATE`, `ACCOUNT_LIMIT_EXCEEDED`, `ACCOUNT_NOT_ELIGIBLE`, `OWNER_REQUIRED`, `MULTI_LEVEL_SUBITEMS_NOT_SUPPORTED`, `INVALID_PROJECT`, `PROJECT_NOT_FOUND`, `PROJECT_ARCHIVED`, `ALREADY_CONNECTED_TO_PORTFOLIO`, `CONNECTION_INCOMPLETE`, `BATCH_HALTED`, or `UNKNOWN`. `failed_items` takes `page` and `limit` arguments (default 100, maximum 500). Requires the `boards:read` scope
+  * New `halt_portfolio_bulk_add_batch` mutation — stop the bulk add running on a portfolio. Only the user who started it can halt it, and projects that were already added stay in the portfolio. Returns `halted`. Requires the `boards:write` scope
 
 ## `2027-01`
 
@@ -61,6 +69,9 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
   * New typed item results and column values — return groups, linked items, subitems, parent items, metadata, capabilities, and structured values through inline fragments
 * **Search:**
   * New `person_ids`, `team_ids`, `status_labels`, `tag_names`, and `creator_ids` arguments on `search.items` — filter results to items assigned to given users or teams in any people column, with given status labels in any status column, with given tags in any tags column, or created by given users. Each list is a set of alternatives (any of), and all filters you provide must match. `person_ids` and `team_ids` accept at most 50 unique IDs combined, and `status_labels` and `tag_names` accept at most 10 values of up to 64 characters each
+* **Replies:**
+  * New `ids` argument on `replies` — fetch up to 100 replies by ID. It can't be combined with `board_ids`, and `limit`, `page`, and the date filters don't apply to it. `board_ids` is now optional
+  * New `item_id` and `parent_id` fields on `Reply` — return the ID of the item the reply's update belongs to and the ID of the update the reply belongs to
 * **Docs:**
   * New [`board_view_docs`](https://developer.monday.com/api-reference/reference/docs#get-board-view-docs) query — returns the docs rendered as views of a board. Pass `board_id`, and optionally `view_id` to return a single doc view. Requires the `docs:read` scope
 * **Dependencies:**
@@ -75,6 +86,7 @@ Versions earlier than `2025-04` are deprecated and no longer supported, but we�
   * New `series_id` field on `Meeting` — returns the ID of the recurring calendar series the meeting belongs to, or `null` for one-off meetings and meetings without a calendar event
   * New `workspaces` field on `Meeting` — returns the workspaces (`id` and `name`) the meeting is linked to that the current user can open
   * New `dynamics` field on `Meeting` — returns speaker and turn-taking statistics computed from the transcript, or `null` when the meeting has no transcript or the statistics have not been computed yet. The `MeetingDynamics` object includes total talk time, turn switches per minute, the interruption count, the longest monologue (`speaker`, `duration_seconds`, `start_time_seconds`), attendees who did not speak, and per-speaker stats (`speaker`, `talk_time_seconds`, `talk_time_percentage`, `questions_asked`) sorted by talk time
+  * New `recording` field on `Meeting` — returns a temporary signed download link (`url`), the `media_type` (`VIDEO` or `AUDIO`), and `expires_at`, the latest time the link works (it can stop working earlier, and it is `null` when the expiry is unknown), or `null` when the meeting has no recording. Anyone with the link can download the file until it expires, so don't share or log it. Request a new link if the download returns 403 or the link has expired. Only a limited number of recordings can be requested per query
 * New [`include_project_board_link`](https://developer.monday.com/api-reference/docs/board-export-other-types#createboardexportoptionsinput) input on [`create_board_export`](https://developer.monday.com/api-reference/docs/board-export-api-reference#create-board-export) — add a trailing `Project Board` column with the first linked project board ID to CSV exports, or a blank value when no project is linked; the column is only added on accounts where this capability is enabled
 * New `DATA_VIEW` source for [`aggregate`](https://developer.monday.com/api-reference/reference/aggregate) — aggregate from a data view ID as well as a table ID
 * New `subitem_columns` field on `Board` — returns the board's subitem columns

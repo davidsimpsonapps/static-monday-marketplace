@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-24T12:56:03.000Z
+updatedAt: 2026-11-24T14:12:55.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -31,7 +31,7 @@ Enum returned in `failure_reason` when a job ends in `REJECTED` or `FAILED`.
 | `FILE_TOO_LARGE`                   | Uploaded file exceeded the 150 MB limit.                                                                                                                                                     |
 | `HOURLY_ACCOUNT_CAPACITY_EXCEEDED` | The hourly account ingest capacity was exceeded. You can retry the import in the next hour. Available from `2027-01`. Earlier versions return `ACCOUNT_CAPACITY_EXCEEDED` for the same case. |
 | `INTERNAL_ERROR`                   | Unexpected server error occurred.                                                                                                                                                            |
-| `INVALID_UPLOAD`                   | CSV parse or validation failed (for example bad header, wrong column separator, malformed rows, or invalid multi-level subitems hierarchy rows).                                             |
+| `INVALID_UPLOAD`                   | CSV parse or validation failed (for example bad header, wrong column separator, malformed rows, more than 100 columns, or invalid multi-level subitems hierarchy rows).                      |
 | `PERMISSION_DENIED`                | Caller lacks the required permission for the operation.                                                                                                                                      |
 | `TIMED_OUT`                        | The import waited too long in the board queue for earlier imports to finish, and did not start (4 hours by default). Try again. Available from `2027-01`.                                    |
 | `UPLOAD_NOT_FOUND`                 | The uploaded file was not found in storage. Available from `2027-01`.                                                                                                                        |

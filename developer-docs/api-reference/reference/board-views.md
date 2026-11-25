@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-11-04T14:05:10.000Z
+updatedAt: 2026-11-23T08:37:08.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -501,6 +501,24 @@ mutation {
 
     <tr>
       <td>
+        is_pinned
+      </td>
+
+      <td>
+        `Boolean`
+      </td>
+
+      <td>
+        Pins the view for all board members. Requires board owner or admin. **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later.**
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
         name
       </td>
 
@@ -633,6 +651,7 @@ mutation {
 | filter                            | [`ItemsQueryGroup`](https://developer.monday.com/api-reference/reference/board-views-other-types#itemsquerygroup)                                            | The table view's filters.                                                                                                                                                                                               |
 | filter\_user\_id                  | `ID`                                                                                                                                                         | The user ID to filter by.                                                                                                                                                                                               |
 | filter\_team\_id                  | `ID`                                                                                                                                                         | The team ID to filter by.                                                                                                                                                                                               |
+| is\_pinned                        | `Boolean`                                                                                                                                                    | Pins the table view for all board members. Requires board owner or admin. **Only available in API versions [`2027-01`](https://developer.monday.com/api-reference/docs/release-notes#2027-01) and later.**              |
 | name                              | `String`                                                                                                                                                     | The table view's name.                                                                                                                                                                                                  |
 | settings                          | [`TableViewSettingsInput`](https://developer.monday.com/api-reference/reference/board-views-other-types#tableviewsettingsinput)                              | The table view's configuration settings.                                                                                                                                                                                |
 | sort                              | [`[ItemsQueryOrderBy!]`](https://developer.monday.com/api-reference/reference/board-views-other-types#itemsqueryorderby)                                     | The table view's sort order.                                                                                                                                                                                            |
