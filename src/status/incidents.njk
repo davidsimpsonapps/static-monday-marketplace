@@ -5,9 +5,10 @@ description: "Current status and historical average response times for monday.co
 canonical: "/status/incidents/"
 incidents:
   - start: 2026-11-26 12:48 UTC
-    title: "Expired wildcard TLS/SSL certificates on `*.monday.app` on all regions"
-    description: "<p>All monday code apps are broken because of expired TLS/SSL certificates</p>
-                  <p>We await monday engineering to provide a fix for this.</p>"  
+  - end: 2026-11-26 13:30 UTC
+    title: "Expired wildcard TLS/SSL certificates on *.monday.app for all regions"
+    description: "<p>All monday code apps were broken because of expired TLS/SSL certificates</p>
+                  <p>We await monday engineering to provide a reason for this.</p>"  
   - start: 2026-09-28 11:19 UTC
     title: "Webhooks are missing the Authorization header"
     description: "<p>No authorization in newly created webhooks. Webhooks created by the API using app token are created as normal webhooks and not as app webhooks and let users edit and update them</p>
@@ -89,12 +90,9 @@ incidents:
 
 <h1 class="text-lg md:text-2xl font-semibold mb-4">monday.com service status</h1>
 
-{% set ongoingCount = 0 %}
-{% for incident in incidents %}{% if not incident.end %}{% set ongoingCount = ongoingCount + 1 %}{% endif %}{% endfor %}
-
 <nav class="tabs">
   <a data-match="exact" href="/status/">Service status</a>
-  <a data-match="include" href="/status/incidents/">Incidents <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">{{ ongoingCount }}</span></a>
+  <a data-match="include" href="/status/incidents/">Incidents{% if statusIncidents.ongoingCount %} <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">{{ statusIncidents.ongoingCount }}</span>{% endif %}</a>
   <a data-match="include" href="/status/infrastructure/">Infrastructure</a>
 </nav>
 
@@ -133,3 +131,5 @@ incidents:
         {% endif %}
     </div>
 {% endfor %} 
+
+<script src="/js/status-tab-badge.js?_={{ '' | cacheBusterTimestamp }}" defer></script>

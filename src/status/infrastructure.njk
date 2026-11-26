@@ -30,7 +30,7 @@ canonical: "/status/infrastructure/"
 
 <nav class="tabs">
   <a data-match="exact" href="/status/">Service status</a>
-  <a data-match="include" href="/status/incidents/">Incidents</a>
+  <a data-match="include" href="/status/incidents/">Incidents{% if statusIncidents.ongoingCount %} <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">{{ statusIncidents.ongoingCount }}</span>{% endif %}</a>
   <a data-match="include" href="/status/infrastructure/">Infrastructure</a>
 </nav>
 
@@ -59,3 +59,5 @@ canonical: "/status/infrastructure/"
 <script
   data-avg-response-times-url="/json/status/avg-response-times.json"
   src="/js/status-charts.js?_={{ '' | cacheBusterTimestamp }}"></script>
+
+<script src="/js/status-tab-badge.js?_={{ '' | cacheBusterTimestamp }}" defer></script>
