@@ -1,73 +1,88 @@
 ---
-updatedAt: 2026-11-05T10:38:34.000Z
+updatedAt: 2026-11-26T10:48:25.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/apps/llms.txt
 ---
 
-# Migrating to the new OAuth 2.1 flow
+# Migrating to OAuth 2.1
 
-Migrate your monday app from the legacy OAuth flow to the new OAuth 2.1 flow with expiring tokens, refresh tokens, and token revocation.
+Move an existing monday app and its stored tokens from the legacy OAuth 2.0 flow to OAuth 2.1.
 
-The new OAuth 2.1 flow introduces several important changes to how your app handles authentication tokens. This guide covers only what you need to change in your existing integration - the authorization request (step 1 of the [OAuth flow](https://developer.monday.com/apps/docs/oauth#the-oauth-flow)) remains the same URL, with PKCE parameters required for the new flow.
+This guide is for apps created before OAuth 2.1 became the default. It covers what to change in an existing OAuth 2.0 integration and how to move your stored tokens to OAuth 2.1 without asking users to authorize again. If you're building a new app, it already uses OAuth 2.1: follow the [OAuth 2.1](https://developer.monday.com/apps/docs/oauth-2-1) guide instead.
 
-The key differences in the new flow are:
+<Callout icon="🚧" theme="warn">
+**Migrate before API version `2027-04`**
 
-* **Access tokens now expire** - decode the JWT and read the `exp` claim to know when to refresh.
-* **Refresh tokens** - use them to obtain new access tokens without user re-authorization. Refresh tokens rotate on every use and are single-use; they also carry an `exp` claim.
-* **Token revocation** - explicitly revoke tokens when they are no longer needed.
-* **New token endpoint URL** - token exchange uses a different endpoint.
-* **PKCE is required** - every authorization request and token exchange in the new flow must use PKCE (`S256`).
-
-> 📘 New to OAuth?
->
-> If you haven't implemented OAuth yet, start with the [OAuth and Permissions](https://developer.monday.com/apps/docs/oauth) guide first, then return here to use the new flow.
-
-# 1. Enable the new OAuth flow
-
-Before migrating, enable the new OAuth flow for your app version in the [Developer Center](https://developer.monday.com/apps/docs/the-developer-center#oauth):
-
-1. Go to your app in the Developer Center.
-2. Navigate to the **OAuth & Permissions** tab.
-3. Create a new draft version of your app. The toggle is per version.
-4. Enable the **New OAuth Flow** toggle for the draft version.
-5. Test the flow using the draft version by setting it as **Active for me**.
-6. After verifying the flow works, promote the draft version to live.
-
-<Image align="center" alt="Enable the New OAuth flow toggle in the OAuth & permissions tab of the Developer Center" caption="The New OAuth flow toggle in the OAuth & permissions tab" border={true} src="https://dapulse-res.cloudinary.com/image/upload/v1783411870/app%20features/new-oauth-opt-in-89d4a0cdfac2c6fa456a6c6de3c3a49c.png" className="border" />
-
-<Callout icon="📘">
-Enabling the toggle does **not** expire tokens already issued under the legacy flow. Existing installs keep their non-expiring tokens until the user re-authorizes or you migrate those tokens with [`/oauth/migrate`](#6-migrate-legacy-api-tokens). Only **new** authorization-code exchanges after the toggle use the new token URL and expiring access/refresh tokens.
+Starting with API version `2027-04`, the monday API accepts only OAuth 2.1 tokens. Requests that use OAuth 2.0 tokens with `2027-04` or later return `401 Unauthorized` with the `OAUTH21_TOKEN_REQUIRED` error code.
 </Callout>
 
-# 2. Update your token endpoint URL
+# What changes
 
-The authorize endpoint stays at the same URL:
+|                            | OAuth 2.0 (legacy)                         | OAuth 2.1                                      |
+| :------------------------- | :----------------------------------------- | :--------------------------------------------- |
+| Authorization URL          | `https://auth.monday.com/oauth2/authorize` | Same URL, with required PKCE parameters        |
+| Token URL                  | `https://auth.monday.com/oauth2/token`     | `https://auth.monday.com/oauth_ms/oauth/token` |
+| PKCE                       | Not supported                              | Required (`S256` only)                         |
+| Access token lifetime      | Doesn't expire                             | Expires (see `expires_in`)                     |
+| Refresh tokens             | No                                         | Yes, rotating and single-use                   |
+| Token revocation           | No                                         | Yes                                            |
+| `scope` in token response  | Comma-separated                            | Space-separated                                |
+| `app_version_id` parameter | Supported                                  | Not supported                                  |
+| Redirect query parameters  | `code`, `scope`, `state`, `region`         | `code`, `state`, `status`, `iss`, `region`     |
 
-`GET https://auth.monday.com/oauth2/authorize`
+These stay the same: your `client_id` and `client_secret`, your configured scopes and redirect URLs, the `state`, `force_install_if_needed`, and `subdomain` parameters, and the 10-minute lifetime of authorization codes.
 
-For the new flow it requires PKCE, which adds the following query parameters:
+# 1. Turn on OAuth 2.1 for a draft version
 
-| Parameter               | Description                                                                                                                                                                  | Required |
-| :---------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- |
-| code\_challenge         | A PKCE code challenge (a base64url-encoded SHA-256 hash of the `code_verifier`). Must be 43–128 characters. See the [PKCE](#pkce-proof-key-for-code-exchange) section below. | Required |
-| code\_challenge\_method | The method used to generate the code challenge. Only `S256` is supported.                                                                                                    | Required |
+OAuth 2.1 is set per app version, and you can only change it on a draft version.
 
-The token exchange endpoint **has changed**:
+1. Open your app in the [Developer Center](https://developer.monday.com/apps/docs/the-developer-center#build).
+2. Create a new draft version of your app.
+3. Go to **OAuth & Permissions** and open the **Scopes** tab.
+4. Turn on the **New OAuth flow** toggle.
+5. Set the draft version as **Active for me** and test the flow end to end.
+6. After you verify the flow, promote the draft version to live.
 
-|           | Old flow                                    | New flow                                            |
-| :-------- | :------------------------------------------ | :-------------------------------------------------- |
-| Token URL | `POST https://auth.monday.com/oauth2/token` | `POST https://auth.monday.com/oauth_ms/oauth/token` |
+<Image align="center" alt="Turn on the New OAuth flow toggle in the OAuth & Permissions section of the Developer Center" caption="The New OAuth flow toggle in the OAuth & Permissions section" border={true} src="https://dapulse-res.cloudinary.com/image/upload/v1783411870/app%20features/new-oauth-opt-in-89d4a0cdfac2c6fa456a6c6de3c3a49c.png" className="border" />
 
-Update your backend code to use the new URL when exchanging authorization codes for tokens.
+New versions you create from this version keep OAuth 2.1 turned on.
 
-The token exchange request also requires the PKCE verifier:
+<Callout icon="📘">
+Turning on OAuth 2.1 doesn't affect tokens you already issued. Existing installations keep their OAuth 2.0 tokens until users authorize again or you [migrate the tokens](#6-migrate-stored-tokens). Only new authorizations use OAuth 2.1.
+</Callout>
 
-| Parameter      | Description                                                                                                                                                                             | Required |
-| :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- |
-| code\_verifier | The original PKCE code verifier string (43–128 characters). Must match the `code_challenge` sent during authorization. See the [PKCE](#pkce-proof-key-for-code-exchange) section below. | Required |
+<Callout icon="🚧" theme="warn">
+You can turn OAuth 2.1 off again on a later draft version, but OAuth 2.0 tokens stop working in API version `2027-04`. Keep OAuth 2.1 on and fix any issues on a draft version instead.
+</Callout>
 
-## Updated token exchange request
+# 2. Add PKCE to the authorization request
+
+The authorization URL is the same, but every request must include two new query parameters:
+
+| Parameter               | Description                                                                    | Required |
+| :---------------------- | :----------------------------------------------------------------------------- | :------- |
+| `code_challenge`        | The base64url-encoded SHA-256 hash of a new code verifier (43–128 characters). | Yes      |
+| `code_challenge_method` | Must be `S256`.                                                                | Yes      |
+
+Generate a new code verifier for every authorization request and store it with the user's `state`. See [Generate PKCE values](https://developer.monday.com/apps/docs/oauth-2-1#1-generate-pkce-values) and [Redirect the user to the authorization URL](https://developer.monday.com/apps/docs/oauth-2-1#2-redirect-the-user-to-the-authorization-url) for examples.
+
+If you send `app_version_id`, you can remove it. OAuth 2.1 uses the version set as **Active for me** for app collaborators, and the live version for everyone else.
+
+# 3. Update your redirect handler
+
+The redirect to your `redirect_uri` changes:
+
+* The `scope` parameter is no longer included. Read the granted scopes from the `scope` field of the token response.
+* A new `status` parameter is set to `success` when the user approves the request.
+* A new `iss` parameter identifies the authorization server: `https://auth.monday.com`.
+* Errors in the authorization request (for example, a missing code challenge) appear to the user on a monday.com error page and aren't sent to your `redirect_uri`. A denied request is still sent to your `redirect_uri` with `error=access_denied`.
+
+See [Handle the redirect](https://developer.monday.com/apps/docs/oauth-2-1#3-handle-the-redirect) for the full list of parameters.
+
+# 4. Update the token exchange
+
+Send the token request to the new URL and include the code verifier:
 
 ```shell
 curl -X POST https://auth.monday.com/oauth_ms/oauth/token \
@@ -82,252 +97,77 @@ curl -X POST https://auth.monday.com/oauth_ms/oauth/token \
   }'
 ```
 
-> 📘 Redirect URI
->
-> The `redirect_uri` parameter is required in the token exchange request if it was provided in the authorization request.
-
-## Updated token exchange response
-
-The response now includes a `refresh_token` and a space-separated `scope` list. Access and refresh tokens are JWTs — decode them and read the `exp` claim for expiry. Do not hard-code lifetimes; they can change.
+The response now includes a refresh token and the access token's lifetime:
 
 ```json
 {
   "access_token": "eyJhbGciOi...",
   "refresh_token": "eyJhbGciOi...",
   "token_type": "Bearer",
-  "scope": "boards:read users:read"
+  "expires_in": 86400,
+  "scope": "boards:read users:read",
+  "region": "use1"
 }
 ```
 
-| Key            | Change from old flow                                                                                                                                                                           |
-| :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access\_token  | Now expires. Decode the JWT and read `exp` for the expiration timestamp. Previously, tokens were valid until the user uninstalled your app.                                                    |
-| refresh\_token | New. Use this to obtain a new access token when the current one expires. Also a JWT with an `exp` claim. Rotates on every refresh — see [Implement token refresh](#3-implement-token-refresh). |
-| token\_type    | No change. Always `Bearer`.                                                                                                                                                                    |
-| scope          | Now a **space-separated** list of granted scopes (the legacy flow returned a comma-separated list).                                                                                            |
+| Field           | Change from OAuth 2.0                                                |
+| :-------------- | :------------------------------------------------------------------- |
+| `access_token`  | Now expires. Use `expires_in` or the JWT's `exp` claim to know when. |
+| `refresh_token` | New. Use it to get new tokens. It rotates every time you use it.     |
+| `token_type`    | `Bearer` (OAuth 2.0 returned `bearer`).                              |
+| `expires_in`    | New. The number of seconds until the access token expires.           |
+| `scope`         | Now a space-separated list (OAuth 2.0 used commas).                  |
+| `region`        | New. The monday.com region that hosts the user's account.            |
 
-# 3. Implement token refresh
+Update your storage to save both tokens and the access token's expiry time.
 
-Since access tokens now expire, your app must refresh them using the refresh token. This does not require user interaction.
+# 5. Refresh and revoke tokens
 
-`POST https://auth.monday.com/oauth_ms/oauth/token`
+Your app must now refresh access tokens before they expire, and it can revoke tokens when a user disconnects:
 
-```shell
-curl -X POST https://auth.monday.com/oauth_ms/oauth/token \
-  -H "Content-Type: application/json" \
-  -d '{
-    "grant_type": "refresh_token",
-    "client_id": "YOUR_CLIENT_ID",
-    "client_secret": "YOUR_CLIENT_SECRET",
-    "refresh_token": "YOUR_REFRESH_TOKEN"
-  }'
-```
+* [Refresh the access token](https://developer.monday.com/apps/docs/oauth-2-1#6-refresh-the-access-token): store the new refresh token after every refresh. Refresh tokens are single-use, and reusing an old one revokes the authorization.
+* [Revoke tokens](https://developer.monday.com/apps/docs/oauth-2-1#7-revoke-tokens): monday.com revokes your app's tokens automatically when an account uninstalls it. Revoke the refresh token yourself only when a user disconnects inside your app or your app no longer needs access.
 
-The response returns a new access token and a new refresh token:
+# 6. Migrate stored tokens
 
-```json
-{
-  "access_token": "eyJhbGciOi...",
-  "refresh_token": "eyJhbGciOi...",
-  "token_type": "Bearer",
-  "scope": "boards:read users:read"
-}
-```
+If you stored OAuth 2.0 access tokens for existing users, exchange each one for an OAuth 2.1 token pair with the migration endpoint. Users don't need to authorize your app again.
 
 <Callout icon="🚧" theme="warn">
-**Refresh tokens rotate and are single-use**
-
-Every successful refresh returns a **new** `refresh_token`. Persist it immediately and discard the previous one.
-
-Reusing an old refresh token returns `invalid_grant`. Concurrent refreshes that present the same token within a short retry window are treated as retries and receive the same successor pair; after that window, reuse can revoke the entire token family and force the user to re-authorize.
+This endpoint is **temporary** and will be removed after the migration period. Don't build it into your regular authentication flow.
 </Callout>
-
-## Recommended refresh strategy
-
-* Decode the access token JWT and read the `exp` claim to know when it expires. Do the same for the refresh token when you need its lifetime.
-* Refresh the access token proactively before `exp` — for example, when less than 5 minutes remain.
-* If an API call returns `401 Unauthorized`, attempt one token refresh and retry the request.
-* On `invalid_grant` from the refresh endpoint (expired or reused refresh token), send the user through the authorization flow again. Do not retry refresh in a loop.
-
-# 4. Revoke tokens
-
-You can explicitly revoke tokens when they are no longer needed.
-
-`POST https://auth.monday.com/oauth_ms/oauth/revoke`
-
-```shell
-curl -X POST https://auth.monday.com/oauth_ms/oauth/revoke \
-  -H "Content-Type: application/json" \
-  -d '{
-    "token": "TOKEN_TO_REVOKE",
-    "client_id": "YOUR_CLIENT_ID",
-    "client_secret": "YOUR_CLIENT_SECRET",
-    "token_type_hint": "access_token"
-  }'
-```
-
-| Parameter         | Description                                                                         | Required |
-| :---------------- | :---------------------------------------------------------------------------------- | :------- |
-| token             | The access token or refresh token to revoke. Depends on `token_type_hint`.          | Yes      |
-| client\_id        | Your app's unique identifier.                                                       | Yes      |
-| client\_secret    | Your app's secret.                                                                  | Yes      |
-| token\_type\_hint | Either `access_token` or `refresh_token`. Helps the server identify the token type. | No       |
-
-On success, the response contains:
-
-```json
-{
-  "success": true
-}
-```
-
-# 5. Server discovery (well-known endpoint)
-
-The OAuth service exposes an [RFC 8414](https://datatracker.ietf.org/doc/html/rfc8414) discovery endpoint that lets clients auto-discover all OAuth endpoints, supported scopes, and capabilities without hardcoding URLs.
-
-`GET https://auth.monday.com/oauth_ms/.well-known/oauth-authorization-server`
-
-**Example response (truncated):**
-
-```json
-{
-  "issuer": "https://auth.monday.com",
-  "authorization_endpoint": "https://auth.monday.com/oauth2/authorize",
-  "token_endpoint": "https://auth.monday.com/oauth_ms/oauth/token",
-  "registration_endpoint": "https://auth.monday.com/oauth_ms/oauth/register",
-  "revocation_endpoint": "https://auth.monday.com/oauth_ms/oauth/revoke",
-  "scopes_supported": ["me:read", "boards:read", "boards:write", "..."],
-  "response_types_supported": ["code"],
-  "grant_types_supported": [
-    "authorization_code",
-    "refresh_token"
-  ],
-  "code_challenge_methods_supported": ["S256"],
-  "token_endpoint_auth_methods_supported": ["client_secret_post"]
-}
-```
-
-| Field                                     | Description                                         |
-| :---------------------------------------- | :-------------------------------------------------- |
-| issuer                                    | The monday.com base URL.                            |
-| authorization\_endpoint                   | URL to redirect users for authorization.            |
-| token\_endpoint                           | URL to exchange codes for tokens or refresh tokens. |
-| registration\_endpoint                    | URL for Dynamic Client Registration (DCR).          |
-| revocation\_endpoint                      | URL to revoke tokens.                               |
-| scopes\_supported                         | Full list of available OAuth scopes.                |
-| response\_types\_supported                | Supported response types (`code` only).             |
-| grant\_types\_supported                   | Supported grant types.                              |
-| code\_challenge\_methods\_supported       | Supported PKCE methods (`S256` only).               |
-| token\_endpoint\_auth\_methods\_supported | How clients authenticate at the token endpoint.     |
-
-> 📘 Auto-configure your OAuth client
->
-> Use this endpoint to auto-configure your OAuth client. It is unauthenticated and publicly accessible. See the full response at <https://auth.monday.com/oauth_ms/.well-known/oauth-authorization-server>.
-
-# PKCE (Proof Key for Code Exchange)
-
-PKCE protects the authorization code flow from interception attacks, especially for public clients such as mobile apps, single-page apps, and CLI tools. It is required for all apps using the new OAuth flow.
-
-## 1. Generate a code verifier
-
-Create a cryptographically random string between 43 and 128 characters using unreserved characters (`[A-Z]` / `[a-z]` / `[0-9]` / `-` / `.` / `_` / `~`).
-
-```javascript
-const crypto = require("crypto");
-const codeVerifier = crypto.randomBytes(32).toString("base64url");
-```
-
-## 2. Compute the code challenge
-
-Hash the verifier with SHA-256 and base64url-encode the result:
-
-```javascript
-const codeChallenge = crypto
-  .createHash("sha256")
-  .update(codeVerifier)
-  .digest("base64url");
-```
-
-## 3. Include the challenge in the authorization request
-
-`GET https://auth.monday.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&code_challenge=CODE_CHALLENGE&code_challenge_method=S256`
-
-## 4. Include the verifier in the token exchange
-
-```shell
-curl -X POST https://auth.monday.com/oauth_ms/oauth/token \
-  -H "Content-Type: application/json" \
-  -d '{
-    "grant_type": "authorization_code",
-    "client_id": "YOUR_CLIENT_ID",
-    "client_secret": "YOUR_CLIENT_SECRET",
-    "code": "AUTHORIZATION_CODE",
-    "redirect_uri": "https://yourapp.com/callback",
-    "code_verifier": "YOUR_CODE_VERIFIER"
-  }'
-```
-
-The server verifies that `SHA256(code_verifier)` matches the `code_challenge` sent during authorization. If they don't match, the token exchange is rejected.
-
-> 🚧 Only S256 is supported
->
-> Only `S256` is supported as the challenge method. Plain code challenges are not accepted.
-
-# What stays the same
-
-The following parts of the OAuth flow are unchanged and do not require any modifications:
-
-* **Authorization URL**: `GET https://auth.monday.com/oauth2/authorize` (same URL; add the required PKCE query parameters for the new flow).
-* **Permission scopes**: Same scope definitions and configuration in the Developer Center. The token response delimiter changes from commas to spaces — see [Updated token exchange response](#updated-token-exchange-response).
-* **Redirect URLs**: Same configuration and validation rules.
-* **Redirect callback**: Same parameters — `code`, `state`, and `status`. Check `status` to confirm the user approved the authorization.
-* **Authorization code**: Still valid for 10 minutes, with the same exchange process (just a different endpoint URL, plus `code_verifier`).
-* **Client credentials**: Same `client_id` and `client_secret` from the Developer Center.
-
-# 6. Migrate legacy API tokens
-
-<Callout icon="🚧" theme="warn">
-This endpoint is **temporary** and will be removed once the OAuth 2.1 migration is complete. Do not use it as a permanent authentication strategy.
-</Callout>
-
-If you have existing integrations using legacy monday app API tokens, you can exchange them for an OAuth 2.1 access/refresh token pair using the migration endpoint — without requiring the user to go through the OAuth consent flow again.
 
 <Callout icon="📘">
-Only legacy **app** API tokens can be migrated. Personal API tokens are not supported.
+Only OAuth 2.0 tokens issued to your app can be migrated. Personal API tokens aren't supported.
 </Callout>
 
 `POST https://auth.monday.com/oauth_ms/oauth/migrate`
 
-This endpoint is **rate-limited**. Avoid calling it repeatedly or in bulk. It is intended for a one-time migration per token.
-If you receive a `429` status code, wait 5 minutes before retrying. Build exponential backoff into any migration script — do not retry immediately.
-
-## Request
-
-```shell Terminal
+```shell
 curl -X POST https://auth.monday.com/oauth_ms/oauth/migrate \
   -H "Content-Type: application/json" \
   -d '{
-    "api_token": "YOUR_LEGACY_API_TOKEN",
+    "api_token": "YOUR_LEGACY_TOKEN",
     "client_id": "YOUR_CLIENT_ID",
     "client_secret": "YOUR_CLIENT_SECRET"
   }'
 ```
 
-| Parameter      | Description                                                          | Required |
-| :------------- | :------------------------------------------------------------------- | :------- |
-| api\_token     | The legacy monday API token to exchange.                             | Yes      |
-| client\_id     | The OAuth client ID of your app (from the app's OAuth settings).     | Yes      |
-| client\_secret | The OAuth client secret of your app (from the app's OAuth settings). | Yes      |
+| Parameter       | Description                             | Required |
+| :-------------- | :-------------------------------------- | :------- |
+| `api_token`     | The OAuth 2.0 access token to exchange. | Yes      |
+| `client_id`     | Your app's client ID.                   | Yes      |
+| `client_secret` | Your app's client secret.               | Yes      |
+
+The endpoint is rate-limited. Migrate each token once, spread migrations of many tokens over time, and use exponential backoff if you receive a `429` response.
 
 ## Response
-
-On success, the response contains a new OAuth 2.1 access token and refresh token:
 
 ```json
 {
   "access_token": "eyJhbGciOi...",
   "refresh_token": "eyJhbGciOi...",
   "token_type": "Bearer",
+  "expires_in": 86400,
   "already_migrated": false,
   "migrated_from": {
     "api_token_id": 12345678
@@ -335,47 +175,44 @@ On success, the response contains a new OAuth 2.1 access token and refresh token
 }
 ```
 
-| Field             | Description                                                                                                                                                            |
-| :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| access\_token     | The new OAuth 2.1 access token. Decode the JWT and read `exp` for expiry. Use this for all subsequent API calls.                                                       |
-| refresh\_token    | Use this to obtain a new access token when the current one expires. Also a JWT with an `exp` claim. See [Implement token refresh](#3-implement-token-refresh).         |
-| token\_type       | Always `Bearer`.                                                                                                                                                       |
-| migrated\_from    | Contains the `api_token_id` of the original token that was exchanged.                                                                                                  |
-| already\_migrated | `true` if this token was already migrated in a previous call. No new token was created; the existing pair is returned — read `exp` on the JWTs for remaining lifetime. |
+| Field              | Description                                                                                                                               |
+| :----------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| `access_token`     | The new OAuth 2.1 access token. Use it for all API calls from now on.                                                                     |
+| `refresh_token`    | The new refresh token. Use it to [refresh the access token](https://developer.monday.com/apps/docs/oauth-2-1#6-refresh-the-access-token). |
+| `token_type`       | Always `Bearer`.                                                                                                                          |
+| `expires_in`       | The number of seconds until the access token expires.                                                                                     |
+| `already_migrated` | `true` if this token was migrated before. The response contains a new token pair for the existing authorization.                          |
+| `migrated_from`    | The `api_token_id` of the token you exchanged.                                                                                            |
 
-<Callout icon="📘">
-This endpoint is idempotent per token. Calling it multiple times for the same token is safe — it returns the existing OAuth token with `already_migrated: true` and the remaining lifetime.
-</Callout>
+Calling the endpoint again for the same token is safe and doesn't create a second authorization.
 
-<Callout icon="🚧" theme="warn">
-Migration issues a **new** OAuth access/refresh pair and leaves the legacy API token in place for a transition period. After a successful migration, store the new pair and use it for all API calls. The legacy token will stop working eventually, so treat the migration as the moment to retire it.
-</Callout>
-
-After migration, store the `access_token` and `refresh_token` and use the standard [token refresh](#3-implement-token-refresh) flow going forward.
+After a successful migration, store the new token pair and stop using the OAuth 2.0 token. The OAuth 2.0 token keeps working only for a limited transition period.
 
 ## Error responses
 
-| Status | Error code                      | Description                                                                     |
-| :----- | :------------------------------ | :------------------------------------------------------------------------------ |
-| 400    | `invalid_request`               | `api_token`, `client_id`, or `client_secret` is missing or not a string.        |
-| 400    | `already_oauth_token`           | The supplied token is already an OAuth token — no migration needed.             |
-| 400    | `personal_tokens_not_supported` | Personal API tokens cannot be migrated; only app tokens are supported.          |
-| 400    | `invalid_region`                | The token's region is not recognized.                                           |
-| 400    | `api_app_id_mismatch`           | The `client_id` and `client_secret` do not belong to the same app as the token. |
-| 401    | `invalid_token`                 | Token signature is invalid, expired, revoked, or not found.                     |
-| 401    | `invalid_client`                | The `client_id` does not match the `client_secret`.                             |
-| 403    | `invalid_request`               | Token migration is currently disabled.                                          |
-| 429    | `too_many_requests`             | Rate limit exceeded. Wait 5 minutes before retrying.                            |
-| 500    | —                               | Unexpected server error.                                                        |
+| Status | Error code                      | Description                                                                                                 |
+| :----- | :------------------------------ | :---------------------------------------------------------------------------------------------------------- |
+| 400    | `invalid_request`               | `api_token`, `client_id`, or `client_secret` is missing or not a string.                                    |
+| 400    | `already_oauth_token`           | The token is already an OAuth 2.1 token. No migration is needed.                                            |
+| 400    | `personal_tokens_not_supported` | The token is a personal API token. Only tokens issued to apps can be migrated.                              |
+| 400    | `invalid_region`                | The token's region isn't recognized.                                                                        |
+| 400    | `api_app_id_mismatch`           | The token wasn't issued to the app identified by `client_id`.                                               |
+| 401    | `invalid_token`                 | The token is invalid, expired, or revoked.                                                                  |
+| 401    | `token_not_found`               | The token doesn't exist.                                                                                    |
+| 401    | `invalid_client`                | The `client_id` and `client_secret` don't match, or the app isn't eligible for token migration.             |
+| 403    | `invalid_request`               | Token migration is currently disabled.                                                                      |
+| 429    | `too_many_requests`             | Too many requests, or a migration of the same token is already in progress. Retry with exponential backoff. |
+| 500    | `unknown_error`                 | An unexpected server error. Retry later.                                                                    |
 
 # Migration checklist
 
-1. Enable **New OAuth Flow** on a draft app version and set it **Active for me**.
-2. Switch your token URL to `https://auth.monday.com/oauth_ms/oauth/token` and send PKCE (`code_challenge` / `code_verifier`, `S256` only).
-3. Persist both `access_token` and `refresh_token`; treat refresh tokens as rotating and single-use.
-4. Refresh proactively from the access token JWT `exp`; on API `401`, refresh once and retry; on refresh `invalid_grant`, re-authorize the user.
-5. If you store legacy app API tokens, call `/oauth/migrate` once per token, then stop using the legacy token.
-6. Promote the draft version to live after verifying the flow.
+1. Turn on **New OAuth flow** on a draft version and set it as **Active for me**.
+2. Add `code_challenge` and `code_challenge_method=S256` to the authorization request, and remove `app_version_id`.
+3. Read granted scopes from the token response instead of the redirect.
+4. Send token requests to `https://auth.monday.com/oauth_ms/oauth/token` with `code_verifier`.
+5. Store the access token, the refresh token, and the expiry time. Refresh before the access token expires, and save the new refresh token every time.
+6. Call `/oauth/migrate` once for each stored OAuth 2.0 token, then stop using the old token.
+7. Promote the draft version to live.
 
 > 📘 Join our developer community!
 >

@@ -1,5 +1,5 @@
 ---
-updatedAt: 2025-10-23T05:02:01.000Z
+updatedAt: 2026-11-26T10:11:02.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/apps/llms.txt
@@ -81,11 +81,11 @@ Your app can also use OAuth to get authentication tokens. Simply put, OAuth allo
 * Ability to make API calls in the background for an extended period of time and without user input
 * Tokens are scoped to your app automatically and you don’t have to worry about deleting the token when your app is uninstalled
 
-To implement OAuth in a board view or a dashboard widget, you will need to establish the logic in your backend to retrieve an access token (that will give you access to a user’s data) from our token endpoint: `https://auth.monday.com/oauth2/token`.
+To implement OAuth in a board view or a dashboard widget, you will need to establish the logic in your backend to retrieve an access token (that will give you access to a user’s data) from the token endpoint. New apps use OAuth 2.1, with the token endpoint `https://auth.monday.com/oauth_ms/oauth/token`, PKCE, and refresh tokens. See [OAuth 2.1](https://developer.monday.com/apps/docs/oauth-2-1).
 
 To implement OAuth in your integration recipe, you will need to set up an authorization URL on your own server that will initiate the process of obtaining an access token.
 
-For more detailed information on this process, we recommend reading our oauth and permissions <a href="https://developer.monday.com/apps/docs/oauth" target="_blank">article</a>.
+For scopes, redirect URLs, and which OAuth version your app uses, see [OAuth and Permissions](https://developer.monday.com/apps/docs/oauth).
 
 ## Method 3: Using a user’s global API token
 
