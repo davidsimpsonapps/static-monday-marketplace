@@ -4,6 +4,10 @@ title: "monday.com service status • Incident history"
 description: "Current status and historical average response times for monday.com infrastructure endpoints."
 canonical: "/status/incidents/"
 incidents:
+  - start: 2026-11-26 12:48 UTC
+    title: "Expired wildcard TLS/SSL certificates on `*.monday.app` on all regions"
+    description: "<p>All monday code apps are broken because of expired TLS/SSL certificates</p>
+                  <p>We await monday engineering to provide a fix for this.</p>"  
   - start: 2026-09-28 11:19 UTC
     title: "Webhooks are missing the Authorization header"
     description: "<p>No authorization in newly created webhooks. Webhooks created by the API using app token are created as normal webhooks and not as app webhooks and let users edit and update them</p>
