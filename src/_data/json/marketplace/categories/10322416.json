@@ -4116,6 +4116,14 @@
     {
       "date": "2026-11-25",
       "marketplace_category_ids": []
+    },
+    {
+      "date": "2026-11-26",
+      "marketplace_category_ids": [
+        10000001,
+        6,
+        5
+      ]
     }
   ]
 }
