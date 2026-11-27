@@ -1440,7 +1440,7 @@
       }
     ],
     "locationFlag": null,
-    "notes": "No address or people are published. Italy is inferred from the notice address info@PickApps.it.",
+    "notes": "No address or people are published. The company is Israeli. The notice address info@PickApps.it uses an Italian (.it) domain, but that does not mean the company is Italian.",
     "lastVerified": "2026-09-30",
     "registrationsCheckedAt": "2026-10-06"
   },
@@ -2391,8 +2391,8 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "India",
+      "countryCode": "IN"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -2400,12 +2400,16 @@
       {
         "type": "website",
         "url": "https://datanexify.com/"
+      },
+      {
+        "type": "legal",
+        "url": "https://datanexify.com/terms-and-conditions.html"
       }
     ],
     "locationFlag": null,
-    "notes": "No legal entity, address or people published. A Calendly link names 'Grace Atkins', whose role isn't stated.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "No legal entity, address or people published. A Calendly link names 'Grace Atkins', whose role isn't stated. India is inferred from the terms, which say the service is located in India and governed by Indian law.",
+    "lastVerified": "2026-11-27",
+    "registrationsCheckedAt": "2026-11-27"
   },
   {
     "vendorId": 10000237,
@@ -2607,16 +2611,16 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Poland",
+      "countryCode": "PL"
     },
     "alternativeAddresses": [],
     "registrations": [],
     "sources": [],
     "locationFlag": null,
-    "notes": "Not a real third-party vendor: the website is monday.com, the email is grzegorzsw@monday.com, and it has 20 installs. Looks like a monday.com employee/test account; a candidate for vendorBlockList.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "Not a real third-party vendor: the website is monday.com, the email is grzegorzsw@monday.com, and it has 20 installs. Looks like a monday.com employee/test account; a candidate for vendorBlockList. Poland is inferred from the Polish legal form (Sp. z o.o.).",
+    "lastVerified": "2026-11-27",
+    "registrationsCheckedAt": "2026-11-27"
   },
   {
     "vendorId": 10000208,
@@ -3409,8 +3413,8 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Poland",
+      "countryCode": "PL"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -3418,12 +3422,16 @@
       {
         "type": "about",
         "url": "https://apmdsoft.com/about"
+      },
+      {
+        "type": "legal",
+        "url": "https://apmdsoft.com/terms-of-service"
       }
     ],
     "locationFlag": null,
-    "notes": "The about page gives first names only: co-founders Andrzej and Maciej. No address published.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "The about page gives first names only: co-founders Andrzej and Maciej. No address published. Poland is inferred from the terms, which choose Polish law and the courts in Łódź.",
+    "lastVerified": "2026-11-27",
+    "registrationsCheckedAt": "2026-11-27"
   },
   {
     "vendorId": 10000152,
@@ -3710,8 +3718,8 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Israel",
+      "countryCode": "IL"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -3719,12 +3727,16 @@
       {
         "type": "website",
         "url": "https://www.binatica.com"
+      },
+      {
+        "type": "contact",
+        "url": "https://www.binatica.com/contact/"
       }
     ],
     "locationFlag": null,
-    "notes": "No legal entity, address or people published.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "No legal entity, address or people published. Israel is inferred from the Israeli (+972) phone number on the contact page.",
+    "lastVerified": "2026-11-27",
+    "registrationsCheckedAt": "2026-11-27"
   },
   {
     "vendorId": 10000118,
@@ -3835,8 +3847,8 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Israel",
+      "countryCode": "IL"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -3847,9 +3859,9 @@
       }
     ],
     "locationFlag": null,
-    "notes": "Nothing beyond the brand name is published.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "Nothing beyond the brand name is published. Israel is inferred from the terms, which choose Israeli law and the courts in Tel Aviv.",
+    "lastVerified": "2026-11-27",
+    "registrationsCheckedAt": "2026-11-27"
   },
   {
     "vendorId": 10000103,
@@ -3920,8 +3932,8 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Israel",
+      "countryCode": "IL"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -3932,9 +3944,9 @@
       }
     ],
     "locationFlag": null,
-    "notes": "No legal entity, address or people published.",
-    "lastVerified": "2026-09-30",
-    "registrationsCheckedAt": null
+    "notes": "No legal entity, address or people published. Israel is inferred from the governing-law clause (laws of the State of Israel), though the site is built on a purchased template and support uses a Gmail address, so this is weak.",
+    "lastVerified": "2026-11-27",
+    "registrationsCheckedAt": "2026-11-27"
   },
   {
     "vendorId": 10000095,
@@ -4110,10 +4122,10 @@
     "address": {
       "street": null,
       "city": null,
-      "region": null,
+      "region": "Massachusetts",
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United States",
+      "countryCode": "US"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -4121,11 +4133,15 @@
       {
         "type": "website",
         "url": "https://expressintegrations.com"
+      },
+      {
+        "type": "legal",
+        "url": "https://www.expressintegrations.com/privacy-policy"
       }
     ],
     "locationFlag": null,
-    "notes": "First name only; no legal entity or address published.",
-    "lastVerified": "2026-09-30",
+    "notes": "First name only; no legal entity or address published. United States (Massachusetts) is inferred from the terms, which choose Massachusetts law and the courts in Berkshire County, and from the WHOIS registrant state.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -5285,7 +5301,7 @@
     "name": "Tomorrow's Tools",
     "tier": "Bronze",
     "partnerIds": [],
-    "legalName": "Tomorrow's Tools",
+    "legalName": "Tomorrows Tools LLC",
     "contactName": null,
     "contactTitle": null,
     "alternativeContacts": [],
@@ -5294,8 +5310,8 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United States",
+      "countryCode": "US"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -5303,11 +5319,15 @@
       {
         "type": "website",
         "url": "https://www.tomorrows-tools.com/"
+      },
+      {
+        "type": "legal",
+        "url": "https://www.tomorrows-tools.com/pro/privacy-policy"
       }
     ],
     "locationFlag": null,
-    "notes": "No legal entity, address or people published.",
-    "lastVerified": "2026-09-30",
+    "notes": "No legal entity, address or people published. The privacy policy names Tomorrows Tools LLC and says it is located in the United States; the state isn't given.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -8734,10 +8754,10 @@
     "address": {
       "street": null,
       "city": null,
-      "region": null,
+      "region": "Minnesota",
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United States",
+      "countryCode": "US"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -8745,11 +8765,15 @@
       {
         "type": "about",
         "url": "https://glances.com/about"
+      },
+      {
+        "type": "legal",
+        "url": "https://glances.com/terms"
       }
     ],
     "locationFlag": null,
-    "notes": "Co-founder/CTO Chad Hutchins (vendor email chad@glances.com).",
-    "lastVerified": "2026-10-01",
+    "notes": "Co-founder/CTO Chad Hutchins (vendor email chad@glances.com). United States (Minnesota) is inferred from the terms, which choose Minnesota law.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -9007,8 +9031,8 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Hong Kong",
+      "countryCode": "HK"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -9016,11 +9040,15 @@
       {
         "type": "legal",
         "url": "https://tmetric.com/privacy-policy"
+      },
+      {
+        "type": "legal",
+        "url": "https://tmetric.com/terms-of-service/"
       }
     ],
     "locationFlag": null,
-    "notes": "Product: TMetric. No address published on the TMetric site.",
-    "lastVerified": "2026-10-01",
+    "notes": "Product: TMetric. No address published on the TMetric site. The TMetric terms say Devart is incorporated in the Hong Kong SAR and choose Hong Kong law and courts.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -9353,8 +9381,8 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Hong Kong",
+      "countryCode": "HK"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -9362,11 +9390,15 @@
       {
         "type": "legal",
         "url": "https://www.moneylogz.com/privacy-policy/"
+      },
+      {
+        "type": "legal",
+        "url": "https://www.moneylogz.com/terms-of-service/"
       }
     ],
     "locationFlag": null,
-    "notes": "Moneylogz is operated by Etay Lev Limited.",
-    "lastVerified": "2026-10-01",
+    "notes": "Moneylogz is operated by Etay Lev Limited. Hong Kong is inferred from the terms, which choose Hong Kong law.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -9534,11 +9566,11 @@
     "alternativeContacts": [],
     "address": {
       "street": null,
-      "city": null,
-      "region": null,
+      "city": "Austin",
+      "region": "Texas",
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United States",
+      "countryCode": "US"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -9546,11 +9578,15 @@
       {
         "type": "website",
         "url": "https://app.trujay.com"
+      },
+      {
+        "type": "press",
+        "url": "https://www.newswire.com/news/trujay-and-integratehq-unite-as-syncmatters-powering-unified-data-22261288"
       }
     ],
     "locationFlag": null,
-    "notes": "Product: Trujay data migration.",
-    "lastVerified": "2026-10-01",
+    "notes": "Product: Trujay data migration. SyncMatters was formed in 2024 when Trujay and IntegrateHQ merged; the merger announcement is datelined Austin, Texas.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -11189,21 +11225,40 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Israel",
+      "countryCode": "IL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Israeli Registrar of Companies (data.gov.il)",
+        "jurisdiction": "Israeli Registrar of Companies (data.gov.il)",
+        "kind": "domestic",
+        "id": "516266152",
+        "name": "CLAWDIA AI  LTD",
+        "companyType": null,
+        "status": "פעילה",
+        "registeredAgent": null,
+        "registeredAddress": "אבן גבירול 30 תל אביב - יפו 6407807",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516266152%22%7D"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://www.clawdia.ai/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516266152%22%7D",
+        "id": "516266152",
+        "label": "Israeli company no. 516266152"
       }
     ],
     "locationFlag": null,
-    "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Israel is inferred from the Israeli Registrar of Companies, which lists CLAWDIA AI LTD (516266152) in Tel Aviv.",
+    "lastVerified": "2026-11-27",
+    "registrationsCheckedAt": "2026-11-27"
   },
   {
     "vendorId": 10000113,
@@ -11503,11 +11558,11 @@
     "alternativeContacts": [],
     "address": {
       "street": null,
-      "city": null,
+      "city": "Ho Chi Minh City",
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Vietnam",
+      "countryCode": "VN"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -11518,8 +11573,8 @@
       }
     ],
     "locationFlag": null,
-    "notes": null,
-    "lastVerified": "2026-10-01",
+    "notes": "The site says it is based in Ho Chi Minh City.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -11801,21 +11856,44 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Israel",
+      "countryCode": "IL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Israeli Registrar of Companies (data.gov.il)",
+        "jurisdiction": "Israeli Registrar of Companies (data.gov.il)",
+        "kind": "domestic",
+        "id": "516237120",
+        "name": "TOLSTOY  LTD",
+        "companyType": null,
+        "status": "פעילה",
+        "registeredAgent": null,
+        "registeredAddress": "השרון 60 רעננה 4335232",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516237120%22%7D"
+      }
+    ],
     "sources": [
       {
         "type": "website",
         "url": "https://www.gotolstoy.com"
+      },
+      {
+        "type": "legal",
+        "url": "https://www.gotolstoy.com/privacy-policy"
+      },
+      {
+        "type": "business-register",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516237120%22%7D",
+        "id": "516237120",
+        "label": "Israeli company no. 516237120"
       }
     ],
     "locationFlag": null,
-    "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Israel is inferred from the privacy policy, which mentions offices in Israel, and the Israeli Registrar of Companies, which lists TOLSTOY LTD (516237120) in Ra'anana.",
+    "lastVerified": "2026-11-27",
+    "registrationsCheckedAt": "2026-11-27"
   },
   {
     "vendorId": 10000009,
@@ -11938,10 +12016,10 @@
     "address": {
       "street": null,
       "city": null,
-      "region": null,
+      "region": "Connecticut",
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United States",
+      "countryCode": "US"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -11952,8 +12030,8 @@
       }
     ],
     "locationFlag": null,
-    "notes": null,
-    "lastVerified": "2026-10-01",
+    "notes": "United States (Connecticut) is inferred from the terms, which choose the courts in Connecticut.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -12248,10 +12326,10 @@
     "address": {
       "street": null,
       "city": null,
-      "region": null,
+      "region": "Utah",
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United States",
+      "countryCode": "US"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -12262,8 +12340,8 @@
       }
     ],
     "locationFlag": null,
-    "notes": null,
-    "lastVerified": "2026-10-01",
+    "notes": "United States (Utah) is inferred from the WHOIS registrant state for mesommersinc.com.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -12513,8 +12591,8 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Canada",
+      "countryCode": "CA"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -12522,11 +12600,15 @@
       {
         "type": "website",
         "url": "https://currency.framer.website/"
+      },
+      {
+        "type": "legal",
+        "url": "https://currency.framer.website/privacy-policy"
       }
     ],
     "locationFlag": null,
-    "notes": "Contact name from the vendor email varunkundrabiz@gmail.com.",
-    "lastVerified": "2026-10-01",
+    "notes": "Contact name from the vendor email varunkundrabiz@gmail.com. Canada is inferred from the privacy policy, whose definitions say \"Country refers to: Canada\".",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -12583,17 +12665,17 @@
     "name": "Inteli-k",
     "tier": null,
     "partnerIds": ["d2b1e3df-a72e-4b3e-8cba-5a2c63500e79"],
-    "legalName": "Inteli-k",
+    "legalName": "InteliK Soluciones Tecnologicas SA de CV",
     "contactName": null,
     "contactTitle": null,
     "alternativeContacts": [],
     "address": {
       "street": null,
       "city": null,
-      "region": null,
+      "region": "Jalisco",
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Mexico",
+      "countryCode": "MX"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -12604,8 +12686,8 @@
       }
     ],
     "locationFlag": null,
-    "notes": "Spanish-language support email (soporte@).",
-    "lastVerified": "2026-10-01",
+    "notes": "Spanish-language support email (soporte@). Mexico (Jalisco) is inferred from the WHOIS registrant, InteliK Soluciones Tecnologicas SA de CV, and the Guadalajara (+52 33) phone number; the site also gives a US (+1 302, Delaware) number.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -12800,21 +12882,44 @@
       "city": null,
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Israel",
+      "countryCode": "IL"
     },
     "alternativeAddresses": [],
-    "registrations": [],
+    "registrations": [
+      {
+        "register": "Israeli Registrar of Companies (data.gov.il)",
+        "jurisdiction": "Israeli Registrar of Companies (data.gov.il)",
+        "kind": "domestic",
+        "id": "516592680",
+        "name": "ZENZAP LTD",
+        "companyType": null,
+        "status": "פעילה",
+        "registeredAgent": null,
+        "registeredAddress": "ארניה אסוולדו 14 תל אביב - יפו 6107016",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516592680%22%7D"
+      }
+    ],
     "sources": [
       {
         "type": "legal",
         "url": "https://www.zenzap.co/privacy-policy/"
+      },
+      {
+        "type": "legal",
+        "url": "https://www.zenzap.co/terms-of-use/"
+      },
+      {
+        "type": "business-register",
+        "url": "https://data.gov.il/dataset/ica_companies/resource/f004176c-b85f-4542-8901-7b3176f9a054?filters=%7B%22%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%97%D7%91%D7%A8%D7%94%22%3A%22516592680%22%7D",
+        "id": "516592680",
+        "label": "Israeli company no. 516592680"
       }
     ],
     "locationFlag": null,
-    "notes": null,
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Israel is inferred from the terms, which choose Israeli law and the courts in Tel Aviv.",
+    "lastVerified": "2026-11-27",
+    "registrationsCheckedAt": "2026-11-27"
   },
   {
     "vendorId": 10000272,
@@ -13106,11 +13211,11 @@
     ],
     "address": {
       "street": null,
-      "city": null,
+      "city": "Tel Aviv",
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Israel",
+      "countryCode": "IL"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -13121,9 +13226,9 @@
       }
     ],
     "locationFlag": null,
-    "notes": "Co-founder/CTO Koby Berkovich. Vendor email adi@alison.ai.",
-    "lastVerified": "2026-10-01",
-    "registrationsCheckedAt": null
+    "notes": "Co-founder/CTO Koby Berkovich. Vendor email adi@alison.ai. Israel is inferred from the WHOIS registrant (Alison AI, Tel Aviv).",
+    "lastVerified": "2026-11-27",
+    "registrationsCheckedAt": "2026-11-27"
   },
   {
     "vendorId": 10000198,
@@ -14685,10 +14790,10 @@
     "address": {
       "street": null,
       "city": null,
-      "region": null,
+      "region": "Delaware",
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "United States",
+      "countryCode": "US"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -14696,11 +14801,15 @@
       {
         "type": "legal",
         "url": "https://www.getparallax.com/privacy-policy/"
+      },
+      {
+        "type": "legal",
+        "url": "https://www.getparallax.com/terms-of-use/"
       }
     ],
     "locationFlag": null,
-    "notes": "Product: Parallax.",
-    "lastVerified": "2026-10-01",
+    "notes": "Product: Parallax. United States is inferred from the terms, which choose Delaware law and courts; this only shows where Right Team Inc is incorporated, not where it operates.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
@@ -14793,11 +14902,11 @@
     "alternativeContacts": [],
     "address": {
       "street": null,
-      "city": null,
+      "city": "Stockholm",
       "region": null,
       "postalCode": null,
-      "country": null,
-      "countryCode": null
+      "country": "Sweden",
+      "countryCode": "SE"
     },
     "alternativeAddresses": [],
     "registrations": [],
@@ -14808,8 +14917,8 @@
       }
     ],
     "locationFlag": null,
-    "notes": null,
-    "lastVerified": "2026-10-01",
+    "notes": "The site says it is based in Stockholm and gives a Swedish (+46) phone number.",
+    "lastVerified": "2026-11-27",
     "registrationsCheckedAt": null
   },
   {
