@@ -1,5 +1,5 @@
 ---
-updatedAt: 2026-10-26T13:11:32.000Z
+updatedAt: 2026-11-26T18:32:06.000Z
 agentTools:
   siteIndex: https://developer.monday.com/llms.txt
   projectIndex: https://developer.monday.com/api-reference/llms.txt
@@ -18,12 +18,12 @@ The current versions are:
 <HTMLBlock>{`
 <style>
   body {
-    font-family: 'Poppins', sans-serif;    
+    font-family: 'Poppins', sans-serif;
   }
   .columns-container {
     font-family: 'Poppins', sans-serif;
     display: flex;
-    
+
     }
   .column {
     flex: 1;
@@ -59,11 +59,38 @@ The current versions are:
 </div>
 `}</HTMLBlock>
 
+# API-Version is required
+
+The `API-Version` header is required on every API request. Pin the version you built against, for example `2026-10`. A pinned version means a new quarterly release never changes your schema unexpectedly, and you decide when to move.
+
+Today, a call without the header still runs and gets the default version. This is being removed: calls without the `API-Version` header will be rejected in the future with an `API_VERSION_REQUIRED` error (HTTP `400`). The date will be announced.
+
+Pass a version name such as `2026-10`, or `current` to explicitly use the newest current version. A missing header or a version string that is not valid will be rejected.
+
+```curl cURL
+curl --location --request POST 'https://api.monday.com/v2' \
+--header 'API-Version: 2026-10' \
+--header 'Authorization: YOUR_API_KEY_HERE' \
+--header 'Content-Type: application/json' \
+--data-raw '{"query":"query { me { id } }"}'
+```
+```javascript GraphQL JS SDK
+import { ApiClient } from "@mondaydotcomorg/api";
+
+// The SDK always sends an API-Version header. Set apiVersion to pin the version yourself.
+const monday = new ApiClient({
+  token: process.env.MONDAY_API_TOKEN,
+  apiVersion: "2026-10"
+});
+```
+
+The monday MCP server and the agent toolkit send the `API-Version` header automatically, so you don't need to change anything there.
+
 # Version types
 
 There are at least three types of API versions at any given time: release candidate, current, and maintenance. Two are [stable](https://developer.monday.com/api-reference/docs/api-versioning#important-terms), and the other is an [unstable](https://developer.monday.com/api-reference/docs/api-versioning#important-terms) preview version.
 
-This guarantees that any given version will be stable for **at least six months**. You can minimize your development effort by always passing a [version header](https://developer.monday.com/api-reference/docs/api-versioning#using-the-api-version-header-in-an-http-request) with your API calls.
+This guarantees that any given version will be stable for **at least six months**. You can minimize your development effort by passing a [version header](https://developer.monday.com/api-reference/docs/api-versioning#using-the-api-version-header-in-an-http-request) with every API call. The header is required, see [API-Version is required](https://developer.monday.com/api-reference/docs/api-versioning#api-version-is-required).
 
 <Table align={["left","left"]}>
   <thead>
@@ -99,7 +126,7 @@ This guarantees that any given version will be stable for **at least six months*
       <td>
         * Only bug fixes with no breaking changes
         * **Stable** and can be used in production applications
-        * Used as the default version when no header is passed
+        * Today, a call without the `API-Version` header gets this version. This is being removed: calls without the header will be rejected in the future, and the date will be announced
         * Anything built using this won't change for at least six months
         * Previously known as the _Stable version_
       </td>
@@ -161,11 +188,11 @@ You can access different versions of the API using a header in an HTTP request, 
 
 > 👍 Passing the version name in your request
 >
-> We strongly encourage production applications to pass a [version name](https://developer.monday.com/api-reference/docs/api-versioning#important-terms) in each API call. If you don't, your app will always get the *Current version*. Passing a version name makes your app less susceptible to breaking changes and gives you more time to migrate to a new version.
+> You must pass a [version name](https://developer.monday.com/api-reference/docs/api-versioning#important-terms) in each API call. Today, a call without one still gets the *Current version*, but calls without the `API-Version` header will be rejected in the future, and the date will be announced. Passing a version name makes your app less susceptible to breaking changes and gives you more time to migrate to a new version.
 
 ## Using the `API-Version` header in an HTTP request
 
-You can select which API version you want to use by sending the version name in the `API-Version` header.
+You select which API version you want to use by sending the version name in the `API-Version` header. The header is required on every request.
 
 ```javascript
 fetch ("https://api.monday.com/v2", {
@@ -199,14 +226,14 @@ import { ApiClient } from "@mondaydotcomorg/api";
 
 const monday = new ApiClient({
   token: process.env.MONDAY_API_TOKEN,  // required
-  version: "2026-10"                    // sets default API version
+  apiVersion: "2026-10"                 // sets default API version
 });
 ```
 ```javascript Specific Call
 const query = `query { me { id } }`;
 
-const data = await monday.request(query, {
-  version: "2026-10"
+const data = await monday.request(query, {}, {
+  versionOverride: "2026-10"  // variables are the second argument, options the third
 });
 ```
 
@@ -220,21 +247,21 @@ This will open the version selector where you can test queries and mutations wit
 
 Versioning is a powerful way to improve the API, but understanding which version to request and when can be confusing. We've compiled these hypothetical scenarios to help you better understand the flow!
 
-1. We announce the release of a new API called `new_API` in version `2024-01`. You can access `new_API` as soon as `2024-01` is released as the *RC* by passing `2024-01` in the `API-Version` header. If you don't include the `API-Version` header, it will automatically call the *Current version* and you will get an error stating that the field does not exist.
+1. We announce the release of a new API called `new_API` in version `2024-01`. You can access `new_API` as soon as `2024-01` is released as the *RC* by passing `2024-01` in the `API-Version` header. If you don't include the `API-Version` header, today the call goes to the *Current version* and you will get an error stating that the field does not exist. Calls without the header will be rejected in the future, so always pass the header.
 2. We announce the deprecation of the `example` field in version `2023-07`. You can access the `example` field until January 15th, 2024 when `2023-07` is deprecated. Once you start passing `2024-04` in your request, you will no longer have access to the `example` field.
 
 # Important terms
 
 API versioning differs across the board, so frequently used terms may mean something slightly different in each case. This section walks through some of the most important concepts and terms we use, and more importantly, covers exactly what they mean!
 
-| Term         | Description                                                                                                                                                       |
-| :----------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Stable       | Indicates that a version can reliably be used in production. Addresses only non-breaking bug fixes, regressions, and critical bugs that require breaking changes. |
-| Default      | The version that will be called when no header or the `default` header is passed in an API call.                                                                  |
-| Unstable     | Indicates that a version cannot reliably be used in production. Addresses both breaking and non-breaking changes.                                                 |
-| Deprecated   | Indicates that a version is no longer supported. Any calls made to a deprecated version will use the *Maintenance version.*                                       |
-| Version name | The version's unique identifier (e.g., `2023-10`). We recommend passing the version name in your calls.                                                           |
-| Version type | The type of version:`release-candidate`, `current`, or `maintenance`.                                                                                             |
+| Term         | Description                                                                                                                                                                                       |
+| :----------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Stable       | Indicates that a version can reliably be used in production. Addresses only non-breaking bug fixes, regressions, and critical bugs that require breaking changes.                                 |
+| Default      | Today, the version that is called when no header or the `default` header is passed in an API call. Calls without the `API-Version` header will be rejected in the future, so pass a version name. |
+| Unstable     | Indicates that a version cannot reliably be used in production. Addresses both breaking and non-breaking changes.                                                                                 |
+| Deprecated   | Indicates that a version is no longer supported. Any calls made to a deprecated version will use the *Maintenance version.*                                                                       |
+| Version name | The version's unique identifier (e.g., `2023-10`). The version name is required in your calls.                                                                                                    |
+| Version type | The type of version:`release-candidate`, `current`, or `maintenance`.                                                                                                                             |
 
 # Troubleshooting
 
