@@ -2922,7 +2922,7 @@
     "vendorIds": [],
     "legalName": "Simpleday Solutions Ltd.",
     "contactName": "Tara Horn",
-    "contactTitle": "Founder",
+    "contactTitle": "CEO",
     "alternativeContacts": [
       {
         "contactName": "Rosa Kadic Kesegic",
@@ -2970,11 +2970,15 @@
         "type": "marketplace",
         "url": "https://monday.com/gotopartners/directory/tara-horn",
         "label": "monday.com partner profile"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/tara-horn/"
       }
     ],
     "locationFlag": "offshore-moved",
-    "notes": "Offshore company with a US profile: the monday.com profile says US, but the terms say Simpleday Solutions Ltd. is registered in Israel (VAT 516810322). Founder name from the profile slug and the contact email tara@.",
-    "lastVerified": "2026-10-06",
+    "notes": "Offshore company with a US profile: the monday.com profile says US, but the terms say Simpleday Solutions Ltd. is registered in Israel (VAT 516810322). CEO Tara Horn is located in Israel, according to her LinkedIn profile.",
+    "lastVerified": "2026-11-28",
     "registrationsCheckedAt": "2026-10-06"
   },
   {
